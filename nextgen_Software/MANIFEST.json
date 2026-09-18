@@ -1,0 +1,31 @@
+{
+  "status": "Proposed design and publication outline; no generator implementation or new model execution",
+  "docx_rendered_pages": 14,
+  "files": [
+    {
+      "path": "AGENT_INFORMATION_REQUEST.md",
+      "bytes": 9164,
+      "sha256": "603e6cdfc84a9ab1afbe15790579c821f4ecb20ca26a6771ac21bfc3cb698d01"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1084,
+      "sha256": "5f879bcc595f100578e89969c5e709272b8ac719bc8b164a8874682cb59ba2ce"
+    },
+    {
+      "path": "SOFTWARE_AND_MANUSCRIPT_OUTLINE.docx",
+      "bytes": 58406,
+      "sha256": "b457e0b6083b1a520987677ea25060b70e81714889bf4d968ed7047d1ca17264"
+    },
+    {
+      "path": "SOFTWARE_AND_MANUSCRIPT_OUTLINE.md",
+      "bytes": 43274,
+      "sha256": "bce15d06601be14f2bfb5800db9470ff64a0e29e9d4ac1075f407b1249fee990"
+    },
+    {
+      "path": "SOURCE_INSPECTION_NOTES.md",
+      "bytes": 10618,
+      "sha256": "d7f5a94dc1caff2021916005ba3357ae33aa9368f9d2237e0a33d6f130d461c1"
+    }
+  ]
+}
