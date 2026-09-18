@@ -1,0 +1,134 @@
+{
+  "schema_version": "cfe-sensitivity-evidence-review/1.0",
+  "verified_at_utc": "2026-09-18T22:45:03.154433+00:00",
+  "evidence_class": "inspected_prior_isolated_cfe_sensitivity",
+  "verification_scope": "Recomputed paired arithmetic from saved CSV; an independent agent recomputed raw run-summary statistics and checked saved configuration/source hashes and driver semantics. No CFE simulation was rerun.",
+  "source_bundle_alias": "owner_cfe_slop_investigation_20260918",
+  "source_bundle_publicly_deposited": false,
+  "source_artifacts": [
+    {
+      "path": "paired_sensitivities.csv",
+      "bytes": 517765,
+      "sha256": "56c3d95796a5bd51a93656013f3ebbdc90433d8519629b0b9f2451a7517b3d0c"
+    },
+    {
+      "path": "RESULT_SUMMARY.json",
+      "bytes": 12905,
+      "sha256": "22339485a778c6add181dc9616407fe780254e0b2a042228e7d74bfcfdacc1f7"
+    },
+    {
+      "path": "isolated_cfe/EXECUTION_RECEIPT.json",
+      "bytes": 2009,
+      "sha256": "d0496e6579df6954720400ff96a8004315dd64395e6ee164da669f91cf4ed28d"
+    },
+    {
+      "path": "isolated_cfe/SOURCE_RECEIPT.json",
+      "bytes": 5537,
+      "sha256": "1e4e6571c47cba9d9284698367977f6c6192c322aebaeda6702ed553bb3fadd1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13488,
+      "sha256": "742c73315a90b3df6757fecd61a409d24d9224f9a109845d658e3dcc2873188c"
+    },
+    {
+      "path": "summarize_results.py",
+      "bytes": 4962,
+      "sha256": "491bd62e57fe041a280569c3b6aa70f6824e679963e500d12fec9fbc2ead1796"
+    },
+    {
+      "path": "isolated_cfe/summary.csv",
+      "bytes": 9012551,
+      "sha256": "88b070812d19bd6c6aac0c9db3ab95164c57ee9bfeed62f93dfc9337bd7a39fc",
+      "hash_verified_by": "independent_read_only_review_agent"
+    },
+    {
+      "path": "isolated_cfe/isolated_driver.c",
+      "bytes": 8308,
+      "sha256": "0fc18ecb0a7615af3e0519efc4bbba35eba166bc74c8d69eea3fbbc78592b94c",
+      "hash_verified_by": "independent_read_only_review_agent"
+    },
+    {
+      "path": "isolated_cfe/run_experiment.py",
+      "bytes": 4563,
+      "sha256": "d47577b88429400819c04e6f9eef791d1d4d7e492d9bae551ffc86ff70cab9a7",
+      "hash_verified_by": "independent_read_only_review_agent"
+    },
+    {
+      "path": "isolated_cfe/INPUT_MANIFEST.json",
+      "bytes": 764549,
+      "sha256": "1127a6686232ec3f9c91d16951d6d05dba98f665d3df1e9fcb156fd51bd39ced",
+      "hash_verified_by": "independent_read_only_review_agent"
+    }
+  ],
+  "experiment": {
+    "domain": "watauga_vpu06",
+    "catchments": 31,
+    "scenario": "weekly_warmed_three_years",
+    "source_commit": "f9182dfb3d81c407c66c5b782114173893c30cf2",
+    "deployed_component_attested": false,
+    "original_variant": "inherited",
+    "candidate_variant": "fabric_slope_1km",
+    "warmup_hours": 17472,
+    "evaluation_hours": 8736,
+    "liquid_input": "5 mm/hour during first six hours of each 168-hour week; zero otherwise",
+    "potential_evaporation_mm_per_hour": 0.1,
+    "output_metric": "Sum of per-step flux_Qout_m * 1000, in mm: direct surface runoff + Nash lateral runoff + groundwater outflow, before channel routing.",
+    "percent_formula": "100 * (inherited / candidate - 1)",
+    "aggregation": "unweighted median of per-catchment percentages",
+    "first18_window": "first 18 hours of evaluation immediately after 104-week warmup, beginning at synthetic storm onset",
+    "coupled_noah": false,
+    "channel_routing": false,
+    "observed_weather_or_streamflow": false
+  },
+  "recomputed_statistics": {
+    "evaluation_qout_first18_mm": {
+      "units": "percent",
+      "min": 20.155931898074986,
+      "median": 102.83795727904703,
+      "max": 220.14810720716068,
+      "valid_pairs": 31,
+      "excluded_pairs": 0
+    },
+    "evaluation_qout_mm": {
+      "units": "percent",
+      "min": 2.114465383626851,
+      "median": 2.4847718183552248,
+      "max": 4.185696425082774,
+      "valid_pairs": 31,
+      "excluded_pairs": 0
+    }
+  },
+  "model_replays_during_review": 0,
+  "does_not_establish": [
+    "Full reforecast bias attribution",
+    "Catchment area-weighted or routed basin discharge change",
+    "Observed forecast skill improvement",
+    "Production library equivalence",
+    "A universal long-term bound on parameter sensitivity"
+  ],
+  "independent_artifact_checks": {
+    "raw_summary_unique_completed_rows": 10176,
+    "raw_summary_hourly_updates": 50961408,
+    "watauga_original_config_hashes_checked": 31,
+    "watauga_variant_config_hashes_checked": 124,
+    "variant_changes_only_slop_line": true,
+    "candidate_values_match_saved_input_manifest": true,
+    "underlying_hydrofabric_reopened": false,
+    "saved_official_source_hashes_checked": 15,
+    "fresh_initialization_per_variant_and_scenario": true,
+    "watauga_warmed_variant_max_evaluation_storage_drift_mm": 0.0,
+    "all_run_max_saved_cumulative_water_balance_residual_mm": 9.351408536417694e-10,
+    "all_run_max_saved_hourly_water_balance_residual_mm": 4.440892098500626e-13,
+    "model_rerun": false
+  },
+  "protected_workspace_review": {
+    "actions": "read-only inspection of supplied resident supplement",
+    "source_artifact_hashes_unchanged": true,
+    "reviewed_supplement_metadata_changes": 0,
+    "broader_workspace_metadata_snapshot": "Concurrent metadata changes observed outside the supplied supplement; whole-workspace invariance is not claimed.",
+    "source_writes_performed": 0,
+    "dataless_hydration_performed": false,
+    "model_runs_performed": 0
+  }
+}

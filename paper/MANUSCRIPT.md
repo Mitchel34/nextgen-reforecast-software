@@ -51,6 +51,12 @@ A scientific state identity will bind geometry, parameterization, origin, histor
 
 Unavailable intervals, nonfinite values, duplicate labels and mismatched source generations will be rejected. Any permitted interpolation or geometry treatment must be an explicit, versioned scientific input. Historical gap treatments that use future information will be labeled retrospective; they will not support a claim about the information available to an operational forecast at issue time. [C12]
 
+### 2.3. Parameter mapping and scientific variants
+
+The project owner reports that the existing inputs use `mean.slope` for the CFE drainage parameter. The review verified saved Watauga originals and single-parameter variants against the isolated experiment's input manifest; the original hydrofabric extraction and historical generator/library provenance remain unresolved. Upstream NGIAB preprocessing [PR #74](https://github.com/CIROH-UA/NGIAB_data_preprocess/pull/74), merged on 3 February 2025, changes CFE's `slope` mapping from `mean.slope` to `mean.slope_1km`. Its complete changes also affect Noah terrain slope, coordinates, Noah defaults and partition handling. An isolated CFE-mapping comparison therefore cannot represent the effect of applying that entire PR. The verification record and remaining provenance questions are tracked in [the CFE parameter finding](../docs/CFE_PARAMETER_FINDING.md). [C32–C33]
+
+Parameter-map provenance will be part of the scientific identity. Reproducing the historical profile will test the runtime against that original profile; evaluating an alternative CFE mapping will require a separately identified variant with all other inputs controlled. These answer different questions. A change of parameters can change antecedent state and must not inherit the original variant's recovery identity or numerical-reference acceptance. Historical configurations and the feasibility dossier remain preserved evidence. [C35]
+
 ## 3. Software design and methods
 
 ### 3.1. Explicit planning and runtime qualification
@@ -95,11 +101,28 @@ New River will provide a second physical domain with two nested outputs, after i
 
 ## 5. Historical motivating evidence and pending new results
 
+### 5.1. Preserved runtime receipts
+
 The preserved application used a 31-catchment Watauga domain and a 393-catchment New River domain, with two outputs in the latter. These total 424 unique catchments and two initialized domains. An inspected historical weekly receipt records 168 issues per domain, eighteen leads, and 9,072 gauge forecast rows. Its serial/concurrent comparison reports all keyed discharge values within absolute and relative tolerances of \(10^{-6}\) and \(10^{-5}\), with nonzero maximum differences for two gauges. This is historical tolerance agreement for the binary identified by `f4d4690c…`, not bitwise equality or a result for the public rebuild. [C26; dossier `BENCHMARK_EVIDENCE_AND_PLAN.md`]
 
 That receipt reports workflow times of 1,213 and 490 seconds, but the compared configurations used different CPU allocations. These times are retained as context and will not support an equal-resource algorithmic speedup claim. Configured child limits also exceeded the observed concurrency: the largest observed outstanding counts were three for New River and two for Watauga. A configured limit is not evidence that this many children ran simultaneously. [C27]
 
 A later V3 Watauga day-custody receipt uses native identity `ee65c774…` and the matched middleware identity. It records 786 historical updates, two branches, 36 forecast rows and two day acknowledgements, with reported zero differences for its selected parent and branch diagnostics. This concerns the preserved V3 custody test; it does not establish full land restart or inherit the older weekly binary's qualification automatically. The historical receipts were inspected, but all raw arrays were not independently recomputed in the feasibility investigation. [C28]
+
+### 5.2. Inspected prior isolated CFE sensitivity
+
+Following the owner's report, an existing isolated CFE investigation was supplied for inspection. Its receipts identify CFE source commit `f9182dfb3d81c407c66c5b782114173893c30cf2`, which is not attested as the library used by the historical coupled runtime. The reviewed driver compares inherited and candidate `mean.slope_1km` parameter variants by changing only CFE's `slop` before fresh initialization of each variant/scenario. Synthetic forcing supplies 5 mm/h during the first six hours of each 168-hour week and zero otherwise, with potential evaporation of 0.1 mm/h. A 104-week warmup precedes a 52-week (364-day) evaluation. Noah coupling, channel routing, observed weather and streamflow observations are absent. [C34; [finding record](../docs/CFE_PARAMETER_FINDING.md)]
+
+The saved paired-result arithmetic was independently recomputed during this review; CFE itself was not rerun. For each catchment, the percentage is `100 * (inherited / candidate - 1)`, and the reported summary is the unweighted median across 31 valid pairs, with none excluded. The short-window metric sums `flux_Qout_m * 1000` over simulation hours 17,472 through 17,489, giving CFE runoff depth in millimetres for the first 18 evaluation hours immediately after warmup at synthetic storm onset. It is not an average over forecast issue times or all weekly storms. [C34]
+
+| Evaluation window | Median per-catchment difference (%) | Minimum–maximum across catchments (%) |
+|---|---:|---:|
+| First 18 hours at synthetic storm onset | +102.84 | +20.16 to +220.15 |
+| Full 52 weeks (8,736 hours) | +2.485 | +2.114 to +4.186 |
+
+These values are recomputed summaries of saved outputs from a prior isolated experiment. Their source artifacts and hashes are recorded in [the sanitized evidence receipt](../docs/evidence/cfe-sensitivity-review.json); the underlying bundle is not yet publicly deposited. The smaller full-window contrast does not establish a general long-term bound on sensitivity. Neither catchment median establishes area-weighted basin runoff, routed gauge discharge, predictive skill, the coupled-model response or the effect of changing a complete reforecast campaign. The controlled CFE comparison also cannot represent all modifications in upstream PR #74. [C34–C36]
+
+### 5.3. Public-implementation results
 
 **New public-implementation results are pending.** No physical-equivalence table, resource figure, failure-recovery outcome or independent-user result is supplied in this draft. The located qualification fixture contains 181 files, of which 132 were dataless at the recorded inspection. Restoration, distribution terms and build/component provenance must be resolved before new physical results can be claimed. Planner tests will establish only their tested software contracts. [C21, C29]
 
@@ -110,6 +133,8 @@ The proposed contribution is a tested relationship among historical state, forec
 Replay recovery is scientifically interpretable because it preserves the original initialization experiment, but it may become expensive for long antecedent histories. The benchmark will quantify that cost rather than describe daily output custody as physical checkpointing. Input retention is equally important. Source locators, checksum lists and small discharge archives are useful records, but none can replace missing forcing bytes. [C18–C19]
 
 Hydrologic predictive skill is distinct from workflow equivalence. A faithfully reproduced realization may be biased, and agreement between two executions does not validate parameter choices, precipitation timing or retrospective gap treatments. The accompanying HYDRA research concerns forecast correction and hydrologic performance; this paper will center on computational correctness, resources, recovery and reuse. Shared archive origins will be disclosed without reusing a correction result as evidence of runtime reliability. [C30]
+
+The isolated CFE sensitivity makes this distinction concrete. Successful branch/reference agreement under the same mapping could coexist with a scientifically consequential parameter-mapping problem. The proposed response is to retain the historical runtime comparison, reproduce the isolated experiment from its bound sources, and qualify an explicitly different physical profile before assessing any coupled or full-campaign effect. Recomputing saved-output arithmetic does not establish model reproducibility or equivalence to the deployed component. The observed isolated contrasts cannot support a causal explanation of historical forecast errors or a claim that an alternative variant improves forecasts. [C32, C34–C36]
 
 Upstream integration and maintenance remain open design decisions. The feasibility comparison identifies overlapping tools and candidate interfaces, but does not prove that an equivalent contract is absent elsewhere. Maintainer discussion and version-specific comparison must precede any priority claim. A thin independently maintained package, an upstream extension or a workflow profile should be selected according to demonstrated integration and maintenance needs. [C04, C31]
 

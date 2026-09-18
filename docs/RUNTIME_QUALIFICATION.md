@@ -36,6 +36,8 @@ Each asset path is checked using directory file descriptors and no-follow opens.
 
 Inspection is a local integrity check, not authentication against an adversary modifying metadata and content together. The fixture remains incomplete even if all currently known hashes match. The doctor does not inspect Docker state, resolve dynamic libraries, validate forcing numerical contents or prove scientific equivalence.
 
+The [CFE drainage attribute finding](CFE_PARAMETER_FINDING.md) adds an unresolved parameter-semantics requirement: record whether CFE `slop` came from `mean.slope` or `mean.slope_1km`, with hydrofabric metadata, generator identity, conversions and the actual library version. Hash agreement can preserve an erroneous mapping. This is a qualification requirement, not a check currently implemented by `doctor`. Keep the immutable historical profile unchanged; an adopted correction requires a new configuration/profile identity and newly evolved antecedent history.
+
 ## Exact candidate example
 
 The historical Watauga candidate has 31 catchments, gauge `03479000` at nexus `1017693`, origin `2021-12-01T00:00:00Z`, 786 historical hours and stop `2022-01-02T18:00:00Z`. Its issues are epochs `1641078000` and `1641081600`, each with 18 branch intervals and output leads 1–18, for 36 keyed forecast rows. The expected contract hash is `b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb`.

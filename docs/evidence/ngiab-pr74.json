@@ -1,0 +1,41 @@
+{
+  "schema_version": "upstream-parameter-mapping-evidence/1.0",
+  "verified_at_utc": "2026-09-18T22:45:03.106181+00:00",
+  "repository": "https://github.com/CIROH-UA/NGIAB_data_preprocess",
+  "pull_request": {
+    "number": 74,
+    "title": "Parameter fixes",
+    "html_url": "https://github.com/CIROH-UA/NGIAB_data_preprocess/pull/74",
+    "merged": true,
+    "merged_at": "2025-02-03T19:46:27Z",
+    "merge_commit_sha": "978960e4a2f71125ebf700ddc036026fcbb1f7e6"
+  },
+  "slope_commit": {
+    "sha": "48bd640ecc83f78f32aa06f3120039e2e527b651",
+    "url": "https://github.com/CIROH-UA/NGIAB_data_preprocess/commit/48bd640ecc83f78f32aa06f3120039e2e527b651",
+    "parent_sha": "e66dac97de83ae5bc6b8e4d5a3716f0c8411847f",
+    "message": "update slope to slope_1km"
+  },
+  "generator_file": {
+    "path": "modules/data_processing/create_realization.py",
+    "git_blob_sha": "195f610d53f1d1fe58b1bc624f9881b7d7b77bd1",
+    "sha256": "263c748c3c4412b588ea6ec8456c3c9e3e77511ed821093427e0441e16f602b3",
+    "url": "https://github.com/CIROH-UA/NGIAB_data_preprocess/blob/48bd640ecc83f78f32aa06f3120039e2e527b651/modules/data_processing/create_realization.py"
+  },
+  "verified_cfe_mapping": {
+    "generator_argument": "slope",
+    "previous_attribute": "mean.slope",
+    "replacement_attribute": "mean.slope_1km"
+  },
+  "other_changes_scope": "The slope commit also changes Noah-OWP terrain_slope, coordinates and attribute extraction. PR74 additionally changes Noah defaults, partitions and spatial fallback handling; it is not a CFE-only controlled experiment.",
+  "supports": [
+    "Upstream generator attribute replacement",
+    "PR merge status and timestamp"
+  ],
+  "does_not_establish": [
+    "Local study configuration identities or attribute units",
+    "Independent reproduction of owner sensitivity simulations",
+    "Routed discharge or forecast skill effects",
+    "Source-to-library identity for the historical runtime"
+  ]
+}

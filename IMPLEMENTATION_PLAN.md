@@ -40,6 +40,8 @@ Initial physical scope: Linux ARM64, pinned NextGen V3 integration, SLOTH/NoahOW
 
 ## Scope and decisions
 
+**18 September parameter amendment:** resolve the [CFE drainage attribute mismatch](docs/CFE_PARAMETER_FINDING.md) during M2 before qualifying the release parameterization. The merged upstream generator replacement and the checked isolated sensitivity motivate this gate; they do not establish a corrected coupled reforecast. Preserve the inherited historical fixture, bind any candidate as a separate configuration, rebuild its antecedent state from the original origin, and predeclare a one-factor coupled comparison. Add source-column/units/transformation conformance to the future configuration adapter; offline file hashes alone cannot satisfy this requirement.
+
 All code, tests, reports, temporary outputs and build products go in this repository or its ignored local directories. Original Reforecast/HYDRA/thesis workspaces remain read-only, including Git metadata, caches and iCloud placeholders. Do not force hydration. Use resident copies with identities from the dossier.
 
 New implementation, ordinary local dependency setup and bounded tests are authorized by the current request. Keep large data/model runs, native compilation, cloud jobs and spending out of the first increment until their exact assets, execution environment and bounded experiment recipe are established. No paid resource has been requested. The current host has Python 3.14.7; Docker CLI exists but no daemon responds, so real container qualification cannot be reported as done.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "protocol_version": "0.1",
+  "protocol_version": "0.2",
   "created_date": "2026-09-18",
   "status": "predeclared_not_executed",
   "executable_launcher": false,
@@ -146,7 +146,8 @@
         "exact_watauga_fixture_restored",
         "qualified_linux_arm64_runtime",
         "component_and_source_attestation",
-        "reference_recipe_and_content_validation"
+        "reference_recipe_and_content_validation",
+        "release_configuration_parameter_semantics_resolved"
       ],
       "acceptance": [
         "complete_keys",
@@ -338,5 +339,33 @@
       "notes": "Maximum 3 attempts per variant; successes do not erase failed attempts. A second agent on the developer host is not an independent researcher.",
       "results": null
     }
-  ]
+  ],
+  "amendments": [
+    {
+      "version": "0.2",
+      "date": "2026-09-18",
+      "reason": "Verified upstream CFE attribute replacement and reviewed existing isolated synthetic-weather sensitivity; adds prospective parameter-semantics qualification, not retrospective preregistration.",
+      "prior_protocol_commit": "f55e4e7cf30907b5867e21f2c6a207fa2eb02c04"
+    }
+  ],
+  "parameter_semantics_gate": {
+    "status": "unresolved",
+    "finding": "docs/CFE_PARAMETER_FINDING.md",
+    "upstream_evidence": "docs/evidence/ngiab-pr74.json",
+    "prior_sensitivity_evidence": "docs/evidence/cfe-sensitivity-review.json",
+    "requires": [
+      "source_field_units_and_provenance",
+      "exact_generator_and_hydrofabric_identities",
+      "per_catchment_original_and_candidate_values",
+      "deployed_cfe_library_attestation",
+      "explicit_release_parameterization_decision",
+      "new_profile_and_antecedent_history_for_adopted_change"
+    ],
+    "current_parameter_content_validator_implemented": false,
+    "historical_fixture_mutation_allowed": false,
+    "coupled_sensitivity_execution_status": "not_started",
+    "coupled_sensitivity_invocation_bound": null,
+    "coupled_sensitivity_requires_separate_predeclared_manifest": true,
+    "notes": "Historical same-treatment reproduction does not validate parameter semantics. Do not append original/candidate coupled runs to the existing matrix allowance."
+  }
 }
