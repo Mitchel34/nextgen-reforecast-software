@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "protocol_version": "0.1",
+  "created_date": "2026-09-18",
+  "status": "predeclared_not_executed",
+  "executable_launcher": false,
+  "historical_evidence_separate": true,
+  "physical_envelope": {
+    "cpu_vcpus_total": 4,
+    "memory_bytes": 8589934592,
+    "generated_output_limit_bytes": 4294967296,
+    "wall_time_seconds_per_invocation": 1800,
+    "enforcement_required": "one cgroup including all parent, child and routing processes",
+    "admission_status": "proposed_unqualified",
+    "paid_resources_authorized": false
+  },
+  "synthetic_envelope": {
+    "wall_time_seconds_per_invocation": 120,
+    "max_processes": 12
+  },
+  "discharge_acceptance": {
+    "units": "m3 s-1",
+    "comparator": "math.isclose",
+    "absolute_tolerance": 1e-06,
+    "relative_tolerance": 1e-05,
+    "formula": "abs(candidate-reference) <= max(absolute_tolerance, relative_tolerance * max(abs(candidate), abs(reference)))",
+    "require_finite": true,
+    "require_nonnegative": true,
+    "require_complete_unique_keys": true
+  },
+  "state_tolerance_manifest": null,
+  "randomization_seed": 20260918,
+  "fixture_specification": {
+    "watauga": {
+      "catchment_count": 31,
+      "gauges": [
+        "03479000"
+      ],
+      "origin_utc": "2021-12-01T00:00:00Z",
+      "issue_times_utc": [
+        "2022-01-01T23:00:00Z",
+        "2022-01-02T00:00:00Z"
+      ],
+      "history_stop_exclusive_utc": "2022-01-02T18:00:00Z",
+      "history_updates": 786,
+      "forecast_horizon_hours": 18,
+      "expected_output_rows": 36,
+      "fixture_manifest_sha256": null,
+      "availability": "blocked_pending_exact_restoration"
+    },
+    "new_river": {
+      "catchment_count": 393,
+      "gauges": [
+        "03161000",
+        "03164000"
+      ],
+      "origin_utc": null,
+      "issue_times_utc": null,
+      "history_stop_exclusive_utc": null,
+      "fixture_manifest_sha256": null,
+      "availability": "blocked_pending_exact_fixture"
+    }
+  },
+  "experiments": [
+    {
+      "experiment_id": "E01",
+      "title": "Offline contracts",
+      "evidence_class": "new_offline_contract",
+      "execution_status": "not_started",
+      "variants": [
+        "strict_campaign_and_time",
+        "profile_identity_and_asset_integrity",
+        "explicit_unsupported_execution"
+      ],
+      "repeats": 1,
+      "max_invocations": 1,
+      "depends_on": [],
+      "blocked_until": [
+        "planned_E01_coverage_mapped_to_current_tests"
+      ],
+      "acceptance": [
+        "exact_integer_hour_clocks",
+        "invalid_input_refused",
+        "bounded_resident_file_checks",
+        "repository_local_test_writes"
+      ],
+      "notes": "The initial offline implementation suite is recorded separately in docs/VALIDATION.json. E01 remains a planned coverage group until each requirement is mapped to an executed test. One suite invocation; exact tests and counts recorded at run time. No model or external network.",
+      "results": null,
+      "related_validation_receipt": "docs/VALIDATION.json"
+    },
+    {
+      "experiment_id": "E02",
+      "title": "Synthetic mechanics",
+      "evidence_class": "new_synthetic_mechanics",
+      "execution_status": "not_started",
+      "variants": [
+        "out_of_order_children",
+        "independent_read_offsets",
+        "branch_only_perturbation",
+        "unknown_writable_handle",
+        "child_failure",
+        "parent_termination",
+        "deadline_cleanup",
+        "pre_output_failure",
+        "pre_commit_failure",
+        "post_commit_failure",
+        "invalid_existing_commit",
+        "resource_enforcement"
+      ],
+      "repeats": 3,
+      "max_invocations": 36,
+      "depends_on": [
+        "E01"
+      ],
+      "blocked_until": [
+        "synthetic_runner_and_fault_hooks_implemented"
+      ],
+      "acceptance": [
+        "exact_known_state",
+        "no_parent_or_sibling_contamination",
+        "no_duplicate_commit",
+        "no_orphan_process",
+        "limits_verified"
+      ],
+      "notes": "120 seconds and at most 12 processes per invocation; synthetic outcomes cannot qualify hydrology.",
+      "results": null
+    },
+    {
+      "experiment_id": "E03",
+      "title": "Watauga physical references",
+      "evidence_class": "new_physical_qualification",
+      "execution_status": "not_started",
+      "variants": [
+        "sequential_reference_issue_1",
+        "sequential_reference_issue_2",
+        "uninterrupted_history_control",
+        "same_weather_shared_branches",
+        "archived_weather_shared_branches"
+      ],
+      "repeats": 1,
+      "max_invocations": 5,
+      "depends_on": [
+        "E02"
+      ],
+      "blocked_until": [
+        "exact_watauga_fixture_restored",
+        "qualified_linux_arm64_runtime",
+        "component_and_source_attestation",
+        "reference_recipe_and_content_validation"
+      ],
+      "acceptance": [
+        "complete_keys",
+        "discharge_isclose",
+        "exact_clocks",
+        "parent_continuation_equivalence"
+      ],
+      "notes": "31 catchments; origin and two issue times bound in fixture_specification; selected state tolerances require separate unit-specific manifest.",
+      "results": null
+    },
+    {
+      "experiment_id": "E04",
+      "title": "Equal-resource comparisons",
+      "evidence_class": "new_physical_qualification",
+      "execution_status": "not_started",
+      "variants": [
+        "sequential_per_issue_reference",
+        "shared_history_concurrency_1",
+        "shared_history_concurrency_2"
+      ],
+      "repeats": 5,
+      "max_invocations": 18,
+      "depends_on": [
+        "E03"
+      ],
+      "blocked_until": [
+        "phase_and_cgroup_instrumentation",
+        "same_workload_and_limits",
+        "saved_randomized_trial_order"
+      ],
+      "acceptance": [
+        "reference_equivalent_output",
+        "same_enforced_whole_job_limits",
+        "all_trials_retained"
+      ],
+      "notes": "15 measured invocations plus 3 separate warm-ups. A sequential-reference invocation includes both per-issue processes within the invocation deadline. Random order seed 20260918; descriptive medians ranges and paired ratios only.",
+      "results": null
+    },
+    {
+      "experiment_id": "E05",
+      "title": "Child failure and commit integrity",
+      "evidence_class": "new_physical_qualification",
+      "execution_status": "not_started",
+      "variants": [
+        "before_output",
+        "after_output_before_commit",
+        "after_commit_publication",
+        "after_parent_advance",
+        "invalid_existing_commit"
+      ],
+      "repeats": 3,
+      "max_invocations": 30,
+      "depends_on": [
+        "E03"
+      ],
+      "blocked_until": [
+        "replay_controller_implemented",
+        "fault_hooks_at_named_boundaries"
+      ],
+      "acceptance": [
+        "partial_outputs_not_complete",
+        "completed_commits_verified",
+        "exactly_one_authoritative_commit_per_issue",
+        "recovered_discharge_isclose"
+      ],
+      "notes": "5 variants x 3 repeats x at most 2 invocations (injection and recovery). Invalid-commit cases may stop without model execution; retain actual count.",
+      "results": null
+    },
+    {
+      "experiment_id": "E06",
+      "title": "Parent termination and replay",
+      "evidence_class": "new_physical_qualification",
+      "execution_status": "not_started",
+      "variants": [
+        "after_first_isolation_ack",
+        "after_validation_before_publication",
+        "after_first_authoritative_commit"
+      ],
+      "repeats": 3,
+      "max_invocations": 18,
+      "depends_on": [
+        "E05"
+      ],
+      "blocked_until": [
+        "bounded_replay_runner",
+        "original_history_resident",
+        "replay_metrics"
+      ],
+      "acceptance": [
+        "original_origin_and_inputs_preserved",
+        "completed_forecasts_suppressed_without_skipping_history",
+        "recovered_discharge_isclose"
+      ],
+      "notes": "3 failpoints x 3 repeats x injection/recovery. Tests process loss only, not host power loss.",
+      "results": null
+    },
+    {
+      "experiment_id": "E07",
+      "title": "Input and output corruption",
+      "evidence_class": "new_physical_qualification",
+      "execution_status": "not_started",
+      "variants": [
+        "missing_interval",
+        "duplicate_interval",
+        "shifted_provider_label",
+        "missing_lead",
+        "nonfinite_value",
+        "wrong_units",
+        "changed_source_generation",
+        "changed_runtime_identity",
+        "changed_domain_configuration",
+        "damaged_archive",
+        "damaged_commit"
+      ],
+      "repeats": 1,
+      "max_invocations": 11,
+      "depends_on": [
+        "E03"
+      ],
+      "blocked_until": [
+        "source_content_adapters_and_commit_verifier"
+      ],
+      "acceptance": [
+        "explicit_expected_refusal",
+        "no_silent_substitution",
+        "no_invalid_forecast_published"
+      ],
+      "notes": "Some checks may execute without model launch but require adapter semantics; offline hash checks alone do not prove unit/time content validation.",
+      "results": null
+    },
+    {
+      "experiment_id": "E08",
+      "title": "New River transfer",
+      "evidence_class": "new_physical_qualification",
+      "execution_status": "not_started",
+      "variants": [
+        "sequential_reference_issue_1",
+        "sequential_reference_issue_2",
+        "shared_history_concurrency_1",
+        "shared_history_concurrency_2",
+        "parent_failure",
+        "recovery"
+      ],
+      "repeats": 1,
+      "max_invocations": 6,
+      "depends_on": [
+        "E06",
+        "E07"
+      ],
+      "blocked_until": [
+        "exact_new_river_fixture_sealed",
+        "new_river_dates_and_hashes_frozen",
+        "documented_scientific_treatments"
+      ],
+      "acceptance": [
+        "two_outputs_one_domain",
+        "complete_keys",
+        "discharge_isclose",
+        "reference_equivalent_recovery"
+      ],
+      "notes": "393 catchments, gauges 03161000 and 03164000. Dates intentionally unset until source-bound fixture established; no assumption that Watauga fixture dates transfer.",
+      "results": null
+    },
+    {
+      "experiment_id": "E09",
+      "title": "Independent researcher reproduction",
+      "evidence_class": "independent_reproduction",
+      "execution_status": "not_started",
+      "variants": [
+        "frozen_example",
+        "supported_configuration_variation"
+      ],
+      "repeats": 1,
+      "max_invocations": 6,
+      "depends_on": [
+        "E08"
+      ],
+      "blocked_until": [
+        "versioned_licensed_release_and_data_deposit",
+        "independent_researcher",
+        "qualified_clean_environment",
+        "documentation_frozen"
+      ],
+      "acceptance": [
+        "example_and_variation_valid",
+        "all_attempts_and_assistance_recorded",
+        "no_private_author_dependencies"
+      ],
+      "notes": "Maximum 3 attempts per variant; successes do not erase failed attempts. A second agent on the developer host is not an independent researcher.",
+      "results": null
+    }
+  ]
+}

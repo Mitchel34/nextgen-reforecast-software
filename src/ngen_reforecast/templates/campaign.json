@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "watauga-two-issue-planning-example",
+  "profile": "hourly18h",
+  "origin_time_utc": "2021-12-01T00:00:00Z",
+  "history": {
+    "start_time_utc": "2021-12-01T00:00:00Z",
+    "stop_time_utc": "2022-01-02T18:00:00Z"
+  },
+  "issue_times_utc": ["2022-01-01T23:00:00Z", "2022-01-02T00:00:00Z"],
+  "horizon_hours": 18,
+  "domains": [
+    {
+      "domain_id": "watauga",
+      "locations": [{"location_id": "03479000", "reach_id": "1017693"}],
+      "assets": []
+    }
+  ],
+  "resources": {
+    "host_cpus": 4,
+    "parent_cpus": 2,
+    "cpus_per_branch": 1,
+    "max_concurrent_branches": 2,
+    "wall_time_seconds": 3600,
+    "max_asset_bytes": 67108864,
+    "max_total_asset_bytes": 268435456
+  }
+}

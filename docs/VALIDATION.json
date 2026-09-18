@@ -1,0 +1,132 @@
+{
+  "schema_version": "implementation-validation/1.0",
+  "stage": "offline-foundation",
+  "verified_at_utc": "2026-09-18T06:52:17.610270+00:00",
+  "python_version": "Python 3.14.7",
+  "unit_tests": {
+    "passed": 54,
+    "failed": 0,
+    "command": "TMPDIR=\"$PWD/.local/tmp\" PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v"
+  },
+  "wheel_install": "passed in independent virtual environment",
+  "module_loaded_from_site_packages": true,
+  "cli_checks": [
+    {
+      "command": "ngen-reforecast --version",
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "command": "ngen-reforecast init campaign",
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "command": "ngen-reforecast plan campaign/campaign.json",
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "command": "ngen-reforecast plan campaign/campaign.json",
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "command": "ngen-reforecast ledger campaign/campaign.json --output expected.csv",
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "command": "ngen-reforecast report campaign/campaign.json --output plan.md",
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "command": "ngen-reforecast doctor runtime-profile.json",
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "command": "ngen-reforecast run",
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "command": "ngen-reforecast resume",
+      "returncode": 2,
+      "expected": 2
+    }
+  ],
+  "expected_ledger_rows": 36,
+  "forecast_rows_generated": 0,
+  "physical_execution_ready": false,
+  "native_builds_performed": 0,
+  "model_runs_performed": 0,
+  "review_corrections": [
+    "Eliminated one-byte sentinel read beyond file/aggregate budget; added four growth/truncation regressions.",
+    "Documented Linux/macOS no-follow inspection prerequisites."
+  ],
+  "continuous_integration": {
+    "status": "blocked_credential_workflow_scope",
+    "python_matrix": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "workflow_template": "ci/tests.yml",
+    "active_workflow": false,
+    "runs_performed": 0,
+    "reason": "GitHub rejected the initial push because the Personal Access Token lacks workflow scope. The unpushed commit was amended to preserve the CI template outside .github/workflows/.",
+    "next_step": "Activate the template using an authorized workflow credential, then execute and verify the four-version matrix."
+  },
+  "wheel": {
+    "filename": "ngen_reforecast-0.1.0a1-py3-none-any.whl",
+    "bytes": 22435,
+    "sha256": "5a42e4faca395b6d7afbbc406947563d12f7b68ef88ba53dbda0f245a689457b",
+    "artifact_scope": "local validation build; no PyPI release"
+  },
+  "source_files": [
+    {
+      "path": "src/ngen_reforecast/__init__.py",
+      "sha256": "b630fe4aa69fb5f586fb93c49e667c5072d72e52865cbfabdf30da04ae9332c2"
+    },
+    {
+      "path": "src/ngen_reforecast/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "src/ngen_reforecast/campaign.py",
+      "sha256": "c0cdd43ae0b1e1ef7bb6c2f5daac7b5ffa4edf457f9d6894e176a59c9ab8bc4c"
+    },
+    {
+      "path": "src/ngen_reforecast/cli.py",
+      "sha256": "87b08180cddd496254000412eaadaccfcbbc5305b7f0dbcfd205aa9cedce298d"
+    },
+    {
+      "path": "src/ngen_reforecast/runtime.py",
+      "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+    },
+    {
+      "path": "src/ngen_reforecast/templates/README.md",
+      "sha256": "4a21f62f6d714526cffe838e4d07430353b31473a3eebf0fe85d98b87de0c675"
+    },
+    {
+      "path": "src/ngen_reforecast/templates/campaign.json",
+      "sha256": "4b2bcc3b6869e58ae1f0ecdaf662bc988eeaa9242ca2ff72ac5b7ff715b57747"
+    }
+  ],
+  "integration_checks": {
+    "json_files_parsed": 19,
+    "local_markdown_links_resolved": 41,
+    "preserved_files": {
+      "nextgen_Software": 6,
+      "reports/reforecast_software_feasibility_20260918T045854Z": 20
+    },
+    "credential_pattern_scan_files": 40,
+    "protected_workspace_metadata_entries": 9117,
+    "protected_workspace_metadata_changes": 0,
+    "validation_source_hashes_matched": 7,
+    "template_parity": "passed"
+  }
+}

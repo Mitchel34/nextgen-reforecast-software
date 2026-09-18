@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ngen-reforecast"
+version = "0.1.0a1"
+description = "Offline campaign planning and runtime inspection for a developing NextGen reforecast workflow"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Mitchel Carson"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Hydrology",
+]
+
+[project.urls]
+Repository = "https://github.com/Mitchel34/nextgen-reforecast-software"
+Issues = "https://github.com/Mitchel34/nextgen-reforecast-software/issues"
+
+[project.scripts]
+ngen-reforecast = "ngen_reforecast.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ngen_reforecast = ["templates/*.json", "templates/*.md"]

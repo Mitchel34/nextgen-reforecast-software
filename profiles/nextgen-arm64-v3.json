@@ -1,0 +1,1534 @@
+{
+  "schema_version": "ngen-reforecast-runtime-profile/v1",
+  "profile_id": "nextgen-arm64-v3",
+  "qualification_status": "historical_reference_only_unqualified_public_runtime",
+  "platform": {
+    "system": "Linux",
+    "machine": "aarch64",
+    "oci_platform": "linux/arm64"
+  },
+  "protocol": "shared-history-v2_with_v3_day_custody",
+  "sources": {
+    "ngen_repository": "https://github.com/CIROH-UA/ngen",
+    "ngen_commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+    "troute_repository": "https://github.com/CIROH-UA/t-route",
+    "troute_commit": "533fbd98362efdafae62392308727de4f0d4cc20",
+    "preimage_sha256": {
+      "src/NGen.cpp": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19",
+      "include/core/Layer.hpp": "e23e290ec2267eb81b5d5caf14c9b52d9e60e99f7290899484f67194427cb957",
+      "src/core/SurfaceLayer.cpp": "317e3fcfd4e14bdd930c2bfe97502988270e7c1db10111ee95e3dda343b15613",
+      "src/realizations/catchment/Bmi_Multi_Formulation.cpp": "4a08781d0c72f723852663b5ce4bea3e22df287b8a418c9813173f9c0cbcfa2b",
+      "include/forcing/CsvPerFeatureForcingProvider.hpp": "d714746833198eb9ddd64284ed98a7cf6c184d02416916e7413a698db9e96ff2"
+    },
+    "overlay_header_sha256": {
+      "include/shared_history/ChildOwnership.hpp": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0",
+      "include/shared_history/DayCustodyBoundary.hpp": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405",
+      "include/shared_history/HourlyClock.hpp": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8",
+      "include/shared_history/Runtime.hpp": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25",
+      "include/shared_history/SwitchingProvider.hpp": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4"
+    },
+    "complete_source_lock": false,
+    "component_gitlinks": {
+      "CFE": {
+        "repository": "https://github.com/NOAA-OWP/cfe",
+        "commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+      },
+      "NoahOWP": {
+        "repository": "https://github.com/NOAA-OWP/noah-owp-modular",
+        "commit": "0abb891b48b043cc626c4e4bbd0efe54ad357fe1"
+      },
+      "SLOTH": {
+        "repository": "https://github.com/NOAA-OWP/SLoTH",
+        "commit": "48cd8082878fdb8a6f0e2337a5b375be5b71384c"
+      }
+    },
+    "component_gitlinks_basis": "Historical framework gitlinks and license review; not direct shared-library attestation."
+  },
+  "runtime": {
+    "image": "awiciroh/ciroh-ngen-image@sha256:2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+    "build_options": {
+      "NGEN_WITH_MPI": false,
+      "NGEN_WITH_PYTHON": false,
+      "NGEN_WITH_ROUTING": false,
+      "NGEN_WITH_BMI_C": true,
+      "NGEN_WITH_BMI_FORTRAN": true,
+      "NGEN_WITH_UDUNITS": true
+    },
+    "native_sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+    "middleware_sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+    "build_receipt_sha256": "932193ac1481273b565b41a0969bfe3a39bee0953698766b6fb2c2110088d40d",
+    "historical_dt_rpath": "/work/ngen-v3-day01/extern/iso_c_fortran_bmi/cmake_build",
+    "middleware_resolution_verified_in_public_runtime": false,
+    "component_libraries": [
+      "libslothmodel.so",
+      "libsurfacebmi.so",
+      "libcfebmi.so.1.0.0"
+    ],
+    "component_source_to_binary_attestation": false,
+    "single_thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "historical_cmake_version": "3.31.8"
+  },
+  "routing": {
+    "service_sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+    "network": "HYFeaturesNetwork",
+    "kernel": "V02-structured",
+    "steps_per_hour": 12,
+    "step_seconds": 300,
+    "channel_only": true,
+    "portable_land_checkpoint": false
+  },
+  "fixture": {
+    "name": "Existing Watauga v3 two-issue local day-custody qualification",
+    "domain": "watauga_vpu06",
+    "catchments": 31,
+    "history_origin_epoch": 1638316800,
+    "history_stop_epoch": 1641146400,
+    "history_hours": 786,
+    "issue_epochs": [
+      1641078000,
+      1641081600
+    ],
+    "branch_hours": 18,
+    "contract_sha256": "b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb",
+    "expected_forecast_rows": 36,
+    "file_count": 181,
+    "historical_dataless_count": 132,
+    "public_fixture_complete": false
+  },
+  "inspection_limits": {
+    "max_file_bytes": 16777216,
+    "max_total_hash_bytes": 134217728,
+    "max_files": 256
+  },
+  "assets": [
+    {
+      "path": "runtime/bin/ngen-shared",
+      "role": "native",
+      "sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+      "bytes": 3813528,
+      "identity_basis": "historical_build_export_and_resident_hash"
+    },
+    {
+      "path": "runtime/lib/libiso_c_bmi.so",
+      "role": "middleware",
+      "sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+      "bytes": 74504,
+      "identity_basis": "historical_build_export_and_resident_hash"
+    },
+    {
+      "path": "source/patched/include/core/Layer.hpp",
+      "role": "source_overlay",
+      "sha256": "1de9c28bdcf77ca72d4592c8c2ec581d793a06f92ed063556bf519d6611642e2",
+      "bytes": null,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/include/forcing/CsvPerFeatureForcingProvider.hpp",
+      "role": "source_overlay",
+      "sha256": "88624480f3379393a414d52d586b41a017a3c85aa219e3ff94d1acdb3b259467",
+      "bytes": null,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/include/shared_history/ChildOwnership.hpp",
+      "role": "source_overlay",
+      "sha256": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0",
+      "bytes": 1706,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/include/shared_history/DayCustodyBoundary.hpp",
+      "role": "source_overlay",
+      "sha256": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405",
+      "bytes": 1895,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/include/shared_history/HourlyClock.hpp",
+      "role": "source_overlay",
+      "sha256": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8",
+      "bytes": 1456,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/include/shared_history/Runtime.hpp",
+      "role": "source_overlay",
+      "sha256": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25",
+      "bytes": 41810,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/include/shared_history/SwitchingProvider.hpp",
+      "role": "source_overlay",
+      "sha256": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4",
+      "bytes": 5930,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/src/NGen.cpp",
+      "role": "source_overlay",
+      "sha256": "0e7ad5c0c9094e1fd8809d57c8d03e237336e96a2c1a77d73eceed588025ce81",
+      "bytes": null,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/src/core/SurfaceLayer.cpp",
+      "role": "source_overlay",
+      "sha256": "9c650dcedabd5e502e94185ef0074ee8092c8393dd3898cffba6c6c47edc3731",
+      "bytes": null,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/patched/src/realizations/catchment/Bmi_Multi_Formulation.cpp",
+      "role": "source_overlay",
+      "sha256": "e62b3aab14da26590e6b56be177974f8a6f33faed5eac562f88e7b183bb747ed",
+      "bytes": null,
+      "identity_basis": "historical_preserved_source_hash"
+    },
+    {
+      "path": "source/pristine/src/NGen.cpp",
+      "role": "source_preimage",
+      "sha256": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19",
+      "bytes": null,
+      "identity_basis": "historical_preimage_hash"
+    },
+    {
+      "path": "source/pristine/include/core/Layer.hpp",
+      "role": "source_preimage",
+      "sha256": "e23e290ec2267eb81b5d5caf14c9b52d9e60e99f7290899484f67194427cb957",
+      "bytes": null,
+      "identity_basis": "historical_preimage_hash"
+    },
+    {
+      "path": "source/pristine/src/core/SurfaceLayer.cpp",
+      "role": "source_preimage",
+      "sha256": "317e3fcfd4e14bdd930c2bfe97502988270e7c1db10111ee95e3dda343b15613",
+      "bytes": null,
+      "identity_basis": "historical_preimage_hash"
+    },
+    {
+      "path": "source/pristine/src/realizations/catchment/Bmi_Multi_Formulation.cpp",
+      "role": "source_preimage",
+      "sha256": "4a08781d0c72f723852663b5ce4bea3e22df287b8a418c9813173f9c0cbcfa2b",
+      "bytes": null,
+      "identity_basis": "historical_preimage_hash"
+    },
+    {
+      "path": "source/pristine/include/forcing/CsvPerFeatureForcingProvider.hpp",
+      "role": "source_preimage",
+      "sha256": "d714746833198eb9ddd64284ed98a7cf6c184d02416916e7413a698db9e96ff2",
+      "bytes": null,
+      "identity_basis": "historical_preimage_hash"
+    },
+    {
+      "path": "fixture/CONTRACT.json",
+      "role": "fixture",
+      "sha256": "b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb",
+      "bytes": 45886,
+      "identity_basis": "historical_contract_binding"
+    },
+    {
+      "path": "fixture/SHA256SUMS",
+      "role": "fixture",
+      "sha256": "24b8563e4a741d43cf74af631d4873bc7f103d6fff12a7a459ba8c1540a16947",
+      "bytes": 80,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/PREPARATION_RECEIPT.json",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 11879,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/SHA256SUMS",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2633,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017689.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2017,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017690.csv",
+      "role": "fixture",
+      "sha256": "2aa49a55b13f0a37c7ae5fcde2c90960c87c858b9858f8d1925bff70ad01f4b2",
+      "bytes": 2007,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017691.csv",
+      "role": "fixture",
+      "sha256": "3f837a43bb7e74a2f16d8430c2ef861fbeaeb5a86c539b3636987ff73d2f4511",
+      "bytes": 2001,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017692.csv",
+      "role": "fixture",
+      "sha256": "ddfac38c26533eb01880c87d881d475a668377a436f12082250715c44c91ead1",
+      "bytes": 1989,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017693.csv",
+      "role": "fixture",
+      "sha256": "2c7574e6d7a7dfc555211b7c03c8f5b003ed103935abe19c294fbe046d8e404d",
+      "bytes": 1988,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017847.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1977,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017848.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2000,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017849.csv",
+      "role": "fixture",
+      "sha256": "06ac2bea7e9b4699de7ec49065dbbab995e0feca6f525a82e39a27f4a5123f3e",
+      "bytes": 1992,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017850.csv",
+      "role": "fixture",
+      "sha256": "67a87d612b28cc0ac30b14d88eee5c0bd3f22bc031142730c9ac67e18c37d10a",
+      "bytes": 1987,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017851.csv",
+      "role": "fixture",
+      "sha256": "ece340e58b571eaeb44858e80656e57f76519aec52beea9f6913c78dec542b0c",
+      "bytes": 1976,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017852.csv",
+      "role": "fixture",
+      "sha256": "fc4318f86f6c332c77f936513fa3f08d0db488b31f5ab9bf1148aeb567a1357f",
+      "bytes": 1987,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017853.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1978,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017854.csv",
+      "role": "fixture",
+      "sha256": "84e7df66258176b2c064fea3a96da9a88c06873bb7a3a8b3fb2d6855e6f2dd4a",
+      "bytes": 1981,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017855.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1981,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017856.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1981,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017857.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1969,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017858.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1971,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017859.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1980,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017860.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2009,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017861.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2008,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017862.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2000,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017863.csv",
+      "role": "fixture",
+      "sha256": "d71c77ff3b6d1a790ba394202339e3906e432f31474cc82cfe73a8d55eeb502f",
+      "bytes": 2008,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017864.csv",
+      "role": "fixture",
+      "sha256": "ba8eacb0c565a6a08e882583b8e372fbc6cbe3d6d4634a1cd928fcb466da5877",
+      "bytes": 1997,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017865.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1996,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017866.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2007,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017867.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1994,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017868.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2019,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017869.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2012,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017870.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1998,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017871.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2008,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017872.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2007,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/PREPARATION_RECEIPT.json",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 11881,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/SHA256SUMS",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2633,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017689.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2005,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017690.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2023,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017691.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2017,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017692.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2031,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017693.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2024,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017847.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2037,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017848.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2031,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017849.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2032,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017850.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2025,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017851.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2022,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017852.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2024,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017853.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2041,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017854.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2022,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017855.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2024,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017856.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2034,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017857.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2039,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017858.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2030,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017859.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2011,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017860.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2022,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017861.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2011,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017862.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2016,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017863.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2011,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017864.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2013,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017865.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2005,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017866.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2019,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017867.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2018,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017868.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2001,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017869.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2015,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017870.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2018,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017871.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 1997,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017872.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 2008,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017689.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017690.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017691.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 629,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017692.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 630,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017693.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 631,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017847.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 630,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017848.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017849.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017850.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 629,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017851.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017852.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 630,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017853.ini",
+      "role": "fixture",
+      "sha256": "3982b16f69cfaee5fb6f6f6d78d6dc310259ce1ad47620c864a50825c75ffd7e",
+      "bytes": 632,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017854.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 633,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017855.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 633,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017856.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 630,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017857.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 630,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017858.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 633,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017859.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 633,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017860.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017861.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017862.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017863.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 631,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017864.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017865.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017866.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 634,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017867.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 632,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017868.ini",
+      "role": "fixture",
+      "sha256": "f70fa65c852014ad327aecf422cfc8050a9496df38e621feda0c20afa89c305c",
+      "bytes": 631,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017869.ini",
+      "role": "fixture",
+      "sha256": "4081ae8b6df20829806c042e977a1d6b55c8dd6e98ccd9070b1ce46a06effa4b",
+      "bytes": 630,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017870.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 631,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017871.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 630,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017872.ini",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 630,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017689.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3013,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017690.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3012,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017691.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3011,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017692.namelist.input",
+      "role": "fixture",
+      "sha256": "53d5204c66b6cd5dc84e05306e465db21d0e8b1552f1dde5ccefc505fa459d86",
+      "bytes": 3011,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017693.namelist.input",
+      "role": "fixture",
+      "sha256": "ae2b4831ee7a4fdcb0247de4fb8c828c890a167bec057e41ed9c836a2269294b",
+      "bytes": 3013,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017847.namelist.input",
+      "role": "fixture",
+      "sha256": "d9681890bafe8fd43e4cddee36f55acf370b9fcdc1079dada7cfc2c2f611cc60",
+      "bytes": 3011,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017848.namelist.input",
+      "role": "fixture",
+      "sha256": "bb337cc4ba1197289c8e2e8cf8b3c09b21f896b14de53ad4a1c30cc6fc5bae7f",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017849.namelist.input",
+      "role": "fixture",
+      "sha256": "34dbfea561321f40d0a39310ae31cd9e5afe0c33d03736930d4b9d6f1a4fd663",
+      "bytes": 3011,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017850.namelist.input",
+      "role": "fixture",
+      "sha256": "309e4ac1f59858ead2d15e7ca5f48dc7051b76fd12bb6bc0149eb09a1bb96d4b",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017851.namelist.input",
+      "role": "fixture",
+      "sha256": "d6ff8e0248edbb5feb2be68d7970aeb06c572a3b9870294cb5dd8d6efc207346",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017852.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3012,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017853.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3013,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017854.namelist.input",
+      "role": "fixture",
+      "sha256": "15a5556d5d96b060e40ad1edafdc0d7259ab6e53556bcb9e495006c2fe5d4c9f",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017855.namelist.input",
+      "role": "fixture",
+      "sha256": "83dbb19fd611cfacd687205b7b9934b69a4b5058b800f266a7d1174b6d3ed4d9",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017856.namelist.input",
+      "role": "fixture",
+      "sha256": "24e8ec769301c11250c59a343fbbf3ac2827cecd3cb421fc04342820d5c2b02c",
+      "bytes": 3011,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017857.namelist.input",
+      "role": "fixture",
+      "sha256": "8505931b852a682fe19488e99a49efa41ccac31dae09b1215861d907b69cb2ea",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017858.namelist.input",
+      "role": "fixture",
+      "sha256": "f2cd3f20cbe1e41035a6d7bf986480cc85952f10eb5f9fbca26fbd1cb85f2d98",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017859.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3012,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017860.namelist.input",
+      "role": "fixture",
+      "sha256": "44b67d6685e035245c4d5b434e157ab88b063842f19078bfb66bd50c241ed82a",
+      "bytes": 3013,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017861.namelist.input",
+      "role": "fixture",
+      "sha256": "f721aa848121040d8c5971a1481dc06c34845b1f1ef0d62342ca88b6057d2923",
+      "bytes": 3013,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017862.namelist.input",
+      "role": "fixture",
+      "sha256": "427a7072ea701dc5e504214eaa4516e897c3c6b959539e65e5fdc4d2459b43e0",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017863.namelist.input",
+      "role": "fixture",
+      "sha256": "38fc8d2a2fa0c6183a40b7845184fbccb9dbd42bceac9cef1d2e2f521aa26a21",
+      "bytes": 3011,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017864.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3013,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017865.namelist.input",
+      "role": "fixture",
+      "sha256": "c0d6b5442b5badb8b210e6a56401d7054f3c6125ddf0e72e7c5b848f0c6995ac",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017866.namelist.input",
+      "role": "fixture",
+      "sha256": "aa6ba012aa2dc12646ad8dd4869596b3ccbb141ebe474ba99f2db5750131ab1c",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017867.namelist.input",
+      "role": "fixture",
+      "sha256": "e36d75d94afe139d238fe199bec5f9593f20d1cd7fc0ea2ea73014b60bbde64d",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017868.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3013,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017869.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3011,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017870.namelist.input",
+      "role": "fixture",
+      "sha256": "11fc55ae5e81078c63df3318855d2b5bf3f5e2f2d0a60fc9ae27c101387bff0c",
+      "bytes": 3012,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017871.namelist.input",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3012,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017872.namelist.input",
+      "role": "fixture",
+      "sha256": "90999ae5490ea195c0292782d1fbe9500203b15811360213e6e40517dfeb5f76",
+      "bytes": 3011,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/realization.json",
+      "role": "fixture",
+      "sha256": "678b05292d8741700ec5355831e8774dda71d547cccb587d8b60cb279050f44d",
+      "bytes": 2113,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/troute.yaml",
+      "role": "fixture",
+      "sha256": "978dd1365bdfdd6c2a22d278c407942d3d5c22ea9821734bbeba25c15349aadf",
+      "bytes": 2114,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/config/watauga_vpu06.gpkg",
+      "role": "fixture",
+      "sha256": "a0a7ed78e5ece1fe25d052c26e6ed5b8b5084b9f5a45da276f02c14f59e24713",
+      "bytes": 360448,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017689.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91308,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017690.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 92072,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017691.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91994,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017692.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 92040,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017693.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 89340,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017847.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91827,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017848.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91984,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017849.csv",
+      "role": "fixture",
+      "sha256": "463122997d916fc334e2b91b620db5a9ca9fd7af06d9ac22810ff8e80d3d48ba",
+      "bytes": 91432,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017850.csv",
+      "role": "fixture",
+      "sha256": "b0c62d753739015208d7181455d253c037ce05dea80196f3c7eccd02c7029821",
+      "bytes": 92058,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017851.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91117,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017852.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91847,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017853.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91609,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017854.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91596,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017855.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91552,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017856.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91486,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017857.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91383,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017858.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91565,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017859.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91815,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017860.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91666,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017861.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91327,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017862.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 92088,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017863.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91321,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017864.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91909,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017865.csv",
+      "role": "fixture",
+      "sha256": "717987c0c74f7b908c910e2e658fb1bf317c2ae05d4f23104fe19e3758d9dcad",
+      "bytes": 91670,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017866.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91626,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017867.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91706,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017868.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91220,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017869.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91758,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017870.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 92045,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017871.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91624,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017872.csv",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 91914,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/reference.json",
+      "role": "fixture",
+      "sha256": "1b657ee53888f0ec405c5dcce18c6ca12796931aaf29302ce0b4fa97a71e7942",
+      "bytes": 123007,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/router.json",
+      "role": "fixture",
+      "sha256": "1b7004be31b1f5a84eb3dc25bf37cd2244a2e3c017cd682d80f3e6f893e37b3d",
+      "bytes": 406,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/runtime/libiso_c_bmi.so",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 74504,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/runtime/ngen-shared",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 3813528,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/scripts/shared_history_day_ack_v3.py",
+      "role": "fixture",
+      "sha256": "ab9bb7b03ddb0436d7c105f32838bd127ccba641563592bad804679085b16d75",
+      "bytes": 1477,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/scripts/shared_history_day_model_controller_v3.py",
+      "role": "fixture",
+      "sha256": "82811c97227c02143f471730a67356ad42727c3c13206c394f0ab62d9e162b94",
+      "bytes": 17034,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/__init__.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 552,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+      "role": "fixture",
+      "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "bytes": 22352,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/nwm_forcing_inventory.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 98791,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_day_shard_v1.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 20422,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_fresh_scratch_lifecycle_v1.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 23631,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_gcp_day_custody_v1.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 14725,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_local_day_custody_v1.py",
+      "role": "fixture",
+      "sha256": "bb6fc5bbc752e0f32ac2571aa18f88f42bcac0a42328f9773faba0b83de4ba3e",
+      "bytes": 10303,
+      "identity_basis": "historical_preserved_file_hash"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_native_output_bridge_v1.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 19433,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_recovery_v2.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 12737,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+      "role": "fixture",
+      "sha256": null,
+      "bytes": 19251,
+      "identity_basis": "unresolved_no_hash_available"
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_routing_service_v2.py",
+      "role": "fixture",
+      "sha256": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "bytes": 4954,
+      "identity_basis": "historical_preserved_file_hash"
+    }
+  ],
+  "qualification_requirements": [
+    {
+      "code": "SOURCE_CLOSURE_UNRESOLVED",
+      "message": "Seal the complete NextGen overlay, t-route source, component submodule commits and all build dependency versions; preserved hashes alone are not a complete public source bundle."
+    },
+    {
+      "code": "COMPONENT_ATTESTATION_UNRESOLVED",
+      "message": "Bind SLOTH, NoahOWP and CFE source revisions, compiler/dependency identities and built shared-library hashes to the pinned runtime image."
+    },
+    {
+      "code": "FIXTURE_IDENTITY_INCOMPLETE",
+      "message": "Restore the exact Watauga fixture, resolve unknown member hashes against its sealed contract and validate forcing coverage, units, physical configuration and original origin."
+    },
+    {
+      "code": "MIDDLEWARE_LOADING_UNQUALIFIED",
+      "message": "Verify the loader resolves the exported libiso_c_bmi.so with SHA-256 09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162; the historical build embeds a private build-directory RPATH."
+    },
+    {
+      "code": "NATIVE_BUILD_UNQUALIFIED",
+      "message": "Execute and retain a clean, bounded Linux ARM64 build with a complete toolchain and dependency lock; this profile does not attest a new build."
+    },
+    {
+      "code": "REAL_REFERENCE_UNQUALIFIED",
+      "message": "Retain a new real Watauga serial/reference comparison, isolation and recovery receipts at declared tolerances; historical receipts and unit tests are separate evidence."
+    },
+    {
+      "code": "DISTRIBUTION_RIGHTS_UNRESOLVED",
+      "message": "Resolve code, image, component and fixture redistribution rights and notices before including inherited payloads in a release."
+    }
+  ],
+  "evidence": {
+    "source_version_map": "reports/reforecast_software_feasibility_20260918T045854Z/SOURCE_VERSION_MAP.json",
+    "minimal_example_manifest": "reports/reforecast_software_feasibility_20260918T045854Z/MINIMAL_EXAMPLE_MANIFEST.json",
+    "state_contract": "reports/reforecast_software_feasibility_20260918T045854Z/STATE_AND_RECOVERY.md",
+    "new_model_runs": 0,
+    "new_builds": 0,
+    "packaging_review": "reports/reforecast_software_feasibility_20260918T045854Z/UPSTREAM_OVERLAP_AND_LICENSES.md"
+  }
+}

@@ -2,7 +2,33 @@
 
 A research software project for constructing auditable NextGen reforecast campaigns with shared historical state and independent forecast branches.
 
-**Current stage: software design and extraction feasibility.** This repository contains the supplied project outline and a completed read-only feasibility dossier. It does not yet provide an installable generator, a qualified public runtime, or a complete independently runnable example. CLI examples in the outline are proposals.
+**Current stage: installable offline planning foundation (`0.1.0a1`).** The package provides campaign validation, expected issue/lead ledgers, planning reports and historical runtime inspection. Physical NextGen execution and recovery are not implemented or qualified yet. The repository also contains a completed feasibility dossier and a substantive manuscript draft. CLI examples in the original outline remain proposals except where implemented below.
+
+## Start here
+
+- [Implementation plan and acceptance milestones](IMPLEMENTATION_PLAN.md)
+- [Current implementation and validation status](docs/IMPLEMENTATION_STATUS.md)
+- [User guide](docs/USER_GUIDE.md) and [architecture](docs/ARCHITECTURE.md)
+- [Manuscript draft](paper/MANUSCRIPT.md) and [claim/evidence register](paper/CLAIMS.csv)
+- [Predeclared benchmark protocol](benchmarks/PROTOCOL.md)
+- [Runtime qualification and missing assets](docs/RUNTIME_QUALIFICATION.md)
+
+## Install and try the planning commands
+
+Python 3.11 or later on Linux or macOS:
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install .
+ngen-reforecast init my-campaign
+ngen-reforecast plan my-campaign/campaign.json
+ngen-reforecast ledger my-campaign/campaign.json --output my-campaign/expected.csv
+ngen-reforecast report my-campaign/campaign.json --output my-campaign/plan.md
+ngen-reforecast doctor profiles/nextgen-arm64-v3.json
+```
+
+The example includes no scientific inputs. `plan`, `report` and `doctor` intentionally return exit code **2** when requirements remain unresolved, while providing their reports. The expected ledger contains 36 issue/lead keys, not generated discharge. Asset inspection never starts a model, downloads data or hydrates placeholders. `run` and `resume` return an explicit unavailable status. See the user guide for resource bounds, schema and exit codes.
 
 ## Project material
 
@@ -34,7 +60,7 @@ The source and receipt references resolve to a private preservation snapshot; th
 
 The proposed tool separates reforecast generation from downstream forecast correction and evaluation. The initial design targets a narrowly qualified Linux runtime with continuous historical initialization, independent hourly 18-hour forecasts, explicit forcing and time semantics, verified output commits, and documented history-replay recovery.
 
-Existing research workspaces and the separate private HYDRA repository remain read-only during this investigation. Large research archives, original model code, datasets, binaries, credentials, and cloud infrastructure are not copied into this repository.
+Existing research workspaces and the separate private HYDRA repository remain read-only throughout development. Large research archives, original model code, datasets, binaries, credentials, and cloud infrastructure are not copied into this repository.
 
 ## License status
 

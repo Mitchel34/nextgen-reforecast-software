@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mitchel34/nextgen-reforecast-software/blob/main/schemas/campaign.schema.json",
+  "title": "NextGen Reforecast offline campaign specification 1.0",
+  "description": "Structural schema. The Python validator additionally enforces chronological order, unchanged origin, historical coverage through final issue plus 18h, global uniqueness, aggregate bounds and CPU admission. Passing this schema does not establish physical runtime readiness.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "campaign_id", "profile", "origin_time_utc", "history", "issue_times_utc", "horizon_hours", "domains", "resources"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "campaign_id": {"$ref": "#/$defs/identifier"},
+    "profile": {"const": "hourly18h"},
+    "origin_time_utc": {"$ref": "#/$defs/hour"},
+    "history": {
+      "type": "object", "additionalProperties": false,
+      "required": ["start_time_utc", "stop_time_utc"],
+      "properties": {
+        "start_time_utc": {"$ref": "#/$defs/hour"},
+        "stop_time_utc": {"$ref": "#/$defs/hour"}
+      },
+      "description": "Half-open historical provider coverage. Start must equal original origin. Stop must cover final issue plus 18 hours; at most 100000 hourly intervals. Declared coverage remains unverified until forcing contents are qualified."
+    },
+    "issue_times_utc": {
+      "type": "array", "minItems": 1, "maxItems": 100000, "uniqueItems": true,
+      "items": {"$ref": "#/$defs/hour"},
+      "description": "Strictly increasing issue hours after the original origin; zero-antecedent cold-state branches are unsupported."
+    },
+    "horizon_hours": {"type": "integer", "const": 18},
+    "domains": {
+      "type": "array", "minItems": 1, "maxItems": 32,
+      "items": {"$ref": "#/$defs/domain"}
+    },
+    "resources": {
+      "type": "object", "additionalProperties": false,
+      "required": ["host_cpus", "parent_cpus", "cpus_per_branch", "max_concurrent_branches", "wall_time_seconds", "max_asset_bytes", "max_total_asset_bytes"],
+      "properties": {
+        "host_cpus": {"type": "integer", "minimum": 1, "maximum": 1024},
+        "parent_cpus": {"type": "integer", "minimum": 1, "maximum": 1024},
+        "cpus_per_branch": {"type": "integer", "minimum": 1, "maximum": 1024},
+        "max_concurrent_branches": {"type": "integer", "minimum": 1, "maximum": 32},
+        "wall_time_seconds": {"type": "integer", "minimum": 1, "maximum": 604800},
+        "max_asset_bytes": {"type": "integer", "minimum": 1, "maximum": 1073741824},
+        "max_total_asset_bytes": {"type": "integer", "minimum": 1, "maximum": 4294967296}
+      },
+      "description": "Per-domain CPU admission: parent_cpus + cpus_per_branch * max_concurrent_branches <= host_cpus. Domains are not scheduled concurrently. Asset bounds limit offline reads, not model memory or execution time."
+    }
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"},
+    "hour": {"type": "string", "format": "date-time", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:00:00Z$"},
+    "location": {
+      "type": "object", "additionalProperties": false,
+      "required": ["location_id", "reach_id"],
+      "properties": {
+        "location_id": {"$ref": "#/$defs/identifier"},
+        "reach_id": {"type": "string", "pattern": "^[1-9][0-9]{0,19}$"}
+      }
+    },
+    "asset": {
+      "type": "object", "additionalProperties": false,
+      "required": ["role", "path", "sha256", "size_bytes"],
+      "properties": {
+        "role": {"enum": ["hydrofabric", "realization", "parameters", "historical_forcing", "forecast_forcing", "routing_configuration"]},
+        "path": {
+          "type": "string", "minLength": 1, "maxLength": 1024,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)(?!.*[\\\\\\u0000-\\u001f\\u007f]).*[^/]$",
+          "description": "Relative POSIX path beneath the campaign directory; no dot segments, controls or backslashes. Every component must be resident and must not be a symlink."
+        },
+        "sha256": {"oneOf": [{"type": "null"}, {"type": "string", "pattern": "^[0-9a-f]{64}$"}]},
+        "size_bytes": {"oneOf": [{"type": "null"}, {"type": "integer", "minimum": 1, "maximum": 1073741824}]}
+      },
+      "description": "Null expected hash or size is an explicit unknown-input blocker. Assets must satisfy resource-specific limits. Equal paths across domains must carry identical role/hash/size metadata."
+    },
+    "domain": {
+      "type": "object", "additionalProperties": false,
+      "required": ["domain_id", "locations", "assets"],
+      "properties": {
+        "domain_id": {"$ref": "#/$defs/identifier"},
+        "locations": {"type": "array", "minItems": 1, "maxItems": 1024, "items": {"$ref": "#/$defs/location"}},
+        "assets": {"type": "array", "maxItems": 4096, "items": {"$ref": "#/$defs/asset"}}
+      },
+      "description": "One physical state trajectory with one or more nested output locations. All six asset roles are required for input closure; omitted roles are reported as blockers rather than invalidating a planning specification. Campaign-wide limits are 1024 unique locations and 4096 asset entries."
+    }
+  }
+}
