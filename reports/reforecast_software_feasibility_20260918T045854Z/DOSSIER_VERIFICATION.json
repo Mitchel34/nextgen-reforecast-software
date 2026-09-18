@@ -1,0 +1,18 @@
+{
+  "schema": "nextgen-software-dossier-verification/v1",
+  "verified_at_utc": "2026-09-18T05:12:00.228013+00:00",
+  "required_deliverables_present": 9,
+  "original_files_byte_identical": 6,
+  "parsed_json_files_before_verification_receipt": 8,
+  "parsed_csv_files": 4,
+  "capability_rows": 26,
+  "broken_local_markdown_links": 0,
+  "credential_pattern_findings": 0,
+  "protected_reforecast_metadata_entries": 9117,
+  "protected_reforecast_metadata_differences": 0,
+  "metadata_comparison_excludes_atime": true,
+  "original_scientific_data_content_rehash_performed": false,
+  "new_model_runs": 0,
+  "new_native_builds": 0,
+  "new_project_tests": 0
+}

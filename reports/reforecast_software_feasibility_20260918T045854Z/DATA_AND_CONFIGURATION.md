@@ -1,0 +1,61 @@
+# Forcing, domain and example feasibility
+
+This report inspects source and existing receipts only. No generator script, model, build, test or download was executed. Logical roots are defined in `MINIMAL_EXAMPLE_MANIFEST.json`; full hashes for inspected files are in that manifest and `forcing_checks.json`. `C` denotes the preserved deployed component package, `D` the original generation source, and `FIXTURE` its existing v3 day-model qualification package. These remain read only.
+
+## Extraction decision
+
+The useful extraction boundary is an explicit domain/forcing contract feeding the shared-history runtime. Current production Python interfaces implement a tightly bound two-domain study. They are not an arbitrary-basin package. `production_execution_recipe_v1.py:20-27,144-178,184-239` hard-codes domain axes (393 New River and 31 Watauga catchments), gauge names, two CPU layouts, 18-hour horizons, three modules per catchment and hourly forcing. `production_domain_contract_v1.prepare_contract:7-45` joins exact input hashes and rejects incompatible clocks or issue masks. `production_realization_v1.render_inputs:15-70` varies dates and paths while preserving the exact SLOTH/NoahOWP/CFE stack and expected gauge set.
+
+Thus dates, output locations, bounded lifetimes, trace stride and exact issue lists are configurable within those checks. New basins, arbitrary catchment axes, alternate model stacks, subhourly cadence, longer horizons, reservoir/assimilation routing and a general source registry require code and validation changes. These are retained restrictions, not absent capabilities inferred from a README.
+
+## Domain creation and reuse
+
+`D/src/nextgen_reforecast/gate3_hydrofabric_prep.py:_domain_closure_rows:541-559` checks frozen VPU/closure fingerprints and unique flowpaths/divides. `_selection_from_source:568-643` rederives upstream membership using a recursive SQL query and requires exact equality with frozen closure rows. `gate3_hydrofabric_production_v2.py:_validate_frozen_science:385-409` calls that selection. These source bytes were inspected and hashed; the extraction was not rerun. The earlier `gate2_execution_freeze.py` is dataless at the inspected source location and was not opened.
+
+The frozen production profile executes one 393-catchment New River parent for gauges 03161000 and 03164000, and one 31-catchment Watauga parent for gauge 03479000. The 73-catchment upstream New River gauge is a subset of the larger parent, not a third executed domain (preserved `SITE_CROSSWALK.json`, review `docs/REFORECAST_AND_DATA_AUDIT.md:56-69`; actual execution axes in `C/src/nextgen_reforecast/production_execution_recipe_v1.py:21-22`). Production site mappings are carried through the rendered manifests and routing output policy.
+
+Scientific inference for extraction: reuse a parent across nested gauges only when geometry, parameters, history origin, forcing bytes and treatment, land components, routing mode and boundary conditions agree. Identical geometric coverage alone does not justify state sharing across differently calibrated/configured domains. Likewise, NWM forecasts from different issue times cannot be deduplicated merely because their valid hours overlap. The store keys exact object key/generation and enforces one issue/lead identity (`nwm_compact_forcing_v2.py:68-88,93-125`).
+
+The production geometry includes four explicit New River zero-slope replacements (reaches 794285, 794288, 794290, 794292 -> 0.001 m/m); `C/provenance/HISTORY_BINDING_V2.json:new_river_slope_policy` calls these adopted numerical treatments, not surveyed corrections. That binding records the derived geometry hash `98111c796451a26b188568e07cacb4d0be1d370c396c6b329b181639611652df`. Noah template longitude replacement and upstream calibration provenance remain scientific profile details, not generic runtime defaults.
+
+## Time and forcing contract
+
+| Surface | Implemented contract | Primary source |
+|---|---|---|
+| Historical precipitation | Provider row t consumes published AORC APCP at t+1 hour, divided by 3,600 once. | `C/src/nextgen_reforecast/aorc_continuous_index_v2.py:165-170` |
+| Historical other fields | Same-label engineering interpretation; shortwave temporal uncertainty is expressly retained. | Same file `:94,165-170` |
+| Forecast precipitation | Decoded NWM RAINRATE values remain rates; no AORC accumulation conversion is applied again. | `nwm_compact_forcing_v2.py:79-82,135-186`; `nwm_decoded_issue_csv_adapter_v1.py:2-6,86-119` |
+| Branch row clock | Lead k is provider interval start issue+(k−1)h; forecast target is issue+k h. Complete leads 1..18 required. | `nwm_compact_forcing_v2.py:120-125,167-186` |
+| Historical interval | Half-open provider rows [start,stop); realization end = stop−1h and Noah end = stop. | `production_realization_v1.py:42-58`; `production_execution_recipe_v1.py:222-238` |
+| Source identity | Canonical UTC issue, exact NWM key, lead, valid time, generation and positive size must agree. Metadata is not a weather payload. | `full_period_source_queue_v1.py:64-80`; `nwm_branch_forcing_preparation_v1.py:98-112,137-185` |
+| Missing contributors | Reject unavailable/nonfinite values or incomplete lead sets; storage failures do not authorize new interpolation. | `aorc_continuous_index_v2.py:129-158`; `nwm_compact_forcing_v2.py:32-43,120-125` |
+
+The resident original `CACHE/aorc-gap-overlay-24b2918539bb78ae26449b1841391a4de2331e3c7c80824f1e84857ff137a6d9/publication/VARIABLE_UNITS.json` records APCP in kg/m², temperature in K, humidity in kg/kg, winds in m/s, pressure in Pa, and both radiation fields in W/m². Division of accumulated APCP by 3,600 yields kg/m²/s for `precip_rate`. These are inspected metadata declarations and code conversion, not a new source-value validation; its bounded SHA is recorded in the manifest.
+
+CSV order is `time, precip_rate, TMP_2maboveground, SPFH_2maboveground, UGRD_10maboveground, VGRD_10maboveground, PRES_surface, DSWRF_surface, DLWRF_surface` (`production_execution_recipe_v1.py:23-25`). NWM source variable order is `RAINRATE,T2D,Q2D,U2D,V2D,PSFC,SWDOWN,LWDOWN` (`nwm_branch_forcing_preparation_v1.py:29`). The inspected compact adapter requires already decoded physical values, finite full availability, and Float32 round-trip CSV precision. It does not itself prove the upstream file units or scaling correct; source attribute/decoder qualification must travel with a public fixture. No new independent unit-parity or radiation-timing experiment was performed.
+
+The concrete retained campaign is 2018-09-17 00Z through 2025-12-31 05Z issues, initialized at 2018-07-18 00Z; required provider history ends at 2025-12-31 23Z exclusive. `C/provenance/HISTORY_BINDING_V2.json` and the actual `inputs/watauga_vpu06/HISTORY_CSV_MANIFEST.json` record 65,375 hourly rows per catchment. These dates are an inspected campaign range, not a guarantee of every AORC/NWM year generally. The prior `HISTORY_INDEX_MANIFEST.json` stops at source 22Z and cannot supply the final provider row alone; the later v2 binding adds the exact 23Z precipitation endpoint. The preserved `parent_README.md` and recipe preparation status are earlier states and must not be used to undo this later endpoint binding.
+
+Coordinate and numeric-CF fingerprints select `earlier_numeric_cf` versus `reference_frozen`, not calendar dates (`HISTORY_BINDING_V2.json:forecast_era_profiles`). `nwm_branch_forcing_preparation_v1.spatial_support:115-134` explicitly uses raw y=3839−floor(cell/4608), x=cell%4608. The compatibility path records the profile used while explicitly declining to claim per-object grid/CF qualification (`source_publication_compatibility_v1.py:53-90`). These are not an official NWM release-transition table; upstream release labels and general supported-year bounds remain unknown here. Exact object keys/generations do not establish present retrievability, original operational delivery latency or archival completeness.
+
+## Gaps and uncertainty
+
+The frozen overlay is a separate retrospective research treatment. `aorc_gap_interpolation_research_v1.impute_event:49-112` averages same-UTC-hour nonprecipitation fields on adjacent days and chooses a coherent precipitation donor day. `open_overlay_history:185-209` expects 193 variable-hour rows and 424 catchments, with `source_recovered` false. `OverlayHistoryView.lineage_flags:174-181` carries potential inherited-state influence forward without a demonstrated expiration. Existing review evidence records the June 18, 2024 all-variable gap and November 27, 2024 20Z precipitation gap, and the following-day June donor. These are historical reported treatments, not an operationally available initialization or new imputation result.
+
+The output mask also excludes the corrupt 2021-04-15 17Z forecast issue; this is a reported historical exclusion, not a gap-fill feature. Source/catchment availability and initial-state support must be checked independently of a requested issue list. Mask counts should not be generalized into source service coverage.
+
+## Routing and author-specific coupling
+
+`shared_history_routing_service_v1.validate_modes:59-89` requires channel-only V02-structured routing with twelve 300-second routing steps per forcing hour, rejecting the unsupported waterbody/DA/diffusive/coastal/GIUH/restart options. Generic routing configurability is therefore limited. `production_realization_v1.py:60-63` fixes output selection to the expected gauge segments.
+
+The deployed contract contains private source-root bindings, fixed `/run`, `/components`, `/output`, `/routing-input` mounts, an image-specific Python path and middleware RPATH location. The original acquisition planner also binds frozen inventories and study masks by SHA. These should become explicit portable manifest inputs; a simple search-and-replace of user paths is insufficient because the bound hashes, component mounts and scientific identities must remain coherent. Public reports use aliases and do not disclose infrastructure locators.
+
+## Smallest example and actual availability
+
+The smallest existing real runtime qualification located is the 31-catchment Watauga v3 two-issue local day-custody test: origin 2021-12-01 00Z, 786 historical updates through 2022-01-02 18Z, branches at 2022-01-01 23Z and 2022-01-02 00Z, 18 hours each. `FIXTURE/scripts/shared_history_day_model_controller_v3.py:39-43,155-191` fixes those bounds, Linux mounts, four host CPUs and at most two concurrent branches. The inspected historical `C/provenance/real_local_day_ack.json` reports 36 forecast rows, two ACKs, zero parent/branch differences against its bound references and tolerance abs=1e-6/rel=1e-5. The test was not repeated.
+
+A current metadata inventory found **181 fixture files, 49 resident (906,503 bytes), and 132 dataless**. The exact contract is dataless; most forcing files and both fixture runtime binaries are dataless. No placeholder was opened. The separate bound source cache does contain the two runtime binaries, freshly hashed by this review; that does not restore the missing fixture contract or numerical inputs. The full file list, status and bounded hashes are in `MINIMAL_EXAMPLE_MANIFEST.json`.
+
+Production Watauga static evidence contains 67 resident files totaling 137,892 bytes and one missing hydrofabric member at the inspected package path. Separate full-history CSV storage contains all 31 named files with resident metadata totaling **294,905,906 bytes**; their data contents and recorded hashes were not reread. Those CSVs cover a different initialization origin and are not a drop-in reconstruction of the 2021-origin qualification. The supplied state tutorial alternative is also unavailable: a routing-only snapshot or forecast archive is not a complete land/coupler/provider checkpoint.
+
+Accordingly no complete runnable, redistributable example is claimed. Recover and seal the exact existing fixture first, establish component/data redistribution and attribution, then authorize one fresh reproduction. The manifest preserves a controller command fragment as **untested and not ready to run**, missing assets, exact expected outputs and unknown total complete-example size. No data fixture was generated or copied for publication in this investigation.

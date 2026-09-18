@@ -1,0 +1,332 @@
+{
+  "schema": "runtime-read-only-checks/v1",
+  "performed": [
+    "Stat/lstat residency and directory inventories; no symlink traversal",
+    "Read existing manifests and selected source/receipt sections",
+    "Bounded resident SHA256 identity checks; no file larger than2MiB hashed by this report script",
+    "PRIVATE_CHECKOUT git rev-parse HEAD and tracked-only status with GIT_OPTIONAL_LOCKS=0"
+  ],
+  "failed_or_stopped": [
+    {
+      "action": "python command",
+      "result": "python unavailable;used system python3 stdlib;no installation"
+    },
+    {
+      "action": "D git rev-parse HEAD",
+      "result": "Stopped at15s timeout;later stat found .git HEAD/config/index UF_DATALESS;not retried"
+    }
+  ],
+  "dataless_skipped": [
+    "Documents preserved BUILD_EXPORT.json/source_lock.json/physical_source_identity.json/REPOSITORY_IDENTITY.json and native Runtime.hpp;resident Work copies used",
+    "D/local_only/shared_history_runtime_v2/qualification01/{QUALIFICATION.json,QUALIFICATION_RECOVERY_PLAN.json,RUNTIME_CAPABILITY.json}",
+    "D/local_only/shared_history_native_prototype_v1/coupled-qualification02/QUALIFICATION.json",
+    "D/local_only/shared_history_native_prototype_v1/coupled-qualification03-pulse/{QUALIFICATION.json,PULSE_REVIEW.json}"
+  ],
+  "not_performed": [
+    "Model or project-script execution",
+    "Tests/builds/imports of project packages",
+    "Dependency or dataset downloads",
+    "Cloud access, job launch, or spending",
+    "Native binary execution or full binary/component rehash",
+    "Full Desktop current dirty-state enumeration",
+    "Original scientific file modifications",
+    "Memory updates"
+  ],
+  "new_hashes": [
+    {
+      "path": "REVIEW/SOURCE_PATH_MAP.json",
+      "bytes": 1713362,
+      "sha256": "2aef189b5c361321668cedfafc1a96c1a8a6f55ddc5ee5b201d990b7307cb968",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/Runtime.hpp",
+      "bytes": 41810,
+      "sha256": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/ChildOwnership.hpp",
+      "bytes": 1706,
+      "sha256": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/HourlyClock.hpp",
+      "bytes": 1456,
+      "sha256": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/DayCustodyBoundary.hpp",
+      "bytes": 1895,
+      "sha256": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/SwitchingProvider.hpp",
+      "bytes": 5930,
+      "sha256": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/README.md",
+      "bytes": 9273,
+      "sha256": "e9f136f43e945b3bb5a34d693b173f558c8c7119d88b58de98cc63c6341654ea",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/V2_RUNTIME_CONTRACT.md",
+      "bytes": 9603,
+      "sha256": "4e7586ac7cccb58e967e0cd4050d4fd515291b51f640ed37e547c91942c05f88",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/apply_to_ngen.py",
+      "bytes": 8818,
+      "sha256": "d684da72daec5346c3835127f78055271d848f4dfeb143425ffb5d7d6070e4ee",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/source_lock.json",
+      "bytes": 3095,
+      "sha256": "b7e3441c6603a6d7f6419d4337f1925c62deada09623efa7817a3cd7f0203887",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/include/shared_history/Runtime.hpp",
+      "bytes": 38161,
+      "sha256": "75969aea10a8b650960308b9ee9214152a98dfd8c299d2f98fed22501ac94148",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3/build01/BUILD_EXPORT.json",
+      "bytes": 2523,
+      "sha256": "5ecfed96cffddad645ff2e4a9d1b4aaea2892176798f092ac2ed2c55f42b3746",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3/day-custody-source01/SOURCE_PREPARATION.json",
+      "bytes": 449,
+      "sha256": "bc4c4978a2bb95f69a5f62821e758477003bd046c72f4cfd71e2390b53c6833b",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/REPOSITORY_IDENTITY.json",
+      "bytes": 6232,
+      "sha256": "03afa95cc9c1b37dc52171e614a1569d376c52e2eb170ea67e835c808bf4b2eb",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/CURRENT_VS_HEAD.json",
+      "bytes": 67997,
+      "sha256": "c73edde67832e24636d664fcf9d8baa11ffb69b33600f3c48cc5a65ec2ee0d22",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/checks/physical_source_identity.json",
+      "bytes": 16795,
+      "sha256": "fa333ae8929493ca671ed89bd5ba42a0bbecb52652639e6730bb547e86a146d8",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_forecast_shards_v1.py",
+      "bytes": 15949,
+      "sha256": "7bffaffbcb6b25d23c5531788722879b30f35615340e0cfa116e5f061f61a858",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_realization_v1.py",
+      "bytes": 5622,
+      "sha256": "a1a91b2e3bcf5bec890fe7a20a587aba6065210f03d34cc952e96237066a9d2e",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_antecedent_index_v1.py",
+      "bytes": 14677,
+      "sha256": "0f69c9cac8e3c549e7df831014253208bff996064ddd20d62939d06c02ccb749",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_history_binding_v2.py",
+      "bytes": 1563,
+      "sha256": "f8d79ea55ff18b9d9e9933bb17211cfc24ff2796a2289d968a3af527b483da7e",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_recovery_v2.py",
+      "bytes": 12737,
+      "sha256": "c574eca6544d496c90dda25ec4cfff2e38e49036bd145f6401e655d1abde8619",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_native_output_bridge_v1.py",
+      "bytes": 19433,
+      "sha256": "e3e882322c537a0a57632e0a7883a5b09c78af2a491a904c7c7652bf746d5229",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_gcp_day_custody_v1.py",
+      "bytes": 14725,
+      "sha256": "91743bceabc977dabf11c58f7d0751a9a88ba267cc97105e140bd87da1b71a68",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/nwm_compact_forcing_v2.py",
+      "bytes": 9433,
+      "sha256": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_gap_interpolation_research_v1.py",
+      "bytes": 11352,
+      "sha256": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+      "bytes": 19251,
+      "sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+      "bytes": 22352,
+      "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_day_shard_v1.py",
+      "bytes": 20422,
+      "sha256": "0ac38917da9633d7d58061d94f5c3a1a108f577eb0d1aadd6f6c6f102ebda448",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/source_publication_compatibility_v1.py",
+      "bytes": 8137,
+      "sha256": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/full_period_source_queue_v1.py",
+      "bytes": 18523,
+      "sha256": "37bc60ec7ef07f49c7f7755560c5f859da9d16a098b9b20da1254fb0117aa14e",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_execution_recipe_v1.py",
+      "bytes": 17480,
+      "sha256": "4d16ac790595f944f0690157306ba02efeded298bfb4b20bf12a51e17f219a94",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_native_bridge_v1.py",
+      "bytes": 7666,
+      "sha256": "65cb999ec4c621ed0472c0cb8f51284d42dd64761b397e868b16519ccbe78cc1",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_fresh_scratch_lifecycle_v1.py",
+      "bytes": 23631,
+      "sha256": "5546228535dbf3403d0aac5630f7d674ba4929ed058d18ba3fbb6f3a4064a012",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_endpoint_recovery_v1.py",
+      "bytes": 17951,
+      "sha256": "15d0a5c44c8bd3569ef19d4e9a7f0c4b78e277df054705bd7b5e9ee98e71cd45",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_gcp_day_custody_http_v1.py",
+      "bytes": 9987,
+      "sha256": "a7883dff20dae53de1cb1840316b956c947e6620a26a253cc37dbefd62809498",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_day_controller_v1.py",
+      "bytes": 21678,
+      "sha256": "b0b3151d6365eb958f534ada60b8529cbd7d7595df5e2404b324194003908d8b",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_domain_contract_v1.py",
+      "bytes": 4512,
+      "sha256": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_continuous_index_v2.py",
+      "bytes": 10013,
+      "sha256": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_routing_service_v2.py",
+      "bytes": 4954,
+      "sha256": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_history_lineage_v1.py",
+      "bytes": 1791,
+      "sha256": "35d9d8b10d3b5af33b8e262d71bd39f4321ebc519952f2b8e1c5595da4a47796",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/nwm_decoded_issue_csv_adapter_v1.py",
+      "bytes": 10664,
+      "sha256": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_history_binding_v1.py",
+      "bytes": 1599,
+      "sha256": "60b37ffd1759c84d7f46e62a4da040ccdd8fc43495ce8a0ebd77faa9153a60da",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_production_gcp_day_custody_v1.py",
+      "bytes": 11985,
+      "sha256": "8a62a18a326de78b582ece5a59caec7ab8f126eae25d539abe08662bc8641896",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/real_local_day_ack.json",
+      "bytes": 13277,
+      "sha256": "b52bc2c33d161d7ee2e37c1cfe03932af34d0f54944e498139091cf7ece1a708",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/preferred32_week.json",
+      "bytes": 18762,
+      "sha256": "f29b8ca121acc73d95b46e56aae3d41e9abd315808521ce884594151caf5a4c5",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/HOST_FINAL.json",
+      "bytes": 11615,
+      "sha256": "79a00c2eafe270c4fc83909a42456c72a320d15d69ce6d97b07e48eddbdd678d",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/INPUT_BINDINGS.json",
+      "bytes": 4181,
+      "sha256": "3c9fa0b646764087013e4f6f6e90f1398aca4c63d5808c135a2fc2082127c860",
+      "operation": "resident_bounded_read_and_hash"
+    },
+    {
+      "path": "D/local_only/shared_history_native_prototype_v1/newriver-minso-sensitivity-qualification01/QUALIFICATION.json",
+      "bytes": 3753,
+      "sha256": "e6a256559b7706a04737c01f44373b6a0ad38748b068d497ea72a2571ea38f92",
+      "operation": "resident_receipt_read_and_hash"
+    }
+  ],
+  "new_hashed_bytes": 2318780
+}

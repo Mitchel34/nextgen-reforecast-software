@@ -1,0 +1,389 @@
+{
+  "schema": "nextgen-software-benchmark-receipts/v1",
+  "new_simulations": 0,
+  "new_benchmarks": 0,
+  "root_alias": "REVIEW is the private resident HYDRA review snapshot identified in SOURCE_VERSION_MAP.json",
+  "records": [
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/preferred32_week.json",
+      "sha256": "f29b8ca121acc73d95b46e56aae3d41e9abd315808521ce884594151caf5a4c5",
+      "bytes": 18762,
+      "evidence_type": "historical_receipt_inspected_and_hashed_this_review",
+      "selected_fields": {
+        "status": "PASS_PREFERRED32_NATIVE_WEEK_AND_FINAL_FLOW_TOLERANCE",
+        "native_binary_sha256": "f4d4690c773bea1b4e552be0ccf2bcdc6947e68dc58530ed5dcdceb786f0e8fc",
+        "baseline_run_id": "shared-p5-serial-week-20260906-r2",
+        "run_id": "shared-p5-preferred-week-20260906-p0",
+        "baseline_workflow_wall_seconds": 1213,
+        "workflow_wall_seconds": 490,
+        "comparison_tolerance": {
+          "absolute": 1e-06,
+          "relative": 1e-05
+        },
+        "timing_interpretation": "Whole guest workflow: serial two-domain4vCPU baseline versus concurrent8vCPU Watauga+24vCPU NewRiver preferred. Domain wrapper seconds include bootstrap/model/cleanup, not isolated kernel timing.",
+        "concurrency_evidence_boundary": "The week passed under configured caps of3 Watauga and11 NewRiver children, but parent events observed peak outstanding counts2 and3 respectively. This is not evidence of11 simultaneously active children or linear full-period scaling.",
+        "domains": {
+          "new_river_vpu05": {
+            "allocated_vcpus": 24,
+            "baseline_model_wrapper_seconds": 842,
+            "catchments": 393,
+            "containers_absent_per_receipt": true,
+            "model_wrapper_seconds": 447,
+            "model_wrapper_speedup": 1.883668903803132,
+            "native_binary_unchanged": true,
+            "native_source_noexec_observed": true,
+            "native_week_validation": {
+              "branch_count": 168,
+              "branch_updates": 3024,
+              "domain_id": "new_river_vpu05",
+              "full_campaign_launch_performed": false,
+              "history_initializations": 1,
+              "history_updates": 929,
+              "status": "PASS_EXACT_NATIVE_WEEK_CLOCKS"
+            },
+            "private_executable_tmpfs_observed": true,
+            "routed_rows_checked": 6048,
+            "sites": {
+              "03161000": {
+                "csv_sha256": "af4956e8895282fb98abebb7ff19d2245f63ad2889b42b7ac57fc9fea85dfea5",
+                "exact_byte_match_to_routed_reducer": true,
+                "flow_max_cms": 86.71507263183594,
+                "flow_min_cms": 0.14389996230602264,
+                "hourly_issues": 168,
+                "lead_hours": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18
+                ],
+                "rows": 3024,
+                "unique_issue_lead_pairs": 3024
+              },
+              "03164000": {
+                "csv_sha256": "7e7b415b268cf9a9d51b8c701c48f543fad250fc2a99545a1c062975d5f88d0c",
+                "exact_byte_match_to_routed_reducer": true,
+                "flow_max_cms": 418.64385986328125,
+                "flow_min_cms": 2.172865867614746,
+                "hourly_issues": 168,
+                "lead_hours": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18
+                ],
+                "rows": 3024,
+                "unique_issue_lead_pairs": 3024
+              }
+            },
+            "isolation_event_validation": {
+              "isolated_dispatch_events": 168,
+              "parent_unchanged_completion_events": 168,
+              "observed_peak_outstanding_branches_from_parent_events": 3,
+              "outstanding_at_terminal": 0
+            },
+            "configured_maximum_inflight_branches": 11
+          },
+          "watauga_vpu06": {
+            "allocated_vcpus": 8,
+            "baseline_model_wrapper_seconds": 321,
+            "catchments": 31,
+            "containers_absent_per_receipt": true,
+            "model_wrapper_seconds": 226,
+            "model_wrapper_speedup": 1.420353982300885,
+            "native_binary_unchanged": true,
+            "native_source_noexec_observed": true,
+            "native_week_validation": {
+              "branch_count": 168,
+              "branch_updates": 3024,
+              "domain_id": "watauga_vpu06",
+              "full_campaign_launch_performed": false,
+              "history_initializations": 1,
+              "history_updates": 929,
+              "status": "PASS_EXACT_NATIVE_WEEK_CLOCKS"
+            },
+            "private_executable_tmpfs_observed": true,
+            "routed_rows_checked": 3024,
+            "sites": {
+              "03479000": {
+                "csv_sha256": "e0b70f3bacbd749c91b62f1fec0bddfd8d21863ca66757e975334fc71adaf6ef",
+                "exact_byte_match_to_routed_reducer": true,
+                "flow_max_cms": 105.97877502441406,
+                "flow_min_cms": 0.013355312868952751,
+                "hourly_issues": 168,
+                "lead_hours": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18
+                ],
+                "rows": 3024,
+                "unique_issue_lead_pairs": 3024
+              }
+            },
+            "isolation_event_validation": {
+              "isolated_dispatch_events": 168,
+              "parent_unchanged_completion_events": 168,
+              "observed_peak_outstanding_branches_from_parent_events": 2,
+              "outstanding_at_terminal": 0
+            },
+            "configured_maximum_inflight_branches": 3
+          }
+        },
+        "final_flow_comparison": {
+          "03161000": {
+            "baseline_csv_sha256": "3e8aeca654790dc6514c17a2de93403cd4ea032bd54acbccebc4ca3667ad31c8",
+            "first_failed_keys": [],
+            "keyed_rows": 3024,
+            "maximum_absolute_difference_cms": 1.52587890625e-05,
+            "maximum_symmetric_relative_difference": 6.304273391119879e-07,
+            "mean_absolute_difference_cms": 6.938106799251818e-09,
+            "mean_signed_difference_cms": -6.938106799251818e-09,
+            "preferred_csv_sha256": "af4956e8895282fb98abebb7ff19d2245f63ad2889b42b7ac57fc9fea85dfea5",
+            "rmse_cms": 2.963470572585438e-07,
+            "rows_exceeding_tolerance": 0,
+            "rows_numerically_identical": 3022,
+            "rows_with_nonzero_difference": 2,
+            "status": "PASS_FINAL_KEYED_FLOWS_WITHIN_TOLERANCE",
+            "whole_csv_bitwise_identity_required": false
+          },
+          "03164000": {
+            "baseline_csv_sha256": "f2632c858a6723ec3d87caa8d58244a0e42c89caad16243d0ad10611a6d5daa5",
+            "first_failed_keys": [],
+            "keyed_rows": 3024,
+            "maximum_absolute_difference_cms": 0,
+            "maximum_symmetric_relative_difference": 0,
+            "mean_absolute_difference_cms": 0,
+            "mean_signed_difference_cms": 0,
+            "preferred_csv_sha256": "7e7b415b268cf9a9d51b8c701c48f543fad250fc2a99545a1c062975d5f88d0c",
+            "rmse_cms": 0,
+            "rows_exceeding_tolerance": 0,
+            "rows_numerically_identical": 3024,
+            "rows_with_nonzero_difference": 0,
+            "status": "PASS_FINAL_KEYED_FLOWS_WITHIN_TOLERANCE",
+            "whole_csv_bitwise_identity_required": false
+          },
+          "03479000": {
+            "baseline_csv_sha256": "ca10dffe7a1db934fbdd666ed961903e478b5e65ac771fc2f98a072487e0929d",
+            "first_failed_keys": [],
+            "keyed_rows": 3024,
+            "maximum_absolute_difference_cms": 1.811981201171875e-05,
+            "maximum_symmetric_relative_difference": 1.1495561684639473e-06,
+            "mean_absolute_difference_cms": 4.509769419513682e-08,
+            "mean_signed_difference_cms": -3.989411409569796e-08,
+            "preferred_csv_sha256": "e0b70f3bacbd749c91b62f1fec0bddfd8d21863ca66757e975334fc71adaf6ef",
+            "rmse_cms": 6.659910543474107e-07,
+            "rows_exceeding_tolerance": 0,
+            "rows_numerically_identical": 2998,
+            "rows_with_nonzero_difference": 26,
+            "status": "PASS_FINAL_KEYED_FLOWS_WITHIN_TOLERANCE",
+            "whole_csv_bitwise_identity_required": false
+          }
+        }
+      },
+      "complete_source_copied": false,
+      "matches_preserved_source_map": true,
+      "selection_mapping": {
+        "/selected_fields/<field>": "/<field> in original receipt"
+      }
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/real_local_day_ack.json",
+      "sha256": "b52bc2c33d161d7ee2e37c1cfe03932af34d0f54944e498139091cf7ece1a708",
+      "bytes": 13277,
+      "evidence_type": "historical_receipt_inspected_and_hashed_this_review",
+      "selected_fields": {
+        "status": "PASS_REAL_WATAUGA_DAY_CUSTODY_V3_LOCAL_ONLY",
+        "binary_sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+        "middleware_sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+        "continuous_history_hours": 786,
+        "independent_branches": 2,
+        "forecast_rows": 36,
+        "elapsed_seconds": 10.49702043299996,
+        "tolerance": {
+          "absolute": 1e-06,
+          "relative": 1e-05
+        },
+        "max_branch_flow_difference_cms": 0.0,
+        "max_parent_qvd_absolute_difference": 0.0,
+        "output_cursor_recovery_qualified": true,
+        "portable_land_state_recovery_claim": false,
+        "ack_count": 2,
+        "peak_live_days": 1
+      },
+      "complete_source_copied": false,
+      "matches_preserved_source_map": true,
+      "selection_mapping": {
+        "/selected_fields/<field>": "/<field> in original receipt"
+      }
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/real_gcs_transport.json",
+      "sha256": "a82352df61cdfea8b10f08bb16d613ca822bdbcba550694b3a8a52a0b96eaacb",
+      "bytes": 1603,
+      "evidence_type": "historical_receipt_inspected_and_hashed_this_review",
+      "selected_fields": {
+        "status": "PASS_TWO_DAY_GCP_CUSTODY_ONLY_NO_MODEL_RUN",
+        "elapsed_seconds": 4.27561291703023,
+        "accounted_usage": {
+          "download_bytes": 92602368,
+          "objects": 2,
+          "requests": 8,
+          "upload_bytes": 8544
+        },
+        "automatic_retries": 0,
+        "verified_rows": 36,
+        "model_runs": 0
+      },
+      "complete_source_copied": false,
+      "matches_preserved_source_map": true,
+      "selection_mapping": {
+        "/selected_fields/<field>": "/<field> in original receipt"
+      }
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/HOST_FINAL.json",
+      "sha256": "79a00c2eafe270c4fc83909a42456c72a320d15d69ce6d97b07e48eddbdd678d",
+      "bytes": 11615,
+      "evidence_type": "historical_receipt_inspected_and_hashed_this_review",
+      "selected_fields": {
+        "status": "COMPLETED_TWO_DOMAINS",
+        "started_epoch": 1789086417.301846,
+        "finished_epoch": 1789245546.7874873,
+        "domain_receipts": {
+          "new_river_vpu05.FINAL.json": {
+            "elapsed_seconds": 158161.01724558198,
+            "native": {
+              "branch_model_steps": 1145052,
+              "branches": 63614,
+              "historical_model_steps": 65375,
+              "history_initializations": 1
+            },
+            "native_returncode": 0,
+            "observed_cpu_quota": {
+              "period_us": 100000,
+              "quota_us": 2400000,
+              "vcpus": 24
+            },
+            "portable_land_checkpoint": false,
+            "status": "COMPLETED_ADMITTED_SHARED_HISTORY_DOMAIN"
+          },
+          "watauga_vpu06.FINAL.json": {
+            "elapsed_seconds": 74057.98286332299,
+            "native": {
+              "branch_model_steps": 1145052,
+              "branches": 63614,
+              "historical_model_steps": 65375,
+              "history_initializations": 1
+            },
+            "native_returncode": 0,
+            "observed_cpu_quota": {
+              "period_us": 100000,
+              "quota_us": 800000,
+              "vcpus": 8
+            },
+            "portable_land_checkpoint": false,
+            "status": "COMPLETED_ADMITTED_SHARED_HISTORY_DOMAIN"
+          }
+        },
+        "weather_staging": {
+          "retained_bytes": 41170301342,
+          "expanded_bytes_checked": 216936358297,
+          "new_archive_gets": 1174,
+          "reused_completed_archives": 4480
+        }
+      },
+      "complete_source_copied": false,
+      "matches_preserved_source_map": true,
+      "selection_mapping": {
+        "/selected_fields/domain_receipts/<domain>/<field>": "/domain_receipts/<domain>/model/<field>",
+        "/selected_fields/weather_staging/<field>": "/weather_staging_state/<field>",
+        "/selected_fields/status": "/status",
+        "/selected_fields/started_epoch": "/started_epoch",
+        "/selected_fields/finished_epoch": "/finished_epoch"
+      }
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/FINAL_CLOSEOUT.json",
+      "sha256": "5f788e3372ab37d158dcfbeb5a8289018536e1d76d42975a05c0c31b56b9dbe1",
+      "bytes": 2657,
+      "evidence_type": "historical_receipt_inspected_and_hashed_this_review",
+      "selected_fields": {
+        "status": "COMPLETED_VERIFIED_OWNED_COMPUTE_REMOVED",
+        "forecast_rows": 3435156,
+        "archive_bytes": 351142901,
+        "days_per_domain": 2659,
+        "issues_per_domain": 63614,
+        "durable_archives": 5318,
+        "recorded_utc": "2026-09-12T21:10:13.616327+00:00"
+      },
+      "complete_source_copied": false,
+      "matches_preserved_source_map": true,
+      "selection_mapping": {
+        "/selected_fields/<field>": "/<field> in original receipt"
+      }
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/VERIFICATION.json",
+      "sha256": "380e6c27fd73fc865699404d0cad6f6b38b352e1a342a8103eaf846e12fce775",
+      "bytes": 1262,
+      "evidence_type": "historical_receipt_inspected_and_hashed_this_review",
+      "selected_fields": {
+        "status": "PASS_TERMINAL_RECEIPTS_AND_COMPLETE_DURABLE_INVENTORY",
+        "forecast_rows": 3435156,
+        "archive_bytes": 351142901,
+        "archives": 5318,
+        "full_archive_redownload_performed": false
+      },
+      "complete_source_copied": false,
+      "matches_preserved_source_map": true,
+      "selection_mapping": {
+        "/selected_fields/<field>": "/<field> in original receipt"
+      }
+    }
+  ],
+  "new_read_only_checks": [
+    "Six resident receipt hashes and sizes equal preserved source-map entries."
+  ]
+}

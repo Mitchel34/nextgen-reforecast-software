@@ -1,0 +1,384 @@
+{
+  "schema": "nextgen-forcing-readonly-checks/v1",
+  "performed": [
+    "Read selected resident source and historical receipt text; no imported project modules",
+    "Metadata-only fixture and named cache inventories with dataless guard",
+    "Bounded SHA256 hashes only for selected resident regular files at most 5 MiB",
+    "Compared inspected deployed source hashes with resident original project counterparts",
+    "Parsed manifests and performed file-count, byte-count and UTC interval arithmetic",
+    "Validated generated JSON and source-identity mismatch summaries; scanned four lane outputs for private absolute home paths and gs:// locators (none found)."
+  ],
+  "source_checks": [
+    {
+      "path": "C/src/nextgen_reforecast/production_execution_recipe_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 17480,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "4d16ac790595f944f0690157306ba02efeded298bfb4b20bf12a51e17f219a94",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/production_execution_recipe_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 17480,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "C/src/nextgen_reforecast/production_domain_contract_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 4512,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/production_domain_contract_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 4512,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/production_realization_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 5622,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "a1a91b2e3bcf5bec890fe7a20a587aba6065210f03d34cc952e96237066a9d2e",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/production_realization_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 5622,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "C/src/nextgen_reforecast/aorc_continuous_index_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 10013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/aorc_continuous_index_v2.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 10013,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/aorc_gap_interpolation_research_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 11352,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/aorc_gap_interpolation_research_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 11352,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/nwm_compact_forcing_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9433,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/nwm_compact_forcing_v2.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 9433,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/nwm_decoded_issue_csv_adapter_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 10664,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/nwm_decoded_issue_csv_adapter_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 10664,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 22352,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 22352,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/full_period_source_queue_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 18523,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "37bc60ec7ef07f49c7f7755560c5f859da9d16a098b9b20da1254fb0117aa14e",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/full_period_source_queue_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 18523,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "C/src/nextgen_reforecast/source_publication_compatibility_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 8137,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/source_publication_compatibility_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 8137,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 19251,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 19251,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "D/src/nextgen_reforecast/gate3_hydrofabric_prep.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 66829,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f4abb5e2c58787e89262daf980e2603864f6438becf595cca6a743b6854a49fd",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "D/src/nextgen_reforecast/gate3_hydrofabric_production_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 34734,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "84f80937d30d13420037722d84622078dd7c52b0ced417ed327ed4eb1cfa2a90",
+      "matches_recorded_hash": null
+    }
+  ],
+  "receipts": [
+    {
+      "path": "C/provenance/real_local_day_ack.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 13277,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "b52bc2c33d161d7ee2e37c1cfe03932af34d0f54944e498139091cf7ece1a708",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/HISTORY_BINDING_V2.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9017,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "55d5abd605d8def7121271ad639d80e3799db316541e171adc69321a97dffbda",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/HISTORY_INDEX_MANIFEST.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1588,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "967d8cfe44579aec8d30c4d95c3c8e3591c3452abc1d7078491906a61d0c6a0e",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/HISTORY_CSV_PREPARATION.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1304,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "da4fe15cebfc2e5e608f740705c682724f2fb891168709f259a77e9e31abf7f0",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/ENDPOINT_ACCEPTANCE.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 4349,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f3f500ae9a734511c3f537e2545be433749db9dc062e4cd61f17502d66f990ff",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "CACHE/aorc-gap-overlay-24b2918539bb78ae26449b1841391a4de2331e3c7c80824f1e84857ff137a6d9/publication/VARIABLE_UNITS.json",
+      "bytes": 203,
+      "sha256": "09ac44865bf02944a5587c558d9ffc33f1900ad9c2b6bdc0a9fa8a35bfa80498",
+      "status": "RESIDENT_BOUNDED_HASH",
+      "evidence_type": "inspected_original_metadata"
+    }
+  ],
+  "summaries": {
+    "fixture": {
+      "file_count": 181,
+      "resident_count": 49,
+      "resident_bytes": 906503,
+      "dataless_count": 132,
+      "missing_count": 0,
+      "freshly_hashed_bytes": 906503
+    },
+    "production_static": {
+      "file_count": 68,
+      "resident_count": 67,
+      "resident_bytes": 137892,
+      "dataless_count": 0,
+      "missing_count": 1,
+      "freshly_hashed_bytes": 137892
+    },
+    "production_history_metadata": {
+      "file_count": 31,
+      "resident_count": 31,
+      "resident_bytes": 294905906,
+      "dataless_count": 0,
+      "missing_count": 0,
+      "freshly_hashed_bytes": 0
+    }
+  },
+  "not_performed": [
+    "No simulation, project script execution, test run, build, install, download, remote object readback, snapshot generation, model evaluation, target-observation inspection or license determination",
+    "No data-value verification of full-period history CSVs",
+    "No content read attempted on detected dataless fixture files"
+  ],
+  "failed_accesses": [
+    "Initial requested audit path omitted core/; resolved through resident private review counterpart",
+    "VARIABLE_UNITS.json absent from queried private review evidence path; subsequently recovered from its resident original CACHE path and bounded-hashed."
+  ],
+  "limitations": [
+    "Initial SOURCE_PATH_MAP read was overbroad and output truncated; subsequent inspection used bounded selected records. No prediction or target data payload was opened.",
+    "Some source discovery is metadata/function inventory only; not every transitive source was line-reviewed.",
+    "Existing review narrative was consulted as a locator; primary code and receipts distinguish new observations from earlier conclusions."
+  ]
+}

@@ -1,0 +1,793 @@
+{
+  "schema": "reforecast-software-source-version-map/v1",
+  "investigation_utc": "2026-09-18T05:06:01.131970+00:00",
+  "scope": "Read-only source and historical receipt inspection. No model/build/test execution. No original project files changed.",
+  "aliases": {
+    "REVIEW": "Resident preserved hydra_code_review_20260917 core snapshot in active HYDRA-NextGen private checkout, review/",
+    "D": "Original Desktop NextGen_Reforecast development tree; preserved selected files at REVIEW/evidence/NextGen_Reforecast",
+    "N": "Exact custom ngen-v3-day01 source tree; preserved selected files at REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01",
+    "L": "Original generation-preparation-v1/launch-a0 deployment; preserved at REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0",
+    "C": "L/model/components",
+    "PRIVATE_CHECKOUT": "Existing HYDRA-NextGen private evidence repository; unrelated to new public software repository",
+    "REQUESTED_ROOT": "Original ChatGPT/Reforecast evidence workspace",
+    "R": "Synonym for REVIEW used by forcing/example reports"
+  },
+  "repositories": [
+    {
+      "root": "PRIVATE_CHECKOUT",
+      "current_head": "2d813c8637ebbe581a1fbe250c2fcc7c4d040684",
+      "new_check": "git rev-parse HEAD and git status --porcelain=v1 -uno with GIT_OPTIONAL_LOCKS=0",
+      "tracked_status": "clean",
+      "untracked_status": "not inventoried",
+      "meaning": "Evidence snapshot identity; not generating-engine commit"
+    },
+    {
+      "root": "D",
+      "historical_head_20260917": "76442242dcd6bec5174ec848264b1a88d126b111",
+      "historical_branch": "codex/overnight-nextgen-preparation-20260829",
+      "current_head": "unavailable",
+      "current_status": "unavailable",
+      "reason": "git rev-parse stopped at 15 seconds; HEAD/config/index subsequently found UF_DATALESS; not retried",
+      "historical_remote": "no origin recorded"
+    },
+    {
+      "root": "REQUESTED_ROOT",
+      "historical_state_20260917": "unborn master; no HEAD or origin; evidence folders untracked",
+      "current_state": "Coordinator read-only git status lists untracked organizing files/overlays/reports; git log confirms unborn master with no commits. Existing GITHUB_REPOSITORY.md redirects active work to PRIVATE_CHECKOUT. No generating-engine source identity inferred.",
+      "new_check": "GIT_OPTIONAL_LOCKS=0 git status --short; git log -1 returned no commits; organizing GITHUB_REPOSITORY.md inspected. No Git metadata writes."
+    },
+    {
+      "root": "N",
+      "historical_and_build_framework_commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+      "public_upstream": "https://github.com/CIROH-UA/ngen",
+      "historical_dirty_files": [
+        "include/core/Layer.hpp",
+        "include/forcing/CsvPerFeatureForcingProvider.hpp",
+        "src/NGen.cpp",
+        "src/core/SurfaceLayer.cpp",
+        "src/realizations/catchment/Bmi_Multi_Formulation.cpp"
+      ],
+      "historical_untracked": [
+        "include/shared_history/"
+      ],
+      "current_git_state": "not re-queried; exported source bytes newly hash-checked"
+    }
+  ],
+  "interfaces": {
+    "v1": "Serial shared-history-v1; default 1008 history hours/168 issues;18-hour branches;fork plus independent channel snapshot.",
+    "v2": "Explicit bounded resident inputs, child pool and CPU reservations, deadlines, read-only descriptor reopening, output policy, transactional commits and history-only recovery planning.",
+    "v3": "DayCustodyBoundary overlay adds held-parent drain/flush/archive/ACK; still parses shared-history-v2 TSV, not a new shared-history-v3 protocol."
+  },
+  "source_preimages_recorded": {
+    "src/NGen.cpp": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19",
+    "include/core/Layer.hpp": "e23e290ec2267eb81b5d5caf14c9b52d9e60e99f7290899484f67194427cb957",
+    "src/core/SurfaceLayer.cpp": "317e3fcfd4e14bdd930c2bfe97502988270e7c1db10111ee95e3dda343b15613",
+    "src/realizations/catchment/Bmi_Multi_Formulation.cpp": "4a08781d0c72f723852663b5ce4bea3e22df287b8a418c9813173f9c0cbcfa2b",
+    "include/forcing/CsvPerFeatureForcingProvider.hpp": "d714746833198eb9ddd64284ed98a7cf6c184d02416916e7413a698db9e96ff2"
+  },
+  "required_build_options_recorded": {
+    "NGEN_WITH_MPI": false,
+    "NGEN_WITH_PYTHON": false,
+    "NGEN_WITH_ROUTING": false,
+    "NGEN_WITH_BMI_C": true,
+    "NGEN_WITH_BMI_FORTRAN": true,
+    "NGEN_WITH_UDUNITS": true
+  },
+  "build": {
+    "framework_commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+    "runtime_image": "awiciroh/ciroh-ngen-image@sha256:2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+    "source_header_sha256": {
+      "include/shared_history/ChildOwnership.hpp": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0",
+      "include/shared_history/DayCustodyBoundary.hpp": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405",
+      "include/shared_history/HourlyClock.hpp": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8",
+      "include/shared_history/Runtime.hpp": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25",
+      "include/shared_history/SwitchingProvider.hpp": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4"
+    },
+    "build_receipt_sha256": "932193ac1481273b565b41a0969bfe3a39bee0953698766b6fb2c2110088d40d",
+    "native_binary": {
+      "path": "bin/ngen-shared",
+      "sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+      "bytes": 3813528
+    },
+    "fortran_bmi_interface": {
+      "path": "lib/libiso_c_bmi.so",
+      "sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+      "bytes": 74504,
+      "recompiled_same_pinned_source": true,
+      "numerical_hydrologic_model": false
+    },
+    "dt_rpath": "/work/ngen-v3-day01/extern/iso_c_fortran_bmi/cmake_build",
+    "dynamic_resolution_required": "Bind the exact exported middleware for the next qualification; do not silently use the old image alias.",
+    "full_runtime_synthetic_receipt_sha256": "6893102d19d1fa6671b5638156aa90d353c8587b720dd0d80159490ddb817746"
+  },
+  "build_limit": "BUILD_EXPORT inspected; detailed BUILD_RECEIPT and binaries not newly read/rebuilt; model component source-to-library attestation unresolved.",
+  "routing": {
+    "repository": "https://github.com/CIROH-UA/t-route",
+    "commit": "533fbd98362efdafae62392308727de4f0d4cc20",
+    "revision_evidence": "root_read_of_exact_image_/ngen/troute_url",
+    "service_implementation": "src/nextgen_reforecast/shared_history_routing_service_v1.py",
+    "protocol": "newline_tsv_ready_advance_snapshot_restore_stop",
+    "lateral_csv_header": [
+      "nexus_id",
+      "flow_cms"
+    ],
+    "routing_state_proof_required": "actual_uninterrupted_vs_hourly_split_and_fresh_process_restore"
+  },
+  "component_profile": {
+    "platform": "linux/arm64",
+    "libraries": [
+      "libslothmodel.so",
+      "libsurfacebmi.so",
+      "libcfebmi.so.1.0.0"
+    ],
+    "source_attribution_limit": "NGEN_SUBMODULE_GITLINK_AND_CONTAINER_RECIPE_NOT_DIRECT_LIBRARY_ATTESTATION",
+    "direct_library_attestation": false
+  },
+  "known_version_mismatches": [
+    {
+      "item": "Runtime.hpp",
+      "desktop_v2_export_sha256": "75969aea10a8b650960308b9ee9214152a98dfd8c299d2f98fed22501ac94148",
+      "deployed_v3_sha256": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25"
+    },
+    {
+      "item": "native executable",
+      "preferred32_week_v2_sha256": "f4d4690c773bea1b4e552be0ccf2bcdc6947e68dc58530ed5dcdceb786f0e8fc",
+      "v3_day_custody_and_production_sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132"
+    },
+    {
+      "item": "deployed vs Desktop __init__.py",
+      "identical": false
+    }
+  ],
+  "historical_deployed_to_desktop_module_comparison": [
+    {
+      "module": "__init__.py",
+      "deployed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "desktop_sha256_recorded_20260917": "f96fc32fe70319f1ef1aa4cbef6d8eefd9fb9710db63114a2b502f2876173250",
+      "historically_identical": false,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "aorc_antecedent_index_v1.py",
+      "deployed_sha256": "0f69c9cac8e3c549e7df831014253208bff996064ddd20d62939d06c02ccb749",
+      "desktop_sha256_recorded_20260917": "0f69c9cac8e3c549e7df831014253208bff996064ddd20d62939d06c02ccb749",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "aorc_continuous_index_v2.py",
+      "deployed_sha256": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+      "desktop_sha256_recorded_20260917": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "aorc_endpoint_recovery_v1.py",
+      "deployed_sha256": "15d0a5c44c8bd3569ef19d4e9a7f0c4b78e277df054705bd7b5e9ee98e71cd45",
+      "desktop_sha256_recorded_20260917": "15d0a5c44c8bd3569ef19d4e9a7f0c4b78e277df054705bd7b5e9ee98e71cd45",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "aorc_gap_interpolation_research_v1.py",
+      "deployed_sha256": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+      "desktop_sha256_recorded_20260917": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "full_period_source_queue_v1.py",
+      "deployed_sha256": "37bc60ec7ef07f49c7f7755560c5f859da9d16a098b9b20da1254fb0117aa14e",
+      "desktop_sha256_recorded_20260917": "37bc60ec7ef07f49c7f7755560c5f859da9d16a098b9b20da1254fb0117aa14e",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "nwm_branch_forcing_preparation_v1.py",
+      "deployed_sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "desktop_sha256_recorded_20260917": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "nwm_compact_forcing_v2.py",
+      "deployed_sha256": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+      "desktop_sha256_recorded_20260917": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "nwm_decoded_issue_csv_adapter_v1.py",
+      "deployed_sha256": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+      "desktop_sha256_recorded_20260917": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_day_controller_v1.py",
+      "deployed_sha256": "b0b3151d6365eb958f534ada60b8529cbd7d7595df5e2404b324194003908d8b",
+      "desktop_sha256_recorded_20260917": "b0b3151d6365eb958f534ada60b8529cbd7d7595df5e2404b324194003908d8b",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_domain_contract_v1.py",
+      "deployed_sha256": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+      "desktop_sha256_recorded_20260917": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_execution_recipe_v1.py",
+      "deployed_sha256": "4d16ac790595f944f0690157306ba02efeded298bfb4b20bf12a51e17f219a94",
+      "desktop_sha256_recorded_20260917": "4d16ac790595f944f0690157306ba02efeded298bfb4b20bf12a51e17f219a94",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_forecast_shards_v1.py",
+      "deployed_sha256": "7bffaffbcb6b25d23c5531788722879b30f35615340e0cfa116e5f061f61a858",
+      "desktop_sha256_recorded_20260917": "7bffaffbcb6b25d23c5531788722879b30f35615340e0cfa116e5f061f61a858",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_history_binding_v1.py",
+      "deployed_sha256": "60b37ffd1759c84d7f46e62a4da040ccdd8fc43495ce8a0ebd77faa9153a60da",
+      "desktop_sha256_recorded_20260917": "60b37ffd1759c84d7f46e62a4da040ccdd8fc43495ce8a0ebd77faa9153a60da",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_history_binding_v2.py",
+      "deployed_sha256": "f8d79ea55ff18b9d9e9933bb17211cfc24ff2796a2289d968a3af527b483da7e",
+      "desktop_sha256_recorded_20260917": "f8d79ea55ff18b9d9e9933bb17211cfc24ff2796a2289d968a3af527b483da7e",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_history_lineage_v1.py",
+      "deployed_sha256": "35d9d8b10d3b5af33b8e262d71bd39f4321ebc519952f2b8e1c5595da4a47796",
+      "desktop_sha256_recorded_20260917": "35d9d8b10d3b5af33b8e262d71bd39f4321ebc519952f2b8e1c5595da4a47796",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_native_bridge_v1.py",
+      "deployed_sha256": "65cb999ec4c621ed0472c0cb8f51284d42dd64761b397e868b16519ccbe78cc1",
+      "desktop_sha256_recorded_20260917": "65cb999ec4c621ed0472c0cb8f51284d42dd64761b397e868b16519ccbe78cc1",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "production_realization_v1.py",
+      "deployed_sha256": "a1a91b2e3bcf5bec890fe7a20a587aba6065210f03d34cc952e96237066a9d2e",
+      "desktop_sha256_recorded_20260917": "a1a91b2e3bcf5bec890fe7a20a587aba6065210f03d34cc952e96237066a9d2e",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_fresh_scratch_lifecycle_v1.py",
+      "deployed_sha256": "5546228535dbf3403d0aac5630f7d674ba4929ed058d18ba3fbb6f3a4064a012",
+      "desktop_sha256_recorded_20260917": "5546228535dbf3403d0aac5630f7d674ba4929ed058d18ba3fbb6f3a4064a012",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_gcp_day_custody_http_v1.py",
+      "deployed_sha256": "a7883dff20dae53de1cb1840316b956c947e6620a26a253cc37dbefd62809498",
+      "desktop_sha256_recorded_20260917": "a7883dff20dae53de1cb1840316b956c947e6620a26a253cc37dbefd62809498",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_gcp_day_custody_v1.py",
+      "deployed_sha256": "91743bceabc977dabf11c58f7d0751a9a88ba267cc97105e140bd87da1b71a68",
+      "desktop_sha256_recorded_20260917": "91743bceabc977dabf11c58f7d0751a9a88ba267cc97105e140bd87da1b71a68",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_native_output_bridge_v1.py",
+      "deployed_sha256": "e3e882322c537a0a57632e0a7883a5b09c78af2a491a904c7c7652bf746d5229",
+      "desktop_sha256_recorded_20260917": "e3e882322c537a0a57632e0a7883a5b09c78af2a491a904c7c7652bf746d5229",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_production_gcp_day_custody_v1.py",
+      "deployed_sha256": "8a62a18a326de78b582ece5a59caec7ab8f126eae25d539abe08662bc8641896",
+      "desktop_sha256_recorded_20260917": "8a62a18a326de78b582ece5a59caec7ab8f126eae25d539abe08662bc8641896",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_recovery_v2.py",
+      "deployed_sha256": "c574eca6544d496c90dda25ec4cfff2e38e49036bd145f6401e655d1abde8619",
+      "desktop_sha256_recorded_20260917": "c574eca6544d496c90dda25ec4cfff2e38e49036bd145f6401e655d1abde8619",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_routing_service_v1.py",
+      "deployed_sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "desktop_sha256_recorded_20260917": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "shared_history_routing_service_v2.py",
+      "deployed_sha256": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "desktop_sha256_recorded_20260917": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    },
+    {
+      "module": "source_publication_compatibility_v1.py",
+      "deployed_sha256": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+      "desktop_sha256_recorded_20260917": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+      "historically_identical": true,
+      "desktop_live_rehash_performed": false
+    }
+  ],
+  "historical_selected_source_changes_vs_head": [
+    {
+      "source": "N/include/core/Layer.hpp",
+      "status": "DIFFERS_FROM_HEAD",
+      "current_sha256": "1de9c28bdcf77ca72d4592c8c2ec581d793a06f92ed063556bf519d6611642e2",
+      "HEAD_blob_sha256": "e23e290ec2267eb81b5d5caf14c9b52d9e60e99f7290899484f67194427cb957"
+    },
+    {
+      "source": "N/include/forcing/CsvPerFeatureForcingProvider.hpp",
+      "status": "DIFFERS_FROM_HEAD",
+      "current_sha256": "88624480f3379393a414d52d586b41a017a3c85aa219e3ff94d1acdb3b259467",
+      "HEAD_blob_sha256": "d714746833198eb9ddd64284ed98a7cf6c184d02416916e7413a698db9e96ff2"
+    },
+    {
+      "source": "N/include/shared_history/ChildOwnership.hpp",
+      "status": "NO_HEAD_BLOB",
+      "current_sha256": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0"
+    },
+    {
+      "source": "N/include/shared_history/DayCustodyBoundary.hpp",
+      "status": "NO_HEAD_BLOB",
+      "current_sha256": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405"
+    },
+    {
+      "source": "N/include/shared_history/HourlyClock.hpp",
+      "status": "NO_HEAD_BLOB",
+      "current_sha256": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8"
+    },
+    {
+      "source": "N/include/shared_history/Runtime.hpp",
+      "status": "NO_HEAD_BLOB",
+      "current_sha256": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25"
+    },
+    {
+      "source": "N/include/shared_history/SwitchingProvider.hpp",
+      "status": "NO_HEAD_BLOB",
+      "current_sha256": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4"
+    },
+    {
+      "source": "N/src/NGen.cpp",
+      "status": "DIFFERS_FROM_HEAD",
+      "current_sha256": "0e7ad5c0c9094e1fd8809d57c8d03e237336e96a2c1a77d73eceed588025ce81",
+      "HEAD_blob_sha256": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19"
+    },
+    {
+      "source": "N/src/core/SurfaceLayer.cpp",
+      "status": "DIFFERS_FROM_HEAD",
+      "current_sha256": "9c650dcedabd5e502e94185ef0074ee8092c8393dd3898cffba6c6c47edc3731",
+      "HEAD_blob_sha256": "317e3fcfd4e14bdd930c2bfe97502988270e7c1db10111ee95e3dda343b15613"
+    },
+    {
+      "source": "N/src/realizations/catchment/Bmi_Multi_Formulation.cpp",
+      "status": "DIFFERS_FROM_HEAD",
+      "current_sha256": "e62b3aab14da26590e6b56be177974f8a6f33faed5eac562f88e7b183bb747ed",
+      "HEAD_blob_sha256": "4a08781d0c72f723852663b5ce4bea3e22df287b8a418c9813173f9c0cbcfa2b"
+    },
+    {
+      "source": "D/local_only/gate2_execution_freeze/completed/gate2-three-site-execution-freeze-20180917-20251231-v1/inputs/source/datastream/ngen_configs_gen.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/apply_to_ngen.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/include/shared_history/ChildOwnership.hpp",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/include/shared_history/HourlyClock.hpp",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/include/shared_history/Runtime.hpp",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/inspect_newriver_land_inputs.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/prepare_newriver_archived_nwm_minso_fixture.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/prepare_newriver_fixture.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/tests/protocol_unit.cpp",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/tests/runtime_fixture.cpp",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/tests/simulation_clock_regression.cpp",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/tests/test_native_driver.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/tests/test_newriver_archived_fixture.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/tests/test_newriver_fixture.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/native/shared_history_driver/tests/test_runtime_process_v2.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/scripts/seal_shared_history_build_v2.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/src/nextgen_reforecast/gate2_execution_freeze.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    },
+    {
+      "source": "D/src/nextgen_reforecast/gate3_nextgen_noahowp_centroid_longitude_correction_v1.py",
+      "status": "HEAD_READ_STOPPED_AT_3_SECONDS"
+    }
+  ],
+  "new_resident_hash_inventory": [
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/Runtime.hpp",
+      "bytes": 41810,
+      "sha256": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/ChildOwnership.hpp",
+      "bytes": 1706,
+      "sha256": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/HourlyClock.hpp",
+      "bytes": 1456,
+      "sha256": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/DayCustodyBoundary.hpp",
+      "bytes": 1895,
+      "sha256": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/include/shared_history/SwitchingProvider.hpp",
+      "bytes": 5930,
+      "sha256": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/README.md",
+      "bytes": 9273,
+      "sha256": "e9f136f43e945b3bb5a34d693b173f558c8c7119d88b58de98cc63c6341654ea",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/V2_RUNTIME_CONTRACT.md",
+      "bytes": 9603,
+      "sha256": "4e7586ac7cccb58e967e0cd4050d4fd515291b51f640ed37e547c91942c05f88",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/apply_to_ngen.py",
+      "bytes": 8818,
+      "sha256": "d684da72daec5346c3835127f78055271d848f4dfeb143425ffb5d7d6070e4ee",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/source_lock.json",
+      "bytes": 3095,
+      "sha256": "b7e3441c6603a6d7f6419d4337f1925c62deada09623efa7817a3cd7f0203887",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/native/shared_history_driver/include/shared_history/Runtime.hpp",
+      "bytes": 38161,
+      "sha256": "75969aea10a8b650960308b9ee9214152a98dfd8c299d2f98fed22501ac94148",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3/build01/BUILD_EXPORT.json",
+      "bytes": 2523,
+      "sha256": "5ecfed96cffddad645ff2e4a9d1b4aaea2892176798f092ac2ed2c55f42b3746",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3/day-custody-source01/SOURCE_PREPARATION.json",
+      "bytes": 449,
+      "sha256": "bc4c4978a2bb95f69a5f62821e758477003bd046c72f4cfd71e2390b53c6833b",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/REPOSITORY_IDENTITY.json",
+      "bytes": 6232,
+      "sha256": "03afa95cc9c1b37dc52171e614a1569d376c52e2eb170ea67e835c808bf4b2eb",
+      "matches_export_manifest": null,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/CURRENT_VS_HEAD.json",
+      "bytes": 67997,
+      "sha256": "c73edde67832e24636d664fcf9d8baa11ffb69b33600f3c48cc5a65ec2ee0d22",
+      "matches_export_manifest": null,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/checks/physical_source_identity.json",
+      "bytes": 16795,
+      "sha256": "fa333ae8929493ca671ed89bd5ba42a0bbecb52652639e6730bb547e86a146d8",
+      "matches_export_manifest": null,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_forecast_shards_v1.py",
+      "bytes": 15949,
+      "sha256": "7bffaffbcb6b25d23c5531788722879b30f35615340e0cfa116e5f061f61a858",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_realization_v1.py",
+      "bytes": 5622,
+      "sha256": "a1a91b2e3bcf5bec890fe7a20a587aba6065210f03d34cc952e96237066a9d2e",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_antecedent_index_v1.py",
+      "bytes": 14677,
+      "sha256": "0f69c9cac8e3c549e7df831014253208bff996064ddd20d62939d06c02ccb749",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_history_binding_v2.py",
+      "bytes": 1563,
+      "sha256": "f8d79ea55ff18b9d9e9933bb17211cfc24ff2796a2289d968a3af527b483da7e",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_recovery_v2.py",
+      "bytes": 12737,
+      "sha256": "c574eca6544d496c90dda25ec4cfff2e38e49036bd145f6401e655d1abde8619",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_native_output_bridge_v1.py",
+      "bytes": 19433,
+      "sha256": "e3e882322c537a0a57632e0a7883a5b09c78af2a491a904c7c7652bf746d5229",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_gcp_day_custody_v1.py",
+      "bytes": 14725,
+      "sha256": "91743bceabc977dabf11c58f7d0751a9a88ba267cc97105e140bd87da1b71a68",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/nwm_compact_forcing_v2.py",
+      "bytes": 9433,
+      "sha256": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_gap_interpolation_research_v1.py",
+      "bytes": 11352,
+      "sha256": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+      "bytes": 19251,
+      "sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+      "bytes": 22352,
+      "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_day_shard_v1.py",
+      "bytes": 20422,
+      "sha256": "0ac38917da9633d7d58061d94f5c3a1a108f577eb0d1aadd6f6c6f102ebda448",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/source_publication_compatibility_v1.py",
+      "bytes": 8137,
+      "sha256": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/full_period_source_queue_v1.py",
+      "bytes": 18523,
+      "sha256": "37bc60ec7ef07f49c7f7755560c5f859da9d16a098b9b20da1254fb0117aa14e",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_execution_recipe_v1.py",
+      "bytes": 17480,
+      "sha256": "4d16ac790595f944f0690157306ba02efeded298bfb4b20bf12a51e17f219a94",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_native_bridge_v1.py",
+      "bytes": 7666,
+      "sha256": "65cb999ec4c621ed0472c0cb8f51284d42dd64761b397e868b16519ccbe78cc1",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_fresh_scratch_lifecycle_v1.py",
+      "bytes": 23631,
+      "sha256": "5546228535dbf3403d0aac5630f7d674ba4929ed058d18ba3fbb6f3a4064a012",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_endpoint_recovery_v1.py",
+      "bytes": 17951,
+      "sha256": "15d0a5c44c8bd3569ef19d4e9a7f0c4b78e277df054705bd7b5e9ee98e71cd45",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_gcp_day_custody_http_v1.py",
+      "bytes": 9987,
+      "sha256": "a7883dff20dae53de1cb1840316b956c947e6620a26a253cc37dbefd62809498",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_day_controller_v1.py",
+      "bytes": 21678,
+      "sha256": "b0b3151d6365eb958f534ada60b8529cbd7d7595df5e2404b324194003908d8b",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_domain_contract_v1.py",
+      "bytes": 4512,
+      "sha256": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/aorc_continuous_index_v2.py",
+      "bytes": 10013,
+      "sha256": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_routing_service_v2.py",
+      "bytes": 4954,
+      "sha256": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_history_lineage_v1.py",
+      "bytes": 1791,
+      "sha256": "35d9d8b10d3b5af33b8e262d71bd39f4321ebc519952f2b8e1c5595da4a47796",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/nwm_decoded_issue_csv_adapter_v1.py",
+      "bytes": 10664,
+      "sha256": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/production_history_binding_v1.py",
+      "bytes": 1599,
+      "sha256": "60b37ffd1759c84d7f46e62a4da040ccdd8fc43495ce8a0ebd77faa9153a60da",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/src/nextgen_reforecast/shared_history_production_gcp_day_custody_v1.py",
+      "bytes": 11985,
+      "sha256": "8a62a18a326de78b582ece5a59caec7ab8f126eae25d539abe08662bc8641896",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/real_local_day_ack.json",
+      "bytes": 13277,
+      "sha256": "b52bc2c33d161d7ee2e37c1cfe03932af34d0f54944e498139091cf7ece1a708",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/preferred32_week.json",
+      "bytes": 18762,
+      "sha256": "f29b8ca121acc73d95b46e56aae3d41e9abd315808521ce884594151caf5a4c5",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/HOST_FINAL.json",
+      "bytes": 11615,
+      "sha256": "79a00c2eafe270c4fc83909a42456c72a320d15d69ce6d97b07e48eddbdd678d",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    },
+    {
+      "path": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/INPUT_BINDINGS.json",
+      "bytes": 4181,
+      "sha256": "3c9fa0b646764087013e4f6f6e90f1398aca4c63d5808c135a2fc2082127c860",
+      "matches_export_manifest": true,
+      "content_review": "key source sections or receipt fields inspected; remaining modules hash inventory only"
+    }
+  ]
+}

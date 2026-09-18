@@ -1,0 +1,308 @@
+{
+  "schema": "reforecast-packaging-readonly-checks/v1",
+  "checked_utc": "2026-09-18T05:07:23.202195+00:00",
+  "logical_path_roots": {
+    "HYDRA": "read-only resident HYDRA-NextGen checkout",
+    "source_map": "Reforecast/reports/hydra_code_review_20260917/core/SOURCE_PATH_MAP.json"
+  },
+  "local_git": {
+    "head": "2d813c8637ebbe581a1fbe250c2fcc7c4d040684",
+    "status_short": "empty"
+  },
+  "local_read_hashes": [
+    {
+      "path": "HYDRA/LICENSE_STATUS.md",
+      "bytes": 581,
+      "sha256": "9b5b22437c350acde2ee05d301ce24282ddeb6ced75d545262d2f48ca227c868",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/THIRD_PARTY_NOTICES.md",
+      "bytes": 1383,
+      "sha256": "9f4724b65688f585509c61b843251f5c2d6b2bf346acc5647b90918cb5f2b333",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/NextGen_Reforecast/native/shared_history_driver/source_lock.json",
+      "bytes": 3095,
+      "sha256": "b7e3441c6603a6d7f6419d4337f1925c62deada09623efa7817a3cd7f0203887",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3/build01/BUILD_EXPORT.json",
+      "bytes": 2523,
+      "sha256": "5ecfed96cffddad645ff2e4a9d1b4aaea2892176798f092ac2ed2c55f42b3746",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3/build01/build/CMakeCache.txt",
+      "bytes": 25926,
+      "sha256": "88060947d4ecb0fd522833680ce1258db9f96ea566b0e4a44d8e81098b6be67d",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3/day-custody-source01/SOURCE_PREPARATION.json",
+      "bytes": 449,
+      "sha256": "bc4c4978a2bb95f69a5f62821e758477003bd046c72f4cfd71e2390b53c6833b",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/.gitmodules",
+      "bytes": 1875,
+      "sha256": "677e8c75f8e2b0de91775179006544cc47818514b64282231ad9c30abc73b018",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/CMakeLists.txt",
+      "bytes": 20773,
+      "sha256": "a724f8586dfdad9036ddbd32a80df2f09396e2b6a7013aa27207782f4cfdebbf",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "status": "resident_read_only"
+    },
+    {
+      "path": "HYDRA/review/evidence/nextgen-shared-build.jUE2nu/ngen-v3-day01/TERMS.md",
+      "bytes": 1516,
+      "sha256": "73168d1d8bf8b8aa67f4dcc835f719a3b995b98ce20db5f6ba4fe5d1a6c91f4c",
+      "status": "resident_read_only"
+    }
+  ],
+  "public_repository_pins": [
+    {
+      "repository": "NOAA-OWP/ngen",
+      "default_branch": "master",
+      "commit": "b43d2766cf98af3c0b3ea01772c24f93709ba101",
+      "commit_utc": "2026-09-03T13:26:02Z",
+      "license_metadata_observation": "Apache-2.0",
+      "commit_api": "https://api.github.com/repos/NOAA-OWP/ngen/commits/master",
+      "tree_api": "https://api.github.com/repos/NOAA-OWP/ngen/git/trees/b43d2766cf98af3c0b3ea01772c24f93709ba101?recursive=1",
+      "tree_truncated": false,
+      "status": "metadata_and_selected_sources_inspected_not_executed"
+    },
+    {
+      "repository": "CIROH-UA/ngen",
+      "default_branch": "ngiab",
+      "commit": "61c1400792a783322671eaf7aef208c1ffd22e92",
+      "commit_utc": "2026-08-25T16:56:42Z",
+      "license_metadata_observation": "Apache-2.0",
+      "commit_api": "https://api.github.com/repos/CIROH-UA/ngen/commits/ngiab",
+      "tree_api": "https://api.github.com/repos/CIROH-UA/ngen/git/trees/61c1400792a783322671eaf7aef208c1ffd22e92?recursive=1",
+      "tree_truncated": false,
+      "status": "metadata_and_selected_sources_inspected_not_executed"
+    },
+    {
+      "repository": "CIROH-UA/NGIAB-CloudInfra",
+      "default_branch": "main",
+      "commit": "321168fa9d8a146255bab4b47d0777b05b258ff2",
+      "commit_utc": "2026-09-08T21:08:10Z",
+      "license_metadata_observation": "MIT",
+      "commit_api": "https://api.github.com/repos/CIROH-UA/NGIAB-CloudInfra/commits/main",
+      "tree_api": "https://api.github.com/repos/CIROH-UA/NGIAB-CloudInfra/git/trees/321168fa9d8a146255bab4b47d0777b05b258ff2?recursive=1",
+      "tree_truncated": false,
+      "status": "metadata_and_selected_sources_inspected_not_executed"
+    },
+    {
+      "repository": "CIROH-UA/NGIAB_data_preprocess",
+      "default_branch": "main",
+      "commit": "8bc14d8ac744ffa03e14c4e81ca94c73ced301b6",
+      "commit_utc": "2026-08-25T16:59:00Z",
+      "license_metadata_observation": "MIT",
+      "commit_api": "https://api.github.com/repos/CIROH-UA/NGIAB_data_preprocess/commits/main",
+      "tree_api": "https://api.github.com/repos/CIROH-UA/NGIAB_data_preprocess/git/trees/8bc14d8ac744ffa03e14c4e81ca94c73ced301b6?recursive=1",
+      "tree_truncated": false,
+      "status": "metadata_and_selected_sources_inspected_not_executed"
+    },
+    {
+      "repository": "CIROH-UA/datastreamcli",
+      "default_branch": "main",
+      "commit": "2bf2a6e6a5c2323684ebc7d40c8dac8a0081d97c",
+      "commit_utc": "2026-09-01T22:26:56Z",
+      "license_metadata_observation": "GPL-3.0; README specifies or-later",
+      "commit_api": "https://api.github.com/repos/CIROH-UA/datastreamcli/commits/main",
+      "tree_api": "https://api.github.com/repos/CIROH-UA/datastreamcli/git/trees/2bf2a6e6a5c2323684ebc7d40c8dac8a0081d97c?recursive=1",
+      "tree_truncated": false,
+      "status": "metadata_and_selected_sources_inspected_not_executed"
+    },
+    {
+      "repository": "CIROH-UA/forcingprocessor",
+      "default_branch": "main",
+      "commit": "6bd50d734bbe03b77c6f4bebdd1f9740a836d985",
+      "commit_utc": "2026-09-15T15:07:09Z",
+      "license_metadata_observation": "MIT root; GPL document attributed to hfsubset in CREDITS",
+      "commit_api": "https://api.github.com/repos/CIROH-UA/forcingprocessor/commits/main",
+      "tree_api": "https://api.github.com/repos/CIROH-UA/forcingprocessor/git/trees/6bd50d734bbe03b77c6f4bebdd1f9740a836d985?recursive=1",
+      "tree_truncated": false,
+      "status": "metadata_and_selected_sources_inspected_not_executed"
+    }
+  ],
+  "public_source_hashes": [
+    {
+      "repository": "CIROH-UA/ngen",
+      "commit": "61c1400792a783322671eaf7aef208c1ffd22e92",
+      "path": "src/NGen.cpp",
+      "url": "https://github.com/CIROH-UA/ngen/blob/61c1400792a783322671eaf7aef208c1ffd22e92/src/NGen.cpp",
+      "bytes": 25682,
+      "sha256": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19"
+    },
+    {
+      "repository": "NOAA-OWP/ngen",
+      "commit": "b43d2766cf98af3c0b3ea01772c24f93709ba101",
+      "path": "src/NGen.cpp",
+      "url": "https://github.com/NOAA-OWP/ngen/blob/b43d2766cf98af3c0b3ea01772c24f93709ba101/src/NGen.cpp",
+      "bytes": 31362,
+      "sha256": "31431a5662aaa9e1e4224d57d11f8d170881c9afdae111efc2fc24fd651e96e8"
+    },
+    {
+      "repository": "CIROH-UA/datastreamcli",
+      "commit": "2bf2a6e6a5c2323684ebc7d40c8dac8a0081d97c",
+      "path": "scripts/datastream",
+      "url": "https://github.com/CIROH-UA/datastreamcli/blob/2bf2a6e6a5c2323684ebc7d40c8dac8a0081d97c/scripts/datastream",
+      "bytes": 32589,
+      "sha256": "0c177f32e1c7689a4758de2d987444898fb1e4965e06bcb9e29c0211febd0ebb"
+    },
+    {
+      "repository": "CIROH-UA/datastreamcli",
+      "commit": "2bf2a6e6a5c2323684ebc7d40c8dac8a0081d97c",
+      "path": "src/datastreamcli/configure_datastream.py",
+      "url": "https://github.com/CIROH-UA/datastreamcli/blob/2bf2a6e6a5c2323684ebc7d40c8dac8a0081d97c/src/datastreamcli/configure_datastream.py",
+      "bytes": 20889,
+      "sha256": "04cc00d6a3a03232fe196a99de95b331c2c871621c45201d083f2be1d9695ea3"
+    },
+    {
+      "repository": "CIROH-UA/forcingprocessor",
+      "commit": "6bd50d734bbe03b77c6f4bebdd1f9740a836d985",
+      "path": "src/forcingprocessor/troute_restart_tools.py",
+      "url": "https://github.com/CIROH-UA/forcingprocessor/blob/6bd50d734bbe03b77c6f4bebdd1f9740a836d985/src/forcingprocessor/troute_restart_tools.py",
+      "bytes": 8602,
+      "sha256": "528aa8069ca723554143a266586ab51c074d673ecf22a95f6f5c25fc0cec4061"
+    },
+    {
+      "repository": "CIROH-UA/forcingprocessor",
+      "commit": "6bd50d734bbe03b77c6f4bebdd1f9740a836d985",
+      "path": "pyproject.toml",
+      "url": "https://github.com/CIROH-UA/forcingprocessor/blob/6bd50d734bbe03b77c6f4bebdd1f9740a836d985/pyproject.toml",
+      "bytes": 1044,
+      "sha256": "1bbf636c4bae9e3bc1bd9922daa47c37b4349748bb7bbbfcc8c1fbed0182177f"
+    },
+    {
+      "repository": "CIROH-UA/forcingprocessor",
+      "commit": "6bd50d734bbe03b77c6f4bebdd1f9740a836d985",
+      "path": "LICENSE",
+      "url": "https://github.com/CIROH-UA/forcingprocessor/blob/6bd50d734bbe03b77c6f4bebdd1f9740a836d985/LICENSE",
+      "bytes": 1065,
+      "sha256": "bfa301997a45d32d81acc089f0de035bc8619d4d3b3f08d76d9f13a44230551c"
+    },
+    {
+      "repository": "CIROH-UA/forcingprocessor",
+      "commit": "6bd50d734bbe03b77c6f4bebdd1f9740a836d985",
+      "path": "LICENSE.md",
+      "url": "https://github.com/CIROH-UA/forcingprocessor/blob/6bd50d734bbe03b77c6f4bebdd1f9740a836d985/LICENSE.md",
+      "bytes": 34903,
+      "sha256": "831e92808eb553250066261a1387a9323cbf300d4559a41f2c71fd3712bdb44a"
+    },
+    {
+      "repository": "CIROH-UA/forcingprocessor",
+      "commit": "6bd50d734bbe03b77c6f4bebdd1f9740a836d985",
+      "path": "CREDITS.md",
+      "url": "https://github.com/CIROH-UA/forcingprocessor/blob/6bd50d734bbe03b77c6f4bebdd1f9740a836d985/CREDITS.md",
+      "bytes": 953,
+      "sha256": "de60b85cac9fc28b4e9a8a65ff0bc76eeadaf5ae8bce98caafdf07732039eef1"
+    },
+    {
+      "repository": "CIROH-UA/NGIAB_data_preprocess",
+      "commit": "8bc14d8ac744ffa03e14c4e81ca94c73ced301b6",
+      "path": "pyproject.toml",
+      "url": "https://github.com/CIROH-UA/NGIAB_data_preprocess/blob/8bc14d8ac744ffa03e14c4e81ca94c73ced301b6/pyproject.toml",
+      "bytes": 2546,
+      "sha256": "ad653e92d989625cf628872bd99d683171933e4e5f076ec2ff48c8f4bc94d2e4"
+    },
+    {
+      "repository": "CIROH-UA/NGIAB_data_preprocess",
+      "commit": "8bc14d8ac744ffa03e14c4e81ca94c73ced301b6",
+      "path": "modules/ngiab_data_cli/__main__.py",
+      "url": "https://github.com/CIROH-UA/NGIAB_data_preprocess/blob/8bc14d8ac744ffa03e14c4e81ca94c73ced301b6/modules/ngiab_data_cli/__main__.py",
+      "bytes": 12715,
+      "sha256": "b1e3f78a2c47e3c4ae54f39eddd356c251fff19272022d09478f309bfdc6d468"
+    },
+    {
+      "repository": "CIROH-UA/NGIAB_data_preprocess",
+      "commit": "8bc14d8ac744ffa03e14c4e81ca94c73ced301b6",
+      "path": "modules/data_processing/forcings.py",
+      "url": "https://github.com/CIROH-UA/NGIAB_data_preprocess/blob/8bc14d8ac744ffa03e14c4e81ca94c73ced301b6/modules/data_processing/forcings.py",
+      "bytes": 21783,
+      "sha256": "6e5a9fdb096be7df9e3a652c7a444ed65b9c33a2937a2e5cfa03eb917699aa41"
+    },
+    {
+      "repository": "CIROH-UA/NGIAB-CloudInfra",
+      "commit": "321168fa9d8a146255bab4b47d0777b05b258ff2",
+      "path": "guide.sh",
+      "url": "https://github.com/CIROH-UA/NGIAB-CloudInfra/blob/321168fa9d8a146255bab4b47d0777b05b258ff2/guide.sh",
+      "bytes": 27449,
+      "sha256": "35f6c8eadd5cb2b6ca8f9c1c4256ff14b37148f2bbfaaba1e9157f011d1c210c"
+    },
+    {
+      "repository": "CIROH-UA/NGIAB-CloudInfra",
+      "commit": "321168fa9d8a146255bab4b47d0777b05b258ff2",
+      "path": "CITATION.cff",
+      "url": "https://github.com/CIROH-UA/NGIAB-CloudInfra/blob/321168fa9d8a146255bab4b47d0777b05b258ff2/CITATION.cff",
+      "bytes": 1895,
+      "sha256": "5a22e7841045695592204e78354f0f872cdd64b89064d9efa462373aaf7e7074"
+    }
+  ],
+  "actual_actions": [
+    "Read project instructions and relevant proposal ecosystem/license sections",
+    "Read Git HEAD/status and tracked license/build metadata",
+    "Inspect resident source files with dataless/symlink checks for targeted hashing",
+    "Parse deployed Python AST for selected third-party import names without executing modules",
+    "Read official GitHub repository metadata and complete recursive trees",
+    "Read and hash selected public source/license files in memory",
+    "Inspect historical source/build/container records without rebuilding or rehashing binaries",
+    "Write only two assigned dossier files"
+  ],
+  "not_performed": [
+    "Code copying into proposed project",
+    "License selection or application",
+    "Installation or dependency resolution",
+    "Project script execution/import",
+    "Test execution",
+    "Native build",
+    "Container pull/start",
+    "Dataset download",
+    "Hydrologic simulation",
+    "Cloud mutation",
+    "External messages",
+    "Exhaustive license audit",
+    "Maintainer confirmation",
+    "Example data redistribution clearance"
+  ],
+  "failed_accesses": [
+    {
+      "action": "Initial repository metadata requests with trailing slash",
+      "result": "HTTP 404",
+      "resolution": "Canonical no-trailing-slash API requests succeeded for six actual repositories"
+    },
+    {
+      "action": "CIROH-UA/ngiab guessed repository lookup",
+      "result": "HTTP 404",
+      "resolution": "Used documented CIROH-UA/NGIAB-CloudInfra; no repeat"
+    }
+  ],
+  "known_unavailable": [
+    {
+      "logical_path": "NextGen_Reforecast/local_only/shared_history_runtime_v3/build01/build/BUILD_RECEIPT.json",
+      "source_map_disposition": "OMITTED_DATALESS_PLACEHOLDER_NOT_HYDRATED",
+      "action": "Not opened; read resident BUILD_EXPORT.json instead"
+    }
+  ],
+  "conclusions": {
+    "docs_publication": "Separate from inherited implementation release; no license chosen",
+    "software_release": "Requires original-work rights/license decision, notices, component binary-source attestations and fixture rights",
+    "upstream_restart_support": "Verified source interfaces in DataStreamCLI and ForcingProcessor",
+    "priority_or_legal_compatibility_claim": false,
+    "runtime_compatibility_verified": false
+  }
+}

@@ -1,0 +1,3243 @@
+{
+  "schema": "nextgen-software-minimal-example-feasibility/v1",
+  "status": "NO_COMPLETE_REDISTRIBUTABLE_RUNNABLE_EXAMPLE_VERIFIED",
+  "review_date_utc": "2026-09-18",
+  "new_model_runs": 0,
+  "fixture_created": false,
+  "root_aliases": {
+    "R": "private repository review evidence root",
+    "C": "R/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components",
+    "D": "original generation project root (read only)",
+    "CACHE": "source cache (read only)",
+    "FIXTURE": "D/local_only/shared_history_runtime_v3/day-model-preparation01"
+  },
+  "candidate": {
+    "name": "Existing Watauga v3 two-issue local day-custody qualification",
+    "domain": "watauga_vpu06",
+    "catchments": 31,
+    "sites": {
+      "03479000": 1017693
+    },
+    "history_origin_epoch": 1638316800,
+    "history_origin_utc": "2021-12-01T00:00:00Z",
+    "history_hours": 786,
+    "history_stop_epoch": 1641146400,
+    "history_stop_utc": "2022-01-02T18:00:00+00:00",
+    "issue_epochs": [
+      1641078000,
+      1641081600
+    ],
+    "branch_leads": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "platform": "linux/arm64",
+    "components": [
+      "SLOTH",
+      "NoahOWP",
+      "CFE",
+      "channel-only t-route"
+    ],
+    "initialization_type": "Reconstruct from declared origin, not a provided complete land checkpoint",
+    "receipt": "C/provenance/real_local_day_ack.json",
+    "receipt_status": "PASS_REAL_WATAUGA_DAY_CUSTODY_V3_LOCAL_ONLY",
+    "historical_expected_outputs": {
+      "history_initializations": 1,
+      "continuous_history_hours": 786,
+      "independent_branches": 2,
+      "forecast_rows": 36,
+      "ack_count": 2,
+      "max_branch_flow_difference_cms": 0.0,
+      "max_parent_qvd_absolute_difference": 0.0,
+      "tolerance": {
+        "absolute": 1e-06,
+        "relative": 1e-05
+      }
+    },
+    "reproduction_status": "Historical receipt inspected; run not repeated; fixture incomplete in resident storage"
+  },
+  "candidate_fixture_inventory": [
+    {
+      "path": "FIXTURE/CONTRACT.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 45886,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/SHA256SUMS",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 80,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "24b8563e4a741d43cf74af631d4873bc7f103d6fff12a7a459ba8c1540a16947",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/PREPARATION_RECEIPT.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 11879,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/SHA256SUMS",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2633,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017689.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2017,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017690.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2007,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "2aa49a55b13f0a37c7ae5fcde2c90960c87c858b9858f8d1925bff70ad01f4b2",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017691.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2001,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "3f837a43bb7e74a2f16d8430c2ef861fbeaeb5a86c539b3636987ff73d2f4511",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017692.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1989,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ddfac38c26533eb01880c87d881d475a668377a436f12082250715c44c91ead1",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017693.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1988,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "2c7574e6d7a7dfc555211b7c03c8f5b003ed103935abe19c294fbe046d8e404d",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017847.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1977,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017848.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2000,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017849.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1992,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "06ac2bea7e9b4699de7ec49065dbbab995e0feca6f525a82e39a27f4a5123f3e",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017850.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1987,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "67a87d612b28cc0ac30b14d88eee5c0bd3f22bc031142730c9ac67e18c37d10a",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017851.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1976,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ece340e58b571eaeb44858e80656e57f76519aec52beea9f6913c78dec542b0c",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017852.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1987,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "fc4318f86f6c332c77f936513fa3f08d0db488b31f5ab9bf1148aeb567a1357f",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017853.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1978,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017854.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1981,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "84e7df66258176b2c064fea3a96da9a88c06873bb7a3a8b3fb2d6855e6f2dd4a",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017855.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1981,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017856.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1981,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017857.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1969,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017858.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1971,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017859.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1980,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017860.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2009,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017861.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2008,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017862.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2000,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017863.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2008,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "d71c77ff3b6d1a790ba394202339e3906e432f31474cc82cfe73a8d55eeb502f",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017864.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1997,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ba8eacb0c565a6a08e882583b8e372fbc6cbe3d6d4634a1cd928fcb466da5877",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017865.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1996,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017866.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2007,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017867.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1994,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017868.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2019,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017869.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2012,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017870.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1998,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017871.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2008,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641078000/cat-1017872.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2007,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/PREPARATION_RECEIPT.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 11881,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/SHA256SUMS",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2633,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017689.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2005,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017690.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2023,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017691.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2017,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017692.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2031,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017693.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2024,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017847.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2037,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017848.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2031,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017849.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2032,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017850.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2025,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017851.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2022,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017852.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2024,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017853.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2041,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017854.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2022,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017855.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2024,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017856.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2034,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017857.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2039,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017858.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2030,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017859.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2011,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017860.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2022,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017861.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2011,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017862.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2016,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017863.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2011,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017864.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2013,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017865.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2005,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017866.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2019,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017867.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2018,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017868.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2001,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017869.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2015,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017870.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2018,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017871.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1997,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/branch-forcings/1641081600/cat-1017872.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2008,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017689.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017690.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017691.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 629,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017692.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017693.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017847.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017848.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017849.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017850.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 629,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017851.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017852.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017853.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "3982b16f69cfaee5fb6f6f6d78d6dc310259ce1ad47620c864a50825c75ffd7e",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017854.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017855.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017856.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017857.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017858.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017859.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017860.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017861.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017862.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017863.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017864.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017865.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017866.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 634,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017867.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017868.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f70fa65c852014ad327aecf422cfc8050a9496df38e621feda0c20afa89c305c",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017869.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "4081ae8b6df20829806c042e977a1d6b55c8dd6e98ccd9070b1ce46a06effa4b",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017870.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017871.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/CFE/CFE_cat-1017872.ini",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017689.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017690.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017691.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017692.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "53d5204c66b6cd5dc84e05306e465db21d0e8b1552f1dde5ccefc505fa459d86",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017693.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ae2b4831ee7a4fdcb0247de4fb8c828c890a167bec057e41ed9c836a2269294b",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017847.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "d9681890bafe8fd43e4cddee36f55acf370b9fcdc1079dada7cfc2c2f611cc60",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017848.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "bb337cc4ba1197289c8e2e8cf8b3c09b21f896b14de53ad4a1c30cc6fc5bae7f",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017849.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "34dbfea561321f40d0a39310ae31cd9e5afe0c33d03736930d4b9d6f1a4fd663",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017850.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "309e4ac1f59858ead2d15e7ca5f48dc7051b76fd12bb6bc0149eb09a1bb96d4b",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017851.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "d6ff8e0248edbb5feb2be68d7970aeb06c572a3b9870294cb5dd8d6efc207346",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017852.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017853.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017854.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "15a5556d5d96b060e40ad1edafdc0d7259ab6e53556bcb9e495006c2fe5d4c9f",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017855.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "83dbb19fd611cfacd687205b7b9934b69a4b5058b800f266a7d1174b6d3ed4d9",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017856.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "24e8ec769301c11250c59a343fbbf3ac2827cecd3cb421fc04342820d5c2b02c",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017857.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "8505931b852a682fe19488e99a49efa41ccac31dae09b1215861d907b69cb2ea",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017858.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f2cd3f20cbe1e41035a6d7bf986480cc85952f10eb5f9fbca26fbd1cb85f2d98",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017859.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017860.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "44b67d6685e035245c4d5b434e157ab88b063842f19078bfb66bd50c241ed82a",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017861.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f721aa848121040d8c5971a1481dc06c34845b1f1ef0d62342ca88b6057d2923",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017862.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "427a7072ea701dc5e504214eaa4516e897c3c6b959539e65e5fdc4d2459b43e0",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017863.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "38fc8d2a2fa0c6183a40b7845184fbccb9dbd42bceac9cef1d2e2f521aa26a21",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017864.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017865.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "c0d6b5442b5badb8b210e6a56401d7054f3c6125ddf0e72e7c5b848f0c6995ac",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017866.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "aa6ba012aa2dc12646ad8dd4869596b3ccbb141ebe474ba99f2db5750131ab1c",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017867.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "e36d75d94afe139d238fe199bec5f9593f20d1cd7fc0ea2ea73014b60bbde64d",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017868.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017869.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017870.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "11fc55ae5e81078c63df3318855d2b5bf3f5e2f2d0a60fc9ae27c101387bff0c",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017871.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017872.namelist.input",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "90999ae5490ea195c0292782d1fbe9500203b15811360213e6e40517dfeb5f76",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/realization.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2113,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "678b05292d8741700ec5355831e8774dda71d547cccb587d8b60cb279050f44d",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/troute.yaml",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2114,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "978dd1365bdfdd6c2a22d278c407942d3d5c22ea9821734bbeba25c15349aadf",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/config/watauga_vpu06.gpkg",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 360448,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "a0a7ed78e5ece1fe25d052c26e6ed5b8b5084b9f5a45da276f02c14f59e24713",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017689.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91308,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017690.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 92072,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017691.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91994,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017692.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 92040,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017693.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 89340,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017847.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91827,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017848.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91984,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017849.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91432,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "463122997d916fc334e2b91b620db5a9ca9fd7af06d9ac22810ff8e80d3d48ba",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017850.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 92058,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "b0c62d753739015208d7181455d253c037ce05dea80196f3c7eccd02c7029821",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017851.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91117,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017852.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91847,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017853.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91609,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017854.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91596,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017855.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91552,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017856.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91486,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017857.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91383,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017858.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91565,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017859.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91815,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017860.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91666,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017861.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91327,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017862.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 92088,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017863.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91321,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017864.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91909,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017865.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91670,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "717987c0c74f7b908c910e2e658fb1bf317c2ae05d4f23104fe19e3758d9dcad",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017866.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91626,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017867.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91706,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017868.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91220,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017869.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91758,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017870.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 92045,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017871.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91624,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/input/forcings/forcing_cat-1017872.csv",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 91914,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/reference.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 123007,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "1b657ee53888f0ec405c5dcce18c6ca12796931aaf29302ce0b4fa97a71e7942",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/router.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 406,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "1b7004be31b1f5a84eb3dc25bf37cd2244a2e3c017cd682d80f3e6f893e37b3d",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/runtime/libiso_c_bmi.so",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 74504,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/runtime/ngen-shared",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3813528,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/scripts/shared_history_day_ack_v3.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1477,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ab9bb7b03ddb0436d7c105f32838bd127ccba641563592bad804679085b16d75",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/scripts/shared_history_day_model_controller_v3.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 17034,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "82811c97227c02143f471730a67356ad42727c3c13206c394f0ab62d9e162b94",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/__init__.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 552,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 22352,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/nwm_forcing_inventory.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 98791,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_day_shard_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 20422,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_fresh_scratch_lifecycle_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 23631,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_gcp_day_custody_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 14725,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_local_day_custody_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 10303,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "bb6fc5bbc752e0f32ac2571aa18f88f42bcac0a42328f9773faba0b83de4ba3e",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_native_output_bridge_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 19433,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_recovery_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 12737,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 19251,
+      "dataless": true,
+      "symlink": false,
+      "status": "NOT_OPENED"
+    },
+    {
+      "path": "FIXTURE/src/nextgen_reforecast/shared_history_routing_service_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 4954,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "matches_recorded_hash": null
+    }
+  ],
+  "candidate_fixture_summary": {
+    "file_count": 181,
+    "resident_count": 49,
+    "resident_bytes": 906503,
+    "dataless_count": 132,
+    "missing_count": 0,
+    "freshly_hashed_bytes": 906503
+  },
+  "available_production_watauga_static_assets": [
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017689.ini",
+      "recorded_sha256": "a71edbd97212db511e80ff4ac13ac1e77f10cadcc71a0cae6f532f6d436308d9",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "a71edbd97212db511e80ff4ac13ac1e77f10cadcc71a0cae6f532f6d436308d9",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017690.ini",
+      "recorded_sha256": "fd89fc6316ff9c94a0434e439ee6e69079f10e16d03347a0923a1788d291f755",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "fd89fc6316ff9c94a0434e439ee6e69079f10e16d03347a0923a1788d291f755",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017691.ini",
+      "recorded_sha256": "71f551ab70e9b74111a475237cc431bbb4be7283216f6cf9e23ae922bf8673dc",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 629,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "71f551ab70e9b74111a475237cc431bbb4be7283216f6cf9e23ae922bf8673dc",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017692.ini",
+      "recorded_sha256": "65cc13b6120a7465433b5be537fefa6009b827aa790b6cae86be16cdac2bf421",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "65cc13b6120a7465433b5be537fefa6009b827aa790b6cae86be16cdac2bf421",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017693.ini",
+      "recorded_sha256": "c9977cea57acfa32927eb6bbe2d490cff538d2fa383e7cf0eeaa569c993e4f86",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "c9977cea57acfa32927eb6bbe2d490cff538d2fa383e7cf0eeaa569c993e4f86",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017847.ini",
+      "recorded_sha256": "39d75ca77d02eb80c5b4eec67f5e2aebd7bb2f6729a5d87aaff801e9f05c0d06",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "39d75ca77d02eb80c5b4eec67f5e2aebd7bb2f6729a5d87aaff801e9f05c0d06",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017848.ini",
+      "recorded_sha256": "c4a5a002741119df777bcf41baafd341cb68b5941db4205982de6a6525f8d7fc",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "c4a5a002741119df777bcf41baafd341cb68b5941db4205982de6a6525f8d7fc",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017849.ini",
+      "recorded_sha256": "823a49aea99957fbd75bd6c38bc1bbf7952fa82124e64a4ace48304f8b383c24",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "823a49aea99957fbd75bd6c38bc1bbf7952fa82124e64a4ace48304f8b383c24",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017850.ini",
+      "recorded_sha256": "524800c2a80f38dbdbc1ed7299536eccefef661df8c30fb48c27baac7eb96c35",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 629,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "524800c2a80f38dbdbc1ed7299536eccefef661df8c30fb48c27baac7eb96c35",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017851.ini",
+      "recorded_sha256": "8e9be6b8410427be63f6b7cdd4f8ee3483d3e76c99cdf95f5c4c2ddfdd9080e1",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "8e9be6b8410427be63f6b7cdd4f8ee3483d3e76c99cdf95f5c4c2ddfdd9080e1",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017852.ini",
+      "recorded_sha256": "ce2c97a760d91443dfa3798660a9be93eec0661d91b0ff1c8d94794fbaffb72c",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ce2c97a760d91443dfa3798660a9be93eec0661d91b0ff1c8d94794fbaffb72c",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017853.ini",
+      "recorded_sha256": "3982b16f69cfaee5fb6f6f6d78d6dc310259ce1ad47620c864a50825c75ffd7e",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "3982b16f69cfaee5fb6f6f6d78d6dc310259ce1ad47620c864a50825c75ffd7e",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017854.ini",
+      "recorded_sha256": "c7cfe6bdc3173ffa190aff3ab3fa43f6899ca8e46f82d38c369e43c71992a1b7",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "c7cfe6bdc3173ffa190aff3ab3fa43f6899ca8e46f82d38c369e43c71992a1b7",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017855.ini",
+      "recorded_sha256": "07cf17be2c301b4ee6f68e2f1950510af54c039f9b7db39a98fe4263bdeacce0",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "07cf17be2c301b4ee6f68e2f1950510af54c039f9b7db39a98fe4263bdeacce0",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017856.ini",
+      "recorded_sha256": "8e6a9935c8d755f9a67c9a2f896d75797f4f9cf69db16795101fe73eca5d2c2a",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "8e6a9935c8d755f9a67c9a2f896d75797f4f9cf69db16795101fe73eca5d2c2a",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017857.ini",
+      "recorded_sha256": "5b7c90a7380ce6bbd9524e6fa97d0cf62dbb307cc0b6dad390bae501ef04cd84",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "5b7c90a7380ce6bbd9524e6fa97d0cf62dbb307cc0b6dad390bae501ef04cd84",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017858.ini",
+      "recorded_sha256": "540a6dade3804c6aa2ab49b1957a5cd6c125eb1c1a771dc687d1a37c39bc4249",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "540a6dade3804c6aa2ab49b1957a5cd6c125eb1c1a771dc687d1a37c39bc4249",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017859.ini",
+      "recorded_sha256": "d6447a6b367a3e3e3bd959f7b4bd93c327db9a5af914043f59d47e86b657f64d",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 633,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "d6447a6b367a3e3e3bd959f7b4bd93c327db9a5af914043f59d47e86b657f64d",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017860.ini",
+      "recorded_sha256": "26e2ea2f1783830791431fbbd39ecc2039449c0f55a804be71b5da995869ed06",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "26e2ea2f1783830791431fbbd39ecc2039449c0f55a804be71b5da995869ed06",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017861.ini",
+      "recorded_sha256": "5a926d4a2d6b3c5b6215e88e78979358535273b90814e6aac5a44dd005672dbd",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "5a926d4a2d6b3c5b6215e88e78979358535273b90814e6aac5a44dd005672dbd",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017862.ini",
+      "recorded_sha256": "9d3f670394f44e8617dc931e97795b2803d9483e22f53f024769896adb93111c",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "9d3f670394f44e8617dc931e97795b2803d9483e22f53f024769896adb93111c",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017863.ini",
+      "recorded_sha256": "eaad8aecd31b3a9b63fbaf5c14516f7bdb6cb70e3a6e7b244f34e837390b71ca",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "eaad8aecd31b3a9b63fbaf5c14516f7bdb6cb70e3a6e7b244f34e837390b71ca",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017864.ini",
+      "recorded_sha256": "974076b568b393fb4220c50ff5718bb5e0a295285f2e5e9f6af70ff40456b154",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "974076b568b393fb4220c50ff5718bb5e0a295285f2e5e9f6af70ff40456b154",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017865.ini",
+      "recorded_sha256": "4629ff71fd29c88960094fdb2e70084bfc2a182cfe7a885791b3f1a531f947e7",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "4629ff71fd29c88960094fdb2e70084bfc2a182cfe7a885791b3f1a531f947e7",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017866.ini",
+      "recorded_sha256": "bbc5fedcdc6043c92610cc1594189c10d94fdaf78e1f67f93aaa5ce9dfa58a09",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 634,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "bbc5fedcdc6043c92610cc1594189c10d94fdaf78e1f67f93aaa5ce9dfa58a09",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017867.ini",
+      "recorded_sha256": "b74e1caa91b90f5d8659e93ea0a9f93751d6fcf3b1f464a1ed76c150c4505182",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 632,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "b74e1caa91b90f5d8659e93ea0a9f93751d6fcf3b1f464a1ed76c150c4505182",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017868.ini",
+      "recorded_sha256": "f70fa65c852014ad327aecf422cfc8050a9496df38e621feda0c20afa89c305c",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f70fa65c852014ad327aecf422cfc8050a9496df38e621feda0c20afa89c305c",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017869.ini",
+      "recorded_sha256": "4081ae8b6df20829806c042e977a1d6b55c8dd6e98ccd9070b1ce46a06effa4b",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "4081ae8b6df20829806c042e977a1d6b55c8dd6e98ccd9070b1ce46a06effa4b",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017870.ini",
+      "recorded_sha256": "464fcaf5bfa51a6bb73f0d2a9bf8dff5ef697c0a01653641e8c04a11fa944d1a",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 631,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "464fcaf5bfa51a6bb73f0d2a9bf8dff5ef697c0a01653641e8c04a11fa944d1a",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017871.ini",
+      "recorded_sha256": "590418e90e3fb11c205db3f2e7ffc2d617b4c606f4a38680c325bd4d4d2ffc2a",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "590418e90e3fb11c205db3f2e7ffc2d617b4c606f4a38680c325bd4d4d2ffc2a",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/CFE/CFE_cat-1017872.ini",
+      "recorded_sha256": "536f568592a4b0e400d0b2b723d6816541e74ad7ae9b62df96131608af30f712",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 630,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "536f568592a4b0e400d0b2b723d6816541e74ad7ae9b62df96131608af30f712",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017689.namelist.input",
+      "recorded_sha256": "7073df03938cafb6474339c55f3105c9d0d970f7cfc8b8389ff5544f9e170596",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "7073df03938cafb6474339c55f3105c9d0d970f7cfc8b8389ff5544f9e170596",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017690.namelist.input",
+      "recorded_sha256": "5eacdb66611c7af3176ff768048e7588908df91e2ac93aa20d583b0dae6958a8",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "5eacdb66611c7af3176ff768048e7588908df91e2ac93aa20d583b0dae6958a8",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017691.namelist.input",
+      "recorded_sha256": "7cfa44449293c23e5fb3f4cb934b491483ad2dd0f1a4f5849061a4ae3e958e93",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "7cfa44449293c23e5fb3f4cb934b491483ad2dd0f1a4f5849061a4ae3e958e93",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017692.namelist.input",
+      "recorded_sha256": "28d2d8b6cad932f420919cbe872fbb500e0026e522c69298769fa6fbf6571bff",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "28d2d8b6cad932f420919cbe872fbb500e0026e522c69298769fa6fbf6571bff",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017693.namelist.input",
+      "recorded_sha256": "85ccc8e1e77f382326858d299c8a63a784214d34a586a99726e68fce1505e972",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "85ccc8e1e77f382326858d299c8a63a784214d34a586a99726e68fce1505e972",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017847.namelist.input",
+      "recorded_sha256": "af721021d4cfedbc8039b98369a9eaea0986aeff3046c9995285b288274df2c5",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "af721021d4cfedbc8039b98369a9eaea0986aeff3046c9995285b288274df2c5",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017848.namelist.input",
+      "recorded_sha256": "8e6a585b128557ea7b584aba160cd9e17e6fbbbce07a8152f0fa60225fab9949",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "8e6a585b128557ea7b584aba160cd9e17e6fbbbce07a8152f0fa60225fab9949",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017849.namelist.input",
+      "recorded_sha256": "3986cc4f41228022b80cdd8f3695bf0754410d76306c7bf7c8b1ffd4530591a8",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "3986cc4f41228022b80cdd8f3695bf0754410d76306c7bf7c8b1ffd4530591a8",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017850.namelist.input",
+      "recorded_sha256": "749c77ef87b210afe8d14192a64f5f70dc040dcec70cb8ab03c5f4a6e2fcd9b4",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "749c77ef87b210afe8d14192a64f5f70dc040dcec70cb8ab03c5f4a6e2fcd9b4",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017851.namelist.input",
+      "recorded_sha256": "9f82300060f646c0459eaf05f7300a3e0901b8c3481e44f1da6924dba2567364",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "9f82300060f646c0459eaf05f7300a3e0901b8c3481e44f1da6924dba2567364",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017852.namelist.input",
+      "recorded_sha256": "1861a74769ef9870490b21f1606a0e3ca2d99b1288240559c71619ccafcf6d0f",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "1861a74769ef9870490b21f1606a0e3ca2d99b1288240559c71619ccafcf6d0f",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017853.namelist.input",
+      "recorded_sha256": "275cb33480501e8f0c806520059bfba4f7a19a695f539e67d460e0c01a22c556",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "275cb33480501e8f0c806520059bfba4f7a19a695f539e67d460e0c01a22c556",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017854.namelist.input",
+      "recorded_sha256": "aa3b285b628d7f50c83490f66737a47048531a2d9988f407dbe5cf3fdba3270e",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "aa3b285b628d7f50c83490f66737a47048531a2d9988f407dbe5cf3fdba3270e",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017855.namelist.input",
+      "recorded_sha256": "926bee93ed413a50575fa1bc618cacd577cd10b39ef007a4c56b12faf1e147c5",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "926bee93ed413a50575fa1bc618cacd577cd10b39ef007a4c56b12faf1e147c5",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017856.namelist.input",
+      "recorded_sha256": "f83353df441b1d7762188bbe90b0266be3759c5f26bb766153c8003aae47a9c7",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f83353df441b1d7762188bbe90b0266be3759c5f26bb766153c8003aae47a9c7",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017857.namelist.input",
+      "recorded_sha256": "db873260c1d1b5458cb28a76e06ea25558dff6a297094eb178ab54f5d371e7ac",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "db873260c1d1b5458cb28a76e06ea25558dff6a297094eb178ab54f5d371e7ac",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017858.namelist.input",
+      "recorded_sha256": "ffde6763345d7921a898295c5b28d50d9f399795e65f0c19f37769b599ece95b",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ffde6763345d7921a898295c5b28d50d9f399795e65f0c19f37769b599ece95b",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017859.namelist.input",
+      "recorded_sha256": "6012ea289029d5f19bdbd121bd62273290e6abd79abd88bf352fe71753ba6c79",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "6012ea289029d5f19bdbd121bd62273290e6abd79abd88bf352fe71753ba6c79",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017860.namelist.input",
+      "recorded_sha256": "36bc676fb35fd03f09aac2b5bdf6f0e07b6e371f9dfc881a19e247ded4500396",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "36bc676fb35fd03f09aac2b5bdf6f0e07b6e371f9dfc881a19e247ded4500396",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017861.namelist.input",
+      "recorded_sha256": "b363439844805a9e4c8dafb1f40210a9344be538d0a57ae2523ec9498decbb3a",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "b363439844805a9e4c8dafb1f40210a9344be538d0a57ae2523ec9498decbb3a",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017862.namelist.input",
+      "recorded_sha256": "664094a18d47780d7c98a33b0f71bdccea26be2ab6bddeaa7c62fe9c06c69a7b",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "664094a18d47780d7c98a33b0f71bdccea26be2ab6bddeaa7c62fe9c06c69a7b",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017863.namelist.input",
+      "recorded_sha256": "ae1b60dfa43a5379bacfe122182c4ffa975c30e3ee94ebf5dd78d2f912fd69ba",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ae1b60dfa43a5379bacfe122182c4ffa975c30e3ee94ebf5dd78d2f912fd69ba",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017864.namelist.input",
+      "recorded_sha256": "dac93d086c7fcc8225929823f9e0b928b18f4fe990929b9a6ef2722dd7a5b7b0",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "dac93d086c7fcc8225929823f9e0b928b18f4fe990929b9a6ef2722dd7a5b7b0",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017865.namelist.input",
+      "recorded_sha256": "00323e5dda6fa8eea9f4873f3f4f483fe13f541a2f049b505ed63e495d42c50f",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "00323e5dda6fa8eea9f4873f3f4f483fe13f541a2f049b505ed63e495d42c50f",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017866.namelist.input",
+      "recorded_sha256": "0c5e49e6379b449bf069dc1e031b57a9a4f6bbcea32f00c591daf88d5de99dc0",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "0c5e49e6379b449bf069dc1e031b57a9a4f6bbcea32f00c591daf88d5de99dc0",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017867.namelist.input",
+      "recorded_sha256": "ce0efb5dfcd44f93bd2217e1f698b3429447d07c7e7b54d03a36566ebba8b105",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ce0efb5dfcd44f93bd2217e1f698b3429447d07c7e7b54d03a36566ebba8b105",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017868.namelist.input",
+      "recorded_sha256": "923f736a77a8e7705e35a3ca1ef8a142c6694a2ae0f6293ea09fe71faf642792",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "923f736a77a8e7705e35a3ca1ef8a142c6694a2ae0f6293ea09fe71faf642792",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017869.namelist.input",
+      "recorded_sha256": "d85529881eba277f5552ce388f54b5f92823522a1cb4ffcad7fe65eff73a9bfb",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "d85529881eba277f5552ce388f54b5f92823522a1cb4ffcad7fe65eff73a9bfb",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017870.namelist.input",
+      "recorded_sha256": "e25e5e8efb15f5e36fb653ed14e1031c51f4d4a1e67390edd5fe4a014f9f242c",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "e25e5e8efb15f5e36fb653ed14e1031c51f4d4a1e67390edd5fe4a014f9f242c",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017871.namelist.input",
+      "recorded_sha256": "e85b1269d700a903e60a2e788e9fe603c53776d3175a3298610458dd3a0d8c69",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3012,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "e85b1269d700a903e60a2e788e9fe603c53776d3175a3298610458dd3a0d8c69",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017872.namelist.input",
+      "recorded_sha256": "70f279e2e99865e6da131ff1484183ad20aae21ddd931a24e9be1283b5e33a54",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3011,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "70f279e2e99865e6da131ff1484183ad20aae21ddd931a24e9be1283b5e33a54",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/realization.json",
+      "recorded_sha256": "a86ed780b9026c9cf7080c0ca6fbc41fd92fb0e2a216132670715584aa9a7b19",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2127,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "a86ed780b9026c9cf7080c0ca6fbc41fd92fb0e2a216132670715584aa9a7b19",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/troute.yaml",
+      "recorded_sha256": "7c9cbd6e9ab06a4debac378b6f72221c2fdacba0a9182eebd4adfd0ab61ba2b0",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 2114,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "7c9cbd6e9ab06a4debac378b6f72221c2fdacba0a9182eebd4adfd0ab61ba2b0",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/config/watauga_vpu06.gpkg",
+      "recorded_sha256": "a0a7ed78e5ece1fe25d052c26e6ed5b8b5084b9f5a45da276f02c14f59e24713",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "status": "ABSENT_AT_INSPECTED_PATH"
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/MANIFEST.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 15749,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f6d4948cd4d5e07eb3166e33d9102a6229b612654d6d1fb8779da5e11694b659",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/HISTORY_CSV_MANIFEST.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 4615,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "567c81377bcd716a4d73213286731226c6bb1f93648927a02c95c5f4867a802f",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/inputs/watauga_vpu06/router.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 344,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "7707c1e1f04b97e61447d6f6760133b62e4ddece4817c717f1d6430f999336a2",
+      "matches_recorded_hash": null
+    }
+  ],
+  "production_static_summary": {
+    "file_count": 68,
+    "resident_count": 67,
+    "resident_bytes": 137892,
+    "dataless_count": 0,
+    "missing_count": 1,
+    "freshly_hashed_bytes": 137892
+  },
+  "resident_full_history_csv_metadata": [
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017689.csv",
+      "recorded_sha256": "6c3dea1ce21b827f6709c15af6e8b416666ce089ab3d9da1e64dff1a2714506c",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9558554,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017690.csv",
+      "recorded_sha256": "07cdfff707f00aa41e6c9d8fabf6b9b22a63a17add99d685ab43ca97dd8eed6b",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9582717,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017691.csv",
+      "recorded_sha256": "c8b25d26f55cf3f59826dd703c864994592a786410e37bcff877dee543ac5ee3",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9497773,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017692.csv",
+      "recorded_sha256": "ae0d2777e2c9aa3766c81779fc77d3b62f271df1eed92d170ee076241d41e017",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9536995,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017693.csv",
+      "recorded_sha256": "a30cd9f3cdae7ffd172abe44df2fd5a7c23ac09836f88f0d0114b21f87b89951",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9239644,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017847.csv",
+      "recorded_sha256": "0b478edf9af8196ffbd30de43861c83d1a70c8d0b4261cea8455abd43bc071cc",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9569724,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017848.csv",
+      "recorded_sha256": "df82e3097a9ca6d963b6747629d77391571a365d62a7add73c99d007f8efb6ab",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9479583,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017849.csv",
+      "recorded_sha256": "e70137f402cbeeab81a3385a1999cc50a9fc93e1de7b0179dfad9d820701065a",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9331746,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017850.csv",
+      "recorded_sha256": "c41ef106f211a636f3590287eb7c63da22bcfa06eb578e255a88d9d18db01c6b",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9581097,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017851.csv",
+      "recorded_sha256": "5f47cfafcbdd13d44979892f480d93c3519ff063c7a3d76e7eaf8722e4a1f7fa",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9365548,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017852.csv",
+      "recorded_sha256": "a1537249088b103133afb8250631e16b1f0e25adec7d9665e0ae09f3ac0b34b6",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9509142,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017853.csv",
+      "recorded_sha256": "099788a66a1ff71861ea7fb9d85e2eff9ef9ee3a9226cb398c469f435659c8e7",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9478137,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017854.csv",
+      "recorded_sha256": "0de53f82411aaccec004e676f137df985a65835348af0784abb8e6f602e31e33",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9520611,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017855.csv",
+      "recorded_sha256": "9c1f5430d8f23ff5aad612217a0cd1c5b9079d3267adbef7602c359a7aa19304",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9524086,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017856.csv",
+      "recorded_sha256": "7af354fdc9f0f1e10e74181fefbbc52ebbf8970bca9ba42a9fdd97e6bdd5a321",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9483393,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017857.csv",
+      "recorded_sha256": "a5e7bd7f4c12d5e484eae82645f3df0a8d5c36eeced709d090423508e2579b8b",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9499618,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017858.csv",
+      "recorded_sha256": "b3c835dbec347ce9d301e01da4a617f79c312c7ab4255f6486c6b54416dbbbe8",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9528417,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017859.csv",
+      "recorded_sha256": "f6cd2727719a350d3672dba201ac5f70efa2abed275c9706e9b58e40c50e3e56",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9478317,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017860.csv",
+      "recorded_sha256": "22a446b38d3b2c2fd4a1f2f4fa56970b87d00a9212794ab05442e81dae7994bd",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9568607,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017861.csv",
+      "recorded_sha256": "d833c7d1ad5884bc70503d597e0778891f9d927fc61009d83ebe0492687242bd",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9549791,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017862.csv",
+      "recorded_sha256": "a680b99ba35997163bc38e10e86d35ee06a044c82622422bcc6ab0647da9bfad",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9540508,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017863.csv",
+      "recorded_sha256": "fc1133cb0e93d56957887c88fc577ff5c1f0221ab8e74c7b9da5173d6088165b",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9541483,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017864.csv",
+      "recorded_sha256": "467ee056c78aed063c4450eb16f08cdce33efa18206795913f9e699350d5931d",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9585936,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017865.csv",
+      "recorded_sha256": "4997e366903357176fddf64a76f31ffe28dce3ae2886b16fdc92d9c01a3c55b0",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9514767,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017866.csv",
+      "recorded_sha256": "9e06c4d9c2d2deb3788c47d876ae194feb37c14d107f7367339713fbaf71c27d",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9510681,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017867.csv",
+      "recorded_sha256": "c621f87ed657744ffcbd479328ac0b3c20e6b75a02a25e949deae19710e4e78a",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9508761,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017868.csv",
+      "recorded_sha256": "b20f938916f1892c6757219b2d3a563582faafd486978ff7f30334e74b6a51de",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9539394,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017869.csv",
+      "recorded_sha256": "56a40993dd47caf24493831c10f2ee0b015e1d611cbb6384ae8e1b06196f37f9",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9561033,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017870.csv",
+      "recorded_sha256": "6d3df23c64c41a5466d9a5e98cb0b9ef73345c82c9018d74a67b60ec5168fddb",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9601484,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017871.csv",
+      "recorded_sha256": "5845e53aa89bcf79dc5dc45938e6a1a1ffb90699df89a8159068bf31b2490370",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9556204,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    },
+    {
+      "path": "CACHE/production-history-csv-pair-v2/watauga_vpu06/cat-1017872.csv",
+      "recorded_sha256": "a90fd6b3c44bcc88ef680ea247a19bb770125ec56654b8337490f9871fe8ba84",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9562155,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_METADATA_ONLY"
+    }
+  ],
+  "full_history_summary": {
+    "file_count": 31,
+    "resident_count": 31,
+    "resident_bytes": 294905906,
+    "dataless_count": 0,
+    "missing_count": 0,
+    "freshly_hashed_bytes": 0
+  },
+  "recorded_full_history_csv_bytes": 294905906,
+  "full_history_csv_content_read_or_rehashed": false,
+  "full_history_time_contract": {
+    "start_epoch": 1531872000,
+    "stop_epoch_exclusive": 1767222000,
+    "rows_per_catchment": 65375
+  },
+  "resident_native_assets": [
+    {
+      "path": "CACHE/production-history-assets/native/libiso_c_bmi.so",
+      "recorded_sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 74504,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "CACHE/production-history-assets/native/ngen-shared",
+      "recorded_sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 3813528,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+      "matches_recorded_hash": true
+    }
+  ],
+  "source_identity_checks": [
+    {
+      "path": "C/src/nextgen_reforecast/production_execution_recipe_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 17480,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "4d16ac790595f944f0690157306ba02efeded298bfb4b20bf12a51e17f219a94",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/production_execution_recipe_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 17480,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "C/src/nextgen_reforecast/production_domain_contract_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 4512,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/production_domain_contract_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 4512,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "eb40af17f76288fcb55c059a5fd7e2038717505790f51b7eaa45912017c6b5a9",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/production_realization_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 5622,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "a1a91b2e3bcf5bec890fe7a20a587aba6065210f03d34cc952e96237066a9d2e",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/production_realization_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 5622,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "C/src/nextgen_reforecast/aorc_continuous_index_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 10013,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/aorc_continuous_index_v2.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 10013,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "63773d59e2abcf6637bdbd17f34030a0b56638223d7953cde85aa7bf4f56b903",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/aorc_gap_interpolation_research_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 11352,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/aorc_gap_interpolation_research_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 11352,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "e240454d72e04b5267a3e6879d29f1cd6ed925fe013497da2a5a23f9a17840cc",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/nwm_compact_forcing_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9433,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/nwm_compact_forcing_v2.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 9433,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "f8e6454f141b1851c549698b8437eb8a36974c8d5caf2a9746ac55d5a7513156",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/nwm_decoded_issue_csv_adapter_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 10664,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/nwm_decoded_issue_csv_adapter_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 10664,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "a03a1bdc20bbb3027d1b49ce50fcfb50189b4e490ca6ad8e2d28de07b373b25c",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 22352,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 22352,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/full_period_source_queue_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 18523,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "37bc60ec7ef07f49c7f7755560c5f859da9d16a098b9b20da1254fb0117aa14e",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/full_period_source_queue_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 18523,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "C/src/nextgen_reforecast/source_publication_compatibility_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 8137,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/source_publication_compatibility_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 8137,
+        "dataless": false,
+        "symlink": false,
+        "status": "RESIDENT_BOUNDED_HASH",
+        "sha256": "f3d8d879c28574fc14e927ae5a172bfd6a337f908b742aefc857618d1e488241",
+        "matches_recorded_hash": null
+      },
+      "same_bytes_as_desktop": true
+    },
+    {
+      "path": "C/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 19251,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "matches_recorded_hash": null,
+      "current_desktop_copy": {
+        "path": "D/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+        "recorded_sha256": null,
+        "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+        "bytes": 19251,
+        "dataless": true,
+        "symlink": false,
+        "status": "NOT_OPENED"
+      },
+      "same_bytes_as_desktop": null
+    },
+    {
+      "path": "D/src/nextgen_reforecast/gate3_hydrofabric_prep.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 66829,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f4abb5e2c58787e89262daf980e2603864f6438becf595cca6a743b6854a49fd",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "D/src/nextgen_reforecast/gate3_hydrofabric_production_v2.py",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 34734,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "84f80937d30d13420037722d84622078dd7c52b0ced417ed327ed4eb1cfa2a90",
+      "matches_recorded_hash": null
+    }
+  ],
+  "inspected_receipts": [
+    {
+      "path": "C/provenance/real_local_day_ack.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 13277,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "b52bc2c33d161d7ee2e37c1cfe03932af34d0f54944e498139091cf7ece1a708",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/HISTORY_BINDING_V2.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 9017,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "55d5abd605d8def7121271ad639d80e3799db316541e171adc69321a97dffbda",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/HISTORY_INDEX_MANIFEST.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1588,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "967d8cfe44579aec8d30c4d95c3c8e3591c3452abc1d7078491906a61d0c6a0e",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/HISTORY_CSV_PREPARATION.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 1304,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "da4fe15cebfc2e5e608f740705c682724f2fb891168709f259a77e9e31abf7f0",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "C/provenance/ENDPOINT_ACCEPTANCE.json",
+      "recorded_sha256": null,
+      "redistribution_status": "NOT_CLEARED_BY_THIS_REVIEW",
+      "bytes": 4349,
+      "dataless": false,
+      "symlink": false,
+      "status": "RESIDENT_BOUNDED_HASH",
+      "sha256": "f3f500ae9a734511c3f537e2545be433749db9dc062e4cd61f17502d66f990ff",
+      "matches_recorded_hash": null
+    },
+    {
+      "path": "CACHE/aorc-gap-overlay-24b2918539bb78ae26449b1841391a4de2331e3c7c80824f1e84857ff137a6d9/publication/VARIABLE_UNITS.json",
+      "bytes": 203,
+      "sha256": "09ac44865bf02944a5587c558d9ffc33f1900ad9c2b6bdc0a9fa8a35bfa80498",
+      "status": "RESIDENT_BOUNDED_HASH",
+      "evidence_type": "inspected_original_metadata"
+    }
+  ],
+  "required_missing_or_unresolved": [
+    "Restore exact dataless FIXTURE/CONTRACT.json and all fixture inputs/branch forcing members before use; do not silently substitute full-period production inputs.",
+    "Fixture hydrofabric, reference, controllers and runtime mounts need a single sealed portable manifest. Per-file flags below are authoritative for residency.",
+    "Pinned component image is recorded but was not pulled or inspected; physical component source-to-binary and redistribution permissions remain unresolved.",
+    "No complete durable land/coupler/provider checkpoint was identified for a state-start tutorial. Routing q0 alone cannot initialize the land model.",
+    "Do not regenerate a 2021 fixture by truncating the production 2018-origin history and claim the same initial state. Origin, stack, parameters, interval semantics and exact forcing bytes must all match.",
+    "No arbitrary one-catchment real fixture or independent-researcher reproduction was verified.",
+    "Source/object keys and manifest hashes establish identity but do not prove current remote retrievability or local payload completeness."
+  ],
+  "total_complete_example_bytes": null,
+  "proposed_commands": [
+    {
+      "status": "UNTESTED_RECIPE_FRAGMENT_FROM_INSPECTED_CONTROLLER_NOT_READY_TO_RUN",
+      "command": "python /qualification/scripts/shared_history_day_model_controller_v3.py --prepared /qualification --contract-sha256 b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb --output /output",
+      "requirements": [
+        "exact restored sealed fixture mounted read-only at /qualification",
+        "input mounted at /run; branch forcings at /branch-forcings",
+        "fresh empty writable /output and private executable tmpfs directories required by controller",
+        "pinned Linux ARM64 component image and single-thread environment",
+        "explicit separate authorization for simulation"
+      ],
+      "evidence": "FIXTURE/scripts/shared_history_day_model_controller_v3.py:155-191"
+    }
+  ],
+  "release_status": "NO_LICENSE_CHOSEN; payloads not copied into public package by this lane"
+}

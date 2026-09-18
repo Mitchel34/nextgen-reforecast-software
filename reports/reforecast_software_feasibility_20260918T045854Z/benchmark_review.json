@@ -1,0 +1,102 @@
+{
+  "schema": "nextgen-software-independent-benchmark-review/v1",
+  "reviewed_utc": "2026-09-18T05:09:04.290484+00:00",
+  "status": "PASS_WITH_OPTIONAL_TRACEABILITY_IMPROVEMENT",
+  "scope": "Independent bounded resident-file inspection of benchmark evidence, version distinctions, test definitions and proposed plan. No project code was executed.",
+  "reviewed_dossier_files": [
+    "BENCHMARK_EVIDENCE_AND_PLAN.md",
+    "benchmark_receipts.json",
+    "STATE_AND_RECOVERY.md",
+    "SOURCE_VERSION_MAP.json"
+  ],
+  "receipt_identity_checks": [
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/preferred32_week.json",
+      "sha256": "f29b8ca121acc73d95b46e56aae3d41e9abd315808521ce884594151caf5a4c5",
+      "bytes": 18762,
+      "result": "MATCH"
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/real_local_day_ack.json",
+      "sha256": "b52bc2c33d161d7ee2e37c1cfe03932af34d0f54944e498139091cf7ece1a708",
+      "bytes": 13277,
+      "result": "MATCH"
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/model/components/provenance/real_gcs_transport.json",
+      "sha256": "a82352df61cdfea8b10f08bb16d613ca822bdbcba550694b3a8a52a0b96eaacb",
+      "bytes": 1603,
+      "result": "MATCH"
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/HOST_FINAL.json",
+      "sha256": "79a00c2eafe270c4fc83909a42456c72a320d15d69ce6d97b07e48eddbdd678d",
+      "bytes": 11615,
+      "result": "MATCH"
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/FINAL_CLOSEOUT.json",
+      "sha256": "5f788e3372ab37d158dcfbeb5a8289018536e1d76d42975a05c0c31b56b9dbe1",
+      "bytes": 2657,
+      "result": "MATCH"
+    },
+    {
+      "source": "REVIEW/evidence/nextgen-weather-fleet.xsfLmA/generation-preparation-v1/launch-a0/final-closeout/VERIFICATION.json",
+      "sha256": "380e6c27fd73fc865699404d0cad6f6b38b352e1a342a8103eaf846e12fce775",
+      "bytes": 1262,
+      "result": "MATCH"
+    }
+  ],
+  "checks": [
+    {
+      "id": "receipt_transcription",
+      "result": "PASS",
+      "finding": "All six receipt hashes and sizes match resident originals. Selected week, local-day, transport, final-closeout and verification fields match. HOST_FINAL selected domain fields match the source model subobjects; weather_staging is a renamed selection of weather_staging_state."
+    },
+    {
+      "id": "v2_v3_split",
+      "result": "PASS",
+      "finding": "Week receipt identifies native f4d4690c773bea1b4e552be0ccf2bcdc6947e68dc58530ed5dcdceb786f0e8fc. Local-day receipt and resident v3 BUILD_EXPORT identify native ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132 and middleware 09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162. The dossier correctly prevents the older week tolerance result from automatically qualifying a current public rebuild."
+    },
+    {
+      "id": "numerical_agreement",
+      "result": "PASS",
+      "finding": "Week receipt uses math.isclose with abs_tol=1e-6 and rel_tol=1e-5. Each gauge has 3024 keyed rows and zero tolerance failures; nonzero differences at two gauges preclude a universal bitwise-identity claim. Two domains and three gauge outputs are distinguished correctly."
+    },
+    {
+      "id": "timing_resources",
+      "result": "PASS",
+      "finding": "1213/490 = 2.4755102041 is an unequal-resource whole-workflow ratio. Domain wrapper timings, 24/8-vCPU allocations, configured 11/3 child caps and observed 3/2 outstanding peaks match the receipt. Production times and quotas match model subobjects. No equal-resource algorithmic speedup, peak whole-job PSS, CPU-hour normalization or invoice claim is made."
+    },
+    {
+      "id": "custody_storage_limits",
+      "result": "PASS",
+      "finding": "Local-day receipt explicitly disclaims portable land-state recovery. Transport records model_runs=0 and accounted, not independently measured transfer bytes. Final storage counts are reported as historical receipt values without a new archive recount. Weather staging bytes do not establish preprocessing throughput."
+    },
+    {
+      "id": "test_definitions",
+      "result": "PASS",
+      "finding": "Read the cited sections of six resident test modules without importing or executing them. Linux /proc and compiler guards, pinned-source skips, synthetic runtime fixtures, weather validation, cursor crash and owned-process cleanup assertions support the source-definition descriptions. The dossier correctly does not assert a new passing-test count."
+    },
+    {
+      "id": "future_benchmark_design",
+      "result": "PASS",
+      "finding": "Proposed cases cover fixed-workload reference equivalence, equal-resource concurrency, child/host failure, missing and corrupt inputs, two domain contexts and independent reproduction. Public fixture and retained-input dependencies are disclosed; cases are clearly proposed and unrun. Avoiding artificially expensive per-issue history reconstruction in the baseline is appropriate."
+    }
+  ],
+  "actionable_corrections": [],
+  "optional_improvements": [
+    {
+      "priority": "low",
+      "file": "benchmark_receipts.json",
+      "suggestion": "Add explicit source JSON pointers for normalized HOST_FINAL fields: domain_receipts/<domain>.FINAL.json/model/<field> and weather_staging_state/<field>. Their values are correct, but selected_fields currently flattens model and renames weather_staging_state without recording that mapping."
+    }
+  ],
+  "limitations": [
+    "Historical receipt assertions were checked for faithful representation, not rerun or independently reconstructed from complete raw arrays and event streams.",
+    "No model, native build, test suite, project script, cloud/network operation, archive download or dataless-file hydration was performed.",
+    "Build export and day-custody identities were checked directly; the full production launch-to-binary binding chain was not separately reconstructed in this bounded lane.",
+    "Detailed runtime implementation claims in STATE_AND_RECOVERY.md were not exhaustively source-audited in this benchmark lane.",
+    "Only benchmark_review.json was written; protected Reforecast and private source repositories remained read-only."
+  ]
+}

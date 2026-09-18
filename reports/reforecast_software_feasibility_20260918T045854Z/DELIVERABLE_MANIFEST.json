@@ -1,0 +1,102 @@
+{
+  "schema": "nextgen-software-feasibility-deliverables/v1",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "BENCHMARK_EVIDENCE_AND_PLAN.md",
+      "bytes": 10013,
+      "sha256": "807b14dc7cbe7d7f845da9269be1be9a550a60f7055d6b954c44bbec4323bced"
+    },
+    {
+      "path": "CAPABILITY_EVIDENCE.csv",
+      "bytes": 8867,
+      "sha256": "5be1a89c0796d1be36a9ca29b6da972de8080616229ab6cb9ea54e72939b9be9"
+    },
+    {
+      "path": "CHECKS_ACTUALLY_PERFORMED.md",
+      "bytes": 6271,
+      "sha256": "390ef483e29967dcbbc9562723d3f17a88453247063b573258c5ebfc4fb3411a"
+    },
+    {
+      "path": "DATA_AND_CONFIGURATION.md",
+      "bytes": 12264,
+      "sha256": "3e36def4e43e662f9c687609fa6638fdcf1eb2e21f03d2ef73236e7243b989a0"
+    },
+    {
+      "path": "DOSSIER_VERIFICATION.json",
+      "bytes": 650,
+      "sha256": "650f45e973cf988d31abfa0bb80bc11bc6f2e031752ed9263b3d7901e9046e92"
+    },
+    {
+      "path": "EXECUTIVE_FEASIBILITY.md",
+      "bytes": 7016,
+      "sha256": "a24af0e17d60f665e0245f67abfc6365692c81c9e5dac9e05d04b64479c1d693"
+    },
+    {
+      "path": "EXTRACTION_BACKLOG.md",
+      "bytes": 6689,
+      "sha256": "aaf98cb949045f6f6c21e498b6890d992802ed6ffa305d4007540d6ecbb4ab08"
+    },
+    {
+      "path": "MINIMAL_EXAMPLE_MANIFEST.json",
+      "bytes": 120185,
+      "sha256": "78bdcc1c7c5e6d4da089cb9e4a9c144223b09eded78d5f25540f763febee87d5"
+    },
+    {
+      "path": "SOURCE_VERSION_MAP.json",
+      "bytes": 42104,
+      "sha256": "0a4dcd10ccad4b93ff74786a489c83907e73b041c71b9cc89b1dd6b568bc730d"
+    },
+    {
+      "path": "STATE_AND_RECOVERY.md",
+      "bytes": 11952,
+      "sha256": "cc8b9adc9dde5f67b42e58ae3b625fb7181b7a60e1e9a6cb3387dbb291ce1cd6"
+    },
+    {
+      "path": "UPSTREAM_OVERLAP_AND_LICENSES.md",
+      "bytes": 18966,
+      "sha256": "a51ce006de1f3fc74b6406153ceced2400bb87b0c6b1b4f6045939a13e636ea4"
+    },
+    {
+      "path": "benchmark_capabilities.csv",
+      "bytes": 1859,
+      "sha256": "d542ad0eb59e4ca59cd36b3a04bc752bcfab67a755e8fd875caf138705910c1e"
+    },
+    {
+      "path": "benchmark_receipts.json",
+      "bytes": 15937,
+      "sha256": "2f85ec41d2666e07cb7f27326bd103f0840e97ee14024ea7322b37b64e47623b"
+    },
+    {
+      "path": "benchmark_review.json",
+      "bytes": 6498,
+      "sha256": "5fc08122d1685381219298edfef42e225647b551d921260305cc0d347340a19d"
+    },
+    {
+      "path": "forcing_capabilities.csv",
+      "bytes": 4113,
+      "sha256": "4360ca0a00d7420b688a39a94971513f5d77278ff1a5f39e94b0381cb3a3a296"
+    },
+    {
+      "path": "forcing_checks.json",
+      "bytes": 15022,
+      "sha256": "9d88864affde732c2c3f2b675fc364571d65a662029960716c230c7e0229cd94"
+    },
+    {
+      "path": "packaging_checks.json",
+      "bytes": 14212,
+      "sha256": "6b517235a93079092c2e151def6cb16f7220b9facac8d8390de4d794a813394b"
+    },
+    {
+      "path": "runtime_capabilities.csv",
+      "bytes": 3070,
+      "sha256": "63ee03394f7d2df5a57744351064c0122b2dafb0852c433db0b3bfcb2797c957"
+    },
+    {
+      "path": "runtime_checks.json",
+      "bytes": 17085,
+      "sha256": "dcc36cf73fc6641d2f11b6061ae77382c98154ca70a0603490fa8a2fec333fa7"
+    }
+  ],
+  "total_payload_bytes": 322773
+}
