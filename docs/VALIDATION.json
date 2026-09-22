@@ -67,18 +67,45 @@
     "Documented Linux/macOS no-follow inspection prerequisites."
   ],
   "continuous_integration": {
-    "status": "blocked_credential_workflow_scope",
+    "status": "passed",
+    "checked_at_utc": "2026-09-22T18:10:31.406073+00:00",
+    "run_id": 35765301098,
+    "run_url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/35765301098",
+    "tested_commit": "1ee028871daf00b3bb76f2416c5a2b5626ab7aee",
     "python_matrix": [
       "3.11",
       "3.12",
       "3.13",
       "3.14"
     ],
-    "workflow_template": "ci/tests.yml",
-    "active_workflow": false,
-    "runs_performed": 0,
-    "reason": "GitHub rejected the initial push because the Personal Access Token lacks workflow scope. The unpushed commit was amended to preserve the CI template outside .github/workflows/.",
-    "next_step": "Activate the template using an authorized workflow credential, then execute and verify the four-version matrix."
+    "jobs": [
+      {
+        "name": "offline (3.12)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/35765301098/job/106873196445"
+      },
+      {
+        "name": "offline (3.14)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/35765301098/job/106873196831"
+      },
+      {
+        "name": "offline (3.11)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/35765301098/job/106873196972"
+      },
+      {
+        "name": "offline (3.13)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/35765301098/job/106873197181"
+      }
+    ],
+    "tests_per_job": 54,
+    "jobs_passed": 4,
+    "model_runs": 0,
+    "log_sha256": "4b16c1ec3aa11ad2726d7bdb2af29b2bfcd9cede02601abee65a899bffc1b5a4",
+    "active_workflow": ".github/workflows/tests.yml",
+    "previous_blocker": "18 September Git credential lacked workflow scope;22 September authenticated gh credential has scope, while default Git credential remains stale. Push used the authenticated gh helper for this invocation."
   },
   "wheel": {
     "filename": "ngen_reforecast-0.1.0a1-py3-none-any.whl",

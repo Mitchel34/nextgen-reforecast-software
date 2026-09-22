@@ -1,0 +1,83 @@
+# Manuscript development and evidence plan
+
+Updated 22 September 2026 from the owner's [technical foundation and roadmap](../docs/source_material/TECHNICAL_FOUNDATION_2026-09-22.md), the preserved feasibility dossier and the current public package. The attachment is a supplied project brief: its dates, capability descriptions and suggested experiments are not automatically verified facts or completed work. This plan uses the repository's M0–M7 milestone identifiers in [IMPLEMENTATION_PLAN.md](../IMPLEMENTATION_PLAN.md); the differently numbered stages in the brief describe the same broad progression but do not replace those acceptance gates.
+
+## Article objective and contribution
+
+Prepare an *Environmental Modelling & Software* research article demonstrating whether a versioned NextGen reforecast workflow can share historical state reconstruction while preserving independent issue-specific forecasts, explicit time and forcing identities, committed results and replay recovery. The intended contribution is the evaluated contract and reproducible implementation. NGIAB already addresses deployment; DataStreamCLI and related tools address substantial preparation and execution needs. The article must compare concrete interfaces and explain the additional state/issue/recovery responsibilities without claiming that generic automation, containers or reproducible NextGen forecasts are new. Use the [current primary-source review](../docs/ECOSYSTEM_AND_DISSEMINATION.md) to qualify ecosystem descriptions; ForcingProcessor and the NextGen Forcings Engine are distinct tools.
+
+The current artifact is a substantive development draft. The package presently provides offline `init`, `plan`, `ledger`, `report` and `doctor` commands; their tests do not establish physical-model qualification. Native `run`/`resume`, a complete public fixture, the measured software study and external reproduction remain dependencies. The evidence register and implementation status control wording if the product evolves during writing.
+
+## Research questions and decisive evidence
+
+| Question | Decision rule | Required evidence / owner role |
+|---|---|---|
+| Q1. Does shared history preserve the requested forecast experiment? | Exact clocks, identities and key coverage; all discharge pairs satisfy the predeclared comparator against an independent sequential reference | E03; runtime lead produces bound inputs/outputs, verification lead checks complete joins and tolerances |
+| Q2. Are parent and sibling trajectories independent? | A branch-only perturbation leaves unaffected continuations unchanged; owned inputs, router and outputs satisfy process/file tests | E02/E03/E07; runtime and verification leads, with component-state coverage limitations retained |
+| Q3. Can incomplete work be recovered without changing initialization? | Replay starts from the original bound origin, preserves verified completed issues, refuses corrupt inputs and publishes one authoritative commit per issue | E05/E06/E07; recovery lead supplies fault/replay receipts and measured replay work |
+| Q4. What resources and repeated work does the design require? | Same scientific workload and enforced whole-job limits; all paired trials and failures retained; initialization and I/O included in accounting | E04; benchmark lead supplies raw wall/CPU/memory/I/O/phase measurements and analysis scripts |
+| Q5. Can another researcher use and reproduce the tool within its scope? | Complete documented example and supported variation on a qualified clean environment, with failures and assistance reported | E08/E09; domain lead supplies second-domain fixture; independent researcher supplies execution record |
+
+The existing [protocol](../benchmarks/PROTOCOL.md) and [experiment matrix](../benchmarks/EXPERIMENT_MATRIX.json) control numerical rules, envelopes and trial counts. A research question can receive an unfavorable or limited answer. Do not change acceptance criteria after seeing results without an explicit versioned amendment. Predictive hydrologic skill is outside these primary runtime questions.
+
+## Scope and terminology to carry through every artifact
+
+- **NWM, NextGen and this research archive:** NWM denotes NOAA's system/products; NextGen denotes the framework. A research reforecast binds one realization, domain, parameter set, initialization and forecast-weather archive. It does not recreate operational NWM state or forecasts merely because its forcing originates in NWM products.
+- **Forecast coordinates:** retain realization/scientific-variant identity, domain, location, issue, lead and valid time. Preserve distinct forecasts sharing a valid time; validate `valid = issue + lead` separately from provider interval-start labels.
+- **Initialization:** report origin, first issue, initial-condition configuration and elapsed antecedent history. The brief's production example uses 18 July to 17 September 2018, a 61-day convention; this is not proof of converged or fully spun-up state. The existing physical-qualification candidate instead starts 1 December 2021 and must keep its original inputs and 786-hour recipe.
+- **Forcing and state lineage:** distinguish historical input from issue-specific forecast input, source timestamp from represented interval, and an object locator from resident bytes. Track missing, excluded, imputed, substituted and unavailable states separately. AORC cannot silently replace forecast meteorology. Historical gap reports require bound source/treatment evidence; they do not establish operational availability.
+- **Product boundary:** HYDRA and other evaluation or ML systems may consume exported archives. They are optional independent consumers, not required execution dependencies or proof that this generator improves forecast skill.
+- **Physical profile:** retain the initial Linux ARM64, single-threaded SLOTH/NoahOWP/CFE and channel-only routing scope. Selectable retained leads, shorter model horizons, arbitrary basins and additional commands in the brief are proposals until separately implemented and qualified.
+- **CFE parameter amendment:** preserve the inherited reference and inspected isolated experiment. The intended `mean.slope_1km` mapping change must be bound and qualified as a distinct candidate, with new antecedent state and coupled comparison. Prior isolated arithmetic is not a corrected coupled-reforecast result; the full upstream PR also changes other settings.
+
+The proposed 20-hour/two-issue real fixture is a useful future task, not an existing complete dataset. Its initialization and available state would have to be justified on their own terms. It cannot replace the unavailable portions of the 2021-origin Watauga fixture or imply that 20 hours establishes hydrologic convergence.
+
+## Section ownership and completion packages
+
+Roles below allocate work; they are not an author list, CRediT assignment or institutional affiliation. The coordinator must assign named contributors before execution. The manuscript lead integrates prose, while the evidence-producing lead remains responsible for its factual checks.
+
+| Section / package | Drafting and review owner | Concrete output and dependency | Done when |
+|---|---|---|---|
+| Introduction and related work | Manuscript lead; upstream reviewer | Version-specific ecosystem comparison, proposed contribution and NWM/NextGen terminology; M0 plus refreshed official sources | Every external claim has a primary source; no unsupported novelty or priority claim |
+| Formal experiment definition | Manuscript lead; scientific-methods reviewer | State equation, issue/lead/valid-time key, interval table, initialization and source-availability policy | Examples agree with tested planner and physical adapter; retrospective information and assumptions labeled |
+| Architecture and implementation | Runtime/recovery leads; manuscript lead | Diagram and methods tied to release code, capability matrix and source/build/component identities; M2/M3 | Proposed verbs become implemented verbs only for inspected release features with matching evidence |
+| Configuration and CFE qualification | Scientific-configuration lead; independent verification reviewer | Source-field/units/transformation audit, original/candidate manifests and bounded paired experiment; M2 parameter gate | Mismatch disposition recorded; each released variant has its own state/reference identity; original evidence remains unchanged |
+| Verification and experimental methods | Benchmark lead; scientific-methods reviewer | Frozen protocol, fixture manifest, reference recipe, faults, limits and metric definitions; M2–M4 | Another operator can run each admitted case from the retained recipe; all prerequisites explicit |
+| Correctness, reliability and resource results | Verification/benchmark leads; manuscript lead | Machine-readable outcome tables, matched residuals, phase/resource metrics and failure/replay timelines; M3/M4 | Plots regenerate from all retained receipts, including adverse runs; claims match measured scope |
+| Transfer and researcher demonstration | Domain lead and independent researcher; manuscript lead | New River qualification, tutorial execution, one supported variation and assistance record; M5 | Two domains counted correctly; actual independent operation documented |
+| Archive use demonstration | Export lead; downstream reviewer | Round-trip example preserving issue/lead/valid time and scientific identity into one declared evaluation format | Export is implemented and schema-tested; HYDRA shown only as an optional consumer if used |
+| Discussion and conclusions | Manuscript lead; all evidence owners | Limits, operational-state distinction, initialization uncertainty, integration/maintenance and justified conclusions | Every conclusion traces to a release feature and retained experiment; unresolved questions remain visible |
+| Availability and declarations | Release coordinator and author team | Licenses/notices, repositories/DOIs, data/image identifiers, authorship, funding/interests/AI disclosure | Exact artifacts accessible under established terms and factual declarations confirmed by authors |
+
+## Ordered writing and execution milestones
+
+**P1 — Contract draft, now.** Preserve and classify the supplied brief, update the definitions and product boundary, maintain `CLAIMS.csv`, and complete this plan. Keep the existing results section explicit about its historical and isolated-sensitivity evidence. The manuscript can improve while physical prerequisites remain unresolved.
+
+**P2 — Evidence-ready methods, after M2.** Close the source/build/component and fixture manifests; resolve the CFE mapping decision; freeze reference construction, supported profile, metric units, thresholds and admitted resources. Add a reproducibility supplement describing every input required from origin to final target. Do not substitute the 2018 production history for the 2021 fixture.
+
+**P3 — Executable results package, after M3/M4.** Capture E03–E07 outputs, analyze complete key sets and all trial outcomes, generate the declared figures/tables, and draft the actual correctness, efficiency and recovery results. A failing experiment prompts a documented fix and retained rerun, or narrower claims; it does not disappear from the analysis.
+
+**P4 — Demonstrated reuse, after M5.** Complete the second domain, independent researcher example and one supported configuration change. Add a bounded export/use example only when the relevant adapter exists. Record assistance and usability limitations. Full multi-year reruns are not prerequisites for claiming a small validated example, nor can a small example prove production-scale reliability.
+
+**P5 — Release-linked manuscript, M6/M7.** Freeze the research release, archive code/data/runtime and benchmark assets where rights permit, regenerate figures, perform a claim-by-claim scientific review, and verify the current journal instructions. Confirm all author metadata and declarations. Preparing the package does not submit it; submission, messages and public conference actions require their own explicit instruction.
+
+No calendar completion promise follows from the brief. The proposed AGU dissemination target belongs to a separately verified event/eligibility decision and cannot lower the evidence gates or justify presenting unmeasured savings. The [conference check](../docs/ECOSYSTEM_AND_DISSEMINATION.md) distinguishes confirmed event dates from category-restricted late-breaking opportunities; eligibility for this general software work is not established.
+
+## Required result artifacts
+
+The benchmark runner should produce immutable per-run receipts and raw outputs as specified by the protocol. A later analysis step should derive `comparison_summary.csv`, `resource_trials.csv`, `fault_recovery_summary.csv`, `transfer_summary.csv` and `independent_reproduction.md` inside a versioned results deposit; these are named deliverables, not files claimed to exist today. Every derived file must record protocol version, source commit, input receipt hashes, units, denominator definitions and coverage/failure counts.
+
+The [figure/table plan](FIGURE_TABLE_PLAN.md) maps each visual to these receipts. Keep the historical V2/V3 results, saved isolated-CFE arithmetic, new public physical runs and independent reproduction in separate evidence categories. A development-schematic image may be produced before measurements, but numerical panels remain empty until their actual data exist.
+
+## Release and manuscript completion checklist
+
+- [ ] Release code, native source patches/preimages, component artifacts and compatible image are version-bound; fresh installation and physical example are verified.
+- [ ] Initialization, forcing units/intervals/source selection, gaps, scientific treatments and CFE variant are explicit and reproducible from retained inputs.
+- [ ] Complete comparison keys, numerical thresholds, parent/sibling checks, interruption outcomes and resource accounting are retained and analyzed.
+- [ ] Second-domain and independent-user evidence support the actual scope claimed, including assistance and failed attempts.
+- [ ] Figure/table scripts regenerate all reported numbers from immutable public or explicitly access-controlled deposits; archive size and complete input footprint are distinguished.
+- [ ] Code/contributor rights, dependency notices and input/output redistribution terms are resolved; no guessed license or invented DOI is used.
+- [ ] `CLAIMS.csv`, abstract, results and conclusions agree with the final release and evidence; historical version and CFE sensitivity qualifications remain visible.
+- [ ] Current official journal guide is read and checked; exact category, files, limits and disclosure requirements are confirmed. The 18 September 403 record is not compliance evidence.
+- [ ] Authors approve identities, order, affiliations, contributions, funding, interests and AI-use wording; no details are inferred from repository ownership.
+- [ ] Final reproducibility package, manuscript source, supplement, citations and availability statement pass an independent review. No submission is made by this plan.

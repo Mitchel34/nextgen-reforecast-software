@@ -2,14 +2,19 @@
 
 A research software project for constructing auditable NextGen reforecast campaigns with shared historical state and independent forecast branches.
 
+The intended workflow lets a scientist specify a watershed, supported realization, historical initialization, archived forecast weather and issue schedule, then obtain an archive with explicit issue, lead and valid times, provenance and verification evidence. The project builds on the NextGen ecosystem and keeps forecast generation separate from downstream evaluation and HYDRA/ML correction.
+
 **Current stage: installable offline planning foundation (`0.1.0a1`).** The package provides campaign validation, expected issue/lead ledgers, planning reports and historical runtime inspection. Physical NextGen execution and recovery are not implemented or qualified yet. The repository also contains a completed feasibility dossier and a substantive manuscript draft. CLI examples in the original outline remain proposals except where implemented below.
 
 ## Start here
 
 - [Implementation plan and acceptance milestones](IMPLEMENTATION_PLAN.md)
+- [Development backlog and first work cycle](docs/DEVELOPMENT_BACKLOG.md)
+- [22 September roadmap reconciliation](docs/ROADMAP_RECONCILIATION.md)
 - [Current implementation and validation status](docs/IMPLEMENTATION_STATUS.md)
 - [User guide](docs/USER_GUIDE.md) and [architecture](docs/ARCHITECTURE.md)
 - [Manuscript draft](paper/MANUSCRIPT.md) and [claim/evidence register](paper/CLAIMS.csv)
+- [Manuscript development plan](paper/DEVELOPMENT_PLAN.md)
 - [Predeclared benchmark protocol](benchmarks/PROTOCOL.md)
 - [Runtime qualification and missing assets](docs/RUNTIME_QUALIFICATION.md)
 
@@ -32,6 +37,7 @@ The example includes no scientific inputs. `plan`, `report` and `doctor` intenti
 
 ## Project material
 
+- [Technical foundation and software roadmap supplied 22 September](docs/source_material/TECHNICAL_FOUNDATION_2026-09-22.md) — preserved design input; see the reconciliation for current implementation and evidence status
 - [Software and manuscript outline](nextgen_Software/SOFTWARE_AND_MANUSCRIPT_OUTLINE.md)
 - [Formatted outline](nextgen_Software/SOFTWARE_AND_MANUSCRIPT_OUTLINE.docx)
 - [Investigation instructions](nextgen_Software/AGENT_INFORMATION_REQUEST.md)

@@ -1,0 +1,17 @@
+{
+  "schema_version": "owner-design-source/1.0",
+  "source_kind": "owner_supplied_attachment",
+  "received_date": "2026-09-22",
+  "file": "TECHNICAL_FOUNDATION_2026-09-22.md",
+  "bytes": 35590,
+  "sha256": "f5a139231f91827fdec33c1b35f82bf792fc0194f5d09586cbd8ecc4a5eb36de",
+  "preservation": "Verbatim supplied roadmap; original attachment unchanged.",
+  "evidence_status": "Product direction and reported research context, not independent verification or proof of implemented capabilities.",
+  "controlling_plan": "../../IMPLEMENTATION_PLAN.md",
+  "reconciliation": "../ROADMAP_RECONCILIATION.md",
+  "notes": [
+    "References to qualified configurations concern reported historical research; public native qualification remains incomplete.",
+    "The proposed 20-hour/two-issue fixture does not replace the existing 786-hour reference history.",
+    "Operational capabilities and conference deadlines need live official verification."
+  ]
+}

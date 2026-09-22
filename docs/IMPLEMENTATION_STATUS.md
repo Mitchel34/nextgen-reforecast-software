@@ -12,20 +12,24 @@ Updated 22 September 2026; local package validation below was performed on 18 Se
 
 Validation: **54 local tests passed** on Python 3.14.7/macOS. A built wheel installed in a separate virtual environment and passed **nine CLI checks outside the source tree**. The tests cover input and time contracts, bounds, missing/corrupt assets, safe file handling, profile identity and atomic output behavior. Independent code review found a one-byte read-budget overshoot during file growth; it was corrected and covered by four regression tests. Planner support is explicitly Linux/macOS. Full details and source identities are in [VALIDATION.json](VALIDATION.json).
 
-The [active GitHub Actions workflow](../.github/workflows/tests.yml) covers Python 3.11, 3.12, 3.13 and 3.14 on Linux. A fresh permission check on 22 September confirmed the credential now has `workflow` scope. Activation is being published and its first remote result is pending; the prior 18 September permission failure is retained in the validation history.
+The [active GitHub Actions workflow](../.github/workflows/tests.yml) passed on Python 3.11, 3.12, 3.13 and 3.14 on Linux on 22 September: **54 tests passed in each of four jobs**, including fresh package installation. [Run 35765301098](https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/35765301098) tested commit `1ee028871daf00b3bb76f2416c5a2b5626ab7aee`; exact results are retained in [VALIDATION.json](VALIDATION.json). The earlier workflow-scope blocker was resolved by using the authenticated GitHub CLI credential for publication.
 
 ## Milestone progress
 
 | Milestone | State | Next concrete completion step |
 |---|---|---|
 | M0 Feasibility | Complete | Preserve existing dossier |
-| M1 Planning foundation | Implemented and locally verified | Verify the first active CI matrix and resolve any platform failures |
+| M1 Planning foundation | Implemented; local installation and four-version Linux CI verified | Develop versioned lead-retention and provenance extensions without weakening existing contracts |
 | M2 Runtime/example closure | Inspection tools and build/closure specification implemented | Restore exact missing fixture assets; resolve unknown hashes, dependency/component source attestations and middleware loading; establish a working Linux ARM64 build environment |
 | M3 Physical execution | Not implemented | Complete M2, then implement adapter and run the declared Watauga reference |
 | M4 Reliability/performance | Protocol defined; physical execution not started | Implement synthetic process/commit fixtures, then qualified physical failure/replay and equal-resource trials |
 | M5 Transfer/reproduction | Not started | Qualify New River and recruit an independent researcher after a complete example exists |
 | M6 Manuscript | Substantive development draft and evidence scaffolding | Fill measured results from M3–M5; confirm journal requirements, authorship and declarations |
 | M7 Release/submission | Not ready | Resolve license/redistribution, freeze source/image/data, archive artifacts and complete final review |
+
+## September roadmap integration
+
+The additional owner roadmap is [preserved with its hash](source_material/MANIFEST.json). All 24 sections are mapped in [the reconciliation](ROADMAP_RECONCILIATION.md); [18 prioritized work packages](DEVELOPMENT_BACKLOG.md) define owners, dependencies, tests and a conditional first ten-working-day cycle. The [manuscript plan](../paper/DEVELOPMENT_PLAN.md) maps questions, sections and figures to required evidence; the claim register now contains 43 claims. This update adds plans, source review and CI, with no change to the planner/runtime code or physical qualification status.
 
 ## Open physical and publication dependencies
 
