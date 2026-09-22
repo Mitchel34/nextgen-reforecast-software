@@ -10,7 +10,7 @@ mkdir -p .local/tmp
 TMPDIR="$PWD/.local/tmp" PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
 ```
 
-The core currently uses only the standard library. Unit tests exercise parsing, asset identity and path bounds, time arithmetic, explicit execution limits and transactional CLI output; they do not run hydrologic models. The [CI template](../ci/tests.yml) is designed to repeat the offline suite on Python 3.11–3.14 using pinned action revisions. Activation is blocked because the current publishing credential lacks GitHub `workflow` scope; no remote CI run has occurred. See [activation instructions](../ci/README.md).
+The core currently uses only the standard library. Unit tests exercise parsing, asset identity and path bounds, time arithmetic, explicit execution limits and transactional CLI output; they do not run hydrologic models. The [GitHub Actions workflow](../.github/workflows/tests.yml) repeats the offline suite on Python 3.11–3.14 using pinned action revisions. Workflow permission was verified on 22 September 2026; consult [implementation status](IMPLEMENTATION_STATUS.md) for the actual run outcome.
 
 The coordinator owns CLI/package integration; the campaign and runtime modules have focused contracts and independent tests. New functionality must retain deterministic scientific identities and explain how a new check differs from source inspection, a synthetic test and a physical-model qualification. Do not add a passing-looking mock in place of an unqualified runtime.
 

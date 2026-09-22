@@ -1,7 +1,5 @@
-# Offline test workflow template
+# Offline test workflow
 
-`tests.yml` defines the offline package suite on Linux/Python 3.11–3.14 with pinned GitHub action revisions and read-only repository permissions. It is inactive in this directory.
+The active workflow is [`.github/workflows/tests.yml`](../.github/workflows/tests.yml). It installs the package and runs the offline suite on Linux/Python 3.11–3.14, using pinned action revisions and read-only repository permissions.
 
-The initial publication attempt was rejected because the publishing credential lacks GitHub `workflow` scope. The code and manuscript are published independently; local validation is recorded in [the validation receipt](../docs/VALIDATION.json). No remote CI pass is claimed.
-
-Once a credential authorized to update workflows is available, move `ci/tests.yml` to `.github/workflows/tests.yml`, commit and push, and verify all four matrix jobs. Retain the run URL and exact tested commit in the validation receipt. A configured workflow alone does not satisfy this check.
+Activation was blocked on 18 September 2026 because the publishing credential lacked GitHub `workflow` scope. A fresh permission check on 22 September found that scope available, and the workflow was moved into its active location. Consult [implementation status](../docs/IMPLEMENTATION_STATUS.md) and the [validation receipt](../docs/VALIDATION.json) for verified run results. A workflow definition alone is not a passing test result.
