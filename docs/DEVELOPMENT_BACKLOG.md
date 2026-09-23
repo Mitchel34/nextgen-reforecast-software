@@ -2,6 +2,8 @@
 
 This backlog operationalizes the owner's 24-section roadmap while retaining [IMPLEMENTATION_PLAN.md](../IMPLEMENTATION_PLAN.md) milestones M0–M7. [ROADMAP_RECONCILIATION.md](ROADMAP_RECONCILIATION.md) records all section mappings, interface differences and fixture boundaries. Stable work-package IDs below should be used in issues, PRs, tests, evidence manifests and manuscript claims.
 
+**23 September product amendment:** the [objectives and journeys](PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) make a hosted browser experience, minimal researcher inputs and automatic preparation part of the first usable product. RF-001–RF-018 remain engine/research packages. Proposed WEB-01–WEB-07 cover identifier/coverage discovery, acquisition, forms, service jobs, results, recipes and UX evidence. This backlog's ten-day cycle is an internal engineering increment, not a complete web-app delivery schedule. Use the [UX evaluation protocol](UX_EVALUATION_PROTOCOL.md) when assigning researcher-facing deliverables.
+
 The starting product is the public `0.1.0a1` offline planning foundation. “Ready” below means work can begin with bounded local inputs; it does not mean implemented. “Blocked” identifies an external or physical-evidence dependency, while independent contract/documentation work may proceed. All proposed module names and function signatures are design targets, not existing callable APIs. Original Reforecast/HYDRA/thesis folders remain read-only; outputs, tests and staging go in this repository or ignored local directories. Do not hydrate placeholders or launch native models to satisfy a planning task.
 
 ## Priority queue and ownership
@@ -71,9 +73,9 @@ Existing explicit `issue_times_utc` lists already support regular and irregular 
 
 ### RF-007 — Prepare inputs and seal readiness honestly
 
-`prepare_campaign()` should combine asset inventory, semantic checks and explicit runtime capabilities into a preparation report. Initially accept resident user-supplied/versioned inputs; any later acquisition adapter requires declared source, byte/time/request bounds and an explicit policy. Preserve original input sources and stage within the software workspace. A complete preparation report may produce a lock, while missing dependencies produce actionable blockers.
+`prepare_campaign()` should combine asset inventory, semantic checks and explicit runtime capabilities into a preparation report. Resident/versioned inputs are an internal adapter-development stage. The final researcher workflow requires WEB-01/WEB-02 to resolve an identifier and acquire/prepare supported inputs automatically under declared source, byte/time/request and compute bounds. Researchers must not assemble model files or repair private paths. Preserve original input sources and stage within the software workspace or separately admitted service storage. A complete preparation report may produce a lock, while missing dependencies produce actionable browser explanations.
 
-**Acceptance:** missing or unknown files never produce execution-ready locks; prepared bytes and interpretation match RF-003, RF-004 and RF-005A; changed sources require a new lock. No implicit download/hydration, parameter repair, origin shortening or weather substitution occurs. A preparation-only result cannot be reported as a run.
+**Acceptance:** missing or unknown files never produce execution-ready locks; prepared bytes and interpretation match RF-003, RF-004 and RF-005A; changed sources require a new lock. The existing offline commands never download or hydrate implicitly. Future service submission may trigger the disclosed, bounded acquisition within established service permissions; protected-folder hydration, silent parameter repair, origin shortening and weather substitution remain prohibited. A preparation-only result cannot be reported as a run. Unknown coverage must not be presented as verified availability.
 
 ### RF-008 — Close the native runtime build and component identities
 
@@ -123,7 +125,7 @@ Implement a side-effect-free recovery plan that verifies lock/commits, preserves
 
 Qualify the second domain with its two nested output locations sharing one compatible physical history. Release a complete tutorial, exact fixture, supported-platform matrix and a configuration-only variation. Recruit a researcher who did not implement the system after the runnable example exists.
 
-**Done:** New River outputs pass the physical equivalence and recovery criteria. The independent researcher installs, reproduces and changes one supported setting without editing core/native source; retain environment, commands, outputs, questions and failures. A second agent or second local virtual environment is installation testing, not independent scientific reproduction.
+**Done:** New River outputs pass the physical equivalence and recovery criteria. An independent operator installs, reproduces and changes one supported setting without editing core/native source; retain environment, commands, outputs, questions and failures. Separately, external hydrologists complete the supported browser journeys without CLI, Python or manual input preparation, using [UX_EVALUATION_PROTOCOL.md](UX_EVALUATION_PROTOCOL.md). Record assistance and unsuccessful tasks as well as successes. A second agent or second local virtual environment is installation testing, not independent scientific reproduction or external-user usability evidence.
 
 ### RF-016 — Develop the manuscript alongside the code
 
@@ -142,6 +144,8 @@ The [September 22 official-source review](ECOSYSTEM_AND_DISSEMINATION.md) establ
 Resolve core-code licensing and third-party/data distribution terms at their actual scopes. Inventory notices, selected source/image/fixture versions, benchmarks and installation instructions. Tag only coherent verified artifacts and produce archival metadata/identifiers after the package is complete. Keep public repository availability separate from a qualified, licensed research release.
 
 **Done:** the release checklist closes all claimed capability/evidence/rights gaps; released files reproduce the retained results; independent-transfer evidence is linked; archival identifiers resolve; manuscript availability statements match actual public artifacts. Publication and submission steps require the author's concrete final decisions when those artifacts are ready.
+
+For a hosted-product release, also close the admitted WEB packages and claimed UX pathways: account/access boundaries, job/resource limits, storage/retention and sharing policy, source-availability errors, verified downloads and independent browser-user evidence. An engine-only tag may be an engineering release but does not satisfy the first usable hosted-product objective. Planning these checks does not provision infrastructure or authorize spending.
 
 ## First ten working days
 

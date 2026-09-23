@@ -1,6 +1,6 @@
 # Implementation status
 
-Updated 22 September 2026; local package validation below was performed on 18 September. Package version: `0.1.0a1`. The first implementation increment is an installable **offline planning foundation**; it is not a complete reforecast generator.
+Planning status updated 23 September 2026; local package validation below was performed on 18 September and CI on 22 September. Package version: `0.1.0a1`. The first implementation increment is an installable **offline planning foundation**; it is not a complete reforecast generator or hosted web application.
 
 ## Implemented and locally verified
 
@@ -32,6 +32,8 @@ The [active GitHub Actions workflow](../.github/workflows/tests.yml) passed on P
 The additional owner roadmap is [preserved with its hash](source_material/MANIFEST.json). All 24 sections are mapped in [the reconciliation](ROADMAP_RECONCILIATION.md); [18 prioritized work packages](DEVELOPMENT_BACKLOG.md) define owners, dependencies, tests and a conditional first ten-working-day cycle. The [manuscript plan](../paper/DEVELOPMENT_PLAN.md) maps questions, sections and figures to required evidence; the claim register now contains 43 claims. This update adds plans, source review and CI, with no change to the planner/runtime code or physical qualification status.
 
 ## Open physical and publication dependencies
+
+The [23 September product objectives](PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) record nine objectives and seven researcher journeys, separating owner direction from research-informed proposals. A hosted graphical interface, minimal location/date/lead inputs and automatic preparation now define the intended product. Proposed WEB-01–WEB-07 packages and the [UX evaluation protocol](UX_EVALUATION_PROTOCOL.md) supplement the engine backlog. No web code, scientific acquisition, model execution, deployment or user study was performed for this documentation update; existing validation counts and physical status are unchanged.
 
 The [CFE drainage mapping review](CFE_PARAMETER_FINDING.md) verified the upstream `mean.slope` to `mean.slope_1km` generator change and recomputed prior isolated-CFE saved results: Watauga median inherited excess is +102.838% in the first 18 post-warmup hours and +2.485% over 52 evaluation weeks. This separate source experiment is not a new public-runtime test or a coupled reforecast result. M2 now also requires resolving source-field semantics and deployed-library identity before qualifying a release configuration. Any adopted parameter correction requires new configuration identities, antecedent history and references; the historical profile remains unchanged.
 

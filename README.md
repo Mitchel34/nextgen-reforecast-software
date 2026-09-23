@@ -2,12 +2,14 @@
 
 A research software project for constructing auditable NextGen reforecast campaigns with shared historical state and independent forecast branches.
 
-The intended workflow lets a scientist specify a watershed, supported realization, historical initialization, archived forecast weather and issue schedule, then obtain an archive with explicit issue, lead and valid times, provenance and verification evidence. The project builds on the NextGen ecosystem and keeps forecast generation separate from downstream evaluation and HYDRA/ML correction.
+The intended hosted web application lets a hydrologist select a watershed or USGS/NWM identifier, a supported historical period and forecast lead preferences. The service acquires and prepares inputs, supplies inspectable scientific defaults, executes on supported Linux infrastructure and returns research datasets with provenance and verification evidence. Researchers should need no command line, Python or local modeling installation. The project builds on the NextGen ecosystem and keeps forecast generation separate from downstream HYDRA/ML correction.
 
 **Current stage: installable offline planning foundation (`0.1.0a1`).** The package provides campaign validation, expected issue/lead ledgers, planning reports and historical runtime inspection. Physical NextGen execution and recovery are not implemented or qualified yet. The repository also contains a completed feasibility dossier and a substantive manuscript draft. CLI examples in the original outline remain proposals except where implemented below.
 
 ## Start here
 
+- [Product objectives and user experience pathways](docs/PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) — owner requirements, proposed study modes and build mappings
+- [User experience evaluation protocol](docs/UX_EVALUATION_PROTOCOL.md) — task scenarios, acceptance criteria and evidence scorecard
 - [Implementation plan and acceptance milestones](IMPLEMENTATION_PLAN.md)
 - [Development backlog and first work cycle](docs/DEVELOPMENT_BACKLOG.md)
 - [22 September roadmap reconciliation](docs/ROADMAP_RECONCILIATION.md)
@@ -64,7 +66,7 @@ The source and receipt references resolve to a private preservation snapshot; th
 
 ## Scope
 
-The proposed tool separates reforecast generation from downstream forecast correction and evaluation. The initial design targets a narrowly qualified Linux runtime with continuous historical initialization, independent hourly 18-hour forecasts, explicit forcing and time semantics, verified output commits, and documented history-replay recovery.
+The proposed product combines a browser interface and automatic input preparation with a narrowly qualified Linux runtime: continuous historical initialization, independent hourly 18-hour forecasts, explicit forcing and time semantics, verified output commits, and documented history-replay recovery. Continuous historical simulation, published-study recipes and controlled comparisons are additional design proposals recorded in the objectives. The hosted application does not exist yet; the installable commands above are the current offline foundation and future operator interface.
 
 Existing research workspaces and the separate private HYDRA repository remain read-only throughout development. Large research archives, original model code, datasets, binaries, credentials, and cloud infrastructure are not copied into this repository.
 
