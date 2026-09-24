@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "protocol_version": "0.2",
+  "protocol_version": "0.3",
   "created_date": "2026-09-18",
   "status": "predeclared_not_executed",
   "executable_launcher": false,
@@ -143,11 +143,11 @@
         "E02"
       ],
       "blocked_until": [
-        "exact_watauga_fixture_restored",
-        "qualified_linux_arm64_runtime",
+        "exact_original_watauga_execution_inputs_restored_and_sealed",
+        "clean_linux_arm64_build_and_loader_admitted",
         "component_and_source_attestation",
         "reference_recipe_and_content_validation",
-        "release_configuration_parameter_semantics_resolved"
+        "rf005a_diagnostic_historical_baseline_admission_with_known_cfe_concern"
       ],
       "acceptance": [
         "complete_keys",
@@ -155,8 +155,29 @@
         "exact_clocks",
         "parent_continuation_equivalence"
       ],
-      "notes": "31 catchments; origin and two issue times bound in fixture_specification; selected state tolerances require separate unit-specific manifest.",
-      "results": null
+      "notes": "First physical task is the original diagnostic Watauga baseline: 31 catchments, original 786-hour history and two issues bound in fixture_specification. Five existing variants and invocation ceiling unchanged. RF-005A admits the known CFE concern explicitly; RF-005B coupled candidate qualification is downstream and separately bounded. New reference hashes are generated outputs, not first-reference prerequisites; all required input identities must be known. Reference generation alone is not an E03 pass. Historical reference identities remain preserved. No compact/production-origin substitute or corrected-candidate qualification is implied; selected state tolerances require a separate unit-specific manifest.",
+      "results": null,
+      "phase_order": [
+        {
+          "phase": "independent_reference_generation",
+          "variants": [
+            "sequential_reference_issue_1",
+            "sequential_reference_issue_2"
+          ],
+          "produces": "validated_and_sealed_new_issue_reference_outputs",
+          "requires_existing_new_reference_output_hashes": false
+        },
+        {
+          "phase": "complete_physical_comparison",
+          "variants": [
+            "uninterrupted_history_control",
+            "same_weather_shared_branches",
+            "archived_weather_shared_branches"
+          ],
+          "requires": "validated_and_sealed_references_for_each_comparison",
+          "produces": "complete_baseline_comparison_and_isolation_evidence"
+        }
+      ]
     },
     {
       "experiment_id": "E04",
@@ -326,17 +347,19 @@
         "E08"
       ],
       "blocked_until": [
-        "versioned_licensed_release_and_data_deposit",
+        "immutable_licensed_accessible_reproduction_candidate",
         "independent_researcher",
         "qualified_clean_environment",
         "documentation_frozen"
       ],
       "acceptance": [
         "example_and_variation_valid",
+        "frozen_example_identity_preserved",
+        "variation_has_new_linked_experiment_identity_and_difference_record",
         "all_attempts_and_assistance_recorded",
         "no_private_author_dependencies"
       ],
-      "notes": "Maximum 3 attempts per variant; successes do not erase failed attempts. A second agent on the developer host is not an independent researcher.",
+      "notes": "REPRODUCTION_CANDIDATE is an immutable licensed accessible candidate, not the final release. Maximum 3 attempts per variant and 6 invocations total; successes do not erase failed attempts. Fixes create a new candidate and relevant retests; extra physical attempts require a recorded protocol amendment. Final release follows reproduction, admitted UX evidence and fix/retest disposition. Browser-user sessions have a separate UX evidence contract and no implicit access to this physical allowance. A second agent on the developer host is not an independent researcher.",
       "results": null
     }
   ],
@@ -346,6 +369,13 @@
       "date": "2026-09-18",
       "reason": "Verified upstream CFE attribute replacement and reviewed existing isolated synthetic-weather sensitivity; adds prospective parameter-semantics qualification, not retrospective preregistration.",
       "prior_protocol_commit": "f55e4e7cf30907b5867e21f2c6a207fa2eb02c04"
+    },
+    {
+      "version": "0.3",
+      "date": "2026-09-24",
+      "reason": "Clarifies original-Watauga first-reference admission, separates RF-005A diagnostic baseline from downstream RF-005B release-candidate qualification, and places an immutable reproduction candidate before E09. Clocks, numerical comparator, resource ceilings, experiment variants, repeats and maximum invocations are unchanged.",
+      "prior_protocol_commit": "78cfb92db53b6d58d8b8de9d056e067597f568f5",
+      "baseline_manifest": "docs/planning/2026-09-24_BASELINE.json"
     }
   ],
   "parameter_semantics_gate": {
@@ -366,6 +396,24 @@
     "coupled_sensitivity_execution_status": "not_started",
     "coupled_sensitivity_invocation_bound": null,
     "coupled_sensitivity_requires_separate_predeclared_manifest": true,
-    "notes": "Historical same-treatment reproduction does not validate parameter semantics. Do not append original/candidate coupled runs to the existing matrix allowance."
-  }
+    "notes": "RF-005A can admit the exact diagnostic historical baseline with its known mapping concern after required identities and treatment are bound. RF-005B uses the later reference executor for a separately bounded paired experiment and a candidate release decision. Historical same-treatment agreement does not validate parameter semantics or a corrected candidate. Do not append original/candidate coupled runs to the existing matrix allowance; a changed released profile requires its own applicable physical evidence.",
+    "diagnostic_baseline_admission": {
+      "stage": "RF-005A",
+      "status": "not_implemented",
+      "purpose": "reproduce_exact_historical_baseline_with_known_cfe_mapping_concern",
+      "required": [
+        "exact_original_source_mapping_values_and_configuration_identity",
+        "generator_hydrofabric_transform_and_loaded_library_identities",
+        "source_units_meanings_and_declared_uncertainties",
+        "explicit_diagnostic_purpose_and_known_concern"
+      ],
+      "requires_rf005b_result": false,
+      "certifies_release_parameterization": false
+    },
+    "requires_scope": "candidate_release_parameterization_qualification_not_first_diagnostic_reference"
+  },
+  "updated_date": "2026-09-24",
+  "first_physical_experiment_decision": "docs/FIRST_PHYSICAL_EXPERIMENT.md",
+  "release_sequence": "docs/RELEASE_SEQUENCE.md",
+  "ux_evidence_contract": "docs/UX_EVIDENCE_CONTRACT.md"
 }

@@ -8,6 +8,7 @@ The intended hosted web application lets a hydrologist select a watershed or USG
 
 ## Start here
 
+- [Working plan and reassessment — 24 September](docs/WORKING_PLAN.md) — saved baseline, three resolved planning concerns and remaining decisions
 - [Product objectives and user experience pathways](docs/PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) — owner requirements, proposed study modes and build mappings
 - [User experience evaluation protocol](docs/UX_EVALUATION_PROTOCOL.md) — task scenarios, acceptance criteria and evidence scorecard
 - [Implementation plan and acceptance milestones](IMPLEMENTATION_PLAN.md)

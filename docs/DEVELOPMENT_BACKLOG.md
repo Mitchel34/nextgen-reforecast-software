@@ -1,10 +1,12 @@
-# Development backlog — 22 September 2026
+# Development backlog — updated 24 September 2026
 
 This backlog operationalizes the owner's 24-section roadmap while retaining [IMPLEMENTATION_PLAN.md](../IMPLEMENTATION_PLAN.md) milestones M0–M7. [ROADMAP_RECONCILIATION.md](ROADMAP_RECONCILIATION.md) records all section mappings, interface differences and fixture boundaries. Stable work-package IDs below should be used in issues, PRs, tests, evidence manifests and manuscript claims.
 
 **23 September product amendment:** the [objectives and journeys](PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) make a hosted browser experience, minimal researcher inputs and automatic preparation part of the first usable product. RF-001–RF-018 remain engine/research packages. Proposed WEB-01–WEB-07 cover identifier/coverage discovery, acquisition, forms, service jobs, results, recipes and UX evidence. This backlog's ten-day cycle is an internal engineering increment, not a complete web-app delivery schedule. Use the [UX evaluation protocol](UX_EVALUATION_PROTOCOL.md) when assigning researcher-facing deliverables.
 
 The starting product is the public `0.1.0a1` offline planning foundation. “Ready” below means work can begin with bounded local inputs; it does not mean implemented. “Blocked” identifies an external or physical-evidence dependency, while independent contract/documentation work may proceed. All proposed module names and function signatures are design targets, not existing callable APIs. Original Reforecast/HYDRA/thesis folders remain read-only; outputs, tests and staging go in this repository or ignored local directories. Do not hydrate placeholders or launch native models to satisfy a planning task.
+
+**24 September handoff amendment:** the [working-plan reassessment](WORKING_PLAN.md) and [saved baseline](planning/2026-09-24_BASELINE.json) preserve the prior plan while resolving three concerns. The [first-experiment contract](FIRST_PHYSICAL_EXPERIMENT.md) fixes diagnostic admission and fixture precedence; the [release sequence](RELEASE_SEQUENCE.md) supplies an immutable reproduction candidate to E09 before final release; the [UX evidence contract](UX_EVIDENCE_CONTRACT.md) supplies separate browser results to Q5. These are documentation decisions, with no new implementation or execution evidence.
 
 ## Priority queue and ownership
 
@@ -24,10 +26,10 @@ The starting product is the public `0.1.0a1` offline planning foundation. “Rea
 | RF-012 | P0 / archive/commit/verify/status/export absent; offline transaction mechanics ready | M3 | Archive/controller agent; `archive.py`, `verify_issue_commit()`, `commit_issue()`, `status()`, `export_verified()` | RF-003 identity; initial synthetic fixtures independent of native build; physical use requires RF-010/RF-011 |
 | RF-013 | P1 / protocol/matrix written; new physical equivalence/resources unmeasured | M4 | Verification/benchmark agent; runners consuming fixed workload/tolerance/resource manifests | RF-010/RF-011/RF-012 |
 | RF-014 | P1 / recovery policy historical; public recovery absent; synthetic tests ready after commits | M3/M4 | Recovery agent; `recovery.py`, `plan_replay()` / `resume_campaign()` | RF-003/RF-012; physical recovery requires RF-010/RF-011 |
-| RF-015 | P1 / New River transfer and independent reproduction not started | M5 | Domain agent + external researcher; tutorial and operator evidence records | Qualified Watauga, RF-013/RF-014; complete New River assets |
+| RF-015 | P1 / New River transfer and independent reproduction not started | M5 | Domain agent + external researcher; tutorial and operator evidence records | Qualified Watauga, RF-013/RF-014; complete New River assets; E09 uses immutable reproduction candidate, not completed RF-018 |
 | RF-016 | P0 / development manuscript/register/protocol present; results pending | M6 | Manuscript agent; `paper/`, `benchmarks/`, claim-to-evidence checks | Ready now for design/protocol; final claims depend on RF-010–RF-015 |
 | RF-017 | P1 / official AGU rules reviewed; project eligibility and journal readiness unresolved | M6/M7 | Coordinator + author; dated official event/journal requirement record | A qualifying dissemination route and author decisions; separate from runtime critical path |
-| RF-018 | P1 / release not ready; license/rights and archival decisions open | M7 | Coordinator + author; release manifest, notices, tagged source/image/data and archive record | RF-001, RF-008–RF-016; approved release terms and complete artifacts |
+| RF-018 | P1 / release not ready; license/rights and archival decisions open | M7 | Coordinator + author; candidate and final manifests, notices, source/image/data and archive record | Candidate preparation follows its internal evidence/rights gates before E09; final release requires RF-015 plus admitted WEB-07 evidence and applicable RF-001/008–016 results |
 
 ## Work-package deliverables and acceptance
 
@@ -59,7 +61,7 @@ Implement a default `fail` policy. `exclude_issue` records the excluded forecast
 
 ### RF-005 — Qualify configuration and parameter meaning
 
-Implement source-column/units/transformation checks from [CFE_PARAMETER_FINDING.md](CFE_PARAMETER_FINDING.md). Bind generator revision, hydrofabric metadata, per-catchment source values, generated values and actual loaded CFE library. Audit CFE bottom drainage separately from Noah terrain slope and routing reach slope. Preserve the archived baseline. Freeze a separately identified candidate and a one-factor coupled comparison before any physical experiment; evolve both antecedent histories from the same original origin.
+Implement source-column/units/transformation checks from [CFE_PARAMETER_FINDING.md](CFE_PARAMETER_FINDING.md). Bind generator revision, hydrofabric metadata, per-catchment source values, generated values and actual loaded CFE library. Audit CFE bottom drainage separately from Noah terrain slope and routing reach slope. Preserve the archived baseline. Freeze a separately identified candidate and a one-factor coupled comparison before that paired physical comparison; evolve both antecedent histories from the same original origin. A known-concern diagnostic baseline admitted under RF-005A can supply the earlier reference executor without waiting on the candidate comparison.
 
 **RF-005A — Pre-execution admission:** bind the known source mapping, configuration identity, declared uncertainties and purpose of the experiment. Wrong source column, undocumented conversion, missing required metadata or a mismatched loaded library prevents release-profile admission even when hashes match. An explicitly identified historical baseline can be admitted for diagnostic reproduction with its known mapping concern retained; that is not release qualification. Tests prove candidate changes invalidate state/output reuse. RF-007, RF-009A and RF-010 require this admission record, not the result of a future coupled comparison.
 
@@ -86,6 +88,8 @@ Use the existing historical profile and staging inventory to close each unresolv
 ### RF-009 — Close the real fixture with an explicit identity decision
 
 Maintain separate tracks: exact restoration of the historical 786-hour/two-issue Watauga fixture, and design of a new compact 20-hour/two-issue experiment. The recorded historical inventory has 132 dataless files and 131 unresolved hashes; consult that manifest without hydrating protected sources. Decide what the new “20-hour” span means, because a 20-hour total history interval permits the last 18-hour branch issue only by hour two under the current coverage rule. A 20-hour antecedent period requires a later history stop. Freeze all times before preparing weather.
+
+For the current protocol 0.3, the original Watauga recipe remains the first physical experiment. Compact-fixture design is preparatory only; it does not supersede that decision. If the original inputs cannot be obtained, return a source-bound blocker and propose an explicit new experiment/protocol amendment under [FIRST_PHYSICAL_EXPERIMENT.md](FIRST_PHYSICAL_EXPERIMENT.md). Preserve the original IDs, references and missing-asset record.
 
 **RF-009A — Input and recipe admission:** every required geometry/configuration/parameter/forcing/runtime input has exact resident bytes and source/transform/rights information. Freeze the reference recipe and expected key/clock contract; retain any existing historical expected-output identities. This input stage can feed RF-010 before new reference outputs exist.
 
@@ -127,6 +131,8 @@ Qualify the second domain with its two nested output locations sharing one compa
 
 **Done:** New River outputs pass the physical equivalence and recovery criteria. An independent operator installs, reproduces and changes one supported setting without editing core/native source; retain environment, commands, outputs, questions and failures. Separately, external hydrologists complete the supported browser journeys without CLI, Python or manual input preparation, using [UX_EVALUATION_PROTOCOL.md](UX_EVALUATION_PROTOCOL.md). Record assistance and unsuccessful tasks as well as successes. A second agent or second local virtual environment is installation testing, not independent scientific reproduction or external-user usability evidence.
 
+Use the immutable `REPRODUCTION_CANDIDATE` defined in [RELEASE_SEQUENCE.md](RELEASE_SEQUENCE.md) as E09 input; completing the final RF-018 release is not an entry condition. A supported variation receives its own scientific identity and baseline relationship. Browser-study outcomes use the separate [UX evidence package](UX_EVIDENCE_CONTRACT.md), linked to the relevant physical receipts. Neither evidence stream substitutes for the other.
+
 ### RF-016 — Develop the manuscript alongside the code
 
 Use the existing `paper/` draft and claim register. Map each scientific/software claim to the relevant RF work package, released artifact and evidence class. Write formal state/time/provenance contracts, reference method, evaluation protocol and limitations now. Verify ecosystem overlap and citations against primary sources and current journal requirements. Keep historical evidence, new offline tests, synthetic mechanics, fresh native qualification and independent reproduction distinct.
@@ -142,6 +148,8 @@ The [September 22 official-source review](ECOSYSTEM_AND_DISSEMINATION.md) establ
 ### RF-018 — Assemble a versioned research release
 
 Resolve core-code licensing and third-party/data distribution terms at their actual scopes. Inventory notices, selected source/image/fixture versions, benchmarks and installation instructions. Tag only coherent verified artifacts and produce archival metadata/identifiers after the package is complete. Keep public repository availability separate from a qualified, licensed research release.
+
+Prepare a source-bound, licensed and accessible reproduction candidate once its relevant internal qualification and rights/access checks are complete. Its manifest can precede E09 and the final archive DOI. After E09 and admitted browser evidence, retain findings, version any fixes, perform the affected retests and bind the final release to the evaluated artifacts. [RELEASE_SEQUENCE.md](RELEASE_SEQUENCE.md) defines this handoff and prevents a candidate/final-release dependency cycle.
 
 **Done:** the release checklist closes all claimed capability/evidence/rights gaps; released files reproduce the retained results; independent-transfer evidence is linked; archival identifiers resolve; manuscript availability statements match actual public artifacts. Publication and submission steps require the author's concrete final decisions when those artifacts are ready.
 

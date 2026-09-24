@@ -1,0 +1,137 @@
+{
+  "contract_version": "1.0",
+  "manifest_version": null,
+  "template_only": true,
+  "status": "planning_template_not_executed",
+  "contract_path": "docs/UX_EVIDENCE_CONTRACT.md",
+  "unknown_value_policy": "null means unset or unmeasured; empty record arrays assert no entered observations, not zero observed outcomes",
+  "study_id": null,
+  "round_id": null,
+  "design": {
+    "purpose": "descriptive_browser_task_completion_and_comprehension",
+    "comparative_superiority_claim": false,
+    "operator_reproduction_group": "E09",
+    "operator_reproduction_is_separate": true,
+    "physical_invocations_added": false,
+    "allowed_evidence_vocabulary": ["UX_E1", "UX_E2", "UX_E3", "UX_E4"]
+  },
+  "freeze": {
+    "frozen_at_utc": null,
+    "prior_manifest_sha256": null,
+    "amendments": [],
+    "checksum_location": "external_artifact_index"
+  },
+  "protocol": {
+    "path": "docs/UX_EVALUATION_PROTOCOL.md",
+    "version": null,
+    "sha256": null,
+    "contract_sha256": null,
+    "criteria_artifact_id": null,
+    "assistance_policy_artifact_id": null
+  },
+  "software": {
+    "binding_id": null,
+    "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+    "commit": null,
+    "dirty_patch_sha256": null,
+    "source_state": null,
+    "prototype_or_build_id": null,
+    "interface_version": null
+  },
+  "service": {
+    "binding_id": null,
+    "applicability": null,
+    "not_applicable_reason": null,
+    "deployment_id": null,
+    "configuration_artifact_id": null,
+    "worker_runtime_artifact_ids": [],
+    "image_digests": []
+  },
+  "reproduction_candidate": {
+    "applicability": null,
+    "not_applicable_reason": null,
+    "candidate_id": null,
+    "manifest_artifact_id": null,
+    "manifest_sha256": null,
+    "operator_e09_receipt_ids": []
+  },
+  "admission": {
+    "journey_ids": [],
+    "objective_ids": [],
+    "evidence_levels": [],
+    "scenario_ids": [],
+    "prerequisite_records": [],
+    "environment_and_resource_authorization_refs": [],
+    "authority_granted_by_template": false
+  },
+  "scenario_manifests": [],
+  "participant_records": [],
+  "facilitator_ids": [],
+  "task_assignments": [],
+  "attempt_records": [],
+  "finding_records": [],
+  "physical_evidence": {
+    "benchmark_protocol_version": null,
+    "preparation_receipt_ids": [],
+    "job_receipt_ids": [],
+    "runtime_and_lock_artifact_ids": [],
+    "verification_receipt_ids": [],
+    "export_receipt_ids": [],
+    "missing_receipt_explanations": []
+  },
+  "record_field_contracts": {
+    "scenario_manifests": ["scenario_id", "revision", "sha256", "journey_ids", "objective_ids", "evidence_level", "task_wording", "scenario_truth", "expected_outcome", "permitted_endpoint", "prerequisites", "artifact_refs"],
+    "participant_records": ["participant_id", "experience_categories", "accessibility_setup", "eligibility", "participation_state", "private_consent_record_id", "permitted_public_use_categories"],
+    "task_assignments": ["assignment_id", "participant_id", "scenario_id", "scenario_revision", "journey_ids", "objective_ids", "evidence_level", "software_binding_id", "eligibility", "eligibility_reason", "expected_outcome", "started", "nonattempt_or_withdrawal_reason", "first_attempt_id", "primary_outcome"],
+    "attempt_records": ["attempt_id", "assignment_id", "sequence", "prior_attempt_id", "retest_of_finding_ids", "software_binding_id", "scenario_binding_id", "start_utc", "end_utc", "primary_outcome", "observed_endpoint", "first_directional_assistance_event_id", "assistance_events", "errors_and_self_recovery", "critical_finding_ids", "comprehension_responses", "withdrawal_or_interruption_reason", "timings", "missing_value_reasons", "artifact_refs"],
+    "finding_records": ["finding_id", "journey_ids", "evidence_level", "severity", "artifact_refs", "owner_id", "resolution", "software_revision", "retest_assignment_ids", "retest_attempt_ids", "unresolved"],
+    "artifact_records": ["artifact_id", "logical_path_or_locator", "media_type", "version", "sha256", "access_class", "source_artifact_ids", "permitted_use_disposition"]
+  },
+  "analysis": {
+    "implementation_status": "not_implemented",
+    "script_artifact_id": null,
+    "source_commit": null,
+    "command_argv": null,
+    "environment_artifact_id": null,
+    "input_artifact_ids": [],
+    "output_artifact_ids": [],
+    "first_outcome_strata": ["study_id", "round_id", "journey_id", "scenario_variant", "evidence_level", "software_revision"],
+    "outcome_codes": ["SU", "SB", "SA", "FE", "PB", "NA"],
+    "required_counts": ["assigned", "eligible", "attempted", "not_attempted", "SU", "SB", "SA", "FE", "PB", "NA", "expected_supported", "expected_block", "withdrawals", "unresolved_critical_findings", "missing_evidence", "unique_participants"],
+    "rate_definitions": {
+      "unassisted_supported_completion": "first-attempt SU / attempted supported assignments, including unexpected blocks and withdrawals after start",
+      "expected_block_comprehension": "first-attempt SB / attempted expected-block assignments, including unexpected blocks and withdrawals after start",
+      "zero_denominator": "null with reason"
+    },
+    "aggregation_rules": [
+      "Retain every assignment, including NA with reason; primary outcome totals reconcile with assignments.",
+      "Separate first attempts, assisted continuations and retests; preserve original failure and first hint.",
+      "Separate evidence levels, task variants and software revisions; do not count repeated attempts as independent participants.",
+      "Record recruitment counts separately from task assignments and report eligible but unattempted tasks.",
+      "Report active interaction, system wait and interruptions separately with measured and missing counts.",
+      "Bind every derived output to exact versioned input and script hashes."
+    ]
+  },
+  "planned_artifact_names": [
+    "ux_study_manifest.json",
+    "ux_scenarios.json",
+    "ux_assignments.csv",
+    "ux_attempts.jsonl",
+    "ux_findings.csv",
+    "ux_task_summary.csv",
+    "ux_study_report.md",
+    "ux_analysis_manifest.json",
+    "ux_artifact_index.json"
+  ],
+  "artifact_records": [],
+  "publication": {
+    "manuscript_targets": ["Q5", "Table 5"],
+    "release_disposition": "not_ready",
+    "consent_and_rights_review_status": "not_performed",
+    "public_artifact_ids": [],
+    "private_identity_recordings_and_consent_excluded": true,
+    "aggregate_release_requires_review": true,
+    "access_controlled_evidence_policy_artifact_id": null
+  },
+  "results": null
+}

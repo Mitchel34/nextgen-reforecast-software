@@ -36,6 +36,8 @@ The standard experience supplies a documented, qualified model configuration and
 
 The owner has selected the hosted experience and remote Linux direction. Framework, hosting provider, account mechanism, funding model and storage policy are not selected by this document.
 
+The [24 September working-plan reassessment](WORKING_PLAN.md) preserves this product direction and resolves the candidate-release, first-experiment and browser-evidence handoffs. The [UX evidence contract](UX_EVIDENCE_CONTRACT.md) now defines the future versioned records used to evaluate these journeys. It adds no adopted mode, hosting provider or completed capability.
+
 ## Shared experience contract
 
 Every new experiment follows **Find location → Choose study → Check coverage → Review → Submit → Monitor → Inspect/download**. Published recipes can prefill these steps. Comparison starts from a preserved experiment and creates a new identity.

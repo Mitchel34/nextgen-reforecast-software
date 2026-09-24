@@ -1,6 +1,6 @@
 # UX evaluation protocol
 
-23 September 2026. Status: proposed evaluation protocol for a planned graphical product. No user sessions, usability results, hosted service, remote model runs or independent scientific reproductions are reported here.
+Version 0.2, 24 September 2026. Status: proposed evaluation protocol for a planned graphical product. This revision adds the versioned [browser-study evidence contract](UX_EVIDENCE_CONTRACT.md) and namespaced evidence labels; the [saved planning baseline](planning/2026-09-24_BASELINE.json) preserves the preceding plan. No user sessions, usability results, hosted service, remote model runs or independent scientific reproductions are reported here.
 
 The [product objectives and user journeys](PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) define what researchers should be able to accomplish. This protocol makes those objectives observable during development. The existing [implementation status](IMPLEMENTATION_STATUS.md), [engine milestones M0–M7](../IMPLEMENTATION_PLAN.md), [development backlog](DEVELOPMENT_BACKLOG.md) and [scientific benchmark protocol](../benchmarks/PROTOCOL.md) remain the sources for actual software and scientific qualification. A successful interface test cannot replace those gates.
 
@@ -28,16 +28,16 @@ UO-01–UO-04 and UO-09 capture owner direction. UO-05–UO-08 are research-info
 
 ## Evidence levels and prerequisites
 
-Record the evidence level for every task and artifact. Never combine these levels into one undifferentiated success rate.
+Record the evidence level for every task and artifact. Never combine these levels into one undifferentiated success rate. The labels below are namespaced as `UX_E1`–`UX_E4` to distinguish browser evidence from numerical benchmark groups E01–E09; their meanings are unchanged. E09 operator reproduction remains separate and may be linked only through matching evidence under the [evidence contract](UX_EVIDENCE_CONTRACT.md).
 
 | Level | What may be evaluated | Evidence required before use | What a successful task establishes |
 |---|---|---|---|
-| E1 — Interface prototype | Labels, mode choice, forms, maps, navigation, status explanations and comprehension of prepared scenarios | Versioned prototype; documented scenario truth; conspicuous prototype/sample-result labels | A participant can navigate and understand the proposed design. It establishes no data acquisition, execution, numerical result or scientific reproduction. |
-| E2 — Sandbox mechanics | Real UI/controller wiring, preparation/status transitions, synthetic interruption recovery and download packaging | Isolated bounded sandbox; versioned synthetic fixture; labelled simulated job/results; retained event/transaction evidence | The tested mechanics work for the synthetic fixture. Synthetic discharge is not hydrologic evidence, and a scripted completion is not a physical run. |
-| E3 — Qualified physical workflow | End-to-end preparation, supported remote execution, verification and export of a complete real fixture | Relevant M2/M3 gates closed; exact real inputs/build; bounded authorized run recipe; controller/output checks; remote execution environment qualified | The researcher completed the declared physical workflow under the recorded conditions. General model validity, arbitrary-domain support and independent reproduction do not automatically follow. |
-| E4 — Independent scientific reproduction | A person who did not implement the system reproduces an identified study/fixture and makes a supported change | E3 evidence; complete accessible recipe and fixture; M4 checks applicable to claims; independent operator; predeclared comparison rule | Reproduction/usability evidence within the tested study, platform, operator and configuration scope, supporting M5/UO-09. It is not population-wide usability evidence. |
+| UX_E1 — Interface prototype | Labels, mode choice, forms, maps, navigation, status explanations and comprehension of prepared scenarios | Versioned prototype; documented scenario truth; conspicuous prototype/sample-result labels | A participant can navigate and understand the proposed design. It establishes no data acquisition, execution, numerical result or scientific reproduction. |
+| UX_E2 — Sandbox mechanics | Real UI/controller wiring, preparation/status transitions, synthetic interruption recovery and download packaging | Isolated bounded sandbox; versioned synthetic fixture; labelled simulated job/results; retained event/transaction evidence | The tested mechanics work for the synthetic fixture. Synthetic discharge is not hydrologic evidence, and a scripted completion is not a physical run. |
+| UX_E3 — Qualified physical workflow | End-to-end preparation, supported remote execution, verification and export of a complete real fixture | Relevant M2/M3 gates closed; exact real inputs/build; bounded authorized run recipe; controller/output checks; remote execution environment qualified | The researcher completed the declared physical workflow under the recorded conditions. General model validity, arbitrary-domain support and independent reproduction do not automatically follow. |
+| UX_E4 — Independent scientific reproduction | A person who did not implement the system reproduces an identified study/fixture and makes a supported change | UX_E3 evidence; complete accessible recipe and fixture; M4 checks applicable to claims; independent operator; predeclared comparison rule | Reproduction/usability evidence within the tested study, platform, operator and configuration scope, supporting M5/UO-09. It is not population-wide usability evidence. |
 
-The existing offline planning package and its passing CI do not satisfy E2–E4 for a future hosted product. A developer walking a prototype establishes E1 review evidence; an external hydrologist walking that prototype is still E1. A second agent, test account or local virtual environment is not an independent scientist. Continuous historical simulation and graphical remote execution each require their own implementation and qualification; they are not inferred from the reforecast planner.
+The existing offline planning package and its passing CI do not satisfy UX_E2–UX_E4 for a future hosted product. A developer walking a prototype establishes UX_E1 review evidence; an external hydrologist walking that prototype is still UX_E1. A second agent, test account or local virtual environment is not an independent scientist. Continuous historical simulation and graphical remote execution each require their own implementation and qualification; they are not inferred from the reforecast planner.
 
 ## Participants and facilitation
 
@@ -45,7 +45,7 @@ Propose recruiting **3–5 external hydrologists or environmental modelers** for
 
 Use participant IDs rather than publishing names or contact details. Obtain consent for any screen recording or quotations and use non-sensitive demonstration locations/data unless a separate research-data arrangement exists. Offer keyboard-only interaction and record any assistive technology or access needs relevant to the interface. Do not exclude people from the intended audience merely because they cannot use the CLI.
 
-Before each round, freeze the prototype/software revision, scenario manifests, task wording, permitted assistance, expected outcomes and evidence level. Give every participant the same neutral explanation of the task environment. For E1/E2, explain clearly that any model execution/results are simulated. Do not teach the correct click sequence or rehearse the scientific answers being assessed.
+Before each round, freeze the prototype/software revision, scenario manifests, task wording, permitted assistance, expected outcomes and evidence level. Give every participant the same neutral explanation of the task environment. For UX_E1/UX_E2, explain clearly that any model execution/results are simulated. Do not teach the correct click sequence or rehearse the scientific answers being assessed.
 
 Use built-in help normally: locating and understanding product help can be part of unassisted use. When a participant is stuck, first ask a neutral question such as “What would you expect to happen next?” Log it as a probe. A hint naming the next control, changing the intended interpretation, supplying missing setup knowledge or operating the interface becomes assistance. Record the first hint and the assisted continuation separately; do not erase earlier failed or blocked attempts.
 
@@ -53,7 +53,7 @@ Do not invent a completion-time target before observing a baseline. Record actua
 
 ## Task cards
 
-Each task card provides neutral wording, facilitator setup and an observable end state. Substitute exact locations, dates, studies and settings only from a versioned scenario manifest. The facilitator must know whether the selected area/data/profile are supported at the tested revision. A plausible place name or calendar range is not proof of support. Tasks marked for qualified execution must stop at the review/blocked state when E3 prerequisites are absent.
+Each task card provides neutral wording, facilitator setup and an observable end state. Substitute exact locations, dates, studies and settings only from a versioned scenario manifest. The facilitator must know whether the selected area/data/profile are supported at the tested revision. A plausible place name or calendar range is not proof of support. Tasks marked for qualified execution must stop at the review/blocked state when UX_E3 prerequisites are absent.
 
 ### UX-01 — Create a continuous historical simulation
 
@@ -63,7 +63,7 @@ Each task card provides neutral wording, facilitator setup and an observable end
 
 **Facilitator setup:** Supply a supported, unambiguous scenario with a named watershed/gauge or map target, period and a scientifically admissible default configuration. The manifest states the geographic truth, intended simulation mode, weather source, initialization policy and allowed endpoint for the evidence level. Do not require the participant to discover a hydrofabric identifier, configure native libraries or supply technical paths.
 
-**Unassisted success:** The participant selects continuous historical simulation, verifies the intended watershed/period and visible method/defaults, understands the initialization and coverage summary, and reaches the declared review or qualified-run end state. At E3, automatically prepared inputs and remote execution must have receipts; the final product is a continuous time series from that run. At E1/E2, the participant recognizes the sample result and no physical completion is recorded.
+**Unassisted success:** The participant selects continuous historical simulation, verifies the intended watershed/period and visible method/defaults, understands the initialization and coverage summary, and reaches the declared review or qualified-run end state. At UX_E3, automatically prepared inputs and remote execution must have receipts; the final product is a continuous time series from that run. At UX_E1/UX_E2, the participant recognizes the sample result and no physical completion is recorded.
 
 **Critical errors:** Starting a forecast-issue campaign unintentionally; selecting another watershed; interpreting an incomplete or sample series as verified output; believing a short initialization guarantees hydrologic convergence. Record whether the interface exposed the error and whether the participant corrected it before submission.
 
@@ -75,9 +75,9 @@ Each task card provides neutral wording, facilitator setup and an observable end
 
 **Participant prompt:** “You want forecasts that would have been issued over this historical period for this watershed. Use the stated issue schedule and retain the requested lead hours. Check the experiment before starting and show how you would inspect forecasts for one issue.”
 
-**Facilitator setup:** Provide a frozen supported issue schedule, retained lead interval within 1–18 and exact scenario coverage. Include two issues with an overlapping valid hour so interpretation can be observed. Keep the physical execution horizon explicit: the current target runtime always requires 18 steps even when fewer output leads are retained. Current schema 1.0 does not yet implement retained-lead selection; an E1 concept is not a shipped control.
+**Facilitator setup:** Provide a frozen supported issue schedule, retained lead interval within 1–18 and exact scenario coverage. Include two issues with an overlapping valid hour so interpretation can be observed. Keep the physical execution horizon explicit: the current target runtime always requires 18 steps even when fewer output leads are retained. Current schema 1.0 does not yet implement retained-lead selection; an UX_E1 concept is not a shipped control.
 
-**Unassisted success:** The participant chooses reforecasts, identifies the intended watershed and issue schedule, distinguishes historical initialization weather from issue-specific forecast weather, and confirms generated versus retained products. When inspecting an output, the participant can identify issue, lead and valid time and explain why two values may share a valid hour. Only E3 counts a verified physical forecast archive as delivered.
+**Unassisted success:** The participant chooses reforecasts, identifies the intended watershed and issue schedule, distinguishes historical initialization weather from issue-specific forecast weather, and confirms generated versus retained products. When inspecting an output, the participant can identify issue, lead and valid time and explain why two values may share a valid hour. Only UX_E3 counts a verified physical forecast archive as delivered.
 
 **Critical errors:** Substituting retrospective weather for forecast weather without disclosure; collapsing overlapping forecasts into one time series; treating retained six-hour products as evidence of a six-step or proportionally cheaper native run; silently changing the requested issue population to fit missing data.
 
@@ -89,13 +89,13 @@ Each task card provides neutral wording, facilitator setup and an observable end
 
 **Participant prompt:** “Use the supplied study recipe to reproduce its stated experiment. Check what is fixed, what must be available, and how the product will decide whether the reproduction agrees. Proceed without changing the study's scientific settings.”
 
-**Facilitator setup:** Use a versioned study recipe with exact authorship/source identification, initialization origin, physical inputs, parameterization, runtime profile and comparison rule. At E1/E2 this may be a clearly marked demonstration recipe; do not describe it as a published scientific reproduction. E3/E4 require an actual accessible recipe and complete qualified fixture. Include a separate missing-dependency variant if relevant.
+**Facilitator setup:** Use a versioned study recipe with exact authorship/source identification, initialization origin, physical inputs, parameterization, runtime profile and comparison rule. At UX_E1/UX_E2 this may be a clearly marked demonstration recipe; do not describe it as a published scientific reproduction. UX_E3/UX_E4 require an actual accessible recipe and complete qualified fixture. Include a separate missing-dependency variant if relevant.
 
 **Unassisted success:** The participant finds the intended recipe/version, understands fixed scientific settings and expected evidence, and preserves them through preparation. If admitted, the result identifies the recipe/run and the comparison outcome. If an exact dependency is unavailable, the participant recognizes reproduction is blocked, identifies the missing dependency and uses an offered valid next action without silently substituting another dataset, origin or model build.
 
 **Critical errors:** Calling an adapted run an exact reproduction; accepting unavailable assets as complete; replacing the historical 786-hour Watauga fixture with a proposed 20-hour fixture or different-origin production history; interpreting a successful job exit as numerical agreement.
 
-**Capture:** Recipe discovery, changes attempted, blocked or admitted decision, interpretation of verification, and ability to locate a reusable evidence bundle. E4 additionally records the independent operator's environment, actions and comparison result; a facilitator-led reproduction is assisted evidence.
+**Capture:** Recipe discovery, changes attempted, blocked or admitted decision, interpretation of verification, and ability to locate a reusable evidence bundle. UX_E4 additionally records the independent operator's environment, actions and comparison result; a facilitator-led reproduction is assisted evidence.
 
 ### UX-04 — Adapt and compare an experiment
 
@@ -109,7 +109,7 @@ Each task card provides neutral wording, facilitator setup and an observable end
 
 **Critical errors:** Overwriting the baseline; losing track of which input changed; comparing different issues/leads as paired values; applying a parameter correction only to archived numbers; claiming forecast skill improvement from a workflow-equivalence comparison.
 
-**Capture:** Baseline/variant IDs, selected change, participant's comparison explanation, incompatibility warnings and any unintended edits. At E1/E2, score the interaction and reasoning only; do not report a measured hydrologic comparison.
+**Capture:** Baseline/variant IDs, selected change, participant's comparison explanation, incompatibility warnings and any unintended edits. At UX_E1/UX_E2, score the interaction and reasoning only; do not report a measured hydrologic comparison.
 
 ### UX-05 — Resolve ambiguous location, unsupported coverage or missing inputs
 
@@ -131,7 +131,7 @@ Each task card provides neutral wording, facilitator setup and an observable end
 
 **Participant prompt:** “Your campaign has been submitted. Check its current state, leave the browser, then return in another permitted session and find the same campaign and available results. In the interruption scenario, explain what happened and recover it if the product offers a valid recovery path.”
 
-**Facilitator setup:** Supply labelled preparation/queued/running/partial/failed/complete/verified states with their actual evidence. At E2 use a bounded synthetic interruption; at E3 use only the already qualified failure/recovery scenario. Freeze expected completed issues and recovery eligibility. Include a case where changing input identities or a missing history dependency correctly prevents resume.
+**Facilitator setup:** Supply labelled preparation/queued/running/partial/failed/complete/verified states with their actual evidence. At UX_E2 use a bounded synthetic interruption; at UX_E3 use only the already qualified failure/recovery scenario. Freeze expected completed issues and recovery eligibility. Include a case where changing input identities or a missing history dependency correctly prevents resume.
 
 **Unassisted success:** The participant returns to the same persistent campaign, distinguishes successful submission from running and running from verified completion, identifies which outputs are usable, and understands whether recovery is possible. At the appropriate implemented evidence level, closing the browser does not cancel or duplicate the remote job. When eligible, recovery preserves the original configuration/origin and verified completed issues; the user understands that history may be replayed and that additional work may be required. When ineligible, they identify the cause and avoid relabelling a new experiment as a resume.
 
@@ -145,7 +145,7 @@ Each task card provides neutral wording, facilitator setup and an observable end
 
 **Participant prompt:** “Find the results for the stated question, determine what has been verified, and obtain a reusable download with enough information for another researcher to understand the experiment. Show what another person would receive through the product's sharing option.”
 
-**Facilitator setup:** Use a versioned result bundle with declared completeness, units, verification state, source/treatment lineage, settings and known limitations. Provide a contrast between a preview, a completed output and a verified output. E1/E2 downloads and share destinations must remain clearly labelled demonstrations; do not publish scientific results or send messages as part of this protocol.
+**Facilitator setup:** Use a versioned result bundle with declared completeness, units, verification state, source/treatment lineage, settings and known limitations. Provide a contrast between a preview, a completed output and a verified output. UX_E1/UX_E2 downloads and share destinations must remain clearly labelled demonstrations; do not publish scientific results or send messages as part of this protocol.
 
 **Unassisted success:** The participant selects the intended location/issues/leads or simulation period, reads units and axes, recognizes evidence/limitations and downloads the expected data plus recipe/Methods/provenance information. Reforecast export preserves issue/lead/valid time. They can identify the shared artifact, its version and access scope, and distinguish sharing a view or recipe from granting access to unavailable data. An integrity or completeness failure prevents the interface from representing the product as verified.
 
@@ -178,11 +178,11 @@ Do not supply invented runtime, cost, storage or confidence numbers. If no empir
 
 Use a teach-back prompt: “Which parts of this resource summary are estimates, which are limits, and what could change?” A successful answer need not use technical terms; it must not treat an estimate as a guarantee or mistake incomplete preparation for execution readiness. Record the participant's intended action when the estimate is too uncertain to support their decision. For the 18-step native profile, reduced retained leads do not imply reduced physical integration cost.
 
-No active session should incur new paid resources, real publications or messages solely to test a control. At E1/E2 those controls operate against explicit demonstrations. At E3/E4 the concrete test plan must already specify the authorized environment, budget and scientific recipe; this document authorizes none of those actions.
+No active session should incur new paid resources, real publications or messages solely to test a control. At UX_E1/UX_E2 those controls operate against explicit demonstrations. At UX_E3/UX_E4 the concrete test plan must already specify the authorized environment, budget and scientific recipe; this document authorizes none of those actions.
 
 ## Evidence and scorecard templates
 
-Keep an evaluation manifest for each round. Include: protocol revision; interface/software revision; date; facilitator; participant IDs and relevant experience; task/variant manifests; evidence levels and prerequisites; display/accessibility setup; assistance policy; recording consent; result-artifact paths; and the predeclared criteria. Scenario truth includes the intended geographic selection, supported coverage, exact mode/time/settings, expected blocked/admitted state, and actual versus simulated backend behavior.
+Keep an evaluation manifest for each round using the [JSON planning template](../benchmarks/UX_STUDY_MANIFEST.template.json) and [evidence contract](UX_EVIDENCE_CONTRACT.md). Freeze protocol/criteria, software/service, scenario truth, admitted journeys, assistance policy and analysis bindings before observations. Assign pseudonymous participant IDs and retain every task assignment, including nonattempts with reasons. Link real endpoints to preparation, execution, verification and export receipts; a browser event alone is insufficient. Store identities, recordings and consent records privately; public aggregates and sanitized evidence require consent/rights review. The contract defines exact artifact names, hash/version bindings, outcome denominators and reproducible Q5/Table 5 summaries. This template is not an executable schema or a completed study.
 
 Copy this task scorecard for each attempt. Blank fields mean not yet recorded, not zero or success.
 
@@ -190,7 +190,7 @@ Copy this task scorecard for each attempt. Blank fields mean not yet recorded, n
 |---|---|
 | Round / participant / task variant | `[round ID] / [participant ID] / [UX-01…UX-07 and variant]` |
 | Objective IDs | `[applicable UO IDs; note proposed objectives]` |
-| Evidence level / revision / prerequisites | `[E1–E4; exact revision; prerequisites met or unmet]` |
+| Evidence level / revision / prerequisites | `[UX_E1–UX_E4; exact revision; prerequisites met or unmet]` |
 | Intended outcome / actual outcome | `[scenario truth] / [observed endpoint]` |
 | Primary outcome | `[SU / SB / SA / FE / PB / NA]` |
 | Assistance | `[none, neutral probes, first directional hint, developer action; exact point]` |
@@ -211,6 +211,8 @@ Use a separate aggregate table so blocked tasks and assistance remain visible:
 
 Report counts and denominators for the actual participants and tasks, including dropouts and unexpected product blocks. With 3–5 purposively selected participants, do not present task rates as estimates of all hydrologists or claim statistical significance. Do not pool multiple attempts by the same person as independent participants. Distinguish first-attempt performance from performance after hints or design revisions.
 
+Use the evidence contract's separate supported-task and expected-block denominators; unexpected blocks and withdrawals after task start remain attempted outcomes, while unstarted assignments remain NA with reasons. The initial manuscript reports descriptive completion and comprehension within the tested scope. Comparative claims that the interface is easier or faster than another tool require a separately amended matched design before observations. No new comparison, recruitment or physical invocation is authorized here.
+
 ## Proposed acceptance and iteration rules
 
 These targets are proposals to approve and refine before a round; **none are measured results**. No duration, success percentage or system throughput is asserted.
@@ -220,7 +222,7 @@ These targets are proposals to approve and refine before a round; **none are mea
 3. **Blocked-case target:** participants assigned each blocker variant can distinguish its cause, recognize that no valid run has completed and select an honest next action. Passing this target improves explanation and control; it does not close the missing data/runtime capability.
 4. **Preparation/remote-execution gate:** UO-03/UO-04 advance from concept to implemented only when actual qualified preparation/execution records substantiate the interface's claims. UI animation, queued status, simulated output and passing planner CI are insufficient.
 5. **Result-integrity gate:** exported/shown results retain their declared units, time keys, version/recipe identity, exclusions and evidence level; no partial, synthetic or failed output is represented as a verified complete archive. Scientific numeric equivalence uses the separate benchmark protocol, not a usability score.
-6. **Independent reproduction gate:** UO-09 scientific reproduction requires E4 evidence and the relevant M5 conditions, including a researcher who did not build the system. Unassisted E1 success is an encouraging design result, not completion of this gate.
+6. **Independent reproduction gate:** UO-09 scientific reproduction requires UX_E4 evidence and the relevant M5 conditions, including a researcher who did not build the system. Unassisted UX_E1 success is an encouraging design result, not completion of this gate.
 7. **Iteration rule:** retain failed attempts and defects, fix the highest-consequence findings first, and retest affected tasks on the new revision. Predeclare whether returning or new participants are used and report familiarity effects. Never upgrade an evidence level solely because navigation becomes easier.
 
 The facilitator's report should state what changed, which journey/objective it addressed, what was observed, what remains uncertain and the next bounded evaluation. Link actionable findings to development work packages and, when results exist, to manuscript claims. This protocol adds a researcher-facing acceptance layer while preserving the separate implementation, physical-qualification and reproducibility milestones.

@@ -1,6 +1,6 @@
 # Implementation status
 
-Planning status updated 23 September 2026; local package validation below was performed on 18 September and CI on 22 September. Package version: `0.1.0a1`. The first implementation increment is an installable **offline planning foundation**; it is not a complete reforecast generator or hosted web application.
+Planning status updated 24 September 2026; local package validation below was performed on 18 September and CI on 22 September. Package version: `0.1.0a1`. The first implementation increment is an installable **offline planning foundation**; it is not a complete reforecast generator or hosted web application.
 
 ## Implemented and locally verified
 
@@ -21,7 +21,7 @@ The [active GitHub Actions workflow](../.github/workflows/tests.yml) passed on P
 | M0 Feasibility | Complete | Preserve existing dossier |
 | M1 Planning foundation | Implemented; local installation and four-version Linux CI verified | Develop versioned lead-retention and provenance extensions without weakening existing contracts |
 | M2 Runtime/example closure | Inspection tools and build/closure specification implemented | Restore exact missing fixture assets; resolve unknown hashes, dependency/component source attestations and middleware loading; establish a working Linux ARM64 build environment |
-| M3 Physical execution | Not implemented | Complete M2, then implement adapter and run the declared Watauga reference |
+| M3 Physical execution | Not implemented | Close RF-005A/008/009A build/input admission, then run the declared diagnostic Watauga reference; RF-009B output closure and RF-005B release-profile disposition follow their required reference evidence |
 | M4 Reliability/performance | Protocol defined; physical execution not started | Implement synthetic process/commit fixtures, then qualified physical failure/replay and equal-resource trials |
 | M5 Transfer/reproduction | Not started | Qualify New River and recruit an independent researcher after a complete example exists |
 | M6 Manuscript | Substantive development draft and evidence scaffolding | Fill measured results from M3–M5; confirm journal requirements, authorship and declarations |
@@ -34,6 +34,10 @@ The additional owner roadmap is [preserved with its hash](source_material/MANIFE
 The [EM&S reading and writing guide](../paper/RELATED_WORK_AND_WRITING_GUIDE.md) adds nine selected journal references, verified bibliographic records, source-access limits and guidance for every major draft section and planned visual. The draft now aligns with the plan's five research questions and distinguishes browser usability from operator reproduction. The journal guide again returned HTTP 403 on 23 September; formatting compliance remains unverified. No new model execution, software tests or user-study results are claimed by this documentation update.
 
 ## Open physical and publication dependencies
+
+The [24 September working plan](WORKING_PLAN.md) preserves the previous plan at commit `78cfb92db53b6d58d8b8de9d056e067597f568f5` with a [17-file baseline manifest](planning/2026-09-24_BASELINE.json). Three planning concerns are resolved: an immutable licensed candidate precedes E09/final release; protocol 0.3 separates first diagnostic reference admission from release-profile qualification; a separate browser-study manifest and results contract feeds Q5/Table 5. Physical fixture/clocks, numerical criteria and invocation/resource bounds are unchanged. JSON/link/consistency checks validate these planning artifacts, not the future model or user-study workflow. No runtime tests or scientific/UX experiments were performed for this revision.
+
+Remaining decisions are explicit in the working plan: supported domains and dates, date/issue semantics, qualified scientific defaults, service/access/resource policy, export/retention, core license and frozen UX claim criteria. Source/build/input closure and real execution remain unestablished. The recommended next implementation checkpoint is one supported browser-to-verified-dataset path; preparing that path requires its concrete scientific and service contracts first.
 
 The [23 September product objectives](PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) record nine objectives and seven researcher journeys, separating owner direction from research-informed proposals. A hosted graphical interface, minimal location/date/lead inputs and automatic preparation now define the intended product. Proposed WEB-01–WEB-07 packages and the [UX evaluation protocol](UX_EVALUATION_PROTOCOL.md) supplement the engine backlog. No web code, scientific acquisition, model execution, deployment or user study was performed for this documentation update; existing validation counts and physical status are unchanged.
 
