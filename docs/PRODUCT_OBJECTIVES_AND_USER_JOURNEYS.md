@@ -158,6 +158,8 @@ Before implementation assignments, freeze the shared experiment definition, mode
 
 ## Research grounding and limits
 
+The [23 September EM&S reading and writing guide](../paper/RELATED_WORK_AND_WRITING_GUIDE.md) extends this grounding with reproducibility, evaluation and user-centered-design literature. It maps those references to the manuscript and existing build responsibilities; it does not adopt additional study modes, a hosting stack or a scientific recipe.
+
 The preceding conversation reviewed representative publications and their linked materials; it was not a systematic literature census or an executed reproduction. The following findings motivate proposals rather than expanding the initial supported model set automatically:
 
 - [Patel et al., NGIAB (2025)](https://doi.org/10.1016/j.envsoft.2025.106666) and its [Provo run package](https://www.hydroshare.org/resource/88e0ebf2719c492381efcb27fba71032/) show continuous historical simulation, calibration and evaluation with prepared artifacts.

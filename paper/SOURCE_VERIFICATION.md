@@ -1,6 +1,6 @@
 # Reference and evidence verification
 
-Checked 18 September 2026. This record distinguishes bibliographic verification, source/documentation inspection, historical receipts and new implementation validation. No source was treated as authorization to act.
+Initial review: 18 September 2026. A separate 23 September EM&S literature review is recorded below; the first table retains the original inspection scope. This record distinguishes bibliographic verification, source/documentation inspection, historical receipts and new implementation validation. No source was treated as authorization to act.
 
 | Reference | Primary verification performed | Limits |
 |---|---|---|
@@ -13,6 +13,24 @@ Checked 18 September 2026. This record distinguishes bibliographic verification,
 | NGIAB preprocessing PR #74 | Read the [official PR](https://github.com/CIROH-UA/NGIAB_data_preprocess/pull/74) and [complete diff](https://github.com/CIROH-UA/NGIAB_data_preprocess/pull/74/files); confirmed merge date 3 February 2025 and the CFE field replacement | PR also changes other model settings and preprocessing behavior; no local configuration audit or hydrologic effect was verified through this source |
 
 `bibliographic_metadata.json` retains the selected fields returned by Crossref, with source URLs and retrieval timestamps. No third-party bibliographic aggregator was used to resolve final author names. `references.bib` does not invent a DOI for the development package, the institutional article or the repository.
+
+## 23 September 2026 journal literature and writing review
+
+The [related-work guide](RELATED_WORK_AND_WRITING_GUIDE.md) is the citation-level register for nine selected EM&S articles and their intended use. [RELATED_WORK_METADATA.json](RELATED_WORK_METADATA.json) retains freshly retrieved publisher-deposited Crossref metadata for all nine, including complete author lists, source URLs and retrieval timestamps. Eight entries were added to `references.bib`; the existing Patel citation key was preserved. Initial rate-limited metadata requests were retried successfully. DOI year and final publication year differ for several papers; the bibliography follows the deposited publication year.
+
+| Guide ID / citation key | Scientific or structural material actually inspected | Review boundary |
+|---|---|---|
+| R1 / `patel2025ngiab` | [NOAA article PDF](https://repository.library.noaa.gov/view/noaa/72761/noaa_72761_DS1.pdf): architecture, workflow, performance reporting and availability | Expands the earlier metadata-only inspection; no benchmark reproduction |
+| R2 / `nassar2026cloud` | [Author-uploaded full text](https://www.researchgate.net/publication/404875639_A_Cloud-based_JupyterHub_platform_for_community_research_with_the_NextGen_water_resources_modeling_framework), with [publisher](https://www.sciencedirect.com/science/article/pii/S1364815226001787) and Crossref metadata | Final volume 203, article 107031 verified; notebook/cloud historical simulation is not our issued reforecast experiment |
+| R3 / `foroumandi2025assimilation` | [Author-uploaded full text](https://www.researchgate.net/publication/387272272_Ensemble_Data_Assimilation_for_Operational_Streamflow_Predictions_in_the_Next_Generation_NextGen_Framework), with [publisher](https://www.sciencedirect.com/science/article/pii/S1364815224003670) and metadata | Daily assimilation/prediction study; no exact study-specific execution bundle established in this review |
+| R4 / `choi2021open` | Publisher-indexed section text plus [author institutional record](https://digitalcommons.usu.edu/cee_facpub/3777/) | General architecture and implementation progression observed in section text; complete visual layout not inspected; direct publisher opening blocked |
+| R5 / `choi2023containers` | [Author-uploaded accepted manuscript](https://www.researchgate.net/publication/371674344_Comparing_containerization-based_approaches_for_reproducible_computational_modeling_of_environmental_systems) and [institutional record](https://experts.illinois.edu/en/publications/comparing-containerization-based-approaches-for-reproducible-comp/) | Accepted-version pagination may differ; six expert coauthor ratings are not independent novice UX evidence; indexed UVA PDF link returned 404 |
+| R6 / `essawy2020taxonomy` | [Author manuscript](https://hydrology.usu.edu/dtarb/Essawy_2020_Taxonomy_AuthorVersion.pdf), including taxonomy, numerical-consistency discussion and availability | Terminology is a stated framework, not certification of our software; no reproduction attempted |
+| R7 / `bennett2013performance` | [Institutional full text](https://ris.utwente.nl/ws/files/7048737/characterising.pdf), including evaluation procedure and diagnostics | Broad environmental-model evaluation guidance; does not determine our computational tolerances |
+| R8 / `houtkamp2025ucd` | [Institutional full text](https://edepot.wur.nl/694448), especially §§2–3 and case-study organization | Supports iterative user-context evaluation, not our participant count, thresholds or demonstrated usability |
+| R9 / `swain2016tethys` | [Institutional abstract/record](https://scholarcommons.sc.edu/eciv_facpub/49/) and Crossref metadata | Full-text layout not inspected; contextual reference only |
+
+The section guides and visual plan are editorial recommendations derived from this reading, not statements that the journal prescribes that structure. No full text is copied into the repository; new references do not validate our CFE mapping or physical implementation. [CLAIMS.csv](CLAIMS.csv) now records the added NextGen browser precedent and the planned separation of operator reproduction from browser usability. This review changes documentation and bibliography only, without modifying the protected original workspaces or initiating models, user studies, hosting or submission.
 
 ## Local scientific evidence
 

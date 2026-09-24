@@ -6,6 +6,8 @@ The [product objectives and user journeys](PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.
 
 ## Purpose and scope
 
+Related methodological context is recorded in the [EM&S guide](../paper/RELATED_WORK_AND_WRITING_GUIDE.md): Houtkamp et al. (2025) motivates iterative evaluation with users; Choi et al. (2023) distinguishes developer and user burdens but uses expert coauthor ratings. Neither source establishes this protocol's sample size or success thresholds. The scenarios and thresholds below remain proposed project choices to refine through formative work.
+
 Evaluate whether a hydrologist can select a scientifically appropriate workflow, understand its scope and limitations, obtain the intended results when supported, and make an informed next choice when work is blocked. The participant should need a normal web browser and domain knowledge appropriate to the task. **CLI use, Python coding, configuration-file editing, local Docker installation and access to a developer are not prerequisites for successful use of the planned graphical product.** Advanced details may remain inspectable without becoming mandatory setup steps.
 
 UO-01–UO-04 and UO-09 capture owner direction. UO-05–UO-08 are research-informed design proposals awaiting explicit refinement. All are product objectives, not statements that the current package implements a hosted interface or runnable physical workflow. Confirm proposed mode, recipe and comparison terminology with the owner before treating those design details as fixed acceptance requirements.

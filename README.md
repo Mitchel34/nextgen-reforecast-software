@@ -17,6 +17,7 @@ The intended hosted web application lets a hydrologist select a watershed or USG
 - [User guide](docs/USER_GUIDE.md) and [architecture](docs/ARCHITECTURE.md)
 - [Manuscript draft](paper/MANUSCRIPT.md) and [claim/evidence register](paper/CLAIMS.csv)
 - [Manuscript development plan](paper/DEVELOPMENT_PLAN.md)
+- [Environmental Modelling & Software reading and writing guide](paper/RELATED_WORK_AND_WRITING_GUIDE.md) — nine selected references mapped to manuscript sections and visuals
 - [Predeclared benchmark protocol](benchmarks/PROTOCOL.md)
 - [Runtime qualification and missing assets](docs/RUNTIME_QUALIFICATION.md)
 

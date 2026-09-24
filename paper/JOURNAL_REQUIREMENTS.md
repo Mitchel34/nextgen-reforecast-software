@@ -1,10 +1,12 @@
 # Environmental Modelling & Software requirement check
 
-Checked 18 September 2026. Target article concept: full research article about evaluated research software. This is a planning choice; the current journal's available submission categories were not confirmed.
+Initially checked 18 September 2026; official guide access rechecked 23 September 2026. Target article concept: full research article about evaluated research software. This is a planning choice; the current journal's available submission categories were not confirmed.
 
 ## Official guide access
 
 The official [Guide for Authors](https://www.sciencedirect.com/journal/environmental-modelling-and-software/publish/guide-for-authors) returned **HTTP 403 Forbidden** through the available web retrieval tool. A second direct open in the same review also returned 403. No full guide was read. Search results and another journal's requirements are not substitutes for this guide. No manuscript submission or editorial inquiry was made.
+
+On 23 September, a new direct retrieval again returned HTTP 403. The [nine-paper EM&S review](RELATED_WORK_AND_WRITING_GUIDE.md) supplies examples of section organization, framing and narrative; those examples do not certify current formatting rules, manuscript category, limits or mandatory declarations. Existing publisher-specific guidance below was not reverified in this literature-only update.
 
 | Requirement | Verified state | Needed before submission |
 |---|---|---|

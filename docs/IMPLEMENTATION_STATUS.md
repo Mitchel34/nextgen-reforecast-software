@@ -29,7 +29,9 @@ The [active GitHub Actions workflow](../.github/workflows/tests.yml) passed on P
 
 ## September roadmap integration
 
-The additional owner roadmap is [preserved with its hash](source_material/MANIFEST.json). All 24 sections are mapped in [the reconciliation](ROADMAP_RECONCILIATION.md); [18 prioritized work packages](DEVELOPMENT_BACKLOG.md) define owners, dependencies, tests and a conditional first ten-working-day cycle. The [manuscript plan](../paper/DEVELOPMENT_PLAN.md) maps questions, sections and figures to required evidence; the claim register now contains 43 claims. This update adds plans, source review and CI, with no change to the planner/runtime code or physical qualification status.
+The additional owner roadmap is [preserved with its hash](source_material/MANIFEST.json). All 24 sections are mapped in [the reconciliation](ROADMAP_RECONCILIATION.md); [18 prioritized work packages](DEVELOPMENT_BACKLOG.md) define owners, dependencies, tests and a conditional first ten-working-day cycle. The [manuscript plan](../paper/DEVELOPMENT_PLAN.md) maps questions, sections and figures to required evidence; the claim register now contains 45 claims after the 23 September literature update. These planning/source-review changes do not change the planner/runtime code or physical qualification status.
+
+The [EM&S reading and writing guide](../paper/RELATED_WORK_AND_WRITING_GUIDE.md) adds nine selected journal references, verified bibliographic records, source-access limits and guidance for every major draft section and planned visual. The draft now aligns with the plan's five research questions and distinguishes browser usability from operator reproduction. The journal guide again returned HTTP 403 on 23 September; formatting compliance remains unverified. No new model execution, software tests or user-study results are claimed by this documentation update.
 
 ## Open physical and publication dependencies
 

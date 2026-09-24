@@ -1,6 +1,6 @@
 # Evidence-bearing figure and table plan
 
-Version 0.2, 22 September 2026. No numerical result figure has been generated. Figures must be regenerated from retained experiment receipts, not historical summary values substituted for new results. Historical material, if included, will be visibly separated and version-labeled. The [development plan](DEVELOPMENT_PLAN.md) assigns evidence owners and publication gates; the supplied roadmap informs the story but is not measurement evidence.
+Version 0.3, 23 September 2026. No numerical result figure has been generated. Figures must be regenerated from retained experiment receipts, not historical summary values substituted for new results. Historical material, if included, will be visibly separated and version-labeled. The [development plan](DEVELOPMENT_PLAN.md) assigns evidence owners and publication gates; the supplied roadmap informs the story but is not measurement evidence. The [EM&S writing guide](RELATED_WORK_AND_WRITING_GUIDE.md) supplies references for explanatory organization, not graphics to copy.
 
 | Item | Purpose and planned content | Source / prerequisite | Acceptance and caption boundary |
 |---|---|---|---|
@@ -15,6 +15,24 @@ Version 0.2, 22 September 2026. No numerical result figure has been generated. F
 | Table 4 — Availability and reproducibility assets | Code tag/DOI, image digest, components/SBOM, domain/forcing licenses and deposits, benchmark hashes, external operator record | Release M7 | No placeholder DOI, inferred license or inaccessible private alias presented as an available artifact |
 | Supplementary Table S1 — Scientific variant and lineage | Origin/first issue, initial-condition policy, geometry, CFE mapping, historical/forecast sources, units/intervals, gap treatments and source-availability status | Release campaign/fixture manifests; verified source/treatment receipts | Report adopted initialization duration without convergence claims; separate 2018 production example from 2021 qualification fixture; unknown source versions remain unknown |
 | Supplementary Figure S1 — Archive consumption | One implemented export round trip showing retained realization/variant, domain, location, issue, lead, valid time and lineage; HYDRA/evaluation/ML as optional consumers | Qualified archive plus implemented schema-tested export adapter | Future demonstration; no trained correction model or skill result required; no claim the current offline planner exports a physical archive |
+| Figure 6 — Researcher journey and service architecture | Paired panels: location/dates/leads through inspection/download; browser/API/preparation/queue/Linux worker/archive responsibilities | Product journeys, WEB packages and inspected implementation when available | Initially a labeled design schematic; interface prototype does not establish automatic preparation or physical execution |
+| Table 5 — Researcher task and reproduction outcomes | Admitted journey, evidence level, attempts, unassisted/assisted completion, expected blocks, failures and operator reproduction | Q5, E09 and the UX protocol | No user results yet; distinguish browser tasks from clean-environment operator reproduction; keep denominators and assistance visible |
+
+## Related-work layout references
+
+R-numbers below resolve to the verified sources and access limits in the [reading guide](RELATED_WORK_AND_WRITING_GUIDE.md). Preserve existing figure IDs during development; set final numbering by order of appearance once the manuscript is assembled.
+
+| Planned item | Reference to consult | Our adaptation and boundary |
+|---|---|---|
+| Figure 1; Supplementary Table S1 | R3 Foroumandi, experiment definitions and sequence diagram | Define timing and state before implementation; our branch clock diagram and variant lineage remain original project contracts |
+| Figure 2; Table 2 | R7 Bennett, purpose-led evaluation and diagnostic plots | Pair agreement summaries with interpretable differences; our comparator and tested scope must appear explicitly |
+| Figure 3; Table 3 | R1 Patel, hardware/runtime reporting; R5 Choi (2023), environment/scenario tables | Present matched workload and resource context before cost claims; do not inherit their measurements or assume their resource comparisons match ours |
+| Figure 4 | R6 Essawy, explicit reproduction definitions | Explain which state/artifacts allow a rerun; this is terminology guidance, not a published validation of our replay method |
+| Figure 5; Table 5 | R2 Nassar, case/workflow progression; R8 Houtkamp, user-context and iterative evaluation | Separate second-domain results, external operator reproduction and browser task evidence; screenshots alone do not demonstrate usability |
+| Figure 6; Table 1 | R1 architecture Fig. 2; R2 architecture/user sequence Figs. 1–2 | Connect user steps to system responsibilities and supported capabilities; show proposed and qualified scope separately |
+| Table 4; Supplementary Figure S1 | R4 Choi (2021), repository/environment/API integration; R6 availability statement | Make the complete experiment accessible through versioned assets and a concrete export example; no implied provider or framework selection |
+
+The map illustrates manuscript structure and narrative clarity. It does not set aesthetic styling from uninspected figures, change numerical acceptance rules, or authorize reproducing third-party images.
 
 An optional supplementary historical table can reproduce narrowly selected dossier values with receipt SHA-256, binary identity, resource allocation and raw-array recheck status. It must not be merged into new benchmark results. Include source/treatment details, source-decoder qualification, units and additional adverse tests in the supplement rather than obscuring them in a caption.
 

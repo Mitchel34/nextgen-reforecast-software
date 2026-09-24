@@ -1,0 +1,1615 @@
+{
+  "schema_version": 1,
+  "scope": "Targeted Environmental Modelling & Software bibliography; metadata does not establish full-text inspection or experimental reproduction.",
+  "records": [
+    {
+      "citation_key": "patel2025ngiab",
+      "retrieved_at_utc": "2026-09-24T04:17:25.714001+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2025.106666",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2025.106666",
+        "title": [
+          "NextGen In A Box (NGIAB): Open-Source containerization of the NextGen framework to enable community-driven hydrology modeling"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-1483-1078",
+            "authenticated-orcid": false,
+            "given": "Arpita",
+            "family": "Patel",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "James",
+            "family": "Halgren",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zach",
+            "family": "Wills",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nels",
+            "family": "Frazier",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Benjamin",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joshua",
+            "family": "Cunningham",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jordan",
+            "family": "Laser",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mohammadsepehr",
+            "family": "Karimiziarani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Trupesh",
+            "family": "Patel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Giovanni",
+            "family": "Romero",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Matthew",
+            "family": "Denno",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sam",
+            "family": "Lamont",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Iman",
+            "family": "Maghami",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hari Teja",
+            "family": "Jajula",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "M. Shahabul",
+            "family": "Alam",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sifan A.",
+            "family": "Koriche",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Manjila",
+            "family": "Singh",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nia",
+            "family": "Minor",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bhavya",
+            "family": "Duvvuri",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Savalan Naser",
+            "family": "Neisary",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Quinn",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Steven",
+            "family": "Burian",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Fred L.",
+            "family": "Ogden",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Purushotham",
+            "family": "Bangalore",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jeffrey C.",
+            "family": "Carver",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daniel P.",
+            "family": "Ames",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "193",
+        "page": "106666",
+        "article-number": "106666",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              9
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2025.106666"
+      }
+    },
+    {
+      "citation_key": "nassar2026cloud",
+      "retrieved_at_utc": "2026-09-24T04:17:26.919674+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2026.107031",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2026.107031",
+        "title": [
+          "A cloud-based JupyterHub platform for community research with the NextGen water resources modeling framework"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0878-5861",
+            "authenticated-orcid": false,
+            "given": "Ayman",
+            "family": "Nassar",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1998-3479",
+            "authenticated-orcid": false,
+            "given": "David G.",
+            "family": "Tarboton",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Furqan",
+            "family": "Baig",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Josh",
+            "family": "Cunningham",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Arpita",
+            "family": "Patel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "James",
+            "family": "Halgren",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Benjamin",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Homa",
+            "family": "Salehabadi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anthony M.",
+            "family": "Castronova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Irene",
+            "family": "Garousi-Nejad",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "203",
+        "page": "107031",
+        "article-number": "107031",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              8
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2026.107031"
+      }
+    },
+    {
+      "citation_key": "foroumandi2025assimilation",
+      "retrieved_at_utc": "2026-09-24T04:17:28.137109+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2024.106306",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2024.106306",
+        "title": [
+          "Ensemble data assimilation for operational streamflow predictions in the next generation (NextGen) framework"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-6867-7550",
+            "authenticated-orcid": false,
+            "given": "Ehsan",
+            "family": "Foroumandi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hamid",
+            "family": "Moradkhani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Witold F.",
+            "family": "Krajewski",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Fred L.",
+            "family": "Ogden",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "185",
+        "page": "106306",
+        "article-number": "106306",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              2
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2024.106306"
+      }
+    },
+    {
+      "citation_key": "choi2021open",
+      "retrieved_at_utc": "2026-09-24T04:17:29.350329+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2020.104888",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2020.104888",
+        "title": [
+          "Toward open and reproducible environmental modeling by integrating online data repositories, computational environments, and model Application Programming Interfaces"
+        ],
+        "author": [
+          {
+            "given": "Young-Don",
+            "family": "Choi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jonathan L.",
+            "family": "Goodall",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jeffrey M.",
+            "family": "Sadler",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anthony M.",
+            "family": "Castronova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Andrew",
+            "family": "Bennett",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhiyu",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bart",
+            "family": "Nijssen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shaowen",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Martyn P.",
+            "family": "Clark",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daniel P.",
+            "family": "Ames",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jeffery S.",
+            "family": "Horsburgh",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hong",
+            "family": "Yi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Christina",
+            "family": "Bandaragoda",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Martin",
+            "family": "Seul",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3329-9622",
+            "authenticated-orcid": false,
+            "given": "Richard",
+            "family": "Hooper",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "David G.",
+            "family": "Tarboton",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "135",
+        "page": "104888",
+        "article-number": "104888",
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              1
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2020.104888"
+      }
+    },
+    {
+      "citation_key": "choi2023containers",
+      "retrieved_at_utc": "2026-09-24T04:17:30.568672+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2023.105760",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2023.105760",
+        "title": [
+          "Comparing containerization-based approaches for reproducible computational modeling of environmental systems"
+        ],
+        "author": [
+          {
+            "given": "Young-Don",
+            "family": "Choi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2726-3340",
+            "authenticated-orcid": false,
+            "given": "Binata",
+            "family": "Roy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jared",
+            "family": "Nguyen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Raza",
+            "family": "Ahmad",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Iman",
+            "family": "Maghami",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ayman",
+            "family": "Nassar",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhiyu",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anthony M.",
+            "family": "Castronova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tanu",
+            "family": "Malik",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shaowen",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1112-4522",
+            "authenticated-orcid": false,
+            "given": "Jonathan L.",
+            "family": "Goodall",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "167",
+        "page": "105760",
+        "article-number": "105760",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              9
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2023.105760"
+      }
+    },
+    {
+      "citation_key": "bennett2013performance",
+      "retrieved_at_utc": "2026-09-24T04:17:31.830258+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2012.09.011",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2012.09.011",
+        "title": [
+          "Characterising performance of environmental models"
+        ],
+        "author": [
+          {
+            "given": "Neil D.",
+            "family": "Bennett",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Barry F.W.",
+            "family": "Croke",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Giorgio",
+            "family": "Guariso",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joseph H.A.",
+            "family": "Guillaume",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Serena H.",
+            "family": "Hamilton",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anthony J.",
+            "family": "Jakeman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Stefano",
+            "family": "Marsili-Libelli",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lachlan T.H.",
+            "family": "Newham",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "John P.",
+            "family": "Norton",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Charles",
+            "family": "Perrin",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Suzanne A.",
+            "family": "Pierce",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Barbara",
+            "family": "Robson",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ralf",
+            "family": "Seppelt",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Alexey A.",
+            "family": "Voinov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Brian D.",
+            "family": "Fath",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vazken",
+            "family": "Andreassian",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "40",
+        "page": "1-20",
+        "published": {
+          "date-parts": [
+            [
+              2013,
+              2
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2013,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2012.09.011"
+      }
+    },
+    {
+      "citation_key": "essawy2020taxonomy",
+      "retrieved_at_utc": "2026-09-24T04:17:33.042480+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2020.104753",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2020.104753",
+        "title": [
+          "A taxonomy for reproducible and replicable research in environmental modelling"
+        ],
+        "author": [
+          {
+            "given": "Bakinam T.",
+            "family": "Essawy",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jonathan L.",
+            "family": "Goodall",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daniel",
+            "family": "Voce",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mohamed M.",
+            "family": "Morsy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jeffrey M.",
+            "family": "Sadler",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Young Don",
+            "family": "Choi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "David G.",
+            "family": "Tarboton",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tanu",
+            "family": "Malik",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "134",
+        "page": "104753",
+        "article-number": "104753",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              12
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              12
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2020.104753"
+      }
+    },
+    {
+      "citation_key": "houtkamp2025ucd",
+      "retrieved_at_utc": "2026-09-24T04:17:34.269966+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2025.106519",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2025.106519",
+        "title": [
+          "Applying user-centred design to climate and environmental tools"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-2813-9886",
+            "authenticated-orcid": false,
+            "given": "Joske",
+            "family": "Houtkamp",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Sander",
+            "family": "Janssen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Rob",
+            "family": "Lokers",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hugo",
+            "family": "de Groot",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "192",
+        "page": "106519",
+        "article-number": "106519",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              8
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2025.106519"
+      }
+    },
+    {
+      "citation_key": "swain2016tethys",
+      "retrieved_at_utc": "2026-09-24T04:17:35.487685+00:00",
+      "source_url": "https://api.crossref.org/works/10.1016/j.envsoft.2016.08.003",
+      "authority": "publisher-deposited Crossref bibliographic metadata",
+      "metadata": {
+        "DOI": "10.1016/j.envsoft.2016.08.003",
+        "title": [
+          "A new open source platform for lowering the barrier for environmental web app development"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-4741-3828",
+            "authenticated-orcid": false,
+            "given": "Nathan R.",
+            "family": "Swain",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Scott D.",
+            "family": "Christensen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Alan D.",
+            "family": "Snow",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Herman",
+            "family": "Dolder",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gonzalo",
+            "family": "Espinoza-Dávalos",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Erfan",
+            "family": "Goharian",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Norman L.",
+            "family": "Jones",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "E. James",
+            "family": "Nelson",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daniel P.",
+            "family": "Ames",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Steven J.",
+            "family": "Burian",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Environmental Modelling &amp; Software"
+        ],
+        "volume": "85",
+        "page": "11-26",
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              11
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              11
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.envsoft.2016.08.003"
+      }
+    }
+  ]
+}

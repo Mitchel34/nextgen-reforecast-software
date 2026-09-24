@@ -1,12 +1,16 @@
 # Sharing historical state while preserving independent forecasts: a reproducible reforecast workflow for NextGen
 
-**Working research-article draft, updated 22 September 2026.** Target: *Environmental Modelling & Software*. Working software name: `ngen-reforecast`; the name and long-term upstream home are unresolved. Author list, order, affiliations, corresponding author and ORCIDs are pending author confirmation. This is an evidence-bound development draft, not a submission-ready paper or a report of completed new model experiments.
+**Working research-article draft, updated 23 September 2026.** Target: *Environmental Modelling & Software*. Working software name: `ngen-reforecast`; the name and long-term upstream home are unresolved. Author list, order, affiliations, corresponding author and ORCIDs are pending author confirmation. This is an evidence-bound development draft, not a submission-ready paper or a report of completed new model experiments.
 
 The public planning implementation is being developed independently from the historical runtime described below. Present-tense statements about that runtime refer to inspected preserved source or receipts. Public runtime integration, physical benchmarks and independent reproduction remain future work. Claim identifiers refer to [CLAIMS.csv](CLAIMS.csv); the controlling experiment specification is [the benchmark protocol](../benchmarks/PROTOCOL.md).
 
 The owner's [22 September technical roadmap](../docs/source_material/TECHNICAL_FOUNDATION_2026-09-22.md) supplies product direction and motivating examples. Its capability descriptions and historical examples are not treated as newly verified results. The [manuscript development plan](DEVELOPMENT_PLAN.md) assigns section responsibilities, evidence dependencies and release requirements.
 
+The 23 September [EM&S related-work guide](RELATED_WORK_AND_WRITING_GUIDE.md) adds verified readings and a section-by-section narrative map. The blockquoted drafting guides below are editorial notes, not submission prose or evidence of completed experiments; remove them when preparing the final article.
+
 ## Abstract
+
+> **Drafting guide:** R1 Patel, R2 Nassar and R5 Choi (2023). Write last: researcher problem, bounded contribution, evaluation, measured findings and scope. Explain the practical result before implementation detail; retain pending status until results exist. See the [section map](RELATED_WORK_AND_WRITING_GUIDE.md#section-by-section-authoring-map).
 
 Hydrologic reforecasts require repeated predictions initialized from a consistent historical trajectory. Reconstructing that trajectory separately for every forecast can repeat substantial work, but sharing state introduces requirements for clock alignment, process isolation, forcing provenance and recovery. We propose a narrowly scoped NextGen campaign tool that will advance a continuous historical parent, construct independent forecast branches at declared issue times, and publish outputs only after numerical, temporal and transaction checks. Recovery will reconstruct history from the original bound origin and reuse verified forecast commits; it will not require a claim of portable land-state checkpointing. A preserved two-domain application motivates the design, while its measurements remain distinct from validation of the public implementation. The evaluation will compare branches with independent sequential references, test failure and replay behavior, measure execution under equal resource limits, and assess reproduction by another researcher. The expected contribution is a verifiable state-sharing contract and its evaluated implementation. No new physical equivalence, efficiency or usability result is available at this draft stage; those measurements are prerequisites for a final research-article abstract and conclusions.
 
@@ -14,17 +18,23 @@ Hydrologic reforecasts require repeated predictions initialized from a consisten
 
 ## 1. Introduction
 
+> **Drafting guide:** R1/R2 establish existing NextGen workflows; R8 Houtkamp and R9 Swain ground researcher access. Lead with the study a hydrologist wants to perform, then existing solutions and the precise remaining responsibilities. Browser access and automated preparation alone are not new contributions.
+
 A reforecast campaign combines a historical reconstruction with a sequence of counterfactual forecast trajectories. Each issue should begin from the physical state implied by the same antecedent forcing, model parameters and initialization policy. Forecast weather then replaces historical weather within that branch, while the historical trajectory continues independently toward subsequent issues. An archive can contain plausible discharge values even when this separation is violated. Examples include moving a precipitation interval by one hour, inheriting an input-file offset shared with another process, or allowing an incomplete forecast to suppress a later retry. These are scientific reproducibility problems as well as software defects. [C01–C03]
 
 The NextGen ecosystem already provides substantial infrastructure for model execution and research workflows. Patel et al. (2025) describe NGIAB's containerization of NextGen. DataStreamCLI documents a workflow from preprocessing to simulation, and the CIROH description of the NextGen Research DataStream presents a reproducible numerical prediction system built from this ecosystem. These projects establish the context for integration; general automation, container packaging and reproducible NextGen forecasting are not proposed as new contributions here. [C04; Patel et al., DOI: https://doi.org/10.1016/j.envsoft.2025.106666; DataStreamCLI: https://github.com/CIROH-UA/datastreamcli; Laser et al., https://hub.ciroh.org/blog/nextgen-research-datastream-april-2026/]
 
+Nassar et al. (2026) further describe a browser-accessible JupyterHub workflow for NextGen preparation, simulation, calibration and evaluation. Its historical Logan River example establishes a close precedent for remote research access. Our proposed no-code campaign experience must therefore be evaluated through the specific tasks and scientific contracts it supports, rather than presented as the first browser-based NextGen environment. [C44; [Nassar et al.](https://doi.org/10.1016/j.envsoft.2026.107031)]
+
 The narrower research question is whether continuous historical state reconstruction can be shared across forecast issues while preserving a measurable contract for independent branches, recoverable work and source-bound outputs. Sharing live state may avoid repeating initialization, but an efficiency claim requires a fair reference, equal resources and complete accounting. Recovery is also consequential: a routing snapshot alone cannot recreate the hidden state of the land components and their couplers. The software must state which state is retained, which state is reconstructed, and what missing inputs prevent reconstruction. [C05–C07]
 
-We will evaluate four questions. First, do forecast outputs agree with independent references under declared tolerances and exact issue clocks? Second, can a forecast alter its parent or a sibling through memory, routing or external file state? Third, does interruption followed by historical replay preserve the scientific experiment and avoid duplicate committed forecasts? Fourth, what execution and recovery costs occur under fixed resources, and can another researcher complete a small campaign without private author infrastructure? These questions organize the implementation and the predeclared experiments rather than presuppose favorable results. [C08]
+We will evaluate five questions. First, do forecast outputs agree with independent references under declared tolerances and exact issue clocks? Second, can a forecast alter its parent or a sibling through memory, routing or external file state? Third, does interruption followed by historical replay preserve the scientific experiment and avoid duplicate committed forecasts? Fourth, what execution and recovery costs occur under fixed resources? Fifth, can an independent operator reproduce the released experiment and can a hydrologist complete the supported browser workflow without local installation or code? These distinct reproduction and usability exercises organize the planned evidence rather than presuppose favorable results. [C08, C45]
 
 The proposed package will expose explicit campaign, runtime and asset contracts while reusing qualified domain preparation, forcing and evaluation tools. Its first physical profile is deliberately restricted. Reusability will be demonstrated within that profile before compatibility is extended. Version identifiers, licenses, dependency relationships and provenance are release deliverables consistent with the FAIR4RS principles; their presence alone will not be treated as proof that another researcher can reproduce a result. [C09; Barker et al., 2022, https://doi.org/10.1038/s41597-022-01710-x]
 
 ## 2. Computational problem and scientific contract
+
+> **Drafting guide:** R3 Foroumandi models explicit experiment definition; R6 Essawy clarifies reproduction terminology; R7 Bennett links evaluation to purpose. Define state, intervals and issue/lead keys before mechanisms. These citations do not establish our specific timing rules, tolerances or initialization policy.
 
 This draft uses **NWM** for NOAA's National Water Model system and products, **NextGen** for the modeling framework, and **research reforecast** for an experiment with an explicitly identified realization, parameterization, domain, initialization and archived forecast meteorology. A retrospective trajectory advances under historical meteorology; a reforecast branch advances under the meteorology associated with its historical issue. Using NWM meteorological products does not establish that the research realization reproduces operational NWM initial states or forecasts. This terminology follows the supplied technical brief and the [primary-source ecosystem review](../docs/ECOSYSTEM_AND_DISSEMINATION.md), and defines the study's product boundary. [C37]
 
@@ -63,11 +73,15 @@ Lineage will distinguish historical state inputs from issue-specific forecast in
 
 ### 2.3. Parameter mapping and scientific variants
 
+> **Drafting guide:** Use R3/R7 for controlled-experiment framing only. The [CFE finding](../docs/CFE_PARAMETER_FINDING.md), its sources and future coupled qualification support this case; none of the selected journal papers validates our proposed mapping correction.
+
 The project owner reports that the existing inputs use `mean.slope` for the CFE drainage parameter. The review verified saved Watauga originals and single-parameter variants against the isolated experiment's input manifest; the original hydrofabric extraction and historical generator/library provenance remain unresolved. Upstream NGIAB preprocessing [PR #74](https://github.com/CIROH-UA/NGIAB_data_preprocess/pull/74), merged on 3 February 2025, changes CFE's `slope` mapping from `mean.slope` to `mean.slope_1km`. Its complete changes also affect Noah terrain slope, coordinates, Noah defaults and partition handling. An isolated CFE-mapping comparison therefore cannot represent the effect of applying that entire PR. The verification record and remaining provenance questions are tracked in [the CFE parameter finding](../docs/CFE_PARAMETER_FINDING.md). [C32–C33]
 
 Parameter-map provenance will be part of the scientific identity. Reproducing the historical profile will test the runtime against that original profile; evaluating an alternative CFE mapping will require a separately identified variant with all other inputs controlled. These answer different questions. A change of parameters can change antecedent state and must not inherit the original variant's recovery identity or numerical-reference acceptance. Historical configurations and the feasibility dossier remain preserved evidence. [C35]
 
 ## 3. Software design and methods
+
+> **Drafting guide:** R1/R2 supply architecture and user-sequence examples; R4 Choi (2021) and R6 Essawy connect execution to retained artifacts. Explain the browser journey and each subsystem's responsibility before native internals. Add complementary workflow/architecture schematics; move detailed commands to the supplement.
 
 ### 3.1. Explicit planning and runtime qualification
 
@@ -99,6 +113,8 @@ The release will separate independently authored core code from inherited native
 
 ## 4. Evaluation protocol
 
+> **Drafting guide:** R3/R5/R7 place experiment definitions before outcomes; R8 informs user-task evaluation. Separate fidelity, isolation, recovery, resources and usability. R5's expert-coauthor competency ratings are not independent hydrologist task evidence and do not validate our proposed UX thresholds.
+
 The evaluation specification in `benchmarks/PROTOCOL.md` and `EXPERIMENT_MATRIX.json` separates new unit tests, synthetic mechanics, physical qualification and independent researcher reproduction. Each trial will retain its immutable inputs, environment, command, outcome, diagnostics and raw measurements. Runs that fail validation, time out or require assistance will remain in the record. Acceptance decisions will precede performance summaries. [C08]
 
 The first physical case will reconstruct the original Watauga qualification window: 31 catchments, origin 2021-12-01 00:00 UTC, issues at 2022-01-01 23:00 and 2022-01-02 00:00 UTC, and historical continuation to 2022-01-02 18:00 UTC. This corresponds to 786 historical updates and two independent 18-hour forecasts. The exact original fixture must first be restored and bound; a differently initialized production history is not interchangeable. [C21]
@@ -111,7 +127,11 @@ Performance experiments will use identical workloads and fixed whole-job CPU and
 
 New River will provide a second physical domain with two nested outputs, after its fixture and explicit geometry treatments are available. A final independent researcher exercise will use the frozen release and documented example on a qualified clean environment, including one configuration-only variation. Another automated agent on the developer's machine will not count as that external reproduction. [C25]
 
+Separately, the proposed browser study will evaluate the admitted [researcher journeys](../docs/PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) using the [UX protocol](../docs/UX_EVALUATION_PROTOCOL.md). It will retain unassisted completion, assistance, expected blocks, failures and understanding of the resulting experiment. Prototype, synthetic-service, physical-workflow and independent-reproduction evidence remain distinct. No user sessions have been conducted for this draft. [C45]
+
 ## 5. Historical motivating evidence and pending new results
+
+> **Drafting guide:** R1/R5 distinguish demonstration from performance; R2 shows a task-ordered example. Once measured, organize new findings by Q1–Q5 with failures and denominators visible. Preserve the historical and isolated-CFE evidence below as separate categories; other papers' results cannot fill our empty result slots.
 
 ### 5.1. Preserved runtime receipts
 
@@ -140,6 +160,8 @@ These values are recomputed summaries of saved outputs from a prior isolated exp
 
 ## 6. Discussion and limitations
 
+> **Drafting guide:** R2/R5/R6/R8 frame access, reproducibility, tradeoffs and sustained use. Answer the five questions before discussing extensions. Explain what remains burdensome for researchers, where the qualified scope ends, and how maintenance affects reuse. Keep execution fidelity separate from hydrologic skill.
+
 The proposed contribution is a tested relationship among historical state, forecast branches and durable evidence. It will be valuable only if that relationship survives realistic model integration and failure. Explicit unsupported configurations are part of the method: process forking is sensitive to threads and external state, while routing snapshots depend on topology and variable layout. Passing tests for one component stack cannot establish compatibility with arbitrary BMI realizations. [C14–C16]
 
 Replay recovery is scientifically interpretable because it preserves the original initialization experiment, but it may become expensive for long antecedent histories. The benchmark will quantify that cost rather than describe daily output custody as physical checkpointing. Input retention is equally important. Source locators, checksum lists and small discharge archives are useful records, but none can replace missing forcing bytes. [C18–C19]
@@ -154,9 +176,13 @@ Upstream integration and maintenance remain open design decisions. The feasibili
 
 ## 7. Provisional conclusion
 
+> **Drafting guide:** R1/R5 provide examples of bounded software conclusions. State the supported contribution, intended user and strongest limitation in that order. Add no claims absent from our results; current conclusions remain provisional.
+
 A reproducible reforecast workflow requires more than repeated model launches: it requires agreement about the initialized state, the interval consumed at each issue, branch ownership, completion and recovery. This draft defines those contracts and an evaluation that can reject their implementation. Historical receipts motivate the work but do not qualify the new public software. The final conclusion will depend on completed physical references, equal-resource measurements, interruption experiments and independent reproduction; no claim of demonstrated efficiency or finished software is made here. [C08, C29]
 
 ## Availability and declarations — to be completed before submission
+
+> **Drafting guide:** R1/R4/R6 and FAIR4RS inform concrete artifact identification. List the exact code, environment, input, output and analysis versions with access terms and reproduction instructions. Published examples do not replace the current journal guide or author-confirmed declarations.
 
 **Software and data.** The development repository is https://github.com/Mitchel34/nextgen-reforecast-software. The paper release commit/tag, archive DOI, compatible image digest, complete licensed fixture deposit and durable benchmark deposit are pending. Preserved source/receipt aliases in the public dossier point to evidence that is not entirely redistributed. A public repository URL is not a substitute for a complete reproducibility deposit. The final availability statement must identify access terms and exact versioned artifacts actually used. [C20, C29]
 
@@ -166,8 +192,10 @@ A reproducible reforecast workflow requires more than repeated model launches: i
 
 **AI assistance.** AI tools assisted draft preparation and initial software work. The authors must verify all text, code, evidence and citations and supply the disclosure required by the applicable journal policy. Final tool/use wording and author responsibility statements remain to be reviewed.
 
-**Journal requirements.** The official guide returned HTTP 403 on 18 September 2026. Exact article category, length, submission files and declarations have not been certified; see [JOURNAL_REQUIREMENTS.md](JOURNAL_REQUIREMENTS.md).
+**Journal requirements.** The official guide returned HTTP 403 on 18 September and again on 23 September 2026. Exact article category, length, submission files and declarations have not been certified; see [JOURNAL_REQUIREMENTS.md](JOURNAL_REQUIREMENTS.md).
 
 ## References and evidence map
+
+> **Drafting guide:** Use the [R1–R9 reading set](RELATED_WORK_AND_WRITING_GUIDE.md) selectively where it supports a claim or method. Descriptive papers, exact software/data versions and our experimental receipts serve different citation roles. Retain access limits and do not cite an unread layout as inspected.
 
 Bibliographic entries are in [references.bib](references.bib), with access and verification notes in [SOURCE_VERIFICATION.md](SOURCE_VERIFICATION.md). Internal methodological evidence is mapped per claim in [CLAIMS.csv](CLAIMS.csv), principally to the preserved dossier under `reports/reforecast_software_feasibility_20260918T045854Z/`. Claims supported only by inspected historical source or receipts retain that qualification until matched new experiments are available.

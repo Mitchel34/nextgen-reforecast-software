@@ -63,6 +63,8 @@ Keep third-party licenses and source ownership visible. Independently authored c
 
 Progress is tracked in `docs/IMPLEMENTATION_STATUS.md`. Completion is determined by the acceptance evidence above, not by generated file count or a passing synthetic demonstration.
 
+The [23 September EM&S literature and writing guide](paper/RELATED_WORK_AND_WRITING_GUIDE.md) adds source-backed context and section-specific models for framing, organization and narrative clarity. Future manuscript assignments must use its reading/evidence handoff requirements; software assignments should connect its recommendations to existing objective/journey and RF/WEB IDs. These references guide the plan without initiating implementation or changing physical acceptance gates.
+
 ## Next development cycle
 
 At the next implementation kickoff, use the stable work-package IDs, dependencies and tests in [the backlog](docs/DEVELOPMENT_BACKLOG.md), together with the product journey assignments. Bounded offline contracts can then proceed while native assets are being resolved; physical execution remains dependent on M2. The planning-only request does not activate these lanes.
