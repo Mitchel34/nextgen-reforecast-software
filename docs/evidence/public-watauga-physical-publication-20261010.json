@@ -1,0 +1,82 @@
+{
+  "schema_version": "public-watauga-physical-publication/0.1",
+  "observed_at_utc": "2026-10-11T04:28:23Z",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "visibility": "public",
+  "implementation_commit": "dae9ad3aaed9175cfb93ad41427bf9e47cd09c66",
+  "remote_main_at_verification": "dae9ad3aaed9175cfb93ad41427bf9e47cd09c66",
+  "increment_identity_sha256": "bc6259173bd0ff949d00b8a9fe7a0474cc261641d235ab4d3c89ccf53b15a204",
+  "increment_receipt": {
+    "bytes": 31085,
+    "sha256": "939dfac908c0776c79b208cfde24930dca7343d235906a1b9349246dc8fa9ae4"
+  },
+  "source_bindings_unchanged": true,
+  "all_sealed_reference_arrays_and_raw_outputs_unchanged": true,
+  "ci": {
+    "run_id": 38111594675,
+    "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38111594675",
+    "head_sha": "dae9ad3aaed9175cfb93ad41427bf9e47cd09c66",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "browser-contract",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      {
+        "name": "offline (3.13)",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      {
+        "name": "offline (3.14)",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      {
+        "name": "offline (3.11)",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      {
+        "name": "offline (3.12)",
+        "conclusion": "success",
+        "status": "completed"
+      }
+    ],
+    "tests_each_python_version": 247,
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "browser_tests": 17,
+    "log": {
+      "bytes": 388033,
+      "sha256": "1dc376606bb5eceff3822ec28eb8879d7eca749dce7b4b0990b2c663183a225f"
+    }
+  },
+  "preservation_after_publication": {
+    "protected_entries_before": 33367,
+    "protected_entries_after": 33367,
+    "protected_metadata_changes": 0,
+    "protected_changed_paths": [],
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "atime_included": false,
+    "immutable_files": 32,
+    "immutable_byte_changes": []
+  },
+  "new_model_invocations_after_reference_sealing": 0,
+  "dedicated_worker_stopped": true,
+  "release_qualified": false,
+  "scope": "Documentation publication follow-up; successful CI validates bound developer/package contracts, not hydrologic skill or release qualification.",
+  "publication_identity_sha256": "f65ef37b128004685e59fccadfce37d982f8f97c6b84698d7c01de05bb374147"
+}

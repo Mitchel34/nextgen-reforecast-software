@@ -12,6 +12,8 @@ The [separate compatible fixture v2](../fixtures/watauga-public-v2/README.md) ch
 
 The new tools pass **247 Python tests** and the unchanged browser contract passes **17 Node tests**. Core package/wheel source remains `0.1.0a4`; the new execution/admission/audit tools are developer scripts, not public `run`/`resume` commands. The [integrated receipt](evidence/public-watauga-physical-increment-20261010.json) binds source, tests, failures and references. Original-folder checks find zero changes across 33,367 metadata entries and 32 protected file hashes. All model containers are removed and only the dedicated worker is stopped with its disks/configuration retained.
 
+[Public CI run 38111594675](https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38111594675) passes all five jobs at implementation commit `dae9ad3aaed9175cfb93ad41427bf9e47cd09c66`: 247 tests for each Python 3.11–3.14 job and 17 browser tests. The [publication receipt](evidence/public-watauga-physical-publication-20261010.json) rechecks unchanged source, sealed arrays/raw outputs and original-folder preservation after publication.
+
 The operational review traces repeated upstream unit-warning fallbacks separately from full-output integrity. Release scientific gates and the hosted researcher pathway remain open. The original E03 identity and unresolved historical inputs remain intact.
 
 ## Preserved public-source fixture preparation
