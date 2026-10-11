@@ -10,6 +10,8 @@ Historical recovery remains 44/181 exact members; the [new local inventory/archi
 
 The current continuation passes **205 Python tests**, **17 Node/browser contract tests**, and **23 installed-wheel CLI checks** (20 existing synthetic/refusal checks plus three validators over the actual public inputs). The wheel loads version `0.1.0a4` from site-packages. [The public-fixture increment receipt](evidence/public-fixture-increment-20261010.json) binds source identities, input/audit/assembly records and current preservation evidence. The final original-folder check finds zero metadata changes across **33,367** entries and zero byte changes across **32** protected repository artifacts. No native model was invoked.
 
+[Public CI run 38109381898](https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38109381898) passes all five jobs at implementation commit `70f261432c583398a33df0da07910d04f244ecd3`: 205 tests for each Python 3.11–3.14 job and 17 browser tests. The [publication follow-up](evidence/public-fixture-publication-20261010.json) confirms unchanged source bindings and preservation after publication.
+
 ## Preserved scientific-input/runtime increment
 
 - **Forcing contents (RF-004):** strict decoded CSV manifests and independently expected catchments/clocks; complete hourly coverage, source issue/lead labels, units, precipitation conversion and numeric validity. Default gap policy fails; explicit incomplete-forecast exclusion is recorded without accepting invalid content. Source authenticity, historical availability, decoder/grid qualification and radiation interpretation remain separate unresolved requirements.

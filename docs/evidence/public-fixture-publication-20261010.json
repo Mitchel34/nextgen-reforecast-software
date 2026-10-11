@@ -1,0 +1,64 @@
+{
+  "schema_version": "public-fixture-publication/0.1",
+  "observed_at_utc": "2026-10-11T03:46:17.333953+00:00",
+  "implementation_commit": "70f261432c583398a33df0da07910d04f244ecd3",
+  "increment_identity_sha256": "4a564a261d99289482543123a1c2eeb3ea3fa5bcf8b5242b18871546458b4d13",
+  "fixture_manifest_identity_sha256": "63695c2ecf56c0de03952f2fdf8bb57fe940454891401d090b2a2f8cec5ae446",
+  "source_binding_count": 37,
+  "source_bindings_current": true,
+  "public_ci": {
+    "run_id": 38109381898,
+    "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38109381898",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "browser-contract",
+        "conclusion": "success",
+        "tests": 17
+      },
+      {
+        "name": "offline (3.13)",
+        "conclusion": "success",
+        "tests": 205
+      },
+      {
+        "name": "offline (3.11)",
+        "conclusion": "success",
+        "tests": 205
+      },
+      {
+        "name": "offline (3.14)",
+        "conclusion": "success",
+        "tests": 205
+      },
+      {
+        "name": "offline (3.12)",
+        "conclusion": "success",
+        "tests": 205
+      }
+    ],
+    "log_sha256": "210c1d7a3d234aed9c86d42a0598d568b1abf614c8658589563bd89bc879d811"
+  },
+  "preservation": {
+    "protected_entries_before": 33367,
+    "protected_entries_after": 33367,
+    "protected_metadata_changes": 0,
+    "protected_changed_paths": [],
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "atime_included": false,
+    "immutable_files": 32,
+    "immutable_byte_changes": []
+  },
+  "model_invocations": 0,
+  "execution_ready": false,
+  "payloads_published": false,
+  "scope": "Public preparation code/tests/recipe/provenance/manuscript; source and derived data remain ignored local staging",
+  "publication_identity_sha256": "acb4dc1cedfba0500d48485bc9fb8dfb5622c7f58673cc76deab1e5a847e7d4b"
+}
