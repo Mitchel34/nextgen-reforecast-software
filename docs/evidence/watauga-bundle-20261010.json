@@ -1,0 +1,2569 @@
+{
+  "schema_version": "watauga-bundle-progress/0.1",
+  "observed_date": "2026-10-10",
+  "evidence_class": "fresh_bounded_resident_identity_and_staging",
+  "status": "INCOMPLETE_INPUT_BUNDLE",
+  "execution_ready": false,
+  "scientific_semantics_verified": false,
+  "new_model_runs": 0,
+  "source_hydration_performed": false,
+  "historical_manifest": "native/ASSET_CLOSURE.json",
+  "historical_manifest_modified": false,
+  "identity_supplement": "docs/evidence/watauga-fixture-bindings-20261010.json",
+  "identity_supplement_sha256": "15d0a4387079fa669e43f86e40a09d21828654a599f8f80f8ec011974176537d",
+  "contract": {
+    "path": "fixture/CONTRACT.json",
+    "sha256": "b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb",
+    "bytes": 45886,
+    "fresh_hash_matches_preexisting_binding": true,
+    "member_bindings": 179,
+    "prior_unknown_member_hashes": 131,
+    "resolved_unknown_member_hashes": 131,
+    "remaining_unknown_member_hashes": 0,
+    "historical_binding_conflicts": 0
+  },
+  "original_fixture_metadata": {
+    "expected_files": 181,
+    "resident": 1,
+    "dataless_not_opened": 180
+  },
+  "private_staging": {
+    "git_ignored_relative_root": ".local/watauga-bundle-20261010",
+    "fresh_copies": true,
+    "hardlinks_used": false,
+    "destination_file_mode": "0400",
+    "staged_bytes": 4452920,
+    "receipt_shared": false,
+    "receipt_sha256": "ca3b5077846dd14c1cfcc934feff7fed8883379571648a2fd62822feb3f4e063"
+  },
+  "summary": {
+    "expected_assets": 181,
+    "verified_assets": 44,
+    "staged_assets": 44,
+    "unresolved_expected_hashes": 0,
+    "source_bytes_read_or_reserved": 5971617,
+    "status_counts": {
+      "dataless": 137,
+      "verified": 44
+    }
+  },
+  "limits": {
+    "max_file_bytes": 16777216,
+    "max_total_bytes": 134217728
+  },
+  "source_metadata_comparison": {
+    "entries": 934,
+    "changed_entries": 0,
+    "before_sha256": "c461d1d200d17eabfa387568e6156f96e9fae99939a3b06327e1a2d6e55afc76",
+    "after_sha256": "c461d1d200d17eabfa387568e6156f96e9fae99939a3b06327e1a2d6e55afc76",
+    "scope": "Exact fixture members and explicit resident preservation candidates; excludes access time. Broad original Reforecast baseline is independently checked by the coordinator."
+  },
+  "source_aliases": {
+    "original-fixture": "Exact original day-model-preparation01 fixture, read only",
+    "HYDRA-NextGen": "Existing private HYDRA preservation checkout, read only",
+    "HYDRA-CFE-Correction": "Existing isolated correction workspace, read only",
+    "HYDRA-Internal-Pilot": "Existing isolated pilot workspace, read only",
+    "AI-HYDRA-NextGen": "Existing AI/HYDRA preservation checkout, read only",
+    "original-related": "Named adjacent original runtime and forcing preparation directories, metadata only"
+  },
+  "resident_copy_search": {
+    "method": "Bounded metadata enumeration by exact basename and declared size, followed by nofollow hash verification; nonmatching candidates were rejected. Search is not exhaustive for truncated roots.",
+    "preservation_searches": [
+      {
+        "root_alias": "HYDRA-NextGen",
+        "complete_within_exclusions": true,
+        "entries": 2370,
+        "excluded": 4,
+        "stop_threshold_entries": 60000,
+        "threshold_checked_between_directories": true
+      },
+      {
+        "root_alias": "HYDRA-CFE-Correction",
+        "complete_within_exclusions": false,
+        "entries": 60003,
+        "excluded": 4,
+        "symlinks": 15,
+        "stop_threshold_entries": 60000,
+        "threshold_checked_between_directories": true
+      },
+      {
+        "root_alias": "HYDRA-Internal-Pilot",
+        "complete_within_exclusions": false,
+        "entries": 60024,
+        "excluded": 3,
+        "symlinks": 7,
+        "stop_threshold_entries": 60000,
+        "threshold_checked_between_directories": true
+      },
+      {
+        "root_alias": "AI-HYDRA-NextGen",
+        "complete_within_exclusions": true,
+        "entries": 8611,
+        "excluded": 5,
+        "stop_threshold_entries": 60000,
+        "threshold_checked_between_directories": true
+      }
+    ],
+    "related_metadata_searches": [
+      {
+        "root_alias": "original-related",
+        "relative": "shared_history_runtime_v2",
+        "complete_within_bound": true,
+        "entries": 1349,
+        "dataless": 1249,
+        "max_entries": 20000
+      },
+      {
+        "root_alias": "original-related",
+        "relative": "shared_history_runtime_v3",
+        "complete_within_bound": true,
+        "entries": 828,
+        "dataless": 631,
+        "max_entries": 20000
+      },
+      {
+        "root_alias": "original-related",
+        "relative": "shared_history_campaign_preparation_v2",
+        "complete_within_bound": false,
+        "entries": 20000,
+        "dataless": 17949,
+        "max_entries": 20000
+      },
+      {
+        "root_alias": "original-related",
+        "relative": "nwm_branch_forcing_preparation_v1",
+        "complete_within_bound": true,
+        "entries": 431,
+        "dataless": 426,
+        "max_entries": 20000
+      },
+      {
+        "root_alias": "original-related",
+        "relative": "nwm_branch_forcing_materialization_v2",
+        "complete_within_bound": true,
+        "entries": 55,
+        "dataless": 48,
+        "max_entries": 20000
+      }
+    ],
+    "name_size_candidates": 753,
+    "related_resident_candidates": 0,
+    "attempt_result_counts": {
+      "ASSET_HASH_MISMATCH": 586,
+      "ASSET_HASH_VERIFIED": 44,
+      "DATALESS_REJECTED": 180
+    }
+  },
+  "remaining_categories": {
+    "SHA256SUMS": 1,
+    "branch-forcings": 66,
+    "input": 64,
+    "reference.json": 1,
+    "router.json": 1,
+    "scripts": 1,
+    "src": 3
+  },
+  "assets": [
+    {
+      "path": "fixture/CONTRACT.json",
+      "sha256": "b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb",
+      "bytes": 45886,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb",
+      "source_alias": "original-fixture",
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1
+      }
+    },
+    {
+      "path": "fixture/SHA256SUMS",
+      "sha256": "24b8563e4a741d43cf74af631d4873bc7f103d6fff12a7a459ba8c1540a16947",
+      "bytes": 80,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/PREPARATION_RECEIPT.json",
+      "sha256": "9f01c7f82f0fc45853975c071155e5366d9a8117aa4a207ce603de78b720f88c",
+      "bytes": 11879,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/SHA256SUMS",
+      "sha256": "03761d4f8ea92b24d29b7bcb7e91cb357d4a20ec8ebaccd41683235f0f002585",
+      "bytes": 2633,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017689.csv",
+      "sha256": "590428096e7fdc81cbecdb48d97f871b4a1752b905d3ecac2980b4525025823e",
+      "bytes": 2017,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017690.csv",
+      "sha256": "2aa49a55b13f0a37c7ae5fcde2c90960c87c858b9858f8d1925bff70ad01f4b2",
+      "bytes": 2007,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 9,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 8,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017691.csv",
+      "sha256": "3f837a43bb7e74a2f16d8430c2ef861fbeaeb5a86c539b3636987ff73d2f4511",
+      "bytes": 2001,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017692.csv",
+      "sha256": "ddfac38c26533eb01880c87d881d475a668377a436f12082250715c44c91ead1",
+      "bytes": 1989,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 8,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 7,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017693.csv",
+      "sha256": "2c7574e6d7a7dfc555211b7c03c8f5b003ed103935abe19c294fbe046d8e404d",
+      "bytes": 1988,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 6,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 5,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017847.csv",
+      "sha256": "1aed9a5104901cb29d80dd6b150ab51363b3191dd2d1640a4c78f68137680d0c",
+      "bytes": 1977,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 10,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 9,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017848.csv",
+      "sha256": "1410a5aab78a62b76f0e39aa94c2183b466917887ae4a912e57950e7d8ce77cc",
+      "bytes": 2000,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 6,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 5,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017849.csv",
+      "sha256": "06ac2bea7e9b4699de7ec49065dbbab995e0feca6f525a82e39a27f4a5123f3e",
+      "bytes": 1992,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017850.csv",
+      "sha256": "67a87d612b28cc0ac30b14d88eee5c0bd3f22bc031142730c9ac67e18c37d10a",
+      "bytes": 1987,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 5,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 4,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017851.csv",
+      "sha256": "ece340e58b571eaeb44858e80656e57f76519aec52beea9f6913c78dec542b0c",
+      "bytes": 1976,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017852.csv",
+      "sha256": "fc4318f86f6c332c77f936513fa3f08d0db488b31f5ab9bf1148aeb567a1357f",
+      "bytes": 1987,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 11,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 10,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017853.csv",
+      "sha256": "93cf51e1e8d50945978628262e509eaf0a1e4f0e0f1f62e4e5d61c47b44fead8",
+      "bytes": 1978,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017854.csv",
+      "sha256": "84e7df66258176b2c064fea3a96da9a88c06873bb7a3a8b3fb2d6855e6f2dd4a",
+      "bytes": 1981,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 7,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 6,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017855.csv",
+      "sha256": "8572c1c525f1459fb6a37c937be227ceaac3e2aec1f88da137abd80c62eb28c9",
+      "bytes": 1981,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 9,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 8,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017856.csv",
+      "sha256": "f1fffad34e7f71c5ad960aad7cfe226cbfe845e6d512c658efa3b18fe117e8c6",
+      "bytes": 1981,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 17,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 16,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017857.csv",
+      "sha256": "784795674be2d387482218b93a816e108fb91aa210237503772e26cf6fea984a",
+      "bytes": 1969,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017858.csv",
+      "sha256": "9a50adc66e3dbfe4a68e262971e5eaac873a90369f5a9879361f7eb183b0a41f",
+      "bytes": 1971,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 8,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 7,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017859.csv",
+      "sha256": "04e2d582a7f6ec790689de51a5bd4499fe9267f10aecb67c9079013f371f7c73",
+      "bytes": 1980,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017860.csv",
+      "sha256": "ea46fea06e1c41963d6ddeabd654d4611f2c0ca5c06e940a2408297db1db93c2",
+      "bytes": 2009,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017861.csv",
+      "sha256": "295ab6522756e13d6ccc21d6d1f0e55e7e7ac5b251e0a28fade717e67e037901",
+      "bytes": 2008,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017862.csv",
+      "sha256": "a466b0f4395c7e19ff062b5c85074e7684189e6077f51a453be1b94dd60f36b3",
+      "bytes": 2000,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017863.csv",
+      "sha256": "d71c77ff3b6d1a790ba394202339e3906e432f31474cc82cfe73a8d55eeb502f",
+      "bytes": 2008,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 5,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 4,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017864.csv",
+      "sha256": "ba8eacb0c565a6a08e882583b8e372fbc6cbe3d6d4634a1cd928fcb466da5877",
+      "bytes": 1997,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 17,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 16,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017865.csv",
+      "sha256": "3cd874501f6cf70585f7824e63248bb7151f824d44f02da481260d57214e7b40",
+      "bytes": 1996,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017866.csv",
+      "sha256": "e1c19efe74396bf8a28ee537261de1d4433fd4f6ed860454c0af70b705d6f688",
+      "bytes": 2007,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 8,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 7,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017867.csv",
+      "sha256": "7d99e959b34c76466b1576a12943be725f05fd30a451d5a841ec0a50885159e6",
+      "bytes": 1994,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017868.csv",
+      "sha256": "5e52879ecea8b95ae50ca332eea935d908198e9cd835de92db4fd706883c33c0",
+      "bytes": 2019,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017869.csv",
+      "sha256": "df420691b9e12458c53b0ea4e835e7ab48a12a86f477be1e186484260220bacb",
+      "bytes": 2012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017870.csv",
+      "sha256": "b97778480b42b71b8454a63557a882eb8bb4eb20beb10e5025ae412e72f9431d",
+      "bytes": 1998,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017871.csv",
+      "sha256": "83ef75dd37601742c0ae21423e0f65aed120253a7bc2bd3d949c8502eefc6973",
+      "bytes": 2008,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 9,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 8,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641078000/cat-1017872.csv",
+      "sha256": "26cfdb312e26d42bccb2250ed14440596a38e51a49576cc8c239451d24384fbd",
+      "bytes": 2007,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 11,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 10,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/PREPARATION_RECEIPT.json",
+      "sha256": "409a7adff974615970bcfcc05e40632e28e43f3fc279cb9a40cebffdb6b08566",
+      "bytes": 11881,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/SHA256SUMS",
+      "sha256": "5184d5ea06af075cf94a615f1475619a3ae8be5f3edc87f29a84e464c8f12468",
+      "bytes": 2633,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017689.csv",
+      "sha256": "26f096e8cbe95816d4c9e14d0cc5a0e92654d6141bd346c1f606c0393493fed6",
+      "bytes": 2005,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017690.csv",
+      "sha256": "6d56cdc338df44b8063851d9ab05f7d41a339218db913894aa1ed2007c92affd",
+      "bytes": 2023,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017691.csv",
+      "sha256": "1d89169a39461e8e98f1ab66f7ae342fef588aa082443fa16b4533ccc99e27d8",
+      "bytes": 2017,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017692.csv",
+      "sha256": "388b02cdb7ec5b9222bac0144f349c7079549ceb1697ed7f23700db96a3e26a0",
+      "bytes": 2031,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017693.csv",
+      "sha256": "1ed10ffb53ecc438b74a34da40899cf8c6499278e10a95117be0254684439d2f",
+      "bytes": 2024,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 8,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 7,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017847.csv",
+      "sha256": "927aa3c645db43abf399a7c691132fd3f9f6ce04620d119e12110d0c3e4be450",
+      "bytes": 2037,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017848.csv",
+      "sha256": "17c9b5a8bc68f42ad70554cb30010d6098cf20743ca5d850182a64763456d51e",
+      "bytes": 2031,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017849.csv",
+      "sha256": "65a73d235ac11e7cd67979c517ab1fd749d86e23fdb08fe309d9f82683fb3535",
+      "bytes": 2032,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017850.csv",
+      "sha256": "c4ec6d13961fd284945d9e2e31deaf7297ae53180ec095bf856cfa29b4df410f",
+      "bytes": 2025,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017851.csv",
+      "sha256": "8c129eb4999552b33be709f7c5b2776e095fdbe3d457757992759e562eb5b5a9",
+      "bytes": 2022,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017852.csv",
+      "sha256": "ede693eb0af49b94d13134d5b8082b3f51a1f703e04d8ef6b0cdfa160013bb8d",
+      "bytes": 2024,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017853.csv",
+      "sha256": "4e597b928005a733da806158771f5ac81be190fc19c17ae7ec762165d2df1954",
+      "bytes": 2041,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017854.csv",
+      "sha256": "1d74b8e451c0452e3716280c37cae1cfe139019a97fcd0407a2e243bff744193",
+      "bytes": 2022,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 15,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 14,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017855.csv",
+      "sha256": "32e2a6f75c051c36025cac17bbac115d880e29adcb731ed999e56d3913d072f1",
+      "bytes": 2024,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017856.csv",
+      "sha256": "239694b15dea93535e68a9fc30e00e00a152d56f4d57656835de2bdc72737b5e",
+      "bytes": 2034,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017857.csv",
+      "sha256": "6422f5b5723bd2b5cc7bc6e36ad53a3ba7a65a451c576a09c31fdd3b36367c66",
+      "bytes": 2039,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017858.csv",
+      "sha256": "7cfe79301b3bbc156432138b94f8a48a0ef6771116703a8efbc9486b4cba1e66",
+      "bytes": 2030,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017859.csv",
+      "sha256": "92ce93cc025665d753b649889596b9fb2ea71046f651b5e493532e3af9122cb6",
+      "bytes": 2011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017860.csv",
+      "sha256": "d6d3f04afd034343cf82f88b82cdc8722553828bd308f07e908569f68c40aa06",
+      "bytes": 2022,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017861.csv",
+      "sha256": "9bad724ad56db14565624aec9688fc9acf1f8c6b0652977958b1d06b3d707212",
+      "bytes": 2011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017862.csv",
+      "sha256": "52541a21c842871ff3bcc516c027a09d36347b4f614c998ea15f2d55d62fef48",
+      "bytes": 2016,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017863.csv",
+      "sha256": "a8c123f180604b9aaedb97011ce7d05c5627f633702e3c68bd533f278f3a5461",
+      "bytes": 2011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 3,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 2,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017864.csv",
+      "sha256": "8a776b5b3c0ad9bcf86f00adb8e1d1d93b19a5f07f626662aba157664457b394",
+      "bytes": 2013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017865.csv",
+      "sha256": "2b5aeceb14548b22d7d7cf64b7e3c720685503d44690608183b427d455abdbae",
+      "bytes": 2005,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 7,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 6,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017866.csv",
+      "sha256": "7797b27a3c410d67c110f569db6d8c32049cf2c2e3c326054daf1f7fba4ae9ce",
+      "bytes": 2019,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017867.csv",
+      "sha256": "9d53a442cb8fdf451539d2abe93f9a28a5d9d68a8ab46d082e355a0c999100d1",
+      "bytes": 2018,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 9,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 8,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017868.csv",
+      "sha256": "1e21338428a3c141f8cf1e4c335c948ef91c8076054e7c94a2d18ce856168334",
+      "bytes": 2001,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017869.csv",
+      "sha256": "c83d87dedceae6f33e0060377855744e1b79ea3d13e26462e60dfd259a1bcb99",
+      "bytes": 2015,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 4,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 3,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017870.csv",
+      "sha256": "76a753b4b42cd46f5e2f2878793e76976ae094ce77e45b6e94ba96f5b35178c7",
+      "bytes": 2018,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017871.csv",
+      "sha256": "ddb7951ec96630f3c47813bed82858d9de553e0a036c78699d076a1c6d676cb4",
+      "bytes": 1997,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 10,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 9,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/branch-forcings/1641081600/cat-1017872.csv",
+      "sha256": "dfb13529d956a5f974973762779f521629ea04e4bbca3e1ff84128a28748bb23",
+      "bytes": 2008,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017689.ini",
+      "sha256": "a71edbd97212db511e80ff4ac13ac1e77f10cadcc71a0cae6f532f6d436308d9",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "a71edbd97212db511e80ff4ac13ac1e77f10cadcc71a0cae6f532f6d436308d9",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017690.ini",
+      "sha256": "fd89fc6316ff9c94a0434e439ee6e69079f10e16d03347a0923a1788d291f755",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "fd89fc6316ff9c94a0434e439ee6e69079f10e16d03347a0923a1788d291f755",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017691.ini",
+      "sha256": "71f551ab70e9b74111a475237cc431bbb4be7283216f6cf9e23ae922bf8673dc",
+      "bytes": 629,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "71f551ab70e9b74111a475237cc431bbb4be7283216f6cf9e23ae922bf8673dc",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017692.ini",
+      "sha256": "65cc13b6120a7465433b5be537fefa6009b827aa790b6cae86be16cdac2bf421",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "65cc13b6120a7465433b5be537fefa6009b827aa790b6cae86be16cdac2bf421",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017693.ini",
+      "sha256": "c9977cea57acfa32927eb6bbe2d490cff538d2fa383e7cf0eeaa569c993e4f86",
+      "bytes": 631,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "c9977cea57acfa32927eb6bbe2d490cff538d2fa383e7cf0eeaa569c993e4f86",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017847.ini",
+      "sha256": "39d75ca77d02eb80c5b4eec67f5e2aebd7bb2f6729a5d87aaff801e9f05c0d06",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "39d75ca77d02eb80c5b4eec67f5e2aebd7bb2f6729a5d87aaff801e9f05c0d06",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017848.ini",
+      "sha256": "c4a5a002741119df777bcf41baafd341cb68b5941db4205982de6a6525f8d7fc",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "c4a5a002741119df777bcf41baafd341cb68b5941db4205982de6a6525f8d7fc",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017849.ini",
+      "sha256": "823a49aea99957fbd75bd6c38bc1bbf7952fa82124e64a4ace48304f8b383c24",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "823a49aea99957fbd75bd6c38bc1bbf7952fa82124e64a4ace48304f8b383c24",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017850.ini",
+      "sha256": "524800c2a80f38dbdbc1ed7299536eccefef661df8c30fb48c27baac7eb96c35",
+      "bytes": 629,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "524800c2a80f38dbdbc1ed7299536eccefef661df8c30fb48c27baac7eb96c35",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017851.ini",
+      "sha256": "8e9be6b8410427be63f6b7cdd4f8ee3483d3e76c99cdf95f5c4c2ddfdd9080e1",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "8e9be6b8410427be63f6b7cdd4f8ee3483d3e76c99cdf95f5c4c2ddfdd9080e1",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017852.ini",
+      "sha256": "ce2c97a760d91443dfa3798660a9be93eec0661d91b0ff1c8d94794fbaffb72c",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "ce2c97a760d91443dfa3798660a9be93eec0661d91b0ff1c8d94794fbaffb72c",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017853.ini",
+      "sha256": "3982b16f69cfaee5fb6f6f6d78d6dc310259ce1ad47620c864a50825c75ffd7e",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "3982b16f69cfaee5fb6f6f6d78d6dc310259ce1ad47620c864a50825c75ffd7e",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017854.ini",
+      "sha256": "c7cfe6bdc3173ffa190aff3ab3fa43f6899ca8e46f82d38c369e43c71992a1b7",
+      "bytes": 633,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "c7cfe6bdc3173ffa190aff3ab3fa43f6899ca8e46f82d38c369e43c71992a1b7",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017855.ini",
+      "sha256": "07cf17be2c301b4ee6f68e2f1950510af54c039f9b7db39a98fe4263bdeacce0",
+      "bytes": 633,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "07cf17be2c301b4ee6f68e2f1950510af54c039f9b7db39a98fe4263bdeacce0",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017856.ini",
+      "sha256": "8e6a9935c8d755f9a67c9a2f896d75797f4f9cf69db16795101fe73eca5d2c2a",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "8e6a9935c8d755f9a67c9a2f896d75797f4f9cf69db16795101fe73eca5d2c2a",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017857.ini",
+      "sha256": "5b7c90a7380ce6bbd9524e6fa97d0cf62dbb307cc0b6dad390bae501ef04cd84",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "5b7c90a7380ce6bbd9524e6fa97d0cf62dbb307cc0b6dad390bae501ef04cd84",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017858.ini",
+      "sha256": "540a6dade3804c6aa2ab49b1957a5cd6c125eb1c1a771dc687d1a37c39bc4249",
+      "bytes": 633,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "540a6dade3804c6aa2ab49b1957a5cd6c125eb1c1a771dc687d1a37c39bc4249",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017859.ini",
+      "sha256": "d6447a6b367a3e3e3bd959f7b4bd93c327db9a5af914043f59d47e86b657f64d",
+      "bytes": 633,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "d6447a6b367a3e3e3bd959f7b4bd93c327db9a5af914043f59d47e86b657f64d",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017860.ini",
+      "sha256": "26e2ea2f1783830791431fbbd39ecc2039449c0f55a804be71b5da995869ed06",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "26e2ea2f1783830791431fbbd39ecc2039449c0f55a804be71b5da995869ed06",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017861.ini",
+      "sha256": "5a926d4a2d6b3c5b6215e88e78979358535273b90814e6aac5a44dd005672dbd",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "5a926d4a2d6b3c5b6215e88e78979358535273b90814e6aac5a44dd005672dbd",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017862.ini",
+      "sha256": "9d3f670394f44e8617dc931e97795b2803d9483e22f53f024769896adb93111c",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "9d3f670394f44e8617dc931e97795b2803d9483e22f53f024769896adb93111c",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017863.ini",
+      "sha256": "eaad8aecd31b3a9b63fbaf5c14516f7bdb6cb70e3a6e7b244f34e837390b71ca",
+      "bytes": 631,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "eaad8aecd31b3a9b63fbaf5c14516f7bdb6cb70e3a6e7b244f34e837390b71ca",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017864.ini",
+      "sha256": "974076b568b393fb4220c50ff5718bb5e0a295285f2e5e9f6af70ff40456b154",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "974076b568b393fb4220c50ff5718bb5e0a295285f2e5e9f6af70ff40456b154",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017865.ini",
+      "sha256": "4629ff71fd29c88960094fdb2e70084bfc2a182cfe7a885791b3f1a531f947e7",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "4629ff71fd29c88960094fdb2e70084bfc2a182cfe7a885791b3f1a531f947e7",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017866.ini",
+      "sha256": "bbc5fedcdc6043c92610cc1594189c10d94fdaf78e1f67f93aaa5ce9dfa58a09",
+      "bytes": 634,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "bbc5fedcdc6043c92610cc1594189c10d94fdaf78e1f67f93aaa5ce9dfa58a09",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017867.ini",
+      "sha256": "b74e1caa91b90f5d8659e93ea0a9f93751d6fcf3b1f464a1ed76c150c4505182",
+      "bytes": 632,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "b74e1caa91b90f5d8659e93ea0a9f93751d6fcf3b1f464a1ed76c150c4505182",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017868.ini",
+      "sha256": "f70fa65c852014ad327aecf422cfc8050a9496df38e621feda0c20afa89c305c",
+      "bytes": 631,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "f70fa65c852014ad327aecf422cfc8050a9496df38e621feda0c20afa89c305c",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017869.ini",
+      "sha256": "4081ae8b6df20829806c042e977a1d6b55c8dd6e98ccd9070b1ce46a06effa4b",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "4081ae8b6df20829806c042e977a1d6b55c8dd6e98ccd9070b1ce46a06effa4b",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017870.ini",
+      "sha256": "464fcaf5bfa51a6bb73f0d2a9bf8dff5ef697c0a01653641e8c04a11fa944d1a",
+      "bytes": 631,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "464fcaf5bfa51a6bb73f0d2a9bf8dff5ef697c0a01653641e8c04a11fa944d1a",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017871.ini",
+      "sha256": "590418e90e3fb11c205db3f2e7ffc2d617b4c606f4a38680c325bd4d4d2ffc2a",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "590418e90e3fb11c205db3f2e7ffc2d617b4c606f4a38680c325bd4d4d2ffc2a",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017872.ini",
+      "sha256": "536f568592a4b0e400d0b2b723d6816541e74ad7ae9b62df96131608af30f712",
+      "bytes": 630,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "536f568592a4b0e400d0b2b723d6816541e74ad7ae9b62df96131608af30f712",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017689.namelist.input",
+      "sha256": "68c3218bc74f97c8a70abfd881f869ea0596b8bfbc5e3acaf30acc0f2cc99055",
+      "bytes": 3013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017690.namelist.input",
+      "sha256": "d0a6e8151d04c07942173232ed919aefc3f5a36294c120966bd46a0f11b465a5",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017691.namelist.input",
+      "sha256": "eafc1d069494539999855c1e5bb34cd0b62493df75788973bd658508e1b31594",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017692.namelist.input",
+      "sha256": "53d5204c66b6cd5dc84e05306e465db21d0e8b1552f1dde5ccefc505fa459d86",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017693.namelist.input",
+      "sha256": "ae2b4831ee7a4fdcb0247de4fb8c828c890a167bec057e41ed9c836a2269294b",
+      "bytes": 3013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017847.namelist.input",
+      "sha256": "d9681890bafe8fd43e4cddee36f55acf370b9fcdc1079dada7cfc2c2f611cc60",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017848.namelist.input",
+      "sha256": "bb337cc4ba1197289c8e2e8cf8b3c09b21f896b14de53ad4a1c30cc6fc5bae7f",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017849.namelist.input",
+      "sha256": "34dbfea561321f40d0a39310ae31cd9e5afe0c33d03736930d4b9d6f1a4fd663",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017850.namelist.input",
+      "sha256": "309e4ac1f59858ead2d15e7ca5f48dc7051b76fd12bb6bc0149eb09a1bb96d4b",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017851.namelist.input",
+      "sha256": "d6ff8e0248edbb5feb2be68d7970aeb06c572a3b9870294cb5dd8d6efc207346",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017852.namelist.input",
+      "sha256": "923645001cb2bf61019b3a351e353e3b723eec7481a859782e080734c79d08e5",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017853.namelist.input",
+      "sha256": "55c65de41f5c8ce13fe4a64e0f1aad0bbeb197cfdfdf1938eff678fb83f5ba7b",
+      "bytes": 3013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017854.namelist.input",
+      "sha256": "15a5556d5d96b060e40ad1edafdc0d7259ab6e53556bcb9e495006c2fe5d4c9f",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017855.namelist.input",
+      "sha256": "83dbb19fd611cfacd687205b7b9934b69a4b5058b800f266a7d1174b6d3ed4d9",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017856.namelist.input",
+      "sha256": "24e8ec769301c11250c59a343fbbf3ac2827cecd3cb421fc04342820d5c2b02c",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017857.namelist.input",
+      "sha256": "8505931b852a682fe19488e99a49efa41ccac31dae09b1215861d907b69cb2ea",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017858.namelist.input",
+      "sha256": "f2cd3f20cbe1e41035a6d7bf986480cc85952f10eb5f9fbca26fbd1cb85f2d98",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017859.namelist.input",
+      "sha256": "ed545c5c34cbea06230bb00bc41875c67e6586e531cd08991c6fae0067c1cb44",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017860.namelist.input",
+      "sha256": "44b67d6685e035245c4d5b434e157ab88b063842f19078bfb66bd50c241ed82a",
+      "bytes": 3013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017861.namelist.input",
+      "sha256": "f721aa848121040d8c5971a1481dc06c34845b1f1ef0d62342ca88b6057d2923",
+      "bytes": 3013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017862.namelist.input",
+      "sha256": "427a7072ea701dc5e504214eaa4516e897c3c6b959539e65e5fdc4d2459b43e0",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017863.namelist.input",
+      "sha256": "38fc8d2a2fa0c6183a40b7845184fbccb9dbd42bceac9cef1d2e2f521aa26a21",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017864.namelist.input",
+      "sha256": "0df2818bce6749a0b3a4571c1e4f76c9f11466f6929dd61fc12a566a84475d71",
+      "bytes": 3013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017865.namelist.input",
+      "sha256": "c0d6b5442b5badb8b210e6a56401d7054f3c6125ddf0e72e7c5b848f0c6995ac",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017866.namelist.input",
+      "sha256": "aa6ba012aa2dc12646ad8dd4869596b3ccbb141ebe474ba99f2db5750131ab1c",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017867.namelist.input",
+      "sha256": "e36d75d94afe139d238fe199bec5f9593f20d1cd7fc0ea2ea73014b60bbde64d",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017868.namelist.input",
+      "sha256": "2afb5790e1bdf6c290d2bd985ec3f95a5c24ee4c24cd3001a440e23db4a45595",
+      "bytes": 3013,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017869.namelist.input",
+      "sha256": "85e4cd29a3010e23525a1c08c88f23f98be896431eaf8fb4ad48d10a5a264141",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017870.namelist.input",
+      "sha256": "11fc55ae5e81078c63df3318855d2b5bf3f5e2f2d0a60fc9ae27c101387bff0c",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017871.namelist.input",
+      "sha256": "c1aa6c910bb6a9586b72f845bfb621c52a37348389035b07f1d661c2346e97ef",
+      "bytes": 3012,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/cat_config/NOAH-OWP-M/noah-owp-modular-init-cat-1017872.namelist.input",
+      "sha256": "90999ae5490ea195c0292782d1fbe9500203b15811360213e6e40517dfeb5f76",
+      "bytes": 3011,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/realization.json",
+      "sha256": "678b05292d8741700ec5355831e8774dda71d547cccb587d8b60cb279050f44d",
+      "bytes": 2113,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/troute.yaml",
+      "sha256": "978dd1365bdfdd6c2a22d278c407942d3d5c22ea9821734bbeba25c15349aadf",
+      "bytes": 2114,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 12,
+      "candidate_result_counts": {
+        "ASSET_HASH_MISMATCH": 11,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/config/watauga_vpu06.gpkg",
+      "sha256": "a0a7ed78e5ece1fe25d052c26e6ed5b8b5084b9f5a45da276f02c14f59e24713",
+      "bytes": 360448,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "a0a7ed78e5ece1fe25d052c26e6ed5b8b5084b9f5a45da276f02c14f59e24713",
+      "source_alias": "HYDRA-CFE-Correction",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017689.csv",
+      "sha256": "917716d404d7f48f5cf2de9520c183963b690c034a83e50af17428f72e49dc98",
+      "bytes": 91308,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017690.csv",
+      "sha256": "cd94f9aaa82840c352e2d37bbeedbee87d79bececb4d5cc9e4c7fa4cc22e7e58",
+      "bytes": 92072,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017691.csv",
+      "sha256": "bb3ea7f517f347b2cc69f3c8270b58eba027518a117719ec98b5af0ce4e17efd",
+      "bytes": 91994,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017692.csv",
+      "sha256": "7c92aae2a93dbd851f70f7f7b8663ec58eeab5ddba5f596f62568154c6bb4014",
+      "bytes": 92040,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017693.csv",
+      "sha256": "67927cb992f787915ae2ea6103c5e53af57aca1f0c9e118f5d197894d06de83c",
+      "bytes": 89340,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017847.csv",
+      "sha256": "9ddb59e7480e9b0c1e423b6f9447771d2058004f15b42dfdd389461b568d1284",
+      "bytes": 91827,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017848.csv",
+      "sha256": "974a7d542a981b0d7404cfd29e2fa393cd4a176de89fc4e2e2aa25742b705e26",
+      "bytes": 91984,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017849.csv",
+      "sha256": "463122997d916fc334e2b91b620db5a9ca9fd7af06d9ac22810ff8e80d3d48ba",
+      "bytes": 91432,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017850.csv",
+      "sha256": "b0c62d753739015208d7181455d253c037ce05dea80196f3c7eccd02c7029821",
+      "bytes": 92058,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017851.csv",
+      "sha256": "680dc15eceb2a11752410a2fc9c36e84480234c0325e67e83c9771bb812bb209",
+      "bytes": 91117,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017852.csv",
+      "sha256": "8198fccd54b104cf1ee7209c6bd51624dcf575d32dbc894245e7b36a8619da50",
+      "bytes": 91847,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017853.csv",
+      "sha256": "4be18a057aba89b8c657fff67265e176a976fc79158aec34af10e8f5137a391d",
+      "bytes": 91609,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017854.csv",
+      "sha256": "2c0aaf76be2ae45bdbcc221297d38bcb008414f3c8962a06a76ab1843a9a547a",
+      "bytes": 91596,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017855.csv",
+      "sha256": "307947b9dea0509fba4f60605beb2f41e4d7a24c3699e62590c00bb74ef4aff7",
+      "bytes": 91552,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017856.csv",
+      "sha256": "8c434135790f2a8b4335950a8b824968491bb9bd11649a7ef900a3961dc38d2c",
+      "bytes": 91486,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017857.csv",
+      "sha256": "dd8b2dd98d07550ae882de43e337a4e91434a8c08f82e1d259f4d5a24686cd9f",
+      "bytes": 91383,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017858.csv",
+      "sha256": "8ff5844d36c9c200b20d8558326cc51c85fa78f263d855dfc4ce3cf527f466ef",
+      "bytes": 91565,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017859.csv",
+      "sha256": "dbe1d4f96e5115a58b02ac90afd2074109f87179712813acf2b2f9b554d04bcc",
+      "bytes": 91815,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017860.csv",
+      "sha256": "a4056223d129edc547bc90a242a969d19cf006980e531d6ba0513fea2612daf0",
+      "bytes": 91666,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017861.csv",
+      "sha256": "5da9a04581a913c0778a27083b6c4ef6733896e7b057b1afa88430b2bd9da3b2",
+      "bytes": 91327,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017862.csv",
+      "sha256": "32be9bcab59057740da7135f1c5034906f510246e9e36a1c48f1b05a1147f54b",
+      "bytes": 92088,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017863.csv",
+      "sha256": "303bc6cadd8c3a5c39ce31f30ce64bf853f10385ebd5465e17acecba32a78ea7",
+      "bytes": 91321,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017864.csv",
+      "sha256": "aa8d3feba5340d44800e0debc28c88e17e50f6df058cdd0913421f4848a7d9e7",
+      "bytes": 91909,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017865.csv",
+      "sha256": "717987c0c74f7b908c910e2e658fb1bf317c2ae05d4f23104fe19e3758d9dcad",
+      "bytes": 91670,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017866.csv",
+      "sha256": "4c5113b9757783cbcc1a9e3dc85e7f0e12ceddf38e18d605b9e87eacfc65e28d",
+      "bytes": 91626,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017867.csv",
+      "sha256": "b10b1d34b84da989691917cbd683299567dbf7bbbb423978ce0954809c478117",
+      "bytes": 91706,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017868.csv",
+      "sha256": "e9a571fca270e7d8426e64a2e7c9ba711d61bab6b147f36a5c7b96b7b73979df",
+      "bytes": 91220,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017869.csv",
+      "sha256": "2ec3357a2640a587ee640e6aeea0d69f92eb571a8bfecf1ca5b8a68fa5f20e23",
+      "bytes": 91758,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017870.csv",
+      "sha256": "6ebc9955e180df787cd854be1d6c4cb972c032c3e9d02a6e06e10f046a3e8c17",
+      "bytes": 92045,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017871.csv",
+      "sha256": "dd688ab05fa7202e18e37f73355dd6d9c495214e6dcd68eb6a95ae6c71523c75",
+      "bytes": 91624,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/input/forcings/forcing_cat-1017872.csv",
+      "sha256": "dcac8607e445ee187ec0d79130d1f91de2704715c7e009fb3d948e68aae2d99b",
+      "bytes": 91914,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/reference.json",
+      "sha256": "1b657ee53888f0ec405c5dcce18c6ca12796931aaf29302ce0b4fa97a71e7942",
+      "bytes": 123007,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/router.json",
+      "sha256": "1b7004be31b1f5a84eb3dc25bf37cd2244a2e3c017cd682d80f3e6f893e37b3d",
+      "bytes": 406,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/runtime/libiso_c_bmi.so",
+      "sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+      "bytes": 74504,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+      "source_alias": "HYDRA-CFE-Correction",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/runtime/ngen-shared",
+      "sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+      "bytes": 3813528,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+      "source_alias": "HYDRA-CFE-Correction",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/scripts/shared_history_day_ack_v3.py",
+      "sha256": "ab9bb7b03ddb0436d7c105f32838bd127ccba641563592bad804679085b16d75",
+      "bytes": 1477,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "ab9bb7b03ddb0436d7c105f32838bd127ccba641563592bad804679085b16d75",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/scripts/shared_history_day_model_controller_v3.py",
+      "sha256": "82811c97227c02143f471730a67356ad42727c3c13206c394f0ab62d9e162b94",
+      "bytes": 17034,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/__init__.py",
+      "sha256": "f96fc32fe70319f1ef1aa4cbef6d8eefd9fb9710db63114a2b502f2876173250",
+      "bytes": 552,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/nwm_branch_forcing_preparation_v1.py",
+      "sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "bytes": 22352,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "c656dfc512bc3a6178a13194d546a23457fb3948d300ba9aa9846f70b91419a4",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/nwm_forcing_inventory.py",
+      "sha256": "a8fb8e20113d04329d78a6467b7c80d9aef8109a7e933ce095ac5a07a1fe82e8",
+      "bytes": 98791,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_day_shard_v1.py",
+      "sha256": "0ac38917da9633d7d58061d94f5c3a1a108f577eb0d1aadd6f6c6f102ebda448",
+      "bytes": 20422,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "0ac38917da9633d7d58061d94f5c3a1a108f577eb0d1aadd6f6c6f102ebda448",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_fresh_scratch_lifecycle_v1.py",
+      "sha256": "5546228535dbf3403d0aac5630f7d674ba4929ed058d18ba3fbb6f3a4064a012",
+      "bytes": 23631,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "5546228535dbf3403d0aac5630f7d674ba4929ed058d18ba3fbb6f3a4064a012",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_gcp_day_custody_v1.py",
+      "sha256": "91743bceabc977dabf11c58f7d0751a9a88ba267cc97105e140bd87da1b71a68",
+      "bytes": 14725,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "91743bceabc977dabf11c58f7d0751a9a88ba267cc97105e140bd87da1b71a68",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_local_day_custody_v1.py",
+      "sha256": "bb6fc5bbc752e0f32ac2571aa18f88f42bcac0a42328f9773faba0b83de4ba3e",
+      "bytes": 10303,
+      "status": "dataless",
+      "code": "DATALESS_REJECTED",
+      "staged": false,
+      "candidate_attempt_count": 1,
+      "candidate_result_counts": {
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_native_output_bridge_v1.py",
+      "sha256": "e3e882322c537a0a57632e0a7883a5b09c78af2a491a904c7c7652bf746d5229",
+      "bytes": 19433,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "e3e882322c537a0a57632e0a7883a5b09c78af2a491a904c7c7652bf746d5229",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_recovery_v2.py",
+      "sha256": "c574eca6544d496c90dda25ec4cfff2e38e49036bd145f6401e655d1abde8619",
+      "bytes": 12737,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "c574eca6544d496c90dda25ec4cfff2e38e49036bd145f6401e655d1abde8619",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_routing_service_v1.py",
+      "sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "bytes": 19251,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "e772e3812f00c22a3926d7a56726ae03ed4b75a22494c4f4889c67d956aff50b",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    },
+    {
+      "path": "fixture/src/nextgen_reforecast/shared_history_routing_service_v2.py",
+      "sha256": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "bytes": 4954,
+      "status": "verified",
+      "code": "ASSET_HASH_VERIFIED",
+      "staged": true,
+      "observed_sha256": "91de42486400a79a357e8dcb7107827c0804d48cbdfc301321680ef720074fc3",
+      "source_alias": "HYDRA-NextGen",
+      "candidate_attempt_count": 2,
+      "candidate_result_counts": {
+        "ASSET_HASH_VERIFIED": 1,
+        "DATALESS_REJECTED": 1
+      }
+    }
+  ],
+  "limitations": [
+    "All expected identities are now bound, but 137 exact fixture members are not resident in the inspected candidates.",
+    "Hash equality is byte provenance only. It does not establish forcing units, intervals, model compatibility, parameter science or rights.",
+    "Later production/correction inputs with different hashes were not substituted; original December 2021 origin and two issues remain unchanged.",
+    "Original dataless files were not opened or hydrated. No native execution or inherited source import occurred.",
+    "Raw inherited files and full private custody receipts stay under ignored local staging."
+  ],
+  "software_validation": {
+    "targeted_command": "PYTHONPATH=src python3 -m unittest discover -s tests -p test_bundle.py -v",
+    "tests_passed": 18,
+    "fixture_kind": "synthetic unit fixtures; not physical Watauga validation"
+  }
+}

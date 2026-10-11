@@ -4,10 +4,11 @@ A research software project for constructing auditable NextGen reforecast campai
 
 The intended hosted web application lets a hydrologist select a watershed or USGS/NWM identifier, a supported historical period and forecast lead preferences. The service acquires and prepares inputs, supplies inspectable scientific defaults, executes on supported Linux infrastructure and returns research datasets with provenance and verification evidence. Researchers should need no command line, Python or local modeling installation. The project builds on the NextGen ecosystem and keeps forecast generation separate from downstream HYDRA/ML correction.
 
-**Current stage: offline planning package (`0.1.0a2`) and a local browser interaction prototype.** The package provides campaign validation, bounded schedules, selectable retained leads, expected issue/lead ledgers, planning provenance locks, reports and historical runtime inspection. Physical NextGen execution and recovery are not implemented or qualified yet. The repository also contains a completed feasibility dossier and a substantive manuscript draft. CLI examples in the original outline remain proposals except where implemented below.
+**Current stage: offline planning and input-validation package (`0.1.0a3`) and a local browser interaction prototype.** The package provides campaign validation, bounded schedules, selectable retained leads, expected issue/lead ledgers, planning provenance locks, reports, bounded decoded-weather/CFE mapping validation and historical runtime inspection. Physical NextGen execution and recovery are not implemented or qualified yet. The repository also contains a completed feasibility dossier and a substantive manuscript draft. CLI examples in the original outline remain proposals except where implemented below.
 
 ## Start here
 
+- [Scientific input and runtime increment — 10 October](docs/INPUT_RUNTIME_INCREMENT_2026-10-10.md) — current assignments and evidence boundaries
 - [Active multiagent kickoff — 10 October](docs/IMPLEMENTATION_KICKOFF_2026-10-10.md) — assignments, contracts and integration boundaries
 - [Working plan and reassessment — 24 September](docs/WORKING_PLAN.md) — saved baseline, three resolved planning concerns and remaining decisions
 - [Product objectives and user experience pathways](docs/PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md) — owner requirements, proposed study modes and build mappings
@@ -75,7 +76,7 @@ The source and receipt references resolve to a private preservation snapshot; th
 
 The proposed product combines a browser interface and automatic input preparation with a narrowly qualified Linux runtime: continuous historical initialization, independent hourly 18-hour forecasts, explicit forcing and time semantics, verified output commits, and documented history-replay recovery. Continuous historical simulation, published-study recipes and controlled comparisons are additional design proposals recorded in the objectives. The local browser prototype prepares a request; a hosted execution service does not exist yet. The installable commands above are the offline foundation and future operator interface.
 
-Existing research workspaces and the separate private HYDRA repository remain read-only throughout development. Large research archives, original model code, datasets, binaries, credentials, and cloud infrastructure are not copied into this repository.
+Existing research workspaces and the separate private HYDRA repository remain read-only throughout development. Large research archives, inherited code, scientific datasets, binaries and credentials are not published in this repository. Verified source/runtime/input copies acquired for this increment remain in ignored private staging; their status is documented separately.
 
 ## License status
 

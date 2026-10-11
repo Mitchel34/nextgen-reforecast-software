@@ -14,6 +14,8 @@ from typing import Callable, TextIO
 
 from . import __version__
 from .campaign import CampaignError, iter_expected_rows, load_campaign, plan_campaign
+from .configuration import load_configuration_manifest, validate_configuration
+from .forcing import evaluate_gap_policy, load_forcing_manifest, validate_forecast_issue, validate_history
 from .provenance import load_lock, seal_lock, verify_lock
 from .runtime import RuntimeProfileError, inspect_runtime
 
@@ -175,6 +177,18 @@ def parser() -> argparse.ArgumentParser:
     doctor.add_argument("profile", type=Path)
     doctor.add_argument("--asset-root", type=Path)
     doctor.add_argument("--output", type=Path)
+    forcing = commands.add_parser("validate-forcing", help="Check decoded weather against an explicit domain and clock; never admit execution")
+    forcing.add_argument("manifest", type=Path)
+    forcing.add_argument("--catchment", action="append", required=True, help="Expected domain catchment ID; repeat for every catchment")
+    forcing.add_argument("--history-start", help="Expected first provider hour in canonical UTC")
+    forcing.add_argument("--history-stop", help="Expected exclusive historical stop in canonical UTC")
+    forcing.add_argument("--issue-time", help="Expected forecast issue in canonical UTC; all 18 leads required")
+    forcing.add_argument("--gap-policy", choices=("fail", "exclude_issue"), default="fail")
+    forcing.add_argument("--output", type=Path)
+    cfe = commands.add_parser("validate-cfe", help="Audit bound CFE drainage values and mapping; never qualify the full model")
+    cfe.add_argument("manifest", type=Path)
+    cfe.add_argument("--catchment", action="append", required=True)
+    cfe.add_argument("--output", type=Path)
     for name in ("run", "resume"):
         commands.add_parser(name, help="Unavailable until physical runtime and recovery are qualified")
     return p
@@ -206,6 +220,28 @@ def main(argv: list[str] | None = None) -> int:
             report = inspect_runtime(args.profile, args.asset_root)
             _emit(_json(report), args.output)
             return 2 if report["blockers"] else 0
+        if args.command == "validate-forcing":
+            manifest = load_forcing_manifest(args.manifest)
+            if manifest["role"] == "history":
+                if not args.history_start or not args.history_stop or args.issue_time:
+                    raise ValueError("History requires --history-start and --history-stop and forbids --issue-time")
+                report = validate_history(manifest, args.manifest.parent, expected_catchment_ids=args.catchment,
+                                          start_time_utc=args.history_start, stop_time_utc_exclusive=args.history_stop)
+            else:
+                if not args.issue_time or args.history_start or args.history_stop:
+                    raise ValueError("Forecast requires --issue-time and forbids historical bounds")
+                report = validate_forecast_issue(manifest, args.manifest.parent, expected_catchment_ids=args.catchment,
+                                                 issue_time_utc=args.issue_time)
+            decision = evaluate_gap_policy(report, args.gap_policy)
+            _emit(_json({"validation": report, "gap_decision": decision}), args.output)
+            # An excluded issue still has invalid content. Exit 2 keeps batch callers
+            # from confusing an acknowledged exclusion with validated forcing.
+            return 0 if report["content_valid"] else 2
+        if args.command == "validate-cfe":
+            report = validate_configuration(load_configuration_manifest(args.manifest), args.manifest.parent,
+                                            expected_catchment_ids=args.catchment)
+            _emit(_json(report), args.output)
+            return 0 if report["content_valid"] else 2
         if args.command in ("run", "resume"):
             sys.stderr.write(_json({
                 "error": "PHYSICAL_EXECUTION_NOT_IMPLEMENTED",

@@ -1,0 +1,96 @@
+{
+  "schema_version": "ngen-reforecast-recovered-build-options/1.0",
+  "assessment_date": "2026-10-10",
+  "status": "partial_historical_recipe_not_executable",
+  "clean_build_admitted": false,
+  "source_commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+  "image": "awiciroh/ciroh-ngen-image@sha256:2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+  "evidence": [
+    {
+      "path": "BUILD_EXPORT.json",
+      "bytes": 2523,
+      "sha256": "5ecfed96cffddad645ff2e4a9d1b4aaea2892176798f092ac2ed2c55f42b3746"
+    },
+    {
+      "path": "build/CMakeCache.txt",
+      "bytes": 25926,
+      "sha256": "88060947d4ecb0fd522833680ce1258db9f96ea566b0e4a44d8e81098b6be67d"
+    }
+  ],
+  "cmake_version_from_cache": "3.31.8",
+  "build_type": "Release",
+  "cmake_options": {
+    "NGEN_QUIET:BOOL": "OFF",
+    "NGEN_UPDATE_GIT_SUBMODULES:BOOL": "OFF",
+    "NGEN_WITH_BMI_C:BOOL": "ON",
+    "NGEN_WITH_BMI_FORTRAN:BOOL": "ON",
+    "NGEN_WITH_EXTERN_ALL:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_CFE:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_LGAR:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_NOAH_OWP_MODULAR:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_PET:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_SFT:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_SLOTH:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_SMP:BOOL": "OFF",
+    "NGEN_WITH_EXTERN_TOPMODEL:BOOL": "OFF",
+    "NGEN_WITH_MPI:BOOL": "OFF",
+    "NGEN_WITH_NETCDF:BOOL": "ON",
+    "NGEN_WITH_PYTHON:BOOL": "OFF",
+    "NGEN_WITH_SQLITE:BOOL": "ON",
+    "NGEN_WITH_TESTS:BOOL": "OFF",
+    "NGEN_WITH_UDUNITS:BOOL": "ON",
+    "NGEN_WITH_ROUTING:INTERNAL": "OFF"
+  },
+  "compiler_paths_from_cache": {
+    "C": "/usr/bin/cc",
+    "CXX": "/usr/bin/c++",
+    "Fortran": "/usr/bin/gfortran"
+  },
+  "compiler_versions_recovered": false,
+  "dependencies_from_cache": {
+    "Boost": {
+      "version": "1.86.0",
+      "content_lock_complete": false
+    },
+    "NetCDF_C": {
+      "version": "4.8.1",
+      "content_lock_complete": false
+    },
+    "NetCDF_CXX": {
+      "resolution": "bundled_external_source_fallback",
+      "repository": "https://github.com/Unidata/netcdf-cxx4",
+      "commit": "f8882188267488ef801691e69ad072e3eb217ad8",
+      "source_archive_verified": true
+    },
+    "SQLite3": {
+      "version": null,
+      "content_lock_complete": false
+    },
+    "UDUNITS2": {
+      "version": null,
+      "content_lock_complete": false
+    },
+    "iso_c_fortran_bmi": {
+      "source": "within pinned framework source tree",
+      "middleware_output_sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162"
+    }
+  },
+  "missing": {
+    "build_receipt_sha256": "932193ac1481273b565b41a0969bfe3a39bee0953698766b6fb2c2110088d40d",
+    "build_wrapper_sha256": "13376af41432f11a3ec83f2be941967cee88fbbe6367a4a527e7ddbe2af411c3",
+    "exact_compiler_and_development_dependency_lock": true,
+    "component_source_options_toolchain_binary_attestation": true
+  },
+  "build_bounds_if_admitted": {
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "wall_seconds": 1800,
+    "network": "none"
+  },
+  "limitations": [
+    "This artifact records recovered cache values; it is not the missing full configure/build command.",
+    "Installed runtime-package versions do not identify the complete compiler/development environment.",
+    "External model builds remain disabled in the historical framework recipe.",
+    "A separately identified controlled rebuild is required if the historical complete builder cannot be recovered; no substituted recipe is adopted here."
+  ]
+}

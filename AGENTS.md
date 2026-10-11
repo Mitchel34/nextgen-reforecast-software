@@ -2,7 +2,7 @@
 
 ## Active implementation kickoff — 10 October 2026
 
-The owner explicitly authorized beginning the multiagent workflow against the revised working plan, for both software and manuscript. This supersedes the September documentation-only pause below. Follow `docs/IMPLEMENTATION_KICKOFF_2026-10-10.md` for current file ownership, interfaces and acceptance evidence. Ordinary local implementation, bounded tests, review and publication of tested progress to the existing public repository are in scope. Scientific/native runs still require their complete admitted recipe and assets; service provision, spending, recruitment and submission have not begun. All original research folders remain read-only.
+The owner explicitly authorized beginning the multiagent workflow against the revised working plan, for both software and manuscript. This supersedes the September documentation-only pause below. The subsequent scientific-input/runtime continuation is governed by `docs/INPUT_RUNTIME_INCREMENT_2026-10-10.md`; the earlier kickoff remains in `docs/IMPLEMENTATION_KICKOFF_2026-10-10.md`. Follow their file ownership, interfaces and acceptance evidence. Ordinary local implementation, bounded tests, review and publication of tested progress to the existing public repository are in scope. Scientific/native runs still require their complete admitted recipe and assets; service provision, spending, recruitment and submission have not begun. All original research folders remain read-only.
 
 Work in this repository. The original Reforecast, NextGen_Reforecast, HYDRA and thesis workspaces remain read-only sources; never write reports, caches, Git metadata or generated outputs into them or force iCloud hydration.
 

@@ -1,0 +1,243 @@
+{
+  "assessment_date": "2026-10-10",
+  "base_commit": "7e50f1376bb539e7b01a85454bcfc45541b013f2",
+  "browser_contract": {
+    "command": "node --test web/tests/*.test.mjs",
+    "failed": 0,
+    "log_sha256": "2ceedb7ba06b3c0d17091305aecc20f6b22eff227f05bb368873cada61a2c907",
+    "node_version": "v24.16.0",
+    "passed": 17
+  },
+  "cross_agent_review": {
+    "cfe_findings_fixed": [
+      "literal native parser keys and duplicate aliases",
+      "ASCII decimal/finite C double values",
+      "declared aggregate read budget",
+      "unknown generator revision retained as null"
+    ],
+    "forcing_findings_fixed": [
+      "strict ASCII decimal syntax",
+      "underflow including precipitation conversion",
+      "negative source values before float conversion"
+    ],
+    "manuscript": "fresh statistics/45claim CSV/evidence boundaries independently reviewed"
+  },
+  "current_public_ci": {
+    "run_url": null,
+    "status": "pending_publication",
+    "tested_commit": null
+  },
+  "evidence": {
+    "actual_cfe_audit": "docs/evidence/watauga-cfe-mapping-20261010.json",
+    "bundle": "docs/evidence/watauga-bundle-20261010.json",
+    "fixture_identity": "docs/evidence/watauga-fixture-bindings-20261010.json",
+    "runtime": "docs/evidence/linux-runtime-closure-20261010.json"
+  },
+  "hosted_service_deployed": false,
+  "installed_wheel": {
+    "bytes": 43694,
+    "checks_passed": 20,
+    "commands": [
+      {
+        "command": "ngen-reforecast --version",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast init smoke-campaign",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast plan smoke-campaign/campaign.json",
+        "expected": 2,
+        "returncode": 2
+      },
+      {
+        "command": "ngen-reforecast ledger smoke-campaign/campaign.json --output generated.csv",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast report smoke-campaign/campaign.json --output plan.md",
+        "expected": 2,
+        "returncode": 2
+      },
+      {
+        "command": "ngen-reforecast doctor runtime-profile.json",
+        "expected": 2,
+        "returncode": 2
+      },
+      {
+        "command": "ngen-reforecast run",
+        "expected": 2,
+        "returncode": 2
+      },
+      {
+        "command": "ngen-reforecast resume",
+        "expected": 2,
+        "returncode": 2
+      },
+      {
+        "command": "ngen-reforecast lock smoke-campaign/campaign.json --output unbound-lock.json",
+        "expected": 1,
+        "returncode": 1
+      },
+      {
+        "command": "ngen-reforecast ledger smoke-campaign/campaign.json --kind retained --output retained.csv",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast lock smoke-campaign/campaign.json --output planning-lock.json",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast verify-lock planning-lock.json --asset-root smoke-campaign",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast lock smoke-campaign/campaign.json --output planning-lock.json",
+        "expected": 1,
+        "returncode": 1
+      },
+      {
+        "command": "ngen-reforecast verify-lock planning-lock.json --asset-root smoke-campaign",
+        "expected": 2,
+        "returncode": 2
+      },
+      {
+        "command": "ngen-reforecast validate-forcing weather/history.manifest.json --catchment cat-1 --catchment cat-2 --history-start 2022-01-01T00:00:00Z --history-stop 2022-01-01T03:00:00Z",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast validate-forcing weather/forecast.manifest.json --catchment cat-1 --catchment cat-2 --issue-time 2022-01-01T00:00:00Z",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast validate-forcing weather/forecast.manifest.json --catchment cat-1 --catchment cat-2 --issue-time 2022-01-01T01:00:00Z",
+        "expected": 2,
+        "returncode": 2
+      },
+      {
+        "command": "ngen-reforecast validate-forcing weather/history.manifest.json --catchment cat-1 --catchment cat-2",
+        "expected": 1,
+        "returncode": 1
+      },
+      {
+        "command": "ngen-reforecast validate-cfe cfe-manifest.json --catchment cat-1",
+        "expected": 0,
+        "returncode": 0
+      },
+      {
+        "command": "ngen-reforecast validate-cfe cfe-manifest.json --catchment cat-1",
+        "expected": 2,
+        "returncode": 2
+      }
+    ],
+    "module_loaded_from_site_packages": true,
+    "sha256": "5d71033b26992dfcfba56be3f4286ce4622095a90fec3b39defe43d630bd7b19",
+    "version": "0.1.0a3"
+  },
+  "linux_arm64": {
+    "passed": 155,
+    "receipt": "docs/evidence/linux-arm64-input-tests-20261010.json",
+    "status": "passed"
+  },
+  "local_python": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m unittest discover -s tests -v",
+    "failed": 0,
+    "log_sha256": "5c99eb06bfa3a592b370bdce3d5eac6e6a0343bf5a4fd0e235730e06d7c3173f",
+    "machine": "arm64",
+    "passed": 155,
+    "system": "Darwin",
+    "version": "3.14.7"
+  },
+  "native_build_performed": false,
+  "new_model_runs": 0,
+  "original_sources_hydrated": false,
+  "physical_execution_ready": false,
+  "preservation": {
+    "atime_included": false,
+    "immutable_byte_changes": [],
+    "immutable_files": 32,
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "protected_entries_after": 33364,
+    "protected_entries_before": 33364,
+    "protected_metadata_changes": 0
+  },
+  "researcher_study_conducted": false,
+  "retained_failed_attempts": [
+    {
+      "cause": "Existing CLI tests used macOS system temporary path containing a symlink; safe reader refused it.",
+      "failed": 4,
+      "passed": 151,
+      "resolution": "CLI tests now create repository-local temporary directories; full155test suite passes.",
+      "stage": "initial full Python suite"
+    },
+    {
+      "cause": "Reused installation environment lacked setuptools for no-build-isolation.",
+      "resolution": "Standard isolated pip wheel build with repository-local scratch/cache succeeded.",
+      "stage": "initial wheel build",
+      "status": "failed"
+    }
+  ],
+  "schema_version": "input-runtime-increment/0.1",
+  "source_sha256": {
+    ".github/workflows/tests.yml": "b35aa6f04163eff75fb2a83a5b91b2fee9b80432f6a0a0e4f390131d191ca4d1",
+    "examples/validation/README.md": "37e2cafe4c1bc44b276a1299fc0e468bef835e8bbf4ea9b1fd7d3ca17f5a39ce",
+    "examples/validation/forecast.csv": "7eef83c9006b55714933edaefe3f8bd87f5926255a56e50bf8535986fa4f4614",
+    "examples/validation/forecast.manifest.json": "6ce1c10f4084982f229c28d4c2953020b88fd7fcc281999afe3e5373cf60c72a",
+    "examples/validation/history.csv": "c9819ae261725ff526ad43ec4c34711505c9ac891a383ff632658a98a273d5cc",
+    "examples/validation/history.manifest.json": "269565fc96e0b3290b177c6bbfbb0398b3eb71cdfb6e299d25ffdbca6f780031",
+    "examples/watauga/README.md": "4a21f62f6d714526cffe838e4d07430353b31473a3eebf0fe85d98b87de0c675",
+    "examples/watauga/campaign-retained.json": "acdcc88eb6f8880d1bd0baa52e0f6665872ed1ee7d2359721a7a6093bbcae93b",
+    "examples/watauga/campaign.json": "4b2bcc3b6869e58ae1f0ecdaf662bc988eeaa9242ca2ff72ac5b7ff715b57747",
+    "profiles/nextgen-arm64-v3.json": "8d90f2181785f3e7927607e5ac0bcb7f1c6fd00ed008eba295b65937dd5eed5e",
+    "pyproject.toml": "33457f00353712cc28ca6194c5e502f51285adfcad4c588b56609520f891b30e",
+    "schemas/campaign-1.1.schema.json": "4494660b2e613023bf30cb4af5cbc5f8f2bd66304a3949a95e194bae408a7f71",
+    "schemas/campaign.schema.json": "a62bb8df7f1a22303352546c408321d427292e886b0f54d52f47fb2c4437d583",
+    "schemas/runtime-profile.schema.json": "a849bef8d5e8fa39a7370d92be2d3a7c63feb51f6a48928515bdd3f368abee06",
+    "src/ngen_reforecast/__init__.py": "c69f8db7804b35413b4a27113636f050a0e392e5c2c9177cb5526a5d83bad921",
+    "src/ngen_reforecast/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/ngen_reforecast/bundle.py": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576",
+    "src/ngen_reforecast/campaign.py": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419",
+    "src/ngen_reforecast/cli.py": "0315c4f55bf5bbfcc5a2c693b2e972bded2a679db10fd421b2eee16e3a237166",
+    "src/ngen_reforecast/configuration.py": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33",
+    "src/ngen_reforecast/forcing.py": "fe5f87dbce182b33badad5d743655ba43c9038d08b140277bff5531c087b459a",
+    "src/ngen_reforecast/provenance.py": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9",
+    "src/ngen_reforecast/runtime.py": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16",
+    "src/ngen_reforecast/templates/README.md": "4a21f62f6d714526cffe838e4d07430353b31473a3eebf0fe85d98b87de0c675",
+    "src/ngen_reforecast/templates/campaign.json": "4b2bcc3b6869e58ae1f0ecdaf662bc988eeaa9242ca2ff72ac5b7ff715b57747",
+    "tests/test_bundle.py": "6eeaf4dc89e638d0d03931da58b7e30dbe62f05d535bcc14bad8508941e04add",
+    "tests/test_campaign.py": "42ec42094018128fac5e4cfa94a0a4ef76b84028e4f35b6f75e53c6db8f7ca92",
+    "tests/test_cli.py": "95c6db7c067c4fafd722bd2f83984494f7a6b54a0102cd2b9cb3627aa13e001b",
+    "tests/test_configuration.py": "5f4e505c00bd152611abdfb26a14213079c486570f17ff053858e8a8706cc010",
+    "tests/test_forcing.py": "9f0fd82e74ec459a4e18570b3699063ed498faacd946861ec02a65214a35e1e0",
+    "tests/test_forcing_numeric.py": "9d8b10d2bc2da85729dc82323c4416c333e9401e997752495a781af7cb882d6a",
+    "tests/test_lock_cli.py": "4724a97e70523b2a0da5904b497146deb00e5da91348bff1d145d23251b9794d",
+    "tests/test_provenance.py": "f7fcad9cebfd321fed1e493ff055d43fe4fd4d488b05b8f27abb5ce512c7692b",
+    "tests/test_runtime.py": "3a40ee766b223ef6b77cc1528804afdea6a7a64a6c27feb4821d050bfe94a554",
+    "tests/test_validation_cli.py": "675a1000e7c9ad69f43369259be7bd8d79882b9801fbf86e31a238ea28f94079",
+    "web/QA_2026-10-10.json": "4b37a93b9222fd18c687f83dd91fad8a4f30d9681d781f939cbad27c6076387c",
+    "web/QA_2026-10-10.md": "3f9bc34cbe82aa4231d3b63e9a8b7abc1fe92941c9f7405719d25d062c560e64",
+    "web/README.md": "dda43a1dfb628dfd3dbef51df214258a9a0207d6e45ee2ca3ab78b7c291be545",
+    "web/app.mjs": "8f2893d0032b070d65427b22220f12e5b3af33ddf636c8b0f6100c48d7f28ac2",
+    "web/index.html": "878dee69a1b0b356e0ffd108a39111fdc5b6aafc3584b3d8ce64f76cedaec681",
+    "web/request.mjs": "36d8dd7744038eede8df298262bdf4e6f85c913e6835abf701d24fe85d00b67c",
+    "web/styles.css": "6a67cbfb719fbe7dadd9c9bc6a1d649b35c7424031bacd45c9b8ea270627aae0",
+    "web/tests/request.test.mjs": "1365748b419b7ac98276d0f18411b3d25684e64553d63d7e7641b38782a32120",
+    "web/tests/translation.test.mjs": "80f272e6bdd28394fb4da2aca9f365ae8dfd2521926504b2a797e5c1b6113d8d"
+  },
+  "version": "0.1.0a3"
+}

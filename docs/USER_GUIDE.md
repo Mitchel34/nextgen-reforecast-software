@@ -78,3 +78,21 @@ Blocked `plan`, `report` and `doctor` commands still return useful reports. The 
 ## Current limits and next steps
 
 `run` and `resume` return an explicit unavailable status. Archive verification, scientific export and physical recovery will be implemented against qualified outputs in later milestones. The local browser interaction prototype prepares a researcher request; it is not a hosted execution service. No cloud runner, ML model, universal routing support or portable full-land checkpoint is included. Restore and qualify the exact complete real fixture before attempting model execution; [the implementation plan](../IMPLEMENTATION_PLAN.md) tracks these dependencies.
+
+## Validate prepared scientific contents (operator interface)
+
+`0.1.0a3` adds bounded offline content checks. These are preparation-service building blocks; ordinary researchers will not be asked to assemble manifests or enumerate catchments. Supply expected clocks and the complete domain axis independently of the input's own declarations.
+
+```sh
+ngen-reforecast validate-forcing examples/validation/history.manifest.json \
+  --catchment cat-1 --catchment cat-2 \
+  --history-start 2022-01-01T00:00:00Z --history-stop 2022-01-01T03:00:00Z
+ngen-reforecast validate-forcing examples/validation/forecast.manifest.json \
+  --catchment cat-1 --catchment cat-2 --issue-time 2022-01-01T00:00:00Z
+ngen-reforecast validate-cfe path/to/cfe-mapping.manifest.json \
+  --catchment cat-1 --catchment cat-2 --output new-mapping-report.json
+```
+
+The checked-in weather examples are synthetic contract fixtures. The first two commands do not inspect real archive coverage or generate model inputs. See the [forcing contract](FORCING_VALIDATION_CONTRACT.md) and [CFE mapping contract](CFE_MAPPING_VALIDATION_CONTRACT.md) for schemas, bounds and qualification limits. The CFE command checks only drainage mapping and bound bytes, not all required configuration keys.
+
+Exit 0 means tested contents conform. Exit 2 means content blockers remain, including when `--gap-policy exclude_issue` explicitly records an incomplete forecast exclusion. Exit 1 indicates a malformed/unsafe/unreadable contract or an output publication error. Outputs never overwrite an existing file. `content_valid=true` always coexists with `execution_ready=false`; source authenticity, field derivation, actual loaded libraries and physical suitability require separate evidence. `run` and `resume` remain unavailable.

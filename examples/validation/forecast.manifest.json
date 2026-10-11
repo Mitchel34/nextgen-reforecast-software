@@ -1,0 +1,55 @@
+{
+  "schema_version": "forcing-manifest/0.1",
+  "evidence_class": "synthetic",
+  "role": "forecast",
+  "payload": {
+    "path": "forecast.csv",
+    "sha256": "7eef83c9006b55714933edaefe3f8bd87f5926255a56e50bf8535986fa4f4614",
+    "size_bytes": 4700
+  },
+  "catchment_ids": [
+    "cat-1",
+    "cat-2"
+  ],
+  "start_time_utc": "2022-01-01T00:00:00Z",
+  "stop_time_utc_exclusive": "2022-01-01T18:00:00Z",
+  "units": {
+    "RAINRATE": "kg m-2 s-1",
+    "T2D": "K",
+    "Q2D": "kg kg-1",
+    "U2D": "m s-1",
+    "V2D": "m s-1",
+    "PSFC": "Pa",
+    "SWDOWN": "W m-2",
+    "LWDOWN": "W m-2"
+  },
+  "source": {
+    "kind": "issue_forecast",
+    "product": "synthetic-contract-example",
+    "issue_time_utc": "2022-01-01T00:00:00Z",
+    "objects": [
+      {
+        "object_key": "synthetic/weather",
+        "generation": "fixture-v1",
+        "size_bytes": 123,
+        "sha256": "5f17b02d5fd70fdcdafd6ac80d185c3e76877d7a9de7aaa48f932de7e4a5dc22"
+      }
+    ],
+    "decoder_sha256": "2b43680208302a952741664a61e798d4250479b92d745146b0627648669e4498",
+    "grid_sha256": "03da5f0df982da9fcfaa02f5ac2c320c94164921e7835e4acd5bae88978db7b5"
+  },
+  "transformation": {
+    "id": "nwm_rate_to_hourly_provider",
+    "version": "1",
+    "precipitation": {
+      "source_variable": "RAINRATE",
+      "source_units": "kg m-2 s-1",
+      "output_variable": "precip_rate",
+      "output_units": "kg m-2 s-1",
+      "source_time_offset_hours": 1,
+      "divisor": 1
+    },
+    "other_fields_time": "forecast_valid_end_label",
+    "shortwave_interpretation": "declared_source_interval_unqualified"
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": "ngen-reforecast-linux-arm64-input-tests/1.0",
+  "assessment_date": "2026-10-10",
+  "date_basis": "user_client_America_Chicago",
+  "status": "passed",
+  "exit_code": 0,
+  "python": {
+    "version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+    "version_tuple": [
+      3,
+      12,
+      3
+    ],
+    "machine": "aarch64",
+    "system": "Linux"
+  },
+  "platform_kind": "isolated_local_Colima_VZ_guest",
+  "worker_profile_alias": "nrf",
+  "guest_directory_alias": "fresh_guest_tmp_test_directory",
+  "source_roots": [
+    "src",
+    "tests",
+    "examples",
+    "schemas",
+    "profiles"
+  ],
+  "source_files": [
+    {
+      "path": "src/ngen_reforecast/__init__.py",
+      "bytes": 108,
+      "sha256": "c69f8db7804b35413b4a27113636f050a0e392e5c2c9177cb5526a5d83bad921"
+    },
+    {
+      "path": "src/ngen_reforecast/__main__.py",
+      "bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "src/ngen_reforecast/bundle.py",
+      "bytes": 16279,
+      "sha256": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576"
+    },
+    {
+      "path": "src/ngen_reforecast/campaign.py",
+      "bytes": 28543,
+      "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+    },
+    {
+      "path": "src/ngen_reforecast/cli.py",
+      "bytes": 12934,
+      "sha256": "0315c4f55bf5bbfcc5a2c693b2e972bded2a679db10fd421b2eee16e3a237166"
+    },
+    {
+      "path": "src/ngen_reforecast/configuration.py",
+      "bytes": 12129,
+      "sha256": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33"
+    },
+    {
+      "path": "src/ngen_reforecast/forcing.py",
+      "bytes": 21895,
+      "sha256": "fe5f87dbce182b33badad5d743655ba43c9038d08b140277bff5531c087b459a"
+    },
+    {
+      "path": "src/ngen_reforecast/provenance.py",
+      "bytes": 5733,
+      "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+    },
+    {
+      "path": "src/ngen_reforecast/runtime.py",
+      "bytes": 13642,
+      "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+    },
+    {
+      "path": "src/ngen_reforecast/templates/README.md",
+      "bytes": 3326,
+      "sha256": "4a21f62f6d714526cffe838e4d07430353b31473a3eebf0fe85d98b87de0c675"
+    },
+    {
+      "path": "src/ngen_reforecast/templates/campaign.json",
+      "bytes": 741,
+      "sha256": "4b2bcc3b6869e58ae1f0ecdaf662bc988eeaa9242ca2ff72ac5b7ff715b57747"
+    },
+    {
+      "path": "src/ngen_reforecast.egg-info/PKG-INFO",
+      "bytes": 9042,
+      "sha256": "80e26bf6bb01c9aa80e5c3101ed9a1d744ee6c7ac2296167a0218159037f5923"
+    },
+    {
+      "path": "src/ngen_reforecast.egg-info/SOURCES.txt",
+      "bytes": 871,
+      "sha256": "003ec50a10f1acc3bd10dd787afae4159385ebd5db13b7f4f87378b395e66447"
+    },
+    {
+      "path": "src/ngen_reforecast.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "src/ngen_reforecast.egg-info/entry_points.txt",
+      "bytes": 61,
+      "sha256": "58f197e0e946d7149f9815d90cd8dc27cdd078087fb3c794791bb9839dcb4ddc"
+    },
+    {
+      "path": "src/ngen_reforecast.egg-info/top_level.txt",
+      "bytes": 16,
+      "sha256": "cffc4dc4568c41f1ed07a5fd35022fd59a0ea360f0737e65aaf0d1715bc0d4a4"
+    },
+    {
+      "path": "tests/test_bundle.py",
+      "bytes": 9115,
+      "sha256": "6eeaf4dc89e638d0d03931da58b7e30dbe62f05d535bcc14bad8508941e04add"
+    },
+    {
+      "path": "tests/test_campaign.py",
+      "bytes": 32256,
+      "sha256": "42ec42094018128fac5e4cfa94a0a4ef76b84028e4f35b6f75e53c6db8f7ca92"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "bytes": 5396,
+      "sha256": "95c6db7c067c4fafd722bd2f83984494f7a6b54a0102cd2b9cb3627aa13e001b"
+    },
+    {
+      "path": "tests/test_configuration.py",
+      "bytes": 20965,
+      "sha256": "5f4e505c00bd152611abdfb26a14213079c486570f17ff053858e8a8706cc010"
+    },
+    {
+      "path": "tests/test_forcing.py",
+      "bytes": 23754,
+      "sha256": "9f0fd82e74ec459a4e18570b3699063ed498faacd946861ec02a65214a35e1e0"
+    },
+    {
+      "path": "tests/test_forcing_numeric.py",
+      "bytes": 2142,
+      "sha256": "9d8b10d2bc2da85729dc82323c4416c333e9401e997752495a781af7cb882d6a"
+    },
+    {
+      "path": "tests/test_lock_cli.py",
+      "bytes": 4074,
+      "sha256": "4724a97e70523b2a0da5904b497146deb00e5da91348bff1d145d23251b9794d"
+    },
+    {
+      "path": "tests/test_provenance.py",
+      "bytes": 7593,
+      "sha256": "f7fcad9cebfd321fed1e493ff055d43fe4fd4d488b05b8f27abb5ce512c7692b"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "bytes": 8920,
+      "sha256": "3a40ee766b223ef6b77cc1528804afdea6a7a64a6c27feb4821d050bfe94a554"
+    },
+    {
+      "path": "tests/test_validation_cli.py",
+      "bytes": 4023,
+      "sha256": "675a1000e7c9ad69f43369259be7bd8d79882b9801fbf86e31a238ea28f94079"
+    },
+    {
+      "path": "examples/validation/README.md",
+      "bytes": 1871,
+      "sha256": "37e2cafe4c1bc44b276a1299fc0e468bef835e8bbf4ea9b1fd7d3ca17f5a39ce"
+    },
+    {
+      "path": "examples/validation/forecast.csv",
+      "bytes": 4700,
+      "sha256": "7eef83c9006b55714933edaefe3f8bd87f5926255a56e50bf8535986fa4f4614"
+    },
+    {
+      "path": "examples/validation/forecast.manifest.json",
+      "bytes": 1586,
+      "sha256": "6ce1c10f4084982f229c28d4c2953020b88fd7fcc281999afe3e5373cf60c72a"
+    },
+    {
+      "path": "examples/validation/history.csv",
+      "bytes": 861,
+      "sha256": "c9819ae261725ff526ad43ec4c34711505c9ac891a383ff632658a98a273d5cc"
+    },
+    {
+      "path": "examples/validation/history.manifest.json",
+      "bytes": 1644,
+      "sha256": "269565fc96e0b3290b177c6bbfbb0398b3eb71cdfb6e299d25ffdbca6f780031"
+    },
+    {
+      "path": "examples/watauga/README.md",
+      "bytes": 3326,
+      "sha256": "4a21f62f6d714526cffe838e4d07430353b31473a3eebf0fe85d98b87de0c675"
+    },
+    {
+      "path": "examples/watauga/campaign-retained.json",
+      "bytes": 970,
+      "sha256": "acdcc88eb6f8880d1bd0baa52e0f6665872ed1ee7d2359721a7a6093bbcae93b"
+    },
+    {
+      "path": "examples/watauga/campaign.json",
+      "bytes": 741,
+      "sha256": "4b2bcc3b6869e58ae1f0ecdaf662bc988eeaa9242ca2ff72ac5b7ff715b57747"
+    },
+    {
+      "path": "schemas/campaign-1.1.schema.json",
+      "bytes": 8610,
+      "sha256": "4494660b2e613023bf30cb4af5cbc5f8f2bd66304a3949a95e194bae408a7f71"
+    },
+    {
+      "path": "schemas/campaign.schema.json",
+      "bytes": 5316,
+      "sha256": "a62bb8df7f1a22303352546c408321d427292e886b0f54d52f47fb2c4437d583"
+    },
+    {
+      "path": "schemas/runtime-profile.schema.json",
+      "bytes": 60111,
+      "sha256": "a849bef8d5e8fa39a7370d92be2d3a7c63feb51f6a48928515bdd3f368abee06"
+    },
+    {
+      "path": "profiles/nextgen-arm64-v3.json",
+      "bytes": 52882,
+      "sha256": "8d90f2181785f3e7927607e5ac0bcb7f1c6fd00ed008eba295b65937dd5eed5e"
+    }
+  ],
+  "source_file_count": 38,
+  "source_bytes": 386225,
+  "transport": "tar_stream_via_Lima_SSH_stdin_no_host_mount",
+  "tar_bytes": 419840,
+  "tar_sha256": "4a4d79cd38a81e9bb751ea9d6452dd388753f6217e570447e5b55bdbb7f1b24e",
+  "test_command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "fresh_guest_root/src",
+    "TMPDIR": "fresh_guest_root/.local/tmp"
+  },
+  "systemd_properties": {
+    "MemoryMax": "256M",
+    "CPUQuota": "200%",
+    "RuntimeMaxSec": "120",
+    "TasksMax": "64"
+  },
+  "harness_suite_timeout_seconds": 115,
+  "host_transport_timeout_seconds": 135,
+  "elapsed_seconds": 1.176,
+  "output_sha256": "33fd4eb8e19954466f8c2227b184dba9d9bf3344b8f3fba25b53ab81c08a67e4",
+  "output_bytes": 23482,
+  "model_runs": 0,
+  "native_builds": 0,
+  "global_package_installations": 0,
+  "original_research_root_access": false,
+  "test_summary": {
+    "tests": 155,
+    "suite_reported_seconds": 0.796,
+    "passed": true
+  },
+  "setup_failure_retained": {
+    "stage": "systemd_user_bus",
+    "tests_started": false,
+    "resolution": "System manager with explicit unprivileged guest UID and GID; same cgroup limits"
+  },
+  "scope": "Pure Python contract tests using synthetic test fixtures; not hydrologic, native or physical qualification."
+}

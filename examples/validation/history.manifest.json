@@ -1,0 +1,55 @@
+{
+  "schema_version": "forcing-manifest/0.1",
+  "evidence_class": "synthetic",
+  "role": "history",
+  "payload": {
+    "path": "history.csv",
+    "sha256": "c9819ae261725ff526ad43ec4c34711505c9ac891a383ff632658a98a273d5cc",
+    "size_bytes": 861
+  },
+  "catchment_ids": [
+    "cat-1",
+    "cat-2"
+  ],
+  "start_time_utc": "2022-01-01T00:00:00Z",
+  "stop_time_utc_exclusive": "2022-01-01T03:00:00Z",
+  "units": {
+    "APCP": "kg m-2",
+    "TMP_2maboveground": "K",
+    "SPFH_2maboveground": "kg kg-1",
+    "UGRD_10maboveground": "m s-1",
+    "VGRD_10maboveground": "m s-1",
+    "PRES_surface": "Pa",
+    "DSWRF_surface": "W m-2",
+    "DLWRF_surface": "W m-2"
+  },
+  "source": {
+    "kind": "historical_analysis",
+    "product": "synthetic-contract-example",
+    "issue_time_utc": null,
+    "objects": [
+      {
+        "object_key": "synthetic/weather",
+        "generation": "fixture-v1",
+        "size_bytes": 123,
+        "sha256": "5f17b02d5fd70fdcdafd6ac80d185c3e76877d7a9de7aaa48f932de7e4a5dc22"
+      }
+    ],
+    "decoder_sha256": "2b43680208302a952741664a61e798d4250479b92d745146b0627648669e4498",
+    "grid_sha256": "03da5f0df982da9fcfaa02f5ac2c320c94164921e7835e4acd5bae88978db7b5"
+  },
+  "transformation": {
+    "id": "aorc_end_label_to_hourly_provider",
+    "version": "1",
+    "precipitation": {
+      "source_variable": "APCP",
+      "source_units": "kg m-2",
+      "output_variable": "precip_rate",
+      "output_units": "kg m-2 s-1",
+      "source_time_offset_hours": 1,
+      "divisor": 3600
+    },
+    "other_fields_time": "same_label_engineering_interpretation",
+    "shortwave_interpretation": "unresolved_same_label"
+  }
+}

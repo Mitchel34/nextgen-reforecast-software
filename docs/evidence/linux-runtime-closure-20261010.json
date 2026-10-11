@@ -1,0 +1,2161 @@
+{
+  "schema_version": "ngen-reforecast-linux-runtime-closure/1.0",
+  "assessment_date": "2026-10-10",
+  "date_basis": "user_client_America_Chicago",
+  "status": "worker_image_source_and_exported_loader_progress_build_and_physics_not_qualified",
+  "physical_execution_ready": false,
+  "objectives": [
+    "UO-04",
+    "UO-05",
+    "RF-008"
+  ],
+  "scope": {
+    "original_Reforecast_modified": false,
+    "original_research_writes": false,
+    "original_research_hydration": false,
+    "historical_overlay_and_build_cache_read_from_resident_review_copy": true,
+    "private_staging_only_for_inherited_payloads": true,
+    "new_worker_created": true,
+    "native_builds": 0,
+    "model_runs": 0,
+    "cloud_resources_started": 0,
+    "paid_resources_started": 0,
+    "physical_invocations_added": 0,
+    "utility_containers_successfully_started": 3,
+    "image_model_entrypoint_executed": false,
+    "public_payload_distribution": false
+  },
+  "worker": {
+    "kind": "dedicated_local_Colima_VZ",
+    "profile_alias": "nrf",
+    "owner": "this_runtime_closure_task",
+    "platform": "linux/arm64",
+    "guest_os": "Ubuntu 24.04.4 LTS",
+    "guest_kernel": "6.8.0-117-generic",
+    "guest_machine": "aarch64",
+    "cpus_configured_and_observed": 2,
+    "memory_configured_bytes": 8589934592,
+    "memory_guest_memtotal_kib": 8112844,
+    "docker_engine": "29.5.2",
+    "containerd": "2.2.4",
+    "runc": "1.3.5",
+    "colima_host_version": "0.10.3",
+    "lima_host_version": "2.2.0",
+    "host_mounts": [],
+    "host_mount_verification": "Explicit --mount none plus no virtiofs/9p/fuse.sshfs mounts found in guest.",
+    "ssh_agent_forwarded": false,
+    "global_ssh_config_changed": false,
+    "global_docker_context_changed": false,
+    "docker_config_scope": "task_private",
+    "existing_colima_profiles_after": {
+      "harmony-lq0": "Stopped",
+      "ngiab": "Stopped"
+    },
+    "state_at_receipt": "stopped_after_successful_inert_probe_and_integrated_Linux_tests",
+    "local_paths_redacted": true,
+    "short_staging_reason": "Lima resolves aliases before socket creation; task-specific short Work staging is required for macOS Unix-socket limits.",
+    "start_receipt": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "elapsed_seconds": 30.1,
+      "peak_allocated_bytes": 4307189760,
+      "host_free_bytes_after": 22157160448,
+      "bounds": {
+        "setup_seconds": 300,
+        "cpus": 2,
+        "memory_gib": 8,
+        "actual_aggregate_disk_gib": 12,
+        "host_free_floor_gib": 8,
+        "root_disk_gib": 8,
+        "data_disk_gib": 4
+      }
+    },
+    "base_image": {
+      "url": "https://github.com/abiosoft/colima-core/releases/download/v0.10.4/ubuntu-24.04-minimal-cloudimg-arm64-docker.raw.gz",
+      "compressed_bytes": 332354401,
+      "sha256": "1fc0354f4f99734ce3886628cc7af8b0437c1a1d391b126bd09cba0df35ee53f",
+      "sha512": "32242674b046b5057e60c4aba334b51e3665f05412cda89ed081cc2de153ae5c41f6b105b5c442cbe48d78e2cc21e9ba1950e406b6fb4fc2fd1dd2259240abbd",
+      "both_verified": true
+    },
+    "stop_receipt": {
+      "exit_code": 0,
+      "elapsed_seconds": 2.555,
+      "worker_state": "Stopped",
+      "disks_and_image_preserved": true,
+      "setup_and_probe_logs_preserved_privately": true,
+      "output_sha256": "54958020b4ca0e3baa14afbd2530dafd8b815052eac67755128b24131dee2de1"
+    }
+  },
+  "resource_bounds": {
+    "compressed_bulk_payload_ceiling_bytes": 4294967296,
+    "combined_actual_staging_and_worker_ceiling_bytes": 12884901888,
+    "host_free_floor_bytes": 8589934592,
+    "setup_timeout_seconds": 300,
+    "image_import_timeout_seconds": 180,
+    "bulk_download_per_request_wall_seconds": 240,
+    "per_request_socket_timeout_seconds": 30,
+    "setup_import_watchdog_sample_seconds": 2,
+    "native_build_if_admitted": {
+      "cpus": 2,
+      "memory_bytes": 8589934592,
+      "wall_seconds": 1800,
+      "network": "none"
+    }
+  },
+  "resource_observation": {
+    "verified_bulk_payload_bytes": 950649934,
+    "actual_allocated_staging_and_worker_bytes": 4701110272,
+    "host_free_bytes": 18464423936,
+    "bulk_payload_count": 30,
+    "metadata_transfers": "Additional bounded small metadata/source-preimage requests; bulk total excludes these requests and authentication responses.",
+    "host_free_bytes_after_stop": 18398179328
+  },
+  "image": {
+    "reference": "awiciroh/ciroh-ngen-image@sha256:2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+    "manifest_sha256": "2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+    "manifest_bytes": 4668,
+    "config_sha256": "7991bc1bd84024878382a8c530027dfb4d124726a42f80f211f0d2c3bbb21198",
+    "config_bytes": 8180,
+    "os": "linux",
+    "architecture": "arm64",
+    "distribution": "Rocky Linux 9.6",
+    "registry_manifest_and_config_digest_verified": true,
+    "layer_verification": {
+      "layers": [
+        {
+          "digest": "sha256:cd4662ec9ea1ebb4c3e0be820ba4722dbed224d15c4c896795eb0d5f44558cd2",
+          "compressed_bytes": 63535526,
+          "diff_id": "sha256:f9fd71d1963032bf218c37e4839f79448b67b2f3ef99bf15fde5a27d1792e501",
+          "uncompressed_tar_bytes": 198320128
+        },
+        {
+          "digest": "sha256:f3c7a3297636fbba9f3377381b27ea415e87f866ad19a68614c544903662aa63",
+          "compressed_bytes": 268,
+          "diff_id": "sha256:588c7bea4df1999fea2db7cc8bf28a54c3a69997cfc2f7a9d11beb8d7c224ec9",
+          "uncompressed_tar_bytes": 3072
+        },
+        {
+          "digest": "sha256:f16ea4e101c64dea0ade757c513dcd6dcd1485f916793dd6fbe7bfd66f93e599",
+          "compressed_bytes": 165624546,
+          "diff_id": "sha256:f6abd009a687c8e9b5a3f5cbe9a199363c89ef91408a82f9eccda2efd2273b86",
+          "uncompressed_tar_bytes": 396152832
+        },
+        {
+          "digest": "sha256:14f5c3285de1f903e1e8307e5a71b23282e4054a162bbf4f212d0dabaf02653e",
+          "compressed_bytes": 21126826,
+          "diff_id": "sha256:23ff0a617fc4a77882925233c2c559e65d780d84239adb73ae34a87ec7c8625a",
+          "uncompressed_tar_bytes": 45671424
+        },
+        {
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+          "compressed_bytes": 32,
+          "diff_id": "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "uncompressed_tar_bytes": 1024
+        },
+        {
+          "digest": "sha256:7f78732199597ace9c0a4e50b35953ffe8a257f70724a2583b4b06b7be0002c4",
+          "compressed_bytes": 94,
+          "diff_id": "sha256:45e0b184572cb87b5e9504d22d0da2209cd12a897f364cc157b04025004e88be",
+          "uncompressed_tar_bytes": 1536
+        },
+        {
+          "digest": "sha256:a01cb6c6dff5d70d1a1537fe280c1ad59b0d5734a78dc8c973c1256edc8019c5",
+          "compressed_bytes": 2063,
+          "diff_id": "sha256:1c06dfdf1eb9d27fb4872e13dcade3e16d6bedc399456e13d8e630bece157e81",
+          "uncompressed_tar_bytes": 8192
+        },
+        {
+          "digest": "sha256:1fc72df4441e98b37a6c51f5f791b8a6bd5ca6b143ae812a07242313121f70d2",
+          "compressed_bytes": 3984297,
+          "diff_id": "sha256:ad13a9b4458bb83601bea47990fadb20d107a0cac2a2319b529b31fa526d0d14",
+          "uncompressed_tar_bytes": 13444608
+        },
+        {
+          "digest": "sha256:e41dab7c770e0072a28895a7a481d7ef3cf93e120c22041904ecb9c040efe6a0",
+          "compressed_bytes": 5355421,
+          "diff_id": "sha256:c55184efbb78f004b9c26ec179532ae934ce6d9b4fb46ee85c4856e5b1728fdc",
+          "uncompressed_tar_bytes": 5375488
+        },
+        {
+          "digest": "sha256:613b05d926a5b315289f6953224b1a3042772b63d33cb1aa9c88b43d72ebee8e",
+          "compressed_bytes": 176,
+          "diff_id": "sha256:6045a11b3ce66d700880bc2bd81b8153ac1ab84e7ba15b63df6985a6165dc952",
+          "uncompressed_tar_bytes": 3072
+        },
+        {
+          "digest": "sha256:a25ed288a2cd7a1e1376f71373734ef0ea5916805656c2248433b3dac1027101",
+          "compressed_bytes": 135657549,
+          "diff_id": "sha256:da6072eb752d8f410f2381872743876ef593ccb7d9cc56d316f1696d97914b00",
+          "uncompressed_tar_bytes": 453853184
+        },
+        {
+          "digest": "sha256:2a1ed0f30d8f0a171e65bbd6757880d870cbe2f6f961b12c2bb46412bfa44771",
+          "compressed_bytes": 225,
+          "diff_id": "sha256:f90e825f95e270f15802ed7ff27533cc10247c67aac14229cdba2ba6fdeb4abf",
+          "uncompressed_tar_bytes": 3584
+        },
+        {
+          "digest": "sha256:dad358d1424acf46bd1880de78f681ce0aed4075b79c252f9c11adf4bc39c8aa",
+          "compressed_bytes": 5644,
+          "diff_id": "sha256:46a9a30ed0a3d6539edb6009409db6a75673a10d2dfef20fa55d61e390ed1a72",
+          "uncompressed_tar_bytes": 28672
+        },
+        {
+          "digest": "sha256:19db05a56402111fc6404286654691e99e6a008e99cfe59b144d6d36e60b3245",
+          "compressed_bytes": 2067,
+          "diff_id": "sha256:ec9febf0e01fc3b94ca5bed6464f0cf12cc2bfe9f1578b3f59c8d136ee59066c",
+          "uncompressed_tar_bytes": 8192
+        },
+        {
+          "digest": "sha256:8efa3fb831f11b01835fee0a58e40f1a6cf035d2e8a0315dcd57f6f7bc2a053b",
+          "compressed_bytes": 17514249,
+          "diff_id": "sha256:a244ad34b8b25fad69f21c8215baf33d0df1891d9e3e06b597281a20ff08dc22",
+          "uncompressed_tar_bytes": 59992576
+        },
+        {
+          "digest": "sha256:a5332fd6181c05e8efa547fb89aa912f19475beff8ff71cd36e14bb7f9c92949",
+          "compressed_bytes": 22861221,
+          "diff_id": "sha256:24ccd4578329aba932ae7e3a5f725583749dd6039d4bd1113052048589c10442",
+          "uncompressed_tar_bytes": 62055424
+        },
+        {
+          "digest": "sha256:77d9060d06c848e7c8819b40a73db788e983cbdd5a496ca9d33e78c23659e0b5",
+          "compressed_bytes": 128332503,
+          "diff_id": "sha256:fa6e0d241093c00afc081fa35f896ac9c0daf40101842b8c3a42dd7b5c230e0f",
+          "uncompressed_tar_bytes": 523429376
+        },
+        {
+          "digest": "sha256:cf8c1f878fb64b2cb7752d0ca22149b034fe6cba55de09742cb6d2789a5dc0ad",
+          "compressed_bytes": 201,
+          "diff_id": "sha256:e4d4d7f197ae701d9d0a79993f42ab679facec7b99c16ce0c3bfe91fb2e74066",
+          "uncompressed_tar_bytes": 3584
+        },
+        {
+          "digest": "sha256:82225887ff6694a9d7d460fa6e949693661acb1d91ae17f22974e05990425a9d",
+          "compressed_bytes": 6405926,
+          "diff_id": "sha256:044fe9cf530f7a7255e5bc083ab4233b23b01b54b373757d7f0d0d4331c6c3a5",
+          "uncompressed_tar_bytes": 9936384
+        },
+        {
+          "digest": "sha256:86002ed7032bd224707b5ccd93fb01c8d206f64d56c543fccd5c9828c8424a5f",
+          "compressed_bytes": 1456806,
+          "diff_id": "sha256:7c59ecfc4186052fc5b0912812793df5bfc1559349dc3df8427237607c45fe06",
+          "uncompressed_tar_bytes": 4301312
+        },
+        {
+          "digest": "sha256:1a15e5b55e00a84411bf42e144c996e607643a2e2ad95f437cc9331f6ef5f93c",
+          "compressed_bytes": 214,
+          "diff_id": "sha256:5fd5d8418f4f9be4ecb785579236876eda0cc27340e39bd78cc247edcd28e799",
+          "uncompressed_tar_bytes": 2560
+        },
+        {
+          "digest": "sha256:e79a55b8238ca4f95a2bd50f8c51458fa867d020a50fd296a3dfc4550b3c3b86",
+          "compressed_bytes": 208,
+          "diff_id": "sha256:964d03adb5cf1fb99d5a6f6620a8c30c766bb07697522ec526456ddf54e51810",
+          "uncompressed_tar_bytes": 2560
+        },
+        {
+          "digest": "sha256:2f29ed96ad4fc6f554376fd3a5b310360ea702d85f92e8f496822e030b97528e",
+          "compressed_bytes": 451,
+          "diff_id": "sha256:fd4fe0825039ae0678033893e32757ef1de955a40288cc14b116790e92fb573c",
+          "uncompressed_tar_bytes": 3072
+        }
+      ],
+      "uncompressed_tar_bytes": 1772601856
+    },
+    "load_receipt": {
+      "exit_code": 0,
+      "tar_exit_code": 0,
+      "elapsed_seconds": 16.07,
+      "stop_reason": null,
+      "peak_allocated_bytes": 4016963584,
+      "host_free_bytes_after": 20061114368,
+      "no_model_entrypoint_executed": true
+    },
+    "recorded_framework_commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+    "recorded_troute_commit": "533fbd98362efdafae62392308727de4f0d4cc20",
+    "inventory_only_model_not_invoked": true,
+    "build_tools_not_on_image_PATH": [
+      "gcc",
+      "g++",
+      "gfortran",
+      "cmake"
+    ],
+    "component_libraries": {
+      "dmod/shared_libs/libcfebmi.so.1.0.0": {
+        "sha256": "f54e29c81e2b86c0233f2530e929e18fe9226c421225b90263fa8128ec4ae56a",
+        "bytes": 136312,
+        "layer": "sha256:1fc72df4441e98b37a6c51f5f791b8a6bd5ca6b143ae812a07242313121f70d2",
+        "path_alias": "LOCAL_STAGING/runtime/components/libcfebmi.so.1.0.0"
+      },
+      "dmod/shared_libs/libslothmodel.so.1.0.0": {
+        "sha256": "39884bb6370071c04d318c6563315237e982ec3d8f165e8e2df6db89251d5a42",
+        "bytes": 814000,
+        "layer": "sha256:1fc72df4441e98b37a6c51f5f791b8a6bd5ca6b143ae812a07242313121f70d2",
+        "path_alias": "LOCAL_STAGING/runtime/components/libslothmodel.so.1.0.0"
+      },
+      "dmod/shared_libs/libsurfacebmi.so": {
+        "sha256": "6e17db8089cfa99e140fb7152c3dbec260c9a38f3bd7d6512e7dd063bec5dc74",
+        "bytes": 441416,
+        "layer": "sha256:1fc72df4441e98b37a6c51f5f791b8a6bd5ca6b143ae812a07242313121f70d2",
+        "path_alias": "LOCAL_STAGING/runtime/components/libsurfacebmi.so"
+      }
+    },
+    "image_builtin_middleware_sha256": "df6fd63f61010738f40b7ba69a6ec9dc4dae41dbb695aa51fc7ce381ef2d38ec",
+    "builtin_middleware_is_required_export": false,
+    "runtime_rpm_packages": [
+      {
+        "name": "Lmod",
+        "version_release": "8.7.55-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "alternatives",
+        "version_release": "1.24-2.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "attr",
+        "version_release": "2.5.1-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "audit-libs",
+        "version_release": "3.1.5-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "basesystem",
+        "version_release": "11-13.el9.0.1",
+        "architecture": "noarch"
+      },
+      {
+        "name": "bash",
+        "version_release": "5.1.8-9.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "binutils",
+        "version_release": "2.35.2-63.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "binutils-gold",
+        "version_release": "2.35.2-63.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "bzip2",
+        "version_release": "1.0.8-10.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "bzip2-libs",
+        "version_release": "1.0.8-10.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "ca-certificates",
+        "version_release": "2024.2.69_v8.0.303-91.4.el9_4",
+        "architecture": "noarch"
+      },
+      {
+        "name": "coreutils-single",
+        "version_release": "8.32-39.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "cracklib",
+        "version_release": "2.9.6-27.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "cracklib-dicts",
+        "version_release": "2.9.6-27.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "crypto-policies",
+        "version_release": "20250128-1.git5269e22.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "crypto-policies-scripts",
+        "version_release": "20250128-1.git5269e22.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "curl-minimal",
+        "version_release": "7.76.1-31.el9_6.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "cyrus-sasl-lib",
+        "version_release": "2.1.27-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "dbus-libs",
+        "version_release": "1.12.20-8.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "dnf",
+        "version_release": "4.14.0-25.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "dnf-data",
+        "version_release": "4.14.0-25.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "dnf-plugins-core",
+        "version_release": "4.3.0-20.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "elfutils-debuginfod-client",
+        "version_release": "0.192-6.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "elfutils-default-yama-scope",
+        "version_release": "0.192-6.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "elfutils-libelf",
+        "version_release": "0.192-6.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "elfutils-libs",
+        "version_release": "0.192-6.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "epel-release",
+        "version_release": "9-7.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "expat",
+        "version_release": "2.5.0-5.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "file-libs",
+        "version_release": "5.39-16.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "filesystem",
+        "version_release": "3.16-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "findutils",
+        "version_release": "4.8.0-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gawk",
+        "version_release": "5.1.0-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gdbm-libs",
+        "version_release": "1.23-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "glib2",
+        "version_release": "2.68.4-16.el9_6.2",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "glibc",
+        "version_release": "2.34-168.el9_6.23",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "glibc-common",
+        "version_release": "2.34-168.el9_6.23",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "glibc-minimal-langpack",
+        "version_release": "2.34-168.el9_6.23",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gmp",
+        "version_release": "6.2.0-13.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gnupg2",
+        "version_release": "2.3.3-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gnutls",
+        "version_release": "3.8.3-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gpgme",
+        "version_release": "1.15.1-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gpm-libs",
+        "version_release": "1.20.7-29.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "grep",
+        "version_release": "3.6-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "groff-base",
+        "version_release": "1.22.4-10.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "gzip",
+        "version_release": "1.12-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "hdf-libs",
+        "version_release": "4.2.15-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "hdf5",
+        "version_release": "1.12.1-7.el9.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "hostname",
+        "version_release": "3.23-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "hwloc-libs",
+        "version_release": "2.4.1-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "ima-evm-utils",
+        "version_release": "1.5-3.el9.rocky.0.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "json-c",
+        "version_release": "0.14-11.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "keyutils",
+        "version_release": "1.6.3-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "keyutils-libs",
+        "version_release": "1.6.3-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "krb5-libs",
+        "version_release": "1.21.1-8.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "less",
+        "version_release": "590-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libacl",
+        "version_release": "2.3.1-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libaec",
+        "version_release": "1.0.6-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libarchive",
+        "version_release": "3.5.3-5.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libassuan",
+        "version_release": "2.5.5-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libatomic",
+        "version_release": "11.5.0-5.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libattr",
+        "version_release": "2.5.1-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libblkid",
+        "version_release": "2.37.4-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libcap",
+        "version_release": "2.48-9.el9_2",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libcap-ng",
+        "version_release": "0.8.2-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libcom_err",
+        "version_release": "1.46.5-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libcomps",
+        "version_release": "0.1.18-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libcurl-minimal",
+        "version_release": "7.76.1-31.el9_6.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libdb",
+        "version_release": "5.3.28-57.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libdnf",
+        "version_release": "0.69.0-13.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libeconf",
+        "version_release": "0.4.1-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libevent",
+        "version_release": "2.1.12-8.el9_4",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libfdisk",
+        "version_release": "2.37.4-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libffi",
+        "version_release": "3.4.2-8.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libgcc",
+        "version_release": "11.5.0-5.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libgcrypt",
+        "version_release": "1.10.0-11.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libgfortran",
+        "version_release": "11.5.0-5.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libgomp",
+        "version_release": "11.5.0-5.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libgpg-error",
+        "version_release": "1.42-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libidn2",
+        "version_release": "2.3.0-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libjpeg-turbo",
+        "version_release": "2.0.90-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libksba",
+        "version_release": "1.5.1-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libmodulemd",
+        "version_release": "2.13.0-2.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libmount",
+        "version_release": "2.37.4-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libnghttp2",
+        "version_release": "1.43.0-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libpwquality",
+        "version_release": "1.4.4-8.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "librepo",
+        "version_release": "1.14.5-2.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libreport-filesystem",
+        "version_release": "2.15.2-6.el9.rocky.0.2",
+        "architecture": "noarch"
+      },
+      {
+        "name": "libselinux",
+        "version_release": "3.6-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libsemanage",
+        "version_release": "3.6-5.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libsepol",
+        "version_release": "3.6-2.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libsigsegv",
+        "version_release": "2.13-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libsmartcols",
+        "version_release": "2.37.4-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libsolv",
+        "version_release": "0.7.24-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libstdc++",
+        "version_release": "11.5.0-5.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libtasn1",
+        "version_release": "4.16.0-9.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libtirpc",
+        "version_release": "1.3.3-9.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libtool-ltdl",
+        "version_release": "2.4.6-46.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libunistring",
+        "version_release": "0.9.10-15.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libusbx",
+        "version_release": "1.0.26-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libuser",
+        "version_release": "0.63-16.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libutempter",
+        "version_release": "1.2.1-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libuuid",
+        "version_release": "2.37.4-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libverto",
+        "version_release": "0.3.2-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libxcrypt",
+        "version_release": "4.4.18-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libxml2",
+        "version_release": "2.9.13-12.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libyaml",
+        "version_release": "0.2.5-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "libzstd",
+        "version_release": "1.5.5-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "lua",
+        "version_release": "5.4.4-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "lua-filesystem",
+        "version_release": "1.8.0-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "lua-json",
+        "version_release": "1.3.4-1.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "lua-libs",
+        "version_release": "5.4.4-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "lua-lpeg",
+        "version_release": "1.0.2-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "lua-posix",
+        "version_release": "35.0-8.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "lua-term",
+        "version_release": "0.07-14.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "lz4-libs",
+        "version_release": "1.9.3-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "mpfr",
+        "version_release": "4.1.0-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "mpich",
+        "version_release": "4.1.1-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "ncurses",
+        "version_release": "6.2-10.20210508.el9_6.2",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "ncurses-base",
+        "version_release": "6.2-10.20210508.el9_6.2",
+        "architecture": "noarch"
+      },
+      {
+        "name": "ncurses-libs",
+        "version_release": "6.2-10.20210508.el9_6.2",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "netcdf",
+        "version_release": "4.8.1-2.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "netcdf-cxx",
+        "version_release": "4.2-28.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "netcdf-cxx4-mpich",
+        "version_release": "4.3.1-3.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "netcdf-fortran",
+        "version_release": "4.5.4-2.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "nettle",
+        "version_release": "3.10.1-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "npth",
+        "version_release": "1.6-8.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "openldap",
+        "version_release": "2.6.8-4.el9.0.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "openssl",
+        "version_release": "3.2.2-6.el9_5.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "openssl-libs",
+        "version_release": "3.2.2-6.el9_5.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "p11-kit",
+        "version_release": "0.25.3-3.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "p11-kit-trust",
+        "version_release": "0.25.3-3.el9_5",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "pam",
+        "version_release": "1.5.1-25.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "passwd",
+        "version_release": "0.80-12.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "pcre",
+        "version_release": "8.44-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "pcre2",
+        "version_release": "10.40-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "pcre2-syntax",
+        "version_release": "10.40-6.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-AutoLoader",
+        "version_release": "5.74-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-B",
+        "version_release": "1.80-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Carp",
+        "version_release": "1.50-460.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Class-Struct",
+        "version_release": "0.66-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Data-Dumper",
+        "version_release": "2.174-462.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Digest",
+        "version_release": "1.19-4.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Digest-MD5",
+        "version_release": "2.58-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Encode",
+        "version_release": "3.08-462.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Errno",
+        "version_release": "1.30-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Exporter",
+        "version_release": "5.74-461.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Fcntl",
+        "version_release": "1.13-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-File-Basename",
+        "version_release": "2.85-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-File-Path",
+        "version_release": "2.18-4.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-File-Temp",
+        "version_release": "0.231.100-4.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-File-stat",
+        "version_release": "1.09-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-FileHandle",
+        "version_release": "2.03-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Getopt-Long",
+        "version_release": "2.52-4.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Getopt-Std",
+        "version_release": "1.12-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-HTTP-Tiny",
+        "version_release": "0.076-462.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-IO",
+        "version_release": "1.43-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-IO-Socket-IP",
+        "version_release": "0.41-5.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-IO-Socket-SSL",
+        "version_release": "2.073-2.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-IPC-Open3",
+        "version_release": "1.21-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-MIME-Base64",
+        "version_release": "3.16-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Mozilla-CA",
+        "version_release": "20200520-6.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-NDBM_File",
+        "version_release": "1.15-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Net-SSLeay",
+        "version_release": "1.94-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-POSIX",
+        "version_release": "1.94-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-PathTools",
+        "version_release": "3.78-461.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Pod-Escapes",
+        "version_release": "1.07-460.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Pod-Perldoc",
+        "version_release": "3.28.01-461.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Pod-Simple",
+        "version_release": "3.42-4.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Pod-Usage",
+        "version_release": "2.01-4.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Scalar-List-Utils",
+        "version_release": "1.56-462.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-SelectSaver",
+        "version_release": "1.02-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Socket",
+        "version_release": "2.031-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Storable",
+        "version_release": "3.21-460.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-Symbol",
+        "version_release": "1.08-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Term-ANSIColor",
+        "version_release": "5.01-461.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Term-Cap",
+        "version_release": "1.17-460.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Text-ParseWords",
+        "version_release": "3.30-460.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Text-Tabs+Wrap",
+        "version_release": "2013.0523-460.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-Time-Local",
+        "version_release": "1.300-7.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-URI",
+        "version_release": "5.09-3.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-base",
+        "version_release": "2.27-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-constant",
+        "version_release": "1.33-461.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-if",
+        "version_release": "0.60.800-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-interpreter",
+        "version_release": "5.32.1-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-libnet",
+        "version_release": "3.13-4.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-libs",
+        "version_release": "5.32.1-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-mro",
+        "version_release": "1.23-481.1.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "perl-overload",
+        "version_release": "1.31-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-overloading",
+        "version_release": "0.02-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-parent",
+        "version_release": "0.238-460.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-podlators",
+        "version_release": "4.14-460.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-subs",
+        "version_release": "1.03-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "perl-vars",
+        "version_release": "1.05-481.1.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "popt",
+        "version_release": "1.18-8.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "procps-ng",
+        "version_release": "3.3.17-14.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3",
+        "version_release": "3.9.21-2.el9_6.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-dateutil",
+        "version_release": "2.8.1-7.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "python3-dbus",
+        "version_release": "1.2.18-2.el9.0.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-dnf",
+        "version_release": "4.14.0-25.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "python3-dnf-plugins-core",
+        "version_release": "4.3.0-20.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "python3-gpg",
+        "version_release": "1.15.1-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-hawkey",
+        "version_release": "0.69.0-13.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-libcomps",
+        "version_release": "0.1.18-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-libdnf",
+        "version_release": "0.69.0-13.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-libs",
+        "version_release": "3.9.21-2.el9_6.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-pip-wheel",
+        "version_release": "21.3.1-1.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "python3-rpm",
+        "version_release": "4.16.1.3-37.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "python3-setuptools-wheel",
+        "version_release": "53.0.0-13.el9_6.1",
+        "architecture": "noarch"
+      },
+      {
+        "name": "python3-six",
+        "version_release": "1.15.0-9.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "python3-systemd",
+        "version_release": "234-19.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "readline",
+        "version_release": "8.1-4.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "rocky-gpg-keys",
+        "version_release": "9.6-1.3.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "rocky-release",
+        "version_release": "9.6-1.3.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "rocky-repos",
+        "version_release": "9.6-1.3.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "rootfiles",
+        "version_release": "8.1-34.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "rpm",
+        "version_release": "4.16.1.3-37.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "rpm-build-libs",
+        "version_release": "4.16.1.3-37.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "rpm-libs",
+        "version_release": "4.16.1.3-37.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "rpm-sign-libs",
+        "version_release": "4.16.1.3-37.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "sed",
+        "version_release": "4.8-9.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "setup",
+        "version_release": "2.13.7-10.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "shadow-utils",
+        "version_release": "4.9-12.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "sqlite",
+        "version_release": "3.34.1-8.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "sqlite-libs",
+        "version_release": "3.34.1-8.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "systemd-libs",
+        "version_release": "252-51.el9_6.1",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "tar",
+        "version_release": "1.34-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "tcl",
+        "version_release": "8.6.10-7.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "tpm2-tss",
+        "version_release": "3.2.3-1.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "tzdata",
+        "version_release": "2025b-1.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "udunits2",
+        "version_release": "2.2.28-5.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "usermode",
+        "version_release": "1.114-6.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "util-linux",
+        "version_release": "2.37.4-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "util-linux-core",
+        "version_release": "2.37.4-21.el9",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "vim-common",
+        "version_release": "8.2.2637-22.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "vim-enhanced",
+        "version_release": "8.2.2637-22.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "vim-filesystem",
+        "version_release": "8.2.2637-22.el9_6",
+        "architecture": "noarch"
+      },
+      {
+        "name": "vim-minimal",
+        "version_release": "8.2.2637-22.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "which",
+        "version_release": "2.21-30.el9_6",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "xz-libs",
+        "version_release": "5.2.5-8.el9_0",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "yum",
+        "version_release": "4.14.0-25.el9",
+        "architecture": "noarch"
+      },
+      {
+        "name": "zlib",
+        "version_release": "1.2.11-40.el9",
+        "architecture": "aarch64"
+      }
+    ],
+    "routing_python_version": "3.9.21 (main, Jun 27 2025, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+    "routing_python_distributions_unique": [
+      {
+        "name": "Deprecated",
+        "version": "1.3.1"
+      },
+      {
+        "name": "Jinja2",
+        "version": "3.1.6"
+      },
+      {
+        "name": "MarkupSafe",
+        "version": "2.1.5"
+      },
+      {
+        "name": "PyYAML",
+        "version": "6.0.3"
+      },
+      {
+        "name": "aiohappyeyeballs",
+        "version": "2.6.1"
+      },
+      {
+        "name": "aiohttp",
+        "version": "3.13.2"
+      },
+      {
+        "name": "aiohttp-client-cache",
+        "version": "0.14.2"
+      },
+      {
+        "name": "aiosignal",
+        "version": "1.4.0"
+      },
+      {
+        "name": "aiosqlite",
+        "version": "0.21.0"
+      },
+      {
+        "name": "async-timeout",
+        "version": "5.0.1"
+      },
+      {
+        "name": "attrs",
+        "version": "25.4.0"
+      },
+      {
+        "name": "black",
+        "version": "25.11.0"
+      },
+      {
+        "name": "bmipy",
+        "version": "2.0.1"
+      },
+      {
+        "name": "certifi",
+        "version": "2025.11.12"
+      },
+      {
+        "name": "cftime",
+        "version": "1.6.4.post1"
+      },
+      {
+        "name": "click",
+        "version": "8.1.8"
+      },
+      {
+        "name": "filelock",
+        "version": "3.19.1"
+      },
+      {
+        "name": "frozenlist",
+        "version": "1.8.0"
+      },
+      {
+        "name": "fsspec",
+        "version": "2025.9.0"
+      },
+      {
+        "name": "geopandas",
+        "version": "1.0.1"
+      },
+      {
+        "name": "hydrotools._restclient",
+        "version": "4.1.0"
+      },
+      {
+        "name": "hydrotools.nwis_client",
+        "version": "4.1.0"
+      },
+      {
+        "name": "idna",
+        "version": "3.11"
+      },
+      {
+        "name": "itsdangerous",
+        "version": "2.2.0"
+      },
+      {
+        "name": "joblib",
+        "version": "1.5.2"
+      },
+      {
+        "name": "lstm",
+        "version": "1.1.0"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0"
+      },
+      {
+        "name": "multidict",
+        "version": "6.7.0"
+      },
+      {
+        "name": "mypy-extensions",
+        "version": "1.0.0"
+      },
+      {
+        "name": "netCDF4",
+        "version": "1.6.3"
+      },
+      {
+        "name": "networkx",
+        "version": "3.2.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "nwm-routing",
+        "version": "0.0.0"
+      },
+      {
+        "name": "packaging",
+        "version": "25.0"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "0.12.1"
+      },
+      {
+        "name": "platformdirs",
+        "version": "4.4.0"
+      },
+      {
+        "name": "propcache",
+        "version": "0.4.1"
+      },
+      {
+        "name": "pyarrow",
+        "version": "21.0.0"
+      },
+      {
+        "name": "pydantic",
+        "version": "1.10.24"
+      },
+      {
+        "name": "pyogrio",
+        "version": "0.11.1"
+      },
+      {
+        "name": "pyproj",
+        "version": "3.6.1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "python-forge",
+        "version": "18.6.0"
+      },
+      {
+        "name": "pytokens",
+        "version": "0.3.0"
+      },
+      {
+        "name": "pytz",
+        "version": "2025.2"
+      },
+      {
+        "name": "pyyml",
+        "version": "0.0.2"
+      },
+      {
+        "name": "shapely",
+        "version": "2.0.7"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      },
+      {
+        "name": "tomli",
+        "version": "2.3.0"
+      },
+      {
+        "name": "toolz",
+        "version": "1.1.0"
+      },
+      {
+        "name": "torch",
+        "version": "2.8.0+cpu"
+      },
+      {
+        "name": "troute.config",
+        "version": "0.0.3"
+      },
+      {
+        "name": "troute.network",
+        "version": "0.0.0"
+      },
+      {
+        "name": "troute.routing",
+        "version": "0.0.0"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.15.0"
+      },
+      {
+        "name": "tzdata",
+        "version": "2025.2"
+      },
+      {
+        "name": "url-normalize",
+        "version": "2.2.1"
+      },
+      {
+        "name": "wrapt",
+        "version": "2.0.1"
+      },
+      {
+        "name": "xarray",
+        "version": "2024.7.0"
+      },
+      {
+        "name": "yarl",
+        "version": "1.22.0"
+      }
+    ],
+    "routing_metadata_limit": "Distribution versions and image content identities are recorded; no routing computation or source-to-wheel attestation was performed."
+  },
+  "source_recovery": {
+    "upstream_archives": [
+      {
+        "repository": "CIROH-UA/ngen",
+        "commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+        "archive_sha256": "22fc17bd44ec763b3002360effafcd0b2d194a8b0a9289d30f18b95321407598",
+        "archive_bytes": 10848843,
+        "files_verified_against_git_blob_sha1": 476,
+        "file_sha256_manifest_sha256": "f5de31474d3050b0e3bbe171633936365aa6575289503f0bd1837d1509a08a2c",
+        "gitlinks_not_in_archive": 14
+      },
+      {
+        "repository": "CIROH-UA/t-route",
+        "commit": "533fbd98362efdafae62392308727de4f0d4cc20",
+        "archive_sha256": "b25a31958789a12e779434e99cb5ae9cf90dbb372cee3bcd30f873c63d130584",
+        "archive_bytes": 31427666,
+        "files_verified_against_git_blob_sha1": 1155,
+        "file_sha256_manifest_sha256": "04399ec32973b9e262602ca72aed8f4760f28d9bb5f5c7f6c872d9f57e095edd",
+        "gitlinks_not_in_archive": 0
+      },
+      {
+        "repository": "NOAA-OWP/cfe",
+        "commit": "a349a953ef239ae7470a8365cf614283d7e6ca80",
+        "archive_sha256": "085a083c534aed42e15338dd97a017e41a2c05cab9f910cbb63d15d6b7665142",
+        "archive_bytes": 1957978,
+        "files_verified_against_git_blob_sha1": 64,
+        "file_sha256_manifest_sha256": "a83a59de69cc6b1850d1672ff5cf0127f9dc7ab00f366dedd5bb00e129eb1622",
+        "gitlinks_not_in_archive": 2
+      },
+      {
+        "repository": "NOAA-OWP/noah-owp-modular",
+        "commit": "0abb891b48b043cc626c4e4bbd0efe54ad357fe1",
+        "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+        "archive_bytes": 833478,
+        "files_verified_against_git_blob_sha1": 81,
+        "file_sha256_manifest_sha256": "31c68a5202037924d15c7434458293738966293970d9d1cbd3f15a15ca51c80b",
+        "gitlinks_not_in_archive": 0
+      },
+      {
+        "repository": "NOAA-OWP/SLoTH",
+        "commit": "48cd8082878fdb8a6f0e2337a5b375be5b71384c",
+        "archive_sha256": "eb737672d439679719ff14ec9c185b5ef01cd9a64e86ba0c2934cf82fb4a4da7",
+        "archive_bytes": 752824,
+        "files_verified_against_git_blob_sha1": 24,
+        "file_sha256_manifest_sha256": "39e112efae2ee01b74d475a907fb39e20bcda80b0e74b5a4178d29331d815f07",
+        "gitlinks_not_in_archive": 2
+      },
+      {
+        "repository": "Unidata/netcdf-cxx4",
+        "commit": "f8882188267488ef801691e69ad072e3eb217ad8",
+        "archive_sha256": "83584cd7f7e462fbf2beac15d34755e54657fef1c7122e4fbb0c607883388302",
+        "archive_bytes": 608231,
+        "files_verified_against_git_blob_sha1": 168,
+        "file_sha256_manifest_sha256": "1540072b14ca9339233e7bfa123f7ba751b774e617b23bd1f16e8a21962cfcd3",
+        "gitlinks_not_in_archive": 0
+      }
+    ],
+    "upstream_file_count": 1968,
+    "preimages": [
+      {
+        "path": "src/NGen.cpp",
+        "bytes": 25682,
+        "sha256": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19",
+        "expected_sha256": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19",
+        "match": true
+      },
+      {
+        "path": "include/core/Layer.hpp",
+        "bytes": 7034,
+        "sha256": "e23e290ec2267eb81b5d5caf14c9b52d9e60e99f7290899484f67194427cb957",
+        "expected_sha256": "e23e290ec2267eb81b5d5caf14c9b52d9e60e99f7290899484f67194427cb957",
+        "match": true
+      },
+      {
+        "path": "src/core/SurfaceLayer.cpp",
+        "bytes": 2211,
+        "sha256": "317e3fcfd4e14bdd930c2bfe97502988270e7c1db10111ee95e3dda343b15613",
+        "expected_sha256": "317e3fcfd4e14bdd930c2bfe97502988270e7c1db10111ee95e3dda343b15613",
+        "match": true
+      },
+      {
+        "path": "src/realizations/catchment/Bmi_Multi_Formulation.cpp",
+        "bytes": 21395,
+        "sha256": "4a08781d0c72f723852663b5ce4bea3e22df287b8a418c9813173f9c0cbcfa2b",
+        "expected_sha256": "4a08781d0c72f723852663b5ce4bea3e22df287b8a418c9813173f9c0cbcfa2b",
+        "match": true
+      },
+      {
+        "path": "include/forcing/CsvPerFeatureForcingProvider.hpp",
+        "bytes": 18201,
+        "sha256": "d714746833198eb9ddd64284ed98a7cf6c184d02416916e7413a698db9e96ff2",
+        "expected_sha256": "d714746833198eb9ddd64284ed98a7cf6c184d02416916e7413a698db9e96ff2",
+        "match": true
+      }
+    ],
+    "overlay": {
+      "source_alias": "HYDRA_REVIEW/nextgen-shared-build.jUE2nu/ngen-v3-day01",
+      "files": [
+        {
+          "path": "include/core/Layer.hpp",
+          "bytes": 7255,
+          "sha256": "1de9c28bdcf77ca72d4592c8c2ec581d793a06f92ed063556bf519d6611642e2",
+          "expected_sha256": "1de9c28bdcf77ca72d4592c8c2ec581d793a06f92ed063556bf519d6611642e2",
+          "match": true
+        },
+        {
+          "path": "include/forcing/CsvPerFeatureForcingProvider.hpp",
+          "bytes": 18877,
+          "sha256": "88624480f3379393a414d52d586b41a017a3c85aa219e3ff94d1acdb3b259467",
+          "expected_sha256": "88624480f3379393a414d52d586b41a017a3c85aa219e3ff94d1acdb3b259467",
+          "match": true
+        },
+        {
+          "path": "include/shared_history/ChildOwnership.hpp",
+          "bytes": 1706,
+          "sha256": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0",
+          "expected_sha256": "ca5fab766029364e8db42521d96889ac033bc4271ca6ba142bbe0746f0b4eff0",
+          "match": true
+        },
+        {
+          "path": "include/shared_history/DayCustodyBoundary.hpp",
+          "bytes": 1895,
+          "sha256": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405",
+          "expected_sha256": "b7d2fa6b6538d36bc553493bdfa56d06b2eedd97352a785cf632e6b10db0a405",
+          "match": true
+        },
+        {
+          "path": "include/shared_history/HourlyClock.hpp",
+          "bytes": 1456,
+          "sha256": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8",
+          "expected_sha256": "ab085158d6e9582ab97d7d2690ab244cbceb0ff4963d258dc4aed33317214be8",
+          "match": true
+        },
+        {
+          "path": "include/shared_history/Runtime.hpp",
+          "bytes": 41810,
+          "sha256": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25",
+          "expected_sha256": "0f42b3a656c79909aaabc19334be4abac65ebf11e7fea8d03d1f4f15fccbfd25",
+          "match": true
+        },
+        {
+          "path": "include/shared_history/SwitchingProvider.hpp",
+          "bytes": 5930,
+          "sha256": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4",
+          "expected_sha256": "c35e2d972676fe2db8413ab1e7efdf189c208630bf20ef49596ee3a2a7f688e4",
+          "match": true
+        },
+        {
+          "path": "src/NGen.cpp",
+          "bytes": 26682,
+          "sha256": "0e7ad5c0c9094e1fd8809d57c8d03e237336e96a2c1a77d73eceed588025ce81",
+          "expected_sha256": "0e7ad5c0c9094e1fd8809d57c8d03e237336e96a2c1a77d73eceed588025ce81",
+          "match": true
+        },
+        {
+          "path": "src/core/SurfaceLayer.cpp",
+          "bytes": 2417,
+          "sha256": "9c650dcedabd5e502e94185ef0074ee8092c8393dd3898cffba6c6c47edc3731",
+          "expected_sha256": "9c650dcedabd5e502e94185ef0074ee8092c8393dd3898cffba6c6c47edc3731",
+          "match": true
+        },
+        {
+          "path": "src/realizations/catchment/Bmi_Multi_Formulation.cpp",
+          "bytes": 22182,
+          "sha256": "e62b3aab14da26590e6b56be177974f8a6f33faed5eac562f88e7b183bb747ed",
+          "expected_sha256": "e62b3aab14da26590e6b56be177974f8a6f33faed5eac562f88e7b183bb747ed",
+          "match": true
+        }
+      ],
+      "total_bytes": 130210,
+      "patch_sha256": "bafb2cc743e7b590ce69c1518ccf2bef34bcd88a30df7cd84b072ea73e3a5f15",
+      "patch_bytes": 63731,
+      "protection": "per-component no-follow resident preflight, no dataless files opened; no source writes",
+      "publication_allowed": false,
+      "rights": "historical inherited overlay, private development staging only; redistribution unresolved"
+    },
+    "patched_framework_regular_files": 481,
+    "patched_framework_file_manifest_sha256": "4a5de68e6ff644b1b85702abcf82029b0c22f5b36dbeca7dba10111583641c20",
+    "overlay_application_verified": "All five pinned preimages verified; git apply --check and git apply succeeded; all ten final overlay hashes reverified.",
+    "complete_all_submodule_lock": false,
+    "build_recipe_complete": false,
+    "historical_cache_and_export": [
+      {
+        "path": "BUILD_EXPORT.json",
+        "bytes": 2523,
+        "sha256": "5ecfed96cffddad645ff2e4a9d1b4aaea2892176798f092ac2ed2c55f42b3746"
+      },
+      {
+        "path": "build/CMakeCache.txt",
+        "bytes": 25926,
+        "sha256": "88060947d4ecb0fd522833680ce1258db9f96ea566b0e4a44d8e81098b6be67d"
+      }
+    ],
+    "build_options_artifact": "native/RECOVERED_BUILD_OPTIONS_20261010.json"
+  },
+  "exported_loader": {
+    "status": "passed",
+    "exit_code": 0,
+    "elapsed_seconds": 0.172,
+    "image_digest": "sha256:2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+    "source_sha256": {
+      "ngen-shared": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+      "libiso_c_bmi.so": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162"
+    },
+    "network": "none",
+    "root_filesystem": "read_only",
+    "tmpfs_bytes": 8388608,
+    "memory_bytes": 268435456,
+    "cpus": 2,
+    "timeout_seconds": 60,
+    "executable_main_invoked": false,
+    "model_functions_invoked": false,
+    "probe": "readelf headers and dynamic tags; glibc loader --list with explicit /tmp/probe library-path",
+    "output_sha256": "8b4c41269e6adf1210988067b5f3b5f1974aaf6c11b19d6b7c812550a9c3a189",
+    "output_bytes": 6669,
+    "resolved_middleware_path": "/tmp/probe/libiso_c_bmi.so",
+    "resolved_middleware_sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+    "all_direct_and_transitive_needed_libraries_resolved": true,
+    "resolved_libraries": [
+      {
+        "soname": "libudunits2.so.0",
+        "path": "/lib64/libudunits2.so.0"
+      },
+      {
+        "soname": "libiso_c_bmi.so",
+        "path": "/tmp/probe/libiso_c_bmi.so"
+      },
+      {
+        "soname": "libnetcdf.so.19",
+        "path": "/lib64/libnetcdf.so.19"
+      },
+      {
+        "soname": "libsqlite3.so.0",
+        "path": "/lib64/libsqlite3.so.0"
+      },
+      {
+        "soname": "libstdc++.so.6",
+        "path": "/lib64/libstdc++.so.6"
+      },
+      {
+        "soname": "libm.so.6",
+        "path": "/lib64/libm.so.6"
+      },
+      {
+        "soname": "libgcc_s.so.1",
+        "path": "/lib64/libgcc_s.so.1"
+      },
+      {
+        "soname": "libc.so.6",
+        "path": "/lib64/libc.so.6"
+      },
+      {
+        "soname": "libexpat.so.1",
+        "path": "/lib64/libexpat.so.1"
+      },
+      {
+        "soname": "libgfortran.so.5",
+        "path": "/lib64/libgfortran.so.5"
+      },
+      {
+        "soname": "libmfhdf.so.0",
+        "path": "/lib64/libmfhdf.so.0"
+      },
+      {
+        "soname": "libdf.so.0",
+        "path": "/lib64/libdf.so.0"
+      },
+      {
+        "soname": "libjpeg.so.62",
+        "path": "/lib64/libjpeg.so.62"
+      },
+      {
+        "soname": "libhdf5_hl.so.200",
+        "path": "/lib64/libhdf5_hl.so.200"
+      },
+      {
+        "soname": "libhdf5.so.200",
+        "path": "/lib64/libhdf5.so.200"
+      },
+      {
+        "soname": "libz.so.1",
+        "path": "/lib64/libz.so.1"
+      },
+      {
+        "soname": "libcurl.so.4",
+        "path": "/lib64/libcurl.so.4"
+      },
+      {
+        "soname": "libtirpc.so.3",
+        "path": "/lib64/libtirpc.so.3"
+      },
+      {
+        "soname": "libsz.so.2",
+        "path": "/lib64/libsz.so.2"
+      },
+      {
+        "soname": "libnghttp2.so.14",
+        "path": "/lib64/libnghttp2.so.14"
+      },
+      {
+        "soname": "libssl.so.3",
+        "path": "/lib64/libssl.so.3"
+      },
+      {
+        "soname": "libcrypto.so.3",
+        "path": "/lib64/libcrypto.so.3"
+      },
+      {
+        "soname": "libgssapi_krb5.so.2",
+        "path": "/lib64/libgssapi_krb5.so.2"
+      },
+      {
+        "soname": "libkrb5.so.3",
+        "path": "/lib64/libkrb5.so.3"
+      },
+      {
+        "soname": "libk5crypto.so.3",
+        "path": "/lib64/libk5crypto.so.3"
+      },
+      {
+        "soname": "libcom_err.so.2",
+        "path": "/lib64/libcom_err.so.2"
+      },
+      {
+        "soname": "libkrb5support.so.0",
+        "path": "/lib64/libkrb5support.so.0"
+      },
+      {
+        "soname": "libkeyutils.so.1",
+        "path": "/lib64/libkeyutils.so.1"
+      },
+      {
+        "soname": "libresolv.so.2",
+        "path": "/lib64/libresolv.so.2"
+      },
+      {
+        "soname": "libselinux.so.1",
+        "path": "/lib64/libselinux.so.1"
+      },
+      {
+        "soname": "libpcre2-8.so.0",
+        "path": "/lib64/libpcre2-8.so.0"
+      }
+    ]
+  },
+  "retained_failed_probes": [
+    {
+      "probe": "OCI annotation tag lookup",
+      "result": "Local imported tag lookup failed; no model container started.",
+      "resolution": "Use the verified manifest digest directly; image inspection and bounded utility invocation succeeded."
+    },
+    {
+      "probe": "Python distribution enumeration inside composite shell utility",
+      "result": "Embedded Python quotation raised NameError; shell final status did not reflect this subcommand failure.",
+      "resolution": "Repeated as direct Python entrypoint with argv list, status zero; successful JSON retained separately."
+    }
+  ],
+  "gate_disposition": {
+    "RF-008_worker": "established_local_Linux_ARM64_not_hosted_service",
+    "RF-008_image_retrievability": "closed_for_exact_recorded_digest_in_private_staging",
+    "RF-008_overlay_preimages": "all_recorded_hashes_matched_private_staging",
+    "RF-008_historical_export_loader": "bounded_inert_resolution_passed",
+    "RF-008_complete_clean_build": "blocked_incomplete_builder_and_recipe",
+    "RF-008_component_source_binary_attestation": "open",
+    "RF-009A_input_content": "separate_Watauga_bundle_lane",
+    "RF-010_reference": "not_started"
+  },
+  "remaining_blockers": [
+    "Detailed historical BUILD_RECEIPT and build wrapper are not recovered; inspected original receipt is dataless and was not opened.",
+    "Exact compiler, development libraries, Boost headers and build invocation are not sealed; recovered cache values alone are insufficient.",
+    "Top-level source archives and NetCDF-CXX are verified; unneeded or unresolved gitlinks are not claimed fully restored.",
+    "Physical component sources, build options, toolchain and library identities still lack complete direct build attestations.",
+    "A relocatable final native packaging layout and application-level component loading still need qualification.",
+    "Fixture/scientific admission remains separate; this receipt permits no model execution.",
+    "Redistribution terms and core license remain unresolved."
+  ],
+  "immutable_baseline_files": [
+    {
+      "path": "profiles/nextgen-arm64-v3.json",
+      "sha256": "8d90f2181785f3e7927607e5ac0bcb7f1c6fd00ed008eba295b65937dd5eed5e"
+    },
+    {
+      "path": "native/BUILD_RECIPE.md",
+      "sha256": "c120ffa122a0fb98b318fd9c982d0ff793380b7b2ea30f52b3c2dc519bff619c"
+    }
+  ],
+  "manuscript_claim_boundary": "Fresh infrastructure, source-byte recovery, and inert ELF dependency evidence only. No clean-build, physical equivalence, forecast skill, efficiency, recovery, hosted user experience or release qualification result.",
+  "integrated_software_tests": {
+    "receipt": "docs/evidence/linux-arm64-input-tests-20261010.json",
+    "tests": 155,
+    "passed": true,
+    "python": "3.12.3",
+    "platform": "Linux aarch64",
+    "physical_qualification": false
+  }
+}

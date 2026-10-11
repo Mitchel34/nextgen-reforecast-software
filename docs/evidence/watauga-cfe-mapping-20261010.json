@@ -1,0 +1,244 @@
+{
+  "schema_version": "watauga-cfe-mapping-audit/0.1",
+  "observed_date": "2026-10-10",
+  "evidence_class": "fresh_content_audit_of_hash_verified_private_staging",
+  "source_reads": "Private staged copies only; original paths not opened in this audit.",
+  "execution_ready": false,
+  "scientific_admission_complete": false,
+  "new_model_runs": 0,
+  "contract_sha256": "b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb",
+  "hydrofabric_sha256": "a0a7ed78e5ece1fe25d052c26e6ed5b8b5084b9f5a45da276f02c14f59e24713",
+  "catchment_count": 31,
+  "unique_config_count": 31,
+  "catchment_set_matches": true,
+  "matched_mean_slope_exact": 31,
+  "matched_mean_slope_1km_exact": 0,
+  "config_declared_units": [
+    "m/m"
+  ],
+  "source_attributes": {
+    "table": "divide-attributes",
+    "fields": [
+      {
+        "name": "divide_id",
+        "sqlite_type": "TEXT",
+        "units": null
+      },
+      {
+        "name": "mean.slope_1km",
+        "sqlite_type": "REAL",
+        "units": null
+      },
+      {
+        "name": "mean.slope",
+        "sqlite_type": "REAL",
+        "units": null
+      }
+    ],
+    "unit_metadata_found": false,
+    "scope": "No per-attribute unit metadata table is present, and the inspected SQLite column declarations provide types rather than unit definitions. Source-attribute units remain unknown."
+  },
+  "actual_slop_summary": {
+    "minimum": 83.1903086404573,
+    "median": 86.94876668720276,
+    "maximum": 87.96929709872913
+  },
+  "mean_slope_summary": {
+    "minimum": 83.1903086404573,
+    "median": 86.94876668720276,
+    "maximum": 87.96929709872913
+  },
+  "mean_slope_1km_summary": {
+    "minimum": 0.04307885095477104,
+    "median": 0.043414704501628876,
+    "maximum": 0.062094494700431824
+  },
+  "private_per_catchment_evidence": {
+    "relative_path": ".local/watauga-inspection-20261010/cfe_slope_pairs.csv",
+    "sha256": "049af01933acc4d9ea36735de731dca91d3db971b442a2f6ad9a1f31babf58fb",
+    "published": false
+  },
+  "configuration_bindings": [
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017689.ini",
+      "sha256": "a71edbd97212db511e80ff4ac13ac1e77f10cadcc71a0cae6f532f6d436308d9"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017690.ini",
+      "sha256": "fd89fc6316ff9c94a0434e439ee6e69079f10e16d03347a0923a1788d291f755"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017691.ini",
+      "sha256": "71f551ab70e9b74111a475237cc431bbb4be7283216f6cf9e23ae922bf8673dc"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017692.ini",
+      "sha256": "65cc13b6120a7465433b5be537fefa6009b827aa790b6cae86be16cdac2bf421"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017693.ini",
+      "sha256": "c9977cea57acfa32927eb6bbe2d490cff538d2fa383e7cf0eeaa569c993e4f86"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017847.ini",
+      "sha256": "39d75ca77d02eb80c5b4eec67f5e2aebd7bb2f6729a5d87aaff801e9f05c0d06"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017848.ini",
+      "sha256": "c4a5a002741119df777bcf41baafd341cb68b5941db4205982de6a6525f8d7fc"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017849.ini",
+      "sha256": "823a49aea99957fbd75bd6c38bc1bbf7952fa82124e64a4ace48304f8b383c24"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017850.ini",
+      "sha256": "524800c2a80f38dbdbc1ed7299536eccefef661df8c30fb48c27baac7eb96c35"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017851.ini",
+      "sha256": "8e9be6b8410427be63f6b7cdd4f8ee3483d3e76c99cdf95f5c4c2ddfdd9080e1"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017852.ini",
+      "sha256": "ce2c97a760d91443dfa3798660a9be93eec0661d91b0ff1c8d94794fbaffb72c"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017853.ini",
+      "sha256": "3982b16f69cfaee5fb6f6f6d78d6dc310259ce1ad47620c864a50825c75ffd7e"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017854.ini",
+      "sha256": "c7cfe6bdc3173ffa190aff3ab3fa43f6899ca8e46f82d38c369e43c71992a1b7"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017855.ini",
+      "sha256": "07cf17be2c301b4ee6f68e2f1950510af54c039f9b7db39a98fe4263bdeacce0"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017856.ini",
+      "sha256": "8e6a9935c8d755f9a67c9a2f896d75797f4f9cf69db16795101fe73eca5d2c2a"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017857.ini",
+      "sha256": "5b7c90a7380ce6bbd9524e6fa97d0cf62dbb307cc0b6dad390bae501ef04cd84"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017858.ini",
+      "sha256": "540a6dade3804c6aa2ab49b1957a5cd6c125eb1c1a771dc687d1a37c39bc4249"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017859.ini",
+      "sha256": "d6447a6b367a3e3e3bd959f7b4bd93c327db9a5af914043f59d47e86b657f64d"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017860.ini",
+      "sha256": "26e2ea2f1783830791431fbbd39ecc2039449c0f55a804be71b5da995869ed06"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017861.ini",
+      "sha256": "5a926d4a2d6b3c5b6215e88e78979358535273b90814e6aac5a44dd005672dbd"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017862.ini",
+      "sha256": "9d3f670394f44e8617dc931e97795b2803d9483e22f53f024769896adb93111c"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017863.ini",
+      "sha256": "eaad8aecd31b3a9b63fbaf5c14516f7bdb6cb70e3a6e7b244f34e837390b71ca"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017864.ini",
+      "sha256": "974076b568b393fb4220c50ff5718bb5e0a295285f2e5e9f6af70ff40456b154"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017865.ini",
+      "sha256": "4629ff71fd29c88960094fdb2e70084bfc2a182cfe7a885791b3f1a531f947e7"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017866.ini",
+      "sha256": "bbc5fedcdc6043c92610cc1594189c10d94fdaf78e1f67f93aaa5ce9dfa58a09"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017867.ini",
+      "sha256": "b74e1caa91b90f5d8659e93ea0a9f93751d6fcf3b1f464a1ed76c150c4505182"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017868.ini",
+      "sha256": "f70fa65c852014ad327aecf422cfc8050a9496df38e621feda0c20afa89c305c"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017869.ini",
+      "sha256": "4081ae8b6df20829806c042e977a1d6b55c8dd6e98ccd9070b1ce46a06effa4b"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017870.ini",
+      "sha256": "464fcaf5bfa51a6bb73f0d2a9bf8dff5ef697c0a01653641e8c04a11fa944d1a"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017871.ini",
+      "sha256": "590418e90e3fb11c205db3f2e7ffc2d617b4c606f4a38680c325bd4d4d2ffc2a"
+    },
+    {
+      "path": "fixture/input/config/cat_config/CFE/CFE_cat-1017872.ini",
+      "sha256": "536f568592a4b0e400d0b2b723d6816541e74ad7ae9b62df96131608af30f712"
+    }
+  ],
+  "metadata_and_hash_changes_in_staged_inputs": 0,
+  "sqlite_access": {
+    "mode": "ro",
+    "immutable": true,
+    "query_only": true,
+    "journal_created": false
+  },
+  "interpretation": "All31original CFE slop numeric settings equal the corresponding mean.slope values exactly; none equals mean.slope_1km. This binds the observed original values, but does not prove the generator derivation, source attribute units or physical effect.",
+  "unresolved": [
+    "Authoritative unit definitions for both source attributes",
+    "Generator source revision and explicit transformation provenance for original files",
+    "Compatibility and actual loaded CFE library identity under the execution profile",
+    "Full original Noah/history/forecast fixture members",
+    "Coupled original/candidate diagnostic comparison under a separate bounded manifest"
+  ],
+  "configuration_validator_exercised": true,
+  "configuration_api_audit": {
+    "schema_version": "cfe-mapping-validation/0.1",
+    "evidence_class": "source_declared",
+    "variant": "inherited_diagnostic",
+    "content_valid": true,
+    "execution_ready": false,
+    "validation_identity_sha256": "9ae5ebe2cc193f793a1e1610e4c49b380920a1e62eb3e416f44900ae92d72ebf",
+    "manifest_sha256": "41f60af9a5a151306b1a97fe8425821cff90352876c37a15dea96fd1e016cd84",
+    "source_metadata_status": "declared_unverified",
+    "loaded_library_attested": false,
+    "complete_configuration_validated": false,
+    "expected_catchment_count": 31,
+    "observed_asset_count": 33,
+    "matched_parameter_pair_count": 31,
+    "blocker_count": 0,
+    "blocker_codes": [],
+    "warning_counts": {
+      "inherited_mapping_concern": 1,
+      "inherited_out_of_range": 31
+    },
+    "qualification_blockers": [
+      "source_attribute_units_and_derivation_unverified",
+      "generator_execution_unattested",
+      "loaded_library_and_complete_configuration_unqualified",
+      "coupled_candidate_history_and_response_unqualified",
+      "inherited_mean_slope_mapping_known_concern"
+    ],
+    "generator_revision": null,
+    "source_units": "unknown",
+    "source_field_meanings": "unknown",
+    "cfe_library": {
+      "sha256": "f54e29c81e2b86c0233f2530e929e18fe9226c421225b90263fa8128ec4ae56a",
+      "bytes": 136312,
+      "evidence": "Extracted by runtime workstream from the pinned Linux ARM64 image, retained as inert bytes; not loaded by this validator."
+    },
+    "private_report_sha256": "324c8117ea7f72e7a83753e9922abaf6bfd6e3dad4b23c54e8e4fa195c0de002",
+    "private_manifest_sha256": "dfafd1bacf7a56934d4ae1a3595d2edb03a9a39a12a275123b179ee162d2db63",
+    "metadata_and_hash_changed_input_count": 0,
+    "scope": "31 actual CFE drainage settings and bound source-table/library bytes. API content validity does not establish original generator provenance, authoritative source-unit semantics, full configuration validity or loaded model behavior. Per-catchment report remains private.",
+    "generator_status": "unknown"
+  }
+}
