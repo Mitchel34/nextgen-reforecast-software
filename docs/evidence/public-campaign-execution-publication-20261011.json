@@ -1,0 +1,153 @@
+{
+  "additional_model_processes_after_acceptance": 0,
+  "all_frozen_implementation_files_match_published_commit": true,
+  "branch": "main",
+  "external_researcher_reproduction": false,
+  "forecast_skill_validated": false,
+  "frozen_input_runtime_reference_assets": {
+    "source_assets": 303,
+    "source_bytes": 132450324,
+    "verified": true
+  },
+  "github_ci": {
+    "browser_contract_tests": 17,
+    "conclusion": "success",
+    "head_sha": "f290e6079ff73046c0b4b3635ac046441771f04d",
+    "id": 38115725913,
+    "jobs": [
+      {
+        "conclusion": "success",
+        "id": 114400117635,
+        "name": "offline (3.11)",
+        "status": "completed",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38115725913/job/114400117635"
+      },
+      {
+        "conclusion": "success",
+        "id": 114400117680,
+        "name": "offline (3.12)",
+        "status": "completed",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38115725913/job/114400117680"
+      },
+      {
+        "conclusion": "success",
+        "id": 114400117707,
+        "name": "browser-contract",
+        "status": "completed",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38115725913/job/114400117707"
+      },
+      {
+        "conclusion": "success",
+        "id": 114400117725,
+        "name": "offline (3.13)",
+        "status": "completed",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38115725913/job/114400117725"
+      },
+      {
+        "conclusion": "success",
+        "id": 114400117747,
+        "name": "offline (3.14)",
+        "status": "completed",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38115725913/job/114400117747"
+      }
+    ],
+    "python_tests_per_version": 293,
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "scope": "Ubuntu offline contract and installed CLI tests; no physical NextGen model execution in GitHub CI",
+    "status": "completed",
+    "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38115725913"
+  },
+  "hosted_browser_execution": false,
+  "immutable_byte_changes": [],
+  "immutable_historical_files_verified": 32,
+  "implementation_commit": "f290e6079ff73046c0b4b3635ac046441771f04d",
+  "implementation_identity_sha256": "a87539dc6f950a5f934b5e22a89701b612a1ecb3841f139908e560311b0105de",
+  "increment_file": {
+    "bytes": 18753,
+    "sha256": "362d663845272c8af6e83949c35e2c986886187aa92734f20a121cbd1a9caead"
+  },
+  "increment_identity_sha256": "dfe0611445e1c263d09a397249373c8b04e9b8d3eabbbcf567e13c5ae1f10dd1",
+  "installed_package_identity_verified": true,
+  "latest_metadata_matches_bound_drift_snapshot": true,
+  "manuscript_submitted": false,
+  "original_content_bytes_audited": false,
+  "original_folder_metadata_drift": {
+    "dataless_flag_transitions": 0,
+    "directories": 7,
+    "entries": 347,
+    "regular_file_mtime_changes": 0,
+    "regular_file_size_changes": 0,
+    "regular_files": 340,
+    "responsible_process_verified": false
+  },
+  "original_metadata_reset": false,
+  "package_version": "0.1.0a5",
+  "physical_recovery_qualified": false,
+  "post_publication_installed_archive_verification": {
+    "assembly_identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+    "capture_identity_sha256": "c59e25490679b2fc4b114f2244a015a94be56726893f91fb30ebc8ba3c083935",
+    "completed": true,
+    "execution_lock_sha256": "4a98ee39253c442b18fafc54beff64924485fe02afa01bcb307cc75975a77f7d",
+    "files_verified": 203,
+    "fixture_id": "watauga-public-rebuild-v2",
+    "generated_rows": 36,
+    "protocol_identity_sha256": "111b4d01be42889fca1f62706b020c461c039aa57a5a929e999efd3d83906757",
+    "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+    "release_qualified": false,
+    "result_identity_sha256": "9db9441e7108285a8c44128318abb0aa9cf4c76b59147b2e9c16222555de94a8",
+    "retained_rows": 12,
+    "run_id": "watauga-public-execution-20261011-3ce08df96747777e",
+    "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+    "schema_version": "campaign-result-verification/0.1",
+    "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+    "scientific_validation_claimed": false,
+    "scope": "Local bytes and receipt consistency; no authenticity signature or hydrologic skill claim.",
+    "status": "verified"
+  },
+  "preservation_audit_identity_sha256": "8d70076300ec12d87b12c8cbe5df474152e4bcea8927c788901753a473425b90",
+  "private_evidence_bindings": {
+    "post-publication-assets.json": {
+      "bytes": 2518,
+      "sha256": "a9c4c4fe8d4b1a3637370fd95240c9ab05719a8c44e3c4c0dec77a363c939440"
+    },
+    "post-publication-verify.stdout.json": {
+      "bytes": 1261,
+      "sha256": "818f10282592a862cd7c31427278d036117ac5f2c36b2cab4bf4d088fc0295de"
+    },
+    "post-publication-worker-status.json": {
+      "bytes": 145,
+      "sha256": "f759d617b9bc6d665fa820d0495741c2c3e9b51001d4f10ad86d39cf446137e2"
+    },
+    "publication-ci-jobs.json": {
+      "bytes": 12291,
+      "sha256": "27130d037a2852dc0562b9fd2a90ddea38b4a5ec9745b064d8ec13baa092706e"
+    },
+    "publication-ci-runs.json": {
+      "bytes": 13956,
+      "sha256": "063bc07a165093aad2f2b50f395a2ba17900b32b06a7bf8dbf40743d8f385016"
+    },
+    "publication-ci.log": {
+      "bytes": 449685,
+      "sha256": "173c1c4befcf2f6d2b4c94b7706bbfbece36520fadd4bd788e2383db5b6bc345"
+    },
+    "publication-remote-ref.json": {
+      "bytes": 411,
+      "sha256": "6e90c6bb2f7e8a5fc1e46ea3ac0a9c63564446c91d9afb75f119f9804896636d"
+    }
+  },
+  "public_repository_verified": true,
+  "publication_identity_sha256": "436c904ba3f6a46c7f447bbfcb8b335f141949fbd5db8728d13a23cb47d60e7c",
+  "recorded_at_utc": "2026-10-11T05:46:19Z",
+  "release_qualified": false,
+  "remote_implementation_commit_verified": true,
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "schema_version": "public-campaign-execution-publication/0.1",
+  "shared_history_executed": false,
+  "worker_stopped_verified": true,
+  "workflow_original_writes": false
+}
