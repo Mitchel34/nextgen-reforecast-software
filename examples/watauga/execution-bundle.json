@@ -1,0 +1,8 @@
+{
+  "schema_version": "watauga-v2-execution-bundle/0.1",
+  "bundle_paths": {
+    "fixture_root": "fixture",
+    "reference_root": "references",
+    "runtime_tar": "runtime/export-runtime.tar"
+  }
+}

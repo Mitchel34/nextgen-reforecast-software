@@ -1,6 +1,6 @@
-# User guide: planning foundation
+# User guide: planning and pinned diagnostic execution
 
-The current package plans campaigns, binds offline input identities and inspects an explicitly pinned historical runtime. It does not execute NextGen, generate forecasts or resume a physical model. These commands serve developers/operators; the intended researcher experience uses the browser and automatic preparation. This distinction is visible in command output and exit codes.
+The current package plans campaigns, binds offline input identities and inspects an explicitly pinned historical runtime. The pinned Watauga v2 diagnostic execution path is documented below; other campaigns and physical recovery are not admitted. These commands serve developers/operators; the intended researcher experience uses the browser and automatic preparation. This distinction is visible in command output and exit codes.
 
 ## Install
 
@@ -77,7 +77,7 @@ Blocked `plan`, `report` and `doctor` commands still return useful reports. The 
 
 ## Current limits and next steps
 
-`run` and `resume` return an explicit unavailable status. Archive verification, scientific export and physical recovery will be implemented against qualified outputs in later milestones. The local browser interaction prototype prepares a researcher request; it is not a hosted execution service. No cloud runner, ML model, universal routing support or portable full-land checkpoint is included. Restore and qualify the exact complete real fixture before attempting model execution; [the implementation plan](../IMPLEMENTATION_PLAN.md) tracks these dependencies.
+The fixed Watauga v2 `run`, archive verification and diagnostic export are implemented below; `resume` and general physical recovery remain unavailable. The local browser interaction prototype prepares a researcher request; it is not a hosted execution service. No cloud runner, ML model, universal routing support or portable full-land checkpoint is included. Execution requires its exact separately admitted bundle; [the implementation plan](../IMPLEMENTATION_PLAN.md) tracks these dependencies.
 
 ## Validate prepared scientific contents (operator interface)
 
@@ -95,4 +95,22 @@ ngen-reforecast validate-cfe path/to/cfe-mapping.manifest.json \
 
 The checked-in weather examples are synthetic contract fixtures. The first two commands do not inspect real archive coverage or generate model inputs. See the [forcing contract](FORCING_VALIDATION_CONTRACT.md) and [CFE mapping contract](CFE_MAPPING_VALIDATION_CONTRACT.md) for schemas, bounds and qualification limits. The CFE command checks only drainage mapping and bound bytes, not all required configuration keys.
 
-Exit 0 means tested contents conform. Exit 2 means content blockers remain, including when `--gap-policy exclude_issue` explicitly records an incomplete forecast exclusion. Exit 1 indicates a malformed/unsafe/unreadable contract or an output publication error. Outputs never overwrite an existing file. `content_valid=true` always coexists with `execution_ready=false`; source authenticity, field derivation, actual loaded libraries and physical suitability require separate evidence. `run` and `resume` remain unavailable.
+Exit 0 means tested contents conform. Exit 2 means content blockers remain, including when `--gap-policy exclude_issue` explicitly records an incomplete forecast exclusion. Exit 1 indicates a malformed/unsafe/unreadable contract or an output publication error. Outputs never overwrite an existing file. `content_valid=true` always coexists with `execution_ready=false`; source authenticity, field derivation, actual loaded libraries and physical suitability require separate evidence. The validators do not themselves admit execution; the separate pinned `prepare`/`run` path is described below.
+
+## Execute the pinned Watauga v2 diagnostic
+
+Version0.1.0a5 adds `prepare`, `run`, `status`, `verify` and `export` for the exact operator profile in [the execution contract](PUBLIC_CAMPAIGN_EXECUTION_CONTRACT.md). Recovery remains unavailable. The operator must supply the already admitted fixture, runtime transfer and sealed reference arrays; package installation does not acquire them or close release rights.
+
+```sh
+ngen-reforecast prepare examples/watauga/campaign-execution-v2.json --bundle /path/to/bundle/BUNDLE.json --output execution-lock.json
+ngen-reforecast run execution-lock.json --asset-root /path/to/bundle --execution-root /path/to/new-attempt --archive /path/to/new-archive --docker-host unix:///path/to/dedicated/docker.sock
+ngen-reforecast status /path/to/new-archive --lock execution-lock.json
+ngen-reforecast verify /path/to/new-archive --lock execution-lock.json
+ngen-reforecast export /path/to/new-archive --lock execution-lock.json --output /path/to/new-export
+```
+
+The [example bundle declaration](../examples/watauga/execution-bundle.json) illustrates the required relative layout; it contains no inputs. `prepare` verifies every source file and binds the installed implementation, unchanged scientific inputs, fresh run/protocol/admission, exact reference set and warning policy. A planning example with different dates/resources is not runnable. Existing `plan` and `lock` remain offline planning commands with their original evidence meaning.
+
+`run` uses an explicitly supplied local Docker socket and an already available immutable Linux ARM64 image. No image pull/build, worker start, host mount or network access occurs. An exclusive persistent claim prevents duplicate launches of the same lock. Occupied archives reuse only a fully verified identical result. Failure preserves reservations and available evidence, returns nonzero, and does not automatically retry. A fresh complete campaign is the atomic commit unit; per-issue recovery is still open.
+
+The archive contains raw output, stage/normalization receipts, complete audited arrays, comparison evidence, `generated.csv` (all36issue/lead rows) and `retained.csv` (12rows for the example's leads1–6), plus a sealed manifest. `CURRENT.json` appears only after the complete result is verified and durably published. `verify` and `export` reject any changed byte. Equal serialized arrays establish this narrow diagnostic replay, without demonstrating scientific release qualification or a hosted researcher experience.

@@ -1,5 +1,11 @@
 # Software and manuscript implementation plan
 
+## Active verified increment — 11 October 2026
+
+The [public campaign execution results](docs/PUBLIC_CAMPAIGN_EXECUTION_RESULTS_2026-10-11.md) now close the fixed Watauga v2 operator path: installed `prepare`/`run`, complete canonical-array agreement with independent references, whole-campaign atomic commit, verified status and retained export. The current [working plan](docs/WORKING_PLAN.md) and [execution contract](docs/PUBLIC_CAMPAIGN_EXECUTION_CONTRACT.md) control further assignments. These results supersede the first increment's unavailable-run/export status below for this exact profile; recovery remains unimplemented.
+
+The next build decisions must retain the scientist's gauge/watershed-and-dates browser objective. General input acquisition, hosted preparation/inspection, broader campaign scheduling, per-issue durable recovery and source/runtime scientific qualification remain explicit work, each with new acceptance evidence. State sharing and performance claims require prospective comparisons against complete independent references; their planned manuscript contribution is not demonstrated by this serial integration. Original research folders and historical E03 remain read-only.
+
 **Active kickoff — 10 October 2026:** The owner has authorized beginning the revised multiagent workflow. [Current assignments](docs/IMPLEMENTATION_KICKOFF_2026-10-10.md) supersede the documentation-only pause stated in the September history below. Preserve every physical, source, rights and release gate; follow [current implementation status](docs/IMPLEMENTATION_STATUS.md) for completed capabilities and evidence.
 
 Approved work direction: 18 September 2026. The owner requested a plan followed by agent implementation toward a completed software product and accompanying manuscript. This advances beyond the completed feasibility-only stage. The original design and dossier remain preserved evidence.

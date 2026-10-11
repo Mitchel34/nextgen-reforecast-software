@@ -1,4 +1,4 @@
-"""Public offline CLI. No command starts a model or accesses the network."""
+"""Public planner and explicitly admitted, pinned diagnostic campaign CLI."""
 
 from __future__ import annotations
 
@@ -18,6 +18,9 @@ from .configuration import load_configuration_manifest, validate_configuration
 from .forcing import evaluate_gap_policy, load_forcing_manifest, validate_forecast_issue, validate_history
 from .provenance import load_lock, seal_lock, verify_lock
 from .runtime import RuntimeProfileError, inspect_runtime
+from .execution_lock import load_execution_lock, prepare_execution
+from .archive import archive_status, commit_result, export_result, verify_result, preflight_archive_destination
+from .execution import execute_campaign
 
 MAX_LEDGER_ROWS = 10_000_000
 LEDGER_FIELDS = (
@@ -150,7 +153,7 @@ def _ledger(campaign: Path, output: Path, max_rows: int, kind: str = "generated"
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="ngen-reforecast",
-        description="Offline planning and historical runtime inspection; no model execution.",
+        description="Offline planning and explicitly admitted Watauga v2 diagnostic execution.",
     )
     p.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     commands = p.add_subparsers(dest="command", required=True)
@@ -189,8 +192,24 @@ def parser() -> argparse.ArgumentParser:
     cfe.add_argument("manifest", type=Path)
     cfe.add_argument("--catchment", action="append", required=True)
     cfe.add_argument("--output", type=Path)
-    for name in ("run", "resume"):
-        commands.add_parser(name, help="Unavailable until physical runtime and recovery are qualified")
+    prepare = commands.add_parser("prepare", help="Verify operator-provided Watauga v2 bundle and create a new diagnostic execution lock")
+    prepare.add_argument("campaign", type=Path)
+    prepare.add_argument("--bundle", type=Path, required=True)
+    prepare.add_argument("--output", type=Path, required=True)
+    run = commands.add_parser("run", help="Execute the pinned diagnostic and atomically archive verified outputs")
+    run.add_argument("lock", type=Path)
+    run.add_argument("--asset-root", type=Path, required=True)
+    run.add_argument("--execution-root", type=Path, required=True)
+    run.add_argument("--archive", type=Path, required=True)
+    run.add_argument("--docker-host", required=True, help="Explicit local Unix Docker socket; no default context")
+    run.add_argument("--docker-config", type=Path)
+    for name in ("status", "verify", "export"):
+        sub = commands.add_parser(name, help="Inspect or export a fully verified committed diagnostic result")
+        sub.add_argument("archive", type=Path)
+        sub.add_argument("--lock", type=Path)
+        if name == "export":
+            sub.add_argument("--output", type=Path, required=True, help="New directory, published atomically")
+    commands.add_parser("resume", help="Recovery remains unqualified; no model will launch")
     return p
 
 
@@ -242,10 +261,44 @@ def main(argv: list[str] | None = None) -> int:
                                             expected_catchment_ids=args.catchment)
             _emit(_json(report), args.output)
             return 0 if report["content_valid"] else 2
-        if args.command in ("run", "resume"):
+        if args.command == "prepare":
+            lock = prepare_execution(load_campaign(args.campaign), args.bundle)
+            _emit(_json(lock), args.output)
+            sys.stdout.write(_json({"status": "diagnostic_execution_lock_created", "run_id": lock["run_id"],
+                                   "execution_lock_sha256": lock["execution_lock_sha256"],
+                                   "release_qualified": False, "output": str(args.output)}))
+            return 0
+        if args.command == "run":
+            lock = load_execution_lock(args.lock)
+            if os.path.lexists(args.archive):
+                # A previously completed identical result can be reverified;
+                # an occupied/incomplete/foreign archive never spends model calls.
+                result = verify_result(args.archive, expected_lock=lock)
+                _emit(_json({**result, "reused_verified_archive": True}), None)
+                return 0
+            preflight_archive_destination(args.execution_root, args.archive, args.asset_root)
+            capture = execute_campaign(lock, asset_root=args.asset_root, output_root=args.execution_root,
+                                       docker_host=args.docker_host, docker_config=args.docker_config)
+            if capture["terminal_status"] != "captured":
+                _emit(_json(capture), None)
+                return 1
+            result = commit_result(lock, args.execution_root, args.archive, args.asset_root)
+            _emit(_json(result), None)
+            return 0
+        if args.command in ("status", "verify", "export"):
+            expected = load_execution_lock(args.lock) if args.lock else None
+            if args.command == "status":
+                result = archive_status(args.archive, expected_lock=expected)
+            elif args.command == "verify":
+                result = verify_result(args.archive, expected_lock=expected)
+            else:
+                result = export_result(args.archive, args.output, expected_lock=expected)
+            _emit(_json(result), None)
+            return 0
+        if args.command == "resume":
             sys.stderr.write(_json({
-                "error": "PHYSICAL_EXECUTION_NOT_IMPLEMENTED",
-                "message": "Physical execution/recovery requires the qualified runtime and complete fixture described in IMPLEMENTATION_PLAN.md.",
+                "error": "PHYSICAL_RECOVERY_NOT_IMPLEMENTED",
+                "message": "Recovery is not implemented or physically qualified; a captured diagnostic does not establish checkpoint equivalence.",
             }))
             return 2
         raise ValueError("Unknown command")

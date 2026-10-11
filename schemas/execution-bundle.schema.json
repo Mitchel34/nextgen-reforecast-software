@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mitchel34/nextgen-reforecast-software/schemas/execution-bundle.schema.json",
+  "title": "Pinned Watauga v2 operator execution bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "bundle_paths"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "watauga-v2-execution-bundle/0.1"
+    },
+    "bundle_paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fixture_root",
+        "reference_root",
+        "runtime_tar"
+      ],
+      "properties": {
+        "fixture_root": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Safe relative POSIX path; runtime also rejects traversal, symlinks and namespace overlap."
+        },
+        "reference_root": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Safe relative POSIX path; runtime also rejects traversal, symlinks and namespace overlap."
+        },
+        "runtime_tar": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Safe relative POSIX path; runtime also rejects traversal, symlinks and namespace overlap."
+        }
+      }
+    }
+  }
+}

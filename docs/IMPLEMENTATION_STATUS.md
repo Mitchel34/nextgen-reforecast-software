@@ -1,8 +1,18 @@
 # Implementation status
 
-Updated **10 October 2026** for the authorized [physical-reference continuation](PHYSICAL_REFERENCE_INCREMENT_2026-10-10.md). Package version: `0.1.0a4`. The product provides offline planning and input-content validation plus a local browser interaction prototype. Public-source development preparation is now available through developer tools; automatic browser preparation, physical execution/recovery and a hosted service remain unfinished.
+Updated **11 October 2026** for the authorized [public campaign execution increment](PUBLIC_CAMPAIGN_EXECUTION_INCREMENT_2026-10-11.md). Package version: `0.1.0a5`. The package now includes the pinned operator execution path; automatic browser acquisition/execution, recovery and hosted service remain unfinished.
 
-## Current Linux and physical-reference increment
+## Verified public campaign execution — 11 October 2026
+
+The [installed acceptance results](PUBLIC_CAMPAIGN_EXECUTION_RESULTS_2026-10-11.md) complete this bounded implementation increment: `prepare`, `run`, verified `status`/`verify`, and atomic `export` work for the exact Watauga v2 operator profile. Fresh scientific/protocol/admission and installed-implementation identities prevent planning snapshots or changed inputs from silently launching a model. The package retains all 18 simulated hours; export selection is applied after complete array/key validation.
+
+Three newly captured cold-origin jobs completed six native/router model stages with zero repairs. All complete canonical arrays match the independent sealed references exactly. The whole-campaign archive binds 203 payload files, validates 36 generated issue/lead rows, and exports the selected 12 rows for leads 1–6. Fourteen installed CLI checks include corrupt-input and unsupported-request refusal, absent status, verified reuse, duplicate-lock refusal, occupied-export refusal and complete-output corruption detection. Local validation passes 293 Python tests and 17 browser contract tests; public CI is recorded after publication.
+
+[The integrated receipt](evidence/public-campaign-execution-increment-20261011.json) binds the prelaunch freeze, new model/normalization evidence, independent operational review, completed archive and closeout. Only the dedicated worker was used; all its containers are removed and it is stopped. The original-folder acceptance check found zero metadata changes across 33,367 entries. A [later publication audit](evidence/public-campaign-preservation-publication-audit-20261011.json) observed hidden-file flags/change times on 340 cache files and modification/change times on seven cache directories; sizes, regular-file modification times, residency flags and all 32 historical repository hashes remain unchanged. All workflow writes stayed in the new repository; the responsible process is unverified and no original metadata was reset.
+
+This is an operator diagnostic execution foundation. General browser acquisition/execution, shared-history/checkpoint equivalence, per-issue commit/recovery, scientific parameter/unit qualification, clean-build provenance, redistribution rights and independent researcher reproduction remain open. Manuscript claims C50–C52 use this narrow evidence. Neither a completed hosted product nor a submitted manuscript is claimed.
+
+## Preserved Linux and physical-reference increment — 10 October 2026
 
 The [diagnostic Linux runtime](LINUX_DIAGNOSTIC_QUALIFICATION_2026-10-10.md) now closes the exact export/middleware/component-image application layout, loader/static-table checks and pinned routing Python source identities. It is admitted for a bounded diagnostic experiment; reproducible clean builds and source-to-component binary attestations remain release gates.
 
@@ -56,7 +66,7 @@ The September [foundation record](VALIDATION.json) remains unchanged: 54 local t
 | M0 Feasibility | Complete, preserved | Retain dossier identities |
 | M1 Planning/input foundation | Planning, provenance and bounded content checks implemented | Source-authenticated acquisition/decoding, domain resolution and complete scientific execution lock |
 | M2 Runtime/example closure | Export/image diagnostic runtime and separate v2 inputs admitted; historical recovery remains 44/181 | Close clean-build/source-to-binary attestations, scientific input qualification and artifact access/rights |
-| M3 Physical execution | Three new independent serial diagnostic references sealed; public controller/shared history/recovery absent | Integrate admitted execution locks and durable commits; then prospectively qualify shared-history and recovery comparisons |
+| M3 Physical execution | Pinned public executor and whole-campaign atomic archive implemented; diagnostic acceptance reported separately | Prospectively qualify shared-history/checkpoint and recovery comparisons |
 | M4 Reliability/performance | Protocol unchanged; physical measurements absent | Commit/replay mechanics, then declared physical fault and equal-resource trials |
 | M5 Transfer/reproduction | Not started | Qualify New River and test immutable reproduction candidate with independent operator |
 | M6 Manuscript | Formal methods and current evidence updated | Actual Q1–Q5 results, verified journal requirements and author declarations |
@@ -64,4 +74,4 @@ The September [foundation record](VALIDATION.json) remains unchanged: 54 local t
 
 The [working plan](WORKING_PLAN.md), [release sequence](RELEASE_SEQUENCE.md) and [UX evidence contract](UX_EVIDENCE_CONTRACT.md) continue to control dependencies. Historical E03 remains the original 786-hour Watauga diagnostic fixture. Public-fixture v2 physical work completed under its own frozen prospective diagnostic protocol. Resolving expected hashes does not restore missing bytes; a different origin, contemporary forcing rebuild or later production file cannot silently replace an unavailable historical member. A corrected CFE profile requires separate antecedent state, scientific identity and qualification.
 
-`run` and `resume` remain unavailable. The current diagnostic increment ran nine actual model processes across failed v1 and successful v2. No new native compilation, hosted deployment, paid resource, recruitment, submission or maintainer message occurred. Original Reforecast/HYDRA/NextGen/thesis sources remain read-only, without hydration. Core licensing, source/domain coverage, scientific defaults and final-release evidence remain open decisions.
+The preceding reference increment ran nine actual model processes across failed v1 and successful v2. The new public `run` applies only to the admitted Watauga v2 diagnostic; `resume` remains unavailable. No new native compilation, hosted deployment, paid resource, recruitment, submission or maintainer message occurred. Original Reforecast/HYDRA/NextGen/thesis sources remain read-only, without hydration. Core licensing, source/domain coverage, scientific defaults and final-release evidence remain open decisions.

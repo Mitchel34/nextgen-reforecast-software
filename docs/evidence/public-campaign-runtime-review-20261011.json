@@ -1,0 +1,499 @@
+{
+  "additional_repair_processes": 0,
+  "admission_identity_sha256": "ce87618f48b6ff6880e623c8362b4913877e5098a6c239f8a3b5efae69b727a1",
+  "aggregate": {
+    "all_observed_memory_events_zero": true,
+    "all_three_complete_canonical_arrays_equal": true,
+    "capture_files_rehashed": 173,
+    "catchment_intervals": 73067,
+    "commit_payload_files_rehashed": 203,
+    "generated_issue_lead_keys": 36,
+    "host_free_bytes_at_closeout": 24016359424,
+    "namespace_allocated_bytes": 246009856,
+    "peak_cgroup_memory_bytes": 550584320,
+    "peak_cgroup_pids": 9,
+    "raw_output_files": 132,
+    "retained_issue_lead_keys": 12,
+    "retained_leads": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "routing_feature_intervals": 876804,
+    "runtime_and_staging_allocated_bytes_at_closeout": 5384355840,
+    "verified_input_files": 291,
+    "worker_closeout_receipt_reports_stopped": true
+  },
+  "all_processes": [
+    {
+      "case_id": "history",
+      "elapsed_seconds": 7.915059092000092,
+      "exit_code": 0,
+      "new_protocol_and_receipt_distinct_from_reference_run": true,
+      "process_number": 1,
+      "receipt": {
+        "bytes": 16763,
+        "file": "execution/attempts/history/native/RECEIPT.json",
+        "sha256": "00f4b0d67d1240219b87c63f99bcc38aa02c4aa04f963da8514cf0da4fa478eb"
+      },
+      "receipt_identity_sha256": "54a4a5f18ffd43f46503ab781e9bcd2d096c5e9907554e8e8c957453e9725b22",
+      "reservation_identity_sha256": "1e2a9aa76fb0617399d9847fa9a33a2de0d71cdac6a8af88a48fb62e185a333c",
+      "stage": "native",
+      "started_at_utc": "2026-10-11T05:27:41Z"
+    },
+    {
+      "case_id": "history",
+      "elapsed_seconds": 1.759111464000057,
+      "exit_code": 0,
+      "new_protocol_and_receipt_distinct_from_reference_run": true,
+      "process_number": 2,
+      "receipt": {
+        "bytes": 9041,
+        "file": "execution/attempts/history/routing/RECEIPT.json",
+        "sha256": "49e0138122882d3105d51634704e035cb1dd20354664717c7e44180e53d1541f"
+      },
+      "receipt_identity_sha256": "3816659ef7841b4fa27c0007cdbb77f70cbf12ee86c5f51cefad7320f989d1a4",
+      "reservation_identity_sha256": "b7e5969f9548ef958ffbe2d720630a5cab642a3868f206287c80a971381cc51f",
+      "stage": "routing",
+      "started_at_utc": "2026-10-11T05:27:51Z"
+    },
+    {
+      "case_id": "serial-20220101T2300Z",
+      "elapsed_seconds": 7.922637927999972,
+      "exit_code": 0,
+      "new_protocol_and_receipt_distinct_from_reference_run": true,
+      "process_number": 3,
+      "receipt": {
+        "bytes": 16806,
+        "file": "execution/attempts/serial-20220101T2300Z/native/RECEIPT.json",
+        "sha256": "8ac872fe9cd87d1036f8db42a038075fd72bd39206ed607df575286c6263e0ec"
+      },
+      "receipt_identity_sha256": "f1ac16b358c09e76ab36d3afa5c8168fdd83e2fb37ccff22533d8662a18998ce",
+      "reservation_identity_sha256": "7a8898a2325510893d57920db1629238c127802e4047d8dfaead5bf000e4499a",
+      "stage": "native",
+      "started_at_utc": "2026-10-11T05:28:01Z"
+    },
+    {
+      "case_id": "serial-20220101T2300Z",
+      "elapsed_seconds": 1.269179667000003,
+      "exit_code": 0,
+      "new_protocol_and_receipt_distinct_from_reference_run": true,
+      "process_number": 4,
+      "receipt": {
+        "bytes": 9069,
+        "file": "execution/attempts/serial-20220101T2300Z/routing/RECEIPT.json",
+        "sha256": "67e87be8dce2dde6a4fdfc0ebf0ff4f3bd501787d3ddbbcd6b8b749c376b4ab0"
+      },
+      "receipt_identity_sha256": "219589e054942733cd3f7d5b8a964d8c89ca53114ca767e6658d61c7330c544d",
+      "reservation_identity_sha256": "204585b1829896b7a3e1c95af903f2939e07be2968ffda6e530ba2f72e8b90eb",
+      "stage": "routing",
+      "started_at_utc": "2026-10-11T05:28:11Z"
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "elapsed_seconds": 7.637072880000005,
+      "exit_code": 0,
+      "new_protocol_and_receipt_distinct_from_reference_run": true,
+      "process_number": 5,
+      "receipt": {
+        "bytes": 16805,
+        "file": "execution/attempts/serial-20220102T0000Z/native/RECEIPT.json",
+        "sha256": "c02affbc2db2543ede1ff754a8f352ff8636b5ec8df882bcb6741581432c6684"
+      },
+      "receipt_identity_sha256": "ac34594a4d4c075c5afdd0b2eeeb252999ac613d767d232393a04ddf904cc7a5",
+      "reservation_identity_sha256": "279782a8e6199eaa17654dcf5b1c3d87544af3c1aad1c15eaaa9f35be6723bca",
+      "stage": "native",
+      "started_at_utc": "2026-10-11T05:28:21Z"
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "elapsed_seconds": 1.2743428969999968,
+      "exit_code": 0,
+      "new_protocol_and_receipt_distinct_from_reference_run": true,
+      "process_number": 6,
+      "receipt": {
+        "bytes": 9070,
+        "file": "execution/attempts/serial-20220102T0000Z/routing/RECEIPT.json",
+        "sha256": "c16c74857c2b8ca9fc5a6fb68a80f8c16eaaa73a1bc08ea6af114bce61d54f7d"
+      },
+      "receipt_identity_sha256": "5829806f75473eb3abe69bc4738c1d4738b5fff1b856af0f71a737e130f1d931",
+      "reservation_identity_sha256": "0c1fee753d92336301010a70d692152a9792c79fbca06df6ebec9372fd27c08d",
+      "stage": "routing",
+      "started_at_utc": "2026-10-11T05:28:30Z"
+    }
+  ],
+  "capture_identity_sha256": "c59e25490679b2fc4b114f2244a015a94be56726893f91fb30ebc8ba3c083935",
+  "case_reviews": [
+    {
+      "arrays": {
+        "all_metadata_axes_clocks_and_values_equal": true,
+        "canonical_bytes": 22856003,
+        "canonical_serialization": "UTF-8 JSON sorted keys, compact separators, finite numbers",
+        "canonical_sha256": "1222b17896d1edfcaea57783001ffe6b8998b6e6cb62ba426a307569107c67c4",
+        "complete_canonical_bytes_equal": true,
+        "fresh_file": {
+          "bytes": 38744488,
+          "sha256": "e52e431726853dc7ea581289ae4769f8ed8e02a5822bf010098ed5b8f54ffa1b"
+        },
+        "raw_byte_difference": "JSON metadata object-key order only",
+        "raw_file_bytes_equal": false,
+        "sealed_reference_file": {
+          "bytes": 38744488,
+          "sha256": "ca9b888f404995bb3f940922963fbcd091d457772bdbf8ddb10a99ed2f9ebcd4"
+        }
+      },
+      "case_id": "history",
+      "catchment_intervals": 24366,
+      "cgroups": {
+        "cgroup_after_native": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 178032640,
+          "pids_peak": 8
+        },
+        "cgroup_after_routing": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 550584320,
+          "pids_peak": 9
+        },
+        "cgroup_before": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 27262976,
+          "pids_peak": 8
+        }
+      },
+      "cleanup_verified": true,
+      "host_identity_sha256": "d5822c62be69b5c023e396e483f22ce3e7b89b26a33bb4508efc196905d5c9b2",
+      "host_receipt": {
+        "bytes": 11814,
+        "file": "execution/attempts/history/HOST_EXECUTION.json",
+        "sha256": "421a9d5845343f1583ffcde84a727a47c9796c462f6d132a0bf8f7a8e3e5a410"
+      },
+      "isolation_verified": true,
+      "normalization": {
+        "all_raw_sources_and_normalized_csv_rehashed": true,
+        "netCDF4_version": "1.6.3",
+        "numpy_version": "1.26.4",
+        "receipt": {
+          "bytes": 1345,
+          "file": "execution/attempts/history/normalized/NORMALIZATION.json",
+          "sha256": "c0362c95e944a0e4e2682d8c5284ec05ae319bfa7009cd35c892e6eeee57e469"
+        }
+      },
+      "provider_hours": 786,
+      "raw_output_files": 44,
+      "routing_feature_intervals": 292392,
+      "wall_seconds_including_capture": 14.241974708857015,
+      "warnings": {
+        "exact_bound_policy_satisfied": true,
+        "fixed_xml_override_lines": 9,
+        "m_to_dimensionless_fallback_lines": 341124,
+        "total_lines": 414231,
+        "unparsable_input_unit_none_lines": 24366,
+        "unparsable_target_unit_none_lines": 48732,
+        "upstream_unit_fallbacks_fixed": false
+      }
+    },
+    {
+      "arrays": {
+        "all_metadata_axes_clocks_and_values_equal": true,
+        "canonical_bytes": 22823700,
+        "canonical_serialization": "UTF-8 JSON sorted keys, compact separators, finite numbers",
+        "canonical_sha256": "7a0e57ba5d906ce6c174e7893a3fd646d9cd6f82cf4b524e5ff3dfc35229625b",
+        "complete_canonical_bytes_equal": true,
+        "fresh_file": {
+          "bytes": 38691973,
+          "sha256": "d64b53172889b6f2fbed5d7de26c37e0243be903631f83e770238446d110c2b8"
+        },
+        "raw_byte_difference": "JSON metadata object-key order only",
+        "raw_file_bytes_equal": false,
+        "sealed_reference_file": {
+          "bytes": 38691973,
+          "sha256": "0c1d23f962b9ff0613609f435f8069cdaa95d07b820cb1eb9657fbbad8e598da"
+        }
+      },
+      "case_id": "serial-20220101T2300Z",
+      "catchment_intervals": 24335,
+      "cgroups": {
+        "cgroup_after_native": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 147202048,
+          "pids_peak": 7
+        },
+        "cgroup_after_routing": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 361193472,
+          "pids_peak": 9
+        },
+        "cgroup_before": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 13950976,
+          "pids_peak": 7
+        }
+      },
+      "cleanup_verified": true,
+      "host_identity_sha256": "509686cee38aca2d3e2a8ac428f508e704fb0b0df16be765381dd25adda4598e",
+      "host_receipt": {
+        "bytes": 11860,
+        "file": "execution/attempts/serial-20220101T2300Z/HOST_EXECUTION.json",
+        "sha256": "6596a96f82e5bb9c3768284f1207c54e07005c7b5aaec61f74fffe07d810ff99"
+      },
+      "isolation_verified": true,
+      "normalization": {
+        "all_raw_sources_and_normalized_csv_rehashed": true,
+        "netCDF4_version": "1.6.3",
+        "numpy_version": "1.26.4",
+        "receipt": {
+          "bytes": 1359,
+          "file": "execution/attempts/serial-20220101T2300Z/normalized/NORMALIZATION.json",
+          "sha256": "d7152d94fb2d012d8ce5bf71a03f1139895d8f0a8c778a4fe1d911ba73cba7c6"
+        }
+      },
+      "provider_hours": 785,
+      "raw_output_files": 44,
+      "routing_feature_intervals": 292020,
+      "wall_seconds_including_capture": 13.832192792091519,
+      "warnings": {
+        "exact_bound_policy_satisfied": true,
+        "fixed_xml_override_lines": 9,
+        "m_to_dimensionless_fallback_lines": 340690,
+        "total_lines": 413704,
+        "unparsable_input_unit_none_lines": 24335,
+        "unparsable_target_unit_none_lines": 48670,
+        "upstream_unit_fallbacks_fixed": false
+      }
+    },
+    {
+      "arrays": {
+        "all_metadata_axes_clocks_and_values_equal": true,
+        "canonical_bytes": 22858523,
+        "canonical_serialization": "UTF-8 JSON sorted keys, compact separators, finite numbers",
+        "canonical_sha256": "495266fb591821c3c406beab39472b3060eb5a4d999879e54e1b6eb2bf8e8e64",
+        "complete_canonical_bytes_equal": true,
+        "fresh_file": {
+          "bytes": 38747008,
+          "sha256": "ed281d84acf977df54d3cab7fd533372fd08624e59dbf8f93c65a1907f91a74c"
+        },
+        "raw_byte_difference": "JSON metadata object-key order only",
+        "raw_file_bytes_equal": false,
+        "sealed_reference_file": {
+          "bytes": 38747008,
+          "sha256": "78d43e7a27481a5436cd93e779a75ce0a2b864772655a1c95c96e781a91aa81a"
+        }
+      },
+      "case_id": "serial-20220102T0000Z",
+      "catchment_intervals": 24366,
+      "cgroups": {
+        "cgroup_after_native": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 147349504,
+          "pids_peak": 7
+        },
+        "cgroup_after_routing": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 360714240,
+          "pids_peak": 9
+        },
+        "cgroup_before": {
+          "memory_events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_group_kill": 0,
+            "oom_kill": 0
+          },
+          "memory_peak_bytes": 14057472,
+          "pids_peak": 7
+        }
+      },
+      "cleanup_verified": true,
+      "host_identity_sha256": "16b8c84ef6da68dc6343da3538920ea227b9603f278cbf92848e3b73e2193c44",
+      "host_receipt": {
+        "bytes": 11861,
+        "file": "execution/attempts/serial-20220102T0000Z/HOST_EXECUTION.json",
+        "sha256": "168fe298947a49bab5d05f7aa5d0cb5e2aed77b5ad4a10645e55d6f98eb6be41"
+      },
+      "isolation_verified": true,
+      "normalization": {
+        "all_raw_sources_and_normalized_csv_rehashed": true,
+        "netCDF4_version": "1.6.3",
+        "numpy_version": "1.26.4",
+        "receipt": {
+          "bytes": 1359,
+          "file": "execution/attempts/serial-20220102T0000Z/normalized/NORMALIZATION.json",
+          "sha256": "6908ab595a9ad775d98d100f062d41172f1a7776ba21f496ac8b6c692d244964"
+        }
+      },
+      "provider_hours": 786,
+      "raw_output_files": 44,
+      "routing_feature_intervals": 292392,
+      "wall_seconds_including_capture": 13.407446458004415,
+      "warnings": {
+        "exact_bound_policy_satisfied": true,
+        "fixed_xml_override_lines": 9,
+        "m_to_dimensionless_fallback_lines": 341124,
+        "total_lines": 414231,
+        "unparsable_input_unit_none_lines": 24366,
+        "unparsable_target_unit_none_lines": 48732,
+        "upstream_unit_fallbacks_fixed": false
+      }
+    }
+  ],
+  "commit_manifest": {
+    "bytes": 40634,
+    "file": "archive/commits/9db9441e7108285a8c44128318abb0aa9cf4c76b59147b2e9c16222555de94a8/MANIFEST.json",
+    "sha256": "8e625668ab2836ae02ee9bc17656904d164d20a50feeb70ad1335e439b01c76b"
+  },
+  "execution_lock_sha256": "4a98ee39253c442b18fafc54beff64924485fe02afa01bcb307cc75975a77f7d",
+  "freeze_identity_sha256": "3f94639e85ea6259bf27edf352b348461cea8bbd1a1c13b52d777e6fba5a1bb4",
+  "implementation_identity_sha256": "a87539dc6f950a5f934b5e22a89701b612a1ecb3841f139908e560311b0105de",
+  "installed_package_wheel_and_frozen_source_bindings_verified": true,
+  "interpretation_limits": [
+    "Historical E03 is not restored and its benchmark identity remains unchanged.",
+    "No shared history, restart, complete land checkpoint, speedup or fault recovery is exercised by these serial references.",
+    "Declared cold initial states and32dayhistory are not evidence of hydrologic spinup convergence.",
+    "Candidate hydrofabric parameters and current archive weather are diagnostic inputs; no forecast skill, historical causal availability or release scientific qualification is claimed.",
+    "Native source/clean-build attestation and redistributable public-runtime/data release remain separate gates.",
+    "Candidate drainage and Noah terrain source derivation remain unqualified",
+    "Declared cold initial states and 31-day history do not establish convergence",
+    "Point radiation sampling held across each hour is a declared diagnostic convention",
+    "Selected full reach is a surrogate for the interior gauge, not an exact gauge segment",
+    "Current archive generations do not establish historical causal availability",
+    "Input admission does not establish shared-history branching or model execution"
+  ],
+  "known_unit_warning_policy_retained": true,
+  "method": "Independent Python standard-library hashing, seal recomputation, metadata/ledger/process cross-checks and complete canonical JSON byte comparison; no package verification functions used",
+  "negative_cli_evidence": {
+    "changed_complete_output_verification_refused": true,
+    "changed_input_prepare_refused": true,
+    "duplicate_claim_refused": true,
+    "occupied_export_refused": true,
+    "resume_refused": true,
+    "unsupported_reach_prepare_refused": true,
+    "verified_archive_reuse_added_model_calls": 0
+  },
+  "new_model_process_receipts": 6,
+  "ordered_reservations": 6,
+  "protected_workspace_preservation_receipt": {
+    "entries_after": 33367,
+    "entries_before": 33367,
+    "historical_artifacts": 32,
+    "reported_byte_changes": 0,
+    "reported_metadata_changes": 0,
+    "scope": "Bound coordinator before/after preservation receipt; no original workspace opened during this review"
+  },
+  "protocol_identity_sha256": "111b4d01be42889fca1f62706b020c461c039aa57a5a929e999efd3d83906757",
+  "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+  "release_qualified": false,
+  "result_identity_sha256": "9db9441e7108285a8c44128318abb0aa9cf4c76b59147b2e9c16222555de94a8",
+  "review_date_utc": "2026-10-11T05:32:35Z",
+  "review_hash_bindings_checked": 985,
+  "review_identity_sha256": "fca5e429f731ef8f2c3efc0e645a3118e9f4847bd707bc984fc53e7b71d51ec2",
+  "review_result": "passed",
+  "reviewer": "independent runtime lane; zero model or worker calls during review",
+  "run_id": "watauga-public-execution-20261011-3ce08df96747777e",
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "schema_version": "public-campaign-runtime-review/0.1",
+  "scientific_validation_claimed": false,
+  "scope": "Installed pinned operator diagnostic execution and serialized-output consistency, not authenticity attestation or hydrologic/scientific validation",
+  "source_evidence": [
+    {
+      "bytes": 5315,
+      "file": "FREEZE.json",
+      "sha256": "8ed1099f2e478df48e6fc5d3c4e1a1ff07da4ce57a11ea997ad823b6c46d8397"
+    },
+    {
+      "bytes": 87628,
+      "file": "EXECUTION_LOCK_CLI.json",
+      "sha256": "3c5214b05ec9226aa3410e6b9fcee5bc88dce24b17aedc43f9c0bd90c9c85c79"
+    },
+    {
+      "bytes": 35693,
+      "file": "execution/CAPTURE.json",
+      "sha256": "ad4a7846aaeec5e766f22ef169551e63ab6e53662afc834d29f75059ae3ddd5a"
+    },
+    {
+      "bytes": 457,
+      "file": "archive/CURRENT.json",
+      "sha256": "10f9a175a3b0ecf879acfd619348d136c6255d53588207c9a9ff817816dbb66e"
+    },
+    {
+      "bytes": 54445,
+      "file": "ACCEPTANCE.json",
+      "sha256": "7b3cfe4d11f25033b67ad30ef51a203ff056d60d9c2479c2ad7bdc13f3381963"
+    },
+    {
+      "bytes": 480,
+      "file": "CLOSEOUT.json",
+      "sha256": "b04625481efe26d653a4811b896d50a1b8480c79d0fdbea2ed3321d537cfc9d3"
+    },
+    {
+      "bytes": 324,
+      "file": "preservation.json",
+      "sha256": "86b65e544a4c8ccd3a26422b4e95cf449a1b353deb95a5f29497cc987101dfa8"
+    }
+  ],
+  "wheel": {
+    "bytes": 114651,
+    "sha256": "2ae3ddc421f10c5f78b8c2cded1f55632c7b4cb6a14d32d89884423d07edbd5a"
+  }
+}

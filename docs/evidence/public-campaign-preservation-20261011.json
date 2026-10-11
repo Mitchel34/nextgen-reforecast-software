@@ -1,0 +1,16 @@
+{
+  "protected_entries_before": 33367,
+  "protected_entries_after": 33367,
+  "protected_metadata_changes": 0,
+  "protected_changed_paths": [],
+  "metadata_fields": [
+    "mode",
+    "size",
+    "mtime_ns",
+    "ctime_ns",
+    "flags"
+  ],
+  "atime_included": false,
+  "immutable_files": 32,
+  "immutable_byte_changes": []
+}

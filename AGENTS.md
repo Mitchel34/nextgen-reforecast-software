@@ -1,5 +1,9 @@
 # Project instructions
 
+## Active public execution increment — 11 October 2026
+
+The owner authorized implementing public campaign execution using the Watauga v2 fixture and sealed references, preserving the original Reforecast folder and updating plan/manuscript. Follow `docs/PUBLIC_CAMPAIGN_EXECUTION_INCREMENT_2026-10-11.md` and `docs/PUBLIC_CAMPAIGN_EXECUTION_CONTRACT.md`. This is a fresh separately bounded integration diagnostic, with six planned native/routing calls and three repair reservations maximum; do not reuse or reset prior experiment ledgers. Ordinary implementation, meaningful tests, bounded acceptance and publication of tested progress to the existing repository are authorized. Unchanged scientific bytes must be admitted and the installed package frozen before launch. All original research folders and historical repository artifacts remain read-only. Public hosting, spending, recruitment, manuscript submission, scientific release qualification and recovery remain outside this increment.
+
 ## Active implementation kickoff — 10 October 2026
 
 The owner now authorized qualifying the Linux runtime and new public Watauga fixture, then generating independent physical references. Follow `docs/PHYSICAL_REFERENCE_INCREMENT_2026-10-10.md` and its separately frozen protocol/admission for bounded diagnostic execution. The prior preparation phase's zero-model allowance remains its historical record; it does not pause the newly authorized separate reference increment. Preserve original E03 and all original research folders. No model launch before complete identity-specific admission and protocol freeze.

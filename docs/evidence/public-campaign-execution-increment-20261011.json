@@ -1,0 +1,499 @@
+{
+  "acceptance_identity_sha256": "a1256b9b8e8c8308137f7aeef51d6af149ee37656704c07f4bfb5a5b3bea9a47",
+  "admission_identity_sha256": "ce87618f48b6ff6880e623c8362b4913877e5098a6c239f8a3b5efae69b727a1",
+  "adversarial_acceptance": {
+    "absent_archive_incomplete": true,
+    "additional_model_reservations": 0,
+    "changed_input_rejected_before_lock": true,
+    "complete_history_output_corruption_detected": true,
+    "duplicate_execution_lock_refused": true,
+    "occupied_export_refused": true,
+    "physical_recovery_exercised": false,
+    "unsupported_reach_rejected_before_lock": true,
+    "verified_identical_archive_reuse": true
+  },
+  "archive": {
+    "assembly_identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+    "capture_identity_sha256": "c59e25490679b2fc4b114f2244a015a94be56726893f91fb30ebc8ba3c083935",
+    "completed": true,
+    "execution_lock_sha256": "4a98ee39253c442b18fafc54beff64924485fe02afa01bcb307cc75975a77f7d",
+    "files_verified": 203,
+    "fixture_id": "watauga-public-rebuild-v2",
+    "generated_rows": 36,
+    "protocol_identity_sha256": "111b4d01be42889fca1f62706b020c461c039aa57a5a929e999efd3d83906757",
+    "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+    "release_qualified": false,
+    "result_identity_sha256": "9db9441e7108285a8c44128318abb0aa9cf4c76b59147b2e9c16222555de94a8",
+    "retained_rows": 12,
+    "run_id": "watauga-public-execution-20261011-3ce08df96747777e",
+    "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+    "schema_version": "campaign-result-verification/0.1",
+    "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+    "scientific_validation_claimed": false,
+    "scope": "Local bytes and receipt consistency; no authenticity signature or hydrologic skill claim.",
+    "status": "verified"
+  },
+  "checkpoint_qualified": false,
+  "date": "2026-10-11",
+  "evidence_files": [
+    {
+      "bytes": 35693,
+      "path": "docs/evidence/public-campaign-capture-20261011.json",
+      "sha256": "ad4a7846aaeec5e766f22ef169551e63ab6e53662afc834d29f75059ae3ddd5a"
+    },
+    {
+      "bytes": 54445,
+      "path": "docs/evidence/public-campaign-cli-acceptance-20261011.json",
+      "sha256": "7b3cfe4d11f25033b67ad30ef51a203ff056d60d9c2479c2ad7bdc13f3381963"
+    },
+    {
+      "bytes": 1618,
+      "path": "docs/evidence/public-campaign-comparison-20261011.json",
+      "sha256": "a1f86f81d334d1a0bbb14b69b0403ff41829aad40aca4fbd35c89959ed893a98"
+    },
+    {
+      "bytes": 87628,
+      "path": "docs/evidence/public-campaign-execution-lock-20261011.json",
+      "sha256": "3c5214b05ec9226aa3410e6b9fcee5bc88dce24b17aedc43f9c0bd90c9c85c79"
+    },
+    {
+      "bytes": 5315,
+      "path": "docs/evidence/public-campaign-freeze-20261011.json",
+      "sha256": "8ed1099f2e478df48e6fc5d3c4e1a1ff07da4ce57a11ea997ad823b6c46d8397"
+    },
+    {
+      "bytes": 40634,
+      "path": "docs/evidence/public-campaign-manifest-20261011.json",
+      "sha256": "8e625668ab2836ae02ee9bc17656904d164d20a50feeb70ad1335e439b01c76b"
+    },
+    {
+      "bytes": 2236,
+      "path": "docs/evidence/public-campaign-new-references-20261011.json",
+      "sha256": "7c32acf0818a95646363204cf100e8ec76e08e17b028ca5b3908c9f92a169a3b"
+    },
+    {
+      "bytes": 324,
+      "path": "docs/evidence/public-campaign-preservation-20261011.json",
+      "sha256": "86b65e544a4c8ccd3a26422b4e95cf449a1b353deb95a5f29497cc987101dfa8"
+    },
+    {
+      "bytes": 2809,
+      "path": "docs/evidence/public-campaign-preservation-publication-audit-20261011.json",
+      "sha256": "ea68e9c5106439fe005bbc4b315a3129cf4b7ffd0682a7de174bf45c4f6f4837"
+    },
+    {
+      "bytes": 19520,
+      "path": "docs/evidence/public-campaign-runtime-review-20261011.json",
+      "sha256": "f1de892167eaf5c0f984fcb40fdae9ee6e409ee0bfd896a97caceb669e923240"
+    },
+    {
+      "bytes": 480,
+      "path": "docs/evidence/public-campaign-worker-closeout-20261011.json",
+      "sha256": "b04625481efe26d653a4811b896d50a1b8480c79d0fdbea2ed3321d537cfc9d3"
+    }
+  ],
+  "exact_clock_durations": {
+    "authoritative_clock": "execution lock campaign origin/history end and issue timestamps",
+    "forecast_antecedent_hours": [
+      767,
+      768
+    ],
+    "forecast_horizon_hours": 18,
+    "history_additional_hours": 18,
+    "history_days": 32,
+    "history_hours": 786,
+    "inherited_limit_duration_labels_are_approximate": true
+  },
+  "execution_lock_sha256": "4a98ee39253c442b18fafc54beff64924485fe02afa01bcb307cc75975a77f7d",
+  "export": {
+    "all18_generated_hours_preserved": true,
+    "all36_issue_lead_rows_validated_first": true,
+    "identity": "5f974db05b3f8b5a3f80ef489c337486707e5da0a43dd631bed32c3fd235a3cd",
+    "lead_hours": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "rows": 12
+  },
+  "external_researcher_reproduction": false,
+  "fixture_id": "watauga-public-rebuild-v2",
+  "forecast_skill_validated": false,
+  "freeze_identity_sha256": "3f94639e85ea6259bf27edf352b348461cea8bbd1a1c13b52d777e6fba5a1bb4",
+  "historical_e03_restored": false,
+  "hosted_browser_execution": false,
+  "implementation": {
+    "files": [
+      {
+        "bytes": 108,
+        "path": "__init__.py",
+        "sha256": "6494eecf9ba03344c5c5707bc9b90538601205d61e93e1394de21ad98cc99fcc"
+      },
+      {
+        "bytes": 48,
+        "path": "__main__.py",
+        "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+      },
+      {
+        "bytes": 110526,
+        "path": "_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      },
+      {
+        "bytes": 42678,
+        "path": "archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 16279,
+        "path": "bundle.py",
+        "sha256": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576"
+      },
+      {
+        "bytes": 28543,
+        "path": "campaign.py",
+        "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+      },
+      {
+        "bytes": 16386,
+        "path": "cli.py",
+        "sha256": "c8179bec7deee5c3242f270b7e8abfa61c6d6539912d00312f480ddbdf7a686a"
+      },
+      {
+        "bytes": 12129,
+        "path": "configuration.py",
+        "sha256": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33"
+      },
+      {
+        "bytes": 43330,
+        "path": "execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 23607,
+        "path": "forcing.py",
+        "sha256": "4dc0c1e5360044de796efa4593a8452ae70d28e20c8977b83229594d03e856b7"
+      },
+      {
+        "bytes": 5733,
+        "path": "provenance.py",
+        "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+      },
+      {
+        "bytes": 13642,
+        "path": "runtime.py",
+        "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+      }
+    ],
+    "implementation_identity_sha256": "a87539dc6f950a5f934b5e22a89701b612a1ecb3841f139908e560311b0105de",
+    "package_version": "0.1.0a5"
+  },
+  "increment_identity_sha256": "dfe0611445e1c263d09a397249373c8b04e9b8d3eabbbcf567e13c5ae1f10dd1",
+  "interpretation_limits": [
+    "Historical E03 is not restored and its benchmark identity remains unchanged.",
+    "No shared history, restart, complete land checkpoint, speedup or fault recovery is exercised by these serial references.",
+    "Declared cold initial states and32dayhistory are not evidence of hydrologic spinup convergence.",
+    "Candidate hydrofabric parameters and current archive weather are diagnostic inputs; no forecast skill, historical causal availability or release scientific qualification is claimed.",
+    "Native source/clean-build attestation and redistributable public-runtime/data release remain separate gates.",
+    "Candidate drainage and Noah terrain source derivation remain unqualified",
+    "Declared cold initial states and 31-day history do not establish convergence",
+    "Point radiation sampling held across each hour is a declared diagnostic convention",
+    "Selected full reach is a surrogate for the interior gauge, not an exact gauge segment",
+    "Current archive generations do not establish historical causal availability",
+    "Input admission does not establish shared-history branching or model execution"
+  ],
+  "latest_preservation_audit": {
+    "atime_included": false,
+    "audit_identity_sha256": "8d70076300ec12d87b12c8cbe5df474152e4bcea8927c788901753a473425b90",
+    "cause": "Unverified; flag/time changes alone do not identify a writer or establish content equality.",
+    "changed_ctime_utc_range": [
+      "2026-10-11T05:38:19Z",
+      "2026-10-11T05:38:32Z"
+    ],
+    "changed_directories": [
+      "output/nextgen_team_review_20260918/raw_acquisition_v2/.raw_cache",
+      "output/nextgen_team_review_20260918/raw_acquisition_v2/observation_validation",
+      "output/nextgen_team_review_20260918/raw_acquisition_v2/observation_validation/cache",
+      "output/nextgen_team_review_20260918/raw_acquisition_v2/static_validation",
+      "output/nextgen_team_review_20260918/raw_acquisition_v2/static_validation/raw_cache",
+      "output/nextgen_team_review_20260918/raw_acquisition_v2/weather_validation",
+      "output/nextgen_team_review_20260918/raw_acquisition_v2/weather_validation/cache"
+    ],
+    "changed_entry_types": {
+      "directories": 7,
+      "regular_files": 340
+    },
+    "changed_field_counts": {
+      "ctime_ns": 347,
+      "flags": 340,
+      "mtime_ns": 7
+    },
+    "dataless_flag_transitions": 0,
+    "entry_presence_changes": 0,
+    "flag_transitions": [
+      {
+        "added_flag": "UF_HIDDEN",
+        "added_mask": 32768,
+        "after": 32832,
+        "before": 64,
+        "count": 340,
+        "removed_mask": 0
+      }
+    ],
+    "immutable_byte_changes": [],
+    "immutable_historical_repository_files": 32,
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "original_content_bytes_audited": false,
+    "original_metadata_reset": false,
+    "private_snapshot_bindings": {
+      "baseline": {
+        "bytes": 5809803,
+        "sha256": "478fded03348c7b950dee2b56c2eae05a747b921a606334bbb2f92c6f7f83da1"
+      },
+      "complete_delta": {
+        "bytes": 206248,
+        "sha256": "79675a56fc56a688b7651772a193da2250438dfb4fc1d182db5b0a38ff95cc94"
+      },
+      "latest": {
+        "bytes": 5810823,
+        "sha256": "61a733698442d53c8177398b6bab6ba82636a7e6b16f5bf5486947557289624b"
+      }
+    },
+    "protected_entries_after": 33367,
+    "protected_entries_before": 33367,
+    "protected_metadata_changes": 347,
+    "recorded_at_utc": "2026-10-11T05:42:49Z",
+    "regular_file_mtime_changes": 0,
+    "regular_file_size_changes": 0,
+    "responsible_process_verified": false,
+    "retained_clean_acceptance_receipt": {
+      "bytes": 324,
+      "path": "docs/evidence/public-campaign-preservation-20261011.json",
+      "sha256": "86b65e544a4c8ccd3a26422b4e95cf449a1b353deb95a5f29497cc987101dfa8"
+    },
+    "schema_version": "public-campaign-preservation-publication-audit/0.1",
+    "scope": "Metadata-only original-folder audit after the retained clean acceptance check; no original content reads, writes, rollback or hydration by this audit.",
+    "workflow_original_writes": false
+  },
+  "manuscript_submitted": false,
+  "new_physical_execution": {
+    "all_complete_canonical_arrays_exactly_equal": true,
+    "all_stages_zero_exit": true,
+    "allowance": 9,
+    "captured_case_count": 3,
+    "cfe_fields_per_row": 15,
+    "complete_catchment_rows": 73067,
+    "complete_nexus_rows": 28284,
+    "complete_routing_rows": 876804,
+    "known_diagnostic_unit_warning_policy_retained": true,
+    "native_processes": 3,
+    "raw_array_json_file_hashes_equal_to_prior": false,
+    "raw_json_difference": "metadata dictionary insertion order; independently verified canonical SHA256 equality",
+    "repair_processes": 0,
+    "reserved_model_processes": 6,
+    "routing_fields_per_row": 3,
+    "routing_processes": 3
+  },
+  "package_version": "0.1.0a5",
+  "preservation": {
+    "atime_included": false,
+    "immutable_byte_changes": [],
+    "immutable_files": 32,
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "protected_changed_paths": [],
+    "protected_entries_after": 33367,
+    "protected_entries_before": 33367,
+    "protected_metadata_changes": 0
+  },
+  "preservation_scope": "Acceptance-time check retained unchanged; consult the separately bound later publication audit for metadata drift.",
+  "protocol_identity_sha256": "111b4d01be42889fca1f62706b020c461c039aa57a5a929e999efd3d83906757",
+  "recorded_at_utc": "2026-10-11T05:43:09Z",
+  "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+  "release_qualified": false,
+  "run_id": "watauga-public-execution-20261011-3ce08df96747777e",
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "runtime_review_identity_sha256": "fca5e429f731ef8f2c3efc0e645a3118e9f4847bd707bc984fc53e7b71d51ec2",
+  "schema_version": "public-campaign-execution-increment/0.1",
+  "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+  "shared_history_executed": false,
+  "source_test_build_files": [
+    {
+      "bytes": 24190,
+      "path": "tests/test_archive.py",
+      "sha256": "e70c6fe3f6b8a191a8c647e3224f3515049dfbc5039093ebcce17e410bfa0b27"
+    },
+    {
+      "bytes": 9115,
+      "path": "tests/test_bundle.py",
+      "sha256": "6eeaf4dc89e638d0d03931da58b7e30dbe62f05d535bcc14bad8508941e04add"
+    },
+    {
+      "bytes": 32256,
+      "path": "tests/test_campaign.py",
+      "sha256": "42ec42094018128fac5e4cfa94a0a4ef76b84028e4f35b6f75e53c6db8f7ca92"
+    },
+    {
+      "bytes": 7152,
+      "path": "tests/test_cli.py",
+      "sha256": "b6d9ba703d9ff8ce786e927b7eeec8fcc2aad342b6a42f50dbf750d34f685310"
+    },
+    {
+      "bytes": 20965,
+      "path": "tests/test_configuration.py",
+      "sha256": "5f4e505c00bd152611abdfb26a14213079c486570f17ff053858e8a8706cc010"
+    },
+    {
+      "bytes": 2816,
+      "path": "tests/test_diagnostic_runtime.py",
+      "sha256": "b34a8fa767d3381c87b8a8f4b62bbab8ad85f9ff312d67f3d262625794a90ceb"
+    },
+    {
+      "bytes": 18604,
+      "path": "tests/test_execution.py",
+      "sha256": "798466d5dc0125588a48ebd3ad1e7aad9378b8fde584c98edafe611a41d8e4e9"
+    },
+    {
+      "bytes": 4618,
+      "path": "tests/test_execution_lock.py",
+      "sha256": "42a3e80af40d148a86695f7501be45653e347aec41916ed0f93c7acd97cb5939"
+    },
+    {
+      "bytes": 23754,
+      "path": "tests/test_forcing.py",
+      "sha256": "9f0fd82e74ec459a4e18570b3699063ed498faacd946861ec02a65214a35e1e0"
+    },
+    {
+      "bytes": 2142,
+      "path": "tests/test_forcing_numeric.py",
+      "sha256": "9d8b10d2bc2da85729dc82323c4416c333e9401e997752495a781af7cb882d6a"
+    },
+    {
+      "bytes": 4656,
+      "path": "tests/test_forcing_segments.py",
+      "sha256": "1cd41d1a4e8bacb27d0eda2ec87ecca30d64b90cc11a45b8eb4123216ce3df8d"
+    },
+    {
+      "bytes": 4074,
+      "path": "tests/test_lock_cli.py",
+      "sha256": "4724a97e70523b2a0da5904b497146deb00e5da91348bff1d145d23251b9794d"
+    },
+    {
+      "bytes": 7632,
+      "path": "tests/test_noah_compatibility.py",
+      "sha256": "81825f889758ecda95f8f78a6c52d47432ac6074ca9d8a9d403eb6274dba9e24"
+    },
+    {
+      "bytes": 15471,
+      "path": "tests/test_physical_reference.py",
+      "sha256": "cd5e939d546815b53d00b55f419e26c2da33c6d4ff15c455899bdb7d917670d8"
+    },
+    {
+      "bytes": 7486,
+      "path": "tests/test_physical_reference_v2.py",
+      "sha256": "b1e92cee96700e554c7fb9e32d99cd9dcde1d50a677ac4485210c4f9522aa1ca"
+    },
+    {
+      "bytes": 7593,
+      "path": "tests/test_provenance.py",
+      "sha256": "f7fcad9cebfd321fed1e493ff055d43fe4fd4d488b05b8f27abb5ce512c7692b"
+    },
+    {
+      "bytes": 8097,
+      "path": "tests/test_public_audit.py",
+      "sha256": "a1fc2310a89357b5f80980c385ebf7e2ee546d22b43f0b6c2c965274ebd14219"
+    },
+    {
+      "bytes": 9986,
+      "path": "tests/test_public_domain.py",
+      "sha256": "b92f90aee69ecc85fed82928e573e565cf3d70d9c6e851e20822137c03a5af48"
+    },
+    {
+      "bytes": 7623,
+      "path": "tests/test_public_forcing.py",
+      "sha256": "f3a9464003af3de0e5f9e9e562ab896b43a1dddb66439dea50e3c99df179acc5"
+    },
+    {
+      "bytes": 8047,
+      "path": "tests/test_public_native_assembly.py",
+      "sha256": "2c39c8a240d75d24339df087b8bb9651d9c9cfa959cc19a6312a47a60b2ffe80"
+    },
+    {
+      "bytes": 10352,
+      "path": "tests/test_public_native_qualification.py",
+      "sha256": "a1a8fa022b4d4d4bac69f7a3c081614383907f528109768b2a95404a4a081195"
+    },
+    {
+      "bytes": 8920,
+      "path": "tests/test_runtime.py",
+      "sha256": "3a40ee766b223ef6b77cc1528804afdea6a7a64a6c27feb4821d050bfe94a554"
+    },
+    {
+      "bytes": 4023,
+      "path": "tests/test_validation_cli.py",
+      "sha256": "675a1000e7c9ad69f43369259be7bd8d79882b9801fbf86e31a238ea28f94079"
+    },
+    {
+      "bytes": 940,
+      "path": "pyproject.toml",
+      "sha256": "7ade934f7346362465420604a6e1dcb56c5bea67559502f0d45efef87ce4c7c7"
+    }
+  ],
+  "tests": {
+    "archive": 18,
+    "browser_contract": {
+      "log": {
+        "bytes": 1721,
+        "sha256": "28137f66c04af720e25b6d98c133f2e30e3e03640b4de8c0a3e35d77744a5fb5"
+      },
+      "passed": 17
+    },
+    "executor_mocked": 17,
+    "installed_cli": {
+      "all_expected": true,
+      "expected_outcomes": 14
+    },
+    "python": {
+      "log": {
+        "bytes": 7403,
+        "sha256": "427661fa8c9001fc78c1345567310b9585a0ac1f1f50099a70f5042b46b660f1"
+      },
+      "passed": 293,
+      "platform": "macOS ARM64 Python3.14.7"
+    }
+  },
+  "worker_closeout": {
+    "campaign_staging_allocated_bytes": 1357864960,
+    "config_disks_retained": true,
+    "host_free_bytes": 24016359424,
+    "only_profile": "nrf",
+    "other_workers_changed": false,
+    "remaining_containers": [],
+    "runtime_and_staging_allocated_bytes": 5384355840,
+    "schema_version": "public-campaign-worker-closeout/0.1",
+    "status_exit_code": 1,
+    "stop_elapsed_seconds": 2.710645040962845,
+    "stop_exit_code": 0,
+    "worker_allocated_bytes": 4026490880,
+    "worker_stopped": true
+  }
+}

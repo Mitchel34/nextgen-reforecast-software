@@ -1,0 +1,33 @@
+{
+  "schema_version": "campaign-reference-comparison/0.1",
+  "execution_lock_sha256": "4a98ee39253c442b18fafc54beff64924485fe02afa01bcb307cc75975a77f7d",
+  "run_id": "watauga-public-execution-20261011-3ce08df96747777e",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "assembly_identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+  "protocol_identity_sha256": "111b4d01be42889fca1f62706b020c461c039aa57a5a929e999efd3d83906757",
+  "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+  "cases": [
+    {
+      "case_id": "history",
+      "all_arrays_exactly_equal": true,
+      "reference_identity_sha256": "66169502b9aa3c72d2e97627e54386a7bce9e8d4cfddaf106374143270acb963",
+      "generated_issue_lead_rows": 0
+    },
+    {
+      "case_id": "serial-20220101T2300Z",
+      "all_arrays_exactly_equal": true,
+      "reference_identity_sha256": "9f0cd7f9bc88678b97b90be86529d297534ffb5004dc9f1c6234ad67df92f085",
+      "generated_issue_lead_rows": 18
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "all_arrays_exactly_equal": true,
+      "reference_identity_sha256": "2079b563bc8fac9c91d9fc91fbc988f4da3bbacef48429ca7d69165abfdd5b0b",
+      "generated_issue_lead_rows": 18
+    }
+  ],
+  "all_complete_arrays_exactly_equal": true,
+  "comparison": "exact serialized values; only protocol envelope identity may differ"
+}

@@ -8,6 +8,7 @@ __pycache__/
 .pytest_cache/
 .venv/
 .local/
+.execution-claims/
 local_only/
 *.egg-info/
 build/

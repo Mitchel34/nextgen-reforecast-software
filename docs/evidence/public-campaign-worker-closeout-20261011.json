@@ -1,0 +1,15 @@
+{
+  "schema_version": "public-campaign-worker-closeout/0.1",
+  "only_profile": "nrf",
+  "remaining_containers": [],
+  "stop_exit_code": 0,
+  "status_exit_code": 1,
+  "stop_elapsed_seconds": 2.710645040962845,
+  "worker_stopped": true,
+  "worker_allocated_bytes": 4026490880,
+  "campaign_staging_allocated_bytes": 1357864960,
+  "runtime_and_staging_allocated_bytes": 5384355840,
+  "host_free_bytes": 24016359424,
+  "config_disks_retained": true,
+  "other_workers_changed": false
+}

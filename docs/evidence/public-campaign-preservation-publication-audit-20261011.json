@@ -1,0 +1,79 @@
+{
+  "atime_included": false,
+  "audit_identity_sha256": "8d70076300ec12d87b12c8cbe5df474152e4bcea8927c788901753a473425b90",
+  "cause": "Unverified; flag/time changes alone do not identify a writer or establish content equality.",
+  "changed_ctime_utc_range": [
+    "2026-10-11T05:38:19Z",
+    "2026-10-11T05:38:32Z"
+  ],
+  "changed_directories": [
+    "output/nextgen_team_review_20260918/raw_acquisition_v2/.raw_cache",
+    "output/nextgen_team_review_20260918/raw_acquisition_v2/observation_validation",
+    "output/nextgen_team_review_20260918/raw_acquisition_v2/observation_validation/cache",
+    "output/nextgen_team_review_20260918/raw_acquisition_v2/static_validation",
+    "output/nextgen_team_review_20260918/raw_acquisition_v2/static_validation/raw_cache",
+    "output/nextgen_team_review_20260918/raw_acquisition_v2/weather_validation",
+    "output/nextgen_team_review_20260918/raw_acquisition_v2/weather_validation/cache"
+  ],
+  "changed_entry_types": {
+    "directories": 7,
+    "regular_files": 340
+  },
+  "changed_field_counts": {
+    "ctime_ns": 347,
+    "flags": 340,
+    "mtime_ns": 7
+  },
+  "dataless_flag_transitions": 0,
+  "entry_presence_changes": 0,
+  "flag_transitions": [
+    {
+      "added_flag": "UF_HIDDEN",
+      "added_mask": 32768,
+      "after": 32832,
+      "before": 64,
+      "count": 340,
+      "removed_mask": 0
+    }
+  ],
+  "immutable_byte_changes": [],
+  "immutable_historical_repository_files": 32,
+  "metadata_fields": [
+    "mode",
+    "size",
+    "mtime_ns",
+    "ctime_ns",
+    "flags"
+  ],
+  "original_content_bytes_audited": false,
+  "original_metadata_reset": false,
+  "private_snapshot_bindings": {
+    "baseline": {
+      "bytes": 5809803,
+      "sha256": "478fded03348c7b950dee2b56c2eae05a747b921a606334bbb2f92c6f7f83da1"
+    },
+    "complete_delta": {
+      "bytes": 206248,
+      "sha256": "79675a56fc56a688b7651772a193da2250438dfb4fc1d182db5b0a38ff95cc94"
+    },
+    "latest": {
+      "bytes": 5810823,
+      "sha256": "61a733698442d53c8177398b6bab6ba82636a7e6b16f5bf5486947557289624b"
+    }
+  },
+  "protected_entries_after": 33367,
+  "protected_entries_before": 33367,
+  "protected_metadata_changes": 347,
+  "recorded_at_utc": "2026-10-11T05:42:49Z",
+  "regular_file_mtime_changes": 0,
+  "regular_file_size_changes": 0,
+  "responsible_process_verified": false,
+  "retained_clean_acceptance_receipt": {
+    "bytes": 324,
+    "path": "docs/evidence/public-campaign-preservation-20261011.json",
+    "sha256": "86b65e544a4c8ccd3a26422b4e95cf449a1b353deb95a5f29497cc987101dfa8"
+  },
+  "schema_version": "public-campaign-preservation-publication-audit/0.1",
+  "scope": "Metadata-only original-folder audit after the retained clean acceptance check; no original content reads, writes, rollback or hydration by this audit.",
+  "workflow_original_writes": false
+}

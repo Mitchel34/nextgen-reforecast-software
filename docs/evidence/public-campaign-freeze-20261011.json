@@ -1,0 +1,147 @@
+{
+  "acceptance_driver": {
+    "bytes": 7838,
+    "sha256": "b211ca92375f4e8d4e6c0a939abd16a16a18667cb21caf4a350fd5ca233d272a"
+  },
+  "additional_repairs_maximum": 3,
+  "admission_file": {
+    "bytes": 55574,
+    "sha256": "80bb828a3677480bb1fb53d8198e8daff01be259ec186772e1b949a7d4a6800f"
+  },
+  "admission_identity_sha256": "ce87618f48b6ff6880e623c8362b4913877e5098a6c239f8a3b5efae69b727a1",
+  "execution_lock_file": {
+    "bytes": 87628,
+    "sha256": "3c5214b05ec9226aa3410e6b9fcee5bc88dce24b17aedc43f9c0bd90c9c85c79"
+  },
+  "execution_lock_sha256": "4a98ee39253c442b18fafc54beff64924485fe02afa01bcb307cc75975a77f7d",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "freeze_identity_sha256": "3f94639e85ea6259bf27edf352b348461cea8bbd1a1c13b52d777e6fba5a1bb4",
+  "frozen_at_utc": "2026-10-11T05:27:40Z",
+  "host_free_bytes": 25407602688,
+  "implementation": {
+    "files": [
+      {
+        "bytes": 108,
+        "path": "__init__.py",
+        "sha256": "6494eecf9ba03344c5c5707bc9b90538601205d61e93e1394de21ad98cc99fcc"
+      },
+      {
+        "bytes": 48,
+        "path": "__main__.py",
+        "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+      },
+      {
+        "bytes": 110526,
+        "path": "_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      },
+      {
+        "bytes": 42678,
+        "path": "archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 16279,
+        "path": "bundle.py",
+        "sha256": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576"
+      },
+      {
+        "bytes": 28543,
+        "path": "campaign.py",
+        "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+      },
+      {
+        "bytes": 16386,
+        "path": "cli.py",
+        "sha256": "c8179bec7deee5c3242f270b7e8abfa61c6d6539912d00312f480ddbdf7a686a"
+      },
+      {
+        "bytes": 12129,
+        "path": "configuration.py",
+        "sha256": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33"
+      },
+      {
+        "bytes": 43330,
+        "path": "execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 23607,
+        "path": "forcing.py",
+        "sha256": "4dc0c1e5360044de796efa4593a8452ae70d28e20c8977b83229594d03e856b7"
+      },
+      {
+        "bytes": 5733,
+        "path": "provenance.py",
+        "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+      },
+      {
+        "bytes": 13642,
+        "path": "runtime.py",
+        "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+      }
+    ],
+    "implementation_identity_sha256": "a87539dc6f950a5f934b5e22a89701b612a1ecb3841f139908e560311b0105de",
+    "package_version": "0.1.0a5"
+  },
+  "installed_site_packages_verified": true,
+  "model_process_allowance": 9,
+  "planned_model_processes": 6,
+  "protocol_file": {
+    "bytes": 16778,
+    "sha256": "ad68a87fd1afca9261b6a0b32f94c22d5c391dde4a5af458c8d802763a1ed324"
+  },
+  "protocol_identity_sha256": "111b4d01be42889fca1f62706b020c461c039aa57a5a929e999efd3d83906757",
+  "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+  "run_id": "watauga-public-execution-20261011-3ce08df96747777e",
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "schema_version": "public-campaign-execution-freeze/0.1",
+  "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+  "source_tools": [
+    {
+      "bytes": 13691,
+      "path": "scripts/physical_reference_v2/audit_outputs.py",
+      "sha256": "1436793c5a9dc271f485adabd6542b48857ca8f690560878e506aa003ab92e0b"
+    },
+    {
+      "bytes": 5240,
+      "path": "scripts/physical_reference_v2/common.py",
+      "sha256": "884e7ea9eab83daef25c8b1698d8c4888d40b274c1e72a43d0d1f5eba02424ce"
+    },
+    {
+      "bytes": 5952,
+      "path": "scripts/physical_reference_v2/compare_reference_set.py",
+      "sha256": "811da9936354a363af16e55d269229e7691fca4d2e44f59a7e2bd31bee132a93"
+    },
+    {
+      "bytes": 13164,
+      "path": "scripts/physical_reference_v2/execute_stage.py",
+      "sha256": "b709dfe4fb03545c81e23be49558c8e38958b5b1da7f0e4a6526afba08854280"
+    },
+    {
+      "bytes": 3338,
+      "path": "scripts/physical_reference_v2/native_outputs.py",
+      "sha256": "1f79ff364cabdb98021394a0d16fdf5ac50e6606ca1a19c5033e62700a09e974"
+    },
+    {
+      "bytes": 5613,
+      "path": "scripts/physical_reference_v2/normalize_routing.py",
+      "sha256": "ee160e38f26f6b7e34b6c37e3696d2fb5bf3cadc141cf7e44fa3027d1d17977c"
+    },
+    {
+      "bytes": 4924,
+      "path": "scripts/physical_reference_v2/seal_execution.py",
+      "sha256": "f6bdf4ad2afc178ea4e684523e7ea721f641ac9dd7975e86e82b88a56c392e08"
+    }
+  ],
+  "wheel": {
+    "bytes": 114651,
+    "sha256": "2ae3ddc421f10c5f78b8c2cded1f55632c7b4cb6a14d32d89884423d07edbd5a"
+  },
+  "worker_allocated_bytes": 4026011648
+}

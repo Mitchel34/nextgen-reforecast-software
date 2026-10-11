@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from ngen_reforecast.cli import _publish_new, main
 
@@ -116,12 +117,40 @@ class CLITests(unittest.TestCase):
         self.assertEqual(existing.read_text(), "original")
         self.assertTrue(link.is_symlink())
 
-    def test_physical_execution_is_explicitly_unavailable(self):
-        for command in ("run", "resume"):
-            status, output, error = self.call(command)
-            self.assertEqual(status, 2)
-            self.assertEqual(output, "")
-            self.assertEqual(json.loads(error)["error"], "PHYSICAL_EXECUTION_NOT_IMPLEMENTED")
+    def test_recovery_is_explicitly_unavailable(self):
+        status, output, error = self.call("resume")
+        self.assertEqual(status, 2)
+        self.assertEqual(output, "")
+        self.assertEqual(json.loads(error)["error"], "PHYSICAL_RECOVERY_NOT_IMPLEMENTED")
+
+    def test_run_requires_explicit_lock_assets_socket_and_destinations(self):
+        with self.assertRaises(SystemExit) as caught:
+            self.call("run")
+        self.assertEqual(caught.exception.code, 2)
+
+    def test_occupied_archive_is_verified_before_any_launch(self):
+        archive = self.root / "archive"
+        archive.mkdir()
+        with patch("ngen_reforecast.cli.load_execution_lock", return_value={}), \
+             patch("ngen_reforecast.cli.verify_result", side_effect=ValueError("archive incomplete")), \
+             patch("ngen_reforecast.cli.execute_campaign") as execute:
+            status, _, error = self.call("run", self.root / "lock.json", "--asset-root", self.root,
+                                         "--execution-root", self.root / "new", "--archive", archive,
+                                         "--docker-host", "unix:///synthetic/socket")
+        self.assertEqual(status, 1)
+        self.assertIn("archive incomplete", error)
+        execute.assert_not_called()
+
+    def test_invalid_archive_destination_refuses_before_launch(self):
+        with patch("ngen_reforecast.cli.load_execution_lock", return_value={}), \
+             patch("ngen_reforecast.cli.preflight_archive_destination", side_effect=ValueError("invalid archive parent")), \
+             patch("ngen_reforecast.cli.execute_campaign") as execute:
+            status, _, error = self.call("run", self.root / "lock.json", "--asset-root", self.root,
+                                         "--execution-root", self.root / "new", "--archive", self.root / "archive",
+                                         "--docker-host", "unix:///synthetic/socket")
+        self.assertEqual(status, 1)
+        self.assertIn("invalid archive parent", error)
+        execute.assert_not_called()
 
 
 if __name__ == "__main__":

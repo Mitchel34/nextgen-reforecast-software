@@ -1,0 +1,57 @@
+{
+  "references": [
+    {
+      "arrays": {
+        "bytes": 38744488,
+        "sha256": "e52e431726853dc7ea581289ae4769f8ed8e02a5822bf010098ed5b8f54ffa1b"
+      },
+      "case_id": "history",
+      "complete_catchment_rows": 24366,
+      "complete_nexus_rows": 9432,
+      "complete_routing_rows": 292392,
+      "execution_identity_sha256": "e3f970bc5cbf2b727e82f82d1388f13ef0638729d39f183c61867f20adbb6245",
+      "forecast_lead_rows": 0,
+      "lead_reference": {
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "reference_identity_sha256": "aaee345b0fe9f439b426110fd2ee7350ee91733b96a9373d6c863c63fd3350af"
+    },
+    {
+      "arrays": {
+        "bytes": 38691973,
+        "sha256": "d64b53172889b6f2fbed5d7de26c37e0243be903631f83e770238446d110c2b8"
+      },
+      "case_id": "serial-20220101T2300Z",
+      "complete_catchment_rows": 24335,
+      "complete_nexus_rows": 9420,
+      "complete_routing_rows": 292020,
+      "execution_identity_sha256": "237ac721c2e8e4db152c039e2e12bdbaa98f8c8a915cb7554cf1f7a1cd9dd53e",
+      "forecast_lead_rows": 18,
+      "lead_reference": {
+        "bytes": 23831,
+        "sha256": "113edd4b1b4cddd5f96c9e245b4e290cd2583edf10c11beed88b80cc19db1624"
+      },
+      "reference_identity_sha256": "1cf6b6ef79fc4def4e3ae1d7611154c7297ccd9950d0f406d344fdbb69faa24b"
+    },
+    {
+      "arrays": {
+        "bytes": 38747008,
+        "sha256": "ed281d84acf977df54d3cab7fd533372fd08624e59dbf8f93c65a1907f91a74c"
+      },
+      "case_id": "serial-20220102T0000Z",
+      "complete_catchment_rows": 24366,
+      "complete_nexus_rows": 9432,
+      "complete_routing_rows": 292392,
+      "execution_identity_sha256": "a43e2b7c32896199ce02b0e13e9dd81212fc080fa35b693d4c7c60420f3fe667",
+      "forecast_lead_rows": 18,
+      "lead_reference": {
+        "bytes": 24358,
+        "sha256": "ea72294cdc73678cd144fcba2111601424c945ea362b08254d3156f4e8082241"
+      },
+      "reference_identity_sha256": "26247d388da2b4f1dbe576cc9a79c728db116870ac182c570868b7a1170ee6be"
+    }
+  ],
+  "schema_version": "public-campaign-fresh-reference-summary/0.1",
+  "source": "New captured outputs audited by unchanged frozen tools; not copied prior outputs"
+}
