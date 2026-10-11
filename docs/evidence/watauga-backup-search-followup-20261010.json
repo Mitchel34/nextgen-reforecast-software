@@ -1,0 +1,97 @@
+{
+  "absence_of_all_possible_backups_proven": false,
+  "conclusion": "No separate fully resident complete day-model-preparation01 backup was located within the reported bounded search.",
+  "evidence_class": "delegated_read_only_lookup_report",
+  "execution_ready": false,
+  "missing_categories": {
+    "branch_preparation_and_checksum": 4,
+    "branch_weather_csv": 62,
+    "day_model_controller": 1,
+    "historical_forcing_csv": 31,
+    "noah_namelists": 31,
+    "python_modules": 3,
+    "realization_json": 1,
+    "root_checksum_reference_router": 3,
+    "troute_yaml": 1
+  },
+  "next_action": "Recover the remaining exact hash-bound files from a separately available permitted source. A new candidate location can be checked without repeating an unbounded scan. Regenerated or different inputs require a separately identified recipe; they cannot silently complete the historical baseline.",
+  "prior_bundle_receipt_sha256": "c77c86710c2a537ac90e6bf6808bb5b672aacfb0e38fb842f98aa1f059fc8eb3",
+  "provenance": {
+    "raw_search_log_publicly_deposited": false,
+    "source": "Separate authorized backup lookup; result delivered to the software coordination thread",
+    "verification_scope": "Coordinator reconciled the reported counts with the committed bundle inventory; did not repeat the filesystem/archive search."
+  },
+  "reported_actions": {
+    "deletions": false,
+    "downloads": false,
+    "files_written": false,
+    "hydration": false,
+    "model_execution": false,
+    "original_payloads_opened": false,
+    "placeholders_opened": false
+  },
+  "reported_date": "2026-10-10",
+  "reported_search_scope": [
+    {
+      "kind": "known_preservation_paths",
+      "method": "Metadata only at corresponding review/evidence/NextGen_Reforecast/local_only/shared_history_runtime_v3 paths",
+      "result": "No day-model-preparation01 directory located",
+      "source_aliases": [
+        "HYDRA-NextGen",
+        "HYDRA-CFE-Correction",
+        "AI-HYDRA-NextGen"
+      ]
+    },
+    {
+      "archive_basename": "HYDRA_review_bundle_20260917T233206Z.zip",
+      "central_directory_bytes": 424163,
+      "contains_day_model_preparation01_entries": false,
+      "contains_related_evidence": [
+        "build01",
+        "day-custody-source01"
+      ],
+      "entry_count": 2350,
+      "kind": "resident_zip_index",
+      "limitation": "Central-directory names do not exclude identical payloads archived under other paths.",
+      "member_payload_identity_checked": false,
+      "method": "Bounded central-directory inspection, no payload extraction"
+    },
+    {
+      "kind": "likely_archive_download_locations",
+      "method": "Targeted shallow metadata checks",
+      "result": "No additional candidate located"
+    },
+    {
+      "kind": "mounted_volumes",
+      "method": "Metadata inspection",
+      "result": "No backup volume found among exposed volumes"
+    },
+    {
+      "interpretation": "Historical intention/status, not proof an exact Watauga backup exists",
+      "kind": "historical_preservation_receipt",
+      "receipt_alias": "nextgen-data-preservation-v1",
+      "reported_status": "external backup pending"
+    }
+  ],
+  "reverified_partial_bundle": {
+    "absent_expected_members": 137,
+    "bound_manifests": [
+      "native/ASSET_CLOSURE.json",
+      "docs/evidence/watauga-fixture-bindings-20261010.json"
+    ],
+    "checks_reported": [
+      "Local allocated blocks",
+      "No dataless flag",
+      "No symlink path",
+      "Expected size and SHA-256 match",
+      "Unchanged metadata before and after reads"
+    ],
+    "expected_members": 181,
+    "present_verified_members": 44,
+    "relative_path": ".local/watauga-bundle-20261010/fixture",
+    "verified_bytes": 4452920
+  },
+  "schema_version": "watauga-backup-search-followup/0.1",
+  "search_exhaustive": false,
+  "status": "EXACT_FIXTURE_RECOVERY_UNRESOLVED"
+}

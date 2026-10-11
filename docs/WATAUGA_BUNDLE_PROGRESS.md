@@ -43,6 +43,12 @@ The implemented `validate_configuration` API was then exercised against the actu
 
 This confirms the known drainage-attribute concern in the exact baseline bytes now restored. The baseline remains diagnostic-only pending the rest of RF-005A. RF-005B's candidate mapping and full coupled qualification remain separate, as required by the working plan. No parameters were edited and no model was run.
 
+## Separate backup lookup follow-up
+
+A separately authorized read-only lookup reported no complete, fully resident `day-model-preparation01` backup within its bounded search. It independently reverified the same 44 staged files (4,452,920 bytes), with the other 137 expected paths absent. Known preservation paths, shallow likely archive/download locations and mounted volumes supplied no additional candidate. A resident review ZIP's central-directory index (2,350 entries; 424,163 bytes) contains related build/source evidence but no entries under `day-model-preparation01`; the index check does not exclude identical payloads stored under other paths. A historical preservation receipt stating that external backup was pending is not evidence that a complete backup exists.
+
+The [follow-up record](evidence/watauga-backup-search-followup-20261010.json) explicitly attributes these observations to the separate lookup. The coordinator reconciled its counts with the existing committed inventory; it did not replay the search or receive a public raw search log. This was not an exhaustive disk scan and does not establish that no backup exists elsewhere. The restoration count remains 44/181, with no new physical or scientific qualification.
+
 ## Next closure step
 
 Restore the remaining exact hash-bound members into an isolated permitted source location, or identify an existing resident equivalent. Do not hydrate the protected originals or replace their contents. Re-run bounded identity/staging inspection with explicit source aliases, then validate content, units, coverage, original clock boundaries and model configuration using the scientific-admission checks. These requirements preserve the [first physical experiment](FIRST_PHYSICAL_EXPERIMENT.md): 31 catchments, the 1 December 2021 origin, 786-hour parent history, two declared issues and 18 hourly forecast steps each. Changing or regenerating the fixture requires a separately identified scientific recipe and cannot silently close this baseline.

@@ -4,6 +4,10 @@
 
 This is the current coordination summary for the software and accompanying *Environmental Modelling & Software* manuscript. It preserves the existing M0–M7, RF-001–RF-018 and proposed WEB-01–WEB-07 identifiers. Detailed contracts remain in their linked documents. The owner requested this planning revision; it does not start the implementation cycle, scientific acquisition, model execution, user recruitment, hosting, spending or submission.
 
+## Recovery update — 10 October continuation
+
+A [separate bounded backup lookup](evidence/watauga-backup-search-followup-20261010.json) found no additional complete original Watauga fixture in the locations inspected. The same 44/181 exact members were reverified, leaving 137 missing. RF-009A remains open. Resume exact-file recovery when a concrete new source is identified; do not repeat broad scans or treat the historical external-backup intention as a successful deposit. Original research folders remain read-only and unhydrated. A regenerated fixture would need a separate scientific identity and prospective references, not admission under the original benchmark identity. This finding leaves independent software/manuscript work available while physical execution remains blocked on inputs and runtime provenance.
+
 ## Saved baseline
 
 The previous working plan is preserved at Git commit [`78cfb92db53b6d58d8b8de9d056e067597f568f5`](https://github.com/Mitchel34/nextgen-reforecast-software/tree/78cfb92db53b6d58d8b8de9d056e067597f568f5). The [baseline manifest](planning/2026-09-24_BASELINE.json) records exact paths, byte lengths and SHA-256 values for 17 controlling documents, with immutable links to their previous contents. Saving this baseline does not duplicate or modify the original research folders or preserved source material.
