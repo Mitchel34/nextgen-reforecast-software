@@ -130,7 +130,8 @@
     },
     "original_content_reads": 0,
     "preserved_public_artifacts": 28,
-    "preserved_artifacts_changed": 0
+    "preserved_artifacts_changed": 0,
+    "final_metadata_comparison": "unchanged_after_implementation_and_ci"
   },
   "review_corrections": [
     "Added repository-local temporary directories and direct schedule/retention lock regression.",
@@ -144,14 +145,52 @@
   "hosted_deployments": 0,
   "participant_studies": 0,
   "continuous_integration": {
-    "status": "pending_publication",
-    "expected_python_matrix": [
+    "status": "passed",
+    "run_id": 38104732243,
+    "run_url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38104732243",
+    "tested_commit": "bb4da34dfe1a6a84877277da474a687b5bb07a19",
+    "provider_created_at_utc": "2026-10-11T02:18:39Z",
+    "provider_updated_at_utc": "2026-10-11T02:18:54Z",
+    "python_matrix": [
       "3.11",
       "3.12",
       "3.13",
       "3.14"
     ],
-    "expected_browser_contract_job": true
+    "tests_per_python_job": 80,
+    "browser_contract_tests": 17,
+    "browser_job_node_version": "22.23.3",
+    "browser_job_python_version": "3.12.3",
+    "jobs_passed": 5,
+    "jobs": [
+      {
+        "name": "browser-contract",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38104732243/job/114367700686"
+      },
+      {
+        "name": "offline (3.14)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38104732243/job/114367700792"
+      },
+      {
+        "name": "offline (3.12)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38104732243/job/114367700868"
+      },
+      {
+        "name": "offline (3.11)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38104732243/job/114367700880"
+      },
+      {
+        "name": "offline (3.13)",
+        "conclusion": "success",
+        "url": "https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38104732243/job/114367700886"
+      }
+    ],
+    "log_sha256": "75f58dcf58eff8dbacd05f5daefee7a7c5b509d31e1fab6af45827887c971858",
+    "model_runs": 0
   },
   "source_files": [
     {

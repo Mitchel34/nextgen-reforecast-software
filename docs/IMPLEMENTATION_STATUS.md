@@ -14,6 +14,8 @@ The [current validation receipt](evidence/implementation-kickoff-20261010.json) 
 
 Cross-agent review checked campaign normalization/lead semantics, provenance admission boundaries and manuscript evidence. Review prompted a direct lock normalization/retention regression and explicit repository-local temporary directories for the new tests. The exact original outline, source material and completed feasibility dossier remain preserved.
 
+[Linux CI run 38104732243](https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/38104732243) passed all five jobs at implementation commit `bb4da34dfe1a6a84877277da474a687b5bb07a19`: 80 tests on each of Python 3.11–3.14, plus 17 browser/engine tests with Node 22.23.3 and Python 3.12.3. The original Reforecast metadata comparison remained unchanged across 33,364 entries after implementation and CI; all 28 preserved public source/dossier artifacts matched their baseline bytes.
+
 The September foundation evidence remains unchanged in [VALIDATION.json](VALIDATION.json): 54 local tests, nine installed CLI checks, and [four-version Linux CI run 35765301098](https://github.com/Mitchel34/nextgen-reforecast-software/actions/runs/35765301098) at commit `1ee028871daf00b3bb76f2416c5a2b5626ab7aee`. That historical CI run does not validate the October changes.
 
 ## Physical admission and next work
