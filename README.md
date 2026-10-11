@@ -4,10 +4,12 @@ A research software project for constructing auditable NextGen reforecast campai
 
 The intended hosted web application lets a hydrologist select a watershed or USGS/NWM identifier, a supported historical period and forecast lead preferences. The service acquires and prepares inputs, supplies inspectable scientific defaults, executes on supported Linux infrastructure and returns research datasets with provenance and verification evidence. Researchers should need no command line, Python or local modeling installation. The project builds on the NextGen ecosystem and keeps forecast generation separate from downstream HYDRA/ML correction.
 
-**Current stage: offline planning and input-validation package (`0.1.0a3`) and a local browser interaction prototype.** The package provides campaign validation, bounded schedules, selectable retained leads, expected issue/lead ledgers, planning provenance locks, reports, bounded decoded-weather/CFE mapping validation and historical runtime inspection. Physical NextGen execution and recovery are not implemented or qualified yet. The repository also contains a completed feasibility dossier and a substantive manuscript draft. CLI examples in the original outline remain proposals except where implemented below.
+**Current stage: offline planning and input-validation package (`0.1.0a4`), a public-source development fixture and a local browser interaction prototype.** The package provides campaign validation, bounded schedules, selectable retained leads, expected issue/lead ledgers, planning provenance locks, reports, bounded decoded-weather/CFE mapping validation and historical runtime inspection. Independently authored preparation tools have generated and content-validated a new Watauga input fixture and serial input layouts. Physical NextGen execution and recovery are not implemented or qualified yet. The repository also contains a completed feasibility dossier and a substantive manuscript draft. CLI examples in the original outline remain proposals except where implemented below.
 
 ## Start here
 
+- [New public Watauga fixture](fixtures/watauga-public-v1/README.md) — complete development inputs, provenance, local access and remaining qualification
+- [Public-fixture working plan](docs/PUBLIC_WATAUGA_FIXTURE_PLAN.md) — separate preparation identity and zero model-invocation allowance
 - [Scientific input and runtime increment — 10 October](docs/INPUT_RUNTIME_INCREMENT_2026-10-10.md) — current assignments and evidence boundaries
 - [Active multiagent kickoff — 10 October](docs/IMPLEMENTATION_KICKOFF_2026-10-10.md) — assignments, contracts and integration boundaries
 - [Working plan and reassessment — 24 September](docs/WORKING_PLAN.md) — saved baseline, three resolved planning concerns and remaining decisions
@@ -70,7 +72,7 @@ Start with the [executive feasibility report](reports/reforecast_software_feasib
 
 The review supports a narrow extraction path but does not establish a complete public runnable example. Existing land state is inherited through live process branching; recovery relies on replaying the same historical inputs. The required Watauga fixture currently has missing resident assets. Historic numerical receipts and their exact version limits are recorded separately from newly performed read/hash checks.
 
-The source and receipt references resolve to a private preservation snapshot; this public dossier does not include the underlying research implementation or data. The next engineering milestone is a reproducible pinned build and one complete Watauga fixture, followed by an independent reference comparison.
+The source and receipt references resolve to a private preservation snapshot; this public dossier does not include the underlying research implementation or data. The next engineering milestone is a reproducible pinned build and admission of the separately prepared public Watauga fixture, followed by its own prospective independent references. Historical exact-file restoration remains a separate unresolved track.
 
 ## Scope
 

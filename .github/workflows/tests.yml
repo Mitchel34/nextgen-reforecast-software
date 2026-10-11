@@ -4,6 +4,7 @@ on:
     paths:
       - 'src/**'
       - 'tests/**'
+      - 'scripts/public_fixture/**'
       - 'schemas/**'
       - 'profiles/**'
       - 'examples/**'
@@ -14,6 +15,7 @@ on:
     paths:
       - 'src/**'
       - 'tests/**'
+      - 'scripts/public_fixture/**'
       - 'schemas/**'
       - 'profiles/**'
       - 'examples/**'

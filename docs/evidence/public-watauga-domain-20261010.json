@@ -1,0 +1,276 @@
+{
+  "schema_version": "public-watauga-domain-evidence/0.1",
+  "planning_date": "2026-10-10",
+  "evidence_class": "observed_public_acquisition_and_preparation",
+  "new_fixture": true,
+  "historical_fixture_restored": false,
+  "execution_ready": false,
+  "model_run_performed": false,
+  "public_source": {
+    "archive_url": "https://communityhydrofabric.s3.us-east-1.amazonaws.com/hydrofabrics/community/VPU/compressed/vpu-06_subset.tar.gz?versionId=.s3ZFwGP1XLs_GJev59xGknxNUI1pw5_",
+    "archive": {
+      "bytes": 25897293,
+      "sha256": "24fb4d29e6717518514fd4c606af13377f46266b4ba4221bbd984a82b94b7922"
+    },
+    "headers": {
+      "Date": "Sun, 11 Oct 2026 03:20:24 GMT",
+      "Last-Modified": "Tue, 18 Mar 2025 22:49:35 GMT",
+      "ETag": "\"88106a5d5c3c213d52539cebd0be9044-4\"",
+      "x-amz-version-id": ".s3ZFwGP1XLs_GJev59xGknxNUI1pw5_",
+      "Content-Type": "application/x-tar",
+      "Content-Length": "25897293"
+    },
+    "archive_members": [
+      {
+        "name": "./vpu-06_subset.gpkg",
+        "size": 74813440,
+        "type": "0"
+      }
+    ],
+    "extracted_geopackage": {
+      "path": "source-vpu06.gpkg",
+      "member": "./vpu-06_subset.gpkg",
+      "bytes": 74813440,
+      "sha256": "983300473d8edf8f27d8c3214077c5fa8e58fc301241ee3cd949d9defb4e3217"
+    }
+  },
+  "template_source": {
+    "repository": "https://github.com/CIROH-UA/NGIAB_data_preprocess",
+    "commit": "2b41ba2f038445ddbfe01d8cbe266e2aa9b5e635",
+    "downloaded_files": 15,
+    "downloaded_bytes": 131922,
+    "license": "MIT",
+    "license_notice": "Copyright (c) 2024 Alabama Water Institute",
+    "used_template_bindings": {
+      "modules/data_sources/config/catchment/cfe.ini": {
+        "bytes": 2033,
+        "sha256": "e9ee7ebacaa35ad9b731656fb66f024de6532493313b566cc24397ab42fd9a77"
+      },
+      "modules/data_sources/config/catchment/noah-owp-modular-init.namelist.input": {
+        "bytes": 3045,
+        "sha256": "a493a28c90382c7f7655fae5b458abf6260a923399a9e08dacd1257cfd556b0f"
+      },
+      "modules/data_sources/ngen-routing-template.yaml": {
+        "bytes": 4655,
+        "sha256": "c0ce6fea38f49307090556ad2c5bb2d9b8a0ea0f279525f1cdcf1adb79f0239b"
+      },
+      "modules/data_sources/config/realization/cfe-nom.json": {
+        "bytes": 3500,
+        "sha256": "6413bd5ae47251cfc4416ef67c879dcbf83801b61aef2ee4b12771ba2ad12fb4"
+      },
+      "LICENSE": {
+        "bytes": 1081,
+        "sha256": "e9d312a6bc309ec473126d369840db2870fd7546cbf1b3c8b7d561ae16f45259"
+      }
+    },
+    "adapter": {
+      "bytes": 19447,
+      "sha256": "ddb23aa7d6930ef89940b8cfdc66cc066f8cbbf5a98096c631929401aafd6641"
+    }
+  },
+  "domain_resolution": {
+    "gauge_id": "03479000",
+    "primary_identifier_url": "https://api.water.usgs.gov/nldi/linked-data/nwissite/USGS-03479000",
+    "primary_coordinates_url": "https://waterservices.usgs.gov/nwis/site/?format=rdb&sites=03479000&siteOutput=expanded",
+    "public_nldi_comid": 19743430,
+    "network_hf_id": 19743430,
+    "selected_routed_reach": "wb-1017693",
+    "selected_closure": "upstream inclusive of selected reach, without adjacent downstream branches",
+    "terminal_nexus": "nex-1017694",
+    "conflicting_attribute_reach": "wb-1017846",
+    "attribute_nexus_closure_catchment_count": 32,
+    "selected_catchment_count": 31,
+    "catchment_ids": [
+      "cat-1017689",
+      "cat-1017690",
+      "cat-1017691",
+      "cat-1017692",
+      "cat-1017693",
+      "cat-1017847",
+      "cat-1017848",
+      "cat-1017849",
+      "cat-1017850",
+      "cat-1017851",
+      "cat-1017852",
+      "cat-1017853",
+      "cat-1017854",
+      "cat-1017855",
+      "cat-1017856",
+      "cat-1017857",
+      "cat-1017858",
+      "cat-1017859",
+      "cat-1017860",
+      "cat-1017861",
+      "cat-1017862",
+      "cat-1017863",
+      "cat-1017864",
+      "cat-1017865",
+      "cat-1017866",
+      "cat-1017867",
+      "cat-1017868",
+      "cat-1017869",
+      "cat-1017870",
+      "cat-1017871",
+      "cat-1017872"
+    ],
+    "source_network_hl_uri_duplicated_on_two_reaches": true,
+    "gauge_distance_selected_reach_m": 56.92170163109036,
+    "gauge_distance_attribute_reach_m": 1105.5725343690633,
+    "official_station_drainage_area_sqmi": 92.1,
+    "station_drainage_area_sqkm": 238.537905904,
+    "selected_polygon_area_sqkm": 237.86550902767362,
+    "resolution_review_status": "reviewed_by_independent_agent_and_coordinator",
+    "spatial_limitation": "The full selected routed reach is a surrogate for an interior gauge location; no segment splitting was performed. Gauge output must select wb-1017693 rather than a junction sum at nex-1017694."
+  },
+  "generated": {
+    "private_stage_alias": "public-fixture-final",
+    "preparation_identity_sha256": "81244db9c23c141da82fd684e6829c80044a2a0c2d619f3976805e358353a4ac",
+    "generated_bound_file_count": 67,
+    "generated_bound_bytes": 423976,
+    "cfe_configurations": 31,
+    "noah_namelists": 31,
+    "root_receipt_separately_generated": true,
+    "geometry": {
+      "path": "config/public-watauga.gpkg",
+      "bytes": 253952,
+      "sha256": "76edff60e02c074f0e28e84ca33ab4f22cead829f748322598d5cad2e8a1a123",
+      "table": "divides",
+      "id_column": "divide_id",
+      "geometry_column": "geom",
+      "crs": "EPSG:5070",
+      "envelope": [
+        1256564.9997,
+        1545345.0,
+        1270035.0,
+        1572225.0003
+      ],
+      "catchment_area_sqkm": 237.86550902767362
+    },
+    "table_counts": {
+      "divides": 31,
+      "divide-attributes": 31,
+      "flowpaths": 31,
+      "flowpath-attributes": 31,
+      "flowpath-attributes-ml": 31,
+      "network": 171,
+      "nexus": 12,
+      "hydrolocations": 3,
+      "pois": 2
+    },
+    "start_time_utc": "2021-12-01T00:00:00Z",
+    "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+    "history_hours": 786,
+    "configuration": {
+      "cfe_drainage_source": "mean.slope_1km",
+      "cfe_drainage_transform": "identity",
+      "noah_terrain_transform": "degrees(arctan(tan(radians(mean.slope))/100))",
+      "groundwater_storage_ratio": 0.05,
+      "cfe_soil_storage_ratio": 0.05,
+      "routing_step_seconds": 300,
+      "routing_cpu_pool": 2,
+      "streamflow_assimilation": false,
+      "waterbody_breaks": false,
+      "source_attribute_units_status": "unverified",
+      "native_realization_status": "template_pending_weather_assembly",
+      "template_forcing_provider": "NetCDF",
+      "template_forcing_path": "./forcings/forcings.nc",
+      "full_scientific_configuration_validated": false
+    },
+    "domain_cut": {
+      "selected_gauge_output": "wb-1017693",
+      "terminal_nexus": "nex-1017694",
+      "terminal_downstream_is_outside_subset": true,
+      "adjacent_downstream_tributaries_excluded": true,
+      "gauge_output_is_junction_sum": false
+    }
+  },
+  "validation": {
+    "targeted_tests": 13,
+    "test_command": "PYTHONPATH=src python3 -m unittest tests/test_public_domain.py -v",
+    "synthetic_test_inputs": true,
+    "actual_public_geometry_check": {
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "polygons": 31,
+      "valid_polygons": 31,
+      "empty_polygons": 0,
+      "axis_matches": true,
+      "union_area_sqkm": 237.86550902767095,
+      "sum_polygon_area_sqkm": 237.86550902767104,
+      "geom_sha256": "76edff60e02c074f0e28e84ca33ab4f22cead829f748322598d5cad2e8a1a123"
+    },
+    "unchanged_source_sha256": "983300473d8edf8f27d8c3214077c5fa8e58fc301241ee3cd949d9defb4e3217",
+    "pyproj_version": "3.7.2",
+    "proj_version": "9.5.1",
+    "shapely_version": "2.1.2",
+    "geometry_repeated_preparation_sha256_identical": true,
+    "physical_qualification": false
+  },
+  "dependencies": {
+    "installation_scope": "task-local virtual environment",
+    "pinned_wheels": [
+      {
+        "filename": "certifi-2025.10.5-py3-none-any.whl",
+        "bytes": 163286,
+        "sha256": "0f212c2744a9bb6de0c56639a6f68afe01ecd92d91f14ae897c4fe7bbeeef0de"
+      },
+      {
+        "filename": "pyproj-3.7.2-cp314-cp314-macosx_14_0_arm64.whl",
+        "bytes": 4617456,
+        "sha256": "35dccbce8201313c596a970fde90e33605248b66272595c061b511c8100ccc08"
+      },
+      {
+        "filename": "shapely-2.1.2-cp314-cp314-macosx_11_0_arm64.whl",
+        "bytes": 1641463,
+        "sha256": "1ff629e00818033b8d71139565527ced7d776c269a49bd78c9df84e8f852190c"
+      }
+    ],
+    "numpy": "Reused read-only from forcing-agent task-local environment for Shapely checks; preparation uses pyproj only."
+  },
+  "rejected_acquisition_probe": {
+    "url": "https://www.lynker-spatial.com/hydrofabric/hfsubset/subset?identifier=Gages-03479000&identifier_type=hl&version=2.2&subset_type=nextgen&layer=divides&layer=flowpaths&layer=network&layer=nexus&layer=divide-attributes&layer=flowpath-attributes&layer=model-attributes",
+    "http_status": 200,
+    "content_type": "text/html",
+    "bytes": 443427,
+    "sha256": "ca9d346f491cd393351325ed1b3680be8769d47456dae44ac2c6be66a45171d6",
+    "reason": "HTTP 200 HTML landing page, not SQLite/GeoPackage"
+  },
+  "rights": {
+    "original_private_assets_used": false,
+    "third_party_payloads_committed": false,
+    "template_mit_notice_retained": true,
+    "dataset_redistribution_scope": "unresolved for communityhydrofabric object",
+    "related_lynker_license": {
+      "url": "https://lynker-spatial.s3-us-west-2.amazonaws.com/hydrofabric/v2.2/license.txt",
+      "bytes": 21424,
+      "sha256": "d123526dc77233276d2562402019abbd1dc6dfd64ef1ce5a3a73e6f054f60994",
+      "stated_license": "CC BY-NC-SA 4.0",
+      "stated_scope": "s3://lynker-spatial/hydrofabric/v2.2/; applicability to communityhydrofabric object not established"
+    }
+  },
+  "qualification_blockers": [
+    "Gauge/reach resolution requires independent source review",
+    "Source-attribute units and derivation require qualification",
+    "Noah parameter tables and loaded component compatibility require runtime qualification",
+    "Weather payloads, source clocks and spatial weights remain separate inputs",
+    "NetCDF template does not consume separately prepared provider CSV files; native assembly is incomplete",
+    "Terminal network cut and gauge output selection require runtime qualification",
+    "Generated endpoint interpretation requires native runtime qualification"
+  ],
+  "protected_original_access": {
+    "payloads_read": false,
+    "payloads_written": false,
+    "hydration_requested": false
+  },
+  "resource_limits": {
+    "archive_file_cap_bytes": 67108864,
+    "extracted_file_cap_bytes": 134217728,
+    "expanded_staging_cap_bytes": 268435456,
+    "domain_network_cap_bytes": 50331648,
+    "observed_archive_plus_sources_and_dependency_wheels_bytes": 32451420
+  },
+  "evidence_identity_sha256": "ddb07735957dff75594b665d36ff9588850ca8c519e7fd1e6791e74c303e63be"
+}

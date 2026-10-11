@@ -52,3 +52,7 @@ The [follow-up record](evidence/watauga-backup-search-followup-20261010.json) ex
 ## Next closure step
 
 Restore the remaining exact hash-bound members into an isolated permitted source location, or identify an existing resident equivalent. Do not hydrate the protected originals or replace their contents. Re-run bounded identity/staging inspection with explicit source aliases, then validate content, units, coverage, original clock boundaries and model configuration using the scientific-admission checks. These requirements preserve the [first physical experiment](FIRST_PHYSICAL_EXPERIMENT.md): 31 catchments, the 1 December 2021 origin, 786-hour parent history, two declared issues and 18 hourly forecast steps each. Changing or regenerating the fixture requires a separately identified scientific recipe and cannot silently close this baseline.
+
+## Separate public development fixture
+
+The owner's subsequent request activated RF-009A-PUBLIC. A [new public-source fixture](../fixtures/watauga-public-v1/README.md) now supplies independently generated geometry, configurations, complete weather and three serial input jobs for development. It has its own recipe and evidence identities, and zero model invocations. The historical restoration count remains 44/181 with 137 unavailable members; new bytes do not close that historical contract. A [custody-inventory/archive review](LOCAL_RECOVERY_DECISION_2026-10-10.md) found no new exact-hash recovery lead, so a broader scan remains contingent on a concrete named candidate.

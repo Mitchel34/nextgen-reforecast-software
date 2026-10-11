@@ -1,0 +1,178 @@
+{
+  "schema_version": "local-recovery-decision/0.1",
+  "observed_date": "2026-10-10",
+  "evidence_class": "fresh_bounded_custody_inventory_and_archive_index_comparison",
+  "status": "NO_NEW_EXACT_LOCAL_RECOVERY_LEAD",
+  "conclusion": "The concrete HYDRA review archive family provides no declared exact identity for any of the 137 missing historical Watauga members. It does not justify an unbounded system scan. A separately identified public-data fixture is the productive development path.",
+  "historical_fixture": {
+    "expected_members": 181,
+    "previously_verified_members": 44,
+    "missing_members": 137,
+    "counts_source": "docs/evidence/watauga-bundle-20261010.json",
+    "counts_rehashed_this_lookup": false,
+    "new_members_recovered": 0,
+    "fixture_identity_modified": false
+  },
+  "bound_public_evidence": [
+    {
+      "path": "native/ASSET_CLOSURE.json",
+      "sha256": "29a97cc6157a56ec2dfd525430df7c13a41e58b88ad6f4504061798e57a88f76"
+    },
+    {
+      "path": "docs/evidence/watauga-fixture-bindings-20261010.json",
+      "sha256": "bf610bb5a81f0dc8de2f09fd62e9a2ce07ab82cc3fb025b8cef5a5148b128919"
+    },
+    {
+      "path": "docs/evidence/watauga-bundle-20261010.json",
+      "sha256": "c77c86710c2a537ac90e6bf6808bb5b672aacfb0e38fb842f98aa1f059fc8eb3"
+    },
+    {
+      "path": "docs/evidence/watauga-backup-search-followup-20261010.json",
+      "sha256": "dcc87aafc2a33f49d847e0566f55d5eb6226f89a7e990d4ec21da66877b69c87"
+    }
+  ],
+  "fresh_search_scope": {
+    "source_alias": "Known separate resident HYDRA review delivery archive family and its custody inventories",
+    "metadata_entries_enumerated": 37,
+    "metadata_root_count": 1,
+    "directory_depth_limit": 2,
+    "inventory_count": 6,
+    "archive_count": 4,
+    "inventory_passes": 2,
+    "metadata_enumeration_per_root_limit": 20000,
+    "metadata_enumeration_total_limit": 60000,
+    "inventory_byte_limit": 16777216,
+    "archive_central_directory_byte_limit_each": 4194304,
+    "cumulative_inventory_bytes_read": 6858556,
+    "cumulative_archive_tail_and_index_bytes_read": 1415316,
+    "cumulative_source_bytes_read": 8273872,
+    "whole_home_scanned": false,
+    "system_scan_exhaustive": false,
+    "prior_preservation_root_truncations_not_repeated": true
+  },
+  "inventories": [
+    {
+      "inventory_alias": "ARCHIVE_MANIFEST.json",
+      "bytes": 2896,
+      "sha256": "76c2b0f46ca93ed4010810a3e64ca0d85005b554b9868f1a9b1e4666dd2a7198",
+      "missing_member_sha256_matches": 0
+    },
+    {
+      "inventory_alias": "DELIVERY_VERIFICATION.json",
+      "bytes": 1971,
+      "sha256": "6f7e310675702ac817b1d03b19eb90d65e621140df4b2530d40f054455c66935",
+      "missing_member_sha256_matches": 0
+    },
+    {
+      "inventory_alias": "EXPORTED_FILE_MANIFEST.json",
+      "bytes": 1658558,
+      "sha256": "343abe8ae951129b4c0221fc775b594efb92f21b2a709b01ff29112eb08de8cb",
+      "missing_member_sha256_matches": 0
+    },
+    {
+      "inventory_alias": "SOURCE_PATH_MAP.json",
+      "bytes": 1713362,
+      "sha256": "2aef189b5c361321668cedfafc1a96c1a8a6f55ddc5ee5b201d990b7307cb968",
+      "missing_member_sha256_matches": 0
+    },
+    {
+      "inventory_alias": "OMITTED_ARTIFACTS.json",
+      "bytes": 48095,
+      "sha256": "d4fdc638937274f64ca850d03ddcc5cf6c6c5b8462ccc46b307a20f51bd36bf3",
+      "missing_member_sha256_matches": 0
+    },
+    {
+      "inventory_alias": "DUPLICATE_INPUT_ALIASES.json",
+      "bytes": 4396,
+      "sha256": "6d1919a69ddd4acd81f059da16dd063bc60970f8e746c9078ed3d5a2eddbb6a8",
+      "missing_member_sha256_matches": 0
+    }
+  ],
+  "archives": [
+    {
+      "archive_basename": "HYDRA_review_bundle_20260917T233206Z.zip",
+      "entry_count": 2350,
+      "central_directory_bytes": 424163,
+      "central_directory_sha256": "7bf343ce931913159185d42106539005752a5b038287530e38e37c0b9d18ba3d",
+      "historical_fixture_path_matches": 0,
+      "missing_basename_matches": 48,
+      "missing_basename_and_size_matches": 32,
+      "member_payloads_read": false
+    },
+    {
+      "archive_basename": "HYDRA_review_predictions_20260917T233206Z_part01of03.zip",
+      "entry_count": 70,
+      "central_directory_bytes": 12248,
+      "central_directory_sha256": "87fbe253adccd853d472f8e3d3ad6929a168e1cdf2b6d586da7e2d0f5db71602",
+      "historical_fixture_path_matches": 0,
+      "missing_basename_matches": 0,
+      "missing_basename_and_size_matches": 0,
+      "member_payloads_read": false
+    },
+    {
+      "archive_basename": "HYDRA_review_predictions_20260917T233206Z_part02of03.zip",
+      "entry_count": 37,
+      "central_directory_bytes": 6466,
+      "central_directory_sha256": "610412eaa2e5dd70f57c793a2996147a35d90fef6e6a73c45840ce483bcf7b10",
+      "historical_fixture_path_matches": 0,
+      "missing_basename_matches": 0,
+      "missing_basename_and_size_matches": 0,
+      "member_payloads_read": false
+    },
+    {
+      "archive_basename": "HYDRA_review_predictions_20260917T233206Z_part03of03.zip",
+      "entry_count": 16,
+      "central_directory_bytes": 2553,
+      "central_directory_sha256": "d42081422d934255f497a1eed431fafc60798f9ec82d5766741430965dfa8721",
+      "historical_fixture_path_matches": 0,
+      "missing_basename_matches": 0,
+      "missing_basename_and_size_matches": 0,
+      "member_payloads_read": false
+    }
+  ],
+  "same_name_and_size_members": {
+    "noah_namelists": 31,
+    "routing_yaml": 1,
+    "total": 32,
+    "declared_export_manifest_hashes_matching_required_hashes": 0,
+    "interpretation": "Same basename and size are weak leads; the resident exported-file manifest declares different SHA-256 values for all 32 members. Archive member bytes were not read, so those declared archive hashes were not independently verified."
+  },
+  "source_metadata_comparison": {
+    "files_checked": 10,
+    "changed_files": 0,
+    "fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags",
+      "allocated_blocks"
+    ],
+    "atime_compared": false
+  },
+  "actions": {
+    "original_research_payloads_opened": false,
+    "custody_inventory_files_read": true,
+    "archive_member_payloads_read": false,
+    "archive_extraction_performed": false,
+    "hydration_performed": false,
+    "downloads_performed": false,
+    "original_files_written": false,
+    "inherited_code_executed": false,
+    "model_runs": 0
+  },
+  "private_evidence": {
+    "git_ignored_path": ".local/public-fixture-20261010/local-recovery/delivery-index-comparison.json",
+    "sha256": "0a2973d8474ccd2f7c2ec70a92e70765296187afd760a7b0c47da934c7294b17",
+    "publicly_deposited": false
+  },
+  "next_action": "Continue a new recipe-bound public-data fixture. Resume historical recovery only when a specific backup, exported manifest with a required hash, cloud object, or named resident candidate is identified.",
+  "limitations": [
+    "This is a bounded follow-up of a concrete archive family, not proof that no exact backup exists anywhere.",
+    "Two earlier preservation-root enumerations were truncated near 60000 entries; this follow-up does not complete those scans.",
+    "Custody-manifest hashes are declared metadata, not freshly verified member payload hashes.",
+    "The original historical fixture remains incomplete and cannot be silently completed by regenerated inputs."
+  ],
+  "execution_ready": false,
+  "new_physical_result": false
+}

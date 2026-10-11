@@ -1,0 +1,133 @@
+{
+  "schema_version": "public-native-assembly-evidence/0.1",
+  "planning_date": "2026-10-10",
+  "new_fixture": true,
+  "historical_fixture_restored": false,
+  "input_layout_assembled": true,
+  "execution_ready": false,
+  "native_model_run_performed": false,
+  "private_stage_alias": "public-native-assembly-final",
+  "assembly_identity_sha256": "c650369eb86228ea5961b8fef9e0898f4ad257653f8a795088c7234d8332b959",
+  "domain_preparation_identity_sha256": "81244db9c23c141da82fd684e6829c80044a2a0c2d619f3976805e358353a4ac",
+  "weather_preparation_identity_sha256": "085efd5725eb87c222258c053a3aae5914f25f231f66e9bb31d2e8959afea070",
+  "native_source_revision": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+  "native_source_bindings": {
+    "include/forcing/AorcForcing.hpp": {
+      "bytes": 5024,
+      "sha256": "1d87aece1286c1c7578d064d6219de06ce9685d9a4466a1df35c522e28cedb26"
+    },
+    "include/forcing/CsvPerFeatureForcingProvider.hpp": {
+      "bytes": 18201,
+      "sha256": "d714746833198eb9ddd64284ed98a7cf6c184d02416916e7413a698db9e96ff2"
+    },
+    "include/realizations/catchment/Formulation_Constructors.hpp": {
+      "bytes": 3057,
+      "sha256": "e199acab0c00797d84510572c9c58a0eef441a44585059f04109c550d501cce6"
+    },
+    "include/realizations/catchment/Formulation_Manager.hpp": {
+      "bytes": 34516,
+      "sha256": "9082aa1a9b59954643697da632066d4a4f9c7a8dd7a05b860abb2d492d8ced79"
+    },
+    "include/simulation_time/Simulation_Time.hpp": {
+      "bytes": 5384,
+      "sha256": "5a1ed55ef6bc5a5c8f69b0f489a3690bf842267786e71a811cdb6705c4489a06"
+    },
+    "src/NGen.cpp": {
+      "bytes": 25682,
+      "sha256": "aa5fae20dfd9459199a377bc2cd3e00e535b4ffe4f90aee3c60cf5efd83b3b19"
+    }
+  },
+  "assembler": {
+    "bytes": 13457,
+    "sha256": "7bde151b92c836055f0872dbc1d0563b7529e27b42261107be52679c735e86b4"
+  },
+  "jobs": [
+    {
+      "path": "history",
+      "kind": "history_only",
+      "issue_time_utc": null,
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "provider_hours_per_catchment": 786,
+      "history_hours": 786,
+      "forecast_hours": 0,
+      "routing_five_minute_steps": 9432,
+      "selected_gauge_output": "wb-1017693"
+    },
+    {
+      "path": "serial-20220101T2300Z",
+      "kind": "independent_serial_replay",
+      "issue_time_utc": "2022-01-01T23:00:00Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T17:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 16:00:00",
+      "provider_hours_per_catchment": 785,
+      "history_hours": 767,
+      "forecast_hours": 18,
+      "routing_five_minute_steps": 9420,
+      "selected_gauge_output": "wb-1017693"
+    },
+    {
+      "path": "serial-20220102T0000Z",
+      "kind": "independent_serial_replay",
+      "issue_time_utc": "2022-01-02T00:00:00Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "provider_hours_per_catchment": 786,
+      "history_hours": 768,
+      "forecast_hours": 18,
+      "routing_five_minute_steps": 9432,
+      "selected_gauge_output": "wb-1017693"
+    }
+  ],
+  "catchment_count": 31,
+  "generated_bound_files": 291,
+  "generated_bound_bytes": 12247061,
+  "consumed_weather_asset_count": 93,
+  "native_time_semantics": "NGen end_time is inclusive last provider label; physical stop and Noah enddate are separate exclusive interval endpoints",
+  "inspection": [
+    {
+      "job": "history",
+      "catchment_csvs": 31,
+      "exact_row_counts": true,
+      "last_provider_labels_match": true,
+      "selector": "CsvPerFeature"
+    },
+    {
+      "job": "serial-20220101T2300Z",
+      "catchment_csvs": 31,
+      "exact_row_counts": true,
+      "last_provider_labels_match": true,
+      "selector": "CsvPerFeature"
+    },
+    {
+      "job": "serial-20220102T0000Z",
+      "catchment_csvs": 31,
+      "exact_row_counts": true,
+      "last_provider_labels_match": true,
+      "selector": "CsvPerFeature"
+    }
+  ],
+  "validation": {
+    "targeted_tests": 6,
+    "synthetic_test_inputs": true,
+    "test_command": "PYTHONPATH=src python3 -m unittest tests/test_public_native_assembly.py -v",
+    "source_and_weather_hashes_verified_before_copy": true,
+    "generated_native_layout_frozen": true,
+    "native_runtime_attestation": false,
+    "post_assembly_bound_source_assets_reverified": 167
+  },
+  "qualification_blockers": [
+    "No native execution or loaded-library attestation",
+    "Noah static parameter tables and component/library paths require qualification",
+    "Noah endpoint behavior and routing terminal cut require physical validation",
+    "Hydrofabric attributes, meteorological sampling and physical references require scientific qualification",
+    "Serial input assembly does not establish shared-history branching or complete land-state recovery"
+  ],
+  "source_files_unchanged": true,
+  "protected_original_payload_reads": false,
+  "protected_original_writes": false,
+  "evidence_identity_sha256": "a6086877ba18a1df3fbf91f869785d48c143564138da7dfc2e98b072b00336d1"
+}

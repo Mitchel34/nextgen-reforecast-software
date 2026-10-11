@@ -1,0 +1,655 @@
+{
+  "acquisition": {
+    "approved_max_requests": 2000,
+    "approved_max_response_bytes": 16777216,
+    "approved_response_budget_bytes": 805306368,
+    "coordinate_supplement_bytes": 91010,
+    "coordinate_supplement_request_count": 132,
+    "final_offline_revalidation_request_count": 0,
+    "final_offline_revalidation_response_bytes": 0,
+    "weather_request_count": 878,
+    "weather_response_bytes": 376585861
+  },
+  "axis_sha256": "b7ece6e3b58da66d2ef8eeb37cd96edf5757c3d01c3d4e0152af3a68de371137",
+  "catchment_count": 31,
+  "catchment_ids": [
+    "cat-1017689",
+    "cat-1017690",
+    "cat-1017691",
+    "cat-1017692",
+    "cat-1017693",
+    "cat-1017847",
+    "cat-1017848",
+    "cat-1017849",
+    "cat-1017850",
+    "cat-1017851",
+    "cat-1017852",
+    "cat-1017853",
+    "cat-1017854",
+    "cat-1017855",
+    "cat-1017856",
+    "cat-1017857",
+    "cat-1017858",
+    "cat-1017859",
+    "cat-1017860",
+    "cat-1017861",
+    "cat-1017862",
+    "cat-1017863",
+    "cat-1017864",
+    "cat-1017865",
+    "cat-1017866",
+    "cat-1017867",
+    "cat-1017868",
+    "cat-1017869",
+    "cat-1017870",
+    "cat-1017871",
+    "cat-1017872"
+  ],
+  "content_preparation_complete": true,
+  "decoded_payloads": [
+    {
+      "data_row_count": 24366,
+      "duplicate_row_count": 0,
+      "missing_required_row_count": 0,
+      "nonfinite_values": 0,
+      "path": "decoded/history.csv",
+      "sha256": "35312fafa209d59a9a224e2c16d686960d308e2ef3c3110db905249a3f4734f3",
+      "size_bytes": 5040899,
+      "variable_ranges": {
+        "APCP": {
+          "max": 7.404853284335126,
+          "min": 0.0
+        },
+        "DLWRF_surface": {
+          "max": 374.200905588121,
+          "min": 172.92870787463912
+        },
+        "DSWRF_surface": {
+          "max": 485.87235872517294,
+          "min": 0.0
+        },
+        "PRES_surface": {
+          "max": 92838.78284572912,
+          "min": 86962.66743664067
+        },
+        "SPFH_2maboveground": {
+          "max": 0.011899500379142,
+          "min": 0.0006537564407539817
+        },
+        "TMP_2maboveground": {
+          "max": 294.5437300836152,
+          "min": 266.1977563159706
+        },
+        "UGRD_10maboveground": {
+          "max": 13.343797060727953,
+          "min": -5.3374953083088865
+        },
+        "VGRD_10maboveground": {
+          "max": 9.265712258902717,
+          "min": -9.083337352984865
+        }
+      }
+    },
+    {
+      "data_row_count": 558,
+      "duplicate_row_count": 0,
+      "missing_required_row_count": 0,
+      "nonfinite_values": 0,
+      "path": "decoded/forecast-20220101T2300Z.csv",
+      "sha256": "33c959c2a92312d294b9c6154377ea0538a0d8cb9b44b9b62c2557eb270768c9",
+      "size_bytes": 132438,
+      "variable_ranges": {
+        "LWDOWN": {
+          "max": 390.8772309146584,
+          "min": 291.2118530892039
+        },
+        "PSFC": {
+          "max": 90758.32287361562,
+          "min": 86381.18374246577
+        },
+        "Q2D": {
+          "max": 0.011492307376998091,
+          "min": 0.008062857992556008
+        },
+        "RAINRATE": {
+          "max": 0.00403383212126598,
+          "min": 0.0
+        },
+        "SWDOWN": {
+          "max": 379.4990083232621,
+          "min": 0.0
+        },
+        "T2D": {
+          "max": 290.7545622962857,
+          "min": 283.37866071406125
+        },
+        "U2D": {
+          "max": 6.911769747264723,
+          "min": -3.40857327888882
+        },
+        "V2D": {
+          "max": 8.256009067557278,
+          "min": -3.1880935516265416
+        }
+      }
+    },
+    {
+      "data_row_count": 558,
+      "duplicate_row_count": 0,
+      "missing_required_row_count": 0,
+      "nonfinite_values": 0,
+      "path": "decoded/forecast-20220102T0000Z.csv",
+      "sha256": "e80801169bec5ee9c565b87cbb5a1ff8896a03f35392348300a72905d6032669",
+      "size_bytes": 133764,
+      "variable_ranges": {
+        "LWDOWN": {
+          "max": 389.59072160689385,
+          "min": 304.9188057177151
+        },
+        "PSFC": {
+          "max": 90705.40491287682,
+          "min": 86321.83670425514
+        },
+        "Q2D": {
+          "max": 0.01175123420632959,
+          "min": 0.008141509903634797
+        },
+        "RAINRATE": {
+          "max": 0.0040260525533315356,
+          "min": 0.0
+        },
+        "SWDOWN": {
+          "max": 447.39142253332085,
+          "min": 0.0
+        },
+        "T2D": {
+          "max": 290.2665843462708,
+          "min": 283.52909931047134
+        },
+        "U2D": {
+          "max": 7.866463101831408,
+          "min": -3.142160067369009
+        },
+        "V2D": {
+          "max": 6.772267392481401,
+          "min": -4.793850072856739
+        }
+      }
+    }
+  ],
+  "dependencies": {
+    "geos": "3.13.1",
+    "h5py": "3.16.0",
+    "hdf5": "2.0.0",
+    "numpy": "2.5.4",
+    "proj": "9.5.1",
+    "pyproj": "3.7.2",
+    "python": "3.14.7",
+    "shapely": "2.1.2",
+    "zstandard": "0.25.0"
+  },
+  "domain_preparation_receipt": "fixture-v1/DOMAIN_PREPARATION.json",
+  "domain_sha256": "76edff60e02c074f0e28e84ca33ab4f22cead829f748322598d5cad2e8a1a123",
+  "evidence_class": "prospective_public_data_development_fixture",
+  "evidence_identity_sha256": "5677678e6b90f10bc18227bf4985cb962a9a4fe3132cf1cd0b224e073b6180ae",
+  "execution_ready": false,
+  "failed_attempts": [
+    {
+      "attempt": "offline-replay-v2",
+      "failure": "Source NWM coordinate vectors preserve rounding up to0.125m/0.0625m; strict1e-6m arithmetic-origin check refused them",
+      "result": "failure retained; final replay uses published coordinate hashes and midpoint cell boundaries with0.25m declared nominal-grid tolerance"
+    }
+  ],
+  "fixture_id": "watauga-public-rebuild-v1",
+  "fixture_preparation_identity_sha256": "085efd5725eb87c222258c053a3aae5914f25f231f66e9bb31d2e8959afea070",
+  "forecast_catchment_hours": 1116,
+  "forecast_grid": {
+    "crs_attrs": {
+      "GeoTransform": "-2303999.17655 1000.0 0 1919999.66329 0 -1000.0 ",
+      "_CoordinateAxes": "y x",
+      "_CoordinateTransformType": "Projection",
+      "earth_radius": 6370000.0,
+      "esri_pe_string": "PROJCS[\"Lambert_Conformal_Conic\",GEOGCS[\"GCS_Sphere\",DATUM[\"D_Sphere\",SPHEROID[\"Sphere\",6370000.0,0.0]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"false_easting\",0.0],PARAMETER[\"false_northing\",0.0],PARAMETER[\"central_meridian\",-97.0],PARAMETER[\"standard_parallel_1\",30.0],PARAMETER[\"standard_parallel_2\",60.0],PARAMETER[\"latitude_of_origin\",40.0],UNIT[\"Meter\",1.0]];-35691800 -29075200 10000;-100000 10000;-100000 10000;0.001;0.001;0.001;IsHighPrecision",
+      "false_easting": 0.0,
+      "false_northing": 0.0,
+      "grid_mapping_name": "lambert_conformal_conic",
+      "inverse_flattening": 0.0,
+      "latitude_of_projection_origin": 40.0,
+      "long_name": "CRS definition",
+      "longitude_of_central_meridian": -97.0,
+      "longitude_of_prime_meridian": 0.0,
+      "semi_major_axis": 6370000.0,
+      "spatial_ref": "PROJCS[\"Lambert_Conformal_Conic\",GEOGCS[\"GCS_Sphere\",DATUM[\"D_Sphere\",SPHEROID[\"Sphere\",6370000.0,0.0]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"false_easting\",0.0],PARAMETER[\"false_northing\",0.0],PARAMETER[\"central_meridian\",-97.0],PARAMETER[\"standard_parallel_1\",30.0],PARAMETER[\"standard_parallel_2\",60.0],PARAMETER[\"latitude_of_origin\",40.0],UNIT[\"Meter\",1.0]];-35691800 -29075200 10000;-100000 10000;-100000 10000;0.001;0.001;0.001;IsHighPrecision",
+      "standard_parallel": [
+        30.0,
+        60.0
+      ],
+      "transform_name": "lambert_conformal_conic"
+    },
+    "weights_sha256": "d4a5144375d5813981e6a12d823cdda17a097cdf14f4b8701f22705df5bdc822",
+    "x_attrs": {
+      "CLASS": "DIMENSION_SCALE",
+      "NAME": "x",
+      "_CoordinateAxisType": "GeoX",
+      "_Netcdf4Dimid": 2,
+      "long_name": "x coordinate of projection",
+      "resolution": 1000.0,
+      "standard_name": "projection_x_coordinate",
+      "units": "m"
+    },
+    "x_sha256": "bffd4235b9f6a5796e10bb994e5033e5bf1a13cc89c196da21915f84f16706e8",
+    "y_attrs": {
+      "CLASS": "DIMENSION_SCALE",
+      "NAME": "y",
+      "_CoordinateAxisType": "GeoY",
+      "_Netcdf4Dimid": 1,
+      "long_name": "y coordinate of projection",
+      "resolution": 1000.0,
+      "standard_name": "projection_y_coordinate",
+      "units": "m"
+    },
+    "y_sha256": "acf7038c3ce6aa0e2405a738d06d41e46f86ffb3af995bc4118faed45c90eace"
+  },
+  "historical_benchmark_restored": false,
+  "historical_operational_availability_verified": false,
+  "history_catchment_hours": 24366,
+  "history_grid": {
+    "crs": "EPSG:4326",
+    "latitude_sha256": "4f0ec6ba35d57dbbb0d36c31b50465e5856a67a9713cb7345d59f54fa3fa8e12",
+    "longitude_sha256": "bf8c79d0dec95fd946b03e2619f780ea09bb1a0277744b3b05fdd91e763e29f3",
+    "metadata_sha256": {
+      "2021": "8ce93175828c0b02e679a98a61b9d021e5e0965c68983f01df5a68a2a963a863",
+      "2022": "4705655f160ac9e3bc12712456dc053ebd023ca46056553aec6e56a89105f59c"
+    },
+    "weights_sha256": "282586d7234c549eedb43e51009432bba2cecf1784dca4d5e35207a7ec060317"
+  },
+  "initial_draft_comparison": {
+    "decoded/forecast-20220101T2300Z.csv": {
+      "decoded_bytes_identical": true,
+      "maximum_absolute_difference_by_variable": {
+        "LWDOWN": 0.0,
+        "PSFC": 0.0,
+        "Q2D": 0.0,
+        "RAINRATE": 0.0,
+        "SWDOWN": 0.0,
+        "T2D": 0.0,
+        "U2D": 0.0,
+        "V2D": 0.0
+      }
+    },
+    "decoded/forecast-20220102T0000Z.csv": {
+      "decoded_bytes_identical": true,
+      "maximum_absolute_difference_by_variable": {
+        "LWDOWN": 0.0,
+        "PSFC": 0.0,
+        "Q2D": 0.0,
+        "RAINRATE": 0.0,
+        "SWDOWN": 0.0,
+        "T2D": 0.0,
+        "U2D": 0.0,
+        "V2D": 0.0
+      }
+    },
+    "decoded/history.csv": {
+      "decoded_bytes_identical": false,
+      "maximum_absolute_difference_by_variable": {
+        "APCP": 7.078782005009998e-13,
+        "DLWRF_surface": 2.0463630789890885e-12,
+        "DSWRF_surface": 3.723243935382925e-12,
+        "PRES_surface": 1.3969838619232178e-09,
+        "SPFH_2maboveground": 1.2758891165809416e-15,
+        "TMP_2maboveground": 3.126388037344441e-12,
+        "UGRD_10maboveground": 4.8197001945027296e-12,
+        "VGRD_10maboveground": 1.7257306694773433e-12
+      }
+    }
+  },
+  "issue_times_utc": [
+    "2022-01-01T23:00:00Z",
+    "2022-01-02T00:00:00Z"
+  ],
+  "native_provider_time_encoding": "UTC rendered as %Y-%m-%d %H:%M:%S for pinned ngen CsvPerFeature parser; decoded source CSVs retain canonical UTC Z timestamps",
+  "origin_time_utc": "2021-12-01T00:00:00Z",
+  "physical_qualification": false,
+  "precipitation_treatment": {
+    "forecast": "RAINRATE mm/s equivalent to kg/m^2/s for liquid-water depth; no division",
+    "history": "APCP end-labelled one-hour accumulated kg/m^2 divided by3600 exactly once"
+  },
+  "provider_audit": {
+    "all_provider_values_equal_decoded_transform": true,
+    "provider_file_count": 93,
+    "verified_catchment_hours": 25482
+  },
+  "public_sources": [
+    {
+      "base_url": "https://noaa-nws-aorc-v1-1-1km.s3.amazonaws.com/",
+      "current_warning": "2026-04-02 notice describes incorrectly masked rows and ongoing Zarr regeneration; selected required cells passed finite/fill checks, broader warning remains unqualified",
+      "product": "AORC v1.1",
+      "registry_url": "https://registry.opendata.aws/noaa-nws-aorc/",
+      "years": [
+        2021,
+        2022
+      ]
+    },
+    {
+      "base_url": "https://storage.googleapis.com/national-water-model/",
+      "bucket": "national-water-model",
+      "product": "NWM v2.1 short-range meteorological forcing",
+      "registry_context_url": "https://registry.opendata.aws/noaa-nwm-pds/",
+      "whole_object_count": 36,
+      "whole_object_sha256_status": "not computed; sparse responses have retained segment SHA-256 and generation-bound cloud checksums",
+      "whole_objects_total_bytes": 5555249651
+    }
+  ],
+  "qualification_blockers": [
+    "prospective fixture needs independent physical references",
+    "current AORC registry masking/regeneration notice unresolved for release",
+    "shortwave sampling physical interpretation not qualified",
+    "runtime/configuration/profile qualification separate",
+    "archive current generation is not proof of causal availability at issue"
+  ],
+  "qualified_source_clocks": true,
+  "radiation_treatment": {
+    "forecast": "source SWDOWN cell_methods time point; end-labelled provider sampling; physical suitability unqualified",
+    "history": "same-label source values; physical interval interpretation unqualified"
+  },
+  "recipe_sha256": "113ee8b7651fcd770d4538c27c1f2299cb87de8f55b6979ae8bbddb1e36e85bc",
+  "recorded_date": "2026-10-10",
+  "schema_version": "public-forcing-feasibility/0.2",
+  "source_objects": [
+    {
+      "crc32c": "wOD/SA==",
+      "generation": "1682959842534575",
+      "md5Hash": "xhPuUIzKz0fdqLR12kSS2w==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f001.conus.nc",
+      "size": "152744873",
+      "updated": "2023-05-01T16:50:42.573Z"
+    },
+    {
+      "crc32c": "xSpZPQ==",
+      "generation": "1682959849890851",
+      "md5Hash": "PKDMws/WV0ClQnTHH3NHHA==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f002.conus.nc",
+      "size": "145521705",
+      "updated": "2023-05-01T16:50:49.930Z"
+    },
+    {
+      "crc32c": "fKywKw==",
+      "generation": "1682959843950572",
+      "md5Hash": "8F5bKvMGZoA3aPYL2aKnDg==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f003.conus.nc",
+      "size": "145169933",
+      "updated": "2023-05-01T16:50:43.997Z"
+    },
+    {
+      "crc32c": "UAVtKA==",
+      "generation": "1682959846554401",
+      "md5Hash": "1sfQCXezVOxjMNL72EqmDw==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f004.conus.nc",
+      "size": "145692809",
+      "updated": "2023-05-01T16:50:46.593Z"
+    },
+    {
+      "crc32c": "yBwtqw==",
+      "generation": "1682959846098106",
+      "md5Hash": "fZJGmfZL3qPqKSZXyEbISw==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f005.conus.nc",
+      "size": "146163330",
+      "updated": "2023-05-01T16:50:46.137Z"
+    },
+    {
+      "crc32c": "m5Qxww==",
+      "generation": "1682959846220447",
+      "md5Hash": "PnXGEtdHolBne6zVIM65Eg==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f006.conus.nc",
+      "size": "146246778",
+      "updated": "2023-05-01T16:50:46.259Z"
+    },
+    {
+      "crc32c": "k1//Tw==",
+      "generation": "1682959845779384",
+      "md5Hash": "H2CFE8Sgm0p5xJu5dzMfGQ==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f007.conus.nc",
+      "size": "146199336",
+      "updated": "2023-05-01T16:50:45.820Z"
+    },
+    {
+      "crc32c": "zDQttA==",
+      "generation": "1682959852222028",
+      "md5Hash": "Wq6xnfHN0rct+wVoVnHfyg==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f008.conus.nc",
+      "size": "146197561",
+      "updated": "2023-05-01T16:50:52.261Z"
+    },
+    {
+      "crc32c": "g+kPKA==",
+      "generation": "1682959848423719",
+      "md5Hash": "uaQzGNPDyBKAPdAMYfqrlg==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f009.conus.nc",
+      "size": "146311768",
+      "updated": "2023-05-01T16:50:48.463Z"
+    },
+    {
+      "crc32c": "tGHRZA==",
+      "generation": "1682959849990526",
+      "md5Hash": "iryMxpIdcu/XomErrOli5Q==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f010.conus.nc",
+      "size": "146406258",
+      "updated": "2023-05-01T16:50:50.030Z"
+    },
+    {
+      "crc32c": "30Drcw==",
+      "generation": "1682959848985083",
+      "md5Hash": "6bvROzgd6V6m4cw5972A+A==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f011.conus.nc",
+      "size": "146810674",
+      "updated": "2023-05-01T16:50:49.025Z"
+    },
+    {
+      "crc32c": "/L8YsQ==",
+      "generation": "1682959851396681",
+      "md5Hash": "l3FFruhd1B+LIwaYOszhaA==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f012.conus.nc",
+      "size": "147239259",
+      "updated": "2023-05-01T16:50:51.436Z"
+    },
+    {
+      "crc32c": "FTuU0A==",
+      "generation": "1682959850315612",
+      "md5Hash": "X/gLgbUCPBdE03ZZ9fRaFQ==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f013.conus.nc",
+      "size": "147791520",
+      "updated": "2023-05-01T16:50:50.355Z"
+    },
+    {
+      "crc32c": "kOT2pw==",
+      "generation": "1682959855828773",
+      "md5Hash": "dkU7AQilCyukRNgZJbnngw==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f014.conus.nc",
+      "size": "154757605",
+      "updated": "2023-05-01T16:50:55.868Z"
+    },
+    {
+      "crc32c": "h/gNYw==",
+      "generation": "1682959852684266",
+      "md5Hash": "XN1ZVrxP9IBAUhNR2+7I2w==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f015.conus.nc",
+      "size": "164033681",
+      "updated": "2023-05-01T16:50:52.723Z"
+    },
+    {
+      "crc32c": "PIQQBQ==",
+      "generation": "1682959854912605",
+      "md5Hash": "UztMFq+w17PIQOd9StndHQ==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f016.conus.nc",
+      "size": "173638318",
+      "updated": "2023-05-01T16:50:54.952Z"
+    },
+    {
+      "crc32c": "O8TyrQ==",
+      "generation": "1682959853648169",
+      "md5Hash": "wIK2bhltIS1hsb4ZYEwBQA==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f017.conus.nc",
+      "size": "179475015",
+      "updated": "2023-05-01T16:50:53.688Z"
+    },
+    {
+      "crc32c": "W5Q9jg==",
+      "generation": "1682959853294663",
+      "md5Hash": "gRnvVEw9Y5WD9YEmXV1GBA==",
+      "name": "nwm.20220101/forcing_short_range/nwm.t23z.short_range.forcing.f018.conus.nc",
+      "size": "181965107",
+      "updated": "2023-05-01T16:50:53.334Z"
+    },
+    {
+      "crc32c": "J/hRHQ==",
+      "generation": "1682974281929308",
+      "md5Hash": "dtn7ZSI1mpj5K93pxOiDjw==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f001.conus.nc",
+      "size": "144886613",
+      "updated": "2023-05-01T20:51:22.027Z"
+    },
+    {
+      "crc32c": "3WvIww==",
+      "generation": "1682974283775007",
+      "md5Hash": "edOCbBE0rENB3zli9eYjOg==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f002.conus.nc",
+      "size": "145073586",
+      "updated": "2023-05-01T20:51:23.872Z"
+    },
+    {
+      "crc32c": "aijI6g==",
+      "generation": "1682974283453428",
+      "md5Hash": "+vQbhxb6YnCco67QlVgZdg==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f003.conus.nc",
+      "size": "145746892",
+      "updated": "2023-05-01T20:51:23.547Z"
+    },
+    {
+      "crc32c": "umL3Bw==",
+      "generation": "1682974297058270",
+      "md5Hash": "uSvrVLqT+wK9AHYY5UCzgg==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f004.conus.nc",
+      "size": "146176848",
+      "updated": "2023-05-01T20:51:37.155Z"
+    },
+    {
+      "crc32c": "EU9RFQ==",
+      "generation": "1682974286642702",
+      "md5Hash": "xeIbwB7cg4RlpFp52mNvrQ==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f005.conus.nc",
+      "size": "146303864",
+      "updated": "2023-05-01T20:51:26.737Z"
+    },
+    {
+      "crc32c": "b+Ybkg==",
+      "generation": "1682974288048356",
+      "md5Hash": "5vhibbtl5ewjFTugicCHTA==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f006.conus.nc",
+      "size": "146121900",
+      "updated": "2023-05-01T20:51:28.144Z"
+    },
+    {
+      "crc32c": "mGoA1g==",
+      "generation": "1682974287574445",
+      "md5Hash": "wYJCQiolRk8GfOXrUSPzPg==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f007.conus.nc",
+      "size": "146169664",
+      "updated": "2023-05-01T20:51:27.603Z"
+    },
+    {
+      "crc32c": "1huQRA==",
+      "generation": "1682974290029836",
+      "md5Hash": "e6usFUzFsixEMfQgsyHY8A==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f008.conus.nc",
+      "size": "146214562",
+      "updated": "2023-05-01T20:51:30.059Z"
+    },
+    {
+      "crc32c": "fqYL6A==",
+      "generation": "1682974292267927",
+      "md5Hash": "lQfyV6cHPz0FTpIhu2N5kQ==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f009.conus.nc",
+      "size": "146477249",
+      "updated": "2023-05-01T20:51:32.363Z"
+    },
+    {
+      "crc32c": "E/LR2g==",
+      "generation": "1682974293774125",
+      "md5Hash": "4fXoLqSHgwumseZtr+9b6Q==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f010.conus.nc",
+      "size": "146921491",
+      "updated": "2023-05-01T20:51:33.803Z"
+    },
+    {
+      "crc32c": "ZUHsag==",
+      "generation": "1682974292052997",
+      "md5Hash": "u9a6yVmER6W5Mp7KNH2t/A==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f011.conus.nc",
+      "size": "147462397",
+      "updated": "2023-05-01T20:51:32.094Z"
+    },
+    {
+      "crc32c": "vexBLg==",
+      "generation": "1682974316911921",
+      "md5Hash": "Z4+mG3dk5UUQwh+G/t9Tvw==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f012.conus.nc",
+      "size": "147935395",
+      "updated": "2023-05-01T20:51:56.942Z"
+    },
+    {
+      "crc32c": "rYDkCA==",
+      "generation": "1682974299816737",
+      "md5Hash": "X7gbDT/LvLddF+iUL/cOsA==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f013.conus.nc",
+      "size": "154831306",
+      "updated": "2023-05-01T20:51:39.867Z"
+    },
+    {
+      "crc32c": "od1Pog==",
+      "generation": "1682974297729437",
+      "md5Hash": "d4SeKmQzwiHMM45T9M4Giw==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f014.conus.nc",
+      "size": "164208024",
+      "updated": "2023-05-01T20:51:37.758Z"
+    },
+    {
+      "crc32c": "ROY0TQ==",
+      "generation": "1682974309162266",
+      "md5Hash": "5N9dGGH8CT68ZXLl2kv5qQ==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f015.conus.nc",
+      "size": "173847849",
+      "updated": "2023-05-01T20:51:49.191Z"
+    },
+    {
+      "crc32c": "/LGmOQ==",
+      "generation": "1682974366859101",
+      "md5Hash": "Vonsqi/jdmg0WE1U2Whh5g==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f016.conus.nc",
+      "size": "179756328",
+      "updated": "2023-05-01T20:52:46.889Z"
+    },
+    {
+      "crc32c": "5u4whw==",
+      "generation": "1682974305629966",
+      "md5Hash": "WFdoJzeOFiT0OLmx7JlmgA==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f017.conus.nc",
+      "size": "182163746",
+      "updated": "2023-05-01T20:51:45.658Z"
+    },
+    {
+      "crc32c": "FWgFvQ==",
+      "generation": "1682974304650845",
+      "md5Hash": "ddG/UO/Qs8n+l0W8k5bQlA==",
+      "name": "nwm.20220102/forcing_short_range/nwm.t00z.short_range.forcing.f018.conus.nc",
+      "size": "182586407",
+      "updated": "2023-05-01T20:51:44.680Z"
+    }
+  ],
+  "spatial_method": "polygon intersection area in EPSG:5070; source cell edges densified at quarter-cell intervals; no missing-cell renormalization",
+  "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -p test_public_forcing.py -v",
+    "passed": 11
+  }
+}

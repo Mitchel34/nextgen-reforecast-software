@@ -1,0 +1,328 @@
+{
+  "schema_version": "public-fixture-increment/0.1",
+  "observed_at_utc": "2026-10-11T03:44:11.993621+00:00",
+  "package_version": "0.1.0a4",
+  "preceding_commit": "da132916086e33d9be6284cd019060a5743d5dd0",
+  "fixture_id": "watauga-public-rebuild-v1",
+  "fixture_manifest_identity_sha256": "63695c2ecf56c0de03952f2fdf8bb57fe940454891401d090b2a2f8cec5ae446",
+  "source_bindings": [
+    {
+      "path": "src/ngen_reforecast/__init__.py",
+      "size_bytes": 108,
+      "sha256": "1c36132876563e2dd11f34ed2886cab663e3e54fb608eeca82a2d0b936af66ed"
+    },
+    {
+      "path": "src/ngen_reforecast/__main__.py",
+      "size_bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "src/ngen_reforecast/bundle.py",
+      "size_bytes": 16279,
+      "sha256": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576"
+    },
+    {
+      "path": "src/ngen_reforecast/campaign.py",
+      "size_bytes": 28543,
+      "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+    },
+    {
+      "path": "src/ngen_reforecast/cli.py",
+      "size_bytes": 12934,
+      "sha256": "0315c4f55bf5bbfcc5a2c693b2e972bded2a679db10fd421b2eee16e3a237166"
+    },
+    {
+      "path": "src/ngen_reforecast/configuration.py",
+      "size_bytes": 12129,
+      "sha256": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33"
+    },
+    {
+      "path": "src/ngen_reforecast/forcing.py",
+      "size_bytes": 23607,
+      "sha256": "4dc0c1e5360044de796efa4593a8452ae70d28e20c8977b83229594d03e856b7"
+    },
+    {
+      "path": "src/ngen_reforecast/provenance.py",
+      "size_bytes": 5733,
+      "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+    },
+    {
+      "path": "src/ngen_reforecast/runtime.py",
+      "size_bytes": 13642,
+      "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+    },
+    {
+      "path": "scripts/public_fixture/assemble_native.py",
+      "size_bytes": 13457,
+      "sha256": "7bde151b92c836055f0872dbc1d0563b7529e27b42261107be52679c735e86b4"
+    },
+    {
+      "path": "scripts/public_fixture/audit_prepared.py",
+      "size_bytes": 15052,
+      "sha256": "90eabaed1844c1668074303047ad5ab54ed6a564a5ddc59e4789a21d6a55208a"
+    },
+    {
+      "path": "scripts/public_fixture/prepare_domain.py",
+      "size_bytes": 19447,
+      "sha256": "ddb23aa7d6930ef89940b8cfdc66cc066f8cbbf5a98096c631929401aafd6641"
+    },
+    {
+      "path": "scripts/public_fixture/prepare_forcing.py",
+      "size_bytes": 41450,
+      "sha256": "113ee8b7651fcd770d4538c27c1f2299cb87de8f55b6979ae8bbddb1e36e85bc"
+    },
+    {
+      "path": "scripts/public_fixture/requirements.txt",
+      "size_bytes": 225,
+      "sha256": "5f4e493bc4288a26f2d59a3f35ca5fc9e3247e93fbc6f51650b774baff49d353"
+    },
+    {
+      "path": "tests/test_bundle.py",
+      "size_bytes": 9115,
+      "sha256": "6eeaf4dc89e638d0d03931da58b7e30dbe62f05d535bcc14bad8508941e04add"
+    },
+    {
+      "path": "tests/test_campaign.py",
+      "size_bytes": 32256,
+      "sha256": "42ec42094018128fac5e4cfa94a0a4ef76b84028e4f35b6f75e53c6db8f7ca92"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "size_bytes": 5396,
+      "sha256": "95c6db7c067c4fafd722bd2f83984494f7a6b54a0102cd2b9cb3627aa13e001b"
+    },
+    {
+      "path": "tests/test_configuration.py",
+      "size_bytes": 20965,
+      "sha256": "5f4e505c00bd152611abdfb26a14213079c486570f17ff053858e8a8706cc010"
+    },
+    {
+      "path": "tests/test_forcing.py",
+      "size_bytes": 23754,
+      "sha256": "9f0fd82e74ec459a4e18570b3699063ed498faacd946861ec02a65214a35e1e0"
+    },
+    {
+      "path": "tests/test_forcing_numeric.py",
+      "size_bytes": 2142,
+      "sha256": "9d8b10d2bc2da85729dc82323c4416c333e9401e997752495a781af7cb882d6a"
+    },
+    {
+      "path": "tests/test_forcing_segments.py",
+      "size_bytes": 4656,
+      "sha256": "1cd41d1a4e8bacb27d0eda2ec87ecca30d64b90cc11a45b8eb4123216ce3df8d"
+    },
+    {
+      "path": "tests/test_lock_cli.py",
+      "size_bytes": 4074,
+      "sha256": "4724a97e70523b2a0da5904b497146deb00e5da91348bff1d145d23251b9794d"
+    },
+    {
+      "path": "tests/test_provenance.py",
+      "size_bytes": 7593,
+      "sha256": "f7fcad9cebfd321fed1e493ff055d43fe4fd4d488b05b8f27abb5ce512c7692b"
+    },
+    {
+      "path": "tests/test_public_audit.py",
+      "size_bytes": 8097,
+      "sha256": "a1fc2310a89357b5f80980c385ebf7e2ee546d22b43f0b6c2c965274ebd14219"
+    },
+    {
+      "path": "tests/test_public_domain.py",
+      "size_bytes": 9986,
+      "sha256": "b92f90aee69ecc85fed82928e573e565cf3d70d9c6e851e20822137c03a5af48"
+    },
+    {
+      "path": "tests/test_public_forcing.py",
+      "size_bytes": 7623,
+      "sha256": "f3a9464003af3de0e5f9e9e562ab896b43a1dddb66439dea50e3c99df179acc5"
+    },
+    {
+      "path": "tests/test_public_native_assembly.py",
+      "size_bytes": 8047,
+      "sha256": "2c39c8a240d75d24339df087b8bb9651d9c9cfa959cc19a6312a47a60b2ffe80"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "size_bytes": 8920,
+      "sha256": "3a40ee766b223ef6b77cc1528804afdea6a7a64a6c27feb4821d050bfe94a554"
+    },
+    {
+      "path": "tests/test_validation_cli.py",
+      "size_bytes": 4023,
+      "sha256": "675a1000e7c9ad69f43369259be7bd8d79882b9801fbf86e31a238ea28f94079"
+    },
+    {
+      "path": "fixtures/watauga-public-v1/README.md",
+      "size_bytes": 4057,
+      "sha256": "9bc7edf6cd3e9bc24176659c1bc183d94c6b2c34ce61e75874ca5b12c7237203"
+    },
+    {
+      "path": "fixtures/watauga-public-v1/manifest.json",
+      "size_bytes": 4714,
+      "sha256": "80395137808c11b2d50c78410234c39a3e374c3199afb884a8b872fc9e8da4fe"
+    },
+    {
+      "path": "fixtures/watauga-public-v1/recipe.json",
+      "size_bytes": 17160,
+      "sha256": "ffb4e4db5c5173e4a9a7c9c55147d2a3a72799944981bec7290b916452cd8899"
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 919,
+      "sha256": "0228db3b72079b31c0fc09dff8dcd4ab63e1818293a114ae9cb5362895ded283"
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "size_bytes": 1564,
+      "sha256": "78bd08d885910794b2c9ea58d3c3be7d6136210659d5a777993141e4c5395c00"
+    },
+    {
+      "path": "paper/MANUSCRIPT.md",
+      "size_bytes": 46485,
+      "sha256": "c9520537af5a0f08a092f05d5e13941c85f3d57ad4e0f01f055f61c59aae9f9d"
+    },
+    {
+      "path": "paper/CLAIMS.csv",
+      "size_bytes": 24467,
+      "sha256": "28fa32e0f3635270248465a23458874913b85525f977f0b49ca8f659d93aad30"
+    },
+    {
+      "path": "paper/METHODS_IMPLEMENTATION_MAP.md",
+      "size_bytes": 12695,
+      "sha256": "f36b39a8f8c52add8d98e6226a22d1fc3ce50111576023dd4387af909b1c4ca0"
+    }
+  ],
+  "input_content_audit": {
+    "audit_adapter_sha256": "90eabaed1844c1668074303047ad5ab54ed6a564a5ddc59e4789a21d6a55208a",
+    "audit_identity_sha256": "2c3e3b4fd69ca611ddfe983e59198214a314b040e6574cf55db4c107bb8eef36",
+    "content_valid": true,
+    "domain_preparation_identity_sha256": "81244db9c23c141da82fd684e6829c80044a2a0c2d619f3976805e358353a4ac",
+    "execution_ready": false,
+    "expected_recipe_sha256": "23baea3596ebeb5d3df49f8d6556f91f29153abc470db830608ee0086da29aed",
+    "fixture_id": "watauga-public-rebuild-v1",
+    "forcing_validation_identities": [
+      "507dd1f83006285ab0b4070e87f1d35cce4894ae470591dd4c0e88b7d9d5f84a",
+      "339ee8ffdf03f8c57faa1ed152f7e2ad277d9345d4a00c45c1464ee6f7578098",
+      "7670e45c480477493071aeab8ba4711e08f7c234d08575fa1b068fcee89b1dbf"
+    ],
+    "forecast_rows": 1116,
+    "history_rows": 24366,
+    "model_invocations": 0,
+    "physical_qualification": false,
+    "provider_matches_decoded": true,
+    "qualification_blockers": [
+      "prospective fixture needs independent physical references",
+      "current AORC registry masking/regeneration notice unresolved for release",
+      "shortwave sampling physical interpretation not qualified",
+      "runtime/configuration/profile qualification separate",
+      "archive current generation is not proof of causal availability at issue",
+      "Gauge/reach resolution requires independent source review",
+      "Source-attribute units and derivation require qualification",
+      "Noah parameter tables and loaded component compatibility require runtime qualification",
+      "Weather payloads, source clocks and spatial weights remain separate inputs",
+      "NetCDF template does not consume separately prepared provider CSV files; native assembly is incomplete",
+      "Terminal network cut and gauge output selection require runtime qualification",
+      "Generated endpoint interpretation requires native runtime qualification"
+    ],
+    "retained_source_response_hashes_checked": 815,
+    "schema_version": "public-fixture-content-audit/0.1",
+    "weather_preparation_identity_sha256": "085efd5725eb87c222258c053a3aae5914f25f231f66e9bb31d2e8959afea070"
+  },
+  "native_assembly": {
+    "local_path": ".local/public-fixture-20261010/native-assembly-v2/ASSEMBLY.json",
+    "identity_kind": "assembly_identity_sha256",
+    "identity_sha256": "c650369eb86228ea5961b8fef9e0898f4ad257653f8a795088c7234d8332b959",
+    "size_bytes": 76707,
+    "sha256": "e621c973b44e33dc4a8f90ac5709a7e1684543c8b3173cf23600aa94803bc8c2"
+  },
+  "historical_restoration": {
+    "verified_members": 44,
+    "expected_members": 181,
+    "missing_members": 137
+  },
+  "validation": {
+    "python": {
+      "version": "3.14.7",
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m unittest discover -s tests -v",
+      "tests": 205,
+      "passed": true,
+      "log": {
+        "size_bytes": 30655,
+        "sha256": "5c194f102981ac591230add3917405a44b969e9c1225ff5e7463bd3ccefd81d5"
+      }
+    },
+    "node": {
+      "tests": 17,
+      "passed": true,
+      "command": "node --test web/tests/*.test.mjs",
+      "log": {
+        "size_bytes": 1726,
+        "sha256": "eff67288a69d667657c9524c7c790879f7a9a2c0b3f5c739e87ba11129fe0338"
+      }
+    },
+    "installed_wheel": {
+      "artifact": {
+        "size_bytes": 44277,
+        "sha256": "a6acd152ee0860d62e306a18f2915dfab57c58da6804aed603f19b5c6bf437d6"
+      },
+      "standard_cli_checks": 20,
+      "actual_public_input_cli_checks": [
+        {
+          "issue": null,
+          "returncode": 0,
+          "rows": 24366,
+          "validation_identity_sha256": "507dd1f83006285ab0b4070e87f1d35cce4894ae470591dd4c0e88b7d9d5f84a"
+        },
+        {
+          "issue": "2022-01-01T23:00:00Z",
+          "returncode": 0,
+          "rows": 558,
+          "validation_identity_sha256": "339ee8ffdf03f8c57faa1ed152f7e2ad277d9345d4a00c45c1464ee6f7578098"
+        },
+        {
+          "issue": "2022-01-02T00:00:00Z",
+          "returncode": 0,
+          "rows": 558,
+          "validation_identity_sha256": "7670e45c480477493071aeab8ba4711e08f7c234d08575fa1b068fcee89b1dbf"
+        }
+      ],
+      "version": "0.1.0a4",
+      "module_loaded_from_site_packages": true,
+      "passed": true
+    }
+  },
+  "preservation": {
+    "protected_entries_before": 33367,
+    "protected_entries_after": 33367,
+    "protected_metadata_changes": 0,
+    "protected_changed_paths": [],
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "atime_included": false,
+    "immutable_files": 32,
+    "immutable_byte_changes": []
+  },
+  "model_invocations": 0,
+  "execution_ready": false,
+  "new_physical_results": false,
+  "publication": {
+    "implementation_commit": null,
+    "public_ci_run": null,
+    "state": "pending_commit_and_ci"
+  },
+  "remaining_qualification": [
+    "Hydrofabric attribute units/derivation and new parameter/default treatment require scientific qualification",
+    "Radiation sampling and spatial extraction require physical qualification; AORC source-quality notice retained",
+    "Noah static parameter tables, library paths, endpoint behavior and complete runtime/build/component admission remain open",
+    "Terminal routing cut and full-reach gauge output require physical validation",
+    "No native/shared-history/reference experiment has run; separate bounded protocol and new reference outputs required",
+    "Dataset redistribution terms remain unresolved; raw payloads stay in private ignored staging"
+  ],
+  "increment_identity_sha256": "4a564a261d99289482543123a1c2eeb3ea3fa5bcf8b5242b18871546458b4d13"
+}

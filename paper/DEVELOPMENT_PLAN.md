@@ -98,3 +98,7 @@ The [figure/table plan](FIGURE_TABLE_PLAN.md) maps each visual to these receipts
 - [ ] Current official journal guide is read and checked; exact category, files, limits and disclosure requirements are confirmed. The 18 September 403 record is not compliance evidence.
 - [ ] Authors approve identities, order, affiliations, contributions, funding, interests and AI-use wording; no details are inferred from repository ownership.
 - [ ] Final reproducibility package, manuscript source, supplement, citations and availability statement pass an independent review. No submission is made by this plan.
+
+## Public-input preparation continuation — 10 October 2026
+
+RF-009A-PUBLIC has produced the separately identified [Watauga development fixture](../fixtures/watauga-public-v1/README.md), source/content validation and serial input layouts. C46 records this preparation evidence alongside unresolved historical E03 restoration. Methods and the results inventory now distinguish acquired/decoded inputs, content agreement and assembled files from native execution and hydrologic outcomes. Next manuscript work follows scientific/static-table/runtime admission and a separately frozen new-fixture reference protocol; no new physical allowance or performance claim is activated by preparation.

@@ -1,0 +1,110 @@
+{
+  "schema_version": "public-development-fixture/0.1",
+  "fixture_id": "watauga-public-rebuild-v1",
+  "status": "input_content_validated_native_layout_assembled",
+  "recipe": {
+    "path": "fixtures/watauga-public-v1/recipe.json",
+    "size_bytes": 17160,
+    "sha256": "ffb4e4db5c5173e4a9a7c9c55147d2a3a72799944981bec7290b916452cd8899"
+  },
+  "components": {
+    "domain": {
+      "local_path": ".local/public-fixture-20261010/fixture-v2/DOMAIN_PREPARATION.json",
+      "identity_kind": "preparation_identity_sha256",
+      "identity_sha256": "81244db9c23c141da82fd684e6829c80044a2a0c2d619f3976805e358353a4ac",
+      "size_bytes": 17014,
+      "sha256": "bef7bf457d4f3984ea165c8092060aa306c52ac42204080894d53bd1fa2b1133"
+    },
+    "weather": {
+      "local_path": ".local/public-fixture-20261010/forcing/prepared-v3/PREPARATION.json",
+      "identity_kind": "preparation_identity_sha256",
+      "identity_sha256": "085efd5725eb87c222258c053a3aae5914f25f231f66e9bb31d2e8959afea070",
+      "size_bytes": 837008,
+      "sha256": "3c6373f4c909d5d72e6c0d8fc08e68de13f15cedabdfbd9d23117eab043cf832"
+    },
+    "content_audit": {
+      "local_path": ".local/public-fixture-20261010/admission-v3/AUDIT.json",
+      "identity_kind": "audit_identity_sha256",
+      "identity_sha256": "2c3e3b4fd69ca611ddfe983e59198214a314b040e6574cf55db4c107bb8eef36",
+      "size_bytes": 1927,
+      "sha256": "8aef2c845d496f4fc90944fbef14a73e6f214f2db3b26766bf5fcadc3e35c2e0"
+    },
+    "native_input_assembly": {
+      "local_path": ".local/public-fixture-20261010/native-assembly-v2/ASSEMBLY.json",
+      "identity_kind": "assembly_identity_sha256",
+      "identity_sha256": "c650369eb86228ea5961b8fef9e0898f4ad257653f8a795088c7234d8332b959",
+      "size_bytes": 76707,
+      "sha256": "e621c973b44e33dc4a8f90ac5709a7e1684543c8b3173cf23600aa94803bc8c2"
+    }
+  },
+  "catchments": 31,
+  "history_provider_hours": 786,
+  "forecast_issues": 2,
+  "forecast_lead_hours": 18,
+  "decoded_history_rows": 24366,
+  "decoded_forecast_rows": 1116,
+  "serial_jobs": [
+    {
+      "path": "history",
+      "kind": "history_only",
+      "issue_time_utc": null,
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "provider_hours_per_catchment": 786,
+      "history_hours": 786,
+      "forecast_hours": 0,
+      "routing_five_minute_steps": 9432,
+      "selected_gauge_output": "wb-1017693"
+    },
+    {
+      "path": "serial-20220101T2300Z",
+      "kind": "independent_serial_replay",
+      "issue_time_utc": "2022-01-01T23:00:00Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T17:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 16:00:00",
+      "provider_hours_per_catchment": 785,
+      "history_hours": 767,
+      "forecast_hours": 18,
+      "routing_five_minute_steps": 9420,
+      "selected_gauge_output": "wb-1017693"
+    },
+    {
+      "path": "serial-20220102T0000Z",
+      "kind": "independent_serial_replay",
+      "issue_time_utc": "2022-01-02T00:00:00Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "provider_hours_per_catchment": 786,
+      "history_hours": 768,
+      "forecast_hours": 18,
+      "routing_five_minute_steps": 9432,
+      "selected_gauge_output": "wb-1017693"
+    }
+  ],
+  "assembled_files": 291,
+  "content_valid": true,
+  "provider_matches_decoded": true,
+  "input_layout_assembled": true,
+  "model_invocations": 0,
+  "execution_ready": false,
+  "physical_qualification": false,
+  "historical_fixture_restored": false,
+  "historical_restoration": {
+    "verified_members": 44,
+    "expected_members": 181,
+    "missing_members": 137
+  },
+  "qualified_physical_reference_outputs": [],
+  "qualification_blockers": [
+    "Hydrofabric attribute units/derivation and new parameter/default treatment require scientific qualification",
+    "Radiation sampling and spatial extraction require physical qualification; AORC source-quality notice retained",
+    "Noah static parameter tables, library paths, endpoint behavior and complete runtime/build/component admission remain open",
+    "Terminal routing cut and full-reach gauge output require physical validation",
+    "No native/shared-history/reference experiment has run; separate bounded protocol and new reference outputs required",
+    "Dataset redistribution terms remain unresolved; raw payloads stay in private ignored staging"
+  ],
+  "fixture_manifest_identity_sha256": "63695c2ecf56c0de03952f2fdf8bb57fe940454891401d090b2a2f8cec5ae446"
+}

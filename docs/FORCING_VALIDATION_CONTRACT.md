@@ -26,7 +26,7 @@ The history and forecast calls use their respective manifests. The caller suppli
 
 ## Manifest and CSV interpretation
 
-The strict `forcing-manifest/0.1` manifest contains exactly:
+The strict `forcing-manifest/0.1` and `forcing-manifest/0.2` manifests contain exactly:
 
 - `schema_version`, `evidence_class` (`synthetic` or `source_declared`) and `role` (`history` or `forecast`);
 - `payload`: relative POSIX `path`, decoded-CSV `sha256` and `size_bytes`;
@@ -34,6 +34,8 @@ The strict `forcing-manifest/0.1` manifest contains exactly:
 - exact `units`, a separate `source` metadata object and the fixed `transformation` declaration.
 
 `source` binds `kind`, `product`, `issue_time_utc`, `objects`, `decoder_sha256` and `grid_sha256`. Its object declarations bind an opaque `object_key`, `generation`, positive `size_bytes` and `sha256`. A history source must declare `historical_analysis` with no issue. A forecast must declare `issue_forecast` with exactly the requested issue. Object keys/generations must be unique. Source objects are not downloaded or reread here. Their identifiers and fingerprints remain declarations; this layer neither parses archive-specific keys nor authenticates the declared issue against raw object attributes. A future source adapter must provide that evidence.
+
+Version `0.2` adds an exact `segments` field to every source object. A completely fetched object uses its whole-object `sha256` and an empty segment list. A sparsely fetched archive object uses `sha256=null` and a nonempty list of `{start_byte, size_bytes, sha256}` identities for actually fetched bytes. Segments must be sorted, nonoverlapping and inside the declared whole-object size; each is at most 16 MiB and all objects together contain at most 4,096 segments. A segment hash must never be promoted to an unobserved whole-object hash. Provider ETags, generations, MD5 and CRC records belong in the acquisition receipt; none is silently reinterpreted as SHA-256. The validator checks the shape of these declarations and the decoded CSV, retaining every source/physical qualification blocker. It does not independently authenticate or reread segments. Version `0.1` still requires a whole-object SHA-256 and refuses the new field or a null hash.
 
 The CSV header begins, in this exact order:
 

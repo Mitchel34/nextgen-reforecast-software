@@ -30,6 +30,8 @@ MAX_ROWS = 100_000
 MAX_CATCHMENTS = 1024
 MAX_HISTORY_HOURS = 100_000
 MAX_SOURCE_OBJECTS = 4096
+MAX_SOURCE_SEGMENTS = 4096
+MAX_SEGMENT_BYTES = 16 * 1024 * 1024
 _HOUR = timedelta(hours=1)
 _DECIMAL = re.compile(r"[+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?\Z")
 TIME_COLUMNS = (
@@ -124,7 +126,7 @@ def _manifest(value: dict) -> dict:
     if len(_canonical(value)) > MAX_MANIFEST_BYTES:
         raise ForcingError("Forcing manifest exceeds the 1 MiB bound")
     _object(value, MANIFEST_FIELDS, "forcing manifest")
-    if value["schema_version"] != "forcing-manifest/0.1":
+    if value["schema_version"] not in ("forcing-manifest/0.1", "forcing-manifest/0.2"):
         raise ForcingError("Unsupported forcing manifest schema")
     if value["evidence_class"] not in ("synthetic", "source_declared"):
         raise ForcingError("evidence_class must be synthetic or source_declared")
@@ -152,12 +154,38 @@ def _manifest(value: dict) -> dict:
     if not isinstance(objects, list) or not 1 <= len(objects) <= MAX_SOURCE_OBJECTS:
         raise ForcingError(f"source.objects must contain 1..{MAX_SOURCE_OBJECTS} declarations")
     identities = set()
+    segment_count = 0
     for item in objects:
-        _object(item, {"object_key", "generation", "size_bytes", "sha256"}, "source object")
+        fields = {"object_key", "generation", "size_bytes", "sha256"}
+        segmented = value["schema_version"] == "forcing-manifest/0.2"
+        _object(item, fields | ({"segments"} if segmented else set()), "source object")
         for field in ("object_key", "generation"):
             _text(item[field], f"source object.{field}")
         _integer(item["size_bytes"], 1, 2**53 - 1, "source object.size_bytes")
-        _sha(item["sha256"], "source object.sha256")
+        if not segmented or item["sha256"] is not None:
+            _sha(item["sha256"], "source object.sha256")
+        if segmented:
+            segments = item["segments"]
+            if not isinstance(segments, list):
+                raise ForcingError("Source segments must be a list")
+            segment_count += len(segments)
+            if segment_count > MAX_SOURCE_SEGMENTS:
+                raise ForcingError("Source segment count exceeds bound")
+            if item["sha256"] is None and not segments:
+                raise ForcingError("Sparse source requires fetched segment identities")
+            if item["sha256"] is not None and segments:
+                raise ForcingError("Whole-object and sparse identities must be separate declarations")
+            end = 0
+            for segment in segments:
+                _object(segment, {"start_byte", "size_bytes", "sha256"}, "source segment")
+                _integer(segment["start_byte"], 0, item["size_bytes"] - 1, "source segment.start_byte")
+                _integer(segment["size_bytes"], 1, MAX_SEGMENT_BYTES, "source segment.size_bytes")
+                _sha(segment["sha256"], "source segment.sha256")
+                if segment["start_byte"] < end:
+                    raise ForcingError("Source segments must be sorted and nonoverlapping")
+                end = segment["start_byte"] + segment["size_bytes"]
+                if end > item["size_bytes"]:
+                    raise ForcingError("Source segment exceeds whole-object size")
         identity = (item["object_key"], item["generation"])
         if identity in identities:
             raise ForcingError("Duplicate source object key/generation")

@@ -2,6 +2,10 @@
 
 Recorded 24 September 2026. This is a planning decision for RF-005A, RF-008, RF-009A/B, RF-010 and E03. It resolves ordering ambiguities in the saved plan, whose prior bytes are bound by [2026-09-24_BASELINE.json](planning/2026-09-24_BASELINE.json) at commit `78cfb92db53b6d58d8b8de9d056e067597f568f5`. It authorizes no acquisition, native build, model run or cloud resources by itself. No physical result is recorded here.
 
+## Subsequent public-fixture preparation authorization
+
+On 10 October the owner authorized regenerating Watauga inputs from public data as a separate fixture to continue development. [PUBLIC_WATAUGA_FIXTURE_PLAN.md](PUBLIC_WATAUGA_FIXTURE_PLAN.md) governs that parallel preparation. Historical restoration/E03 remains unresolved; the regenerated input set will receive its own geometry/parameter/weather/runtime identities and future independent references. This amendment records input preparation, with zero new model invocations. It does not silently replace the original fixture or reuse historical outputs as new reference evidence.
+
 ## Decision and scope
 
 The first physical task remains **restoration and diagnostic reproduction of the original Watauga 786-hour/two-issue baseline**, starting with the independent sequential-reference phases of existing E03. The next implementation assignments must follow the staged prerequisites below. [Protocol 0.3](../benchmarks/PROTOCOL.md) and [EXPERIMENT_MATRIX.json](../benchmarks/EXPERIMENT_MATRIX.json) implement this order without adding runs or changing numerical criteria.

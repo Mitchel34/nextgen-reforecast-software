@@ -1,0 +1,7 @@
+# Optional preparation tools, separate from the standard-library core package.
+# Exact versions observed for the 2026-10-10 public development fixture.
+numpy==2.5.4
+h5py==3.16.0
+pyproj==3.7.2
+shapely==2.1.2
+zstandard==0.25.0
