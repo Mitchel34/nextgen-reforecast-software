@@ -1,0 +1,96 @@
+{
+  "schema_version": "independent-physical-reference-set/0.1",
+  "experiment_id": "watauga-public-independent-serial-v2",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "protocol_identity_sha256": "0c6a5c8c063343c3a02659298a273200d851252d63f84d7ffcd0fa6027361b94",
+  "references": [
+    {
+      "case_id": "history",
+      "reference_identity_sha256": "66169502b9aa3c72d2e97627e54386a7bce9e8d4cfddaf106374143270acb963",
+      "reference_report": {
+        "bytes": 8627,
+        "sha256": "b1612183eb6ccf38862a96bbdeece13e9a421686f798c00589b8eac138c7831f"
+      },
+      "arrays": {
+        "bytes": 38744488,
+        "sha256": "ca9b888f404995bb3f940922963fbcd091d457772bdbf8ddb10a99ed2f9ebcd4"
+      },
+      "lead_reference": {
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "case_id": "serial-20220101T2300Z",
+      "reference_identity_sha256": "9f0cd7f9bc88678b97b90be86529d297534ffb5004dc9f1c6234ad67df92f085",
+      "reference_report": {
+        "bytes": 8646,
+        "sha256": "dc85dbb04f2c05012c9ba2722531f4aabda940dac1b1fd678510066a899cdf3e"
+      },
+      "arrays": {
+        "bytes": 38691973,
+        "sha256": "0c1d23f962b9ff0613609f435f8069cdaa95d07b820cb1eb9657fbbad8e598da"
+      },
+      "lead_reference": {
+        "bytes": 23831,
+        "sha256": "113edd4b1b4cddd5f96c9e245b4e290cd2583edf10c11beed88b80cc19db1624"
+      }
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "reference_identity_sha256": "2079b563bc8fac9c91d9fc91fbc988f4da3bbacef48429ca7d69165abfdd5b0b",
+      "reference_report": {
+        "bytes": 8646,
+        "sha256": "dfe1a0100d8f4a4d19880975c3db4786382126447bf7fff3a791a51c7994e16e"
+      },
+      "arrays": {
+        "bytes": 38747008,
+        "sha256": "78d43e7a27481a5436cd93e779a75ce0a2b864772655a1c95c96e781a91aa81a"
+      },
+      "lead_reference": {
+        "bytes": 24358,
+        "sha256": "ea72294cdc73678cd144fcba2111601424c945ea362b08254d3156f4e8082241"
+      }
+    }
+  ],
+  "independent_reference_count": 3,
+  "complete_issue_lead_rows": 36,
+  "prefix_consistency": [
+    {
+      "case_id": "serial-20220101T2300Z",
+      "antecedent_hours": 767,
+      "antecedent_routing_steps": 9204,
+      "serialized_outputs_exactly_equal": true,
+      "differing_rows": {
+        "catchment_values": 0,
+        "nexus_values": 0,
+        "routing_values": 0
+      },
+      "first_differences": []
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "antecedent_hours": 768,
+      "antecedent_routing_steps": 9216,
+      "serialized_outputs_exactly_equal": true,
+      "differing_rows": {
+        "catchment_values": 0,
+        "nexus_values": 0,
+        "routing_values": 0
+      },
+      "first_differences": []
+    }
+  ],
+  "all_antecedent_prefixes_equal": true,
+  "lead_reference": {
+    "bytes": 48186,
+    "sha256": "1141a448587e3fe8ae014f8d69c23df352740b9f6c6d3c5168c9bf3514f9542c"
+  },
+  "comparison_semantics": "exact serialized-output equality before the weather switch; no tolerance fitted to results",
+  "shared_history_executed": false,
+  "checkpoint_qualified": false,
+  "forecast_skill_validated": false,
+  "spinup_convergence_validated": false,
+  "historical_e03_restored": false,
+  "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2"
+}

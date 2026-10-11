@@ -1,8 +1,20 @@
 # Implementation status
 
-Updated **10 October 2026** for the authorized [scientific-input/runtime continuation](INPUT_RUNTIME_INCREMENT_2026-10-10.md). Package version: `0.1.0a4`. The product provides offline planning and input-content validation plus a local browser interaction prototype. Public-source development preparation is now available through developer tools; automatic browser preparation, physical execution/recovery and a hosted service remain unfinished.
+Updated **10 October 2026** for the authorized [physical-reference continuation](PHYSICAL_REFERENCE_INCREMENT_2026-10-10.md). Package version: `0.1.0a4`. The product provides offline planning and input-content validation plus a local browser interaction prototype. Public-source development preparation is now available through developer tools; automatic browser preparation, physical execution/recovery and a hosted service remain unfinished.
 
-## Public-source fixture continuation
+## Current Linux and physical-reference increment
+
+The [diagnostic Linux runtime](LINUX_DIAGNOSTIC_QUALIFICATION_2026-10-10.md) now closes the exact export/middleware/component-image application layout, loader/static-table checks and pinned routing Python source identities. It is admitted for a bounded diagnostic experiment; reproducible clean builds and source-to-component binary attestations remain release gates.
+
+The [separate compatible fixture v2](../fixtures/watauga-public-v2/README.md) changes two unsupported Noah options to exact pinned defaults, verifies all 17 model options, and preserves the other 198 files of its 291-file input set. Failed v1 attempts remain preserved with their explicit output-capture loss. A zero-exit Fortran STOP exposed why process completion must also require complete outputs and fatal-log checks before routing.
+
+[Three physical references](PUBLIC_WATAUGA_REFERENCE_RESULTS_V2_2026-10-10.md) completed with six model processes: 786 history hours and two independent 18-hour forecast replays from the same cold origin. Audits sealed 73,067 catchment rows with 15 fields each, 28,284 nexus rows, 876,804 routed rows with flow/velocity/depth, and 36 selected-reach issue/lead rows. Both independently simulated antecedent prefixes agree exactly at serialized output precision. This supplies diagnostic reference outputs; it does not establish hidden-state equivalence, parameter suitability, spinup convergence, forecast skill, shared-history/recovery performance or external reproduction.
+
+The new tools pass **247 Python tests** and the unchanged browser contract passes **17 Node tests**. Core package/wheel source remains `0.1.0a4`; the new execution/admission/audit tools are developer scripts, not public `run`/`resume` commands. The [integrated receipt](evidence/public-watauga-physical-increment-20261010.json) binds source, tests, failures and references. Original-folder checks find zero changes across 33,367 metadata entries and 32 protected file hashes. All model containers are removed and only the dedicated worker is stopped with its disks/configuration retained.
+
+The operational review traces repeated upstream unit-warning fallbacks separately from full-output integrity. Release scientific gates and the hosted researcher pathway remain open. The original E03 identity and unresolved historical inputs remain intact.
+
+## Preserved public-source fixture preparation
 
 The [new Watauga fixture](../fixtures/watauga-public-v1/README.md) is prepared and content-validated: 31 polygons, 31 CFE/31 Noah configurations, 786 history hours, two 18-lead forecast issues, and all 25,482 catchment-hour weather rows. The independent audit verifies 815 retained response hashes and exact decoded/provider correspondence against a frozen external recipe. Three serial input jobs comprise 291 bound files. Package `0.1.0a4` adds truthful sparse-source manifest declarations with unknown whole-object SHA-256 kept null. Preparation, replay, assembly and source/content checks ran no models.
 
@@ -41,13 +53,13 @@ The September [foundation record](VALIDATION.json) remains unchanged: 54 local t
 |---|---|---|
 | M0 Feasibility | Complete, preserved | Retain dossier identities |
 | M1 Planning/input foundation | Planning, provenance and bounded content checks implemented | Source-authenticated acquisition/decoding, domain resolution and complete scientific execution lock |
-| M2 Runtime/example closure | Exact identities resolved; 44 fixture members staged; worker/image/exported loader checked | Recover remaining 137 exact members; close clean-build dependencies, source-to-component attestations and rights |
-| M3 Physical execution | Not implemented or newly measured | Complete RF-005A/008/009A admission, then original independent Watauga reference before comparisons |
+| M2 Runtime/example closure | Export/image diagnostic runtime and separate v2 inputs admitted; historical recovery remains 44/181 | Close clean-build/source-to-binary attestations, scientific input qualification and artifact access/rights |
+| M3 Physical execution | Three new independent serial diagnostic references sealed; public controller/shared history/recovery absent | Integrate admitted execution locks and durable commits; then prospectively qualify shared-history and recovery comparisons |
 | M4 Reliability/performance | Protocol unchanged; physical measurements absent | Commit/replay mechanics, then declared physical fault and equal-resource trials |
 | M5 Transfer/reproduction | Not started | Qualify New River and test immutable reproduction candidate with independent operator |
 | M6 Manuscript | Formal methods and current evidence updated | Actual Q1–Q5 results, verified journal requirements and author declarations |
 | M7 Final release/submission | Not ready | Rights/license closure, candidate evaluation, required fixes/retests and final archive/review |
 
-The [working plan](WORKING_PLAN.md), [release sequence](RELEASE_SEQUENCE.md) and [UX evidence contract](UX_EVIDENCE_CONTRACT.md) continue to control dependencies. Historical E03 remains the original 786-hour Watauga diagnostic fixture. Public-fixture physical work requires its own prospective protocol after admission. Resolving expected hashes does not restore missing bytes; a different origin, contemporary forcing rebuild or later production file cannot silently replace an unavailable historical member. A corrected CFE profile requires separate antecedent state, scientific identity and qualification.
+The [working plan](WORKING_PLAN.md), [release sequence](RELEASE_SEQUENCE.md) and [UX evidence contract](UX_EVIDENCE_CONTRACT.md) continue to control dependencies. Historical E03 remains the original 786-hour Watauga diagnostic fixture. Public-fixture v2 physical work completed under its own frozen prospective diagnostic protocol. Resolving expected hashes does not restore missing bytes; a different origin, contemporary forcing rebuild or later production file cannot silently replace an unavailable historical member. A corrected CFE profile requires separate antecedent state, scientific identity and qualification.
 
-`run` and `resume` remain unavailable. No model experiment, native build, hosted deployment, paid resource, recruitment, submission or maintainer message occurred in this increment. Original Reforecast/HYDRA/NextGen/thesis sources remain read-only, without hydration. Core licensing, source/domain coverage, scientific defaults and final-release evidence remain open decisions.
+`run` and `resume` remain unavailable. The current diagnostic increment ran nine actual model processes across failed v1 and successful v2. No new native compilation, hosted deployment, paid resource, recruitment, submission or maintainer message occurred. Original Reforecast/HYDRA/NextGen/thesis sources remain read-only, without hydration. Core licensing, source/domain coverage, scientific defaults and final-release evidence remain open decisions.

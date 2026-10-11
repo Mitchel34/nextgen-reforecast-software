@@ -1,0 +1,833 @@
+{
+  "schema_version": "ngen-reforecast-linux-diagnostic-admission/1.0",
+  "runtime_id": "linux-arm64-export-image-diagnostic-v1",
+  "status": "admitted_for_separately_frozen_diagnostic_references",
+  "release_qualified": false,
+  "clean_build_performed": false,
+  "model_process_invocations": 0,
+  "native_main_invoked": false,
+  "image_manifest_sha256": "2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+  "exports": [
+    {
+      "path": "ngen-shared",
+      "bytes": 3813528,
+      "sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132"
+    },
+    {
+      "path": "libiso_c_bmi.so",
+      "bytes": 74504,
+      "sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162"
+    }
+  ],
+  "image_inventory": {
+    "architecture": "aarch64",
+    "component_aliases": {
+      "libcfebmi.so": "libcfebmi.so.1.0.0",
+      "libslothmodel.so": "libslothmodel.so.1.0.0"
+    },
+    "components": {
+      "libcfebmi.so.1.0.0": {
+        "bytes": 136312,
+        "sha256": "f54e29c81e2b86c0233f2530e929e18fe9226c421225b90263fa8128ec4ae56a"
+      },
+      "libslothmodel.so.1.0.0": {
+        "bytes": 814000,
+        "sha256": "39884bb6370071c04d318c6563315237e982ec3d8f165e8e2df6db89251d5a42"
+      },
+      "libsurfacebmi.so": {
+        "bytes": 441416,
+        "sha256": "6e17db8089cfa99e140fb7152c3dbec260c9a38f3bd7d6512e7dd063bec5dc74"
+      }
+    },
+    "limits": {
+      "cpu.max": "200000 100000",
+      "memory.max": "8589934592",
+      "pids.max": "256"
+    },
+    "native_source_commit": "https://github.com/CIROH-UA/ngen/tree/9175b640a4e6f1d90e58e0a65662174d08f052ef",
+    "packages": [
+      [
+        "Deprecated",
+        "1.3.1"
+      ],
+      [
+        "Jinja2",
+        "3.1.6"
+      ],
+      [
+        "MarkupSafe",
+        "2.1.5"
+      ],
+      [
+        "PyYAML",
+        "6.0.3"
+      ],
+      [
+        "aiohappyeyeballs",
+        "2.6.1"
+      ],
+      [
+        "aiohttp",
+        "3.13.2"
+      ],
+      [
+        "aiohttp-client-cache",
+        "0.14.2"
+      ],
+      [
+        "aiosignal",
+        "1.4.0"
+      ],
+      [
+        "aiosqlite",
+        "0.21.0"
+      ],
+      [
+        "async-timeout",
+        "5.0.1"
+      ],
+      [
+        "attrs",
+        "25.4.0"
+      ],
+      [
+        "black",
+        "25.11.0"
+      ],
+      [
+        "bmipy",
+        "2.0.1"
+      ],
+      [
+        "certifi",
+        "2025.11.12"
+      ],
+      [
+        "cftime",
+        "1.6.4.post1"
+      ],
+      [
+        "click",
+        "8.1.8"
+      ],
+      [
+        "filelock",
+        "3.19.1"
+      ],
+      [
+        "frozenlist",
+        "1.8.0"
+      ],
+      [
+        "fsspec",
+        "2025.9.0"
+      ],
+      [
+        "geopandas",
+        "1.0.1"
+      ],
+      [
+        "hydrotools._restclient",
+        "4.1.0"
+      ],
+      [
+        "hydrotools.nwis_client",
+        "4.1.0"
+      ],
+      [
+        "idna",
+        "3.11"
+      ],
+      [
+        "itsdangerous",
+        "2.2.0"
+      ],
+      [
+        "joblib",
+        "1.5.2"
+      ],
+      [
+        "lstm",
+        "1.1.0"
+      ],
+      [
+        "mpmath",
+        "1.3.0"
+      ],
+      [
+        "multidict",
+        "6.7.0"
+      ],
+      [
+        "mypy-extensions",
+        "1.0.0"
+      ],
+      [
+        "netCDF4",
+        "1.6.3"
+      ],
+      [
+        "networkx",
+        "3.2.1"
+      ],
+      [
+        "numpy",
+        "1.26.4"
+      ],
+      [
+        "nwm-routing",
+        "0.0.0"
+      ],
+      [
+        "packaging",
+        "25.0"
+      ],
+      [
+        "pandas",
+        "2.3.3"
+      ],
+      [
+        "pathspec",
+        "0.12.1"
+      ],
+      [
+        "platformdirs",
+        "4.4.0"
+      ],
+      [
+        "propcache",
+        "0.4.1"
+      ],
+      [
+        "pyarrow",
+        "21.0.0"
+      ],
+      [
+        "pydantic",
+        "1.10.24"
+      ],
+      [
+        "pyogrio",
+        "0.11.1"
+      ],
+      [
+        "pyproj",
+        "3.6.1"
+      ],
+      [
+        "python-dateutil",
+        "2.9.0.post0"
+      ],
+      [
+        "python-forge",
+        "18.6.0"
+      ],
+      [
+        "pytokens",
+        "0.3.0"
+      ],
+      [
+        "pytz",
+        "2025.2"
+      ],
+      [
+        "pyyml",
+        "0.0.2"
+      ],
+      [
+        "shapely",
+        "2.0.7"
+      ],
+      [
+        "six",
+        "1.17.0"
+      ],
+      [
+        "sympy",
+        "1.14.0"
+      ],
+      [
+        "tomli",
+        "2.3.0"
+      ],
+      [
+        "toolz",
+        "1.1.0"
+      ],
+      [
+        "torch",
+        "2.8.0+cpu"
+      ],
+      [
+        "troute.config",
+        "0.0.3"
+      ],
+      [
+        "troute.network",
+        "0.0.0"
+      ],
+      [
+        "troute.routing",
+        "0.0.0"
+      ],
+      [
+        "typing_extensions",
+        "4.15.0"
+      ],
+      [
+        "tzdata",
+        "2025.2"
+      ],
+      [
+        "url-normalize",
+        "2.2.1"
+      ],
+      [
+        "wrapt",
+        "2.0.1"
+      ],
+      [
+        "xarray",
+        "2024.7.0"
+      ],
+      [
+        "yarl",
+        "1.22.0"
+      ]
+    ],
+    "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.34",
+    "python": "3.9.21 (main, Jun 27 2025, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+    "routing_entrypoint_called": false,
+    "routing_installed_python": {
+      "nwm_routing/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nwm_routing/__main__.py": {
+        "bytes": 79040,
+        "sha256": "ed26526a77faa467404ef9898490c1dd84debaa04645317e8c97f74bbd3417a2"
+      },
+      "nwm_routing/input.py": {
+        "bytes": 41686,
+        "sha256": "2f3fd5b419327206f1976e3ddee14ee9e5dddc2401790ea4be30ee0ed63d1756"
+      },
+      "nwm_routing/log_level_set.py": {
+        "bytes": 1475,
+        "sha256": "e369591c1480f6c9ad16aac4ebcd743eafffcfda27c099655ad968ed0ffd718f"
+      },
+      "nwm_routing/output.py": {
+        "bytes": 24654,
+        "sha256": "dda9dc57d912c6b019568128618ad6b6398f9a4a482da4a565daba9d93080be3"
+      },
+      "nwm_routing/preprocess.py": {
+        "bytes": 55682,
+        "sha256": "e79d6cd307d4c632be73040e610cd767d8b0686fd5810bb87ee3b7ef85504a8a"
+      },
+      "troute/AbstractNetwork.py": {
+        "bytes": 47594,
+        "sha256": "d6c9ba7bd85e9ca15332b37073dadcf51673604ad181c34a9afc8d6846901c31"
+      },
+      "troute/AbstractRouting.py": {
+        "bytes": 20440,
+        "sha256": "64a2cb524a70bc70f44546fade8d490dc2d95fca50af398507c6e163b245e71c"
+      },
+      "troute/DataAssimilation.py": {
+        "bytes": 96917,
+        "sha256": "4264d5cb84aae8efd2aa1f916417da0ac2260b47d37561efc0701f1f8d948432"
+      },
+      "troute/HYFeaturesNetwork.py": {
+        "bytes": 53364,
+        "sha256": "624f3103f9b40153aa15fa474f4d0d741b95114317310b363722f8076811a91a"
+      },
+      "troute/NHDNetwork.py": {
+        "bytes": 17557,
+        "sha256": "dcec2a2d5b764fa825cdcdf5ff5975e50f5db00d53b7db27371581ab5dce15e3"
+      },
+      "troute/config/__init__.py": {
+        "bytes": 50,
+        "sha256": "b9abd10f2d8a1e3be729cd422057d79cc73d847902c5105504c4c0699e517498"
+      },
+      "troute/config/_utils.py": {
+        "bytes": 808,
+        "sha256": "21177066a71c716b4cc522658ce65123dfcb914ff85b6a90e1c2030840546986"
+      },
+      "troute/config/_validators.py": {
+        "bytes": 1217,
+        "sha256": "d7c594e9acfccf74a4fbaa389943483709b41919fdd7aeff778c547c218b5c78"
+      },
+      "troute/config/bmi_parameters.py": {
+        "bytes": 1172,
+        "sha256": "16972dceecfe4a2dce735ff795132ea70d6d8733fa62125fb19fd83978e4e0fe"
+      },
+      "troute/config/compute_parameters.py": {
+        "bytes": 19723,
+        "sha256": "a50a198f0042b03e952d6b22c416008560c8833ddc9dffef1a4fe4cc4bf2c163"
+      },
+      "troute/config/config.py": {
+        "bytes": 17251,
+        "sha256": "af30e7d0d076049a83cf81532574bc98b4833c8e7604d4ec53948363989f7479"
+      },
+      "troute/config/logging_parameters.py": {
+        "bytes": 1016,
+        "sha256": "244ca34e18b40656a9faf9e194b2195addb64eff3c8d07d5998cccd156798817"
+      },
+      "troute/config/network_topology_parameters.py": {
+        "bytes": 7490,
+        "sha256": "00f1e3ac84ea0f9c69bf0053d37ee1bcc1be22e46783cc76c89246fa792522a0"
+      },
+      "troute/config/output_parameters.py": {
+        "bytes": 7486,
+        "sha256": "694872cd22f9f152bfde7d2327973dfb5869c849bccea9ec2864d0868a91e1d3"
+      },
+      "troute/config/reservoir_data_assimilation_parameters.py": {
+        "bytes": 1040,
+        "sha256": "1ae8072a30eb8c168ced0e38aeb1b849a67769047e68da791e09f412aafaa477"
+      },
+      "troute/config/types.py": {
+        "bytes": 1379,
+        "sha256": "62fbfa5e82e8412ea878107eeca5fbca9bf27c435277073f840ebee286aaf3f7"
+      },
+      "troute/hyfeature_network_utilities.py": {
+        "bytes": 20050,
+        "sha256": "3011e89b0a697a9d8ef9a8b836a0b655a96c10afdecf2c7260be5ba2afcc60cc"
+      },
+      "troute/network/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/network/bmi_array2df.py": {
+        "bytes": 6631,
+        "sha256": "8d99b9d69c7d5d2ee27881973962a22d67b0bbf1eaf3bf6d00dddcfe2d5740ad"
+      },
+      "troute/network/musking/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/network/reservoirs/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/network/reservoirs/hybrid/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/network/reservoirs/levelpool/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/network/reservoirs/rfc/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/network/reservoirs/test/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/network/reservoirs/test/test_compute_kernel.py": {
+        "bytes": 32394,
+        "sha256": "1aae0f57b1f351585c31ccf88b340ac978cbaa98837ce6ee3f9f55abf75667a9"
+      },
+      "troute/nhd_io.py": {
+        "bytes": 102855,
+        "sha256": "83f3e239c138a51f1b66c82424aba7f03a0122e19cdc038b7dea3598159931bb"
+      },
+      "troute/nhd_network.py": {
+        "bytes": 30521,
+        "sha256": "6f78c6654ff9836926b0ddc4b687b24eeca99ffbe75eadda456f375294d1ff07"
+      },
+      "troute/nhd_network_utilities_v02.py": {
+        "bytes": 32452,
+        "sha256": "17ad17a856e167285a847d544cf4db8689f8be369f5a88f02bd618296180743d"
+      },
+      "troute/rfc_lake_gage_crosswalk.py": {
+        "bytes": 7421,
+        "sha256": "23c078e0e7c45e3cc181187fdc0b57d99245bf784425fd5e274be6886cc7c460"
+      },
+      "troute/routing/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/routing/compute.py": {
+        "bytes": 91504,
+        "sha256": "3005d8447f073e2d6aabca7f1663670034303c245b57b6526297551354ec4472"
+      },
+      "troute/routing/diffusive_utils.py": {
+        "bytes": 83720,
+        "sha256": "92f665c5ddae846911a0827155c989e81308f2736c76ed2a0621f418d5c047d2"
+      },
+      "troute/routing/diffusive_utils_v02.py": {
+        "bytes": 52950,
+        "sha256": "23fba87a7bb75d58be18bb83aeb13739f40911cf2a2d1d37d9c14bcdb7094b88"
+      },
+      "troute/routing/fast_reach/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "troute/routing/fast_reach/reservoir_GL_da.py": {
+        "bytes": 5381,
+        "sha256": "cb992ed990ee7df0dc15f902178707a3189d80eabb5935e716dbac7e85f5c0ea"
+      },
+      "troute/routing/fast_reach/reservoir_RFC_da.py": {
+        "bytes": 13820,
+        "sha256": "4866f824cc09f0ea17946aab246ee93638160feb916a6af7402a356232390f6f"
+      },
+      "troute/routing/fast_reach/reservoir_hybrid_da.py": {
+        "bytes": 13214,
+        "sha256": "ed44c5bb26bd7b97b5eb3568715e67cd2a7ad8d2cf41516869e1cfa1df2e76ec"
+      },
+      "troute/routing/test_compute.py": {
+        "bytes": 2013,
+        "sha256": "2e46da2d06c7eb41108894ca52ae78760e38495b42e41f483be41ec109e10d91"
+      },
+      "troute/test_nhd_network.py": {
+        "bytes": 5234,
+        "sha256": "15eb2c5c491e56e873a8818ef5e99900d8c223f55b797a0cafe6852f2d8a924c"
+      },
+      "troute/test_qlat.py": {
+        "bytes": 1728,
+        "sha256": "11fadf91d6a7ef6f2b8421b83b2200538ebbe21444fe0bdcdb868853f0ee5ede"
+      }
+    },
+    "routing_module_imported": true,
+    "routing_source_commit": "https://github.com/CIROH-UA/t-route/tree/533fbd98362efdafae62392308727de4f0d4cc20",
+    "routing_source_files": {
+      "__main__.py": {
+        "bytes": 79040,
+        "sha256": "ed26526a77faa467404ef9898490c1dd84debaa04645317e8c97f74bbd3417a2"
+      },
+      "output.py": {
+        "bytes": 24654,
+        "sha256": "dda9dc57d912c6b019568128618ad6b6398f9a4a482da4a565daba9d93080be3"
+      }
+    },
+    "tables": {
+      "GENPARM.TBL": {
+        "bytes": 275,
+        "sha256": "f9e821ee1928f3ce121c3e3453e79c16e7c311fb07ad0b3c5925001a60a3d0d3"
+      },
+      "MPTABLE.TBL": {
+        "bytes": 56019,
+        "sha256": "3a285fef1e4b6c6f144025f4a416bc0dced61d672af3210b93270a940e7cfeeb"
+      },
+      "SOILPARM.TBL": {
+        "bytes": 6557,
+        "sha256": "1e2275a32d8cd3b48ca693d22c0816df0013f83b6594ac632716361db337d58f"
+      }
+    }
+  },
+  "probes": [
+    {
+      "name": "loader",
+      "exit_code": 0,
+      "elapsed_seconds": 0.571349,
+      "stdout_sha256": "c2b209fbcca78869ee3dc6f04f53cbe596288af0de57a6f1639a0593c99b765f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "inventory",
+      "exit_code": 0,
+      "elapsed_seconds": 0.615034,
+      "stdout_sha256": "29b18affdb093ecfdcc7dc0d541f21d0ff1d6d549aed16488357795e7f786c38",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "historical_build_evidence": {
+    "BUILD_EXPORT.json": {
+      "bytes": 2523,
+      "sha256": "5ecfed96cffddad645ff2e4a9d1b4aaea2892176798f092ac2ed2c55f42b3746"
+    },
+    "build/CMakeCache.txt": {
+      "bytes": 25926,
+      "sha256": "88060947d4ecb0fd522833680ce1258db9f96ea566b0e4a44d8e81098b6be67d"
+    }
+  },
+  "routing_python_source_verification": [
+    {
+      "installed_path": "nwm_routing/__init__.py",
+      "source_path": "src/troute-nwm/src/nwm_routing/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "nwm_routing/__main__.py",
+      "source_path": "src/troute-nwm/src/nwm_routing/__main__.py",
+      "sha256": "ed26526a77faa467404ef9898490c1dd84debaa04645317e8c97f74bbd3417a2"
+    },
+    {
+      "installed_path": "nwm_routing/input.py",
+      "source_path": "src/troute-nwm/src/nwm_routing/input.py",
+      "sha256": "2f3fd5b419327206f1976e3ddee14ee9e5dddc2401790ea4be30ee0ed63d1756"
+    },
+    {
+      "installed_path": "nwm_routing/log_level_set.py",
+      "source_path": "src/troute-nwm/src/nwm_routing/log_level_set.py",
+      "sha256": "e369591c1480f6c9ad16aac4ebcd743eafffcfda27c099655ad968ed0ffd718f"
+    },
+    {
+      "installed_path": "nwm_routing/output.py",
+      "source_path": "src/troute-nwm/src/nwm_routing/output.py",
+      "sha256": "dda9dc57d912c6b019568128618ad6b6398f9a4a482da4a565daba9d93080be3"
+    },
+    {
+      "installed_path": "nwm_routing/preprocess.py",
+      "source_path": "src/troute-nwm/src/nwm_routing/preprocess.py",
+      "sha256": "e79d6cd307d4c632be73040e610cd767d8b0686fd5810bb87ee3b7ef85504a8a"
+    },
+    {
+      "installed_path": "troute/AbstractNetwork.py",
+      "source_path": "src/troute-network/troute/AbstractNetwork.py",
+      "sha256": "d6c9ba7bd85e9ca15332b37073dadcf51673604ad181c34a9afc8d6846901c31"
+    },
+    {
+      "installed_path": "troute/AbstractRouting.py",
+      "source_path": "src/troute-network/troute/AbstractRouting.py",
+      "sha256": "64a2cb524a70bc70f44546fade8d490dc2d95fca50af398507c6e163b245e71c"
+    },
+    {
+      "installed_path": "troute/DataAssimilation.py",
+      "source_path": "src/troute-network/troute/DataAssimilation.py",
+      "sha256": "4264d5cb84aae8efd2aa1f916417da0ac2260b47d37561efc0701f1f8d948432"
+    },
+    {
+      "installed_path": "troute/HYFeaturesNetwork.py",
+      "source_path": "src/troute-network/troute/HYFeaturesNetwork.py",
+      "sha256": "624f3103f9b40153aa15fa474f4d0d741b95114317310b363722f8076811a91a"
+    },
+    {
+      "installed_path": "troute/NHDNetwork.py",
+      "source_path": "src/troute-network/troute/NHDNetwork.py",
+      "sha256": "dcec2a2d5b764fa825cdcdf5ff5975e50f5db00d53b7db27371581ab5dce15e3"
+    },
+    {
+      "installed_path": "troute/config/__init__.py",
+      "source_path": "src/troute-config/troute/config/__init__.py",
+      "sha256": "b9abd10f2d8a1e3be729cd422057d79cc73d847902c5105504c4c0699e517498"
+    },
+    {
+      "installed_path": "troute/config/_utils.py",
+      "source_path": "src/troute-config/troute/config/_utils.py",
+      "sha256": "21177066a71c716b4cc522658ce65123dfcb914ff85b6a90e1c2030840546986"
+    },
+    {
+      "installed_path": "troute/config/_validators.py",
+      "source_path": "src/troute-config/troute/config/_validators.py",
+      "sha256": "d7c594e9acfccf74a4fbaa389943483709b41919fdd7aeff778c547c218b5c78"
+    },
+    {
+      "installed_path": "troute/config/bmi_parameters.py",
+      "source_path": "src/troute-config/troute/config/bmi_parameters.py",
+      "sha256": "16972dceecfe4a2dce735ff795132ea70d6d8733fa62125fb19fd83978e4e0fe"
+    },
+    {
+      "installed_path": "troute/config/compute_parameters.py",
+      "source_path": "src/troute-config/troute/config/compute_parameters.py",
+      "sha256": "a50a198f0042b03e952d6b22c416008560c8833ddc9dffef1a4fe4cc4bf2c163"
+    },
+    {
+      "installed_path": "troute/config/config.py",
+      "source_path": "src/troute-config/troute/config/config.py",
+      "sha256": "af30e7d0d076049a83cf81532574bc98b4833c8e7604d4ec53948363989f7479"
+    },
+    {
+      "installed_path": "troute/config/logging_parameters.py",
+      "source_path": "src/troute-config/troute/config/logging_parameters.py",
+      "sha256": "244ca34e18b40656a9faf9e194b2195addb64eff3c8d07d5998cccd156798817"
+    },
+    {
+      "installed_path": "troute/config/network_topology_parameters.py",
+      "source_path": "src/troute-config/troute/config/network_topology_parameters.py",
+      "sha256": "00f1e3ac84ea0f9c69bf0053d37ee1bcc1be22e46783cc76c89246fa792522a0"
+    },
+    {
+      "installed_path": "troute/config/output_parameters.py",
+      "source_path": "src/troute-config/troute/config/output_parameters.py",
+      "sha256": "694872cd22f9f152bfde7d2327973dfb5869c849bccea9ec2864d0868a91e1d3"
+    },
+    {
+      "installed_path": "troute/config/reservoir_data_assimilation_parameters.py",
+      "source_path": "src/troute-config/troute/config/reservoir_data_assimilation_parameters.py",
+      "sha256": "1ae8072a30eb8c168ced0e38aeb1b849a67769047e68da791e09f412aafaa477"
+    },
+    {
+      "installed_path": "troute/config/types.py",
+      "source_path": "src/troute-config/troute/config/types.py",
+      "sha256": "62fbfa5e82e8412ea878107eeca5fbca9bf27c435277073f840ebee286aaf3f7"
+    },
+    {
+      "installed_path": "troute/hyfeature_network_utilities.py",
+      "source_path": "src/troute-network/troute/hyfeature_network_utilities.py",
+      "sha256": "3011e89b0a697a9d8ef9a8b836a0b655a96c10afdecf2c7260be5ba2afcc60cc"
+    },
+    {
+      "installed_path": "troute/network/__init__.py",
+      "source_path": "src/troute-network/troute/network/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/network/bmi_array2df.py",
+      "source_path": "src/troute-network/troute/network/bmi_array2df.py",
+      "sha256": "8d99b9d69c7d5d2ee27881973962a22d67b0bbf1eaf3bf6d00dddcfe2d5740ad"
+    },
+    {
+      "installed_path": "troute/network/musking/__init__.py",
+      "source_path": "src/troute-network/troute/network/musking/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/network/reservoirs/__init__.py",
+      "source_path": "src/troute-network/troute/network/reservoirs/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/network/reservoirs/hybrid/__init__.py",
+      "source_path": "src/troute-network/troute/network/reservoirs/hybrid/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/network/reservoirs/levelpool/__init__.py",
+      "source_path": "src/troute-network/troute/network/reservoirs/levelpool/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/network/reservoirs/rfc/__init__.py",
+      "source_path": "src/troute-network/troute/network/reservoirs/rfc/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/network/reservoirs/test/__init__.py",
+      "source_path": "src/troute-network/troute/network/reservoirs/test/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/network/reservoirs/test/test_compute_kernel.py",
+      "source_path": "src/troute-network/troute/network/reservoirs/test/test_compute_kernel.py",
+      "sha256": "1aae0f57b1f351585c31ccf88b340ac978cbaa98837ce6ee3f9f55abf75667a9"
+    },
+    {
+      "installed_path": "troute/nhd_io.py",
+      "source_path": "src/troute-network/troute/nhd_io.py",
+      "sha256": "83f3e239c138a51f1b66c82424aba7f03a0122e19cdc038b7dea3598159931bb"
+    },
+    {
+      "installed_path": "troute/nhd_network.py",
+      "source_path": "src/troute-network/troute/nhd_network.py",
+      "sha256": "6f78c6654ff9836926b0ddc4b687b24eeca99ffbe75eadda456f375294d1ff07"
+    },
+    {
+      "installed_path": "troute/nhd_network_utilities_v02.py",
+      "source_path": "src/troute-network/troute/nhd_network_utilities_v02.py",
+      "sha256": "17ad17a856e167285a847d544cf4db8689f8be369f5a88f02bd618296180743d"
+    },
+    {
+      "installed_path": "troute/rfc_lake_gage_crosswalk.py",
+      "source_path": "src/troute-network/troute/rfc_lake_gage_crosswalk.py",
+      "sha256": "23c078e0e7c45e3cc181187fdc0b57d99245bf784425fd5e274be6886cc7c460"
+    },
+    {
+      "installed_path": "troute/routing/__init__.py",
+      "source_path": "src/troute-routing/troute/routing/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/routing/compute.py",
+      "source_path": "src/troute-routing/troute/routing/compute.py",
+      "sha256": "3005d8447f073e2d6aabca7f1663670034303c245b57b6526297551354ec4472"
+    },
+    {
+      "installed_path": "troute/routing/diffusive_utils.py",
+      "source_path": "src/troute-routing/troute/routing/diffusive_utils.py",
+      "sha256": "92f665c5ddae846911a0827155c989e81308f2736c76ed2a0621f418d5c047d2"
+    },
+    {
+      "installed_path": "troute/routing/diffusive_utils_v02.py",
+      "source_path": "src/troute-routing/troute/routing/diffusive_utils_v02.py",
+      "sha256": "23fba87a7bb75d58be18bb83aeb13739f40911cf2a2d1d37d9c14bcdb7094b88"
+    },
+    {
+      "installed_path": "troute/routing/fast_reach/__init__.py",
+      "source_path": "src/troute-routing/troute/routing/fast_reach/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "installed_path": "troute/routing/fast_reach/reservoir_GL_da.py",
+      "source_path": "src/troute-routing/troute/routing/fast_reach/reservoir_GL_da.py",
+      "sha256": "cb992ed990ee7df0dc15f902178707a3189d80eabb5935e716dbac7e85f5c0ea"
+    },
+    {
+      "installed_path": "troute/routing/fast_reach/reservoir_RFC_da.py",
+      "source_path": "src/troute-routing/troute/routing/fast_reach/reservoir_RFC_da.py",
+      "sha256": "4866f824cc09f0ea17946aab246ee93638160feb916a6af7402a356232390f6f"
+    },
+    {
+      "installed_path": "troute/routing/fast_reach/reservoir_hybrid_da.py",
+      "source_path": "src/troute-routing/troute/routing/fast_reach/reservoir_hybrid_da.py",
+      "sha256": "ed44c5bb26bd7b97b5eb3568715e67cd2a7ad8d2cf41516869e1cfa1df2e76ec"
+    },
+    {
+      "installed_path": "troute/routing/test_compute.py",
+      "source_path": "src/troute-routing/troute/routing/test_compute.py",
+      "sha256": "2e46da2d06c7eb41108894ca52ae78760e38495b42e41f483be41ec109e10d91"
+    },
+    {
+      "installed_path": "troute/test_nhd_network.py",
+      "source_path": "src/troute-network/troute/test_nhd_network.py",
+      "sha256": "15eb2c5c491e56e873a8818ef5e99900d8c223f55b797a0cafe6852f2d8a924c"
+    },
+    {
+      "installed_path": "troute/test_qlat.py",
+      "source_path": "src/troute-network/troute/test_qlat.py",
+      "sha256": "11fadf91d6a7ef6f2b8421b83b2200538ebbe21444fe0bdcdb868853f0ee5ede"
+    }
+  ],
+  "qualifier_sha256": "559015e356633ec1f66e7a2f07cda4222c96d3abfd25f55caf4db8c9f92c6e8e",
+  "source_commits": {
+    "NoahOWP": "0abb891b48b043cc626c4e4bbd0efe54ad357fe1",
+    "troute": "533fbd98362efdafae62392308727de4f0d4cc20"
+  },
+  "native_features": {
+    "MPI": false,
+    "Python": false,
+    "integrated_routing": false
+  },
+  "native_argument_vector": [
+    "/tmp/runtime/ngen-shared",
+    "config/public-watauga.gpkg",
+    "all",
+    "config/public-watauga.gpkg",
+    "all",
+    "config/realization.json"
+  ],
+  "routing_argument_vector": [
+    "/ngen/.venv/bin/python",
+    "-m",
+    "nwm_routing",
+    "-f",
+    "config/troute.yaml"
+  ],
+  "native_environment": {
+    "LD_LIBRARY_PATH": "/tmp/runtime:/dmod/shared_libs:/usr/local/lib:/usr/lib64",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "bounds": {
+    "probe_wall_seconds": 60,
+    "runtime_tmpfs_bytes": 67108864,
+    "job_input_tmpfs_bytes": 134217728,
+    "job_output_tmpfs_bytes": 1073741824,
+    "memory_bytes": 8589934592,
+    "cpus": 2,
+    "pids": 256,
+    "network": "none",
+    "root_filesystem": "read_only",
+    "host_mounts": false
+  },
+  "limitations": [
+    "Component source/toolchain/binary build attestations remain incomplete.",
+    "This is immutable export/image execution provenance, not a new clean build.",
+    "Integrated routing is disabled in the export; each logical reference needs a separate t-route process.",
+    "Input and diagnostic scientific admission plus a frozen invocation allowance remain required.",
+    "Rights, reproducible clean builder, physical equivalence and researcher reproduction remain release gates."
+  ],
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d"
+}

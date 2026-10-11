@@ -1,0 +1,516 @@
+{
+  "schema_version": "public-fixture-scientific-admission-summary/0.1",
+  "fixture_id": "watauga-public-rebuild-v1",
+  "phase": "diagnostic_input_contract_qualification",
+  "model_invocations_by_this_admission": 0,
+  "admission_identity_sha256": "e878e6697bb1e6f95eadd3d116110873d778c23f9a923db6f4d9daea83fa09d9",
+  "prior_assembly_identity_sha256": "c650369eb86228ea5961b8fef9e0898f4ad257653f8a795088c7234d8332b959",
+  "recipe": {
+    "bytes": 17160,
+    "sha256": "ffb4e4db5c5173e4a9a7c9c55147d2a3a72799944981bec7290b916452cd8899"
+  },
+  "adapter": {
+    "bytes": 14879,
+    "sha256": "d9020124bebb70b923950836aa688ab55e328786c6a51f1444e269aad4d41fec"
+  },
+  "source_contracts": [
+    {
+      "archive": "ngen-9175b640a4e6f1d90e58e0a65662174d08f052ef.tar.gz",
+      "archive_sha256": "22fc17bd44ec763b3002360effafcd0b2d194a8b0a9289d30f18b95321407598",
+      "member": "ngen-9175b640a4e6f1d90e58e0a65662174d08f052ef/src/realizations/catchment/Bmi_Multi_Formulation.cpp",
+      "bytes": 21395,
+      "sha256": "4a08781d0c72f723852663b5ce4bea3e22df287b8a418c9813173f9c0cbcfa2b"
+    },
+    {
+      "archive": "ngen-9175b640a4e6f1d90e58e0a65662174d08f052ef.tar.gz",
+      "archive_sha256": "22fc17bd44ec763b3002360effafcd0b2d194a8b0a9289d30f18b95321407598",
+      "member": "ngen-9175b640a4e6f1d90e58e0a65662174d08f052ef/include/realizations/catchment/Bmi_Formulation.hpp",
+      "bytes": 12542,
+      "sha256": "8163474943eeea4c33fd72416ac66fa0ee0e6e509610675fc9893cd6cfc1728c"
+    },
+    {
+      "archive": "ngen-9175b640a4e6f1d90e58e0a65662174d08f052ef.tar.gz",
+      "archive_sha256": "22fc17bd44ec763b3002360effafcd0b2d194a8b0a9289d30f18b95321407598",
+      "member": "ngen-9175b640a4e6f1d90e58e0a65662174d08f052ef/src/core/HY_Features.cpp",
+      "bytes": 3246,
+      "sha256": "4c615a3a65c1ea6845217630493e42247e7548a5130100873402bb51d55857d5"
+    },
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/src/DateTimeUtilsModule.f90",
+      "bytes": 27260,
+      "sha256": "36d333ff7139ea6ac5c9a2098f3327a06ba823ad7d188a2f980e524909517b4f"
+    },
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/src/RunModule.f90",
+      "bytes": 15618,
+      "sha256": "86541ddca53d544e26a763a22c89084750de719f73419f47d898a0d0ce5d1bae"
+    },
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/src/UtilitiesModule.f90",
+      "bytes": 29245,
+      "sha256": "49226ffc41a9d40b83e3b2aee1575b78d36312ded9521825ea5eeaff058e2ef4"
+    },
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/src/AtmProcessing.f90",
+      "bytes": 9863,
+      "sha256": "0dfabeecd79d7cefdc5935b9a1c75e829a35b34f8fae1277ba8d743327fb5dd0"
+    },
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/bmi/bmi_noahowp.f90",
+      "bytes": 50016,
+      "sha256": "e13bbfc3490c862d753fce0662bdd7465b80082fc3235ac97581daa0ffb57fce"
+    },
+    {
+      "archive": "CFE-a349a953ef239ae7470a8365cf614283d7e6ca80.tar.gz",
+      "archive_sha256": "085a083c534aed42e15338dd97a017e41a2c05cab9f910cbb63d15d6b7665142",
+      "member": "cfe-a349a953ef239ae7470a8365cf614283d7e6ca80/src/bmi_cfe.c",
+      "bytes": 146389,
+      "sha256": "77011721a6b0852e9989945b1e43c29120c4ef768069a790072b95445a9916fd"
+    },
+    {
+      "archive": "CFE-a349a953ef239ae7470a8365cf614283d7e6ca80.tar.gz",
+      "archive_sha256": "085a083c534aed42e15338dd97a017e41a2c05cab9f910cbb63d15d6b7665142",
+      "member": "cfe-a349a953ef239ae7470a8365cf614283d7e6ca80/configs/README.md",
+      "bytes": 8614,
+      "sha256": "d0661f9cd5281053019d643de7b7dc6065cdfafac4f34193af00de6661687a26"
+    },
+    {
+      "archive": "troute-533fbd98362efdafae62392308727de4f0d4cc20.tar.gz",
+      "archive_sha256": "b25a31958789a12e779434e99cb5ae9cf90dbb372cee3bcd30f873c63d130584",
+      "member": "t-route-533fbd98362efdafae62392308727de4f0d4cc20/src/troute-network/troute/HYFeaturesNetwork.py",
+      "bytes": 53364,
+      "sha256": "624f3103f9b40153aa15fa474f4d0d741b95114317310b363722f8076811a91a"
+    }
+  ],
+  "generated_files": 291,
+  "generated_bytes": 12250007,
+  "unchanged_files": 192,
+  "changed_files": 99,
+  "changes": {
+    "Noah inclusive endpoint": 93,
+    "realization output fields and external routing": 3,
+    "routing catchment lateral input and five minute output": 3
+  },
+  "jobs": [
+    {
+      "path": "history",
+      "kind": "history_only",
+      "issue_time_utc": null,
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "provider_hours_per_catchment": 786,
+      "history_hours": 786,
+      "forecast_hours": 0,
+      "routing_five_minute_steps": 9432,
+      "selected_gauge_output": "wb-1017693",
+      "noah_inclusive_enddate": "202201021700",
+      "noah_advertised_timestep_count": 786,
+      "routing_process": "external_pinned_t_route",
+      "routing_output_interval_seconds": 300,
+      "catchment_output_variables": [
+        "RAIN_RATE",
+        "GIUH_RUNOFF",
+        "INFILTRATION_EXCESS",
+        "DIRECT_RUNOFF",
+        "NASH_LATERAL_RUNOFF",
+        "DEEP_GW_TO_CHANNEL_FLUX",
+        "SOIL_TO_GW_FLUX",
+        "Q_OUT",
+        "POTENTIAL_ET",
+        "ACTUAL_ET",
+        "GW_STORAGE",
+        "SOIL_STORAGE",
+        "SOIL_STORAGE_CHANGE",
+        "SURF_RUNOFF_SCHEME",
+        "NWM_PONDED_DEPTH"
+      ],
+      "catchment_output_precision": 17,
+      "cfe_parameter_bytes_preserved": true
+    },
+    {
+      "path": "serial-20220101T2300Z",
+      "kind": "independent_serial_replay",
+      "issue_time_utc": "2022-01-01T23:00:00Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T17:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 16:00:00",
+      "provider_hours_per_catchment": 785,
+      "history_hours": 767,
+      "forecast_hours": 18,
+      "routing_five_minute_steps": 9420,
+      "selected_gauge_output": "wb-1017693",
+      "noah_inclusive_enddate": "202201021600",
+      "noah_advertised_timestep_count": 785,
+      "routing_process": "external_pinned_t_route",
+      "routing_output_interval_seconds": 300,
+      "catchment_output_variables": [
+        "RAIN_RATE",
+        "GIUH_RUNOFF",
+        "INFILTRATION_EXCESS",
+        "DIRECT_RUNOFF",
+        "NASH_LATERAL_RUNOFF",
+        "DEEP_GW_TO_CHANNEL_FLUX",
+        "SOIL_TO_GW_FLUX",
+        "Q_OUT",
+        "POTENTIAL_ET",
+        "ACTUAL_ET",
+        "GW_STORAGE",
+        "SOIL_STORAGE",
+        "SOIL_STORAGE_CHANGE",
+        "SURF_RUNOFF_SCHEME",
+        "NWM_PONDED_DEPTH"
+      ],
+      "catchment_output_precision": 17,
+      "cfe_parameter_bytes_preserved": true
+    },
+    {
+      "path": "serial-20220102T0000Z",
+      "kind": "independent_serial_replay",
+      "issue_time_utc": "2022-01-02T00:00:00Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "provider_hours_per_catchment": 786,
+      "history_hours": 768,
+      "forecast_hours": 18,
+      "routing_five_minute_steps": 9432,
+      "selected_gauge_output": "wb-1017693",
+      "noah_inclusive_enddate": "202201021700",
+      "noah_advertised_timestep_count": 786,
+      "routing_process": "external_pinned_t_route",
+      "routing_output_interval_seconds": 300,
+      "catchment_output_variables": [
+        "RAIN_RATE",
+        "GIUH_RUNOFF",
+        "INFILTRATION_EXCESS",
+        "DIRECT_RUNOFF",
+        "NASH_LATERAL_RUNOFF",
+        "DEEP_GW_TO_CHANNEL_FLUX",
+        "SOIL_TO_GW_FLUX",
+        "Q_OUT",
+        "POTENTIAL_ET",
+        "ACTUAL_ET",
+        "GW_STORAGE",
+        "SOIL_STORAGE",
+        "SOIL_STORAGE_CHANGE",
+        "SURF_RUNOFF_SCHEME",
+        "NWM_PONDED_DEPTH"
+      ],
+      "catchment_output_precision": 17,
+      "cfe_parameter_bytes_preserved": true
+    }
+  ],
+  "routing_crosswalk": {
+    "catchments": {
+      "cat-1017689": {
+        "reach_id": "wb-1017689",
+        "numeric_routing_id": 1017689,
+        "downstream_nexus_id": "nex-1017690",
+        "area_sq_km": 10.75660679185675
+      },
+      "cat-1017872": {
+        "reach_id": "wb-1017872",
+        "numeric_routing_id": 1017872,
+        "downstream_nexus_id": "nex-1017870",
+        "area_sq_km": 3.181050369000077
+      },
+      "cat-1017871": {
+        "reach_id": "wb-1017871",
+        "numeric_routing_id": 1017871,
+        "downstream_nexus_id": "nex-1017690",
+        "area_sq_km": 3.8767500360004643
+      },
+      "cat-1017870": {
+        "reach_id": "wb-1017870",
+        "numeric_routing_id": 1017870,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 18.32195172281635
+      },
+      "cat-1017869": {
+        "reach_id": "wb-1017869",
+        "numeric_routing_id": 1017869,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 7.354800053999429
+      },
+      "cat-1017868": {
+        "reach_id": "wb-1017868",
+        "numeric_routing_id": 1017868,
+        "downstream_nexus_id": "nex-1017690",
+        "area_sq_km": 3.122550378000065
+      },
+      "cat-1017867": {
+        "reach_id": "wb-1017867",
+        "numeric_routing_id": 1017867,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 7.4150993204991344
+      },
+      "cat-1017690": {
+        "reach_id": "wb-1017690",
+        "numeric_routing_id": 1017690,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 13.930199374500155
+      },
+      "cat-1017863": {
+        "reach_id": "wb-1017863",
+        "numeric_routing_id": 1017863,
+        "downstream_nexus_id": "nex-1017860",
+        "area_sq_km": 4.198499905502592
+      },
+      "cat-1017861": {
+        "reach_id": "wb-1017861",
+        "numeric_routing_id": 1017861,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 8.82180014400105
+      },
+      "cat-1017862": {
+        "reach_id": "wb-1017862",
+        "numeric_routing_id": 1017862,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 5.1794997389990085
+      },
+      "cat-1017860": {
+        "reach_id": "wb-1017860",
+        "numeric_routing_id": 1017860,
+        "downstream_nexus_id": "nex-1017692",
+        "area_sq_km": 10.9219501260016
+      },
+      "cat-1017866": {
+        "reach_id": "wb-1017866",
+        "numeric_routing_id": 1017866,
+        "downstream_nexus_id": "nex-1017864",
+        "area_sq_km": 3.454200265499132
+      },
+      "cat-1017864": {
+        "reach_id": "wb-1017864",
+        "numeric_routing_id": 1017864,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 10.21365067049992
+      },
+      "cat-1017865": {
+        "reach_id": "wb-1017865",
+        "numeric_routing_id": 1017865,
+        "downstream_nexus_id": "nex-1017691",
+        "area_sq_km": 5.704649563501179
+      },
+      "cat-1017691": {
+        "reach_id": "wb-1017691",
+        "numeric_routing_id": 1017691,
+        "downstream_nexus_id": "nex-1017692",
+        "area_sq_km": 9.932400503999114
+      },
+      "cat-1017859": {
+        "reach_id": "wb-1017859",
+        "numeric_routing_id": 1017859,
+        "downstream_nexus_id": "nex-1017692",
+        "area_sq_km": 8.134650616499423
+      },
+      "cat-1017692": {
+        "reach_id": "wb-1017692",
+        "numeric_routing_id": 1017692,
+        "downstream_nexus_id": "nex-1017693",
+        "area_sq_km": 10.932299203500598
+      },
+      "cat-1017857": {
+        "reach_id": "wb-1017857",
+        "numeric_routing_id": 1017857,
+        "downstream_nexus_id": "nex-1017847",
+        "area_sq_km": 7.006499757001105
+      },
+      "cat-1017858": {
+        "reach_id": "wb-1017858",
+        "numeric_routing_id": 1017858,
+        "downstream_nexus_id": "nex-1017848",
+        "area_sq_km": 5.016600323999943
+      },
+      "cat-1017855": {
+        "reach_id": "wb-1017855",
+        "numeric_routing_id": 1017855,
+        "downstream_nexus_id": "nex-1017848",
+        "area_sq_km": 3.1765501889999226
+      },
+      "cat-1017856": {
+        "reach_id": "wb-1017856",
+        "numeric_routing_id": 1017856,
+        "downstream_nexus_id": "nex-1017855",
+        "area_sq_km": 3.1018490639997998
+      },
+      "cat-1017847": {
+        "reach_id": "wb-1017847",
+        "numeric_routing_id": 1017847,
+        "downstream_nexus_id": "nex-1017848",
+        "area_sq_km": 14.491800872997839
+      },
+      "cat-1017849": {
+        "reach_id": "wb-1017849",
+        "numeric_routing_id": 1017849,
+        "downstream_nexus_id": "nex-1017693",
+        "area_sq_km": 5.579999815499429
+      },
+      "cat-1017851": {
+        "reach_id": "wb-1017851",
+        "numeric_routing_id": 1017851,
+        "downstream_nexus_id": "nex-1017850",
+        "area_sq_km": 4.379400215999793
+      },
+      "cat-1017850": {
+        "reach_id": "wb-1017850",
+        "numeric_routing_id": 1017850,
+        "downstream_nexus_id": "nex-1017693",
+        "area_sq_km": 13.080599883001756
+      },
+      "cat-1017852": {
+        "reach_id": "wb-1017852",
+        "numeric_routing_id": 1017852,
+        "downstream_nexus_id": "nex-1017693",
+        "area_sq_km": 7.9078498604987955
+      },
+      "cat-1017853": {
+        "reach_id": "wb-1017853",
+        "numeric_routing_id": 1017853,
+        "downstream_nexus_id": "nex-1017693",
+        "area_sq_km": 4.477500508499118
+      },
+      "cat-1017854": {
+        "reach_id": "wb-1017854",
+        "numeric_routing_id": 1017854,
+        "downstream_nexus_id": "nex-1017848",
+        "area_sq_km": 8.296199626501023
+      },
+      "cat-1017848": {
+        "reach_id": "wb-1017848",
+        "numeric_routing_id": 1017848,
+        "downstream_nexus_id": "nex-1017693",
+        "area_sq_km": 13.76594968949852
+      },
+      "cat-1017693": {
+        "reach_id": "wb-1017693",
+        "numeric_routing_id": 1017693,
+        "downstream_nexus_id": "nex-1017694",
+        "area_sq_km": 2.1321004365005307
+      }
+    },
+    "shared_confluence_nexuses": {
+      "nex-1017690": 3,
+      "nex-1017691": 8,
+      "nex-1017692": 3,
+      "nex-1017693": 6,
+      "nex-1017848": 4
+    },
+    "selected_outlet": {
+      "reach_id": "wb-1017693",
+      "numeric_routing_id": 1017693,
+      "downstream_nexus_id": "nex-1017694",
+      "area_sq_km": 2.1321004365005307
+    },
+    "lateral_input": "cat-* Q_OUT timestep depth [m]",
+    "conversion_to_m3_per_s": "Q_OUT * area_sq_km * 1000000 / 3600",
+    "nexus_aggregate_lateral_assignment_admitted": false
+  },
+  "weather_range_review": {
+    "provider_files_verified": 93,
+    "provider_rows_checked": 25482,
+    "field_min_max": {
+      "precip_rate": [
+        0.0,
+        0.00403383212126598
+      ],
+      "TMP_2maboveground": [
+        266.1977563159706,
+        294.5437300836152
+      ],
+      "SPFH_2maboveground": [
+        0.0006537564407539817,
+        0.011899500379142
+      ],
+      "UGRD_10maboveground": [
+        -5.3374953083088865,
+        13.343797060727953
+      ],
+      "VGRD_10maboveground": [
+        -9.083337352984865,
+        9.265712258902717
+      ],
+      "PRES_surface": [
+        86321.83670425514,
+        92838.78284572912
+      ],
+      "DSWRF_surface": [
+        0.0,
+        485.87235872517294
+      ],
+      "DLWRF_surface": [
+        172.92870787463912,
+        390.8772309146584
+      ]
+    },
+    "checks": "nonnegative precipitation and radiation; positive Kelvin temperature and pressure; specific humidity 0<=q<1; all finite supplied by prior audit",
+    "model_executed": false
+  },
+  "pinned_consumer_units": {
+    "Noah_PRCPNONC": "mm/s",
+    "Noah_Q2": "specific humidity kg/kg; source AtmProcessing treats Q2 as QAIR then derives mixing ratio Q2/(1-Q2)",
+    "Noah_SOLDN_LWDN": "W/m2",
+    "Noah_QINSUR_EVAPOTRANS": "m/s",
+    "CFE_Q_OUT": "m per timestep",
+    "CFE_soil_params_slop": "m/m gradient multiplier; documented range 0..1"
+  },
+  "source_attribute_review": {
+    "mean.slope_min_max": [
+      83.1903086404573,
+      87.96929709872913
+    ],
+    "mean.slope_1km_min_max": [
+      0.04307885095477104,
+      0.062094494700431824
+    ],
+    "CFE_mapping": "identity(mean.slope_1km), candidate treatment, original CFE config bytes retained",
+    "Noah_mapping": "degrees(arctan(tan(radians(mean.slope))/100)), pinned NGIAB formula retained",
+    "archive_embedded_units_metadata": false,
+    "source_derivation_qualified": false,
+    "primary_hydrofabric_repository_lookup": "NOAA-OWP/hydrofabric returned HTTP 404 during this qualification; no mirror used to qualify units"
+  },
+  "input_contract_admitted": true,
+  "runtime_receipt": "docs/evidence/linux-diagnostic-admission-20261010.json",
+  "physical_reference_acceptance": "requires separate model process and full output acceptance receipts",
+  "release_scientifically_qualified": false,
+  "interpretation_limits": [
+    "Candidate drainage and Noah terrain source derivation remain unqualified",
+    "Declared cold initial states and 31-day history do not establish convergence",
+    "Point radiation sampling held across each hour is a declared diagnostic convention",
+    "Selected full reach is a surrogate for the interior gauge, not an exact gauge segment",
+    "Current archive generations do not establish historical causal availability",
+    "Input admission does not establish shared-history branching or model execution"
+  ],
+  "targeted_tests": {
+    "command": "PYTHONPATH=src python3 -m unittest discover -s tests -p test_public_native_qualification.py -v",
+    "passed": 9,
+    "native_model_invocations": 0
+  },
+  "failed_preparation_attempts": [
+    {
+      "condition": "Routing source link keys are wb-prefixed strings, not bare integers",
+      "model_invocations": 0,
+      "destination_created": false,
+      "resolution": "Accept only source-supported wb-prefixed or decimal keys and verify exact numeric reach axis"
+    }
+  ],
+  "runtime_unit_conversion_check": {
+    "receipt": "docs/evidence/udunits-diagnostic-check-20261010.json",
+    "identity_sha256": "c956bef572684b23acb1d493ad8b8558d6c5f86001c3dbd0633aaf1cb44131f3",
+    "m_per_s_to_mm_per_hour_factor": 3600000.0000000005,
+    "one_micro_m_per_s_to_mm_per_hour": 3.6,
+    "model_invocations": 0
+  },
+  "summary_identity_sha256": "5e14f22686c6fff64e71b3359aab205847871c1e38d35a683f6424a16d0da74d"
+}

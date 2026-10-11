@@ -1,0 +1,79 @@
+{
+  "schema_version": "public-physical-reference-freeze/0.1",
+  "frozen_at_utc": "2026-10-11T04:15:34Z",
+  "protocol_identity_sha256": "0c6a5c8c063343c3a02659298a273200d851252d63f84d7ffcd0fa6027361b94",
+  "admission_identity_sha256": "f06fba943e9128f9a8ec56d7f7b80e3fe2f8b38cca5348cba0eff4eda7389146",
+  "protocol_file": {
+    "bytes": 16605,
+    "sha256": "d560628937036f92ecf7caed4d5d08ff79be73a9fb4d472c77eb3621eef385b3"
+  },
+  "admission_file": {
+    "bytes": 55451,
+    "sha256": "128059e470480ae32f737dd0da4cba866892e23e0562eacafd4179004d99b497"
+  },
+  "host_orchestrator": {
+    "bytes": 15458,
+    "sha256": "ad33ab999672411ecd011744279221f80c47391153acdb215846b046a1a0787a"
+  },
+  "source_tools": [
+    {
+      "path": "scripts/physical_reference_v2/audit_outputs.py",
+      "bytes": 13691,
+      "sha256": "1436793c5a9dc271f485adabd6542b48857ca8f690560878e506aa003ab92e0b"
+    },
+    {
+      "path": "scripts/physical_reference_v2/common.py",
+      "bytes": 5240,
+      "sha256": "884e7ea9eab83daef25c8b1698d8c4888d40b274c1e72a43d0d1f5eba02424ce"
+    },
+    {
+      "path": "scripts/physical_reference_v2/compare_reference_set.py",
+      "bytes": 5952,
+      "sha256": "811da9936354a363af16e55d269229e7691fca4d2e44f59a7e2bd31bee132a93"
+    },
+    {
+      "path": "scripts/physical_reference_v2/execute_stage.py",
+      "bytes": 13164,
+      "sha256": "b709dfe4fb03545c81e23be49558c8e38958b5b1da7f0e4a6526afba08854280"
+    },
+    {
+      "path": "scripts/physical_reference_v2/native_outputs.py",
+      "bytes": 3338,
+      "sha256": "1f79ff364cabdb98021394a0d16fdf5ac50e6606ca1a19c5033e62700a09e974"
+    },
+    {
+      "path": "scripts/physical_reference_v2/normalize_routing.py",
+      "bytes": 5613,
+      "sha256": "ee160e38f26f6b7e34b6c37e3696d2fb5bf3cadc141cf7e44fa3027d1d17977c"
+    },
+    {
+      "path": "scripts/physical_reference_v2/seal_execution.py",
+      "bytes": 4924,
+      "sha256": "f6bdf4ad2afc178ea4e684523e7ea721f641ac9dd7975e86e82b88a56c392e08"
+    }
+  ],
+  "tests_before_launch": {
+    "passed": 247,
+    "log": {
+      "bytes": 347,
+      "sha256": "f060309219aaad774c1413133988f5702fa08e536e8c63a154d3235e73be34f8"
+    }
+  },
+  "new_experiment_model_invocations_before_freeze": 0,
+  "prior_experiment_actual_model_invocations": 3,
+  "prior_experiment_occupied_reservations": 4,
+  "resource_and_scope_document": {
+    "bytes": 8013,
+    "sha256": "3a4eef361e43a648414ab3d54cd201c8b18b5164f29e3abde269bf87c153d4e6"
+  },
+  "prior_failed_experiment_protocol_identity_sha256": "1f38dbced75935cb59d2bfb62c272ae250b03a438e889720724837cf58c28ae1",
+  "diagnostic_transfer_probe": {
+    "bytes": 5647,
+    "sha256": "35243cd6ebf0202173ee60998d1133ba0101a8e30835688ace04c0b6d996450d"
+  },
+  "udunits_probe": {
+    "bytes": 2800,
+    "sha256": "7907d21ac2152eed2601fa4964d37dddd5dc44155b3a57eae6a40b88a660ac35"
+  },
+  "freeze_identity_sha256": "2a262e44437c0e94b2f5fe31be2334711e0d385f87af6cd2032021fa81d4b60e"
+}

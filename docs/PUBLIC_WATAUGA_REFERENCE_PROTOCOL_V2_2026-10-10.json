@@ -1,0 +1,423 @@
+{
+  "schema_version": "public-physical-reference-protocol/0.1",
+  "experiment_id": "watauga-public-independent-serial-v2",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "authorization": "Owner request on 10 October 2026 to qualify the Linux runtime and new fixture, then generate independent physical references.",
+  "scope": "prospective diagnostic independent serial references with explicitly revised Noah configuration; separate from failed v1 and historical E03",
+  "prior_preparation_recipe_preserved": true,
+  "input_contract_admission_identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+  "prior_assembly_identity_sha256": "c650369eb86228ea5961b8fef9e0898f4ad257653f8a795088c7234d8332b959",
+  "runtime_qualification_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "domain_preparation_identity_sha256": "81244db9c23c141da82fd684e6829c80044a2a0c2d619f3976805e358353a4ac",
+  "weather_preparation_identity_sha256": "085efd5725eb87c222258c053a3aae5914f25f231f66e9bb31d2e8959afea070",
+  "catchment_ids": [
+    "cat-1017689",
+    "cat-1017690",
+    "cat-1017691",
+    "cat-1017692",
+    "cat-1017693",
+    "cat-1017847",
+    "cat-1017848",
+    "cat-1017849",
+    "cat-1017850",
+    "cat-1017851",
+    "cat-1017852",
+    "cat-1017853",
+    "cat-1017854",
+    "cat-1017855",
+    "cat-1017856",
+    "cat-1017857",
+    "cat-1017858",
+    "cat-1017859",
+    "cat-1017860",
+    "cat-1017861",
+    "cat-1017862",
+    "cat-1017863",
+    "cat-1017864",
+    "cat-1017865",
+    "cat-1017866",
+    "cat-1017867",
+    "cat-1017868",
+    "cat-1017869",
+    "cat-1017870",
+    "cat-1017871",
+    "cat-1017872"
+  ],
+  "nexus_ids": [
+    "nex-1017690",
+    "nex-1017691",
+    "nex-1017692",
+    "nex-1017693",
+    "nex-1017694",
+    "nex-1017847",
+    "nex-1017848",
+    "nex-1017850",
+    "nex-1017855",
+    "nex-1017860",
+    "nex-1017864",
+    "nex-1017870"
+  ],
+  "routing_feature_ids": [
+    "wb-1017689",
+    "wb-1017690",
+    "wb-1017691",
+    "wb-1017692",
+    "wb-1017693",
+    "wb-1017847",
+    "wb-1017848",
+    "wb-1017849",
+    "wb-1017850",
+    "wb-1017851",
+    "wb-1017852",
+    "wb-1017853",
+    "wb-1017854",
+    "wb-1017855",
+    "wb-1017856",
+    "wb-1017857",
+    "wb-1017858",
+    "wb-1017859",
+    "wb-1017860",
+    "wb-1017861",
+    "wb-1017862",
+    "wb-1017863",
+    "wb-1017864",
+    "wb-1017865",
+    "wb-1017866",
+    "wb-1017867",
+    "wb-1017868",
+    "wb-1017869",
+    "wb-1017870",
+    "wb-1017871",
+    "wb-1017872"
+  ],
+  "selected_routing_feature_id": "wb-1017693",
+  "terminal_nexus_id": "nex-1017694",
+  "usgs_id": "03479000",
+  "gauge_interpretation": "full selected reach is a spatial surrogate for an interior gauge, not an exactly segmented gauge point",
+  "cases": [
+    {
+      "case_id": "history",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "issue_time_utc": null,
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "provider_hours": 786,
+      "antecedent_hours": 786,
+      "lead_hours": 0,
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "noah_inclusive_enddate": "202201021700",
+      "routing_steps": 9432
+    },
+    {
+      "case_id": "serial-20220101T2300Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "issue_time_utc": "2022-01-01T23:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T17:00:00Z",
+      "provider_hours": 785,
+      "antecedent_hours": 767,
+      "lead_hours": 18,
+      "ngen_inclusive_last_provider_time": "2022-01-02 16:00:00",
+      "noah_inclusive_enddate": "202201021600",
+      "routing_steps": 9420
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "issue_time_utc": "2022-01-02T00:00:00Z",
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z",
+      "provider_hours": 786,
+      "antecedent_hours": 768,
+      "lead_hours": 18,
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "noah_inclusive_enddate": "202201021700",
+      "routing_steps": 9432
+    }
+  ],
+  "cold_initial_state": "Each logical job independently starts at 2021-12-01T00:00:00Z using the same declared unchanged CFE/Noah cold initial values.",
+  "native_argv": [
+    "/tmp/runtime/ngen-shared",
+    "config/public-watauga.gpkg",
+    "all",
+    "config/public-watauga.gpkg",
+    "all",
+    "config/realization.json"
+  ],
+  "routing_argv": [
+    "/ngen/.venv/bin/python",
+    "-m",
+    "nwm_routing",
+    "-f",
+    "config/troute.yaml"
+  ],
+  "native_build_capabilities": {
+    "embedded_python": false,
+    "embedded_routing": false
+  },
+  "routing_output_interval_seconds": 300,
+  "routing_output_format": "pinned t-route float32 NetCDF, complete wb reach axis and flow/velocity/depth arrays",
+  "native_output_time": "native catchment/nexus CSV labels are interval-start; canonical valid time is label plus3600seconds",
+  "routing_output_time": "NetCDF explicit seconds-since-origin coordinate at300,600,...,physical stop; lead k is the actual coordinate issue+k*3600",
+  "catchment_output_variables": [
+    "RAIN_RATE",
+    "GIUH_RUNOFF",
+    "INFILTRATION_EXCESS",
+    "DIRECT_RUNOFF",
+    "NASH_LATERAL_RUNOFF",
+    "DEEP_GW_TO_CHANNEL_FLUX",
+    "SOIL_TO_GW_FLUX",
+    "Q_OUT",
+    "POTENTIAL_ET",
+    "ACTUAL_ET",
+    "GW_STORAGE",
+    "SOIL_STORAGE",
+    "SOIL_STORAGE_CHANGE",
+    "SURF_RUNOFF_SCHEME",
+    "NWM_PONDED_DEPTH"
+  ],
+  "catchment_output_precision": 17,
+  "bounds": {
+    "cpus": 2,
+    "memory_bytes": 8589934592,
+    "pids": 256,
+    "logical_job_wall_seconds": 1800,
+    "job_output_bytes": 1073741824,
+    "aggregate_output_bytes": 4294967296,
+    "model_process_allowance": 9,
+    "planned_model_processes": 6,
+    "additional_repair_processes_maximum": 3,
+    "runtime_and_staging_bytes": 12884901888,
+    "fixture_preparation_bytes": 2147483648,
+    "minimum_host_free_bytes": 8589934592,
+    "normalization_read_bytes": 134217728,
+    "reference_arrays_bytes": 134217728,
+    "network": "none",
+    "root_filesystem": "read_only",
+    "host_mounts": false,
+    "paid_resources": false,
+    "aggregate_actual_model_processes_including_prior_phase_maximum": 12
+  },
+  "acceptance": [
+    "Externally SHA-frozen, sealed combined runtime/input admission precedes every native/routing launch.",
+    "Every model process reservation is durable before launch and consumes the nine-process allowance even when it fails.",
+    "Native zero exit is insufficient: complete31catchment/12nexus clocks and15finitevariables plus absence of FATAL ERROR in native logs are required before routing can launch.",
+    "Native and routing processes exit zero, preserved logs match receipts, inputs match before and after, and raw outputs remain unchanged.",
+    "All31catchments have all15finite CFEvariables on every provider interval; all12nexuses have complete finite nonnegative flows.",
+    "All31routed reaches have finite nonnegative flow,velocity,depth on every300second coordinate; selectedreachwb-1017693 is present.",
+    "Complete raw outputs and full canonical arrays are SHA-bound before extracting18leads for each issue.",
+    "Antecedent prefixes independently checked against history with exact serialized equality, without tuning a numerical tolerance."
+  ],
+  "interpretation_limits": [
+    "Historical E03 is not restored and its benchmark identity remains unchanged.",
+    "No shared history, restart, complete land checkpoint, speedup or fault recovery is exercised by these serial references.",
+    "Declared cold initial states and32dayhistory are not evidence of hydrologic spinup convergence.",
+    "Candidate hydrofabric parameters and current archive weather are diagnostic inputs; no forecast skill, historical causal availability or release scientific qualification is claimed.",
+    "Native source/clean-build attestation and redistributable public-runtime/data release remain separate gates."
+  ],
+  "tools": [
+    {
+      "path": "scripts/physical_reference_v2/audit_outputs.py",
+      "bytes": 13691,
+      "sha256": "1436793c5a9dc271f485adabd6542b48857ca8f690560878e506aa003ab92e0b"
+    },
+    {
+      "path": "scripts/physical_reference_v2/common.py",
+      "bytes": 5240,
+      "sha256": "884e7ea9eab83daef25c8b1698d8c4888d40b274c1e72a43d0d1f5eba02424ce"
+    },
+    {
+      "path": "scripts/physical_reference_v2/compare_reference_set.py",
+      "bytes": 5952,
+      "sha256": "811da9936354a363af16e55d269229e7691fca4d2e44f59a7e2bd31bee132a93"
+    },
+    {
+      "path": "scripts/physical_reference_v2/execute_stage.py",
+      "bytes": 13164,
+      "sha256": "b709dfe4fb03545c81e23be49558c8e38958b5b1da7f0e4a6526afba08854280"
+    },
+    {
+      "path": "scripts/physical_reference_v2/native_outputs.py",
+      "bytes": 3338,
+      "sha256": "1f79ff364cabdb98021394a0d16fdf5ac50e6606ca1a19c5033e62700a09e974"
+    },
+    {
+      "path": "scripts/physical_reference_v2/normalize_routing.py",
+      "bytes": 5613,
+      "sha256": "ee160e38f26f6b7e34b6c37e3696d2fb5bf3cadc141cf7e44fa3027d1d17977c"
+    },
+    {
+      "path": "scripts/physical_reference_v2/seal_execution.py",
+      "bytes": 4924,
+      "sha256": "f6bdf4ad2afc178ea4e684523e7ea721f641ac9dd7975e86e82b88a56c392e08"
+    }
+  ],
+  "supersedes_failed_experiment_id": "watauga-public-independent-serial-v1",
+  "prior_protocol_identity_sha256": "1f38dbced75935cb59d2bfb62c272ae250b03a438e889720724837cf58c28ae1",
+  "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+  "scientific_configuration_changes": [
+    {
+      "component": "NoahOWP",
+      "field": "stomatal_resistance_option",
+      "previous": 4,
+      "prospective": 1,
+      "reason": "Previous value4 rejected by pinned Noah1..3guard; selected exact pinned run/namelist.input default1. This controls soil moisture stress, distinct from canopy stomatal formulation."
+    },
+    {
+      "component": "NoahOWP",
+      "field": "evap_srfc_resistance_option",
+      "previous": 5,
+      "prospective": 1,
+      "reason": "Previous value5 outside pinned1..4guard; selected exact pinned run/namelist.input default1."
+    }
+  ],
+  "unchanged_scientific_inputs": [
+    "origin and cold initial values",
+    "weather preparations and arrays",
+    "catchment/nexus/reach axes",
+    "CFE parameter/configuration bytes",
+    "geometry",
+    "runtime component bytes",
+    "remaining15 model option fields including canopy_stom_resist_option1"
+  ],
+  "failure_provenance": {
+    "prior_experiment": "watauga-public-independent-serial-v1",
+    "prior_native_result": "Fortran STOP returned zero with fatal configuration message and incomplete output; no qualified reference was generated.",
+    "prior_model_processes": 3,
+    "new_experiment_not_a_retry_within_old_identity": true,
+    "retained_prior_evidence": [
+      "version1protocol/tools and durable model reservations",
+      "a2host execution failure/capture evidence",
+      "a3native and routing receipts/stdout/stderr including the native fatal message"
+    ],
+    "prior_outputs_disposition": {
+      "history-a2": "model output payloads unavailable after Docker copy failed on tmpfs; this loss is preserved in host evidence",
+      "history-a3": "native aborted during option validation and generated no complete land/nexus outputs; fatal logs and both process receipts retained"
+    }
+  },
+  "catchment_units_primary_source": {
+    "repository": "NOAA-OWP/cfe",
+    "commit": "a349a953ef239ae7470a8365cf614283d7e6ca80",
+    "path": "src/bmi_cfe.c",
+    "bytes": 146389,
+    "sha256": "77011721a6b0852e9989945b1e43c29120c4ef768069a790072b95445a9916fd",
+    "output_names_lines": [
+      191,
+      207
+    ],
+    "output_units_lines": [
+      245,
+      261
+    ],
+    "value_pointer_lines": [
+      2008,
+      2091
+    ]
+  },
+  "catchment_variable_metadata": {
+    "RAIN_RATE": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "timestep_rainfall_input_m",
+      "semantics": "current-step rainfall water depth; despite the name, not a rate and not the kg m-2 s-1 forcing input",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "GIUH_RUNOFF": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "flux_direct_runoff_m",
+      "semantics": "current-step direct runoff depth; same pointer as DIRECT_RUNOFF, so these must not be summed as independent components",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "INFILTRATION_EXCESS": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "infiltration_excess_m",
+      "semantics": "current-step infiltration-excess water depth",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "DIRECT_RUNOFF": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "flux_direct_runoff_m",
+      "semantics": "current-step direct runoff depth; alias of GIUH_RUNOFF",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "NASH_LATERAL_RUNOFF": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "flux_nash_lateral_runoff_m",
+      "semantics": "current-step Nash lateral runoff depth",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "DEEP_GW_TO_CHANNEL_FLUX": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "flux_from_deep_gw_to_chan_m",
+      "semantics": "current-step groundwater-to-channel water depth",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "SOIL_TO_GW_FLUX": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "flux_perc_m",
+      "semantics": "current-step soil-to-groundwater percolation depth",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "Q_OUT": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "flux_Qout_m",
+      "semantics": "current-step total outflow depth; land interval3600s; reach lateral discharge uses depth*catchment_area_m2/3600s",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "POTENTIAL_ET": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "et_struct.potential_et_m_per_timestep",
+      "semantics": "potential evaporation water depth for the current timestep",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "ACTUAL_ET": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "et_struct.actual_et_m_per_timestep",
+      "semantics": "actual evaporation water depth for the current timestep",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "GW_STORAGE": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "gw_reservoir.storage_m",
+      "semantics": "groundwater reservoir storage depth, not a discharge",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "SOIL_STORAGE": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "soil_reservoir.storage_m",
+      "semantics": "soil reservoir storage depth, not a discharge",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "SOIL_STORAGE_CHANGE": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "soil_reservoir.storage_change_m",
+      "semantics": "signed soil storage depth change, not a discharge",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "SURF_RUNOFF_SCHEME": {
+      "units": "1",
+      "bmi_declared_units": "none",
+      "native_value_binding": "infiltration_excess_params_struct.surface_water_partitioning_scheme",
+      "semantics": "dimensionless integer scheme code; BMI units declaration is none",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    },
+    "NWM_PONDED_DEPTH": {
+      "units": "m",
+      "bmi_declared_units": "m",
+      "native_value_binding": "nwm_ponded_depth",
+      "semantics": "surface ponded water depth",
+      "primary_source_commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+    }
+  },
+  "comparison_tolerance_policy": "No cross-variable discharge tolerance: antecedent prefix comparisons use exact equality of each serialized variable in its own declared units.",
+  "protocol_identity_sha256": "0c6a5c8c063343c3a02659298a273200d851252d63f84d7ffcd0fa6027361b94"
+}

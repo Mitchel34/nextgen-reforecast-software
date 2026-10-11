@@ -1,0 +1,824 @@
+{
+  "schema_version": "public-watauga-physical-increment/0.1",
+  "observed_at_utc": "2026-10-11T04:25:06Z",
+  "assessment_date": "2026-10-10",
+  "date_basis": "owner_client_America_Chicago",
+  "preceding_commit": "436dbc55e0fffaa2ca66c96dde80a934c3824f5c",
+  "package_version": "0.1.0a4",
+  "experiment_id": "watauga-public-independent-serial-v2",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "status": "three_diagnostic_serial_references_completed_and_independently_reviewed",
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "input_admission_identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+  "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+  "combined_admission_identity_sha256": "f06fba943e9128f9a8ec56d7f7b80e3fe2f8b38cca5348cba0eff4eda7389146",
+  "protocol_identity_sha256": "0c6a5c8c063343c3a02659298a273200d851252d63f84d7ffcd0fa6027361b94",
+  "freeze_identity_sha256": "2a262e44437c0e94b2f5fe31be2334711e0d385f87af6cd2032021fa81d4b60e",
+  "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+  "independent_runtime_output_review_identity_sha256": "ca9b6c2f7ee71bd0d89ede40b3d88ddcdb0a54a3487947e2c64aba3f03130c3a",
+  "independent_secondary_unit_trace": {
+    "bytes": 16582,
+    "sha256": "821fe9daa2abb05649e885fd8b2d5500112c63f62b005e90ffb1c0a7ea7981c4"
+  },
+  "cases": [
+    {
+      "case_id": "history",
+      "provider_hours": 786,
+      "host_execution_identity_sha256": "122ffdb2db16a9a866c7d41d523b24eb414bd1c669619fe46f7b8ec552ce7732",
+      "host_execution_file": {
+        "bytes": 11102,
+        "sha256": "6f69aa749fffed9000ae6564b90266e584937d5f7ff97ef125d8bba4cc6735a3"
+      },
+      "execution_identity_sha256": "8ff7320a2049587046c10a0d3141a773b5d4f5b4dd52d81a660dba9e194cc2a8",
+      "execution_file": {
+        "bytes": 41623,
+        "sha256": "c6b6d4569da768ec6359e3c115925e92efc9cb0861258350f44fa8f7dc9f02c6"
+      },
+      "reference_identity_sha256": "66169502b9aa3c72d2e97627e54386a7bce9e8d4cfddaf106374143270acb963",
+      "reference_file": {
+        "bytes": 8627,
+        "sha256": "b1612183eb6ccf38862a96bbdeece13e9a421686f798c00589b8eac138c7831f"
+      },
+      "counts": {
+        "complete_catchment_rows": 24366,
+        "complete_nexus_rows": 9432,
+        "complete_routing_rows": 292392,
+        "forecast_lead_rows": 0
+      },
+      "stages": [
+        {
+          "stage": "native",
+          "process_receipt_identity_sha256": "e3bb0c2440edd09aa2d9f83958d32cac3fc713e213fbccfa095aa5e73e051087",
+          "receipt_file": {
+            "bytes": 16767,
+            "sha256": "b47a2335e3a425f2068db7d0e54f22996ae24fe4df63e36f06b7db20a9e7c229"
+          },
+          "process_number": 1,
+          "returncode": 0,
+          "native_output_contract_complete": true,
+          "stdout": {
+            "bytes": 3768,
+            "sha256": "78551e6361343e2ae07baa08e4e253a1976595622c03c10fc0f6ff1dffabd712"
+          },
+          "stderr": {
+            "bytes": 40204954,
+            "sha256": "9f4d021638ec580b2367ddf58546efb2ca2df2573cf52ca194fc7a175845bdb0"
+          }
+        },
+        {
+          "stage": "routing",
+          "process_receipt_identity_sha256": "7d6aee0d2b25fa3988f5be311cd877222107587d44f8dad5f712571bb66b47c4",
+          "receipt_file": {
+            "bytes": 9044,
+            "sha256": "a129d2e600de16e741301dd05a75e9dcf1b0b2f173eee51c4277eb1fcae1e9b8"
+          },
+          "process_number": 2,
+          "returncode": 0,
+          "native_output_contract_complete": null,
+          "stdout": {
+            "bytes": 112,
+            "sha256": "45015c8618f810199b3918332597241311357e048de479e589a5a8699cb1ac8d"
+          },
+          "stderr": {
+            "bytes": 2318,
+            "sha256": "0e62fd9649f01d5da564f49f4af2fda3d92480e02aa6f08201324740c8cbe333"
+          }
+        }
+      ],
+      "observed_combined_job_elapsed_seconds": 15.645467583090067,
+      "container_peak_after_routing": {
+        "memory.peak": "364023808\n",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "pids.peak": "9\n"
+      },
+      "cleanup": [
+        {
+          "action": "stop",
+          "status": "completed"
+        },
+        {
+          "action": "rm",
+          "status": "completed"
+        }
+      ],
+      "storage_before": {
+        "runtime_allocated_bytes": 5015248896,
+        "fixture_allocated_bytes": 704270336,
+        "generated_allocated_bytes": 0,
+        "host_free_bytes": 23260934144
+      },
+      "storage_after": {
+        "runtime_allocated_bytes": 5015281664,
+        "fixture_allocated_bytes": 704270336,
+        "generated_allocated_bytes": 81985536,
+        "host_free_bytes": 23178612736
+      }
+    },
+    {
+      "case_id": "serial-20220101T2300Z",
+      "provider_hours": 785,
+      "host_execution_identity_sha256": "7213f850f64d086291569d7e73481035ca2d66c352d403e734c464cb5832eda2",
+      "host_execution_file": {
+        "bytes": 11139,
+        "sha256": "8506446e030e1c8b8ee093046741600ef97173b0699d8ba137b20526f8d30931"
+      },
+      "execution_identity_sha256": "c3bdf045d300645bff53d89c4a04e61ad058568944c741bf2d840c4a6ee3e143",
+      "execution_file": {
+        "bytes": 44132,
+        "sha256": "13a169beb2127c4a59c41d33ac458a1995c63eb388109879c6f87f78a99936f1"
+      },
+      "reference_identity_sha256": "9f0cd7f9bc88678b97b90be86529d297534ffb5004dc9f1c6234ad67df92f085",
+      "reference_file": {
+        "bytes": 8646,
+        "sha256": "dc85dbb04f2c05012c9ba2722531f4aabda940dac1b1fd678510066a899cdf3e"
+      },
+      "counts": {
+        "complete_catchment_rows": 24335,
+        "complete_nexus_rows": 9420,
+        "complete_routing_rows": 292020,
+        "forecast_lead_rows": 18
+      },
+      "stages": [
+        {
+          "stage": "native",
+          "process_receipt_identity_sha256": "1c083c1b4d4d6f3b83e5317e537944fe4e8e227f0a23e0ba87948a669022feb7",
+          "receipt_file": {
+            "bytes": 16808,
+            "sha256": "537024304194b2fa16730acde6504ec46c641d15449a0143701e1f9c31cce6fa"
+          },
+          "process_number": 3,
+          "returncode": 0,
+          "native_output_contract_complete": true,
+          "stdout": {
+            "bytes": 3768,
+            "sha256": "bad5f15c15cfcba5b3d004c45de8ba3948b090980483142978ceef7e038166dd"
+          },
+          "stderr": {
+            "bytes": 40153804,
+            "sha256": "e596d2f32eda3e3347f2699dfd43a6d1afe2fa5ec5ad95f8b648ec87622d6b46"
+          }
+        },
+        {
+          "stage": "routing",
+          "process_receipt_identity_sha256": "2282c444a62378dd665f626531d812e02da14177e72f4df1a74881833760f883",
+          "receipt_file": {
+            "bytes": 9073,
+            "sha256": "395ca5b6eafb5eb172a4cbc2bbe0ea376bd862d5c9bb171b445bcddaeefbdb9f"
+          },
+          "process_number": 4,
+          "returncode": 0,
+          "native_output_contract_complete": null,
+          "stdout": {
+            "bytes": 111,
+            "sha256": "4978b54e81212b63b9a876e3ba1c953f7339e908a4480dfab5de8a0f2fcc0829"
+          },
+          "stderr": {
+            "bytes": 2302,
+            "sha256": "17821f02b9e5a3ccd3f0cf9038f064ac4abf26d95d83248014c2ff553a168aa0"
+          }
+        }
+      ],
+      "observed_combined_job_elapsed_seconds": 15.525487166829407,
+      "container_peak_after_routing": {
+        "memory.peak": "361238528\n",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "pids.peak": "9\n"
+      },
+      "cleanup": [
+        {
+          "action": "stop",
+          "status": "completed"
+        },
+        {
+          "action": "rm",
+          "status": "completed"
+        }
+      ],
+      "storage_before": {
+        "runtime_allocated_bytes": 5015314432,
+        "fixture_allocated_bytes": 704270336,
+        "generated_allocated_bytes": 81997824,
+        "host_free_bytes": 23178452992
+      },
+      "storage_after": {
+        "runtime_allocated_bytes": 5015396352,
+        "fixture_allocated_bytes": 704270336,
+        "generated_allocated_bytes": 163893248,
+        "host_free_bytes": 23097122816
+      }
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "provider_hours": 786,
+      "host_execution_identity_sha256": "1d2cdd8493988b7af09349bcb2410ce81e6e1d55043a727f486868f27b0a0880",
+      "host_execution_file": {
+        "bytes": 11139,
+        "sha256": "6fae9cce35b9658c181adb7a4fd37bfbafc3d2324831df039e8ef58ad61d272e"
+      },
+      "execution_identity_sha256": "0921a06db9e8d689a1958cb95332af073039040c1c9478d95a5453394fa3a4c2",
+      "execution_file": {
+        "bytes": 44129,
+        "sha256": "fda830ef443bbfc01b86828a54eb7ceb23e41eaa3e07534b03ac63f03571a589"
+      },
+      "reference_identity_sha256": "2079b563bc8fac9c91d9fc91fbc988f4da3bbacef48429ca7d69165abfdd5b0b",
+      "reference_file": {
+        "bytes": 8646,
+        "sha256": "dfe1a0100d8f4a4d19880975c3db4786382126447bf7fff3a791a51c7994e16e"
+      },
+      "counts": {
+        "complete_catchment_rows": 24366,
+        "complete_nexus_rows": 9432,
+        "complete_routing_rows": 292392,
+        "forecast_lead_rows": 18
+      },
+      "stages": [
+        {
+          "stage": "native",
+          "process_receipt_identity_sha256": "d7847cb99f0bf4dfc2246aff16041bad45e4607ea4c1af1498dfad8acae55036",
+          "receipt_file": {
+            "bytes": 16807,
+            "sha256": "9436d0a059fbedac57ff0ba833bfd7bfbf4eaf7b2b94323ea009db315011fa0c"
+          },
+          "process_number": 5,
+          "returncode": 0,
+          "native_output_contract_complete": true,
+          "stdout": {
+            "bytes": 3768,
+            "sha256": "167e114578243b27f96337f88f65a6ce95ecc858d0308e098c4f95ba395af2b4"
+          },
+          "stderr": {
+            "bytes": 40204954,
+            "sha256": "9f4d021638ec580b2367ddf58546efb2ca2df2573cf52ca194fc7a175845bdb0"
+          }
+        },
+        {
+          "stage": "routing",
+          "process_receipt_identity_sha256": "ace10bde80a91fa3aa74efd83213668021ee03861ef238778251afe34c3183ed",
+          "receipt_file": {
+            "bytes": 9071,
+            "sha256": "97ddb554880477d5922491eea5b2767f54509bda4762f21955be57ee84d5507d"
+          },
+          "process_number": 6,
+          "returncode": 0,
+          "native_output_contract_complete": null,
+          "stdout": {
+            "bytes": 112,
+            "sha256": "e10add5253b8d9294dd9ab8e08235abde7039d659cb591fa429a13065f8414ff"
+          },
+          "stderr": {
+            "bytes": 2304,
+            "sha256": "618b41f00cd0f2c60fee0060d3478167fca59ae5b8bb9d0e96f7ebe064e5fc57"
+          }
+        }
+      ],
+      "observed_combined_job_elapsed_seconds": 17.804195082979277,
+      "container_peak_after_routing": {
+        "memory.peak": "360800256\n",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "pids.peak": "9\n"
+      },
+      "cleanup": [
+        {
+          "action": "stop",
+          "status": "completed"
+        },
+        {
+          "action": "rm",
+          "status": "completed"
+        }
+      ],
+      "storage_before": {
+        "runtime_allocated_bytes": 5015429120,
+        "fixture_allocated_bytes": 704270336,
+        "generated_allocated_bytes": 163950592,
+        "host_free_bytes": 23115751424
+      },
+      "storage_after": {
+        "runtime_allocated_bytes": 5015461888,
+        "fixture_allocated_bytes": 704270336,
+        "generated_allocated_bytes": 284749824,
+        "host_free_bytes": 22990204928
+      }
+    }
+  ],
+  "prior_failed_experiment": {
+    "experiment_id": "watauga-public-independent-serial-v1",
+    "actual_model_processes": 3,
+    "occupied_reservations": 4,
+    "attempts": [
+      {
+        "attempt_id": "history-a1",
+        "host_receipt_identity_sha256": "429613e8fa1c3dba1e47ca27a99b83f2cc086b08c706ba458f7945c1b193ae97",
+        "host_receipt_file": {
+          "bytes": 9132,
+          "sha256": "ca0ec91691b8086092e287bda4152f4660f86783f817d4df7d2857b436d59f4d"
+        },
+        "actual_model_processes_observed": 0,
+        "stages_observed": [],
+        "status": "setting_up",
+        "error": "RuntimeError: Docker utility failed: Error response from daemon: container rootfs is marked read-only\n",
+        "accepted_reference": false,
+        "output_disposition": "Input transfer failure before any model launch"
+      },
+      {
+        "attempt_id": "history-a2",
+        "host_receipt_identity_sha256": "bbe4c5b2dcae708c72f2c907cf25b10b4d2faef3e9892f1214330caefb5415b0",
+        "host_receipt_file": {
+          "bytes": 9944,
+          "sha256": "46ec3997c29f75ab1403efbdaaad6ddd8f098717685978808e51f41110ceed19"
+        },
+        "actual_model_processes_observed": 1,
+        "stages_observed": [
+          {
+            "stage": "native",
+            "process_number": 2,
+            "docker_exec_exit_code": 0,
+            "host_elapsed_seconds": 1.0053076669573784,
+            "stop_reason": null,
+            "wrapper_log": {
+              "bytes": 65,
+              "sha256": "4af3991da17dfa2f0a1fc343fdddb74862ac440c62fc5d2a5b409daa28fe6f96"
+            }
+          }
+        ],
+        "status": "setting_up",
+        "error": "RuntimeError: Docker utility failed: Error response from daemon: Could not find the file /work/receipts/native in container nrf-reference-history-a2\n",
+        "accepted_reference": false,
+        "output_disposition": "One zero-exit land process; tmpfs model payloads unavailable after Docker-copy export failed; failure host record retained"
+      },
+      {
+        "attempt_id": "history-a3",
+        "host_receipt_identity_sha256": "b71cb9d04fa7e3fadd253401fc8b9011444dad833b91bd2123324fb1a6d182cb",
+        "host_receipt_file": {
+          "bytes": 10850,
+          "sha256": "3ee4cd2d2916d6fc3ceab3a378a61001909ba4c2b5b7488abc8c3d7ccb2ccbd2"
+        },
+        "actual_model_processes_observed": 2,
+        "stages_observed": [
+          {
+            "stage": "native",
+            "process_number": 3,
+            "docker_exec_exit_code": 0,
+            "host_elapsed_seconds": 1.0053264999296516,
+            "stop_reason": null,
+            "wrapper_log": {
+              "bytes": 65,
+              "sha256": "197fe8da0500912ad61ec5c5c60aad30b090ddb3c3cb0007ddb5b048e8d57874"
+            },
+            "receipt_transfer": {
+              "bytes": 10240,
+              "sha256": "2b8b3d6e170e8d92113101ccb9350cbe0ab0bed61b41f6d55fd61c2c814c38f8"
+            }
+          },
+          {
+            "stage": "routing",
+            "process_number": 4,
+            "docker_exec_exit_code": 1,
+            "host_elapsed_seconds": 2.010305292205885,
+            "stop_reason": null,
+            "wrapper_log": {
+              "bytes": 65,
+              "sha256": "7ecc898158ad513ce6f67ecab06003c29dd2245738cf4f47194030dc8de54934"
+            },
+            "receipt_transfer": {
+              "bytes": 10240,
+              "sha256": "62eac1d7ffe53c1ed4a77a5747e408563a8400b9547de2d15c7c63bb2e2dc8f2"
+            }
+          }
+        ],
+        "status": "model_stage_failed",
+        "error": null,
+        "accepted_reference": false,
+        "output_disposition": "Native Fortran STOP exit0, no complete outputs; fatal native logs and failed routing logs/receipts retained"
+      }
+    ]
+  },
+  "model_process_accounting": {
+    "new_experiment_actual": 6,
+    "new_experiment_occupied_reservations": 6,
+    "new_experiment_allowance": 9,
+    "aggregate_actual_including_prior": 9,
+    "aggregate_actual_ceiling": 12,
+    "historical_e03_invocations_consumed": 0
+  },
+  "complete_counts": {
+    "complete_catchment_rows": 73067,
+    "complete_nexus_rows": 28284,
+    "complete_routing_rows": 876804,
+    "forecast_lead_rows": 36
+  },
+  "antecedent_prefix_consistency": [
+    {
+      "case_id": "serial-20220101T2300Z",
+      "antecedent_hours": 767,
+      "antecedent_routing_steps": 9204,
+      "serialized_outputs_exactly_equal": true,
+      "differing_rows": {
+        "catchment_values": 0,
+        "nexus_values": 0,
+        "routing_values": 0
+      },
+      "first_differences": []
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "antecedent_hours": 768,
+      "antecedent_routing_steps": 9216,
+      "serialized_outputs_exactly_equal": true,
+      "differing_rows": {
+        "catchment_values": 0,
+        "nexus_values": 0,
+        "routing_values": 0
+      },
+      "first_differences": []
+    }
+  ],
+  "software_validation": {
+    "python_unit_contract_tests": {
+      "passed": 247,
+      "platform": "macOS ARM64 Python3.14",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "environment": {
+        "PYTHONPATH": "src",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "log": {
+        "bytes": 347,
+        "sha256": "f060309219aaad774c1413133988f5702fa08e536e8c63a154d3235e73be34f8"
+      }
+    },
+    "node_browser_contract_tests": {
+      "passed": 17,
+      "log": {
+        "bytes": 1724,
+        "sha256": "8062c30585a6f3fb4ce05ef50e49eea228e725edd248e8389f6da7de4ae41e9c"
+      }
+    },
+    "independent_model_output_integrity_review": {
+      "raw_routing_reader": "h5py3.16.0",
+      "raw_routing_rows_compared": 876804,
+      "variables_per_row": 3,
+      "mismatches": 0,
+      "model_invocations": 0,
+      "review_source": {
+        "source_path": "scripts/runtime/review_physical_outputs.py",
+        "bytes": 21409,
+        "sha256": "7b372bf95d7d2d8b1bd8cea4103ee33a5702787d94874c10cfb375026a271761"
+      }
+    },
+    "preserved_wheel_validation": "Core package source/version unchanged; earlier installed-wheel checks remain separately recorded."
+  },
+  "source_bindings": [
+    {
+      "path": "src/ngen_reforecast/__init__.py",
+      "bytes": 108,
+      "sha256": "1c36132876563e2dd11f34ed2886cab663e3e54fb608eeca82a2d0b936af66ed"
+    },
+    {
+      "path": "src/ngen_reforecast/__main__.py",
+      "bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "src/ngen_reforecast/bundle.py",
+      "bytes": 16279,
+      "sha256": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576"
+    },
+    {
+      "path": "src/ngen_reforecast/campaign.py",
+      "bytes": 28543,
+      "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+    },
+    {
+      "path": "src/ngen_reforecast/cli.py",
+      "bytes": 12934,
+      "sha256": "0315c4f55bf5bbfcc5a2c693b2e972bded2a679db10fd421b2eee16e3a237166"
+    },
+    {
+      "path": "src/ngen_reforecast/configuration.py",
+      "bytes": 12129,
+      "sha256": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33"
+    },
+    {
+      "path": "src/ngen_reforecast/forcing.py",
+      "bytes": 23607,
+      "sha256": "4dc0c1e5360044de796efa4593a8452ae70d28e20c8977b83229594d03e856b7"
+    },
+    {
+      "path": "src/ngen_reforecast/provenance.py",
+      "bytes": 5733,
+      "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+    },
+    {
+      "path": "src/ngen_reforecast/runtime.py",
+      "bytes": 13642,
+      "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+    },
+    {
+      "path": "scripts/public_fixture/assemble_native.py",
+      "bytes": 13457,
+      "sha256": "7bde151b92c836055f0872dbc1d0563b7529e27b42261107be52679c735e86b4"
+    },
+    {
+      "path": "scripts/public_fixture/audit_prepared.py",
+      "bytes": 15052,
+      "sha256": "90eabaed1844c1668074303047ad5ab54ed6a564a5ddc59e4789a21d6a55208a"
+    },
+    {
+      "path": "scripts/public_fixture/prepare_domain.py",
+      "bytes": 19447,
+      "sha256": "ddb23aa7d6930ef89940b8cfdc66cc066f8cbbf5a98096c631929401aafd6641"
+    },
+    {
+      "path": "scripts/public_fixture/prepare_forcing.py",
+      "bytes": 41450,
+      "sha256": "113ee8b7651fcd770d4538c27c1f2299cb87de8f55b6979ae8bbddb1e36e85bc"
+    },
+    {
+      "path": "scripts/public_fixture/qualify_native.py",
+      "bytes": 14879,
+      "sha256": "d9020124bebb70b923950836aa688ab55e328786c6a51f1444e269aad4d41fec"
+    },
+    {
+      "path": "scripts/public_fixture/repair_noah_compatibility.py",
+      "bytes": 12080,
+      "sha256": "1f72a05d4632e47173610cb4e58fc5b4fe01b4c136433a2cfc27024b01b7c65b"
+    },
+    {
+      "path": "scripts/runtime/probe_units.py",
+      "bytes": 1923,
+      "sha256": "d5c6273ab3953d8972a096d49063bfd66d83198206dd86f8d94dba0bc2572261"
+    },
+    {
+      "path": "scripts/runtime/qualify_export.py",
+      "bytes": 15087,
+      "sha256": "559015e356633ec1f66e7a2f07cda4222c96d3abfd25f55caf4db8c9f92c6e8e"
+    },
+    {
+      "path": "scripts/runtime/review_physical_outputs.py",
+      "bytes": 21409,
+      "sha256": "7b372bf95d7d2d8b1bd8cea4103ee33a5702787d94874c10cfb375026a271761"
+    },
+    {
+      "path": "scripts/physical_reference/audit_outputs.py",
+      "bytes": 12943,
+      "sha256": "f6c91cb67c68b85f04a3feb8f79716b0a8a78c0761a3040d11b8e104820c968b"
+    },
+    {
+      "path": "scripts/physical_reference/common.py",
+      "bytes": 5240,
+      "sha256": "884e7ea9eab83daef25c8b1698d8c4888d40b274c1e72a43d0d1f5eba02424ce"
+    },
+    {
+      "path": "scripts/physical_reference/compare_reference_set.py",
+      "bytes": 5896,
+      "sha256": "9e41f90410fd85a25754dfd826a6443579506478931016eaa14d4cf4c43d8908"
+    },
+    {
+      "path": "scripts/physical_reference/execute_stage.py",
+      "bytes": 11358,
+      "sha256": "0b9ba3ea21f04a0412eaa3c3912b908ab93580d994302df18c17059d33fa4f34"
+    },
+    {
+      "path": "scripts/physical_reference/normalize_routing.py",
+      "bytes": 5557,
+      "sha256": "66fbbeebc6d1478b48a048186612a6817d9a9637ac5391327d235e58b83f06ca"
+    },
+    {
+      "path": "scripts/physical_reference/seal_execution.py",
+      "bytes": 4510,
+      "sha256": "480a2074600271e9451ad48d2d620396d2f29b62c03475dd2ea9ee30103b8361"
+    },
+    {
+      "path": "scripts/physical_reference_v2/audit_outputs.py",
+      "bytes": 13691,
+      "sha256": "1436793c5a9dc271f485adabd6542b48857ca8f690560878e506aa003ab92e0b"
+    },
+    {
+      "path": "scripts/physical_reference_v2/common.py",
+      "bytes": 5240,
+      "sha256": "884e7ea9eab83daef25c8b1698d8c4888d40b274c1e72a43d0d1f5eba02424ce"
+    },
+    {
+      "path": "scripts/physical_reference_v2/compare_reference_set.py",
+      "bytes": 5952,
+      "sha256": "811da9936354a363af16e55d269229e7691fca4d2e44f59a7e2bd31bee132a93"
+    },
+    {
+      "path": "scripts/physical_reference_v2/execute_stage.py",
+      "bytes": 13164,
+      "sha256": "b709dfe4fb03545c81e23be49558c8e38958b5b1da7f0e4a6526afba08854280"
+    },
+    {
+      "path": "scripts/physical_reference_v2/native_outputs.py",
+      "bytes": 3338,
+      "sha256": "1f79ff364cabdb98021394a0d16fdf5ac50e6606ca1a19c5033e62700a09e974"
+    },
+    {
+      "path": "scripts/physical_reference_v2/normalize_routing.py",
+      "bytes": 5613,
+      "sha256": "ee160e38f26f6b7e34b6c37e3696d2fb5bf3cadc141cf7e44fa3027d1d17977c"
+    },
+    {
+      "path": "scripts/physical_reference_v2/seal_execution.py",
+      "bytes": 4924,
+      "sha256": "f6bdf4ad2afc178ea4e684523e7ea721f641ac9dd7975e86e82b88a56c392e08"
+    },
+    {
+      "path": "scripts/reference_worker/run_isolated_job_v2.py",
+      "bytes": 15458,
+      "sha256": "ad33ab999672411ecd011744279221f80c47391153acdb215846b046a1a0787a"
+    },
+    {
+      "path": "tests/test_bundle.py",
+      "bytes": 9115,
+      "sha256": "6eeaf4dc89e638d0d03931da58b7e30dbe62f05d535bcc14bad8508941e04add"
+    },
+    {
+      "path": "tests/test_campaign.py",
+      "bytes": 32256,
+      "sha256": "42ec42094018128fac5e4cfa94a0a4ef76b84028e4f35b6f75e53c6db8f7ca92"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "bytes": 5396,
+      "sha256": "95c6db7c067c4fafd722bd2f83984494f7a6b54a0102cd2b9cb3627aa13e001b"
+    },
+    {
+      "path": "tests/test_configuration.py",
+      "bytes": 20965,
+      "sha256": "5f4e505c00bd152611abdfb26a14213079c486570f17ff053858e8a8706cc010"
+    },
+    {
+      "path": "tests/test_diagnostic_runtime.py",
+      "bytes": 2816,
+      "sha256": "b34a8fa767d3381c87b8a8f4b62bbab8ad85f9ff312d67f3d262625794a90ceb"
+    },
+    {
+      "path": "tests/test_forcing.py",
+      "bytes": 23754,
+      "sha256": "9f0fd82e74ec459a4e18570b3699063ed498faacd946861ec02a65214a35e1e0"
+    },
+    {
+      "path": "tests/test_forcing_numeric.py",
+      "bytes": 2142,
+      "sha256": "9d8b10d2bc2da85729dc82323c4416c333e9401e997752495a781af7cb882d6a"
+    },
+    {
+      "path": "tests/test_forcing_segments.py",
+      "bytes": 4656,
+      "sha256": "1cd41d1a4e8bacb27d0eda2ec87ecca30d64b90cc11a45b8eb4123216ce3df8d"
+    },
+    {
+      "path": "tests/test_lock_cli.py",
+      "bytes": 4074,
+      "sha256": "4724a97e70523b2a0da5904b497146deb00e5da91348bff1d145d23251b9794d"
+    },
+    {
+      "path": "tests/test_noah_compatibility.py",
+      "bytes": 7632,
+      "sha256": "81825f889758ecda95f8f78a6c52d47432ac6074ca9d8a9d403eb6274dba9e24"
+    },
+    {
+      "path": "tests/test_physical_reference.py",
+      "bytes": 15471,
+      "sha256": "cd5e939d546815b53d00b55f419e26c2da33c6d4ff15c455899bdb7d917670d8"
+    },
+    {
+      "path": "tests/test_physical_reference_v2.py",
+      "bytes": 7486,
+      "sha256": "b1e92cee96700e554c7fb9e32d99cd9dcde1d50a677ac4485210c4f9522aa1ca"
+    },
+    {
+      "path": "tests/test_provenance.py",
+      "bytes": 7593,
+      "sha256": "f7fcad9cebfd321fed1e493ff055d43fe4fd4d488b05b8f27abb5ce512c7692b"
+    },
+    {
+      "path": "tests/test_public_audit.py",
+      "bytes": 8097,
+      "sha256": "a1fc2310a89357b5f80980c385ebf7e2ee546d22b43f0b6c2c965274ebd14219"
+    },
+    {
+      "path": "tests/test_public_domain.py",
+      "bytes": 9986,
+      "sha256": "b92f90aee69ecc85fed82928e573e565cf3d70d9c6e851e20822137c03a5af48"
+    },
+    {
+      "path": "tests/test_public_forcing.py",
+      "bytes": 7623,
+      "sha256": "f3a9464003af3de0e5f9e9e562ab896b43a1dddb66439dea50e3c99df179acc5"
+    },
+    {
+      "path": "tests/test_public_native_assembly.py",
+      "bytes": 8047,
+      "sha256": "2c39c8a240d75d24339df087b8bb9651d9c9cfa959cc19a6312a47a60b2ffe80"
+    },
+    {
+      "path": "tests/test_public_native_qualification.py",
+      "bytes": 10352,
+      "sha256": "a1a8fa022b4d4d4bac69f7a3c081614383907f528109768b2a95404a4a081195"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "bytes": 8920,
+      "sha256": "3a40ee766b223ef6b77cc1528804afdea6a7a64a6c27feb4821d050bfe94a554"
+    },
+    {
+      "path": "tests/test_validation_cli.py",
+      "bytes": 4023,
+      "sha256": "675a1000e7c9ad69f43369259be7bd8d79882b9801fbf86e31a238ea28f94079"
+    },
+    {
+      "path": "web/app.mjs",
+      "bytes": 8032,
+      "sha256": "8f2893d0032b070d65427b22220f12e5b3af33ddf636c8b0f6100c48d7f28ac2"
+    },
+    {
+      "path": "web/request.mjs",
+      "bytes": 6203,
+      "sha256": "36d8dd7744038eede8df298262bdf4e6f85c913e6835abf701d24fe85d00b67c"
+    },
+    {
+      "path": "web/tests/request.test.mjs",
+      "bytes": 6207,
+      "sha256": "1365748b419b7ac98276d0f18411b3d25684e64553d63d7e7641b38782a32120"
+    },
+    {
+      "path": "web/tests/translation.test.mjs",
+      "bytes": 7127,
+      "sha256": "80f272e6bdd28394fb4da2aca9f365ae8dfd2521926504b2a797e5c1b6113d8d"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 919,
+      "sha256": "0228db3b72079b31c0fc09dff8dcd4ab63e1818293a114ae9cb5362895ded283"
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 1864,
+      "sha256": "e2ecc401b90483fea2403d38ae4d240e3440b565cc50b85f87ccabaf9c55009a"
+    }
+  ],
+  "preservation": {
+    "protected_entries_before": 33367,
+    "protected_entries_after": 33367,
+    "protected_metadata_changes": 0,
+    "protected_changed_paths": [],
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "atime_included": false,
+    "immutable_files": 32,
+    "immutable_byte_changes": []
+  },
+  "worker_closeout": {
+    "profile": "nrf",
+    "model_container_inventory": [],
+    "stop_exit_code": 0,
+    "status_exit_code": 1,
+    "worker_disks_preserved": true,
+    "private_receipt": {
+      "bytes": 2213,
+      "sha256": "39bccc9bffed40c25dcff9d55b0d4c0e7f1885f306155817b2e6f3e4ff606585"
+    },
+    "worker_closeout_identity_sha256": "c759800cacab6a4768b74268ce08036f79df1d597dec99b7096c80f2432ae74e"
+  },
+  "native_warning_disposition": {
+    "output_serialization": "NGen multi-output scalar access requests units1 for14 CFE meter outputs and SURF_RUNOFF_SCHEME none; failed conversions preserve original BMI scalars.14 m-to1 and1 parse-in-none per row exactly match logs.",
+    "input_edges": "The two parse-out-none warnings are SLOTH unit1 to CFE none for ice_fraction_xinanjiang and soil_moisture_profile. Both are configured0.0, without aliases or inputs; SLOTH UpdateUntil only advances time. Values remain exact zero by source trace; they are not directly instrumented at runtime.",
+    "schaake_edge": "SLOTH ice_fraction_schaake and CFE ice_fraction_schaake both declare m. The m-to1 warnings do not indicate a mismatch on this edge.",
+    "physical_flux_edges": "No QINSUR m/s-to-mm h-1 or EVAPOTRANS m/s-to-m s-1 failure appears. Separate inert pinned UDUNITS probe proves conversion factor3.6e6 and identity respectively; logs alone do not independently measure every flux conversion.",
+    "upstream_repair_required": "Replace literal1 output units and invalid none unit labels with consistent variable metadata before a release; any changed experiment must receive a new identity."
+  },
+  "release_qualified": false,
+  "scientific_validation_claimed": false,
+  "public_campaign_run_resume_available": false,
+  "shared_history_or_checkpoint_exercised": false,
+  "external_reproduction_claimed": false,
+  "hosted_browser_execution_deployed": false,
+  "new_native_compilation": false,
+  "paid_resources": false,
+  "interpretation_limits": [
+    "Historical E03 is not restored and its benchmark identity remains unchanged.",
+    "No shared history, restart, complete land checkpoint, speedup or fault recovery is exercised by these serial references.",
+    "Declared cold initial states and32dayhistory are not evidence of hydrologic spinup convergence.",
+    "Candidate hydrofabric parameters and current archive weather are diagnostic inputs; no forecast skill, historical causal availability or release scientific qualification is claimed.",
+    "Native source/clean-build attestation and redistributable public-runtime/data release remain separate gates.",
+    "Upstream dimensionless/none unit-interface fallbacks are source-traced and retained; strict unit-edge treatment remains released-executor work.",
+    "Source units/terrain derivation, initialization convergence, point-radiation sampling and full-reach gauge surrogate remain unqualified.",
+    "Public metadata/source do not supply publicly accessible model/data payloads or establish a core license."
+  ],
+  "increment_identity_sha256": "bc6259173bd0ff949d00b8a9fe7a0474cc261641d235ab4d3c89ccf53b15a204"
+}

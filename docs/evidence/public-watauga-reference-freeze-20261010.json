@@ -1,0 +1,63 @@
+{
+  "schema_version": "public-physical-reference-freeze/0.1",
+  "frozen_at_utc": "2026-10-11T04:04:29Z",
+  "protocol_identity_sha256": "1f38dbced75935cb59d2bfb62c272ae250b03a438e889720724837cf58c28ae1",
+  "admission_identity_sha256": "83d42e65fd2e167898b571cb9344e470f8b88e4ed5f4542e8f94679b8100115d",
+  "protocol_file": {
+    "bytes": 8761,
+    "sha256": "f12713e6c03ca6a6f3227cc2946f43cc65821d94fb114d4e5a52e4db870afae7"
+  },
+  "admission_file": {
+    "bytes": 55336,
+    "sha256": "5fbd8566b282cf28515e2b954b73c10d137e9446d48a7978b8c66b4ba6822c81"
+  },
+  "host_orchestrator": {
+    "bytes": 13273,
+    "sha256": "93de7dfbc8e24f403e0980680854e9566bce5be3116de5b7562de847ae27a18f"
+  },
+  "source_tools": [
+    {
+      "path": "scripts/physical_reference/audit_outputs.py",
+      "bytes": 12943,
+      "sha256": "f6c91cb67c68b85f04a3feb8f79716b0a8a78c0761a3040d11b8e104820c968b"
+    },
+    {
+      "path": "scripts/physical_reference/common.py",
+      "bytes": 5240,
+      "sha256": "884e7ea9eab83daef25c8b1698d8c4888d40b274c1e72a43d0d1f5eba02424ce"
+    },
+    {
+      "path": "scripts/physical_reference/compare_reference_set.py",
+      "bytes": 5896,
+      "sha256": "9e41f90410fd85a25754dfd826a6443579506478931016eaa14d4cf4c43d8908"
+    },
+    {
+      "path": "scripts/physical_reference/execute_stage.py",
+      "bytes": 11358,
+      "sha256": "0b9ba3ea21f04a0412eaa3c3912b908ab93580d994302df18c17059d33fa4f34"
+    },
+    {
+      "path": "scripts/physical_reference/normalize_routing.py",
+      "bytes": 5557,
+      "sha256": "66fbbeebc6d1478b48a048186612a6817d9a9637ac5391327d235e58b83f06ca"
+    },
+    {
+      "path": "scripts/physical_reference/seal_execution.py",
+      "bytes": 4510,
+      "sha256": "480a2074600271e9451ad48d2d620396d2f29b62c03475dd2ea9ee30103b8361"
+    }
+  ],
+  "tests_before_launch": {
+    "passed": 234,
+    "log": {
+      "bytes": 43713,
+      "sha256": "b232384bfa3c4c472706e6fc9eb3b017996cbec0db459f872f35de4143ca1097"
+    }
+  },
+  "model_process_invocations_before_freeze": 0,
+  "resource_and_scope_document": {
+    "bytes": 6006,
+    "sha256": "578c0e1c6491828f28be8e9ead9987c0f0d8d20a6bda5cd7300d61e74a40dcd3"
+  },
+  "freeze_identity_sha256": "2f8aa5fced7a4687f571e2d3ddfcee23d8462c82656a341d3009abe2f3aadc55"
+}

@@ -1,0 +1,7 @@
+# Frozen diagnostic host orchestration
+
+`run_isolated_job_v2.py` is the exact independently authored source used for the v2 physical references. Its SHA-256 is bound in the [v2 freeze](../../docs/evidence/public-watauga-reference-freeze-v2-20261010.json). It is a development execution recipe, not the public campaign CLI.
+
+The source expects the private project-local layout used in this experiment. Copy it to `.local/physical-reference-v2-20261010/run_isolated_job.py` before use. It reads the sealed protocol/admission/freeze, the dedicated worker environment, admitted fixture and runtime transfer archive. Those payloads and access/rights qualifications are separate from this source publication. Review the [protocol](../../docs/PUBLIC_WATAUGA_REFERENCE_PROTOCOL_V2_2026-10-10.md) and [result record](../../docs/PUBLIC_WATAUGA_REFERENCE_RESULTS_V2_2026-10-10.md) for required identities, process allowance, validation and limitations.
+
+Do not rerun the completed experiment under its completed historical ledger. A future experiment must receive its own frozen identity and allowance. The original research folders are never mounted. Native and routing launches are serial, network-disabled and governed by cgroup/time/output/storage bounds. Transfers use in-container tar streams while tmpfs remains mounted; cleanup is recorded for every created container. This source is published for review and subsequent integration, not as an externally qualified reproduction candidate.

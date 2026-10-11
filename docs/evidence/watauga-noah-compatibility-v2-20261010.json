@@ -1,0 +1,98 @@
+{
+  "schema_version": "public-noah-compatibility-revision-summary/0.1",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "parent_fixture_id": "watauga-public-rebuild-v1",
+  "parent_admission_identity_sha256": "e878e6697bb1e6f95eadd3d116110873d778c23f9a923db6f4d9daea83fa09d9",
+  "admission_identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+  "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+  "recipe": {
+    "bytes": 17830,
+    "sha256": "2ec8fd4806cd0b9b11dc21db66135f9d94487882327b4230342222081cc20df7"
+  },
+  "adapter": {
+    "bytes": 12080,
+    "sha256": "1f72a05d4632e47173610cb4e58fc5b4fe01b4c136433a2cfc27024b01b7c65b"
+  },
+  "noah_source_commit": "0abb891b48b043cc626c4e4bbd0efe54ad357fe1",
+  "source_contracts": [
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/src/NamelistRead.f90",
+      "bytes": 25569,
+      "sha256": "b9bb64579b88aa3c2bbada6c8c0da3cafc79a9429cb9cc00eb27669e4abedb55"
+    },
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/src/OptionsType.f90",
+      "bytes": 8913,
+      "sha256": "2cf67e7cd93d6cbd748b4ed8002a59b1a32fb22914453abb8e355c16d94cb536"
+    },
+    {
+      "archive": "NoahOWP-0abb891b48b043cc626c4e4bbd0efe54ad357fe1.tar.gz",
+      "archive_sha256": "59f2c8cbba8f0b4b638e21e29c6a2ec2ea01d126ccbe12a71efc4a3d1de4f9d0",
+      "member": "noah-owp-modular-0abb891b48b043cc626c4e4bbd0efe54ad357fe1/run/namelist.input",
+      "bytes": 3386,
+      "sha256": "e36b1eaa66cb72ba483e0f8509d349dcd4e51722b138ccc5ca0a44ecc617349b"
+    }
+  ],
+  "default_selection": {
+    "stomatal_resistance_option": {
+      "previous": 4,
+      "new": 1,
+      "interpretation": "Noah soil-moisture factor for stomatal resistance"
+    },
+    "evap_srfc_resistance_option": {
+      "previous": 5,
+      "new": 1,
+      "interpretation": "Sakaguchi and Zeng (2009) surface evaporation/sublimation resistance"
+    }
+  },
+  "unchanged_canopy_stom_resist_option": {
+    "value": 1,
+    "interpretation": "Ball-Berry canopy stomatal resistance"
+  },
+  "noah_model_option_fields_checked": 17,
+  "noah_numeric_range_guards": 16,
+  "noah_option_values": {
+    "precip_phase_option": 1,
+    "snow_albedo_option": 1,
+    "dynamic_veg_option": 4,
+    "runoff_option": 3,
+    "drainage_option": 8,
+    "frozen_soil_option": 1,
+    "dynamic_vic_option": 1,
+    "radiative_transfer_option": 3,
+    "sfc_drag_coeff_option": 1,
+    "canopy_stom_resist_option": 1,
+    "crop_model_option": 0,
+    "snowsoil_temp_time_option": 3,
+    "soil_temp_boundary_option": 2,
+    "supercooled_water_option": 1,
+    "stomatal_resistance_option": 1,
+    "evap_srfc_resistance_option": 1,
+    "subsurface_option": 2
+  },
+  "noah_implementation_exclusions": {
+    "crop_model_option": "only0 supported",
+    "subsurface_option": "3 unimplemented"
+  },
+  "generated_files": 291,
+  "generated_bytes": 12250007,
+  "changed_noah_files": 93,
+  "unchanged_files": 198,
+  "changed_model_option_assignments": 186,
+  "original_parent_files_and_reports_preserved": true,
+  "CFE_weather_geometry_and_runtime_changed": false,
+  "noah_options_compatible_with_pinned_source": true,
+  "native_model_invocations_by_this_adapter": 0,
+  "physical_reference_validated": false,
+  "release_scientifically_qualified": false,
+  "targeted_tests": {
+    "passed": 7,
+    "command": "PYTHONPATH=src python3 -m unittest discover -s tests -p test_noah_compatibility.py -v"
+  },
+  "earlier_failure": "v1 initialization stopped on unsupported stomatal_resistance_option=4 with native process status0; no complete reference. Full review also identified unsupported evap_srfc_resistance_option=5. Prior attempts remain retained.",
+  "summary_identity_sha256": "7739700a60c7b948df37903d42411fde4190fd60ea058b2f4f340284c09d3256"
+}

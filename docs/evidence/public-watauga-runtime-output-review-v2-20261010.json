@@ -1,0 +1,591 @@
+{
+  "schema_version": "public-watauga-independent-runtime-output-review/0.1",
+  "reviewed_at_utc": "2026-10-11T04:22:12Z",
+  "experiment_id": "watauga-public-independent-serial-v2",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "protocol_identity_sha256": "0c6a5c8c063343c3a02659298a273200d851252d63f84d7ffcd0fa6027361b94",
+  "admission_identity_sha256": "f06fba943e9128f9a8ec56d7f7b80e3fe2f8b38cca5348cba0eff4eda7389146",
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "freeze_identity_sha256": "2a262e44437c0e94b2f5fe31be2334711e0d385f87af6cd2032021fa81d4b60e",
+  "reviewer": {
+    "source_path": "scripts/runtime/review_physical_outputs.py",
+    "bytes": 21409,
+    "sha256": "7b372bf95d7d2d8b1bd8cea4103ee33a5702787d94874c10cfb375026a271761"
+  },
+  "independent_from_executor_and_auditor": true,
+  "new_model_invocations": 0,
+  "cases": [
+    {
+      "case_id": "history",
+      "host_receipt": {
+        "bytes": 11102,
+        "sha256": "6f69aa749fffed9000ae6564b90266e584937d5f7ff97ef125d8bba4cc6735a3",
+        "identity_sha256": "122ffdb2db16a9a866c7d41d523b24eb414bd1c669619fe46f7b8ec552ce7732"
+      },
+      "input_identity_sha256": "4f8e7ae3089f7516a830acbbc6ef326686ff54841f1f038d56a813fa6a99ca7e",
+      "input_files_checked": 97,
+      "process_receipt_identities": [
+        "e3bb0c2440edd09aa2d9f83958d32cac3fc713e213fbccfa095aa5e73e051087",
+        "7d6aee0d2b25fa3988f5be311cd877222107587d44f8dad5f712571bb66b47c4"
+      ],
+      "process_numbers": [
+        1,
+        2
+      ],
+      "executor_source": {
+        "bytes": 13164,
+        "sha256": "b709dfe4fb03545c81e23be49558c8e38958b5b1da7f0e4a6526afba08854280"
+      },
+      "normalizer_source": {
+        "bytes": 5613,
+        "sha256": "ee160e38f26f6b7e34b6c37e3696d2fb5bf3cadc141cf7e44fa3027d1d17977c"
+      },
+      "in_image_normalization_packages": {
+        "netCDF4": "1.6.3",
+        "numpy": "1.26.4"
+      },
+      "normalization_identity_sha256": "833e7fb702e81a0340219c19ae46ced9d0369afa469f0ad6d892bb1b5d579318",
+      "raw_inventory_identity_sha256": "4c7f5d98054231b70905e20def0f1ca0bc3f573912cd5d74a1a999ba70e30e40",
+      "raw_files_checked": 44,
+      "raw_output_bytes": 13002350,
+      "routing_raw_binding": {
+        "path": "troute/troute_output_202112010000.nc",
+        "bytes": 4768146,
+        "sha256": "ed45a5f4abfb8c34b6a5da5eabfd0241fb0923d9c34bcd568d93223fb2c3f665"
+      },
+      "normalized_csv": {
+        "bytes": 28605449,
+        "sha256": "bbf5ed2345606755613c04217549fb06e4cf637f519e48b0d12805991eca4bd8"
+      },
+      "native": {
+        "catchment_files": 31,
+        "nexus_files": 12,
+        "catchment_rows": 24366,
+        "nexus_rows": 9432,
+        "fields_per_catchment_row": 15,
+        "full_interval_start_axes_verified": true,
+        "all_values_finite": true,
+        "runoff_and_nexus_nonnegative": true,
+        "variable_min_max": {
+          "RAIN_RATE": [
+            0.0,
+            0.00741038165870123
+          ],
+          "GIUH_RUNOFF": [
+            0.0,
+            0.00113842343154841
+          ],
+          "INFILTRATION_EXCESS": [
+            0.0,
+            0.00164781166730243
+          ],
+          "DIRECT_RUNOFF": [
+            0.0,
+            0.00113842343154841
+          ],
+          "NASH_LATERAL_RUNOFF": [
+            0.0,
+            0.0
+          ],
+          "DEEP_GW_TO_CHANNEL_FLUX": [
+            0.0,
+            0.00052585459037824
+          ],
+          "SOIL_TO_GW_FLUX": [
+            0.0,
+            0.0
+          ],
+          "Q_OUT": [
+            0.0,
+            0.00113842343154841
+          ],
+          "POTENTIAL_ET": [
+            0.0,
+            0.00035825097768338
+          ],
+          "ACTUAL_ET": [
+            0.0,
+            0.00024136443244061
+          ],
+          "GW_STORAGE": [
+            1e-17,
+            0.00763631840962176
+          ],
+          "SOIL_STORAGE": [
+            0.04288608729839325,
+            0.08866500878935592
+          ],
+          "SOIL_STORAGE_CHANGE": [
+            0.0,
+            0.00642644882621249
+          ],
+          "SURF_RUNOFF_SCHEME": [
+            1.0,
+            1.0
+          ],
+          "NWM_PONDED_DEPTH": [
+            0.0,
+            0.00084715023364521
+          ]
+        }
+      },
+      "routing": {
+        "features": 31,
+        "steps_per_feature": 9432,
+        "rows": 292392,
+        "interval_seconds": 300,
+        "interval_end_axis_verified": true,
+        "raw_csv_numeric_mismatches": 0,
+        "raw_dtype": "float32",
+        "variables_units": {
+          "flow": "m3 s-1",
+          "velocity": "m/s",
+          "depth": "m"
+        },
+        "variable_min_max": {
+          "flow": [
+            7.006492321624085e-45,
+            23.60927391052246
+          ],
+          "velocity": [
+            0.0,
+            2.2050399780273438
+          ],
+          "depth": [
+            0.0,
+            1.2591792345046997
+          ]
+        },
+        "independent_reader": {
+          "h5py": "3.16.0",
+          "numpy": "2.5.4",
+          "HDF5": "2.0.0"
+        }
+      },
+      "warnings": {
+        "native_stderr": {
+          "bytes": 40204954,
+          "sha256": "9f4d021638ec580b2367ddf58546efb2ca2df2573cf52ca194fc7a175845bdb0"
+        },
+        "distinct_conversion_messages": {
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to parse out_units value none\")": 48732,
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to convert m to 1\")": 341124,
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to parse in_units value none\")": 24366
+        },
+        "other_distinct_messages": 9,
+        "all_other_messages_are_XML_definition_overrides": true,
+        "fully_accounted_conversion_warnings": true
+      },
+      "observed_model_resource_peaks": {
+        "memory_bytes": 364023808,
+        "pids": 9,
+        "logical_job_wall_seconds": 15.645467583090067
+      },
+      "container_and_cgroup_limits_verified": true,
+      "cleanup_receipt_verified": true,
+      "no_observed_OOM_or_memory_limit_events": true
+    },
+    {
+      "case_id": "serial-20220101T2300Z",
+      "host_receipt": {
+        "bytes": 11139,
+        "sha256": "8506446e030e1c8b8ee093046741600ef97173b0699d8ba137b20526f8d30931",
+        "identity_sha256": "7213f850f64d086291569d7e73481035ca2d66c352d403e734c464cb5832eda2"
+      },
+      "input_identity_sha256": "b07cae44a90816217e2e5717b8e3a3d3a9a5f4fc8a481fdb8e2e51a6ec00a095",
+      "input_files_checked": 97,
+      "process_receipt_identities": [
+        "1c083c1b4d4d6f3b83e5317e537944fe4e8e227f0a23e0ba87948a669022feb7",
+        "2282c444a62378dd665f626531d812e02da14177e72f4df1a74881833760f883"
+      ],
+      "process_numbers": [
+        3,
+        4
+      ],
+      "executor_source": {
+        "bytes": 13164,
+        "sha256": "b709dfe4fb03545c81e23be49558c8e38958b5b1da7f0e4a6526afba08854280"
+      },
+      "normalizer_source": {
+        "bytes": 5613,
+        "sha256": "ee160e38f26f6b7e34b6c37e3696d2fb5bf3cadc141cf7e44fa3027d1d17977c"
+      },
+      "in_image_normalization_packages": {
+        "netCDF4": "1.6.3",
+        "numpy": "1.26.4"
+      },
+      "normalization_identity_sha256": "1880cc94d9a878946f19d915b18069a88f8cae2bf85bf6e7b2402fe8f6442df0",
+      "raw_inventory_identity_sha256": "1df204473ad4996088fb03baf529e5b214577467a3ae47d82a097986e9e9d4d0",
+      "raw_files_checked": 44,
+      "raw_output_bytes": 12985643,
+      "routing_raw_binding": {
+        "path": "troute/troute_output_202112010000.nc",
+        "bytes": 4762098,
+        "sha256": "26bde516ded859995a669a54eada4402b9d8481913c60a94d7a3b364f5303d77"
+      },
+      "normalized_csv": {
+        "bytes": 28570305,
+        "sha256": "5eeacc681ccf7046c6f6af76344556e12d53e6593e972b09b1ff206ecbdd349b"
+      },
+      "native": {
+        "catchment_files": 31,
+        "nexus_files": 12,
+        "catchment_rows": 24335,
+        "nexus_rows": 9420,
+        "fields_per_catchment_row": 15,
+        "full_interval_start_axes_verified": true,
+        "all_values_finite": true,
+        "runoff_and_nexus_nonnegative": true,
+        "variable_min_max": {
+          "RAIN_RATE": [
+            0.0,
+            0.01450971612939611
+          ],
+          "GIUH_RUNOFF": [
+            0.0,
+            0.00271498292406022
+          ],
+          "INFILTRATION_EXCESS": [
+            0.0,
+            0.00493633160914546
+          ],
+          "DIRECT_RUNOFF": [
+            0.0,
+            0.00271498292406022
+          ],
+          "NASH_LATERAL_RUNOFF": [
+            0.0,
+            0.0
+          ],
+          "DEEP_GW_TO_CHANNEL_FLUX": [
+            0.0,
+            0.00052585459037824
+          ],
+          "SOIL_TO_GW_FLUX": [
+            0.0,
+            0.0
+          ],
+          "Q_OUT": [
+            0.0,
+            0.00271498292406022
+          ],
+          "POTENTIAL_ET": [
+            0.0,
+            0.00035825097768338
+          ],
+          "ACTUAL_ET": [
+            0.0,
+            0.00024136443244061
+          ],
+          "GW_STORAGE": [
+            1e-17,
+            0.00763631840962176
+          ],
+          "SOIL_STORAGE": [
+            0.04288608729839325,
+            0.09071527993076557
+          ],
+          "SOIL_STORAGE_CHANGE": [
+            0.0,
+            0.0099423982653722
+          ],
+          "SURF_RUNOFF_SCHEME": [
+            1.0,
+            1.0
+          ],
+          "NWM_PONDED_DEPTH": [
+            0.0,
+            0.00222134922411546
+          ]
+        }
+      },
+      "routing": {
+        "features": 31,
+        "steps_per_feature": 9420,
+        "rows": 292020,
+        "interval_seconds": 300,
+        "interval_end_axis_verified": true,
+        "raw_csv_numeric_mismatches": 0,
+        "raw_dtype": "float32",
+        "variables_units": {
+          "flow": "m3 s-1",
+          "velocity": "m/s",
+          "depth": "m"
+        },
+        "variable_min_max": {
+          "flow": [
+            7.006492321624085e-45,
+            35.8122444152832
+          ],
+          "velocity": [
+            0.0,
+            3.148310661315918
+          ],
+          "depth": [
+            0.0,
+            1.6011302471160889
+          ]
+        },
+        "independent_reader": {
+          "h5py": "3.16.0",
+          "numpy": "2.5.4",
+          "HDF5": "2.0.0"
+        }
+      },
+      "warnings": {
+        "native_stderr": {
+          "bytes": 40153804,
+          "sha256": "e596d2f32eda3e3347f2699dfd43a6d1afe2fa5ec5ad95f8b648ec87622d6b46"
+        },
+        "distinct_conversion_messages": {
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to parse out_units value none\")": 48670,
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to convert m to 1\")": 340690,
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to parse in_units value none\")": 24335
+        },
+        "other_distinct_messages": 9,
+        "all_other_messages_are_XML_definition_overrides": true,
+        "fully_accounted_conversion_warnings": true
+      },
+      "observed_model_resource_peaks": {
+        "memory_bytes": 361238528,
+        "pids": 9,
+        "logical_job_wall_seconds": 15.525487166829407
+      },
+      "container_and_cgroup_limits_verified": true,
+      "cleanup_receipt_verified": true,
+      "no_observed_OOM_or_memory_limit_events": true
+    },
+    {
+      "case_id": "serial-20220102T0000Z",
+      "host_receipt": {
+        "bytes": 11139,
+        "sha256": "6fae9cce35b9658c181adb7a4fd37bfbafc3d2324831df039e8ef58ad61d272e",
+        "identity_sha256": "1d2cdd8493988b7af09349bcb2410ce81e6e1d55043a727f486868f27b0a0880"
+      },
+      "input_identity_sha256": "3995396ad246936f37e3abd8954f52e4ddf577acd95f8954752ef0f43c9f92be",
+      "input_files_checked": 97,
+      "process_receipt_identities": [
+        "d7847cb99f0bf4dfc2246aff16041bad45e4607ea4c1af1498dfad8acae55036",
+        "ace10bde80a91fa3aa74efd83213668021ee03861ef238778251afe34c3183ed"
+      ],
+      "process_numbers": [
+        5,
+        6
+      ],
+      "executor_source": {
+        "bytes": 13164,
+        "sha256": "b709dfe4fb03545c81e23be49558c8e38958b5b1da7f0e4a6526afba08854280"
+      },
+      "normalizer_source": {
+        "bytes": 5613,
+        "sha256": "ee160e38f26f6b7e34b6c37e3696d2fb5bf3cadc141cf7e44fa3027d1d17977c"
+      },
+      "in_image_normalization_packages": {
+        "netCDF4": "1.6.3",
+        "numpy": "1.26.4"
+      },
+      "normalization_identity_sha256": "6b1aeeb5313532aa33c8229b2f49dfd04c203fa09b3d214ffeb687c7bde24be6",
+      "raw_inventory_identity_sha256": "f488e62fa5e4e916ba66db96234f8cd9b7ad51bfaf8af145f4aec74feddb54f2",
+      "raw_files_checked": 44,
+      "raw_output_bytes": 13002361,
+      "routing_raw_binding": {
+        "path": "troute/troute_output_202112010000.nc",
+        "bytes": 4768146,
+        "sha256": "e0f7ce9893a8bef6544105f67c6a3941c3a2aa5d664046568418d60dfb5b0ff1"
+      },
+      "normalized_csv": {
+        "bytes": 28609798,
+        "sha256": "75e17a052efa4c6e234adea0a89d8ce4f0651f93a6d21cb209ca8b4a872d22d7"
+      },
+      "native": {
+        "catchment_files": 31,
+        "nexus_files": 12,
+        "catchment_rows": 24366,
+        "nexus_rows": 9432,
+        "fields_per_catchment_row": 15,
+        "full_interval_start_axes_verified": true,
+        "all_values_finite": true,
+        "runoff_and_nexus_nonnegative": true,
+        "variable_min_max": {
+          "RAIN_RATE": [
+            0.0,
+            0.01449282135581598
+          ],
+          "GIUH_RUNOFF": [
+            0.0,
+            0.00308565459220486
+          ],
+          "INFILTRATION_EXCESS": [
+            0.0,
+            0.00560536085486094
+          ],
+          "DIRECT_RUNOFF": [
+            0.0,
+            0.00308565459220486
+          ],
+          "NASH_LATERAL_RUNOFF": [
+            0.0,
+            0.0
+          ],
+          "DEEP_GW_TO_CHANNEL_FLUX": [
+            0.0,
+            0.00052585459037824
+          ],
+          "SOIL_TO_GW_FLUX": [
+            0.0,
+            0.0
+          ],
+          "Q_OUT": [
+            0.0,
+            0.00308565459220486
+          ],
+          "POTENTIAL_ET": [
+            0.0,
+            0.00035825097768338
+          ],
+          "ACTUAL_ET": [
+            0.0,
+            0.00024136443244061
+          ],
+          "GW_STORAGE": [
+            1e-17,
+            0.00763631840962176
+          ],
+          "SOIL_STORAGE": [
+            0.04288608729839325,
+            0.08800028864323399
+          ],
+          "SOIL_STORAGE_CHANGE": [
+            0.0,
+            0.00993534993986214
+          ],
+          "SURF_RUNOFF_SCHEME": [
+            1.0,
+            1.0
+          ],
+          "NWM_PONDED_DEPTH": [
+            0.0,
+            0.00252457685180512
+          ]
+        }
+      },
+      "routing": {
+        "features": 31,
+        "steps_per_feature": 9432,
+        "rows": 292392,
+        "interval_seconds": 300,
+        "interval_end_axis_verified": true,
+        "raw_csv_numeric_mismatches": 0,
+        "raw_dtype": "float32",
+        "variables_units": {
+          "flow": "m3 s-1",
+          "velocity": "m/s",
+          "depth": "m"
+        },
+        "variable_min_max": {
+          "flow": [
+            7.006492321624085e-45,
+            42.400386810302734
+          ],
+          "velocity": [
+            0.0,
+            3.2145278453826904
+          ],
+          "depth": [
+            0.0,
+            1.7671165466308594
+          ]
+        },
+        "independent_reader": {
+          "h5py": "3.16.0",
+          "numpy": "2.5.4",
+          "HDF5": "2.0.0"
+        }
+      },
+      "warnings": {
+        "native_stderr": {
+          "bytes": 40204954,
+          "sha256": "9f4d021638ec580b2367ddf58546efb2ca2df2573cf52ca194fc7a175845bdb0"
+        },
+        "distinct_conversion_messages": {
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to parse out_units value none\")": 48732,
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to convert m to 1\")": 341124,
+          "WARN: Unit conversion unsuccessful - Returning unconverted value! (\"Unable to parse in_units value none\")": 24366
+        },
+        "other_distinct_messages": 9,
+        "all_other_messages_are_XML_definition_overrides": true,
+        "fully_accounted_conversion_warnings": true
+      },
+      "observed_model_resource_peaks": {
+        "memory_bytes": 360800256,
+        "pids": 9,
+        "logical_job_wall_seconds": 17.804195082979277
+      },
+      "container_and_cgroup_limits_verified": true,
+      "cleanup_receipt_verified": true,
+      "no_observed_OOM_or_memory_limit_events": true
+    }
+  ],
+  "source_trace_bindings": [
+    {
+      "component": "ngen",
+      "commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+      "path": "src/realizations/catchment/Bmi_Module_Formulation.cpp",
+      "bytes": 35945,
+      "sha256": "a4fd2d4d1c96b3309b81c0a00fcb6bacec2fc38e6707ef4e232e5ae4edd4cbc8"
+    },
+    {
+      "component": "ngen",
+      "commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+      "path": "src/realizations/catchment/Bmi_Multi_Formulation.cpp",
+      "bytes": 22182,
+      "sha256": "e62b3aab14da26590e6b56be177974f8a6f33faed5eac562f88e7b183bb747ed"
+    },
+    {
+      "component": "ngen",
+      "commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+      "path": "include/realizations/catchment/Bmi_Multi_Formulation.hpp",
+      "bytes": 43838,
+      "sha256": "a79252eb4f435414350a87d1a6c8475d214e9fd29a565c25296621f342338845"
+    },
+    {
+      "component": "CFE",
+      "commit": "a349a953ef239ae7470a8365cf614283d7e6ca80",
+      "path": "src/bmi_cfe.c",
+      "bytes": 146389,
+      "sha256": "77011721a6b0852e9989945b1e43c29120c4ef768069a790072b95445a9916fd"
+    },
+    {
+      "component": "SLOTH",
+      "commit": "48cd8082878fdb8a6f0e2337a5b375be5b71384c",
+      "path": "src/sloth.cpp",
+      "bytes": 13785,
+      "sha256": "2f7f427e16e8cbcad7e01dc2e9bdc57135ac499d6c69473aef80efb3db1c4f3f"
+    },
+    {
+      "component": "NoahOWP",
+      "commit": "0abb891b48b043cc626c4e4bbd0efe54ad357fe1",
+      "path": "bmi/bmi_noahowp.f90",
+      "bytes": 50016,
+      "sha256": "e13bbfc3490c862d753fce0662bdd7465b80082fc3235ac97581daa0ffb57fce"
+    }
+  ],
+  "model_processes_verified": 6,
+  "disposition": "diagnostic_output_integrity_verified_with_explained_unit_interface_warnings",
+  "release_qualified": false,
+  "scientific_validation_claimed": false,
+  "warning_interpretation": {
+    "output_serialization": "NGen multi-output scalar access requests units1 for14 CFE meter outputs and SURF_RUNOFF_SCHEME none; failed conversions preserve original BMI scalars.14 m-to1 and1 parse-in-none per row exactly match logs.",
+    "input_edges": "The two parse-out-none warnings are SLOTH unit1 to CFE none for ice_fraction_xinanjiang and soil_moisture_profile. Both are configured0.0, without aliases or inputs; SLOTH UpdateUntil only advances time. Values remain exact zero by source trace; they are not directly instrumented at runtime.",
+    "schaake_edge": "SLOTH ice_fraction_schaake and CFE ice_fraction_schaake both declare m. The m-to1 warnings do not indicate a mismatch on this edge.",
+    "physical_flux_edges": "No QINSUR m/s-to-mm h-1 or EVAPOTRANS m/s-to-m s-1 failure appears. Separate inert pinned UDUNITS probe proves conversion factor3.6e6 and identity respectively; logs alone do not independently measure every flux conversion.",
+    "upstream_repair_required": "Replace literal1 output units and invalid none unit labels with consistent variable metadata before a release; any changed experiment must receive a new identity."
+  },
+  "limits": [
+    "Output completeness, preservation and units provenance are verified; drainage/terrain candidates, radiation convention, cold-state convergence and interior-gauge reach approximation retain their frozen limitations.",
+    "No shared-history branching, full land checkpoint, forecast skill, scientific equivalence to historical E03, clean-build release or redistribution qualification is established.",
+    "Recorded cgroup peaks are after native/routing stages, before normalization; immutable container limits also cover normalization but its peak is not separately recorded.",
+    "The independent HDF5 reader checks every routed value and clock through a different library; it does not re-execute routing or the land model."
+  ],
+  "review_identity_sha256": "ca9b6c2f7ee71bd0d89ede40b3d88ddcdb0a54a3487947e2c64aba3f03130c3a"
+}

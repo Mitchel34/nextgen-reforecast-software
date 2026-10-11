@@ -1,0 +1,7 @@
+# Watauga compatible diagnostic fixture v2
+
+This separate scientific configuration derives from `watauga-public-rebuild-v1` and replaces two unsupported Noah options with defaults from the exact pinned component: `stomatal_resistance_option` 4→1 and `evap_srfc_resistance_option` 5→1. All weather, CFE parameter, geometry and routing bytes remain unchanged. Failed v1 attempts remain retained.
+
+See [the source-bound compatibility review](../../docs/WATAUGA_NOAH_COMPATIBILITY_V2_2026-10-10.md), [recipe](recipe.json) and [manifest](manifest.json). The preparation recipe initializes no model; execution requires the separate frozen physical-reference protocol and process allowance. Source/derived payloads remain in private `.local` staging. Scientific release, redistribution and project-license qualifications remain open.
+
+The [v2 reference experiment](../../docs/PUBLIC_WATAUGA_REFERENCE_RESULTS_V2_2026-10-10.md) is complete: three independent jobs, 36 forecast lead rows and exact antecedent serialized-output agreement. Its runtime is diagnostically admitted; scientific release gates remain open. Retained compatible inputs are in `.local/public-fixture-20261010/native-admitted-v2/` with `ADMISSION.json`, and references/raw outputs are under `.local/physical-reference-v2-20261010/`. These are local developer paths, not a public data-download promise. The committed manifests and code describe the identities and checks; lawful accessible payloads or a complete qualified acquisition recipe are still required for external reproduction.

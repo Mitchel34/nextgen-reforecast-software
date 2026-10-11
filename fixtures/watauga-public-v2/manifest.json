@@ -1,0 +1,21 @@
+{
+  "schema_version": "public-development-fixture/0.2",
+  "fixture_id": "watauga-public-rebuild-v2",
+  "parent_fixture_id": "watauga-public-rebuild-v1",
+  "status": "compatible_diagnostic_inputs_prepared",
+  "recipe": {
+    "path": "fixtures/watauga-public-v2/recipe.json",
+    "bytes": 17830,
+    "sha256": "2ec8fd4806cd0b9b11dc21db66135f9d94487882327b4230342222081cc20df7"
+  },
+  "native_input_admission": {
+    "local_path": ".local/public-fixture-20261010/native-admitted-v2/ADMISSION.json",
+    "identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+    "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6"
+  },
+  "public_evidence": "docs/evidence/watauga-noah-compatibility-v2-20261010.json",
+  "source_data_parent": "fixtures/watauga-public-v1/manifest.json",
+  "physical_reference_validated": false,
+  "release_scientifically_qualified": false,
+  "execution_authorization": "requires separately frozen v2 physical-reference protocol and current process budget"
+}

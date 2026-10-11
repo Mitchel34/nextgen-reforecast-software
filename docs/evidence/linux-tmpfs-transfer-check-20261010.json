@@ -1,0 +1,182 @@
+{
+  "schema_version": "linux-tmpfs-tar-transfer-proof/1.0",
+  "evidence_class": "synthetic_inert_transfer",
+  "status": "passed",
+  "image_manifest_sha256": "2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+  "runtime_identity_unchanged": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "model_process_invocations": 0,
+  "native_main_invoked": false,
+  "routing_main_invoked": false,
+  "files": {
+    "job/config/marker.txt": {
+      "bytes": 30,
+      "sha256": "dae39a0b9fd9cd1d05ee3a357b6c6e8707469abb310ca24756882dd5e285813b"
+    },
+    "receipts/native/RECEIPT.json": {
+      "bytes": 82,
+      "sha256": "2e367ee571ca0e17edad1737086877f94b799deb3fae49fd3cfa3592cb7d2fc2"
+    },
+    "job/outputs/ngen/marker.txt": {
+      "bytes": 32,
+      "sha256": "9139c2ded327d2d73b6ad1aef2ec492db06913a6007d634aa7f4edb9299e3665"
+    }
+  },
+  "input_tar": {
+    "bytes": 10240,
+    "sha256": "2c24eba6891fe5545f5ac332896aab643eefb50d06d2705a133b3715227e6c6a"
+  },
+  "exported_tar": {
+    "bytes": 10240,
+    "sha256": "e8948b3a4dca0faea06890f3b42804eaeb805c7771ba13970ef13c79d02605f8"
+  },
+  "enforced_limits": {
+    "cpu.max": "200000 100000",
+    "memory.max": "8589934592",
+    "pids.max": "256"
+  },
+  "root_filesystem": "read_only",
+  "network": "none",
+  "tmpfs": {
+    "/tmp": 67108864,
+    "/work": 134217728,
+    "/work/job/outputs": 1073741824
+  },
+  "records": [
+    {
+      "args": [
+        "create",
+        "--name",
+        "nrf-inert-tar-roundtrip-20261010-v1",
+        "--pull",
+        "never",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "256",
+        "--memory",
+        "8g",
+        "--memory-swap",
+        "8g",
+        "--cpus",
+        "2",
+        "--tmpfs",
+        "/tmp:rw,exec,size=64m",
+        "--tmpfs",
+        "/work:rw,noexec,size=128m",
+        "--tmpfs",
+        "/work/job/outputs:rw,noexec,size=1g",
+        "-e",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "/bin/sleep",
+        "sha256:2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+        "infinity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.18638929189182818,
+      "stdout_bytes": 65,
+      "stdout_sha256": "e4dd4f782700196403865bd9c097866685c0c7fa65ea17cd9a656ea5957d42d6",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "args": [
+        "start",
+        "nrf-inert-tar-roundtrip-20261010-v1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.06840124982409179,
+      "stdout_bytes": 36,
+      "stdout_sha256": "d2e84b61562e46e6dcaa6636e0ac593035a4cc0c2e04db3a6bdeeccee9ed64ac",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "args": [
+        "exec",
+        "-i",
+        "nrf-inert-tar-roundtrip-20261010-v1",
+        "/bin/tar",
+        "-xf",
+        "-",
+        "-C",
+        "/work"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.045285083120688796,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "args": [
+        "exec",
+        "nrf-inert-tar-roundtrip-20261010-v1",
+        "/bin/tar",
+        "-cf",
+        "-",
+        "-C",
+        "/work",
+        "job/config/marker.txt",
+        "receipts/native/RECEIPT.json",
+        "job/outputs/ngen/marker.txt"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.043417332926765084,
+      "stdout_bytes": 10240,
+      "stdout_sha256": "e8948b3a4dca0faea06890f3b42804eaeb805c7771ba13970ef13c79d02605f8",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "args": [
+        "exec",
+        "nrf-inert-tar-roundtrip-20261010-v1",
+        "/ngen/.venv/bin/python",
+        "-c",
+        "import json,pathlib; r=pathlib.Path(\"/sys/fs/cgroup\"); print(json.dumps({k:(r/k).read_text().strip() for k in [\"cpu.max\",\"memory.max\",\"pids.max\"]}))"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.05431383312679827,
+      "stdout_bytes": 76,
+      "stdout_sha256": "602cda8a61279fbae46a4a2cf10bd36e6356e020c5b5d3afb2f02ddfb36b5e3d",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "args": [
+        "stop",
+        "--time",
+        "5",
+        "nrf-inert-tar-roundtrip-20261010-v1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.057244624942541,
+      "stdout_bytes": 91,
+      "stdout_sha256": "31c69899934b9dd8a73721d2beb2b3cc4d8a448f8c053ea76573bb2f7c05c79b",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "args": [
+        "rm",
+        "--force",
+        "nrf-inert-tar-roundtrip-20261010-v1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.031203750055283308,
+      "stdout_bytes": 36,
+      "stdout_sha256": "d2e84b61562e46e6dcaa6636e0ac593035a4cc0c2e04db3a6bdeeccee9ed64ac",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": "dedicated_probe_container_stopped_and_removed",
+  "receipt_identity_sha256": "bee4cb9e2755c3a2d40ed9f89e626aac0208294c0a600092390e24bd397ee20b"
+}
