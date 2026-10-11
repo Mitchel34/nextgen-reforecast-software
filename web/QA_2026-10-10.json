@@ -1,0 +1,106 @@
+{
+  "receipt_version": "1.0",
+  "recorded_date": "2026-10-10",
+  "scope": "internal_local_browser_prototype_qa",
+  "interface_stage": "prototype",
+  "intended_evaluation_level": "UX_E1",
+  "user_study_conducted": false,
+  "model_execution_performed": false,
+  "coverage_verified": false,
+  "hosted_deployment": false,
+  "pure_contract_tests": {
+    "command": "node --test web/tests/request.test.mjs",
+    "node_version": "24.16.0",
+    "passed": 12,
+    "failed": 0
+  },
+  "browser": {
+    "provider": "Codex in-app browser",
+    "preview_url": "http://127.0.0.1:8765/",
+    "checks": [
+      "empty_form_error_focus",
+      "watauga_6h_time_and_row_preview",
+      "proposed_defaults_disclosure",
+      "actual_json_download_parse",
+      "stale_review_invalidation",
+      "unsupported_19h_lead",
+      "unresolved_nwm_identifier",
+      "continuous_mode_not_translated",
+      "desktop_visual_inspection",
+      "phone_width_visual_inspection",
+      "no_captured_console_warnings_or_errors"
+    ],
+    "requested_mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "observed_document_width": 375,
+    "observed_client_width": 375,
+    "viewport_reset": true
+  },
+  "download": {
+    "artifact_type": "researcher_request",
+    "filename": "nextgen-study-request.json",
+    "bytes": 2609,
+    "sha256": "ae95f78ec0d7afd84a6d264823a5a7632ba454aa8e5187a4c7ffaf90a24afcd7",
+    "execution_ready": false,
+    "user_study_conducted": false,
+    "issue_count": 48,
+    "retained_rows_per_location": 288,
+    "last_retained_valid_time_utc": "2022-01-03T05:00:00Z",
+    "local_evidence_path": ".local/kickoff-20261010/browser-downloaded-request.json"
+  },
+  "sources": [
+    {
+      "path": "web/request.mjs",
+      "bytes": 6203,
+      "sha256": "36d8dd7744038eede8df298262bdf4e6f85c913e6835abf701d24fe85d00b67c"
+    },
+    {
+      "path": "web/app.mjs",
+      "bytes": 8032,
+      "sha256": "8f2893d0032b070d65427b22220f12e5b3af33ddf636c8b0f6100c48d7f28ac2"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 6138,
+      "sha256": "878dee69a1b0b356e0ffd108a39111fdc5b6aafc3584b3d8ce64f76cedaec681"
+    },
+    {
+      "path": "web/styles.css",
+      "bytes": 9255,
+      "sha256": "6a67cbfb719fbe7dadd9c9bc6a1d649b35c7424031bacd45c9b8ea270627aae0"
+    },
+    {
+      "path": "web/tests/request.test.mjs",
+      "bytes": 6207,
+      "sha256": "1365748b419b7ac98276d0f18411b3d25684e64553d63d7e7641b38782a32120"
+    },
+    {
+      "path": "docs/BROWSER_REQUEST_CONTRACT.md",
+      "bytes": 7474,
+      "sha256": "d5bd84869d359e54259d165fab2c32da102828ab0497797326cae4f44c237a36"
+    },
+    {
+      "path": "web/tests/translation.test.mjs",
+      "bytes": 7127,
+      "sha256": "80f272e6bdd28394fb4da2aca9f365ae8dfd2521926504b2a797e5c1b6113d8d"
+    }
+  ],
+  "limitations": [
+    "not_a_participant_study",
+    "not_an_independent_reproduction",
+    "not_full_accessibility_conformance",
+    "not_cross_browser_validation",
+    "no_live_resolver_or_source_coverage",
+    "no_preparation_or_model_execution",
+    "no_hosted_service_or_verified_dataset"
+  ],
+  "combined_contract_tests": {
+    "command": "node --test web/tests/*.test.mjs",
+    "passed": 17,
+    "failed": 0,
+    "request_tests": 12,
+    "browser_to_python_tests": 5
+  }
+}

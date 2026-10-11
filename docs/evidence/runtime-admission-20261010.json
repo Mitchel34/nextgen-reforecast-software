@@ -1,0 +1,228 @@
+{
+  "schema_version": "ngen-reforecast-runtime-admission-review/1.0",
+  "assessment_date": "2026-10-10",
+  "date_basis": "user_client_date_America_Chicago",
+  "evidence_class": "fresh_local_read_only_probe_and_reinspection_of_public_historical_manifests",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "inspection_baseline_commit": "518214ae5bb965182f30bfda44e79a6e58850adc",
+  "status": "blocked",
+  "physical_execution_ready": false,
+  "scope": {
+    "protected_research_roots_accessed": false,
+    "protected_research_roots_modified": false,
+    "explicit_asset_root_supplied": false,
+    "asset_source_discovery_performed": false,
+    "container_vm_started": false,
+    "dependency_downloads": 0,
+    "native_builds": 0,
+    "model_runs": 0,
+    "cloud_resources_started": 0,
+    "physical_invocations_added": 0
+  },
+  "host": {
+    "system": "Darwin",
+    "release": "25.6.0",
+    "machine": "arm64",
+    "python_implementation": "CPython",
+    "python_version": "3.14.7",
+    "required_native_platform": "linux/arm64",
+    "native_host_platform_matches": false,
+    "path_command_presence": {
+      "python3": true,
+      "docker": true,
+      "colima": true,
+      "limactl": true,
+      "podman": false,
+      "cmake": false,
+      "git": true
+    }
+  },
+  "docker_probe": {
+    "client_version": "29.7.2",
+    "client_build": "a7dcaa6fdb",
+    "client_exit_code": 0,
+    "context_inspection_exit_code": 0,
+    "selected_context_transport": "unix",
+    "docker_host_override_present": false,
+    "server_probe_command": "docker version --format {{json .Server}}",
+    "server_probe_timeout_seconds": 5,
+    "server_probe_exit_code": 1,
+    "server_responded": false,
+    "failure_category": "local_unix_socket_not_found",
+    "private_endpoint_redacted": true,
+    "scope_limit": "Only the selected local endpoint was probed; other contexts, VMs and remote workers were not inspected."
+  },
+  "public_manifest_checks": {
+    "profile_id": "nextgen-arm64-v3",
+    "profile_canonical_sha256": "1b89d80a6e64088c96ef47e2aaead969528fc63039cc260e9d6392e44a3e66a8",
+    "profile_entries": 198,
+    "roles": {
+      "native": 1,
+      "middleware": 1,
+      "source_overlay": 10,
+      "source_preimage": 5,
+      "fixture": 181
+    },
+    "fixture_members": 181,
+    "known_fixture_hashes": 50,
+    "unknown_fixture_hashes": 131,
+    "tracked_payloads_at_declared_staging_paths": 0,
+    "staging_scope_limit": "This is a Git index inventory, not a search for staged files elsewhere or current source residency.",
+    "source_lock_complete": false,
+    "component_source_to_binary_attestation": false,
+    "middleware_resolution_verified_in_public_runtime": false,
+    "public_fixture_complete": false,
+    "complete_example_bytes": null,
+    "fixture_groups": {
+      "fixture_control_records": {
+        "members": 4,
+        "unresolved_hashes": 0
+      },
+      "forecast_forcing_and_preparation": {
+        "members": 66,
+        "unresolved_hashes": 55
+      },
+      "CFE_configuration": {
+        "members": 31,
+        "unresolved_hashes": 28
+      },
+      "Noah_configuration": {
+        "members": 31,
+        "unresolved_hashes": 10
+      },
+      "domain_realization_routing_configuration": {
+        "members": 3,
+        "unresolved_hashes": 0
+      },
+      "historical_forcing": {
+        "members": 31,
+        "unresolved_hashes": 28
+      },
+      "fixture_local_runtime_copies": {
+        "members": 2,
+        "unresolved_hashes": 2
+      },
+      "fixture_implementation": {
+        "members": 13,
+        "unresolved_hashes": 8
+      }
+    }
+  },
+  "historical_inventory": {
+    "observation_date": "2026-09-18",
+    "not_refreshed_on_original_storage": true,
+    "file_count": 181,
+    "resident_count": 49,
+    "resident_bytes": 906503,
+    "dataless_count": 132,
+    "missing_count": 0,
+    "freshly_hashed_bytes": 906503
+  },
+  "historical_identity_reinspection": {
+    "basis": "Pins reread from public profile; original artifacts, image availability and rebuilt bytes were not validated.",
+    "ngen_commit": "9175b640a4e6f1d90e58e0a65662174d08f052ef",
+    "troute_commit": "533fbd98362efdafae62392308727de4f0d4cc20",
+    "component_gitlinks": {
+      "CFE": {
+        "repository": "https://github.com/NOAA-OWP/cfe",
+        "commit": "a349a953ef239ae7470a8365cf614283d7e6ca80"
+      },
+      "NoahOWP": {
+        "repository": "https://github.com/NOAA-OWP/noah-owp-modular",
+        "commit": "0abb891b48b043cc626c4e4bbd0efe54ad357fe1"
+      },
+      "SLOTH": {
+        "repository": "https://github.com/NOAA-OWP/SLoTH",
+        "commit": "48cd8082878fdb8a6f0e2337a5b375be5b71384c"
+      }
+    },
+    "image": "awiciroh/ciroh-ngen-image@sha256:2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+    "native_sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+    "middleware_sha256": "09b65b5c2a76df4e8e9b334b9d3c56f39c327955306085cae692484742dcc162",
+    "fixture_contract_sha256": "b1763b05cfb9fef1cd45b925662149dca3cbcca55ce0535051a35773ca3108fb"
+  },
+  "offline_doctor": {
+    "invocation": "inspect_runtime(Path(\"profiles/nextgen-arm64-v3.json\")) without asset root; PYTHONDONTWRITEBYTECODE=1",
+    "status": "blocked",
+    "execution_ready": false,
+    "check_codes": [
+      "PROFILE_IDENTITY_VERIFIED",
+      "NATIVE_PLATFORM",
+      "ENVIRONMENT_NOT_ACTIVATED"
+    ],
+    "blocker_codes": [
+      "RUNTIME_UNQUALIFIED",
+      "UNSUPPORTED_NATIVE_PLATFORM",
+      "ASSET_ROOT_REQUIRED",
+      "SOURCE_CLOSURE_UNRESOLVED",
+      "COMPONENT_ATTESTATION_UNRESOLVED",
+      "FIXTURE_IDENTITY_INCOMPLETE",
+      "MIDDLEWARE_LOADING_UNQUALIFIED",
+      "NATIVE_BUILD_UNQUALIFIED",
+      "REAL_REFERENCE_UNQUALIFIED",
+      "DISTRIBUTION_RIGHTS_UNRESOLVED"
+    ],
+    "summary": {
+      "assets_expected": 198,
+      "assets_checked": 0,
+      "assets_verified": 0,
+      "hashed_bytes_or_reserved_after_read_failure": 0,
+      "limits": {
+        "max_file_bytes": 16777216,
+        "max_total_hash_bytes": 134217728,
+        "max_files": 256
+      }
+    }
+  },
+  "observed_source_files": [
+    {
+      "path": "profiles/nextgen-arm64-v3.json",
+      "sha256": "8d90f2181785f3e7927607e5ac0bcb7f1c6fd00ed008eba295b65937dd5eed5e",
+      "bytes": 52882
+    },
+    {
+      "path": "native/ASSET_CLOSURE.json",
+      "sha256": "29a97cc6157a56ec2dfd525430df7c13a41e58b88ad6f4504061798e57a88f76",
+      "bytes": 76557
+    },
+    {
+      "path": "native/BUILD_RECIPE.md",
+      "sha256": "c120ffa122a0fb98b318fd9c982d0ff793380b7b2ea30f52b3c2dc519bff619c",
+      "bytes": 6859
+    },
+    {
+      "path": "docs/FIRST_PHYSICAL_EXPERIMENT.md",
+      "sha256": "0480285103ea15e842cc4506af46f0c2f3575a08e3974abcc21f805ae35fb7f9",
+      "bytes": 8730
+    },
+    {
+      "path": "benchmarks/PROTOCOL.md",
+      "sha256": "c202ba52f117bc71ab376029a883d033c5c51cb9f0f6d75c81aae941c9e43976",
+      "bytes": 21408
+    },
+    {
+      "path": "benchmarks/EXPERIMENT_MATRIX.json",
+      "sha256": "d3f25df9bfdd01ec1bd8559fb03f480dcde2da65c080691b4520907bd8411ef9",
+      "bytes": 16295
+    },
+    {
+      "path": "src/ngen_reforecast/runtime.py",
+      "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16",
+      "bytes": 13642
+    }
+  ],
+  "gate_disposition": {
+    "RF-008_build_loader": "not_admitted",
+    "RF-005A_diagnostic_parameter": "not_admitted",
+    "RF-009A_input_content": "not_admitted",
+    "RF-010_independent_reference": "not_started",
+    "RF-005B_release_parameter": "downstream_separate_manifest_required"
+  },
+  "limitations": [
+    "PATH absence does not establish absence from every environment.",
+    "No remote Linux environment was selected or inspected.",
+    "Known hashes and source gitlinks do not establish asset availability, rights, loaded component identity or scientific validity.",
+    "New reference-output hashes are outputs of the admitted first experiment, not prerequisites to producing themselves.",
+    "No complete-source, fixture-content, native-loading, model-equivalence, runtime-resource or researcher-usability result was generated."
+  ]
+}

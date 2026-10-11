@@ -13,7 +13,8 @@ import tempfile
 from typing import Callable, TextIO
 
 from . import __version__
-from .campaign import CampaignError, iter_ledger, load_campaign, plan_campaign
+from .campaign import CampaignError, iter_expected_rows, load_campaign, plan_campaign
+from .provenance import load_lock, seal_lock, verify_lock
 from .runtime import RuntimeProfileError, inspect_runtime
 
 MAX_LEDGER_ROWS = 10_000_000
@@ -109,12 +110,14 @@ def _init(directory: Path) -> int:
     return 0
 
 
-def _ledger(campaign: Path, output: Path, max_rows: int) -> int:
+def _ledger(campaign: Path, output: Path, max_rows: int, kind: str = "generated") -> int:
     if not 1 <= max_rows <= MAX_LEDGER_ROWS:
         raise ValueError(f"--max-rows must be between 1 and {MAX_LEDGER_ROWS}")
     spec = load_campaign(campaign)
     plan = plan_campaign(spec, campaign.parent, check_assets=False)
     expected = plan["totals"]["expected_forecast_rows"]
+    if kind == "retained":
+        expected = plan["totals"].get("retained_forecast_rows", expected)
     if expected > max_rows:
         raise ValueError(f"Ledger has {expected} rows, exceeding --max-rows={max_rows}")
 
@@ -122,7 +125,7 @@ def _ledger(campaign: Path, output: Path, max_rows: int) -> int:
         writer = csv.DictWriter(handle, fieldnames=LEDGER_FIELDS, lineterminator="\n")
         writer.writeheader()
         count = 0
-        for row in iter_ledger(spec):
+        for row in iter_expected_rows(spec, kind=kind):
             writer.writerow({key: row[key] for key in LEDGER_FIELDS})
             count += 1
             if count > max_rows:
@@ -131,11 +134,14 @@ def _ledger(campaign: Path, output: Path, max_rows: int) -> int:
             raise ValueError("Ledger row count differs from planned output count")
 
     _publish_new(output, write)
-    sys.stdout.write(_json({
+    summary = {
         "status": "expected_ledger_created", "rows": expected,
         "output": str(output), "forecasts_generated": 0,
         "plan_id": plan["plan_id"],
-    }))
+    }
+    if kind == "retained":
+        summary["kind"] = kind
+    sys.stdout.write(_json(summary))
     return 0
 
 
@@ -156,6 +162,15 @@ def parser() -> argparse.ArgumentParser:
     ledger.add_argument("campaign", type=Path)
     ledger.add_argument("--output", type=Path, required=True)
     ledger.add_argument("--max-rows", type=int, default=1_000_000)
+    ledger.add_argument("--kind", choices=("generated", "retained"), default="generated",
+                        help="Expected keys for all 18 steps or selected export leads")
+    lock = commands.add_parser("lock", help="Bind a planning snapshot after resident asset identity checks")
+    lock.add_argument("campaign", type=Path)
+    lock.add_argument("--output", type=Path, required=True)
+    verify = commands.add_parser("verify-lock", help="Recheck planning snapshot and resident bytes; never execution admission")
+    verify.add_argument("lock", type=Path)
+    verify.add_argument("--asset-root", type=Path, required=True)
+    verify.add_argument("--output", type=Path)
     doctor = commands.add_parser("doctor", help="Inspect a historical runtime profile without starting it")
     doctor.add_argument("profile", type=Path)
     doctor.add_argument("--asset-root", type=Path)
@@ -176,7 +191,17 @@ def main(argv: list[str] | None = None) -> int:
             _emit(_json(plan) if args.command == "plan" else render_plan_report(plan), args.output)
             return 2 if plan["blockers"] else 0
         if args.command == "ledger":
-            return _ledger(args.campaign, args.output, args.max_rows)
+            return _ledger(args.campaign, args.output, args.max_rows, args.kind)
+        if args.command == "lock":
+            lock = seal_lock(load_campaign(args.campaign), args.campaign.parent)
+            _emit(_json(lock), args.output)
+            sys.stdout.write(_json({"status": "planning_lock_created", "lock_sha256": lock["lock_sha256"],
+                                    "execution_ready": False, "output": str(args.output)}))
+            return 0
+        if args.command == "verify-lock":
+            report = verify_lock(load_lock(args.lock), args.asset_root)
+            _emit(_json(report), args.output)
+            return 0 if report["input_bytes_verified"] else 2
         if args.command == "doctor":
             report = inspect_runtime(args.profile, args.asset_root)
             _emit(_json(report), args.output)

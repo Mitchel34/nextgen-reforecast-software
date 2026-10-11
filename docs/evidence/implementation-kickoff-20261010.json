@@ -1,0 +1,261 @@
+{
+  "schema_version": "implementation-kickoff-validation/1.0",
+  "assessment_date": "2026-10-10",
+  "date_basis": "user_client_date_America_Chicago",
+  "stage": "offline_campaign_provenance_and_browser_prototype",
+  "package_version": "0.1.0a2",
+  "baseline_commit": "518214ae5bb965182f30bfda44e79a6e58850adc",
+  "source_binding": "SHA-256 entries below bind tested code independently of the later publication commit.",
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "3.14.7",
+    "node": "v24.16.0"
+  },
+  "python_tests": {
+    "command": "TMPDIR=\"$PWD/.local/tmp\" PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m unittest discover -s tests -v",
+    "passed": 80,
+    "failed": 0,
+    "log_sha256": "1169ba54a346a0dbf01b68b457b2f98d0cd5c5de8117c70462fe71f24eab128f"
+  },
+  "browser_contract_tests": {
+    "command": "node --test web/tests/*.test.mjs",
+    "passed": 17,
+    "failed": 0,
+    "request_tests": 12,
+    "cross_language_tests": 5,
+    "log_sha256": "59efec9145207ea3c17562c611070d1665d9ead0a86a1dc332570ce0cf13f3fc"
+  },
+  "wheel": {
+    "filename": "ngen_reforecast-0.1.0a2-py3-none-any.whl",
+    "size_bytes": 27552,
+    "sha256": "84f84bcc31c4bb64ebb821f306d64eca7546aeaf2e719a1b30915190e4d15207",
+    "installed_in_independent_environment": true,
+    "distribution": "local validation build; no package registry release"
+  },
+  "installed_cli": {
+    "module_loaded_from_site_packages": true,
+    "version": "0.1.0a2",
+    "checks": [
+      {
+        "command": "ngen-reforecast --version",
+        "returncode": 0,
+        "expected": 0
+      },
+      {
+        "command": "ngen-reforecast init smoke-campaign",
+        "returncode": 0,
+        "expected": 0
+      },
+      {
+        "command": "ngen-reforecast plan smoke-campaign/campaign.json",
+        "returncode": 2,
+        "expected": 2
+      },
+      {
+        "command": "ngen-reforecast ledger smoke-campaign/campaign.json --output generated.csv",
+        "returncode": 0,
+        "expected": 0
+      },
+      {
+        "command": "ngen-reforecast report smoke-campaign/campaign.json --output plan.md",
+        "returncode": 2,
+        "expected": 2
+      },
+      {
+        "command": "ngen-reforecast doctor runtime-profile.json",
+        "returncode": 2,
+        "expected": 2
+      },
+      {
+        "command": "ngen-reforecast run",
+        "returncode": 2,
+        "expected": 2
+      },
+      {
+        "command": "ngen-reforecast resume",
+        "returncode": 2,
+        "expected": 2
+      },
+      {
+        "command": "ngen-reforecast lock smoke-campaign/campaign.json --output unbound-lock.json",
+        "returncode": 1,
+        "expected": 1
+      },
+      {
+        "command": "ngen-reforecast ledger smoke-campaign/campaign.json --kind retained --output retained.csv",
+        "returncode": 0,
+        "expected": 0
+      },
+      {
+        "command": "ngen-reforecast lock smoke-campaign/campaign.json --output planning-lock.json",
+        "returncode": 0,
+        "expected": 0
+      },
+      {
+        "command": "ngen-reforecast verify-lock planning-lock.json --asset-root smoke-campaign",
+        "returncode": 0,
+        "expected": 0
+      },
+      {
+        "command": "ngen-reforecast lock smoke-campaign/campaign.json --output planning-lock.json",
+        "returncode": 1,
+        "expected": 1
+      },
+      {
+        "command": "ngen-reforecast verify-lock planning-lock.json --asset-root smoke-campaign",
+        "returncode": 2,
+        "expected": 2
+      }
+    ],
+    "physical_execution_ready": false,
+    "model_runs": 0
+  },
+  "browser_qa": {
+    "receipt": "web/QA_2026-10-10.json",
+    "sha256": "4b37a93b9222fd18c687f83dd91fad8a4f30d9681d781f939cbad27c6076387c",
+    "scope": "internal prototype checks; no participant study"
+  },
+  "runtime_admission": {
+    "receipt": "docs/evidence/runtime-admission-20261010.json",
+    "sha256": "f6cca0b51545a504db3c14ee077af98e5e586d82c16fe4a90ee551aed6b4e6e4",
+    "status": "blocked"
+  },
+  "protection": {
+    "protected_metadata_entries": 33364,
+    "protected_metadata_changes": {
+      "added": 0,
+      "removed": 0,
+      "changed": 0
+    },
+    "original_content_reads": 0,
+    "preserved_public_artifacts": 28,
+    "preserved_artifacts_changed": 0
+  },
+  "review_corrections": [
+    "Added repository-local temporary directories and direct schedule/retention lock regression.",
+    "Browser date ranges must leave initialization and full18-hour history headroom.",
+    "Earliest representable calendar day cannot be a forecast issue day with prior history.",
+    "Preserved default generated-ledger CLI response shape; retained selections are explicit."
+  ],
+  "physical_execution_ready": false,
+  "native_builds": 0,
+  "model_runs": 0,
+  "hosted_deployments": 0,
+  "participant_studies": 0,
+  "continuous_integration": {
+    "status": "pending_publication",
+    "expected_python_matrix": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "expected_browser_contract_job": true
+  },
+  "source_files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "sha256": "b35aa6f04163eff75fb2a83a5b91b2fee9b80432f6a0a0e4f390131d191ca4d1"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "b527b83adbaffd1c8066277298d5deb4cb06cdf5b5cf919faa3edec562b79ab9"
+    },
+    {
+      "path": "schemas/campaign-1.1.schema.json",
+      "sha256": "4494660b2e613023bf30cb4af5cbc5f8f2bd66304a3949a95e194bae408a7f71"
+    },
+    {
+      "path": "schemas/campaign.schema.json",
+      "sha256": "a62bb8df7f1a22303352546c408321d427292e886b0f54d52f47fb2c4437d583"
+    },
+    {
+      "path": "schemas/runtime-profile.schema.json",
+      "sha256": "a849bef8d5e8fa39a7370d92be2d3a7c63feb51f6a48928515bdd3f368abee06"
+    },
+    {
+      "path": "src/ngen_reforecast/__init__.py",
+      "sha256": "369d52e12115c4dff91faf7e86e5352dee87df0518d73740e82b30623ce9362b"
+    },
+    {
+      "path": "src/ngen_reforecast/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "src/ngen_reforecast/campaign.py",
+      "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+    },
+    {
+      "path": "src/ngen_reforecast/cli.py",
+      "sha256": "2b18013a7c4b983f6e3c54479f1e04c9922d61a46dab905a0d05fd109e34a4dd"
+    },
+    {
+      "path": "src/ngen_reforecast/provenance.py",
+      "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+    },
+    {
+      "path": "src/ngen_reforecast/runtime.py",
+      "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+    },
+    {
+      "path": "src/ngen_reforecast/templates/campaign.json",
+      "sha256": "4b2bcc3b6869e58ae1f0ecdaf662bc988eeaa9242ca2ff72ac5b7ff715b57747"
+    },
+    {
+      "path": "tests/test_campaign.py",
+      "sha256": "42ec42094018128fac5e4cfa94a0a4ef76b84028e4f35b6f75e53c6db8f7ca92"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "2ef9db9c7bcaaf4c16a30a561fa1c94097fbc5174ebb39132426b85aa342701f"
+    },
+    {
+      "path": "tests/test_lock_cli.py",
+      "sha256": "4724a97e70523b2a0da5904b497146deb00e5da91348bff1d145d23251b9794d"
+    },
+    {
+      "path": "tests/test_provenance.py",
+      "sha256": "f7fcad9cebfd321fed1e493ff055d43fe4fd4d488b05b8f27abb5ce512c7692b"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "sha256": "3a40ee766b223ef6b77cc1528804afdea6a7a64a6c27feb4821d050bfe94a554"
+    },
+    {
+      "path": "web/QA_2026-10-10.json",
+      "sha256": "4b37a93b9222fd18c687f83dd91fad8a4f30d9681d781f939cbad27c6076387c"
+    },
+    {
+      "path": "web/app.mjs",
+      "sha256": "8f2893d0032b070d65427b22220f12e5b3af33ddf636c8b0f6100c48d7f28ac2"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "878dee69a1b0b356e0ffd108a39111fdc5b6aafc3584b3d8ce64f76cedaec681"
+    },
+    {
+      "path": "web/request.mjs",
+      "sha256": "36d8dd7744038eede8df298262bdf4e6f85c913e6835abf701d24fe85d00b67c"
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "6a67cbfb719fbe7dadd9c9bc6a1d649b35c7424031bacd45c9b8ea270627aae0"
+    },
+    {
+      "path": "web/tests/request.test.mjs",
+      "sha256": "1365748b419b7ac98276d0f18411b3d25684e64553d63d7e7641b38782a32120"
+    },
+    {
+      "path": "web/tests/translation.test.mjs",
+      "sha256": "80f272e6bdd28394fb4da2aca9f365ae8dfd2521926504b2a797e5c1b6113d8d"
+    }
+  ],
+  "integration_checks": {
+    "json_parsed": 30,
+    "local_links_resolved": 294,
+    "source_hashes_verified": true,
+    "scientific_protocol_matrix_unchanged": true,
+    "claim_count": 45
+  }
+}

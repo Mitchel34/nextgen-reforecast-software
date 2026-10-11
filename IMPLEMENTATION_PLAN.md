@@ -1,5 +1,7 @@
 # Software and manuscript implementation plan
 
+**Active kickoff — 10 October 2026:** The owner has authorized beginning the revised multiagent workflow. [Current assignments](docs/IMPLEMENTATION_KICKOFF_2026-10-10.md) supersede the documentation-only pause stated in the September history below. Preserve every physical, source, rights and release gate; follow [current implementation status](docs/IMPLEMENTATION_STATUS.md) for completed capabilities and evidence.
+
 Approved work direction: 18 September 2026. The owner requested a plan followed by agent implementation toward a completed software product and accompanying manuscript. This advances beyond the completed feasibility-only stage. The original design and dossier remain preserved evidence.
 
 **Updated 22 September 2026.** The additional [technical foundation and software roadmap](docs/source_material/TECHNICAL_FOUNDATION_2026-09-22.md) is preserved verbatim with a checksum. This plan incorporates that direction into the existing public repository rather than creating a duplicate. [Roadmap reconciliation](docs/ROADMAP_RECONCILIATION.md) maps the supplied sections and milestone labels onto current capabilities and the M0–M7 gates below. The [development backlog](docs/DEVELOPMENT_BACKLOG.md) and [manuscript development plan](paper/DEVELOPMENT_PLAN.md) provide the next assignments and acceptance checks.

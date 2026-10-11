@@ -13,7 +13,10 @@ import unittest
 from unittest.mock import patch
 
 from ngen_reforecast import campaign
-from ngen_reforecast.campaign import CampaignError, iter_ledger, load_campaign, plan_campaign
+from ngen_reforecast.campaign import (
+    CampaignError, iter_expected_rows, iter_ledger, load_campaign,
+    normalize_campaign, plan_campaign,
+)
 
 
 ROOT = Path(__file__).absolute().parents[1]
@@ -362,6 +365,229 @@ class CampaignTests(unittest.TestCase):
             self.assertIsNotNone(path_pattern.fullmatch(path), path)
         for path in (".", "..", "/a", "a/../b", "a\\b", "a//b", "a/", "a\nb"):
             self.assertIsNone(path_pattern.fullmatch(path), path)
+
+    def version11(self, minimum=1, maximum=18):
+        spec = deepcopy(self.spec)
+        spec["schema_version"] = "1.1"
+        spec["retained_leads"] = {
+            "min_lead_hours": minimum, "max_lead_hours": maximum, "projection": "export",
+        }
+        return spec
+
+    def with_schedule(self, start="2022-01-01T23:00:00Z", stop="2022-01-02T01:00:00Z", cadence=1):
+        spec = self.version11()
+        del spec["issue_times_utc"]
+        spec["issue_schedule"] = {
+            "start_time_utc": start, "stop_time_utc_exclusive": stop, "cadence_hours": cadence,
+        }
+        return spec
+
+    def test_schema10_example_shape_and_identities_are_unchanged(self):
+        # Recorded from the public 1.0 implementation before this extension.
+        plan = plan_campaign(self.spec, self.base, check_assets=False)
+        self.assertEqual(plan["specification_sha256"], "3ea062cdbdf92eef5bbe716d67215c4ee5d29b7ffcf8e290b712415baa30f849")
+        self.assertEqual(plan["plan_id"], "75b88ee5faae67724883a8e3f925cc02869e7365e04bc2ba8be499431335d65a")
+        self.assertEqual(normalize_campaign(self.spec), self.spec)
+        self.assertNotIn("retained_leads", plan)
+        self.assertNotIn("generated_forecast_rows", plan["totals"])
+        self.assertEqual(list(iter_ledger(self.spec)), list(iter_expected_rows(self.spec, "retained")))
+        extended = self.version11()
+        extended["schema_version"] = "1.0"
+        self.assert_invalid(extended)
+        schedule = self.with_schedule()
+        schedule["schema_version"] = "1.0"
+        del schedule["retained_leads"]
+        self.assert_invalid(schedule)
+
+    def test_retained_intervals_preserve_all_generated_rows_and_actual_lead_keys(self):
+        old_rows = list(iter_ledger(self.spec))
+        for minimum, maximum, retained_count in ((1, 18, 36), (1, 6, 12), (6, 6, 2)):
+            with self.subTest(minimum=minimum, maximum=maximum):
+                spec = self.version11(minimum, maximum)
+                plan = plan_campaign(spec, self.base, check_assets=False)
+                self.assertEqual(plan["totals"]["generated_forecast_rows"], 36)
+                self.assertEqual(plan["totals"]["expected_forecast_rows"], 36)
+                self.assertEqual(plan["totals"]["retained_forecast_rows"], retained_count)
+                self.assertEqual(plan["totals"]["history_hours_per_domain"], 786)
+                self.assertEqual(plan["time_contract"]["execution_horizon_hours"], 18)
+                self.assertEqual(plan["time_contract"]["required_source_lead_hours"], {"min": 1, "max": 18})
+                self.assertEqual(plan["time_contract"]["antecedent_history_hours_at_first_issue"], 767)
+                self.assertEqual(plan["retained_leads"]["projection"], "export")
+                self.assertFalse(plan["execution_ready"])
+                self.assertEqual(list(iter_ledger(spec)), old_rows)
+                self.assertEqual(list(iter_expected_rows(spec, "generated")), old_rows)
+                retained = list(iter_expected_rows(spec, "retained"))
+                self.assertEqual(retained, [row for row in old_rows if minimum <= row["lead_hour"] <= maximum])
+                self.assertEqual(len(retained), retained_count)
+        self.assertEqual(list(iter_expected_rows(self.version11(6, 6), "retained"))[0]["valid_time_utc"],
+                         "2022-01-02T05:00:00Z")
+
+    def test_retention_changes_product_identity_but_not_domain_input_identity(self):
+        all_leads = plan_campaign(self.version11(), self.base, check_assets=False)
+        subset = plan_campaign(self.version11(1, 6), self.base, check_assets=False)
+        self.assertNotEqual(all_leads["specification_sha256"], subset["specification_sha256"])
+        self.assertNotEqual(all_leads["plan_id"], subset["plan_id"])
+        self.assertEqual(all_leads["domain_states"], subset["domain_states"])
+        self.assertEqual(all_leads["resources"], subset["resources"])
+        old = plan_campaign(self.spec, self.base, check_assets=False)
+        self.assertNotEqual(old["specification_sha256"], all_leads["specification_sha256"])
+
+    def test_retained_selection_cannot_shorten_horizon_or_history_coverage(self):
+        for field in ("horizon", "history"):
+            with self.subTest(field=field):
+                spec = self.version11(1, 6)
+                if field == "horizon":
+                    spec["horizon_hours"] = 6
+                else:
+                    spec["history"]["stop_time_utc"] = "2022-01-02T06:00:00Z"
+                self.assert_invalid(spec)
+
+    def test_invalid_retention_limits_shapes_and_projection_are_rejected(self):
+        for minimum, maximum in ((0, 6), (1, 19), (6, 5), (True, 6), (1, False),
+                                 (1.0, 6), (1, 6.0), (None, 6), (1, "6")):
+            with self.subTest(minimum=minimum, maximum=maximum):
+                self.assert_invalid(self.version11(minimum, maximum))
+        for retained in (None, [1, 3, 6], {},
+                         {"min_lead_hours": 1, "max_lead_hours": 6},
+                         {"min_lead_hours": 1, "max_lead_hours": 6, "projection": "commit"},
+                         {"min_lead_hours": 1, "max_lead_hours": 6, "projection": True},
+                         {"min_lead_hours": 1, "max_lead_hours": 6, "projection": "export", "extra": 1}):
+            with self.subTest(retained=retained):
+                spec = self.version11()
+                spec["retained_leads"] = retained
+                self.assert_invalid(spec)
+        for kind in ("export", "", None, True, ["retained"]):
+            with self.subTest(kind=kind), self.assertRaises(CampaignError):
+                list(iter_expected_rows(self.version11(), kind))
+
+    def test_nested_locations_and_domains_have_distinct_generated_and_retained_totals(self):
+        spec = self.version11(6, 6)
+        spec["domains"][0]["locations"].append({"location_id": "nested", "reach_id": "999"})
+        spec["domains"].append({"domain_id": "second", "locations": [{"location_id": "other", "reach_id": "1"}], "assets": []})
+        plan = plan_campaign(spec, self.base, check_assets=False)
+        self.assertEqual(plan["totals"]["branch_count"], 4)
+        self.assertEqual(plan["totals"]["location_count"], 3)
+        self.assertEqual(plan["totals"]["total_parent_history_hours"], 1572)
+        self.assertEqual(plan["totals"]["generated_forecast_rows"], 108)
+        self.assertEqual(plan["totals"]["retained_forecast_rows"], 6)
+        self.assertEqual(len(list(iter_expected_rows(spec, "retained"))), 6)
+
+    def test_cadence_uses_inclusive_start_and_exclusive_stop(self):
+        cases = (
+            ("2022-01-01T22:00:00Z", "2022-01-02T00:00:00Z", 1,
+             ["2022-01-01T22:00:00Z", "2022-01-01T23:00:00Z"]),
+            ("2022-01-01T16:00:00Z", "2022-01-02T00:00:00Z", 3,
+             ["2022-01-01T16:00:00Z", "2022-01-01T19:00:00Z", "2022-01-01T22:00:00Z"]),
+            ("2021-12-30T00:00:00Z", "2022-01-02T00:00:00Z", 24,
+             ["2021-12-30T00:00:00Z", "2021-12-31T00:00:00Z", "2022-01-01T00:00:00Z"]),
+        )
+        for start, stop, cadence, expected in cases:
+            with self.subTest(cadence=cadence):
+                spec = self.with_schedule(start, stop, cadence)
+                normalized = normalize_campaign(spec)
+                self.assertEqual(normalized["issue_times_utc"], expected)
+                self.assertNotIn("issue_schedule", normalized)
+                plan = plan_campaign(spec, self.base, check_assets=False)
+                self.assertEqual(plan["totals"]["issue_count"], len(expected))
+                self.assertEqual(plan["totals"]["generated_forecast_rows"], 18 * len(expected))
+                self.assertEqual(plan["totals"]["history_hours_per_domain"], 786)
+
+    def test_schedule_list_and_file_normalize_to_identical_detached_campaigns(self):
+        scheduled = self.with_schedule()
+        before = deepcopy(scheduled)
+        normalized = normalize_campaign(scheduled)
+        self.assertEqual(scheduled, before)
+        self.assertEqual(normalized, self.version11())
+        self.assertEqual(normalize_campaign(normalized), normalized)
+        self.assertEqual(plan_campaign(scheduled, self.base, False), plan_campaign(normalized, self.base, False))
+        self.assertEqual(list(iter_expected_rows(scheduled)), list(iter_expected_rows(normalized)))
+        path = self.write("scheduled.json", json.dumps(scheduled).encode())
+        self.assertEqual(load_campaign(path), normalized)
+        normalized["history"]["stop_time_utc"] = "2022-01-02T20:00:00Z"
+        normalized["domains"][0]["locations"][0]["location_id"] = "changed"
+        self.assertEqual(scheduled, before)
+
+    def test_irregular_issues_preserve_continuous_history_and_true_issue_targets(self):
+        spec = self.version11(6, 6)
+        spec["issue_times_utc"] = ["2021-12-30T13:00:00Z", "2022-01-01T02:00:00Z", "2022-01-02T00:00:00Z"]
+        plan = plan_campaign(spec, self.base, False)
+        self.assertEqual(plan["totals"]["branch_count"], 3)
+        self.assertEqual(plan["totals"]["history_hours_per_domain"], 786)
+        self.assertEqual(plan["totals"]["retained_forecast_rows"], 3)
+        self.assertEqual([row["valid_time_utc"] for row in iter_expected_rows(spec, "retained")],
+                         ["2021-12-30T19:00:00Z", "2022-01-01T08:00:00Z", "2022-01-02T06:00:00Z"])
+
+    def test_invalid_schedule_clocks_endpoints_cadences_and_fields(self):
+        for field, value in (
+            ("start_time_utc", "2022-01-01T23:30:00Z"),
+            ("start_time_utc", "2022-01-01T23:00:00+00:00"),
+            ("stop_time_utc_exclusive", "2022-02-29T01:00:00Z"),
+            ("stop_time_utc_exclusive", "2022-01-01T23:00:00Z"),
+            ("stop_time_utc_exclusive", "2022-01-01T22:00:00Z"),
+            ("cadence_hours", True), ("cadence_hours", 0), ("cadence_hours", -1),
+            ("cadence_hours", 1.0), ("cadence_hours", "1"), ("cadence_hours", 100001),
+            ("extra", "ignored?"),
+        ):
+            with self.subTest(field=field, value=value):
+                spec = self.with_schedule()
+                spec["issue_schedule"][field] = value
+                self.assert_invalid(spec)
+        for schedule in (None, [], {}):
+            spec = self.with_schedule()
+            spec["issue_schedule"] = schedule
+            self.assert_invalid(spec)
+        spec = self.with_schedule()
+        spec["issue_times_utc"] = self.spec["issue_times_utc"]
+        self.assert_invalid(spec)
+        del spec["issue_times_utc"]
+        del spec["issue_schedule"]
+        self.assert_invalid(spec)
+
+    def test_schedule_expansion_is_bounded_before_allocating_and_after_normalization(self):
+        spec = self.with_schedule("2020-01-01T00:00:00Z", "2040-01-01T00:00:00Z", 1)
+        with patch.object(campaign, "_format_time", side_effect=AssertionError("unbounded expansion")):
+            with self.assertRaisesRegex(CampaignError, "expanded issue count"):
+                normalize_campaign(spec)
+        spec = self.with_schedule("2021-12-01T01:00:00Z", "2022-01-02T01:00:00Z", 1)
+        compact_size = len(campaign._canonical(spec))
+        with patch.object(campaign, "MAX_SPEC_BYTES", compact_size):
+            with self.assertRaisesRegex(CampaignError, "4 MiB"):
+                normalize_campaign(spec)
+
+    def test_schedule_enforces_origin_and_full_forecast_coverage(self):
+        self.assert_invalid(self.with_schedule("2021-12-01T00:00:00Z", "2021-12-01T01:00:00Z", 1))
+        self.assert_invalid(self.with_schedule("2022-01-02T01:00:00Z", "2022-01-02T02:00:00Z", 1))
+        spec = self.with_schedule("2022-01-01T23:00:00Z", "2022-01-02T02:00:00Z", 1)
+        spec["retained_leads"]["max_lead_hours"] = 6
+        self.assert_invalid(spec)
+
+    def test_leap_day_and_supported_calendar_edges(self):
+        spec = self.with_schedule("2024-02-28T23:00:00Z", "2024-03-01T01:00:00Z", 24)
+        spec["origin_time_utc"] = "2024-02-28T00:00:00Z"
+        spec["history"] = {"start_time_utc": spec["origin_time_utc"], "stop_time_utc": "2024-03-01T18:00:00Z"}
+        self.assertEqual(normalize_campaign(spec)["issue_times_utc"],
+                         ["2024-02-28T23:00:00Z", "2024-02-29T23:00:00Z"])
+        spec = self.with_schedule("9999-12-31T01:00:00Z", "9999-12-31T23:00:00Z", 100000)
+        spec["origin_time_utc"] = "9999-12-30T00:00:00Z"
+        spec["history"] = {"start_time_utc": spec["origin_time_utc"], "stop_time_utc": "9999-12-31T23:00:00Z"}
+        self.assertEqual(normalize_campaign(spec)["issue_times_utc"], ["9999-12-31T01:00:00Z"])
+        spec["issue_schedule"]["start_time_utc"] = "9999-12-31T22:00:00Z"
+        with self.assertRaisesRegex(CampaignError, "forecast target"):
+            normalize_campaign(spec)
+        spec = self.with_schedule("0001-01-01T01:00:00Z", "0001-01-01T02:00:00Z")
+        spec["origin_time_utc"] = "0001-01-01T00:00:00Z"
+        spec["history"] = {"start_time_utc": spec["origin_time_utc"], "stop_time_utc": "0001-01-01T19:00:00Z"}
+        self.assertEqual(list(iter_expected_rows(spec))[-1]["valid_time_utc"], "0001-01-01T19:00:00Z")
+
+    def test_schema11_example_and_structural_contract(self):
+        example = load_campaign(EXAMPLE.parent / "campaign-retained.json")
+        plan = plan_campaign(example, self.base, False)
+        self.assertEqual(plan["totals"]["generated_forecast_rows"], 36)
+        self.assertEqual(plan["totals"]["retained_forecast_rows"], 12)
+        schema = json.loads((ROOT / "schemas/campaign-1.1.schema.json").read_text())
+        self.assertEqual(schema["properties"]["schema_version"]["const"], "1.1")
+        self.assertEqual(set(schema["required"]) | {"issue_times_utc"}, set(example))
+        self.assertEqual(schema["oneOf"], [{"required": ["issue_times_utc"]}, {"required": ["issue_schedule"]}])
 
 
 if __name__ == "__main__":

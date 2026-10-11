@@ -7,6 +7,7 @@ on:
       - 'schemas/**'
       - 'profiles/**'
       - 'examples/**'
+      - 'web/**'
       - 'pyproject.toml'
       - '.github/workflows/**'
   pull_request:
@@ -16,6 +17,7 @@ on:
       - 'schemas/**'
       - 'profiles/**'
       - 'examples/**'
+      - 'web/**'
       - 'pyproject.toml'
       - '.github/workflows/**'
 permissions:
@@ -42,3 +44,12 @@ jobs:
           TMPDIR="$PWD/.local/tmp" python -m unittest discover -s tests -v
       - name: Check installed CLI
         run: ngen-reforecast --version
+  browser-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check browser request contracts with runner Node
+        run: |
+          node --version
+          python3 --version
+          node --test web/tests/*.test.mjs

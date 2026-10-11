@@ -12,6 +12,14 @@ TMPDIR="$PWD/.local/tmp" PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -
 
 The core currently uses only the standard library. Unit tests exercise parsing, asset identity and path bounds, time arithmetic, explicit execution limits and transactional CLI output; they do not run hydrologic models. The [GitHub Actions workflow](../.github/workflows/tests.yml) repeats the offline suite on Python 3.11–3.14 using pinned action revisions. Workflow permission was verified on 22 September 2026; consult [implementation status](IMPLEMENTATION_STATUS.md) for the actual run outcome.
 
+The browser prototype has a separate request contract suite. Its browser code has no runtime dependencies; the development tests use Node and Python 3.11+ for the browser-to-engine parity cases:
+
+```sh
+node --test web/tests/*.test.mjs
+```
+
+CI records the runner's Node version and repeats those checks separately from the Python matrix. The [browser request contract](BROWSER_REQUEST_CONTRACT.md) and [planning provenance contract](PROVENANCE_CONTRACT.md) specify current integration limits. Internal browser checks are not researcher usability-study observations.
+
 The coordinator owns CLI/package integration; the campaign and runtime modules have focused contracts and independent tests. New functionality must retain deterministic scientific identities and explain how a new check differs from source inspection, a synthetic test and a physical-model qualification. Do not add a passing-looking mock in place of an unqualified runtime.
 
 Use [the benchmark protocol](../benchmarks/PROTOCOL.md) for future experiments. Keep measured evidence in a new timestamped directory, including failed attempts, input/build identities, hardware, resources and tolerances. Do not modify historical receipts or compare changed CPU allocations as an equal-resource algorithmic speedup.

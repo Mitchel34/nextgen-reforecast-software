@@ -7,6 +7,7 @@ I..I+17h and produces targets I+1h..I+18h. No state is reconstructed here.
 from __future__ import annotations
 
 from collections.abc import Iterator
+from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 import hashlib
 import json
@@ -22,7 +23,9 @@ class CampaignError(ValueError):
 
 
 SCHEMA_VERSION = "1.0"
+SUPPORTED_SCHEMA_VERSIONS = (SCHEMA_VERSION, "1.1")
 MAX_SPEC_BYTES = 4 * 1024 * 1024
+MAX_ISSUES = 100_000
 MAX_ASSETS = 4096
 MAX_LOCATIONS = 1024
 MAX_HISTORY_HOURS = 100_000
@@ -96,19 +99,87 @@ def _asset_path(value: Any, where: str) -> str:
     return value
 
 
+def _campaign_keys(version: str, issue_key: str = "issue_times_utc") -> set[str]:
+    keys = {"schema_version", "campaign_id", "profile", "origin_time_utc",
+            "history", issue_key, "horizon_hours", "domains", "resources"}
+    if version == "1.1":
+        keys.add("retained_leads")
+    return keys
+
+
+def _normalize_spec(spec: dict) -> dict:
+    """Expand bounded 1.1 shorthand without changing the caller's object."""
+    if len(_canonical(spec)) > MAX_SPEC_BYTES:
+        raise CampaignError("Campaign exceeds the 4 MiB specification bound")
+    if not isinstance(spec, dict):
+        raise CampaignError("campaign must be an object")
+    version = spec.get("schema_version")
+    if version not in SUPPORTED_SCHEMA_VERSIONS:
+        raise CampaignError("Unsupported schema_version; expected '1.0' or '1.1'")
+    issue_key = "issue_times_utc"
+    if version == "1.1":
+        declared = {"issue_times_utc", "issue_schedule"} & set(spec)
+        if len(declared) != 1:
+            raise CampaignError("Specify exactly one of issue_times_utc or issue_schedule")
+        issue_key = next(iter(declared))
+    _object(spec, _campaign_keys(version, issue_key), "campaign")
+    normalized = deepcopy(spec)
+    if issue_key == "issue_schedule":
+        schedule = _object(normalized.pop(issue_key), {
+            "start_time_utc", "stop_time_utc_exclusive", "cadence_hours",
+        }, "issue_schedule")
+        start = _time(schedule["start_time_utc"], "issue_schedule.start_time_utc")
+        stop = _time(schedule["stop_time_utc_exclusive"], "issue_schedule.stop_time_utc_exclusive")
+        cadence = _integer(schedule["cadence_hours"], 1, MAX_HISTORY_HOURS,
+                           "issue_schedule.cadence_hours")
+        span = (stop - start) // _HOUR
+        if span <= 0:
+            raise CampaignError("issue_schedule.stop_time_utc_exclusive must follow its start")
+        count = (span + cadence - 1) // cadence
+        _integer(count, 1, MAX_ISSUES, "expanded issue count")
+        # Count before allocating. Direct indexed addition avoids stepping past
+        # the calendar after the final issue near year 9999.
+        normalized["issue_times_utc"] = [
+            _format_time(start + index * cadence * _HOUR) for index in range(count)
+        ]
+    return normalized
+
+
+def normalize_campaign(spec: dict) -> dict:
+    """Return a detached, validated JSON campaign with explicit issue times.
+
+    Schema 1.0 retains its original shape and identity. In schema 1.1 a
+    half-open UTC cadence schedule and its equivalent explicit list normalize
+    identically. This function reads no assets and never launches a model.
+    """
+    normalized = _normalize_spec(spec)
+    _validate(normalized)
+    return normalized
+
+
 def _validate(spec: dict) -> dict:
     """Validate structural and cross-field contracts without reading asset bytes."""
     if len(_canonical(spec)) > MAX_SPEC_BYTES:
         raise CampaignError("Campaign exceeds the 4 MiB specification bound")
-    _object(spec, {"schema_version", "campaign_id", "profile", "origin_time_utc",
-                   "history", "issue_times_utc", "horizon_hours", "domains",
-                   "resources"}, "campaign")
-    if spec["schema_version"] != SCHEMA_VERSION:
-        raise CampaignError("Unsupported schema_version; expected '1.0'")
+    if not isinstance(spec, dict):
+        raise CampaignError("campaign must be an object")
+    version = spec.get("schema_version")
+    if version not in SUPPORTED_SCHEMA_VERSIONS:
+        raise CampaignError("Unsupported schema_version; expected '1.0' or '1.1'")
+    _object(spec, _campaign_keys(version), "campaign")
     _identifier(spec["campaign_id"], "campaign_id")
     if spec["profile"] != "hourly18h":
         raise CampaignError("Only the hourly18h planning profile is supported")
     _integer(spec["horizon_hours"], 18, 18, "horizon_hours")
+    min_lead, max_lead = 1, 18
+    if version == "1.1":
+        retained = _object(spec["retained_leads"], {
+            "min_lead_hours", "max_lead_hours", "projection",
+        }, "retained_leads")
+        min_lead = _integer(retained["min_lead_hours"], 1, 18, "retained_leads.min_lead_hours")
+        max_lead = _integer(retained["max_lead_hours"], min_lead, 18, "retained_leads.max_lead_hours")
+        if retained["projection"] != "export":
+            raise CampaignError("retained_leads.projection must be 'export'; all 18 generated steps remain required")
     origin = _time(spec["origin_time_utc"], "origin_time_utc")
     history = _object(spec["history"], {"start_time_utc", "stop_time_utc"}, "history")
     history_start = _time(history["start_time_utc"], "history.start_time_utc")
@@ -118,7 +189,7 @@ def _validate(spec: dict) -> dict:
     history_hours = (history_stop - origin) // _HOUR
     _integer(history_hours, 1, MAX_HISTORY_HOURS, "historical interval count")
     issues = spec["issue_times_utc"]
-    if not isinstance(issues, list) or not 1 <= len(issues) <= 100_000:
+    if not isinstance(issues, list) or not 1 <= len(issues) <= MAX_ISSUES:
         raise CampaignError("issue_times_utc must contain 1..100000 hourly issues")
     parsed_issues = [_time(value, f"issue_times_utc[{i}]") for i, value in enumerate(issues)]
     if any(left >= right for left, right in zip(parsed_issues, parsed_issues[1:])):
@@ -205,7 +276,7 @@ def _validate(spec: dict) -> dict:
         raise CampaignError("Declared unique asset sizes exceed max_total_asset_bytes")
     return {"origin": origin, "history_stop": history_stop, "history_hours": history_hours,
             "issues": parsed_issues, "location_count": len(location_ids),
-            "cpu_reservation": cpu_reservation}
+            "cpu_reservation": cpu_reservation, "min_lead": min_lead, "max_lead": max_lead}
 
 
 class _AssetRefusal(Exception):
@@ -309,8 +380,7 @@ def load_campaign(path: Path) -> dict:
         spec = json.loads(data.decode("utf-8"), object_pairs_hook=_pairs, parse_constant=_nonfinite)
     except (OSError, UnicodeError, json.JSONDecodeError, RecursionError, _AssetRefusal) as exc:
         raise CampaignError(f"Cannot load campaign: {exc}") from exc
-    _validate(spec)
-    return spec
+    return normalize_campaign(spec)
 
 
 def _inspect_asset(asset: dict, base_dir: Path, maximum: int) -> tuple[dict, list[dict], int]:
@@ -368,6 +438,7 @@ def plan_campaign(spec: dict, base_dir: Path, check_assets: bool = True) -> dict
     prove only resident bytes/identities, never physical coverage or numerical
     qualification. Execution remains unavailable even if every asset hashes.
     """
+    spec = _normalize_spec(spec)
     parsed = _validate(spec)
     if type(check_assets) is not bool:
         raise CampaignError("check_assets must be a boolean")
@@ -410,7 +481,7 @@ def plan_campaign(spec: dict, base_dir: Path, check_assets: bool = True) -> dict
     issue_count = len(spec["issue_times_utc"])
     domain_count = len(spec["domains"])
     result = {
-        "schema_version": SCHEMA_VERSION, "campaign_id": spec["campaign_id"],
+        "schema_version": spec["schema_version"], "campaign_id": spec["campaign_id"],
         "specification_sha256": hashlib.sha256(_canonical(spec)).hexdigest(),
         "profile": spec["profile"], "execution_ready": False,
         "totals": {"issue_count": issue_count, "domain_count": domain_count,
@@ -427,21 +498,49 @@ def plan_campaign(spec: dict, base_dir: Path, check_assets: bool = True) -> dict
         "resources": {**spec["resources"], "peak_reserved_cpus_per_domain": parsed["cpu_reservation"]},
         "domain_states": domain_states, "blockers": blockers, "warnings": warnings, "assets": assets,
     }
+    if spec["schema_version"] == "1.1":
+        result["totals"].update({
+            "generated_forecast_rows": result["totals"]["expected_forecast_rows"],
+            "retained_forecast_rows": issue_count * parsed["location_count"]
+            * (parsed["max_lead"] - parsed["min_lead"] + 1),
+        })
+        result["time_contract"].update({
+            "execution_horizon_hours": 18,
+            "required_source_lead_hours": {"min": 1, "max": 18},
+            "antecedent_history_hours_at_first_issue": (parsed["issues"][0] - parsed["origin"]) // _HOUR,
+        })
+        result["retained_leads"] = dict(spec["retained_leads"])
+        result["warnings"].append(
+            "Retained leads select a planned export only; they do not shorten physical execution, source coverage, or completion evidence."
+        )
     result["plan_id"] = hashlib.sha256(_canonical(result)).hexdigest()
     return result
 
 
 def iter_ledger(spec: dict) -> Iterator[dict]:
-    """Stream declared output keys, in domain/issue/location/lead order.
+    """Stream all generated keys, preserving the original 18-step ledger.
+
+    Use iter_expected_rows(kind='retained') for a planned export selection.
+    """
+    yield from iter_expected_rows(spec, kind="generated")
+
+
+def iter_expected_rows(spec: dict, kind: str = "generated") -> Iterator[dict]:
+    """Stream generated or retained keys in domain/issue/location/lead order.
 
     This is an expectation ledger, not a completed-output or model-run receipt.
     No asset is read. Callers must bound how much of the stream they export.
+    A retained selection cannot establish full 18-step runtime completion.
     """
+    if kind not in ("generated", "retained"):
+        raise CampaignError("Expected row kind must be 'generated' or 'retained'")
+    spec = _normalize_spec(spec)
     parsed = _validate(spec)
+    leads = range(1, 19) if kind == "generated" else range(parsed["min_lead"], parsed["max_lead"] + 1)
     for domain in spec["domains"]:
         for issue in parsed["issues"]:
             for location in domain["locations"]:
-                for lead in range(1, 19):
+                for lead in leads:
                     yield {"domain_id": domain["domain_id"], **location,
                            "issue_time_utc": _format_time(issue), "lead_hour": lead,
                            "valid_time_utc": _format_time(issue + lead * _HOUR)}
