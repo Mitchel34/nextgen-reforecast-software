@@ -17,6 +17,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from ngen_reforecast.campaign import normalize_campaign, plan_campaign, iter_expected_rows
+from ngen_reforecast.preparation import validate_request, translate_request
 
 if sys.version_info < (3, 11):
     raise SystemExit("Browser integration tests require Python 3.11 or newer")
@@ -24,24 +25,21 @@ if sys.version_info < (3, 11):
 def utc(value):
     return f"{value.year:04d}-{value.month:02d}-{value.day:02d}T{value.hour:02d}:00:00Z"
 
-request = json.load(sys.stdin)
-first_day = datetime.strptime(request["study"]["first_date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-last_day = datetime.strptime(request["study"]["last_date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-synthetic_origin = first_day - timedelta(hours=1)
-# Independently derive full physical coverage from the submitted last issue day,
-# rather than trusting the browser's calculated preview or last target.
-history_stop = last_day + timedelta(days=1, hours=17)
-spec = {
-    **request["campaign_translation_proposal"],
-    "campaign_id": "browser-arithmetic-fixture",
-    "profile": "hourly18h",
+request = validate_request(json.load(sys.stdin))
+first_issue = datetime.fromisoformat(request["study"]["first_issue_time_utc"].replace("Z", "+00:00"))
+synthetic_origin = first_issue - timedelta(hours=1)
+# This is internal synthetic metadata, never a verified location or scientific origin.
+preparation = {
+    "evidence_class": "server_owned_preparation_descriptor",
     "origin_time_utc": utc(synthetic_origin),
-    "history": {"start_time_utc": utc(synthetic_origin), "stop_time_utc": utc(history_stop)},
+    "location_binding": {"identifier_type": request["location"]["identifier_type"],
+                         "submitted_identifier": request["location"]["submitted_identifier"], "status": "declared_candidate"},
     "domains": [{"domain_id": "synthetic", "locations": [{"location_id": "synthetic", "reach_id": "1"}], "assets": []}],
     "resources": {"host_cpus": 2, "parent_cpus": 1, "cpus_per_branch": 1,
                   "max_concurrent_branches": 1, "wall_time_seconds": 1,
                   "max_asset_bytes": 1, "max_total_asset_bytes": 1},
 }
+spec = translate_request(request, preparation, campaign_id="browser-arithmetic-fixture")
 normalized = normalize_campaign(spec)
 plan = plan_campaign(normalized, Path.cwd(), check_assets=False)
 # Each fixed case has at most 72 issues (1296 generated keys), so these
@@ -96,6 +94,16 @@ const scenarios = [
     start: '9999-12-30', end: '9999-12-30', lead: 18, issues: 24,
     lastRetained: '9999-12-31T17:00:00Z', lastPhysical: '9999-12-31T17:00:00Z',
   },
+  {
+    name: 'exact two-issue diagnostic window has no whole-day minimum',
+    start: '2022-01-01', end: '2022-01-02', startHour: 23, endHour: 0, lead: 6, issues: 2,
+    lastRetained: '2022-01-02T06:00:00Z', lastPhysical: '2022-01-02T18:00:00Z',
+  },
+  {
+    name: 'earliest representable one-issue window preserves an earlier initialization hour',
+    start: '0001-01-01', end: '0001-01-01', startHour: 1, endHour: 1, lead: 1, issues: 1,
+    lastRetained: '0001-01-01T02:00:00Z', lastPhysical: '0001-01-01T19:00:00Z',
+  },
 ];
 
 for (const scenario of scenarios) {
@@ -103,6 +111,7 @@ for (const scenario of scenarios) {
     const request = buildRequest({
       identifier_type: 'watershed', identifier: 'Synthetic arithmetic fixture', mode: 'reforecast',
       start_date: scenario.start, end_date: scenario.end, max_lead_hours: scenario.lead,
+      start_hour_utc: scenario.startHour, end_hour_utc: scenario.endHour,
     });
     const child = spawnSync('python3', ['-B', '-c', pythonProbe], {
       cwd: repoRoot,
@@ -116,9 +125,9 @@ for (const scenario of scenarios) {
 
     const expected = {
       issue_count: scenario.issues,
-      first_issue_utc: `${scenario.start}T00:00:00Z`,
-      last_issue_utc: `${scenario.end}T23:00:00Z`,
-      first_retained_valid_time_utc: `${scenario.start}T01:00:00Z`,
+      first_issue_utc: `${scenario.start}T${String(scenario.startHour ?? 0).padStart(2, '0')}:00:00Z`,
+      last_issue_utc: `${scenario.end}T${String(scenario.endHour ?? 23).padStart(2, '0')}:00:00Z`,
+      first_retained_valid_time_utc: request.preview.first_retained_valid_time_utc,
       last_retained_valid_time_utc: scenario.lastRetained,
       last_physical_valid_time_utc: scenario.lastPhysical,
       generated_rows_per_location: scenario.issues * 18,

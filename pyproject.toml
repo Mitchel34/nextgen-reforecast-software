@@ -29,3 +29,4 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 ngen_reforecast = ["templates/*.json", "templates/*.md", "_profiles/*.json"]
+"ngen_reforecast.preparation" = ["request-policy.json"]

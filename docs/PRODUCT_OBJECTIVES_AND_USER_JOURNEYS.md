@@ -2,7 +2,7 @@
 
 Recorded 23 September 2026 from the owner's product discussion and the subsequent literature review. This is the planning baseline for the researcher experience. It supersedes earlier assumptions that users must supply prepared model inputs, know Python or a command line, or wait for a later release to receive a hosted interface. The existing [implementation milestones](../IMPLEMENTATION_PLAN.md) and [engine backlog](DEVELOPMENT_BACKLOG.md) retain their identifiers and scientific qualification requirements.
 
-**Implementation state:** these are target experiences, not delivered capabilities. The public package remains an offline planning foundation. This update records requirements and evaluation criteria; it does not launch development, acquire scientific datasets, execute models, provision hosting, or authorize spending. See [implementation status](IMPLEMENTATION_STATUS.md).
+**Implementation state, reviewed 13 October 2026:** these are target researcher experiences. Published `0.1.0a5` implements offline planning and the fixed Watauga v2 operator diagnostic. The local unpublished [request/assessment version 0.2](ASSESSMENT_INTERFACE_IMPLEMENTATION_2026-10-13.md) removes the whole-day minimum using optional exact UTC hours and shares its policy with the offline backend, preserving every requested issue. Automatic acquisition and the hosted request-to-dataset pathway remain unfinished. This document records requirements and evaluation criteria, not run or spending authority. See [implementation status](IMPLEMENTATION_STATUS.md).
 
 ## Product purpose and primary user
 
@@ -63,7 +63,7 @@ Submission authorizes only the input acquisition and compute described within th
 
 ## UX-02 — Generate historical reforecasts
 
-**Question:** “What would this defined model experiment have predicted at successive historical issue times?” **Objectives:** UO-01–UO-06, UO-09. **Status:** core intended product; physical execution and web experience not implemented.
+**Question:** “What would this defined model experiment have predicted at successive historical issue times?” **Objectives:** UO-01–UO-06, UO-09. **Status:** core intended product; fixed-profile operator diagnostics are implemented, while automatic preparation and the hosted researcher workflow are unfinished.
 
 1. Resolve the watershed; choose **Historical reforecasts**, a study period and desired lead horizon.
 2. Review the default issue frequency, output timestep, initialization policy and archived forecast-weather source. The date picker distinguishes complete, incomplete and unsupported periods.
@@ -74,7 +74,7 @@ Submission authorizes only the input acquisition and compute described within th
 
 **Acceptance:** a user correctly reads an example issued at 12:00 UTC with a three-hour lead as targeting 15:00 UTC; the service checks antecedent history and weather through the final target; forecast branches cannot alter history or siblings; failed/excluded issues remain visible; and exported rows match the declared generated/retained population. Hourly output is not evidence of one-hour forecast skill. Historical reforecasts do not automatically recreate operational NWM forecasts or operational data availability.
 
-**Initial constraint:** the candidate physical profile uses 18 hourly execution steps. Requested retention within 1–18 is planned; current schema 1.0 still requires all 18. A six-hour requested product must not be advertised as six hours of native execution or proportional compute savings until that capability is separately qualified. Longer horizons are future capabilities, not universal NextGen limitations.
+**Initial constraint, reviewed 13 October:** the admitted diagnostic profile uses 18 hourly execution steps. Schema 1.1 implements retained leads within 1–18 as export selection after all generated outputs pass validation; legacy schema 1.0 remains compatible with its all-18 default. A six-hour retained product still requires all 18 native updates and their forcing and must not imply proportional compute savings. A shorter physical horizon needs separate qualification. Longer horizons are future capabilities, not universal NextGen limitations.
 
 ## UX-03 — Reproduce a published study
 

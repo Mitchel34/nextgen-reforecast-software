@@ -1,0 +1,260 @@
+{
+  "authority": {
+    "deletion": false,
+    "hosting": false,
+    "original_research_writes_or_hydration": false,
+    "publication": false,
+    "scientific_model_campaign_runs": false,
+    "source": "Authenticated human continuation forwarded to the existing project thread; current follow-up narrows work to already-authorized lightweight local preparation, repairs and offline tests.",
+    "spending": false
+  },
+  "campaign_submissions": 0,
+  "checkout_head": "d7ff94cc32dbf5f3db8d3f9eeb47e82cc1f03e39",
+  "client_date": "2026-10-13",
+  "current_continuation_checks": {
+    "browser_contract_tests": {
+      "command": "node --test web/tests/*.test.mjs",
+      "evidence": {
+        "bytes": 5582,
+        "sha256": "d674e165334300e394ee07034d1c7e418294762ca3c9e1078aa3de6522f04b41"
+      },
+      "failed": 0,
+      "original_tool_chunk_id": "8ab027",
+      "passed": 17,
+      "raw_tool_output_retained": true,
+      "timestamp_known": false
+    },
+    "new_archive_verification_performed": false,
+    "new_service_assessor_implemented": false,
+    "new_service_assessor_tests_run": false,
+    "request_normalization_observations": {
+      "acquisition_started": 0,
+      "admitted_final_physical_target": "2022-01-02T18:00:00Z",
+      "admitted_generated_rows": 36,
+      "admitted_issue_times_utc": [
+        "2022-01-01T23:00:00Z",
+        "2022-01-02T00:00:00Z"
+      ],
+      "admitted_retained_rows": 12,
+      "evidence_class": "offline_existing_request_and_campaign_normalization",
+      "models_started": 0,
+      "observations": [
+        {
+          "coverage_status": "unknown",
+          "location_resolution": "unresolved",
+          "matches_two_issue_population": false,
+          "name": "two_day_watauga",
+          "proposed_mode_not_implemented": false,
+          "prototype_execution_ready": false,
+          "requested_final_physical_target": "2022-01-03T17:00:00Z",
+          "requested_generated_rows": 864,
+          "requested_issue_count": 48,
+          "requested_retained_rows": 288
+        },
+        {
+          "coverage_status": "unknown",
+          "location_resolution": "unresolved",
+          "matches_two_issue_population": false,
+          "name": "one_day_watauga",
+          "proposed_mode_not_implemented": false,
+          "prototype_execution_ready": false,
+          "requested_final_physical_target": "2022-01-02T17:00:00Z",
+          "requested_generated_rows": 432,
+          "requested_issue_count": 24,
+          "requested_retained_rows": 144
+        },
+        {
+          "coverage_status": "unknown",
+          "location_resolution": "unresolved",
+          "matches_two_issue_population": false,
+          "name": "nwm_identifier",
+          "proposed_mode_not_implemented": false,
+          "prototype_execution_ready": false,
+          "requested_final_physical_target": "2022-01-03T17:00:00Z",
+          "requested_generated_rows": 864,
+          "requested_issue_count": 48,
+          "requested_retained_rows": 288
+        },
+        {
+          "coverage_status": "unknown",
+          "location_resolution": "unresolved",
+          "matches_two_issue_population": false,
+          "name": "other_gauge",
+          "proposed_mode_not_implemented": false,
+          "prototype_execution_ready": false,
+          "requested_final_physical_target": "2022-01-03T17:00:00Z",
+          "requested_generated_rows": 864,
+          "requested_issue_count": 48,
+          "requested_retained_rows": 288
+        },
+        {
+          "coverage_status": "unknown",
+          "location_resolution": "unresolved",
+          "matches_two_issue_population": false,
+          "name": "continuous_proposal",
+          "proposed_mode_not_implemented": true,
+          "prototype_execution_ready": false,
+          "requested_final_physical_target": null,
+          "requested_generated_rows": null,
+          "requested_issue_count": null,
+          "requested_retained_rows": null
+        },
+        {
+          "coverage_status": "unknown",
+          "location_resolution": "unresolved",
+          "matches_two_issue_population": false,
+          "name": "retain_all18",
+          "proposed_mode_not_implemented": false,
+          "prototype_execution_ready": false,
+          "requested_final_physical_target": "2022-01-03T17:00:00Z",
+          "requested_generated_rows": 864,
+          "requested_issue_count": 48,
+          "requested_retained_rows": 864
+        },
+        {
+          "coverage_status": "unknown",
+          "location_resolution": "unresolved",
+          "matches_two_issue_population": false,
+          "name": "client_claims_readiness",
+          "proposed_mode_not_implemented": false,
+          "prototype_execution_ready": false,
+          "requested_final_physical_target": "2022-01-03T17:00:00Z",
+          "requested_generated_rows": 864,
+          "requested_issue_count": 48,
+          "requested_retained_rows": 288
+        }
+      ],
+      "profile": "exact Watauga v2 operator diagnostic",
+      "scenario_count": 7,
+      "service_assessment_implemented": false,
+      "workers_started": 0
+    }
+  },
+  "deletion_actions": 0,
+  "existing_receipts_reverified": {
+    "all_current_bytebindings_match": true,
+    "evidence_files": 11,
+    "implementation_files": 13,
+    "increment_identity_sha256": "dfe0611445e1c263d09a397249373c8b04e9b8d3eabbbcf567e13c5ae1f10dd1",
+    "publication_identity_sha256": "436c904ba3f6a46c7f447bbfcb8b335f141949fbd5db8728d13a23cb47d60e7c",
+    "source_test_build_files": 24
+  },
+  "local_changes_committed": false,
+  "local_changes_published": false,
+  "manuscript_results_changed": false,
+  "new_model_processes": 0,
+  "next_unfinished_milestone": "Reviewed offline browser preparation assessment and prior-result inspection contract, followed by a separately scoped service/browser adapter implementation; hosted acquisition/execution and shared-history/recovery remain unfinished.",
+  "package_version": "0.1.0a5",
+  "preparation_documents": [
+    {
+      "bytes": 7662,
+      "path": "AGENTS.md",
+      "sha256": "d360a97bff8435bc66f9c75dad7c827096b4dd49eb54bab87f0f4f814f64f5d4"
+    },
+    {
+      "bytes": 22979,
+      "path": "docs/WORKING_PLAN.md",
+      "sha256": "7d09fe02def76c516c2e9599b2337aae36430a22de58fb1b5b85c7041a2d464c"
+    },
+    {
+      "bytes": 26371,
+      "path": "docs/PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md",
+      "sha256": "64f379c64684095188c985b19dedd8bd203298734a584c787d78a42137bb6a42"
+    },
+    {
+      "bytes": 36537,
+      "path": "docs/DEVELOPMENT_BACKLOG.md",
+      "sha256": "3c72a487bdc3956b9e0d784394028243e91105fe96e3b4066d8f770f90cca27a"
+    },
+    {
+      "bytes": 17596,
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "66b175dfd8b2820a3b258acf8277715b068f308c13f58714ae7f4e05ddee3669"
+    },
+    {
+      "bytes": 27636,
+      "path": "paper/DEVELOPMENT_PLAN.md",
+      "sha256": "91ecee2cd1b2d7d036f88ca901a02424b3899ee8f5c449e32c4ad55b8943f138"
+    },
+    {
+      "bytes": 9029,
+      "path": "docs/BROWSER_EXECUTION_PREPARATION_2026-10-13.md",
+      "sha256": "8a9743720b1e7f77d1b81dc03d1b912fcf694dd122d1c9013bff3d61054d4e24"
+    }
+  ],
+  "preparation_identity_sha256": "93f996cca6abfd804fccdb4da5d3aba5b69884a15a5486239f524ef5dce1128f",
+  "preservation_within_this_continuation": {
+    "atime_included": false,
+    "baseline_entries": 33398,
+    "final_entries": 33398,
+    "immutable_byte_changes": [],
+    "immutable_repository_files": 32,
+    "metadata_changes": 0,
+    "metadata_fields": [
+      "mode",
+      "size",
+      "mtime_ns",
+      "ctime_ns",
+      "flags"
+    ],
+    "original_content_bytes_audited": false,
+    "scope": "Only this 13 October lightweight preparation; the historical 11 October 347-entry drift remains separately retained."
+  },
+  "private_check_bindings": {
+    "immutable-before.json": {
+      "bytes": 4374,
+      "sha256": "59f2faf55b74d7044b628179adc4a0ad7c1e64b9dc4488178dedd00c196a88d9"
+    },
+    "preservation.json": {
+      "bytes": 471,
+      "sha256": "bee8d20c6e71735e9eb7bf91ac78428ce42bc91ff5cf34b7e8aafd960d05008b"
+    },
+    "protected-after.json": {
+      "bytes": 5811663,
+      "sha256": "b5b4018743f2fb7dbc2a6d0d480ec5ab67838400277c7a6e3eded6d59166586d"
+    },
+    "protected-before.json": {
+      "bytes": 5811663,
+      "sha256": "b5b4018743f2fb7dbc2a6d0d480ec5ab67838400277c7a6e3eded6d59166586d"
+    },
+    "request-observations.json": {
+      "bytes": 22665,
+      "sha256": "090f3aeee134a9781b2708591edd2b081e53b6874579dd750975b0bccb3b4287"
+    },
+    "schedule-comparison.json": {
+      "bytes": 3540,
+      "sha256": "efbafc37cb2387518dbb82562b0815914345d1d3413cd7319637c369d0acc0fe"
+    }
+  },
+  "project": "NextGen Reforecast Software and software manuscript",
+  "publication_actions": 0,
+  "published_ci_rechecked": {
+    "conclusion": "success",
+    "head_sha": "f290e6079ff73046c0b4b3635ac046441771f04d",
+    "id": 38115725913,
+    "scope": "Existing 11 October offline CI; no new CI dispatch or model execution",
+    "status": "completed"
+  },
+  "recorded_at_utc": "2026-10-13T20:57:50Z",
+  "remote_main_observed_during_continuation": "d7ff94cc32dbf5f3db8d3f9eeb47e82cc1f03e39",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "repository_public_observed": true,
+  "retained_historical_preservation_limit": {
+    "metadata_changes_at_that_audit": 347,
+    "not_replaced_by_current_baseline": true,
+    "original_content_bytes_audited": false,
+    "path": "docs/evidence/public-campaign-preservation-publication-audit-20261011.json",
+    "responsible_process_verified": false
+  },
+  "schema_version": "software-continuation-preparation/0.1",
+  "scientific_acquisitions": 0,
+  "scientific_claim_register_changed": false,
+  "scientific_claim_register_rows": 52,
+  "separate_projects": [
+    "HYDRA/NWM AGU poster preparation",
+    "NextGen internal/residual neural correction"
+  ],
+  "server_starts": 0,
+  "worker_starts": 0,
+  "workflow_changed_runtime_scientific_inputs_or_references": false
+}

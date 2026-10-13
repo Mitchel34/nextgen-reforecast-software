@@ -1,4 +1,6 @@
-# Browser researcher request — version 0.1
+# Browser researcher request — version 0.2
+
+Updated locally on 13 October 2026 to implement the owner's request for one coherent UI/backend contract. Optional inclusive UTC endpoint hours remove the 24-issue minimum; whole-day defaults preserve every issue in the former date-only request. [Implementation and qualification gates](ASSESSMENT_INTERFACE_IMPLEMENTATION_2026-10-13.md) distinguish valid planning requests from admitted physical execution. Existing 0.1 files remain unchanged and require explicit migration before validation by the new interface.
 
 Implemented 10 October 2026 for UO-01/02/03/05, UX-02/05/07 and WEB-01/02/03/05. The [local prototype](../web/README.md) implements request definition, inspection and a portable request download. It does not implement the automatic preparation or verified dataset endpoints in those objectives. The [product objectives](PRODUCT_OBJECTIVES_AND_USER_JOURNEYS.md), [working plan](WORKING_PLAN.md) and [UX evidence contract](UX_EVIDENCE_CONTRACT.md) continue to control product and study claims.
 
@@ -6,7 +8,7 @@ Implemented 10 October 2026 for UO-01/02/03/05, UX-02/05/07 and WEB-01/02/03/05.
 
 The form asks for identifier type and identifier (USGS gauge, NWM reach, or watershed), first/last historical dates, whether forecast leads are wanted and the longest desired lead. Leading zeros in identifiers are preserved. Numeric identifiers receive only syntactic validation; a syntactically accepted ID is never described as a resolved location. Watershed names/IDs remain unresolved strings. No private input paths or model settings are required from the researcher.
 
-For reforecasts, the current **implementation proposal** interprets both dates as inclusive UTC issue days with hourly issue cadence. This is exposed next to the date fields and again in the review. It remains subject to product/scientific review; it does not silently settle source coverage, source issue cadence or eligibility. Output timestep, issue cadence, retained lead and full integration horizon are distinct.
+For reforecasts, version 0.2 includes every hourly issue between the first and last selected UTC issue times. Optional `start_hour_utc` and `end_hour_utc` default to 00 and 23, preserving whole-day studies without requiring extra researcher information. A user can explicitly request a single hour or the two-hour Watauga diagnostic window. The end issue is included; the engine schedule's stop is one hour later and exclusive. This declared issue-time meaning does not settle weather coverage or source availability. Output timestep, issue cadence, retained lead and full integration horizon remain distinct.
 
 Example: first date `2022-01-01`, last date `2022-01-02`, longest desired lead `6`:
 
@@ -22,7 +24,7 @@ Example: first date `2022-01-01`, last date `2022-01-02`, longest desired lead `
 
 These are request arithmetic, not observed model output. Reduced retained leads do not reduce the full 18-step integration or its forcing requirement. A compatible prepared campaign also needs prior initialization/history; this request does not choose its origin. The whole-day Watauga example produces 48 issues and is **not** the original two-issue Watauga benchmark.
 
-Dates use real Gregorian calendar days and four-digit UTC years; invalid, reversed or unrepresentable dates fail. Year 1's first day cannot be the first reforecast issue because no earlier representable initialization origin exists. The parser bounds schedules before any expansion. The 100,000-issue and 100,000-history-hour offline engine limits imply at most 99,960 hourly issues when selecting whole issue days and leaving at least one earlier hour plus the complete horizon. That arithmetic is only a necessary parser condition; a scientifically justified longer initialization can require a smaller period. It is not an advertised service capacity or eligible-date range.
+Dates use real Gregorian calendar days and four-digit UTC years; invalid, reversed or unrepresentable issue windows fail. Year 1's first day at 01:00 is representable with an earlier origin, while 00:00 is rejected. The parser bounds schedules before expansion. The 100,000-issue and 100,000-history-hour offline limits imply at most 99,982 hourly issues with exact hours, or 99,960 with whole-day choices, leaving at least one earlier hour plus the complete horizon. Scientifically required initialization may impose a smaller interval. These are parser bounds, not service capacity or verified coverage.
 
 Only integer lead maxima 1–18 are translated. Unsupported horizons are rejected visibly rather than clamped. Selecting “No forecast leads” records a proposed continuous simulation request, with unresolved date semantics and no engine translation; this mode remains outside the implemented execution contract.
 
@@ -34,12 +36,12 @@ Only integer lead maxima 1–18 are translated. Unsupported horizons are rejecte
 
 | Field | Contract |
 |---|---|
-| `request_schema_version` | `"0.1"`; separate from engine campaign schema |
+| `request_schema_version` | `"0.2"`; separate from engine campaign schema. Version 0.1 receives `REQUEST_SCHEMA_MIGRATION_REQUIRED` without rewriting its file |
 | `artifact_type` | `"researcher_request"` |
 | `interface_stage`, `intended_evaluation_level`, `user_study_conducted` | `"prototype"`, `"UX_E1"`, `false`; describes intended study level, never a conducted study |
 | `execution_ready` | Always `false` in this implementation |
 | `location` | Original trimmed identifier/type, unresolved status; optional explicitly non-live Watauga demonstration |
-| `study` | Dates, mode, proposed/reserved date semantics, UTC, requested maximum lead |
+| `study` | Dates, mode, declared issue-window semantics, UTC, requested maximum lead, canonical first/last issue hours and timestamps |
 | `campaign_translation_proposal` | Schema 1.1 time/lead fragment below, or `null` for continuous simulation |
 | `preview` | Issue endpoints/count and per-location row/target arithmetic; `null` for continuous simulation |
 | `preparation` | Unknown coverage, null qualified profile/origin/estimates, explicit machine-readable blockers |
@@ -63,7 +65,7 @@ The reforecast fragment agrees with the [engine campaign contract](CAMPAIGN_CONT
 }
 ```
 
-This fragment lacks mandatory domain/source/asset/runtime/resource/history fields and is not a runnable campaign. Preparation must resolve and version the submitted identifier, verify actual source coverage across history and all forecast leads, select qualified defaults with their initialization rationale, admit assets/runtime, and create an immutable campaign/lock. No preparation is performed by this prototype.
+This fragment lacks mandatory source/asset/runtime/history evidence and is not runnable. The pure Python `ngen_reforecast.preparation` backend independently validates the serialized request and can translate the complete population into schema 1.1 using separate internal origin/domain/resource metadata. That metadata does not authenticate a caller, verify a location or admit execution. Preparation still must resolve/version the location, verify all source coverage, select scientific defaults and admit inputs/runtime. The browser and backend use one policy with a byte-identical packaged copy whose drift fails tests.
 
 ## Coverage and execution truth
 
@@ -71,7 +73,7 @@ The only bundled location metadata is the documented USGS `03479000` Watauga exa
 
 Every request includes blockers for unresolved location, unknown coverage, unqualified scientific profile and unavailable execution service. There is no ready, queued, running, successful or verified model state. Future and historical dates can be recorded without implying availability. Costs, runtime and storage estimates stay unavailable.
 
-The static page uses no framework, remote fonts, analytics, model library, API, authentication or persistence. Form values remain in tab memory until a local JSON download is requested. The explicit project link is an ordinary outbound link. Refreshing the page clears the study; durable projects and cross-device restoration require the future service.
+The static page uses no framework, remote fonts, analytics, model library, hosted API, authentication or persistence. Its pure assessment preserves the request and complete issue list, compares declared diagnostic metadata, and hashes immutable snapshots with Web Crypto. A match is not admission. Pending hashes, reviews and download closures are invalidated by edits or newer submissions. Form values remain in tab memory until a local download; refreshing clears them. Durable projects and cross-device restoration require the future service.
 
 ## Acceptance and remaining integration
 

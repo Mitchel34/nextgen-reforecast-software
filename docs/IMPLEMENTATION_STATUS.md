@@ -1,5 +1,9 @@
 # Implementation status
 
+**13 October assessment implementation:** The [shared version 0.2 request and assessment interface](ASSESSMENT_INTERFACE_IMPLEMENTATION_2026-10-13.md) supports optional inclusive UTC issue hours, retains default whole-day studies, and translates the complete requested scope through an offline Python backend. Explicit two-hour requests match the existing diagnostic issue metadata; matching never grants readiness. Offline unit/integration and synthetic DOM checks passed **55 Node tests and 19 Python tests**. At the implementation/local-validation checkpoint, no live-browser evaluation, new wheel, new CI run or new physical campaign qualification was performed, and no model/service run or publication had occurred. The historical CI below validates the preceding revision and does not validate this implementation; the original diagnostic executor/profile source bindings remain unchanged.
+
+**13 October preparation checkpoint:** Before the local preparation work, the checkout and published `main` were at `d7ff94cc32dbf5f3db8d3f9eeb47e82cc1f03e39`. The sealed 11 October receipt hashes and their implementation/test/evidence bindings were rechecked, and the existing five-job CI run was successful. The [preparation checkpoint](BROWSER_EXECUTION_PREPARATION_2026-10-13.md) and [its receipt](evidence/continuation-preparation-20261013.json) record that earlier mismatch and narrowed authority. Those changes were uncommitted and unpublished at that checkpoint; it does not claim a new model run or public release.
+
 Updated **11 October 2026** for the authorized [public campaign execution increment](PUBLIC_CAMPAIGN_EXECUTION_INCREMENT_2026-10-11.md). Package version: `0.1.0a5`. The package now includes the pinned operator execution path; automatic browser acquisition/execution, recovery and hosted service remain unfinished.
 
 ## Verified public campaign execution — 11 October 2026

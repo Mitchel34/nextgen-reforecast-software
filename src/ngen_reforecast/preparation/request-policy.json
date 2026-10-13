@@ -1,0 +1,13 @@
+{
+  "policy_schema_version": "researcher-request-policy/0.2",
+  "request_schema_version": "0.2",
+  "profile": "hourly18h",
+  "forecast_horizon_hours": 18,
+  "issue_cadence_hours": 1,
+  "default_first_hour_utc": 0,
+  "default_last_hour_utc": 23,
+  "max_issues": 100000,
+  "max_history_hours": 100000,
+  "max_identifier_length": 120,
+  "retained_leads": { "min": 1, "max": 18 }
+}

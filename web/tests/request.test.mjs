@@ -73,7 +73,7 @@ test('no-lead request remains a proposed mode without manufactured campaign tran
 test('portable request round-trips as JSON without mutating inputs', () => {
   const input = Object.freeze({ ...base }); const r = buildRequest(input);
   assert.deepEqual(JSON.parse(JSON.stringify(r)), r);
-  assert.equal(r.request_schema_version, '0.1'); assert.equal(r.artifact_type, 'researcher_request');
+  assert.equal(r.request_schema_version, '0.2'); assert.equal(r.artifact_type, 'researcher_request');
   assert.equal(r.interface_stage, 'prototype'); assert.equal(r.intended_evaluation_level, 'UX_E1'); assert.equal(r.user_study_conducted, false); assert.equal(r.execution_ready, false);
 });
 
@@ -81,4 +81,40 @@ test('large issue periods leave at least one history hour before first issue and
   const end = days => new Date(Date.parse('2000-01-01T00:00:00Z') + (days - 1) * 86400000).toISOString().slice(0, 10);
   assert.equal(request({ start_date: '2000-01-01', end_date: end(4165) }).preview.issue_count, 99960);
   rejects({ start_date: '2000-01-01', end_date: end(4166) }, 'end_date');
+});
+
+test('an explicitly selected two-hour UTC window preserves the exact diagnostic issue population', () => {
+  const r = request({ start_hour_utc: '23', end_hour_utc: '0' });
+  assert.equal(r.study.first_issue_hour_utc, 23); assert.equal(r.study.last_issue_hour_utc, 0);
+  assert.equal(r.study.first_issue_time_utc, '2022-01-01T23:00:00Z');
+  assert.equal(r.study.last_issue_time_utc, '2022-01-02T00:00:00Z');
+  assert.equal(r.preview.issue_count, 2); assert.equal(r.preview.generated_rows_per_location, 36);
+  assert.equal(r.preview.retained_rows_per_location, 12);
+  assert.equal(r.preview.last_physical_valid_time_utc, '2022-01-02T18:00:00Z');
+  assert.equal(request().preview.issue_count, 48, 'whole-day study scope is never silently changed');
+});
+test('a single issue and partial days are supported without a 24-hour minimum', () => {
+  const one = request({ end_date: '2022-01-01', start_hour_utc: 4, end_hour_utc: 4 });
+  assert.equal(one.preview.issue_count, 1); assert.equal(one.preview.generated_rows_per_location, 18);
+  const partial = request({ start_hour_utc: 12, end_hour_utc: 6 });
+  assert.equal(partial.preview.issue_count, 19); assert.equal(partial.preview.last_physical_valid_time_utc, '2022-01-03T00:00:00Z');
+});
+test('UTC issue hours reject malformed values and reversed same-day windows', () => {
+  for (const hour of [-1, 24, 1.5, true, null, '', ' 1 ', '001', '1h', [], {}]) {
+    rejects({ start_hour_utc: hour }, 'start_hour_utc'); rejects({ end_hour_utc: hour }, 'end_hour_utc');
+  }
+  rejects({ end_date: '2022-01-01', start_hour_utc: 23, end_hour_utc: 0 }, 'end_hour_utc');
+});
+test('hour precision preserves representable initialization and the full final horizon at calendar edges', () => {
+  const early = request({ start_date: '0001-01-01', end_date: '0001-01-01', start_hour_utc: 1, end_hour_utc: 1 });
+  assert.equal(early.preview.first_issue_utc, '0001-01-01T01:00:00Z');
+  const late = request({ start_date: '9999-12-31', end_date: '9999-12-31', start_hour_utc: 1, end_hour_utc: 5 });
+  assert.equal(late.preview.issue_count, 5); assert.equal(late.preview.last_physical_valid_time_utc, '9999-12-31T23:00:00Z');
+  rejects({ start_date: '9999-12-31', end_date: '9999-12-31', start_hour_utc: 1, end_hour_utc: 6 }, 'end_date');
+});
+test('partial-day maximum is checked before schedule expansion and is not silently clipped', () => {
+  const last = count => new Date(Date.parse('2000-01-01T00:00:00Z') + (count - 1) * 3600000);
+  const fields = count => ({ start_date: '2000-01-01', end_date: last(count).toISOString().slice(0, 10), start_hour_utc: 0, end_hour_utc: last(count).getUTCHours() });
+  assert.equal(request(fields(99982)).preview.issue_count, 99982);
+  rejects(fields(99983), 'end_date');
 });
