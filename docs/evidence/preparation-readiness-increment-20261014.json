@@ -1,0 +1,328 @@
+{
+  "activity": {
+    "campaigns_submitted": 0,
+    "cloud_resources_created": 0,
+    "credentials_or_security_changes": 0,
+    "downloads": 0,
+    "paid_ci_jobs": 0,
+    "physical_forecasts": 0,
+    "public_pushes": 0,
+    "servers_workers_started": 0,
+    "training_runs": 0
+  },
+  "base_commit": "cf80266ef599c5c022a9d43d4d03a02a5ecffe0a",
+  "branch": "codex/readiness-contract-20261014",
+  "claims": {
+    "50_steps_to_10_and_40_percent_faster_are_illustrative_only": true,
+    "benchmark_result_established": false,
+    "caller_receipts_authenticated_or_artifacts_verified": false,
+    "execution_ready": false,
+    "release_qualified": false
+  },
+  "current_access_or_concurrency_blockers": [],
+  "evidence_schema_version": "local-software-increment/0.1",
+  "implementation_identity_sha256": "876232634d84dd4000d9631814d5d4859b21d99ea910348f88e96c41d94c55ab",
+  "independent_review": {
+    "fixed_findings": [
+      "Expand accepted integral JSON issue counts safely; assess_preparation numeric-equivalence regression added",
+      "Use history provider interval [start,stop), interval_start labels and exclusive stop; keep full physical target separate",
+      "Align documentation interval convention and bounded evidence fields"
+    ],
+    "outcome": "passed_after_fixes",
+    "reviewer": "contract_gap_review",
+    "reviewer_ran_tests_or_models": false
+  },
+  "local_commit_requested": true,
+  "morning_next_steps": [
+    "Review the isolated local commit and preparation-result contract; active main was not modified",
+    "Implement one inert adapter around existing forcing-validation reports with independently bound expected clocks/domain; preserve qualification blockers",
+    "Display the declared check results/blockers in the browser with existing request identity and stale-review protections",
+    "Define fresh input/reference/protocol/resource gates before any real full-study run; measure steps/time only in an actual twelve-month researcher benchmark"
+  ],
+  "preservation": {
+    "base_commit": "cf80266ef599c5c022a9d43d4d03a02a5ecffe0a",
+    "checkout_state": {
+      "branch": "main",
+      "tracked_changes": false,
+      "unreviewed_untracked_items_not_published": true
+    },
+    "existing_unreviewed_capture_preserved": {
+      "capture_name": "prior-assessment-receipt",
+      "published": false,
+      "sha256": "8270726b84cf07b7b0191fbe4c05168215387e07dc312c730b36c8543e91b813"
+    },
+    "original_content_byte_audit_performed": false,
+    "original_research_directories_traversed": false,
+    "physical_inputs_or_binaries_read": false,
+    "unchanged_source_bindings": [
+      {
+        "bytes": 108,
+        "path": "src/ngen_reforecast/__init__.py",
+        "sha256": "6494eecf9ba03344c5c5707bc9b90538601205d61e93e1394de21ad98cc99fcc"
+      },
+      {
+        "bytes": 48,
+        "path": "src/ngen_reforecast/__main__.py",
+        "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+      },
+      {
+        "bytes": 42678,
+        "path": "src/ngen_reforecast/archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 16279,
+        "path": "src/ngen_reforecast/bundle.py",
+        "sha256": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576"
+      },
+      {
+        "bytes": 28543,
+        "path": "src/ngen_reforecast/campaign.py",
+        "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+      },
+      {
+        "bytes": 16386,
+        "path": "src/ngen_reforecast/cli.py",
+        "sha256": "c8179bec7deee5c3242f270b7e8abfa61c6d6539912d00312f480ddbdf7a686a"
+      },
+      {
+        "bytes": 12129,
+        "path": "src/ngen_reforecast/configuration.py",
+        "sha256": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33"
+      },
+      {
+        "bytes": 43330,
+        "path": "src/ngen_reforecast/execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "src/ngen_reforecast/execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 23607,
+        "path": "src/ngen_reforecast/forcing.py",
+        "sha256": "4dc0c1e5360044de796efa4593a8452ae70d28e20c8977b83229594d03e856b7"
+      },
+      {
+        "bytes": 5733,
+        "path": "src/ngen_reforecast/provenance.py",
+        "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+      },
+      {
+        "bytes": 13642,
+        "path": "src/ngen_reforecast/runtime.py",
+        "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+      },
+      {
+        "bytes": 110526,
+        "path": "src/ngen_reforecast/_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      },
+      {
+        "bytes": 19596,
+        "path": "src/ngen_reforecast/preparation/__init__.py",
+        "sha256": "cc4c36a44dec2e3e23a0fd9ba277c5deede97b93fa693a4dcb28cca3d9d355f2"
+      },
+      {
+        "bytes": 378,
+        "path": "src/ngen_reforecast/preparation/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 378,
+        "path": "web/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 7733,
+        "path": "web/request.mjs",
+        "sha256": "b3d6f26d8c02465698e762298c0b03d32f4b38f9bc94bfe5fa8954c9f72324bd"
+      },
+      {
+        "bytes": 18910,
+        "path": "web/assessment.mjs",
+        "sha256": "48ad74edc8e3ba6cee319a728492fe07b9b7bface0bdb30a992c9a2c4c48e6dd"
+      }
+    ]
+  },
+  "public_push_performed": false,
+  "publication_sanitization": {
+    "host_specific_paths_removed": true,
+    "local_capture_names_are_nonpublic_artifact_labels": true,
+    "original_local_milestone_sha": "e0b03a9588670b95224586ade0137f6bd91ab5a4",
+    "original_local_receipt_sha256": "361fd902b20b8be99a378dc0db0cf1c292e64395b5f8ffa6e29bad5c6de28422",
+    "tested_source_bytes_changed": false
+  },
+  "recorded_at_utc": "2026-10-14T04:40:59.946452Z",
+  "remaining_product_gates": [
+    "Actual source-backed location/initialization/coverage/input/runtime/reference/scientific preparation checks",
+    "Browser readiness result display and review/download invalidation",
+    "Durable job identity/submission/recovery and verified result/export service",
+    "Fresh separately bounded scientific execution and external twelve-month user-workflow benchmark"
+  ],
+  "repository": "Mitchel34/nextgen-reforecast-software",
+  "scope": "Pure preparation/readiness result contract with separately supplied caller check receipts and actionable blockers",
+  "source_bindings": [
+    {
+      "bytes": 14157,
+      "path": "src/ngen_reforecast/preparation/readiness.py",
+      "sha256": "2c37d526c8826bf105c024d96a06a7158b8e78d584863f2fe94a21324be13cf6"
+    },
+    {
+      "bytes": 15342,
+      "path": "tests/test_preparation_readiness.py",
+      "sha256": "a9af3f6a353e11d479f2a582385b8015228361573aa63459841b8fb717ed6ff3"
+    },
+    {
+      "bytes": 4865,
+      "path": "web/tests/readiness.test.mjs",
+      "sha256": "3c26c34036b938512b66e098a8de8762f7600026179af480a5bf896bffb1cffe"
+    },
+    {
+      "bytes": 13441,
+      "path": "docs/PREPARATION_RESULT_CONTRACT.md",
+      "sha256": "dd2d700e1a2ba7fdb808a110da736122d5cc6de12adda5dd8dd34c8a79483c55"
+    },
+    {
+      "bytes": 19773,
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "4cdad4b180fb0675faa8903953924c232a4c58f011d468043b5e4c8403310427"
+    }
+  ],
+  "synthetic_scenarios": {
+    "exact_two_issue": {
+      "evidence_class": "synthetic_scope_and_contract_test_only",
+      "execution_ready": false,
+      "human_steps_measured": false,
+      "issue_count": 2,
+      "models_run": 0,
+      "preview": {
+        "first_issue_utc": "2022-01-01T23:00:00Z",
+        "first_retained_valid_time_utc": "2022-01-02T00:00:00Z",
+        "generated_rows_per_location": 36,
+        "issue_count": 2,
+        "last_issue_utc": "2022-01-02T00:00:00Z",
+        "last_physical_valid_time_utc": "2022-01-02T18:00:00Z",
+        "last_retained_valid_time_utc": "2022-01-02T06:00:00Z",
+        "output_timestep_hours": 1,
+        "retained_rows_per_location": 12
+      },
+      "report_sha256": "fb464b97684381731fb64499b50ab683a25c02b3103d8f97b6cd3d0acdc78611",
+      "request_sha256": "cb7a2ff19d2dfa751615cd429774b82c65f47b0d93c9c06cf7aff0f17a9f70f6",
+      "scope_sha256": "899cf422f9b408531d3997ca1e62de6103e30e64208ed03d2528c6f4f56f58f3",
+      "status": "blocked",
+      "workflow_time_measured": false
+    },
+    "twelve_month_single_site": {
+      "evidence_class": "synthetic_scope_and_contract_test_only",
+      "execution_ready": false,
+      "human_steps_measured": false,
+      "issue_count": 8760,
+      "models_run": 0,
+      "preview": {
+        "first_issue_utc": "2022-01-01T00:00:00Z",
+        "first_retained_valid_time_utc": "2022-01-01T01:00:00Z",
+        "generated_rows_per_location": 157680,
+        "issue_count": 8760,
+        "last_issue_utc": "2022-12-31T23:00:00Z",
+        "last_physical_valid_time_utc": "2023-01-01T17:00:00Z",
+        "last_retained_valid_time_utc": "2023-01-01T05:00:00Z",
+        "output_timestep_hours": 1,
+        "retained_rows_per_location": 52560
+      },
+      "report_sha256": "b331e6966a0beaf68209761e580a9a74a7f026e0998fc61775dd62a5c2c9bedc",
+      "request_sha256": "19dce9ac383770de9c74dfb1fd2f510e08d346f45dfff7b9229dbf1ddf36c3e1",
+      "scope_sha256": "41422bd5f920ac0674e3a3f4225e524a46c406a973ae1f62256a2f33b0d6a7a2",
+      "status": "blocked",
+      "workflow_time_measured": false
+    },
+    "two_whole_days": {
+      "evidence_class": "synthetic_scope_and_contract_test_only",
+      "execution_ready": false,
+      "human_steps_measured": false,
+      "issue_count": 48,
+      "models_run": 0,
+      "preview": {
+        "first_issue_utc": "2022-01-01T00:00:00Z",
+        "first_retained_valid_time_utc": "2022-01-01T01:00:00Z",
+        "generated_rows_per_location": 864,
+        "issue_count": 48,
+        "last_issue_utc": "2022-01-02T23:00:00Z",
+        "last_physical_valid_time_utc": "2022-01-03T17:00:00Z",
+        "last_retained_valid_time_utc": "2022-01-03T05:00:00Z",
+        "output_timestep_hours": 1,
+        "retained_rows_per_location": 288
+      },
+      "report_sha256": "b964472047775d45e5d4a5ccb1c811c09c19a9bddda3884bc2baa4d3efca2cbb",
+      "request_sha256": "01fadf26ecf7f5f6205bb24876e8a66dc7959b061a518550218df658688da831",
+      "scope_sha256": "97ab4bff40878ab42918950e7f2054c6fbec50db7a4db2117a8623f5c0be8377",
+      "status": "blocked",
+      "workflow_time_measured": false
+    }
+  },
+  "tests": {
+    "ci_run_performed": false,
+    "full_python_suite_performed": false,
+    "live_browser_study_performed": false,
+    "node_all_contracts_final": {
+      "command": "node --test --test-concurrency=1 web/tests/*.test.mjs",
+      "failed": 0,
+      "log": {
+        "bytes": 5944,
+        "capture_name": "browser-tests.log",
+        "published": false,
+        "sha256": "0c78d7b03d1b13178c73db88cc55bcbda80c56c293ff831a8708473fd9b8d96b"
+      },
+      "passed": 58,
+      "serial": true
+    },
+    "node_version": "v24.16.0",
+    "python_pinned_admission_regression": {
+      "command": "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -p test_execution_lock.py -v",
+      "failed": 0,
+      "log": {
+        "bytes": 1302,
+        "capture_name": "admission-regression.log",
+        "published": false,
+        "sha256": "d279b66eff2dcadf9ec3c9046f04b2145fb9758a3d5c3c28d6ccb5ec8d6b1a2c"
+      },
+      "passed": 8,
+      "serial": true
+    },
+    "python_readiness": {
+      "command": "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -p test_preparation_readiness.py -v",
+      "failed": 0,
+      "log": {
+        "bytes": 3515,
+        "capture_name": "readiness-tests.log",
+        "published": false,
+        "sha256": "48e5a530055c2f5b1b0d2ae312a6518e07b882ec7533aecb8f7ef23cd4186dcd"
+      },
+      "passed": 18,
+      "serial": true
+    },
+    "python_request_regression": {
+      "command": "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -p test_request_preparation.py -v",
+      "failed": 0,
+      "log": {
+        "bytes": 3665,
+        "capture_name": "request-regression.log",
+        "published": false,
+        "sha256": "e4b3c60aad1b9746aa3ec4d46d26e3d1316c8776c7616ee8fa7f0bed5c14bc11"
+      },
+      "passed": 19,
+      "serial": true
+    },
+    "python_version": "3.14.7",
+    "wheel_build_performed": false
+  },
+  "work_journey_mapping": [
+    "RF-003",
+    "RF-007",
+    "WEB-03",
+    "UX-02",
+    "UX-05"
+  ]
+}
