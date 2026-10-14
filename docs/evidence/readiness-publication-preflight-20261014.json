@@ -1,0 +1,83 @@
+{
+  "ci": {
+    "all_publication_commits_require_skip_marker": true,
+    "new_runs_started_at_this_snapshot": false,
+    "official_skip_documentation": "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/skip-workflow-runs",
+    "workflow_dispatch_or_pr_created": false,
+    "workflow_or_permissions_changed": false,
+    "workflow_triggers": [
+      "push",
+      "pull_request"
+    ]
+  },
+  "main_protected_at_preflight": false,
+  "milestones": [
+    {
+      "original_local_sha": "e0b03a9588670b95224586ade0137f6bd91ab5a4",
+      "receipt": {
+        "bytes": 12900,
+        "path": "docs/evidence/preparation-readiness-increment-20261014.json",
+        "sha256": "d7556386d6d401da72c510ab5acbcab4c5eb1256561f51a9659e6fe6341e48d8"
+      },
+      "retained_test_results": {
+        "node": 58,
+        "python": 45
+      },
+      "sanitized_publication_sha": "b7e2f8eb7c6a4163bd7608aa2a0e02358e41199d"
+    },
+    {
+      "original_local_sha": "64e03e24c1033da2248d970b4aaecf4fbd37a909",
+      "receipt": {
+        "bytes": 15139,
+        "path": "docs/evidence/forcing-preparation-browser-increment-20261014.json",
+        "sha256": "51e51f4b6d17ccf24c7788d7a41750c49c318e0f021b9f37e8de4c54fc76fa2c"
+      },
+      "retained_test_results": {
+        "node": 77,
+        "python": 60
+      },
+      "sanitized_publication_sha": "52067edcede007f69b261cd50f600b96e5df8184"
+    }
+  ],
+  "normal_fast_forward_only": true,
+  "post_push_verification_required": [
+    "Exact remote main SHA",
+    "Unauthenticated public repository and commit availability",
+    "Exact published source/evidence bytes",
+    "No new Actions runs for any publication commit"
+  ],
+  "publication_requested": true,
+  "push_performed_at_this_snapshot": false,
+  "recorded_at_utc": "2026-10-14T20:04:59.604577Z",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "repository_public_verified": true,
+  "review": {
+    "final_publication_files_reviewed": 20,
+    "new_publication_record_review_pending": false,
+    "reviewer": "publication_audit",
+    "sanitized_snapshots_reviewed": true,
+    "source_receipt_and_retained_logs_hash_matched": true
+  },
+  "sanitization": {
+    "machine_specific_paths_or_credential_patterns_found": 0,
+    "new_files_scanned": 20,
+    "original_local_commit_objects_not_in_public_ancestry": true,
+    "private_capture_directories_removed": true,
+    "raw_logs_or_data_added": false,
+    "reviewed_nonreceipt_files_byte_identical": 15,
+    "unreviewed_original_checkout_item_added": false
+  },
+  "schema_version": "readiness-publication-preflight/0.1",
+  "scientific_limits": {
+    "adapter_issue_limit": 2,
+    "execution_ready": false,
+    "new_physical_models_or_research_jobs": 0,
+    "release_qualified": false,
+    "source_leads_required": 18,
+    "source_qualification_unresolved": true,
+    "speed_or_human_step_improvement_claimed": false,
+    "twelve_month_8760_issue_scope_preserved": true
+  },
+  "target_branch": "main",
+  "verified_remote_base_sha": "cf80266ef599c5c022a9d43d4d03a02a5ecffe0a"
+}

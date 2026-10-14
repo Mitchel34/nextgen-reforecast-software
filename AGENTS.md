@@ -1,5 +1,9 @@
 # Project instructions
 
+## Reviewed readiness publication — 14 October 2026
+
+The owner's explicit “commit and push” request authorizes publishing the reviewed readiness and bounded preparation/browser milestones to the existing public repository. Use the [publication record](docs/PUBLIC_READINESS_PUBLICATION_2026-10-14.md). Publish sanitized copies of the local evidence receipts, preserve the original local commits, and use ordinary fast-forward publication with CI skip markers. This supersedes the earlier local-only publication restriction for these reviewed changes only. It grants no model/research run, acquisition, worker/server start, spending, permission/security change or broader scientific qualification authority.
+
 ## Active lightweight continuation — 13 October 2026
 
 The subsequent authenticated correction authorizes implementing the pure assessment interface and one coherent UI/backend request contract that removes the artificial 24-issue minimum, preserving full requested scope. Optional UTC issue hours, offline backend campaign translation, and synthetic/unit/integration tests are in scope. Broader execution remains separately gated by new scientific/input/reference qualification, a bounded protocol/resource allowance and fresh run authority. No new scientific/model/campaign job, worker/server start, hosting/deployment, spending, publication, deletion or permission change is authorized. Follow `docs/ASSESSMENT_INTERFACE_IMPLEMENTATION_2026-10-13.md`; preserve the existing diagnostic execution source/profile and all original data. The former explanation-only preparation milestone below is superseded by this local code implementation, not by physical execution authority.
