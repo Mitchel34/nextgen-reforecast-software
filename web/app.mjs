@@ -1,5 +1,6 @@
 import { buildRequest } from './request.mjs';
 import { assessRequest } from './assessment.mjs';
+import { MAX_PREPARATION_REPORT_BYTES, validatePreparationReport } from './preparation-report.mjs';
 const form = document.querySelector('#study-form');
 const content = document.querySelector('#review-content');
 const empty = document.querySelector('#review-empty');
@@ -7,6 +8,8 @@ const error = document.querySelector('#form-error');
 const title = document.querySelector('#review-title');
 let currentRequest = null;
 let currentAssessment = null;
+let currentPreparationReport = null;
+let preparationImportRevision = 0;
 let reviewRevision = 0;
 function el(tag, text, className) {
   const node = document.createElement(tag);
@@ -22,6 +25,8 @@ function resetReview() {
   reviewRevision += 1;
   currentRequest = null;
   currentAssessment = null;
+  currentPreparationReport = null;
+  preparationImportRevision += 1;
   content.replaceChildren(); content.hidden = true; empty.hidden = false;
   title.textContent = 'A clear picture before preparation.';
   error.hidden = true;
@@ -57,6 +62,80 @@ document.querySelector('#use-diagnostic-example').addEventListener('click', () =
 function displayTime(value) { return value.replace('T', ' ').replace(':00:00Z', ':00 UTC'); }
 function addTime(list, label, value) {
   const row = el('div'); row.append(el('dt', label), el('dd', displayTime(value))); list.append(row);
+}
+function saveJson(value, filename) {
+  const blob = new Blob([`${JSON.stringify(value, null, 2)}\n`], { type: 'application/json' });
+  const url = URL.createObjectURL(blob); const anchor = el('a'); anchor.href = url; anchor.download = filename;
+  document.body.append(anchor); anchor.click(); anchor.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function preparationView(request, assessment, revision) {
+  const section = el('section', undefined, 'preparation-section');
+  section.setAttribute('aria-labelledby', 'preparation-title');
+  const heading = el('h3', 'Inspect a preparation report', 'review-section-title'); heading.id = 'preparation-title';
+  section.append(heading, el('p', 'Import the preparation-result/0.1 JSON exported by your preparation adapter. This checks report integrity and its binding to your complete current request. Declared check outcomes remain separate from scientific qualification and execution permission.', 'review-lede'));
+  const label = el('label', 'Preparation report · JSON, up to 8 MiB'); label.setAttribute('for', 'preparation-file');
+  const fileInput = el('input'); fileInput.type = 'file'; fileInput.accept = '.json,application/json'; fileInput.id = 'preparation-file';
+  fileInput.setAttribute('aria-describedby', 'preparation-import-status');
+  const status = el('p', 'No preparation report imported.', 'save-status'); status.id = 'preparation-import-status'; status.setAttribute('role', 'status');
+  const details = el('div'); details.id = 'preparation-report';
+  const isCurrent = () => reviewRevision === revision && currentRequest === request && currentAssessment === assessment;
+  fileInput.addEventListener('change', async () => {
+    if (!isCurrent()) return;
+    const importRevision = ++preparationImportRevision;
+    currentPreparationReport = null; details.replaceChildren(); fileInput.removeAttribute('aria-invalid');
+    const file = fileInput.files?.[0];
+    if (!file) { status.textContent = 'No preparation report imported.'; return; }
+    status.textContent = 'Checking report integrity and complete request binding…';
+    try {
+      if (file.size > MAX_PREPARATION_REPORT_BYTES) throw new Error('The preparation report must be at most 8 MiB of UTF-8 JSON.');
+      const text = await file.text();
+      if (!isCurrent() || preparationImportRevision !== importRevision) return;
+      const report = await validatePreparationReport(text, request);
+      if (!isCurrent() || preparationImportRevision !== importRevision) return;
+      currentPreparationReport = report;
+      status.textContent = 'Report integrity and complete request binding checked. Its declared outcomes are shown below.';
+      details.append(el('span', 'Execution remains blocked', 'review-badge'));
+      details.append(el('p', report.preparation_checks_status === 'all_reported_passed' ? 'All seven checks are reported passed. These declarations do not admit execution or qualify a scientific result.' : 'Preparation checks are incomplete. Unknown, missing, failed and mismatched evidence remain explicit below.', 'review-lede'));
+      details.append(el('p', request.study.mode === 'reforecast' ? `This report preserves all ${report.requested_population.issues_utc.length.toLocaleString('en-US')} requested hourly issues and all 18 source forcing leads per issue.` : 'Continuous simulation remains proposed. This report contains no forecast issue population.', 'review-lede'));
+      const scope = report.preparation_binding.scope;
+      details.append(el('p', scope.initialization_origin_utc === null ? 'Initialization origin: not selected. Required initialization/history remains unknown.' : `Declared initialization origin: ${displayTime(scope.initialization_origin_utc)}. Required provider forcing interval: [${displayTime(scope.required_history_interval.start_time_utc)}, ${displayTime(scope.required_history_interval.stop_time_utc_exclusive)}). Selecting an origin does not establish adequate initialization.`, 'review-lede'));
+      details.append(el('h4', 'Declared check outcomes', 'review-section-title'));
+      const checks = el('ul', undefined, 'preparation-checks');
+      for (const check of report.checks) {
+        const row = el('li'); row.append(el('strong', check.check_id.replaceAll('_', ' ')));
+        row.append(el('p', `Effective status: ${check.status.replaceAll('_', ' ')}. Reported status: ${check.reported_status ?? 'not supplied'}.`, 'review-lede'));
+        if (check.evidence !== null) row.append(el('p', `Caller-declared evidence (${check.evidence.evidence_class}) from ${check.evidence.verifier}: ${check.evidence.detail}`, 'review-lede'));
+        checks.append(row);
+      }
+      details.append(checks, el('h4', 'Actionable blockers', 'review-section-title'));
+      const blockers = el('ul', undefined, 'blockers');
+      for (const item of report.blockers) {
+        const row = el('li'); row.append(el('strong', item.code), el('p', item.message), el('p', `Next step: ${item.next_option}`)); blockers.append(row);
+      }
+      details.append(blockers, el('p', 'Report hashes identify content. They do not authenticate the caller or verifier, establish artifact freshness, qualify science or authorize execution. No scientific outputs or archive are created.', 'download-note'));
+      const identities = el('details', undefined, 'defaults'); identities.append(el('summary', 'Inspect report and scope identities'));
+      const hashes = el('dl', undefined, 'times preparation-identities');
+      for (const [name, value] of [['Report SHA-256', report.identities.report_sha256], ['Request SHA-256', report.preparation_binding.request_sha256], ['Scope SHA-256', report.preparation_binding.scope_sha256], ['Policy bytes SHA-256', scope.policy_bytes_sha256]]) {
+        const row = el('div'); row.append(el('dt', name), el('dd', value)); hashes.append(row);
+      }
+      identities.append(hashes); details.append(identities);
+      const download = el('button', 'Download imported preparation report', 'primary'); download.type = 'button'; download.id = 'download-preparation-report';
+      download.addEventListener('click', () => {
+        if (!isCurrent() || preparationImportRevision !== importRevision || currentPreparationReport !== report) return;
+        saveJson(report, 'nextgen-preparation-report.json');
+        status.textContent = 'Preparation report download requested. The checked report preserves your complete request and declared blockers. No model run has started.';
+        setStep('save');
+      });
+      details.append(download);
+    } catch (problem) {
+      if (!isCurrent() || preparationImportRevision !== importRevision) return;
+      currentPreparationReport = null; details.replaceChildren();
+      status.textContent = `Report not imported: ${problem.message}`;
+      fileInput.setAttribute('aria-invalid', 'true');
+    }
+  });
+  section.append(label, fileInput, status, details);
+  return section;
 }
 function render(request, assessment, revision) {
   content.replaceChildren(); empty.hidden = true; content.hidden = false;
@@ -124,6 +203,7 @@ function render(request, assessment, revision) {
     setStep('save');
   });
   content.append(assessmentDownload, el('p', 'Assessment hashes bind this request and report for inspection. They do not authenticate a sender or authorize model execution.', 'download-note'));
+  content.append(preparationView(request, assessment, revision));
 }
 form.addEventListener('submit', async event => {
   event.preventDefault(); resetReview();

@@ -1,0 +1,389 @@
+{
+  "access_or_concurrency_blockers_remaining": [],
+  "activity": {
+    "campaign_submissions": 0,
+    "cloud_resources_started": 0,
+    "credentials_security_changes": 0,
+    "downloads_or_acquisitions": 0,
+    "physical_reforecasts": 0,
+    "public_pushes": 0,
+    "real_physical_forcing_or_runtime_assets_read": 0,
+    "spending": 0,
+    "test_inputs": "tiny independently authored synthetic decoded CSVs inside repository-local temporary directories",
+    "training_runs": 0,
+    "worker_or_server_starts": 0
+  },
+  "adapter_bounds": {
+    "catchments": 32,
+    "cooperative_seconds": 5,
+    "history_hours": 1000,
+    "issues": 2,
+    "manifest_preflight_bytes": 65536,
+    "payload_preflight_bytes": 8388608,
+    "preflight_limits_not_hard_limits_under_concurrent_growth": true,
+    "total_expected_rows": 50000,
+    "total_payload_preflight_bytes": 16777216,
+    "unchanged_validator_hard_manifest_bytes": 1048576,
+    "unchanged_validator_hard_payload_bytes": 33554432
+  },
+  "base_commit": "e0b03a9588670b95224586ade0137f6bd91ab5a4",
+  "branch": "codex/readiness-contract-20261014",
+  "evidence_schema_version": "local-software-increment/0.1",
+  "execution_ready": false,
+  "implementation_identity_sha256": "e7606e5e8239ffec863a7a767dd06ab5c13fbd2e9aad00a401ee35273ee7477d",
+  "independent_review": {
+    "addressed_findings": [
+      "Wrap safe-open AssetRefusal as structured failed preparation evidence",
+      "Distinguish a selected absent local file from other refusals; upstream availability remains unknown",
+      "Align independent catchment identifier limit to64characters",
+      "Bound caller path map before copying and snapshot its issue paths",
+      "Complete content claim requires final file metadata/deadline sweep; file disappearance invalidates it",
+      "Reject duplicate JSON keys including escaped equivalent keys before parse",
+      "Preserve escaped lone-codeunit request/evidence hash parity across Python/JavaScript",
+      "Make display-layer test inspect actual guarded adapter outcome instead of assuming host file metadata stability"
+    ],
+    "outcome": "passed_after_fixes",
+    "reviewer": "adapter_review",
+    "reviewer_started_tests_models_servers_or_network": false
+  },
+  "milestone_local_commit_requested": true,
+  "next_steps": [
+    "Inspect this local milestone commit; leave existing main and other research custody intact",
+    "Bind an independently resolved domain and source-qualification evidence without clearing current forcing qualification blockers from metadata alone",
+    "Define a separately bounded larger-study preparation protocol before raising the2issue adapter limit",
+    "Connect durable job/result boundaries only under their independent input/runtime/reference/resource admission"
+  ],
+  "preservation": {
+    "accepted_source_bindings_unchanged": [
+      {
+        "bytes": 108,
+        "path": "src/ngen_reforecast/__init__.py",
+        "sha256": "6494eecf9ba03344c5c5707bc9b90538601205d61e93e1394de21ad98cc99fcc"
+      },
+      {
+        "bytes": 48,
+        "path": "src/ngen_reforecast/__main__.py",
+        "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+      },
+      {
+        "bytes": 42678,
+        "path": "src/ngen_reforecast/archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 16279,
+        "path": "src/ngen_reforecast/bundle.py",
+        "sha256": "4d406cdad9fa4e335eaeaf8e48b2eb48e3ab4d9b9c4ba99e294aa5fdcd7e5576"
+      },
+      {
+        "bytes": 28543,
+        "path": "src/ngen_reforecast/campaign.py",
+        "sha256": "1bde31f7ffa4b47008b62a7986262c415c124b3bbe595d91c7d7b738825ca419"
+      },
+      {
+        "bytes": 16386,
+        "path": "src/ngen_reforecast/cli.py",
+        "sha256": "c8179bec7deee5c3242f270b7e8abfa61c6d6539912d00312f480ddbdf7a686a"
+      },
+      {
+        "bytes": 12129,
+        "path": "src/ngen_reforecast/configuration.py",
+        "sha256": "c258644ead3108dfab8ed5cfc0f9e6c35d13ea73c1410499efefc8e62b761f33"
+      },
+      {
+        "bytes": 43330,
+        "path": "src/ngen_reforecast/execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "src/ngen_reforecast/execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 23607,
+        "path": "src/ngen_reforecast/forcing.py",
+        "sha256": "4dc0c1e5360044de796efa4593a8452ae70d28e20c8977b83229594d03e856b7"
+      },
+      {
+        "bytes": 5733,
+        "path": "src/ngen_reforecast/provenance.py",
+        "sha256": "64919370cc3da56e58a04d3d03ce0bedd24ba54a5487ca864eaa4ce4ddb432b9"
+      },
+      {
+        "bytes": 13642,
+        "path": "src/ngen_reforecast/runtime.py",
+        "sha256": "798b673c8dbc6835180fbae7cbd73344f10ff842286e1f1f6b0ee12172ab9c16"
+      },
+      {
+        "bytes": 110526,
+        "path": "src/ngen_reforecast/_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      },
+      {
+        "bytes": 19596,
+        "path": "src/ngen_reforecast/preparation/__init__.py",
+        "sha256": "cc4c36a44dec2e3e23a0fd9ba277c5deede97b93fa693a4dcb28cca3d9d355f2"
+      },
+      {
+        "bytes": 378,
+        "path": "src/ngen_reforecast/preparation/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 378,
+        "path": "web/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 7733,
+        "path": "web/request.mjs",
+        "sha256": "b3d6f26d8c02465698e762298c0b03d32f4b38f9bc94bfe5fa8954c9f72324bd"
+      },
+      {
+        "bytes": 18910,
+        "path": "web/assessment.mjs",
+        "sha256": "48ad74edc8e3ba6cee319a728492fe07b9b7bface0bdb30a992c9a2c4c48e6dd"
+      },
+      {
+        "path": "src/ngen_reforecast/preparation/readiness.py",
+        "sha256": "2c37d526c8826bf105c024d96a06a7158b8e78d584863f2fe94a21324be13cf6"
+      }
+    ],
+    "base_commit": "e0b03a9588670b95224586ade0137f6bd91ab5a4",
+    "checkout_state": {
+      "branch": "main",
+      "tracked_changes": false,
+      "unreviewed_untracked_items_not_published": true
+    },
+    "local_historical_overnight_receipt_preserved": true,
+    "local_historical_overnight_receipt_sha256": "361fd902b20b8be99a378dc0db0cf1c292e64395b5f8ffa6e29bad5c6de28422",
+    "main_commit": "cf80266ef599c5c022a9d43d4d03a02a5ecffe0a",
+    "original_untracked_assessment_receipt_unchanged": true,
+    "protected_research_folders_traversed": false,
+    "published_sanitized_overnight_receipt_sha256": "d7556386d6d401da72c510ab5acbcab4c5eb1256561f51a9659e6fe6341e48d8",
+    "real_physical_forcing_or_runtime_assets_read": false
+  },
+  "pressure_policy": {
+    "initial_sandbox_nice_refusal_then_read_and_test_escalations_succeeded": true,
+    "lowered_priority_final_commands": true,
+    "no_parallel_test_batches": true,
+    "pause_new_validation_at_load_one_minute_at_least": 8,
+    "pause_new_validation_below_free_memory_percent": 20
+  },
+  "publication_sanitization": {
+    "host_specific_paths_removed": true,
+    "local_capture_names_are_nonpublic_artifact_labels": true,
+    "original_local_milestone_sha": "64e03e24c1033da2248d970b4aaecf4fbd37a909",
+    "original_local_receipt_sha256": "e6a42b09de4f468776e292e168dff867ad4f81928cd4ca1893b6a3e19f3d5ef6",
+    "tested_source_bytes_changed": false
+  },
+  "recorded_at_utc": "2026-10-14T19:54:57.876631Z",
+  "release_qualified": false,
+  "remaining_product_gates": [
+    "Independently resolved domain/location and qualified source truth/version/availability/radiation",
+    "Automatic source preparation for complete12month populations under a separately bounded allowance",
+    "Durable campaign submission/isolation, execution admission, verification/recovery and downloadable archive service",
+    "Live browser/participant evaluation and measured12month workflow benchmark"
+  ],
+  "repository": "Mitchel34/nextgen-reforecast-software",
+  "resource_checkpoints": [
+    {
+      "at_utc": "2026-10-14T19:32:39Z",
+      "cpus": 8,
+      "decision": "read/edit first; defer tests until lower load",
+      "load_averages": [
+        7.65,
+        7.61,
+        6.0
+      ],
+      "memory_free_percent": 35,
+      "memory_gib": 32
+    },
+    {
+      "decision": "short serial adapter tests permitted",
+      "load_averages": [
+        5.88,
+        6.47,
+        6.04
+      ],
+      "memory_free_percent": 39
+    },
+    {
+      "at_utc": "2026-10-14T19:46:33Z",
+      "decision": "short serial regression batch permitted",
+      "load_averages": [
+        6.84,
+        5.96,
+        5.86
+      ],
+      "memory_free_percent": 41
+    },
+    {
+      "decision": "final affected browser batch permitted",
+      "load_averages": [
+        5.15,
+        5.91,
+        5.86
+      ],
+      "memory_free_percent": 40
+    }
+  ],
+  "retained_failed_batch": {
+    "failed": 1,
+    "failure": "DOM test assumed decoded_content_valid=True; adapter conservatively refused a complete-content claim after observed file metadata change",
+    "log": {
+      "bytes": 24595,
+      "capture_name": "browser-all.log",
+      "published": false,
+      "sha256": "dc254f52039c99ef5231de6c14ddb512f449d561f8a04fa81336ff87e376c523"
+    },
+    "metadata_change_cause_verified": false,
+    "passed": 76,
+    "repair": "DOM assertion now requires exact current adapter evidence, blocked execution and unchanged report download; production file guards remain unchanged",
+    "separate_positive_content_tests_retained": true
+  },
+  "scientific_or_workflow_performance_result_claimed": false,
+  "scope": "Bounded resident decoded-forcing preparation adapter and offline readiness-report browser inspection/display/download",
+  "source_bindings": [
+    {
+      "bytes": 12969,
+      "path": "src/ngen_reforecast/preparation/forcing_adapter.py",
+      "sha256": "fc1c627f6ab4cf78598711310c1d6cd80eb261028188fcfa7f1cfc0fd7cd5e03"
+    },
+    {
+      "bytes": 14350,
+      "path": "tests/test_forcing_preparation_adapter.py",
+      "sha256": "6afb12c417f50f8781a69487b4a0b31962ee7e83c3474818a4fbeaa60e36085c"
+    },
+    {
+      "bytes": 16243,
+      "path": "web/preparation-report.mjs",
+      "sha256": "b88a52fd154b2d7db0746e2581dc2ad73cffb9881857839451261f31fda221b7"
+    },
+    {
+      "bytes": 19380,
+      "path": "web/app.mjs",
+      "sha256": "5a66a070e32bdf331ff4cd030d957a4d8c428384d7313045f8c3be63e889d507"
+    },
+    {
+      "bytes": 9842,
+      "path": "web/styles.css",
+      "sha256": "35284ece57b7a5a2178ec9369103df0cf8bc32c736008c9572e04cb43c2da77f"
+    },
+    {
+      "bytes": 5575,
+      "path": "web/README.md",
+      "sha256": "a12901e7d9dd99c51ac5918fad02abeb3c010d625e5ab733a30bd05bdb4dda2b"
+    },
+    {
+      "bytes": 3540,
+      "path": "web/tests/preparation-report-fixture.mjs",
+      "sha256": "ca1a9414ef1e1b9d9036959505d4b522b6b2a3f56b19c3998979b935cc574371"
+    },
+    {
+      "bytes": 10247,
+      "path": "web/tests/preparation-report.test.mjs",
+      "sha256": "49cd33fe14a7640c1c4065e77659df9740b6ca5471fc04f716d6d8a03a9026fe"
+    },
+    {
+      "bytes": 16959,
+      "path": "web/tests/app.test.mjs",
+      "sha256": "37ea2fc2aa9f1907c87386d96583913878879d19164251f3bfc6fd19ff3392c0"
+    },
+    {
+      "bytes": 9044,
+      "path": "docs/FORCING_PREPARATION_BROWSER_INCREMENT_2026-10-14.md",
+      "sha256": "105296ff1181ba2205dcb9955da9534efb0a4ad5b100892b72ca7bd010165da8"
+    },
+    {
+      "bytes": 21349,
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "7006aadd022b878a99aee6874579f2d31bdbb05db1c01dfd6871257fef39bc57"
+    }
+  ],
+  "synthetic_acceptance": {
+    "actual_adapter_report_import_display_download_tested": true,
+    "actual_adapter_validates_current_tiny_decoded_files": true,
+    "all_8760_annual_issues_preserved": true,
+    "content_success_retains_source_qualification_blockers": true,
+    "duplicate_and_tampered_report_refusals_tested": true,
+    "maximum_99982_issue_import_tested": true,
+    "nominal_catchments": 2,
+    "nominal_forecast_issues": 2,
+    "nominal_full_forecast_leads": 18,
+    "nominal_history_hours": 20,
+    "nominal_total_expected_rows": 112,
+    "oversized_adapter_study_refused_before_reads_without_clipping": true,
+    "request_edit_and_async_import_download_invalidation_tested": true
+  },
+  "tests": {
+    "full_python_suite_performed": false,
+    "live_browser_visual_qa_performed": false,
+    "node_all_final": {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 nice -n 10 node --test --test-concurrency=1 web/tests/*.test.mjs",
+      "failed": 0,
+      "log": {
+        "bytes": 7871,
+        "capture_name": "browser-all-final.log",
+        "published": false,
+        "sha256": "6e748b6ca6c921a6b12775b80f31d49f2c1db20a471a979680294c324a990fde"
+      },
+      "passed": 77,
+      "requested_nice": 10,
+      "serial": true,
+      "thread_limit_environment": 1
+    },
+    "node_focused_checkpoint_before_final_dom_assertion_adjustment": {
+      "command": "nice -n 10 node --test --test-concurrency=1 web/tests/preparation-report.test.mjs web/tests/app.test.mjs",
+      "failed": 0,
+      "log": {
+        "bytes": 2768,
+        "capture_name": "browser-focused.log",
+        "published": false,
+        "sha256": "125dd00f0d78c710bb33acc656a9023eaea33520cc6225af2ae2afd13a119c15"
+      },
+      "passed": 27,
+      "requested_nice": 10,
+      "serial": true,
+      "thread_limit_environment": 1
+    },
+    "participant_or_performance_benchmark_performed": false,
+    "python_adapter": {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 nice -n 10 python3 -B -m unittest discover -s tests -p test_forcing_preparation_adapter.py -v",
+      "failed": 0,
+      "log": {
+        "bytes": 3076,
+        "capture_name": "adapter-tests.log",
+        "published": false,
+        "sha256": "98b2921739ca12707da2b49ad5f67d6a852c8776e79e7935ac40db57c8864666"
+      },
+      "passed": 15,
+      "requested_nice": 10,
+      "serial": true,
+      "thread_limit_environment": 1
+    },
+    "python_request_readiness_admission_regressions": {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONPATH=src:tests PYTHONDONTWRITEBYTECODE=1 nice -n 10 python3 -B -m unittest test_preparation_readiness test_request_preparation test_execution_lock -v",
+      "failed": 0,
+      "log": {
+        "bytes": 8285,
+        "capture_name": "backend-regression.log",
+        "published": false,
+        "sha256": "4486d04104ce1e02df4e1b4934e400b5fcda9d24e6b0377907b054a34ab838c0"
+      },
+      "passed": 45,
+      "requested_nice": 10,
+      "serial": true,
+      "thread_limit_environment": 1
+    },
+    "wheel_or_ci_build_performed": false
+  },
+  "work_journey_mapping": [
+    "RF-003",
+    "RF-007",
+    "WEB-03",
+    "UX-02",
+    "UX-05"
+  ]
+}

@@ -1,6 +1,8 @@
 /** Synthetic DOM state tests only: no browser, server, input acquisition or models. */
 import test, { beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
+import { buildRequest } from '../request.mjs';
+import { preparationReport, residentAdapterReport } from './preparation-report-fixture.mjs';
 
 class Node {
   constructor(tag = 'div') { this.tagName = tag; this.children = []; this.attributes = new Map(); this.listeners = new Map(); this.hidden = false; this._text = ''; this.value = ''; this.disabled = false; }
@@ -61,6 +63,12 @@ function deferredCrypto() {
   return pending;
 }
 const finish = entries => entries.forEach(item => item.resolve(new Uint8Array(32).buffer));
+const currentRequest = () => buildRequest(Object.fromEntries(Object.entries(document.form.elements).map(([name, field]) => [name, field.value])));
+async function importReport(report) {
+  const input = document.querySelector('#preparation-file'); const bytes = JSON.stringify(report);
+  input.files = [{ size: new TextEncoder().encode(bytes).byteLength, text: async () => bytes }];
+  await input.fire('change');
+}
 
 test('whole-day UI and assessment download preserve all48 issues without a run action', async () => {
   await loadApp(); await document.form.fire('submit');
@@ -118,4 +126,77 @@ test('oversizedscope is rejected beforehashing or requestdownload', async () => 
   await loadApp(); document.form.elements.start_date.value = '2000-01-01'; document.form.elements.end_date.value = '2020-01-01'; await document.form.fire('submit');
   assert.equal(document.querySelector('#form-error').hidden, false); assert.match(document.querySelector('#form-error').textContent, /exceeds the offline campaign bounds/);
   assert.equal(document.querySelector('#download-assessment'), null);
+});
+test('imported report shows complete population declared outcomes actionable blockers and safe text', async () => {
+  await loadApp(); document.form.elements.end_date.value = '2022-12-31'; await document.form.fire('submit');
+  const report = preparationReport(currentRequest(), { statuses: { source_coverage: 'failed', location_resolution: 'missing' }, detail: '<img src=x onerror=alert(1)> Synthetic failure only.' });
+  await importReport(report);
+  assert.match(text(), /preserves all 8,760 requested hourly issues/);
+  assert.match(text(), /Effective status: failed/); assert.match(text(), /Effective status: missing/);
+  assert.match(text(), /Next step: Check initialization\/history/);
+  assert.match(text(), /<img src=x onerror=alert\(1\)>/);
+  assert.match(text(), /Execution remains blocked/); assert.equal(document.querySelector('#run'), null);
+  document.querySelector('#download-preparation-report').click();
+  assert.deepEqual(JSON.parse(await blobs[0].text()), report);
+});
+test('actual bounded adapter report renders its measured outcome and unresolved qualification', async () => {
+  const fixture = residentAdapterReport();
+  await loadApp(); document.form.elements.end_date.value = '2022-01-01'; document.form.elements.start_hour_utc.value = '1'; document.form.elements.end_hour_utc.value = '2'; await document.form.fire('submit');
+  await importReport(fixture.report);
+  assert.match(text(), /preserves all 2 requested hourly issues/);
+  // A concurrent filesystem metadata change can correctly make the guarded
+  // adapter refuse a complete-content claim. Display its actual bound outcome,
+  // rather than assuming the host left newly created temporary files stable.
+  assert.ok(text().includes(fixture.report.checks[2].evidence.detail));
+  if (fixture.adapter_evidence.validations.length) assert.match(text(), /source_availability_unknown/);
+  assert.match(text(), /Effective status: failed/); assert.match(text(), /Execution remains blocked/);
+  document.querySelector('#download-preparation-report').click();
+  assert.deepEqual(JSON.parse(await blobs[0].text()), fixture.report);
+});
+test('new selection invalidates the old imported-report download even when replacement fails', async () => {
+  await loadApp(); await document.form.fire('submit'); await importReport(preparationReport(currentRequest()));
+  const oldDownload = document.querySelector('#download-preparation-report');
+  const input = document.querySelector('#preparation-file'); input.files = [{ size: 1, text: async () => '{' }]; await input.fire('change');
+  oldDownload.click(); assert.equal(blobs.length, 0); assert.equal(document.querySelector('#download-preparation-report'), null);
+  assert.match(document.querySelector('#preparation-import-status').textContent, /Report not imported/);
+});
+test('edits mode changes and new assessments invalidate imported reports and detached downloads', async () => {
+  await loadApp(); await document.form.fire('submit'); await importReport(preparationReport(currentRequest()));
+  const edited = document.querySelector('#download-preparation-report'); document.form.elements.identifier.value = '03479001'; document.form.fire('input'); edited.click();
+  assert.equal(blobs.length, 0); assert.equal(document.querySelector('#preparation-file'), null);
+  await document.form.fire('submit'); await importReport(preparationReport(currentRequest()));
+  const modeChanged = document.querySelector('#download-preparation-report'); document.form.elements.mode.value = 'continuous_simulation'; document.form.fire('change'); modeChanged.click();
+  assert.equal(blobs.length, 0);
+  await document.form.fire('submit'); await importReport(preparationReport(currentRequest()));
+  const assessedAgain = document.querySelector('#download-preparation-report'); await document.form.fire('submit'); assessedAgain.click();
+  assert.equal(blobs.length, 0); assert.equal(document.querySelector('#download-preparation-report'), null);
+});
+test('late file reads cannot restore a report after request editing or replace a newer import', async () => {
+  await loadApp(); await document.form.fire('submit'); const report = preparationReport(currentRequest());
+  let release;
+  const oldInput = document.querySelector('#preparation-file'); oldInput.files = [{ size: 1, text: () => new Promise(resolve => { release = resolve; }) }];
+  const oldImport = oldInput.fire('change'); document.form.fire('input'); release(JSON.stringify(report)); await oldImport;
+  assert.equal(document.querySelector('#download-preparation-report'), null);
+  await document.form.fire('submit'); const input = document.querySelector('#preparation-file'); input.files = [{ size: 1, text: () => new Promise(resolve => { release = resolve; }) }];
+  const firstImport = input.fire('change'); const newer = preparationReport(currentRequest(), { statuses: { source_coverage: 'missing' } }); await importReport(newer);
+  release(JSON.stringify(report)); await firstImport; document.querySelector('#download-preparation-report').click();
+  assert.deepEqual(JSON.parse(await blobs[0].text()), newer);
+});
+test('late hash computation cannot restore an imported report after a mode change', async () => {
+  await loadApp(); await document.form.fire('submit'); const report = preparationReport(currentRequest());
+  const pending = deferredCrypto(); const task = importReport(report);
+  // Let File.text resolve and reach the first identity computation.
+  await Promise.resolve(); await Promise.resolve();
+  document.form.elements.mode.value = 'continuous_simulation'; document.form.fire('change');
+  finish(pending); await task;
+  assert.equal(document.querySelector('#download-preparation-report'), null);
+});
+test('oversized file is refused without reading it and failed report leaves request download intact', async () => {
+  await loadApp(); await document.form.fire('submit'); let reads = 0;
+  const input = document.querySelector('#preparation-file'); input.files = [{ size: 8 * 1024 * 1024 + 1, text: async () => { reads += 1; return '{}'; } }]; await input.fire('change');
+  assert.equal(reads, 0); assert.match(document.querySelector('#preparation-import-status').textContent, /at most 8 MiB/);
+  await importReport(preparationReport(buildRequest({ identifier_type: 'usgs', identifier: '03479001', mode: 'reforecast', start_date: '2022-01-01', end_date: '2022-01-02', max_lead_hours: 6 })));
+  assert.equal(document.querySelector('#download-preparation-report'), null);
+  assert.match(document.querySelector('#preparation-import-status').textContent, /another study request/);
+  document.querySelector('#download-request').click(); assert.equal(blobs.length, 1);
 });
