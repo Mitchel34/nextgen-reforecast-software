@@ -10,6 +10,7 @@ The [installed execution acceptance](docs/PUBLIC_CAMPAIGN_EXECUTION_RESULTS_2026
 
 ## Start here
 
+- [Selected first matched trial](benchmarks/MATCHED_TRIAL_SELECTION_2026-10-15.md) — exact two-issue Watauga manual/software planning specification; manual bridge and execution approval remain pending
 - [Matched generation-workflow benchmark draft](benchmarks/MATCHED_WORKFLOW_BENCHMARK_DRAFT.md) and [instrumentation runbook](docs/BENCHMARK_INSTRUMENTATION_RUNBOOK.md) — prospective speed, reproducibility and effort measurements; synthetic mechanics grant no performance result
 - [Compatible public Watauga fixture v2](fixtures/watauga-public-v2/README.md) — source-bound Noah revision, development inputs and remaining qualification
 - [Independent physical references](docs/PUBLIC_WATAUGA_REFERENCE_RESULTS_V2_2026-10-10.md) — complete outputs, exact antecedent-prefix agreement and retained failures

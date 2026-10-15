@@ -1,0 +1,326 @@
+{
+  "actual_execution_manifest_frozen": false,
+  "arms": [
+    {
+      "arm": "manual",
+      "campaign_id": "mwp-wat-v2-01-manual",
+      "orchestration": "Explicitly submit/review each safe one-job helper, then common finalize/verify/export",
+      "order": 1
+    },
+    {
+      "arm": "software",
+      "campaign_id": "mwp-wat-v2-01-software",
+      "orchestration": "One campaign submission orders the same jobs; same checks and delivery",
+      "order": 2
+    }
+  ],
+  "assembly_identity_sha256": "3c55890840e80768bc0647abf04d1b24a6c8bc061fec5a67de875bdc91334dfe",
+  "blockers": [
+    "Reviewed fixture-tested manual per-job/capture/finalize bridge and executable instructions",
+    "Fixture-tested observer generation/finalization boundary and excluded acquisition representation",
+    "Tested outer/aggregate resource enforcement and six-stage-per-arm guard",
+    "Fresh resident asset/image/environment and installed-source preflight",
+    "Consented trained operator and observer, or human metrics explicitly unmeasured",
+    "Final actual trial manifest, expected distinct lock hashes and planned absent claim/ledger/output namespace bindings",
+    "Specific new bounded native execution and any existing-runtime-start approval"
+  ],
+  "cache": {
+    "flush_or_model_warmup": false,
+    "fresh_containers_and_namespaces": true,
+    "host_page_caches": "retained-uncontrolled-disclosed",
+    "inputs_runtime_references_resident_verified_required": true,
+    "reuse_completed_results": false,
+    "reuse_land_checkpoint": false,
+    "stratum": "warm-resident"
+  },
+  "case_input_index_sha256": "3de671c7676d75c36838e7854ffb962e7c92cc357d23213256f9c629ba70b7bb",
+  "cases": [
+    {
+      "antecedent_hours": 786,
+      "case_id": "history",
+      "issue_time_utc": null,
+      "lead_hours": 0,
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "noah_inclusive_enddate": "202201021700",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "provider_hours": 786,
+      "routing_steps": 9432,
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z"
+    },
+    {
+      "antecedent_hours": 767,
+      "case_id": "serial-20220101T2300Z",
+      "issue_time_utc": "2022-01-01T23:00:00Z",
+      "lead_hours": 18,
+      "ngen_inclusive_last_provider_time": "2022-01-02 16:00:00",
+      "noah_inclusive_enddate": "202201021600",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "provider_hours": 785,
+      "routing_steps": 9420,
+      "stop_time_utc_exclusive": "2022-01-02T17:00:00Z"
+    },
+    {
+      "antecedent_hours": 768,
+      "case_id": "serial-20220102T0000Z",
+      "issue_time_utc": "2022-01-02T00:00:00Z",
+      "lead_hours": 18,
+      "ngen_inclusive_last_provider_time": "2022-01-02 17:00:00",
+      "noah_inclusive_enddate": "202201021700",
+      "origin_time_utc": "2021-12-01T00:00:00Z",
+      "provider_hours": 786,
+      "routing_steps": 9432,
+      "stop_time_utc_exclusive": "2022-01-02T18:00:00Z"
+    }
+  ],
+  "claim_and_namespace_policy": {
+    "durable_claims_and_stage_reservations_created_only_during_authorized_attempt": true,
+    "expected_lock_hashes_frozen_before_approval": true,
+    "planned_claim_ledger_output_namespaces_must_be_absent": true,
+    "timed_prepare_reproduces_expected_lock_bytes_at_fresh_path": true
+  },
+  "endpoint": "fresh accessible verified export directory with manifest; not ZIP or browser delivery",
+  "evidence_limits": {
+    "historical_unequal_CPU_ratio_used_as_speedup": false,
+    "new_observations": 0,
+    "original_E03_E04_identity_or_ledger_changed": false,
+    "prior_unequal_HYDRA_workloads_used_as_arms": false,
+    "source_or_raw_private_research_payloads_published": false,
+    "speedup_established": false
+  },
+  "failure_policy": {
+    "abort_pair_on_either_arm_failure": true,
+    "automatic_resume_or_retry": false,
+    "new_approval_and_prospective_amendment_for_retry": true,
+    "physical_fault_injection_allowed": false,
+    "retain_original_failures_and_spent_allowance": true,
+    "retain_unstarted_assignments": true
+  },
+  "fixture_id": "watauga-public-rebuild-v2",
+  "image_manifest_sha256": "2e75ab75ad1ce8de7755b84b1428ace2b99b8a51a2bb07b0b8970f4ddfd62bff",
+  "issue_schedule": {
+    "cadence_hours": 1,
+    "start_time_utc": "2022-01-01T23:00:00Z",
+    "stop_time_utc_exclusive": "2022-01-02T01:00:00Z"
+  },
+  "later_scaling_target": {
+    "annual_budget": null,
+    "backend_strategy": "same newly qualified strategy in both workflow arms, frozen before observations",
+    "generated_rows": 157680,
+    "history_hours": 9521,
+    "history_stop_utc_exclusive": "2023-01-01T17:00:00Z",
+    "issue_start_utc": "2022-01-01T00:00:00Z",
+    "issue_stop_utc_exclusive": "2023-01-01T00:00:00Z",
+    "issues": 8760,
+    "needs_complete_annual_inputs_references_executor_export_and_streaming_instrumentation": true,
+    "origin_utc": "2021-12-01T00:00:00Z",
+    "physical_leads": 18,
+    "retained_rows": 52560,
+    "site": "03479000",
+    "status": "not_admitted_not_authorized"
+  },
+  "manual_helper_may_auto_submit_next_job": false,
+  "manual_safety_helper_may_automate_within_one_job": true,
+  "measurement": {
+    "acquisition": {
+      "applicability": "excluded-resident-inputs",
+      "download_seconds": null
+    },
+    "action_categories": [
+      "decision",
+      "submission",
+      "inspection",
+      "correction",
+      "recovery"
+    ],
+    "compute_scope": "native/router stage wall and labeled cgroup CPU; host normalization/verification excluded unless separately measured",
+    "end": "Fresh export verified and accessibility inspected",
+    "human_activity_categories": [
+      "hands_on",
+      "system_wait",
+      "interruption",
+      "unclassified"
+    ],
+    "manual_time_inferred_from_program_time": false,
+    "observed_cost_usd": null,
+    "observed_human_metrics": null,
+    "observer_adapter_nonapplicable_phase_support_required": true,
+    "phases": [
+      "preparation",
+      "generation-capture",
+      "verification-archive",
+      "export"
+    ],
+    "primary": [
+      "end_to_end_elapsed_seconds",
+      "observed_meaningful_actions",
+      "observed_hands_on_seconds"
+    ],
+    "provenance_clock": "UTC",
+    "start": "Observer task-reveal event; operator begins immediately",
+    "whole_workflow_cpu_seconds": null,
+    "within_run_clock": "monotonic"
+  },
+  "native_executable_sha256": "ee65c7748c4d2a7e9f3900fc3a5e8c16c045db90eb34a9b877b7bcc5dc942132",
+  "new_model_process_allowance": 0,
+  "operators": {
+    "common_orientation_minutes_maximum": 20,
+    "consented_observer_required_for_human_metrics": true,
+    "independent_researcher_reproduction_claim": false,
+    "orientation_cost_recorded_separately": true,
+    "same_operator_both_arms": true,
+    "unrecorded_practice_or_model_warmups": false
+  },
+  "output_equivalence": {
+    "array_allowed_difference_fields": [
+      "protocol_identity_sha256"
+    ],
+    "complete_canonical_arrays": "exact axes/clock/units/metadata/values against sealed references",
+    "complete_unique_generated_keys": 36,
+    "cross_arm_product_allowed_difference_fields": [
+      "run_id",
+      "execution_lock_sha256",
+      "protocol_identity_sha256",
+      "result_identity_sha256"
+    ],
+    "flow_units": "m3 s-1",
+    "fresh_manifest_byte_verification_required": true,
+    "generic_discharge_tolerance_may_relax_exact_reference_gate": false,
+    "quality_mask": "unqualified_diagnostic",
+    "retained_unique_keys": 12
+  },
+  "paired_block_id": "MWP-WAT-V2-01-B01",
+  "pending_bindings": {
+    "actual_environment_sha256": null,
+    "arm_locks": null,
+    "consent_observation_record_binding": null,
+    "final_trial_manifest_sha256": null,
+    "installed_candidate_sha256": null,
+    "manual_bridge_sha256": null,
+    "manual_executable_instructions_sha256": null,
+    "observer_wrapper_sha256": null
+  },
+  "physical_leads": {
+    "first": 1,
+    "last": 18,
+    "rows": 36
+  },
+  "physical_strategy": "independent-cold-jobs",
+  "physical_work_per_arm": {
+    "land_hourly_updates": 2357,
+    "logical_jobs": 3,
+    "native_router_stages": 6,
+    "routing_steps_per_reach": 28284
+  },
+  "profile_file": {
+    "bytes": 110526,
+    "path": "src/ngen_reforecast/_profiles/watauga-v2.json",
+    "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+  },
+  "proposed_future_approval_only": {
+    "aggregate_output_bytes": 8589934592,
+    "aggregate_timed_arm_seconds": 14400,
+    "arm_output_bytes": 4294967296,
+    "concurrent_logical_jobs": 1,
+    "cpu_quota": 2,
+    "downloads_image_pulls_builds_cloud_training": false,
+    "extra_repairs_retries_warmups": 0,
+    "host_free_floor_bytes": 8589934592,
+    "host_mounts": false,
+    "job_output_bytes": 1073741824,
+    "logical_job_wall_seconds": 1800,
+    "memory_bytes": 8589934592,
+    "native_router_stages_per_arm": 6,
+    "native_router_stages_total": 12,
+    "network": "none",
+    "new_paid_budget_usd": 0,
+    "numerical_threads": 1,
+    "outer_arm_wall_seconds": 7200,
+    "pids": 256,
+    "root_filesystem": "read_only",
+    "runtime_and_staging_bytes": 12884901888,
+    "runtime_start": "only existing dedicated local runtime if separately approved"
+  },
+  "question": "Manual versus software campaign orchestration of identical admitted backend work",
+  "recorded_utc": "2026-10-15T23:39:57Z",
+  "reference_files": [
+    {
+      "arrays": {
+        "bytes": 38744488,
+        "sha256": "ca9b888f404995bb3f940922963fbcd091d457772bdbf8ddb10a99ed2f9ebcd4"
+      },
+      "case_id": "history",
+      "lead_reference": {
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "reference_identity_sha256": "66169502b9aa3c72d2e97627e54386a7bce9e8d4cfddaf106374143270acb963",
+      "reference_report": {
+        "bytes": 8627,
+        "sha256": "b1612183eb6ccf38862a96bbdeece13e9a421686f798c00589b8eac138c7831f"
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 38691973,
+        "sha256": "0c1d23f962b9ff0613609f435f8069cdaa95d07b820cb1eb9657fbbad8e598da"
+      },
+      "case_id": "serial-20220101T2300Z",
+      "lead_reference": {
+        "bytes": 23831,
+        "sha256": "113edd4b1b4cddd5f96c9e245b4e290cd2583edf10c11beed88b80cc19db1624"
+      },
+      "reference_identity_sha256": "9f0cd7f9bc88678b97b90be86529d297534ffb5004dc9f1c6234ad67df92f085",
+      "reference_report": {
+        "bytes": 8646,
+        "sha256": "dc85dbb04f2c05012c9ba2722531f4aabda940dac1b1fd678510066a899cdf3e"
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 38747008,
+        "sha256": "78d43e7a27481a5436cd93e779a75ce0a2b864772655a1c95c96e781a91aa81a"
+      },
+      "case_id": "serial-20220102T0000Z",
+      "lead_reference": {
+        "bytes": 24358,
+        "sha256": "ea72294cdc73678cd144fcba2111601424c945ea362b08254d3156f4e8082241"
+      },
+      "reference_identity_sha256": "2079b563bc8fac9c91d9fc91fbc988f4da3bbacef48429ca7d69165abfdd5b0b",
+      "reference_report": {
+        "bytes": 8646,
+        "sha256": "dfe1a0100d8f4a4d19880975c3db4786382126447bf7fff3a791a51c7994e16e"
+      }
+    }
+  ],
+  "reference_set_identity_sha256": "3ac59c420b3b96a5c45f2dea53dc149524e496a5063356944246cf08c25963d2",
+  "retained_leads": {
+    "first": 1,
+    "last": 6,
+    "rows": 12
+  },
+  "runtime_identity_sha256": "9f3a32d9bb9cf5214b99bf84e40230a2d83deeeb6c27430bd37f00a9ca02578d",
+  "runtime_transfer_payload": {
+    "bytes": 3891200,
+    "sha256": "cb93a22392f181fa17d35e9dcbc82258a5c94693f44530fc78adb4bb2597f01a"
+  },
+  "schema_version": "matched-trial-selection/0.1",
+  "scientific_configuration_identity_sha256": "e05ec5ed5ceea3d5894e6691f7120f75aea1db6d951c9585b34b4ea34fd5dee6",
+  "selection_id": "MWP-WAT-V2-01",
+  "selection_identity_sha256": "5ac15682ac6400d147e74248880eb2584ef86788c4969d7ebf72f5f3df71edea",
+  "site": {
+    "catchments": 31,
+    "gauge_interpretation": "full-reach surrogate",
+    "nexuses": 12,
+    "reach": "1017693",
+    "routed_reaches": 31,
+    "source_feature": "wb-1017693",
+    "usgs_id": "03479000"
+  },
+  "source_candidate_commit": "95424895a4e7cc55891fc4ed2a3872bb2a464880",
+  "specification": {
+    "path": "benchmarks/MATCHED_TRIAL_SELECTION_2026-10-15.md",
+    "sha256": "a359352f6363a0139d12fbe327f9756c3bd4f721ad2004b815653f13db74e3a0"
+  },
+  "specification_frozen": true,
+  "status": "blocked_not_authorized"
+}
