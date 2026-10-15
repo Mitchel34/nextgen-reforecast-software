@@ -244,7 +244,7 @@ def _receipt_set(plan, receipts):
         if receipt["receipt_identity_sha256"] != _hash(body):
             _fail("TASK_RECEIPT_IDENTITY_MISMATCH", "receipts", "The recorded receipt content changed.")
         if task_id in accepted and _hash(accepted[task_id]) != _hash(receipt):
-            _fail("CONFLICTING_TASK_RECEIPT", "receipts", "Conflicting evidence for one task requires an explicit future supersession contract; nothing is overwritten.")
+            _fail("CONFLICTING_TASK_RECEIPT", "receipts", "Conflicting evidence for one task requires the separate explicit supersession journal; nothing is overwritten.")
         accepted[task_id] = receipt
     return [accepted[task["task_identity_sha256"]] for task in plan["tasks"] if task["task_identity_sha256"] in accepted]
 
@@ -280,7 +280,7 @@ def checkpoint_preparation(plan: dict, receipts: list[dict], *, previous: dict |
     for item in incoming:
         identity = item["task_identity_sha256"]
         if identity in accepted and _hash(accepted[identity]) != _hash(item):
-            _fail("CONFLICTING_TASK_RECEIPT", "receipts", "Conflicting evidence for one task requires an explicit future supersession contract; nothing is overwritten.")
+            _fail("CONFLICTING_TASK_RECEIPT", "receipts", "Conflicting evidence for one task requires the separate explicit supersession journal; nothing is overwritten.")
         accepted[identity] = item
     return _checkpoint(plan, list(accepted.values()))
 

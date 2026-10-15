@@ -4,6 +4,8 @@
 
 The owner's subsequent request authorizes a coherent lightweight annual preparation-planning/checkpoint increment, deterministic synthetic tests and independent review, with a 09:00 UTC morning handoff. Follow `docs/PREPARATION_ORCHESTRATION_CONTRACT.md` for the shared-resource and stop limits. This grants no physical forecast, training, acquisition, worker/server start, cloud resource, spending, credential/security change, original-folder write or scientific-admission exception.
 
+The next delegated continuation authorizes two further engineering milestones: explicit receipt supersession and a bounded dispatcher contract, with deterministic tests, independent review and eligible progress publication. Stop when both milestones are complete or a concrete blocker prevents progress. Dispatcher envelopes remain inert; the existing forcing adapter, scientific qualification and physical execution authorities are unchanged.
+
 The owner's subsequent “commiting and pushing as they make progress” instruction authorizes meaningful validated milestones in the existing correct public repository. Publish only reviewed sanitized code, documentation and eligible evidence summaries, verify the remote commit, use ordinary fast-forward pushes with CI skip markers, and exclude private inputs, secrets, personal notes, raw research and unrelated work. This supersedes older local-only/publication holds for eligible reviewed progress; it does not change any research, cost, licensing or scientific limits.
 
 ## Reviewed readiness publication — 14 October 2026

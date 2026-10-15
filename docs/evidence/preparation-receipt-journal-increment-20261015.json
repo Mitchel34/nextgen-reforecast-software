@@ -1,0 +1,239 @@
+{
+  "activity_before_publication": {
+    "cloud_resources_created": 0,
+    "credentials_security_changes": 0,
+    "paid_ci_jobs": 0,
+    "physical_forecasts": 0,
+    "source_downloads": 0,
+    "training_runs": 0,
+    "workers_servers_started": 0
+  },
+  "base_commit": "10cdc2b3ea47d0483197c2c60e935c6c8b231b3b",
+  "benchmark": {
+    "hands_on_human_effort": null,
+    "physical_model_compute": null,
+    "speedup_established": false,
+    "total_workflow_turnaround": null
+  },
+  "branch": "codex/preparation-orchestration-20261015",
+  "capabilities": {
+    "artifacts_reverified": false,
+    "dispatch_supported": false,
+    "durable_storage_established": false,
+    "execution_ready": false,
+    "global_rollback_detection_established": false,
+    "physical_recovery_established": false,
+    "source_coverage_qualified": false
+  },
+  "contracts": {
+    "complete_artifact_bytes": 8388608,
+    "depth": 20,
+    "external_trusted_latest_identity_and_atomic_storage_required": true,
+    "journal_version": "preparation-receipt-journal/0.1",
+    "legacy_checkpoint_conflict_refusal_preserved": true,
+    "legacy_orchestration_change": "Only two refusal messages now point to the separate implemented journal; identities and schemas unchanged",
+    "max_revisions": 64,
+    "max_updates_per_revision": 2,
+    "nodes": 250000,
+    "pilot_from_empty_cannot_progress_all_annual_tasks": true,
+    "revision_version": "preparation-receipt-revision/0.1"
+  },
+  "evidence_schema_version": "software-increment/0.1",
+  "implementation_files": [
+    {
+      "bytes": 10893,
+      "path": "AGENTS.md",
+      "sha256": "26afe9604891e89f7572529920d6ee1871212ce285d86998199bbd8c62db967c"
+    },
+    {
+      "bytes": 24188,
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "4fe3a6cf4e4a64aec01e0cd39e4b8e016f0250136e8b5e3fe5e6e36419534be1"
+    },
+    {
+      "bytes": 13916,
+      "path": "docs/PREPARATION_ORCHESTRATION_CONTRACT.md",
+      "sha256": "01736a103a56d0a4afc605509ffb6fabf9dec5d4a13e6ca8a9166e1d1519d84c"
+    },
+    {
+      "bytes": 13698,
+      "path": "docs/PREPARATION_RECEIPT_JOURNAL_CONTRACT.md",
+      "sha256": "7e00f2e0cae4d9c4bb6cdbe5e8234894409de6e318b246fb67b1a4498354c85c"
+    },
+    {
+      "bytes": 16910,
+      "path": "src/ngen_reforecast/preparation/orchestration.py",
+      "sha256": "b76b607decfebbf073b3b98b9039857aeb907bf61775066e71555a4c368b1fab"
+    },
+    {
+      "bytes": 13010,
+      "path": "src/ngen_reforecast/preparation/journal.py",
+      "sha256": "92593d06394c44605e764a95a86e55b66bfad5040a6ca8ffeab2171220922d4d"
+    },
+    {
+      "bytes": 17068,
+      "path": "tests/test_preparation_journal.py",
+      "sha256": "5fb60936b636bc94f51fc73ad882dedc5d002c82cba77dc7790570625a5c38e9"
+    }
+  ],
+  "independent_review": {
+    "outcome": "passed_after_schema_strictness_fix",
+    "recommendation_applied": "Strengthened sparse annual test to retain all 4381 base receipts before explicit supersession",
+    "remaining_must_fix_findings": [],
+    "reviewed_behaviors": [
+      "Evidence-preserving failed-to-passed and pass invalidation",
+      "Strong chained parent and per-task expected receipt comparison",
+      "Atomic two-task refusal",
+      "Exact retained operation replay after later revisions",
+      "Mandatory caller journal anchor and explicit external trusted-current limitation",
+      "Bounded complete outputs without compaction or reset"
+    ],
+    "reviewer": "supersession_review",
+    "reviewer_tests_network_writes": false
+  },
+  "next_steps": [
+    "Complete the separately reviewed inert bounded dispatcher envelope/result contract and deterministic integration tests",
+    "Stop after the two authorized engineering milestones; actual data preparation/execution still needs independently qualified scope, sources, references, protocol and costed resources"
+  ],
+  "preservation": {
+    "dispatcher_files_excluded_from_this_milestone": true,
+    "existing_private_commits_preserved": true,
+    "original_inputs_binaries_or_private_datasets_read": false,
+    "original_research_directories_traversed": false,
+    "unchanged_critical_source_bindings": [
+      {
+        "bytes": 19596,
+        "path": "src/ngen_reforecast/preparation/__init__.py",
+        "sha256": "cc4c36a44dec2e3e23a0fd9ba277c5deede97b93fa693a4dcb28cca3d9d355f2"
+      },
+      {
+        "bytes": 14157,
+        "path": "src/ngen_reforecast/preparation/readiness.py",
+        "sha256": "2c37d526c8826bf105c024d96a06a7158b8e78d584863f2fe94a21324be13cf6"
+      },
+      {
+        "bytes": 12969,
+        "path": "src/ngen_reforecast/preparation/forcing_adapter.py",
+        "sha256": "fc1c627f6ab4cf78598711310c1d6cd80eb261028188fcfa7f1cfc0fd7cd5e03"
+      },
+      {
+        "bytes": 378,
+        "path": "src/ngen_reforecast/preparation/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 43330,
+        "path": "src/ngen_reforecast/execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "src/ngen_reforecast/execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 42678,
+        "path": "src/ngen_reforecast/archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 110526,
+        "path": "src/ngen_reforecast/_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      }
+    ],
+    "unrelated_main_untracked_receipt_excluded": true
+  },
+  "publication_preflight": {
+    "current_access_concurrency_blockers": [],
+    "independent_eligibility_review": {
+      "outcome": "passed",
+      "remaining_blockers": [],
+      "reviewer": "orchestration_publication_audit",
+      "tests_network_writes_git_mutations": false
+    },
+    "method": "Reviewed sanitized ordinary fast-forward to existing public main with [skip ci]",
+    "remote_commit_verification": "After publication; exact containing commit and public file identities reported in morning handoff"
+  },
+  "recorded_utc": "2026-10-15T04:19:53Z",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "resource_controls": {
+    "cost_usd": 0,
+    "niceness": 10,
+    "prebatch_pause_free_memory_below_percent": 20,
+    "prebatch_pause_load_at_least": 8,
+    "rss_poll_seconds": 0.05,
+    "sampled_rss_stop_kib": 262144,
+    "serial_test_processes": 1,
+    "threads": 1,
+    "wall_stop_seconds": 30
+  },
+  "scope": "Explicit bounded supersession of declared task receipts while retaining the immutable original checkpoint and every revision",
+  "validation": {
+    "annual_fixture": "Fully populated 4381-receipt non-leap-year synthetic base with two explicit supersessions; complete 8760-issue scope and original history unchanged",
+    "browser_sources_changed": false,
+    "existing_regression_tests": 82,
+    "final_batches": [
+      {
+        "bytes": 18548,
+        "capture_name": "journal-final-regressions.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_journal.PreparationJournalTests",
+          "test_preparation_orchestration.PreparationOrchestrationTests",
+          "test_preparation_readiness",
+          "test_request_preparation",
+          "test_execution_lock",
+          "test_forcing_preparation_adapter",
+          "-v"
+        ],
+        "exit_code": 0,
+        "niceness": 10,
+        "peak_rss_kib_sampled": 59472,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "b2ea44fc6ff0ba902960fcf76ddf30878dd9175b4331785779c5ac5cbcc09500",
+        "start_free_memory_percent": 84,
+        "start_load_1m": 3.7392578125,
+        "stopped": null,
+        "tests": 99,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 2.009
+      },
+      {
+        "bytes": 673,
+        "capture_name": "journal-final-annual.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_orchestration.AnnualPreparationOrchestrationTests",
+          "test_preparation_journal.AnnualPreparationJournalTests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "niceness": 10,
+        "peak_rss_kib_sampled": 84832,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "2a3c3c10d09584884690dfa245d51537a15889a93cfa089739077b7cbb9e0ab1",
+        "start_free_memory_percent": 84,
+        "start_load_1m": 2.41796875,
+        "stopped": null,
+        "tests": 3,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 18.925
+      }
+    ],
+    "final_passed_tests": 102,
+    "full_python_suite_run": false,
+    "new_journal_tests": 20,
+    "node_tests_rerun": false,
+    "other_annual_regressions": "Complete non-leap partition and 8785-task leap-year repeated receipt ingestion",
+    "raw_captures": "Retained locally; public summary uses sanitized basenames and hashes only"
+  }
+}
