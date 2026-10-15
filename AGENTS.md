@@ -1,5 +1,11 @@
 # Project instructions
 
+## Overnight preparation continuation and progress publication — 15 October 2026
+
+The owner's subsequent request authorizes a coherent lightweight annual preparation-planning/checkpoint increment, deterministic synthetic tests and independent review, with a 09:00 UTC morning handoff. Follow `docs/PREPARATION_ORCHESTRATION_CONTRACT.md` for the shared-resource and stop limits. This grants no physical forecast, training, acquisition, worker/server start, cloud resource, spending, credential/security change, original-folder write or scientific-admission exception.
+
+The owner's subsequent “commiting and pushing as they make progress” instruction authorizes meaningful validated milestones in the existing correct public repository. Publish only reviewed sanitized code, documentation and eligible evidence summaries, verify the remote commit, use ordinary fast-forward pushes with CI skip markers, and exclude private inputs, secrets, personal notes, raw research and unrelated work. This supersedes older local-only/publication holds for eligible reviewed progress; it does not change any research, cost, licensing or scientific limits.
+
 ## Reviewed readiness publication — 14 October 2026
 
 The owner's explicit “commit and push” request authorizes publishing the reviewed readiness and bounded preparation/browser milestones to the existing public repository. Use the [publication record](docs/PUBLIC_READINESS_PUBLICATION_2026-10-14.md). Publish sanitized copies of the local evidence receipts, preserve the original local commits, and use ordinary fast-forward publication with CI skip markers. This supersedes the earlier local-only publication restriction for these reviewed changes only. It grants no model/research run, acquisition, worker/server start, spending, permission/security change or broader scientific qualification authority.

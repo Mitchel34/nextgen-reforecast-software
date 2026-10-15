@@ -1,0 +1,290 @@
+{
+  "activity_before_publication": {
+    "cloud_resources_created": 0,
+    "credentials_or_security_changes": 0,
+    "paid_ci_jobs": 0,
+    "physical_forecasts": 0,
+    "public_pushes": 0,
+    "source_downloads": 0,
+    "training_runs": 0,
+    "workers_or_servers_started": 0
+  },
+  "base_commit": "183ff0e2a003afae2621220c03effd47f997598d",
+  "benchmark": {
+    "50_steps_to_10_and_40_percent_faster": "Illustrative targets only",
+    "hands_on_human_effort": null,
+    "performance_claim_established": false,
+    "physical_model_compute": null,
+    "total_workflow_turnaround": null
+  },
+  "branch": "codex/preparation-orchestration-20261015",
+  "evidence_schema_version": "software-increment/0.1",
+  "implementation_files": [
+    {
+      "bytes": 10448,
+      "path": "AGENTS.md",
+      "sha256": "073375e1a43929dcfbf7607b7428f510f4217a1727a2e6e0953c4f83871c4e82"
+    },
+    {
+      "bytes": 23073,
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "6192475de71f4f86b7a335a02a86623bde0f6938ddfe56a4020f229d5fe7032e"
+    },
+    {
+      "bytes": 13787,
+      "path": "docs/PREPARATION_ORCHESTRATION_CONTRACT.md",
+      "sha256": "df309c69aff51ae3c230595ddc825f23e739707e61c1a1609c259b3114e43bd1"
+    },
+    {
+      "bytes": 16906,
+      "path": "src/ngen_reforecast/preparation/orchestration.py",
+      "sha256": "96d7cc2dea32492d29bd2d4f130e580891caa4b677699763e8efe03215924db1"
+    },
+    {
+      "bytes": 18159,
+      "path": "tests/test_preparation_orchestration.py",
+      "sha256": "caedfbaef1deb4f41c4654fed4d086d3be20b4f5d1ffed3339431dca592c423b"
+    }
+  ],
+  "independent_review": {
+    "fixed_findings": [
+      "Bound UTF-8 JSON bytes during traversal including keys and escapes",
+      "Reject oversized integers before floating conversion",
+      "Bound sealed receipt and continuation outputs",
+      "Deduplicate validated full-year receipt sets before merged-output bounds",
+      "Stream canonical hash representation with tested equivalence to unchanged shared identities"
+    ],
+    "outcome": "passed_after_fixes",
+    "remaining_must_fix_findings": [],
+    "reviewer": "overnight_gap_review",
+    "tests_models_network_or_writes_by_reviewer": false
+  },
+  "morning_next_steps": [
+    "Inspect the reviewed milestone commit and its 82-test evidence; annual planning and pending-check reconstruction are ready now",
+    "Next engineering contract: explicit receipt supersession with revision/parent identity and conflict refusal, then separately bounded dispatcher design; neither should infer physical recovery",
+    "For real annual preparation/execution, first close one costed scope/protocol/domain/origin/source/reference/resource package under existing scientific admission and budget-before-training holds",
+    "Keep browser service execution, verified archive delivery and real 12-month human-effort/turnaround/model-compute measurements open"
+  ],
+  "overnight_controls": {
+    "batch_sampled_rss_stop_kib": 262144,
+    "batch_wall_stop_seconds": 30,
+    "cost_usd": 0,
+    "handoff_deadline_utc": "2026-10-15T09:00:00Z",
+    "niceness": 10,
+    "numerical_threads": 1,
+    "prebatch_free_memory_percent_pause_below": 20,
+    "prebatch_load_1m_pause_at_or_above": 8,
+    "recovery": "Preserve valid declarations; refuse corrupt/conflicting checkpoints without reset or fallback empty continuation",
+    "sampling_interval_seconds": 0.05,
+    "serial_test_processes": 1,
+    "shared_resource_checks": "Before each bounded batch"
+  },
+  "preservation": {
+    "access_or_concurrency_blockers": [],
+    "existing_private_local_implementation_commits_preserved": true,
+    "original_inputs_binaries_or_private_datasets_read": false,
+    "original_research_directories_traversed": false,
+    "pre_existing_unreviewed_main_receipt": {
+      "byte_identity_unchanged": true,
+      "published": false,
+      "remains_untracked": true
+    },
+    "unchanged_critical_source_bindings": [
+      {
+        "bytes": 19596,
+        "path": "src/ngen_reforecast/preparation/__init__.py",
+        "sha256": "cc4c36a44dec2e3e23a0fd9ba277c5deede97b93fa693a4dcb28cca3d9d355f2"
+      },
+      {
+        "bytes": 14157,
+        "path": "src/ngen_reforecast/preparation/readiness.py",
+        "sha256": "2c37d526c8826bf105c024d96a06a7158b8e78d584863f2fe94a21324be13cf6"
+      },
+      {
+        "bytes": 12969,
+        "path": "src/ngen_reforecast/preparation/forcing_adapter.py",
+        "sha256": "fc1c627f6ab4cf78598711310c1d6cd80eb261028188fcfa7f1cfc0fd7cd5e03"
+      },
+      {
+        "bytes": 378,
+        "path": "src/ngen_reforecast/preparation/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 43330,
+        "path": "src/ngen_reforecast/execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "src/ngen_reforecast/execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 42678,
+        "path": "src/ngen_reforecast/archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 110526,
+        "path": "src/ngen_reforecast/_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      }
+    ]
+  },
+  "publication_preflight": {
+    "authorization": "Owner-approved meaningful validated sanitized progress to existing public repository",
+    "ci_skip_marker_required": true,
+    "commit_identity": "The commit containing this receipt; immutable source byte bindings above avoid a circular self-reference",
+    "independent_eligibility_review": {
+      "correction": "Acknowledge packaged request-policy resource reads while retaining no artifact reads/writes",
+      "outcome": "passed",
+      "remaining_blockers": [],
+      "reviewer": "orchestration_publication_audit",
+      "reviewer_tests_network_edits_or_git_mutations": false
+    },
+    "intended_method": "ordinary fast-forward main push after final public-eligibility review",
+    "postpush_verification": "Verify exact remote/public commit and zero Actions runs; report observed result in morning handoff",
+    "remote_is_public": true,
+    "remote_main_observed": "183ff0e2a003afae2621220c03effd47f997598d"
+  },
+  "recorded_utc": "2026-10-15T04:06:59Z",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "scientific_boundary": {
+    "adapter_limit_unchanged": "Two issues per complete request; annual subtasks cannot be promoted into smaller substitute admitted studies",
+    "artifacts_reverified": false,
+    "dispatch_supported": false,
+    "each_issue_source_leads": {
+      "max": 18,
+      "min": 1
+    },
+    "execution_ready": false,
+    "original_full_history_retained": true,
+    "original_request_scope_policy_and_origin_bound": true,
+    "physical_recovery_established": false,
+    "retry_supersession_implemented": false,
+    "source_coverage_qualified": false
+  },
+  "scope": "Pure complete-year preparation task plans, declared-receipt checkpoints and pending-check reconstruction",
+  "validation": {
+    "browser_sources_changed": false,
+    "existing_regression_tests": 60,
+    "final_batches": [
+      {
+        "bytes": 15164,
+        "capture_name": "orchestration-and-regressions.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_orchestration.PreparationOrchestrationTests",
+          "test_preparation_readiness",
+          "test_request_preparation",
+          "test_execution_lock",
+          "test_forcing_preparation_adapter",
+          "-v"
+        ],
+        "exit_code": 0,
+        "niceness": 10,
+        "outcome": "passed",
+        "peak_rss_kib_sampled": 59376,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "facf5569ada58f7aa92a2c8257deabc40f9929f1d0ff08e54a48676d25670182",
+        "start_free_memory_percent": 84,
+        "start_load_1m": 3.4873046875,
+        "stopped": null,
+        "tests": 80,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 1.327
+      },
+      {
+        "bytes": 486,
+        "capture_name": "orchestration-annual-retry.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_orchestration.AnnualPreparationOrchestrationTests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "niceness": 10,
+        "outcome": "passed",
+        "peak_rss_kib_sampled": 85552,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "02f15cd55fd61859a2590b24a2adc29621c39cad613230dd996c49c2720ba673",
+        "start_free_memory_percent": 84,
+        "start_load_1m": 4.1162109375,
+        "stopped": null,
+        "tests": 2,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 10.098
+      }
+    ],
+    "final_passed_tests": 82,
+    "full_python_suite_run": false,
+    "large_fixture": "Pure synthetic leap-year single-issue plan:8784 issues plus one full-history task;8785 declared receipts and exact repeat checkpoint ingestion",
+    "new_orchestration_tests": 22,
+    "node_tests_rerun": false,
+    "preserved_prior_attempts": [
+      {
+        "bytes": 3819,
+        "capture_name": "orchestration-targeted.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_orchestration.PreparationOrchestrationTests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "niceness": 10,
+        "outcome": "passed_before_streaming_hash_change",
+        "peak_rss_kib_sampled": 39264,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "1343312019e8ea35faf16abb6f4da6ec815cbdb485ef9da28c4feb82642edfd6",
+        "start_free_memory_percent": 83,
+        "start_load_1m": 3.55126953125,
+        "stopped": null,
+        "tests": 19,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 0.427
+      },
+      {
+        "bytes": 385,
+        "capture_name": "orchestration-annual.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_orchestration.AnnualPreparationOrchestrationTests",
+          "-v"
+        ],
+        "exit_code": -15,
+        "niceness": 10,
+        "outcome": "stopped_by_sampled_rss_limit_after_first_test_passed",
+        "peak_rss_kib_sampled": 268928,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "c3de49a3a459f3c1cfb267befc660b90286ed946c0c51e60156c9fcce6ed4672",
+        "start_free_memory_percent": 83,
+        "start_load_1m": 3.3466796875,
+        "stopped": "RSS cap",
+        "tests": null,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 2.649
+      }
+    ],
+    "prior_browser_validation": "77 Node tests at reviewed forcing preparation/browser milestone; no new browser result claimed",
+    "rss_is_sampled_not_a_hard_allocation_limit": true,
+    "rss_stop_reason": "Initial annual test process sampled 268928 KiB above the 262144 KiB stop threshold; owned process was terminated safely. Local byte-equivalent streaming hashing removed large temporary whole-artifact serialization; retry passed at sampled 85552 KiB.",
+    "test_capture_policy": "Raw captures retained locally; only sanitized names, digests and observations published"
+  }
+}
