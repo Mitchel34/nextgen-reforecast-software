@@ -1,0 +1,265 @@
+{
+  "activity_before_publication": {
+    "cloud_resources_created": 0,
+    "credentials_security_changes": 0,
+    "paid_ci_jobs": 0,
+    "physical_forecasts": 0,
+    "source_downloads": 0,
+    "task_dispatches": 0,
+    "training_runs": 0,
+    "workers_servers_started": 0
+  },
+  "base_commit": "fd139e0c4c6aecb91832f373d00a9cb8928e5438",
+  "benchmark": {
+    "50steps_to10_and40percent_faster": "Illustrative targets only",
+    "hands_on_human_effort": null,
+    "physical_model_compute": null,
+    "speedup_established": false,
+    "total_workflow_turnaround": null
+  },
+  "branch": "codex/preparation-orchestration-20261015",
+  "capabilities": {
+    "artifacts_reverified": false,
+    "dispatch_supported": false,
+    "durable_storage_established": false,
+    "execution_ready": false,
+    "freshness_established": false,
+    "physical_recovery_established": false,
+    "source_coverage_qualified": false
+  },
+  "completion_boundary": "Stop after these two approved engineering milestones; no follow-on compute or infrastructure initiated",
+  "contracts": {
+    "annual_capacity_established": false,
+    "complete_artifact_bytes": 8388608,
+    "depth": 20,
+    "envelope_version": "preparation-dispatch-envelope/0.1",
+    "existing_adapter_scope_widened": false,
+    "external_trusted_current_identity_and_atomic_storage_required": true,
+    "journal_max_revisions": 64,
+    "max_parallel_tasks": 1,
+    "max_selected_forecast_issues": 2,
+    "max_selected_tasks": 2,
+    "nodes": 250000,
+    "result_candidate_applied_by_dispatch_interface": false,
+    "result_version": "preparation-dispatch-result-candidate/0.1"
+  },
+  "evidence_schema_version": "software-increment/0.1",
+  "implementation_files": [
+    {
+      "bytes": 9130,
+      "path": "src/ngen_reforecast/preparation/dispatch.py",
+      "sha256": "3d3a1b45928a2bb15b33bec68d08a3e6d988b4c445623568159cbc0581fe42f6"
+    },
+    {
+      "bytes": 22051,
+      "path": "tests/test_preparation_dispatch.py",
+      "sha256": "f5aec32a5cf16e21d1920bdf3a20ffabeed915f780a6c928b924fb9c66138154"
+    },
+    {
+      "bytes": 9950,
+      "path": "docs/PREPARATION_DISPATCH_CONTRACT.md",
+      "sha256": "4a62095fbc5dea3675c2168b64cf627130164792c7a6126febb5ec95bbe199b0"
+    },
+    {
+      "bytes": 25323,
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "7ef7017a69dcc0fcdbcfb1611aba8434d5a3aa5c675d59f4e56019a6f62b0b0f"
+    },
+    {
+      "bytes": 5710,
+      "path": "docs/OVERNIGHT_SOFTWARE_HANDOFF_2026-10-15.md",
+      "sha256": "b9aedaf167017d18cfccea42edb8107b12595513063af61eb773f2cbd5c50d09"
+    }
+  ],
+  "independent_review": {
+    "additional_tests_applied": [
+      "Invalidate and reinstate passed history via explicitjournal revisions; selection returns to history then forecast",
+      "Refuse pending work at journal revision capacity; completed declarations do not manufacture new work"
+    ],
+    "outcome": "passed",
+    "remaining_must_fix_findings": [],
+    "reviewed_behaviors": [
+      "Rebuilt complete envelopes bound to supplied currentjournal and fullscope",
+      "History-first selection follows active supersededreceipt state",
+      "Independent two-task and two-forecastissue budgets without task splits or study substitution",
+      "Exact selected outcome population and strong candidate revision binding",
+      "Stale/competing envelope and revision refusal with exact replay idempotence",
+      "All scientific/actualdispatch/resourceauthority flags remainfalse"
+    ],
+    "reviewer": "supersession_review",
+    "reviewer_tests_network_writes": false
+  },
+  "morning_next_decisions": [
+    "Select trusted local latest-tip/atomic journal storage with deterministic crash and concurrent-writer tests as the next bounded engineering increment",
+    "Resolve one complete qualified and costed selected-site/year scientific/input/source/reference/runtime/protocol/resource package before any actual preparation/model work",
+    "Measure researcher effort, workflow turnaround and model compute separately only after an end-to-end supported path exists"
+  ],
+  "preservation": {
+    "access_or_concurrency_blockers": [],
+    "historical_private_commits_preserved": true,
+    "original_inputs_binaries_or_private_datasets_read": false,
+    "original_research_directories_traversed": false,
+    "preexisting_unreviewed_main_receipt_excluded": true,
+    "unchanged_critical_source_bindings": [
+      {
+        "bytes": 19596,
+        "path": "src/ngen_reforecast/preparation/__init__.py",
+        "sha256": "cc4c36a44dec2e3e23a0fd9ba277c5deede97b93fa693a4dcb28cca3d9d355f2"
+      },
+      {
+        "bytes": 14157,
+        "path": "src/ngen_reforecast/preparation/readiness.py",
+        "sha256": "2c37d526c8826bf105c024d96a06a7158b8e78d584863f2fe94a21324be13cf6"
+      },
+      {
+        "bytes": 12969,
+        "path": "src/ngen_reforecast/preparation/forcing_adapter.py",
+        "sha256": "fc1c627f6ab4cf78598711310c1d6cd80eb261028188fcfa7f1cfc0fd7cd5e03"
+      },
+      {
+        "bytes": 378,
+        "path": "src/ngen_reforecast/preparation/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 43330,
+        "path": "src/ngen_reforecast/execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "src/ngen_reforecast/execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 42678,
+        "path": "src/ngen_reforecast/archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 110526,
+        "path": "src/ngen_reforecast/_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      }
+    ],
+    "unchanged_preparation_protocol_bindings": [
+      {
+        "bytes": 13010,
+        "path": "src/ngen_reforecast/preparation/journal.py",
+        "sha256": "92593d06394c44605e764a95a86e55b66bfad5040a6ca8ffeab2171220922d4d"
+      },
+      {
+        "bytes": 16910,
+        "path": "src/ngen_reforecast/preparation/orchestration.py",
+        "sha256": "b76b607decfebbf073b3b98b9039857aeb907bf61775066e71555a4c368b1fab"
+      }
+    ]
+  },
+  "publication_preflight": {
+    "current_blockers": [],
+    "independent_eligibility_review": {
+      "outcome": "passed",
+      "remaining_blockers": [],
+      "reviewer": "orchestration_publication_audit",
+      "tests_network_writes_git_mutations": false
+    },
+    "method": "Reviewed sanitized ordinary fast-forward to existing public main with [skip ci]",
+    "postpush_verification": "Exact remote commit, anonymous public commit/files and zero Actions runs; recorded in final morning handoff response",
+    "prior_journal_commit_public_verification": {
+      "actions_runs_observed": 0,
+      "commit": "fd139e0c4c6aecb91832f373d00a9cb8928e5438",
+      "public_api_status": 200,
+      "public_changed_git_blobs_verified": 8
+    },
+    "remote_main_before": "fd139e0c4c6aecb91832f373d00a9cb8928e5438"
+  },
+  "recorded_utc": "2026-10-15T04:23:36Z",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "resource_controls": {
+    "cost_usd": 0,
+    "niceness": 10,
+    "numerical_threads": 1,
+    "prebatch_pause_free_memory_below_percent": 20,
+    "prebatch_pause_load_at_least": 8,
+    "rss_poll_seconds": 0.05,
+    "sampled_rss_stop_kib": 262144,
+    "serial_test_processes": 1,
+    "wall_stop_seconds": 30
+  },
+  "scope": "Inert bounded preparation dispatch envelope selection and exact declared-result candidate protocol; no tasks dispatched",
+  "validation": {
+    "annual_cases": [
+      "Complete 8760-issue scope partition",
+      "Leap 8784-issue plan and 8785-task repeated receipt ingestion",
+      "Fully populated 4381-receipt synthetic annual journal with two explicit supersessions",
+      "Bounded inert dispatcher candidate against a sparse annual journal, original global history unchanged"
+    ],
+    "browser_sources_changed": false,
+    "capture_policy": "Raw logs retained locally; public record contains sanitized basenames, digests and observations only",
+    "existing_regression_tests": 102,
+    "final_batches": [
+      {
+        "bytes": 22419,
+        "capture_name": "dispatch-final-regressions.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_dispatch.PreparationDispatchTests",
+          "test_preparation_journal.PreparationJournalTests",
+          "test_preparation_orchestration.PreparationOrchestrationTests",
+          "test_preparation_readiness",
+          "test_request_preparation",
+          "test_execution_lock",
+          "test_forcing_preparation_adapter",
+          "-v"
+        ],
+        "exit_code": 0,
+        "niceness": 10,
+        "peak_rss_kib_sampled": 61216,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "cbbdf5f1794fa2da93afcc771559b82f05501dd1388479680dba12d3d585a486",
+        "start_free_memory_percent": 84,
+        "start_load_1m": 3.611328125,
+        "stopped": null,
+        "tests": 119,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 2.763
+      },
+      {
+        "bytes": 883,
+        "capture_name": "dispatch-final-annual.log",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_preparation_orchestration.AnnualPreparationOrchestrationTests",
+          "test_preparation_journal.AnnualPreparationJournalTests",
+          "test_preparation_dispatch.PreparationDispatchAnnualTests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "niceness": 10,
+        "peak_rss_kib_sampled": 87040,
+        "poll_interval_seconds": 0.05,
+        "rss_cap_kib": 262144,
+        "sha256": "2d02e141c8812631b44b3df04e92d1407de97a5d7f07a1a6cd70e76fc2605f56",
+        "start_free_memory_percent": 84,
+        "start_load_1m": 2.1474609375,
+        "stopped": null,
+        "tests": 4,
+        "thread_limits": 1,
+        "wall_cap_seconds": 30,
+        "wall_seconds": 24.235
+      }
+    ],
+    "final_passed_tests": 123,
+    "full_python_suite_run": false,
+    "installed_wheel_tested": false,
+    "new_dispatcher_tests": 21,
+    "node_tests_rerun": false,
+    "real_researcher_benchmark_run": false
+  }
+}
