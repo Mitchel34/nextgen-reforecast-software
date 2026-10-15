@@ -1,5 +1,17 @@
 # Overnight software handoff — 15 October 2026
 
+## Latest continuation: generation speed and reproducibility
+
+The owner's subsequent direction authorizes a completed **zero-new-model-call benchmark instrumentation milestone**. It supplies [the prospective matched workflow draft](../benchmarks/MATCHED_WORKFLOW_BENCHMARK_DRAFT.md), [human-readable runbook](BENCHMARK_INSTRUMENTATION_RUNBOOK.md) and a bounded Python recorder/comparator. **95 targeted tests pass**, including 35 new synthetic cases; the final serial batch took **1.520 seconds** with **59,120 KiB** sampled peak RSS. Independent source review passed. [The validation receipt](evidence/benchmark-instrumentation-increment-20261015.json) binds exact source/tests/docs and retains the initial shared-host admission pause. These numbers measure engineering validation only.
+
+The code records phases, explicit observed human actions/intervals, failures, assistance and source-bound whole-job counters. Unknown effort/resources/cost stay unknown; fixture clocks never establish speedup. It refuses mismatched workload/cache/resources/trial blocks, invalid or incomplete products and synthetic/failed comparison attempts. Contract seals authenticate content identity, not the truth of declarations or permission to execute. Existing output/scientific checks remain; no USGS accuracy-scoring dependency is added. No physical forecasts, runtime starts, acquisitions, human sessions or paid jobs occurred in this continuation.
+
+Morning next steps are to review the frozen draft and select the exact workload/stratum, then prepare a separate actual trial manifest with same backend work, resident assets, resource enforcement, observation policy and fresh namespaces. The runbook proposes one exact Watauga v2 two-issue paired pilot: 12 native/router stages total, one job at a time, 2 CPUs/8 GiB/1,800 seconds per job, bounded output/disk and $0 paid resources. It needs specific execution/runtime-start authority and operator consent for human measurements; it is not authorized or started here. One pair checks measurement mechanics; repeated and independent-operator evidence remain later work. The owner's intended historical HYDRA pair is unresolved and inspected candidates have unequal workloads. Neither those durations nor the historical unequal-CPU weekly comparison supply a speedup baseline.
+
+Publication uses the existing reviewed-progress authority and `[skip ci]`. The final handoff response supplies the exact remote commit, anonymous changed-blob verification and observed Actions count. The earlier preparation milestones and their costs below remain historical evidence; their next-increment suggestion is superseded by this speed/reproducibility focus.
+
+## Earlier completed preparation milestones
+
 Both approved engineering milestones are implemented and independently reviewed: explicit receipt supersession and the bounded preparation dispatcher contract. The final integrated validation passes **123 targeted Python tests**. Active engineering stops at these completed milestones; no annual forecast, acquisition, training, service or paid resource was started.
 
 | Capability ready for review | Evidence and practical limit |

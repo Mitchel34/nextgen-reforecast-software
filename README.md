@@ -10,6 +10,7 @@ The [installed execution acceptance](docs/PUBLIC_CAMPAIGN_EXECUTION_RESULTS_2026
 
 ## Start here
 
+- [Matched generation-workflow benchmark draft](benchmarks/MATCHED_WORKFLOW_BENCHMARK_DRAFT.md) and [instrumentation runbook](docs/BENCHMARK_INSTRUMENTATION_RUNBOOK.md) — prospective speed, reproducibility and effort measurements; synthetic mechanics grant no performance result
 - [Compatible public Watauga fixture v2](fixtures/watauga-public-v2/README.md) — source-bound Noah revision, development inputs and remaining qualification
 - [Independent physical references](docs/PUBLIC_WATAUGA_REFERENCE_RESULTS_V2_2026-10-10.md) — complete outputs, exact antecedent-prefix agreement and retained failures
 - [Diagnostic Linux runtime](docs/LINUX_DIAGNOSTIC_QUALIFICATION_2026-10-10.md) — immutable execution identities and remaining clean-build gates

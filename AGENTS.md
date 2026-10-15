@@ -1,5 +1,9 @@
 # Project instructions
 
+## Generation benchmark instrumentation — 15 October 2026
+
+The owner's subsequent direction prioritizes reforecast generation speed, reproducibility, researcher effort and resource use. The delegated continuation authorizes one zero-new-model-call engineering milestone: a prospective matched benchmark draft, bounded instrumentation, deterministic synthetic/fixture tests, independent review and sanitized progress publication. Do not run the optional physical pair or fabricate unobserved manual timings. Preserve scientific admission and output integrity; no observation acquisition or accuracy-scoring prerequisite is added. Follow `benchmarks/MATCHED_WORKFLOW_BENCHMARK_DRAFT.md` and `docs/BENCHMARK_INSTRUMENTATION_RUNBOOK.md`. Historical unequal-resource or unequal-workload timings remain unsuitable as speedup evidence. This supersedes the completed two-milestone engineering stop below only for this bounded increment; all original-data, execution and cost restrictions remain.
+
 ## Overnight preparation continuation and progress publication — 15 October 2026
 
 The owner's subsequent request authorizes a coherent lightweight annual preparation-planning/checkpoint increment, deterministic synthetic tests and independent review, with a 09:00 UTC morning handoff. Follow `docs/PREPARATION_ORCHESTRATION_CONTRACT.md` for the shared-resource and stop limits. This grants no physical forecast, training, acquisition, worker/server start, cloud resource, spending, credential/security change, original-folder write or scientific-admission exception.

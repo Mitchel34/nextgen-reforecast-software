@@ -1,0 +1,283 @@
+{
+  "activity_before_publication": {
+    "cloud_resources_created": 0,
+    "credentials_security_changes": 0,
+    "human_sessions": 0,
+    "model_stages": 0,
+    "paid_ci_jobs": 0,
+    "physical_forecasts": 0,
+    "source_downloads": 0,
+    "training_runs": 0,
+    "workers_servers_started": 0
+  },
+  "base_commit": "f68153d0ecfa9850de3c854b14dd79f66dcd541a",
+  "benchmark_results": {
+    "hands_on_human_effort_seconds": null,
+    "historical_unequal_resources_or_workloads_unsuitable_as_matched_speedup_evidence": true,
+    "independent_researcher_reproduction": false,
+    "meaningful_human_actions": null,
+    "observed_monetary_cost_usd": null,
+    "physical_generation_seconds": null,
+    "speedup_established": false,
+    "synthetic_test_costs_are_not_forecast_generation_measurements": true,
+    "total_workflow_turnaround_seconds": null,
+    "whole_job_cpu_seconds": null
+  },
+  "branch": "codex/benchmark-instrumentation-20261015",
+  "contract": {
+    "dispatch_or_model_adapters": false,
+    "external_declaration_authenticity_independently_established": false,
+    "full_trial_manifest_hash_required": true,
+    "max_artifact_bytes": 2097152,
+    "max_compact_rows": 4096,
+    "max_depth": 12,
+    "max_events_per_attempt": 512,
+    "max_nodes": 100000,
+    "physical_leads_per_issue": 18,
+    "same_paired_block_required": true,
+    "status": "draft",
+    "version": "matched-workflow/v0.1"
+  },
+  "evidence_schema_version": "software-increment/0.1",
+  "implementation_files": [
+    {
+      "bytes": 11884,
+      "path": "AGENTS.md",
+      "sha256": "c6eaf319ceb569b45d2ecbc72881eb8864fcb43018955f17846cac6929796e1d"
+    },
+    {
+      "bytes": 10562,
+      "path": "README.md",
+      "sha256": "fbac52e350b416aa06507c146d4474b6b76e3fd6096b30ecc0cc5a790982a9eb"
+    },
+    {
+      "bytes": 10573,
+      "path": "benchmarks/MATCHED_WORKFLOW_BENCHMARK_DRAFT.md",
+      "sha256": "518e7287f1a03cd73e86837168b4e1e47eab354dbfc0b47e0f863b7dec6a100e"
+    },
+    {
+      "bytes": 12221,
+      "path": "docs/BENCHMARK_INSTRUMENTATION_RUNBOOK.md",
+      "sha256": "2a005d833a17fdb6db878ecd89e478b1716237faa688b1b76eccf9b304f45a74"
+    },
+    {
+      "bytes": 26721,
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "19af7723ac8589734b24d2f7bdb5e42abfc13b1424652a857eb46efdc83a4ee9"
+    },
+    {
+      "bytes": 8437,
+      "path": "docs/OVERNIGHT_SOFTWARE_HANDOFF_2026-10-15.md",
+      "sha256": "ab7af6d0e42ad90f6d4d7ecdfa526bca90c02f4a75541313525cd9b6c0d79e7c"
+    },
+    {
+      "bytes": 332,
+      "path": "src/ngen_reforecast/benchmarking/__init__.py",
+      "sha256": "5d3fd9ee9f1a5138b313c6d95206537258f7ed963b27c16f5236ca4cf0ca9880"
+    },
+    {
+      "bytes": 23997,
+      "path": "src/ngen_reforecast/benchmarking/workflow.py",
+      "sha256": "72b83603f88e7fab9a2f8864130901c3115d594f361e550427eb990866d33270"
+    },
+    {
+      "bytes": 22218,
+      "path": "tests/test_benchmark_workflow.py",
+      "sha256": "a0ccef64840297792c5110fad8306268c9814c6cf6a1a3e6ac1eb1f575171994"
+    }
+  ],
+  "independent_publication_review": {
+    "outcome": "passed",
+    "remaining_blockers": [],
+    "reviewer": "benchmark_publication_audit",
+    "reviewer_tests_network_writes_git_mutations": false
+  },
+  "independent_source_review": {
+    "must_fix_findings_resolved": [
+      "Cumulative traversal byte budget and dictionary cardinality",
+      "Strict event types, integer bounds and canonical summary equality",
+      "Input receipt/content identities bound to assessments",
+      "Explicit human unclassified time and synthetic provenance"
+    ],
+    "outcome": "passed",
+    "remaining_must_fix_findings": [],
+    "reviewed_source_sha256": "72b83603f88e7fab9a2f8864130901c3115d594f361e550427eb990866d33270",
+    "reviewer": "benchmark_test_review",
+    "reviewer_tests_models_network_writes": false
+  },
+  "morning_next_steps": [
+    "Review draft and select exact supported workload and cache stratum",
+    "Freeze actual trial manifest, same backend work, enforced resources, allowed attempts and observation policy",
+    "Obtain specific new bounded physical execution/runtime-start authority before any measured pair",
+    "Obtain operator consent and observe human actions if effort is measured; otherwise retain nulls",
+    "Confirm intended historical HYDRA pair separately; do not substitute unequal workloads"
+  ],
+  "preservation": {
+    "concurrent_tracked_changes_overwritten": false,
+    "original_research_folders_traversed_or_hydrated": false,
+    "preexisting_unreviewed_main_receipt_excluded": true,
+    "private_datasets_or_model_payloads_read": false,
+    "provided_small_historical_reference_note_read": true,
+    "unchanged_critical_bindings": [
+      {
+        "bytes": 19596,
+        "path": "src/ngen_reforecast/preparation/__init__.py",
+        "sha256": "cc4c36a44dec2e3e23a0fd9ba277c5deede97b93fa693a4dcb28cca3d9d355f2"
+      },
+      {
+        "bytes": 14157,
+        "path": "src/ngen_reforecast/preparation/readiness.py",
+        "sha256": "2c37d526c8826bf105c024d96a06a7158b8e78d584863f2fe94a21324be13cf6"
+      },
+      {
+        "bytes": 12969,
+        "path": "src/ngen_reforecast/preparation/forcing_adapter.py",
+        "sha256": "fc1c627f6ab4cf78598711310c1d6cd80eb261028188fcfa7f1cfc0fd7cd5e03"
+      },
+      {
+        "bytes": 378,
+        "path": "src/ngen_reforecast/preparation/request-policy.json",
+        "sha256": "b4bfef6cd2a389d85db7d517aaae03fee7505015e294efda8e5d9386d216db3f"
+      },
+      {
+        "bytes": 16910,
+        "path": "src/ngen_reforecast/preparation/orchestration.py",
+        "sha256": "b76b607decfebbf073b3b98b9039857aeb907bf61775066e71555a4c368b1fab"
+      },
+      {
+        "bytes": 13010,
+        "path": "src/ngen_reforecast/preparation/journal.py",
+        "sha256": "92593d06394c44605e764a95a86e55b66bfad5040a6ca8ffeab2171220922d4d"
+      },
+      {
+        "bytes": 9130,
+        "path": "src/ngen_reforecast/preparation/dispatch.py",
+        "sha256": "3d3a1b45928a2bb15b33bec68d08a3e6d988b4c445623568159cbc0581fe42f6"
+      },
+      {
+        "bytes": 43330,
+        "path": "src/ngen_reforecast/execution.py",
+        "sha256": "79a4d51f202c6758d5b8bdfd2c61d49bfd754c66fb8c546b4406ca3fb75ded5c"
+      },
+      {
+        "bytes": 13365,
+        "path": "src/ngen_reforecast/execution_lock.py",
+        "sha256": "44ebf3aecb68ddb9e240ceb9efc6f4140c782eac16b4b8b2d6634bd1083c51fe"
+      },
+      {
+        "bytes": 42678,
+        "path": "src/ngen_reforecast/archive.py",
+        "sha256": "c7c5982dbcf9fc1b416ed5894ff7a35dc371c307bf2ac00984c48f5fbbc351ce"
+      },
+      {
+        "bytes": 110526,
+        "path": "src/ngen_reforecast/_profiles/watauga-v2.json",
+        "sha256": "163f4c3067d38f09d671140bdab8493d51741d97b32e3e22d073f92259392ba0"
+      },
+      {
+        "bytes": 21408,
+        "path": "benchmarks/PROTOCOL.md",
+        "sha256": "c202ba52f117bc71ab376029a883d033c5c51cb9f0f6d75c81aae941c9e43976"
+      },
+      {
+        "bytes": 16295,
+        "path": "benchmarks/EXPERIMENT_MATRIX.json",
+        "sha256": "d3f25df9bfdd01ec1bd8559fb03f480dcde2da65c080691b4520907bd8411ef9"
+      },
+      {
+        "bytes": 12411,
+        "path": "docs/UX_EVIDENCE_CONTRACT.md",
+        "sha256": "0b02dabfef0b1ec26c2a52b9f0f2f085aade283b51c042534926830b5c5611d1"
+      }
+    ]
+  },
+  "publication": {
+    "authority": "Owner-approved reviewed sanitized progress publication",
+    "method": "Ordinary fast-forward to existing public main with [skip ci]",
+    "remote_main_before": "f68153d0ecfa9850de3c854b14dd79f66dcd541a",
+    "verification_after_push": "Exact remote commit, anonymous public changed blobs and observed zero Actions runs; final handoff"
+  },
+  "recorded_utc": "2026-10-15T05:07:02Z",
+  "repository": "https://github.com/Mitchel34/nextgen-reforecast-software",
+  "resource_controls": {
+    "niceness": 10,
+    "numerical_threads": 1,
+    "prebatch_pause_free_memory_below_percent": 20,
+    "prebatch_pause_load_at_least": 8,
+    "rss_poll_seconds": 0.05,
+    "sampled_rss_stop_kib": 262144,
+    "serial_test_processes": 1,
+    "wall_stop_seconds": 30
+  },
+  "scope": "Zero-new-model-call matched-workflow draft, bounded instrumentation and synthetic fixture tests",
+  "validation": {
+    "batch_counts_overlap_not_additive": true,
+    "earlier_successful_batch": {
+      "bytes": 4719,
+      "capture_name": "benchmark-first.log",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "test_benchmark_workflow",
+        "-v"
+      ],
+      "exit_code": 0,
+      "niceness": 10,
+      "peak_rss_kib_sampled": 31472,
+      "poll_interval_seconds": 0.05,
+      "rss_cap_kib": 262144,
+      "sha256": "982cadc97af8fb7587156098aa14b0e321b6f17bd7b5d53bd92903b1efb675ce",
+      "start_free_memory_percent": 85,
+      "start_load_1m": 6.4482421875,
+      "stopped": null,
+      "tests": 30,
+      "thread_limits": 1,
+      "wall_cap_seconds": 30,
+      "wall_seconds": 0.316
+    },
+    "final_batch": {
+      "bytes": 16716,
+      "capture_name": "benchmark-final.log",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "test_benchmark_workflow",
+        "test_preparation_readiness",
+        "test_request_preparation",
+        "test_execution_lock",
+        "test_forcing_preparation_adapter",
+        "-v"
+      ],
+      "exit_code": 0,
+      "niceness": 10,
+      "peak_rss_kib_sampled": 59120,
+      "poll_interval_seconds": 0.05,
+      "rss_cap_kib": 262144,
+      "sha256": "a53866d4e6f04fd7411067e748f32dea4be03f7327fe632459f6030264468c0e",
+      "start_free_memory_percent": 85,
+      "start_load_1m": 4.78076171875,
+      "stopped": null,
+      "tests": 95,
+      "thread_limits": 1,
+      "wall_cap_seconds": 30,
+      "wall_seconds": 1.52
+    },
+    "final_passed_tests": 95,
+    "full_python_suite_run": false,
+    "initial_admission_pause": {
+      "outcome": "Paused, then retried after fresh below-threshold admission",
+      "reason": "Shared-resource threshold reached before launch",
+      "subsequent_free_memory_percent": 85,
+      "subsequent_load_1m": 12.36,
+      "test_child_started": false
+    },
+    "installed_wheel_tested": false,
+    "new_synthetic_tests": 35,
+    "node_tests_rerun": false,
+    "observed_session_logic_uses_deterministic_test_doubles": true,
+    "observed_sessions_collected": 0,
+    "prior_regression_tests": 60
+  }
+}
